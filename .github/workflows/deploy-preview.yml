@@ -40,10 +40,12 @@ jobs:
             echo "SKIP=1" >> "$GITHUB_ENV"
             exit 0
           fi
-          if ! [[ "$CLOUDFLARE_ACCOUNT_ID" =~ ^[0-9a-f]{32}$ ]]; then
-            echo "::error::CLOUDFLARE_ACCOUNT_ID must be exactly 32 lowercase hex characters, with no spaces or line breaks. Re-enter it in repo Settings > Secrets and variables > Actions."
+          ACC="$(printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | tr 'A-F' 'a-f')"
+          if ! [[ "$ACC" =~ ^[0-9a-f]{32}$ ]]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID is ${#CLOUDFLARE_ACCOUNT_ID} characters; a Cloudflare account ID is exactly 32 hex characters (0-9, a-f). Check you copied the Account ID (not the Zone ID, a URL or the account name), with no spaces or line breaks."
             exit 1
           fi
+          echo "CLOUDFLARE_ACCOUNT_ID=$ACC" >> "$GITHUB_ENV"
           if [[ "$CLOUDFLARE_API_TOKEN" =~ [[:space:]] ]]; then
             echo "::error::CLOUDFLARE_API_TOKEN contains whitespace. Re-create the token and paste it without spaces or line breaks."
             exit 1
