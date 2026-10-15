@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Pricing — Toza
-description: Toza's prices, published. All prices include VAT.
+description: Toza's prices, published.
 permalink: /en/pricing/index.html
 ---
 <section class="pt-8 pb-10 lg:pt-20 lg:pb-16" aria-labelledby="h1">
@@ -14,37 +14,53 @@ permalink: /en/pricing/index.html
   </div>
 </section>
 
+<section class="pb-10 lg:pb-14" aria-label="{{ t.stages.heading }}">
+  <div class="wrap">{% set pstripNames = true %}{% include "pstrip.njk" %}</div>
+</section>
+
 <section class="pb-14 lg:pb-28" aria-labelledby="tiers-h">
   <div class="wrap">
     <h2 id="tiers-h" class="sr-only">{{ t.ui.compareServices }}</h2>
-    <div class="tiers grid gap-6 lg:grid-cols-3 lg:gap-0 lg:border-y lg:border-rule">
-      <article class="tier py-7 border-t border-rule lg:border-t-0 lg:pe-10 lg:py-10 lg:border-e lg:border-rule">
-        <h3 class="tier-name font-serif text-2xl lg:text-3xl">{{ t.price.assessment.name }}</h3>
-        <div class="tier-price"><p class="numeral text-6xl text-ink">{{ facts.prices.assessment | ils }}</p><p class="mt-1 text-muted">{{ t.price.including }}</p></div>
-        <ul class="tier-list divide-y divide-rule border-y border-rule">
+    <article class="start-card">
+      <div class="start-main">
+        <p class="step-tag">{{ t.price.startHere }}</p>
+        <h3 class="mt-3 font-serif text-3xl lg:text-4xl">{{ t.price.assessment.name }}</h3>
+        <p class="mt-4 lg:mt-6"><span class="numeral text-6xl lg:text-7xl text-ink">{{ facts.prices.assessment | ils }}</span></p>
+      </div>
+      <div class="start-side">
+        <ul class="divide-y divide-rule border-y border-rule">
           {% for i in t.price.assessment.items %}<li class="py-3">{{ i }}</li>{% endfor %}
         </ul>
-      </article>
-      <article class="tier py-7 border-t-2 border-brass lg:border-t-0 lg:px-10 lg:py-10 lg:border-e lg:border-rule bg-paper-deep/60 px-5">
+        <p class="mt-5 text-muted">{{ t.price.credit | fill({ days: facts.credit.windowDays }) }}</p>
+        <p class="mt-3"><a class="link font-semibold" href="#">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
+      </div>
+    </article>
+
+    <p class="mt-12 lg:mt-16 font-serif text-2xl lg:text-3xl leading-snug text-ink max-w-3xl">{{ t.stages.method }}</p>
+
+    <div class="tiers mt-8 lg:mt-10 grid gap-6 lg:grid-cols-3 lg:gap-0">
+      <article class="tier py-7 border-t-2 border-brass lg:border-t-0 lg:border-y lg:border-rule lg:border-y-rule lg:pe-10 lg:py-10 lg:border-e lg:border-e-rule bg-paper-deep/60 px-5 lg:ps-6">
         <h3 class="tier-name font-serif text-2xl lg:text-3xl">{{ t.price.shield.name }}</h3>
-        <div class="tier-price"><p class="numeral text-6xl text-ink">{{ facts.prices.personalShield | ils }}</p><p class="mt-1 text-muted">{{ t.price.including }}</p></div>
+        <div class="tier-price"><p class="numeral text-6xl text-ink">{{ facts.prices.personalShield | ils }}</p></div>
         <ul class="tier-list divide-y divide-rule border-y border-rule">
           {% for i in t.price.shield.items %}<li class="py-3">{{ i }}</li>{% endfor %}
         </ul>
       </article>
-      <article class="tier py-7 border-t border-rule lg:border-t-0 lg:ps-10 lg:py-10">
+      <article class="tier py-7 border-t border-rule lg:border-t-0 lg:border-y lg:px-10 lg:py-10">
         <h3 class="tier-name font-serif text-2xl lg:text-3xl">{{ t.price.inner.name }}</h3>
-        <div class="tier-price"><p class="flex items-baseline gap-2"><span class="text-xl text-muted">{{ t.price.from }}</span><span class="numeral text-6xl text-ink">{{ facts.prices.innerCircleFrom | ils }}</span></p><p class="mt-1 text-muted">{{ t.price.including }}</p></div>
+        <div class="tier-price"><p class="flex items-baseline gap-2"><span class="text-xl text-muted">{{ t.price.from }}</span><span class="numeral text-6xl text-ink">{{ facts.prices.innerCircleFrom | ils }}</span></p></div>
         <ul class="tier-list divide-y divide-rule border-y border-rule">
           {% for i in t.price.inner.items %}<li class="py-3">{{ i }}</li>{% endfor %}
         </ul>
       </article>
+      <article class="tier tier-top on-ink py-7 px-5 lg:px-10 lg:py-10">
+        <h3 class="tier-name font-serif text-2xl lg:text-3xl !text-paper">{{ t.price.bespoke.name }}</h3>
+        <div class="tier-price"><p class="font-serif text-4xl leading-none text-brass-light">{{ t.price.bespoke.price }}</p></div>
+        <ul class="tier-list divide-y divide-paper/25 border-y border-paper/25">
+          {% for i in t.price.bespoke.items %}<li class="py-3 text-paper/90">{{ i }}</li>{% endfor %}
+        </ul>
+      </article>
     </div>
-    <div class="mt-10 grid gap-3 lg:grid-cols-12">
-      <p class="lg:col-span-7 text-lg">{{ t.price.credit | fill({ days: facts.credit.windowDays }) }}</p>
-      <p class="lg:col-span-5 lg:text-end"><a class="link font-semibold" href="#">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
-    </div>
-    <p class="mt-6 text-muted">Larger or different needs are quoted individually.</p>
   </div>
 </section>
 

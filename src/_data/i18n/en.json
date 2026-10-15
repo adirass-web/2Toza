@@ -14,7 +14,8 @@
     "credentialRegion": "Credential",
     "compareServices": "Compare services",
     "arrow": "→",
-    "arrowExternal": "↗"
+    "arrowExternal": "↗",
+    "pricesLabel": "Prices"
   },
   "nav": {
     "situations": "Situations",
@@ -44,7 +45,6 @@
     "taglineShort": "In person · You control your credentials"
   },
   "credential": {
-    "line": "Dr. Lior Tabansky's work has included national cybersecurity strategy and collaborative cyber-resilience projects with the World Bank across 11 countries.",
     "about": "About Dr. Tabansky"
   },
   "contact": {
@@ -52,8 +52,6 @@
     "reassurance": "Dr. Tabansky replies personally. The first conversation is free and commits you to nothing."
   },
   "price": {
-    "heading": "Two prices, both including VAT.",
-    "including": "including VAT",
     "from": "from",
     "assessment": {
       "name": "Private Exposure Assessment",
@@ -65,42 +63,85 @@
     },
     "shield": {
       "name": "Personal Shield",
-      "items": ["One person", "Two devices", "Two security keys, configured", "Private dated record"]
+      "items": [
+        "One person",
+        "Two devices",
+        "Two security keys, configured",
+        "Private dated record"
+      ]
     },
     "inner": {
       "name": "Inner Circle",
-      "items": ["Four people", "Eight devices", "Home network"]
+      "items": [
+        "Four people",
+        "Eight devices",
+        "Home network"
+      ]
     },
     "credit": "Your Assessment fee counts toward Personal Shield when it begins within {days} days of completion of the initial service.",
-    "conditions": "Prices and conditions"
+    "conditions": "Prices and conditions",
+    "startHere": "Start here",
+    "allTiers": "All protection tiers",
+    "bespoke": {
+      "name": "Bespoke Private Protection",
+      "price": "Individually scoped",
+      "items": [
+        "Scope and price agreed with you individually."
+      ]
+    }
   },
   "stages": {
     "heading": "Three stages, one person.",
-    "assess": { "name": "Assess", "line": "Your threat model, your risks in order, and urgent first aid. Typically four hours." },
-    "harden": { "name": "Harden", "line": "Settings, accounts and recovery rebuilt around your risks. Two security keys supplied and configured." },
-    "verify": { "name": "Verify", "line": "Changes tested and checked, and you are taught to use them. A private dated record of the work." },
-    "caption": "Assess is the {price} first visit. Harden and Verify are Personal Shield.",
+    "assess": {
+      "name": "Assess",
+      "line": "Your threat model, your risks in order, and urgent first aid. Typically four hours."
+    },
+    "harden": {
+      "name": "Harden",
+      "line": "Settings, accounts and recovery rebuilt around your risks. Two security keys supplied and configured."
+    },
+    "verify": {
+      "name": "Verify",
+      "line": "Changes tested and checked, and you are taught to use them. A private dated record of the work."
+    },
     "method": "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
     "link": "How it works",
-    "recordDate": ["15 Oct", "2026"],
+    "recordDate": [
+      "15 Oct",
+      "2026"
+    ],
     "alt": {
       "assess": "A laptop, a phone and a one-page summary on a table",
       "harden": "Two hardware security keys",
       "verify": "A closed record folder with a dated label"
+    },
+    "strip": {
+      "assessSpan": "Assess",
+      "protectSpan": "Harden + Verify",
+      "bespoke": "Bespoke"
     }
   },
   "specimen": {
-    "title": "Practical summary",
+    "heading": "What you take home after the first visit.",
+    "confidential": "Confidential",
+    "title": "Exposure summary",
     "subtitle": "Private Exposure Assessment",
     "circumstances": "Your circumstances",
     "reviewed": "Reviewed",
     "reviewedText": "Devices, accounts, recovery routes",
     "found": "Found and changed",
-    "foundItems": ["Recovery email updated", "Old tablet signed out"],
+    "foundItems": [
+      "Recovery email updated",
+      "Old tablet signed out"
+    ],
     "remaining": "Remaining",
     "remainingText": "Shared family album, kept by choice",
     "next": "Ordered next steps",
-    "nextItems": ["Move recovery to your own number", "Review location sharing", "Set up security keys"],
+    "nextItems": [
+      "Move recovery to your own number",
+      "Review location sharing",
+      "Set up security keys"
+    ],
     "label": "Illustrative example. Your summary reflects your own circumstances."
   }
 }

@@ -1,8 +1,9 @@
 <section id="how" class="on-ink bg-ink text-paper section" aria-labelledby="stages-h">
   <div class="wrap">
-    <h2 id="stages-h" class="h2 !text-paper max-w-2xl">{{ t.stages.heading }}</h2>
-    {% if stageLine %}<p class="mt-4 lg:mt-5 max-w-2xl text-lg text-paper/85">{{ stageLine }}</p>{% endif %}
-    <ol class="objs mt-8 lg:mt-14 grid gap-7 md:grid-cols-3 md:gap-0">
+    <p class="display text-[1.625rem] sm:text-4xl lg:text-[3.25rem] !text-paper max-w-4xl">{{ t.stages.method }}</p>
+    <h2 id="stages-h" class="mt-6 lg:mt-9 font-serif text-xl lg:text-2xl !text-brass-light">{{ t.stages.heading }}</h2>
+    {% if stageLine %}<p class="mt-2 max-w-2xl text-lg text-paper/85">{{ stageLine }}</p>{% endif %}
+    <ol class="objs mt-6 lg:mt-12 grid gap-5 md:grid-cols-3 md:gap-0">
       <li class="stage md:pe-10 md:border-e md:border-paper/20">
         <div class="obj" dir="ltr">
           <svg viewBox="0 0 160 90" fill="none" stroke="#f7f2e8" stroke-linejoin="round" stroke-linecap="round" role="img" aria-label="{{ t.stages.alt.assess }}">
@@ -54,8 +55,7 @@
         </div>
       </li>
     </ol>
-    <p class="mt-9 lg:mt-14 max-w-2xl text-paper/85">{{ t.stages.caption | fill({ price: (facts.prices.assessment | ils) }) }}</p>
-    <p class="mt-3 max-w-2xl text-paper/85">{{ t.stages.method }}</p>
+    <div class="mt-8 lg:mt-12">{% include "pstrip.njk" %}</div>
     <p class="mt-4"><a class="link" href="#">{{ t.stages.link }}</a></p>
   </div>
 </section>

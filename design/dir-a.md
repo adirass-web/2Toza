@@ -1,4 +1,4 @@
-# Direction A: Private bank (round 2)
+# Direction A: Private bank (round 3)
 
 **Foundation.** Tailwind v4 CLI with Flowbite 4 tokens remapped to the palette. The Flowbite forms layer is now off (`forms: false`), which removed every physical left/right rule it carried. No framework JS.
 
@@ -16,9 +16,17 @@
 9. Portrait ships plain black and white; the sepia filter is gone.
 10. The three drawings share one rendered stroke of 1.5px (non-scaling) at every size.
 
+**Round 3 (owner edits)**
+1. Deleted: "Two prices, both including VAT.", all "including VAT" labels, the World Bank credential line, the old Pricing note. No whole-word "VAT" in `_site`.
+2. Specimen is a private document: toza logo letterhead, "Confidential" stamp, title "Exposure summary", subtitle, brass date, entries. Home heading above it: "What you take home after the first visit."
+3. Method line verbatim in four places: large display lead of the stages block (Home, Separation), beside the profile link in Home block 4 (and the Separation credential section), above the tiers on Pricing.
+4. New price strip (`pstrip.njk`): brackets under the stage columns on desktop (Assess; Harden + Verify), labelled rows on phone. Prices from facts via `ils`. Reused at the top of Pricing with the three stage names above.
+5. Pricing: full-width "Start here" card (Assessment, credit line, conditions link), then Personal Shield, Inner Circle and a dark ink Bespoke card with a brass rule and "Individually scoped". Home and Separation price block: Assessment (Start here) and Personal Shield, plus a quiet "All protection tiers" link.
+6. Phone Home: the "Or before anything happens" line now follows the four doors (grid order; desktop layout unchanged). To stay under 6 screens, phone section padding went from 3.5rem to 2.75rem and a few gaps were tightened.
+
 **Language-ready base.** `src/_data/i18n/en.json` holds `lang`, `dir`, nav, buttons, footer, and the copy of shared components. `src/src.11tydata.js` picks the locale. Adding Hebrew means `he.json` and a `src/he` folder with `locale: "he"`.
 
-**Phone length (390x844).** Home 5.92 screens (was 7.3), Separation 5.76, Pricing 3.30.
+**Phone length (390x844).** Round 3: Home 5.97, Separation 5.62, Pricing 3.91 (round 2: 5.92, 5.76, 3.30). Desktop: Home 5.45, Separation 5.18, Pricing 2.67.
 
 **Page weight** (excluding portrait): Home 116 KB, Separation 114 KB, Pricing 89 KB. Limit 400 KB.
 
@@ -27,7 +35,7 @@
 **Checks.** `npm run build && npm run check` pass.
 
 **Remaining gaps**
-- 8 `[draft]` blocks await owner approval (see provenance).
+- 12 `[draft]` items await owner approval (see provenance).
 - Home subline: 2a has two versions; confirm which one.
 - Links to unbuilt pages still point to `#`.
 - Hebrew not built; English words inside RTL text show misplaced full stops, expected until Hebrew copy exists.
