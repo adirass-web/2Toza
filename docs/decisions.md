@@ -17,5 +17,9 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-011 | 2026-10-15 | Ads postponed. When resumed: Hebrew only, Dr. Tabansky reviews search terms. |
 | V-012 | 2026-10-15 | No Cloudflare Access on the preview (user decision). Previews are public URLs with noindex. |
 | V-013 | 2026-10-15 | Phase 3 starts from established open-source design systems and templates, not from scratch. |
+| V-014 | 2026-10-15 | Design base: Direction A (Private bank). B and C kept as reference only. |
+| V-015 | 2026-10-15 | Fonts: Frank Ruhl Libre + Assistant for English and Hebrew, self-hosted. |
+| V-016 | 2026-10-15 | English first; Hebrew after EN copy and design approval. Old Hebrew copy is stale; reuse selected lines only. Layout stays RTL-ready. |
+| V-017 | 2026-10-15 | Copy provenance rule: builders may not invent copy; every non-verbatim text block is listed for owner approval. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.
