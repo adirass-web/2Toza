@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Pricing — Toza
+description: Toza's prices, published. All prices include VAT.
+permalink: /en/pricing/index.html
+---
+<!-- [draft] hero copy, column intros and Bespoke line are placeholders, not in 2a -->
+<section class="pt-10 pb-10 lg:pt-20 lg:pb-16" aria-labelledby="h1">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-7">
+      <h1 id="h1" class="display text-[2.625rem] sm:text-6xl lg:text-[5rem] !text-ink">Prices, published.</h1>
+      <p class="mt-5 lg:mt-8 text-lg lg:text-xl leading-relaxed max-w-[34rem]">Every price includes VAT. The first conversation is free, and Dr. Tabansky replies personally.</p>
+      <div class="mt-8">{% include "cta-hero.njk" %}</div>
+    </div>
+  </div>
+</section>
+
+<section class="pb-16 lg:pb-28" aria-labelledby="tiers-h">
+  <div class="wrap">
+    <h2 id="tiers-h" class="sr-only">Compare services</h2>
+    <div class="grid gap-6 lg:grid-cols-3 lg:gap-0 lg:border-y lg:border-rule">
+      <article class="py-8 border-t border-rule lg:border-t-0 lg:pe-10 lg:py-10 lg:border-e lg:border-rule">
+        <h3 class="font-serif text-2xl lg:text-3xl">Private Exposure Assessment</h3>
+        <p class="mt-2 text-muted">The first visit.</p>
+        <p class="mt-7 flex items-baseline gap-3"><span class="numeral text-6xl text-ink">{{ facts.prices.assessment | ils }}</span></p>
+        <p class="mt-1 text-muted">including VAT</p>
+        <ul class="mt-8 divide-y divide-rule border-y border-rule">
+          <li class="py-3">Typically {{ facts.assessment.typicalHours }} hours</li>
+          <li class="py-3">One main phone and one computer, iPad or second phone</li>
+          <li class="py-3">Personal threat model and risks in order</li>
+          <li class="py-3">Urgent first aid, including removing a malicious app or profile where it can be done safely</li>
+          <li class="py-3">Practical summary, whether or not you continue</li>
+        </ul>
+      </article>
+      <article class="py-8 border-t-2 border-brass lg:border-t-0 lg:px-10 lg:py-10 lg:border-e lg:border-rule bg-paper-deep/60 lg:bg-paper-deep/60 px-5 lg:px-10">
+        <h3 class="font-serif text-2xl lg:text-3xl">Personal Shield</h3>
+        <p class="mt-2 text-muted">Hardened around your risks.</p>
+        <p class="mt-7"><span class="numeral text-6xl text-ink">{{ facts.prices.personalShield | ils }}</span></p>
+        <p class="mt-1 text-muted">including VAT</p>
+        <ul class="mt-8 divide-y divide-rule border-y border-rule">
+          <li class="py-3">{{ facts.personalShield.people }} person, {{ facts.personalShield.devices }} devices</li>
+          <li class="py-3">{{ facts.personalShield.securityKeys }} hardware security keys, supplied and configured</li>
+          <li class="py-3">{{ facts.personalShield.typicalWorkHours }} work hours</li>
+          <li class="py-3">Teaching, so you can run it yourself</li>
+          <li class="py-3">Private dated record</li>
+          <li class="py-3">{{ facts.personalShield.adjustmentSupportDays }} days of adjustment support</li>
+        </ul>
+      </article>
+      <article class="py-8 border-t border-rule lg:border-t-0 lg:ps-10 lg:py-10">
+        <h3 class="font-serif text-2xl lg:text-3xl">Inner Circle</h3>
+        <p class="mt-2 text-muted">For a family or close group.</p>
+        <p class="mt-7 flex items-baseline gap-2"><span class="text-xl text-muted">from</span><span class="numeral text-6xl text-ink">{{ facts.prices.innerCircleFrom | ils }}</span></p>
+        <p class="mt-1 text-muted">including VAT</p>
+        <ul class="mt-8 divide-y divide-rule border-y border-rule">
+          <li class="py-3">{{ facts.innerCircle.people }} people, {{ facts.innerCircle.devices }} devices</li>
+          <li class="py-3">{{ facts.innerCircle.securityKeys }} hardware security keys</li>
+          <li class="py-3">Home network</li>
+        </ul>
+      </article>
+    </div>
+    <div class="mt-12 grid gap-4 lg:grid-cols-12">
+      <p class="lg:col-span-7 text-lg">Your Assessment fee counts toward a full service when it begins within {{ facts.credit.windowDays }} days of completion of the initial service.</p>
+      <p class="lg:col-span-5 lg:text-end"><a class="link font-semibold" href="#">Prices and conditions <span aria-hidden="true">→</span></a></p>
+    </div>
+    <p class="mt-6 text-muted">Larger or different needs are quoted individually.</p>
+  </div>
+</section>
+
+{% set contactNote = '' %}
+{% include "contact-block.njk" %}
