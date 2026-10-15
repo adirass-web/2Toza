@@ -1,10 +1,68 @@
 ---
 layout: base.njk
-title: Toza v2 preview
+title: Toza | Before private information becomes leverage
 permalink: /en/index.html
 ---
-<main>
-  <h1>Toza v2 — preview build</h1>
-  <p>Competing rebuild. Not indexed. Design and copy arrive in phases 3–6.</p>
-  <p>Wiring check: Assessment {{ facts.prices.assessment | ils }} · Personal Shield {{ facts.prices.personalShield | ils }}</p>
+<main id="main">
+
+<section class="border-b border-border bg-white" aria-label="Introduction">
+  <div class="wrap grid gap-x-12 gap-y-6 py-8 sm:py-14 lg:grid-cols-[1.15fr_.85fr] lg:grid-rows-[auto_1fr] lg:items-start lg:py-20">
+    <div class="lg:col-start-1 lg:row-start-1">
+      <h1 class="text-[2.125rem] font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]">Before private information becomes leverage.</h1>
+      <p class="mt-4 max-w-xl text-lg text-muted-foreground">Private conversations, finances and plans can become leverage over you. Dr. Lior Tabansky assesses and hardens your phone, computer and accounts with you, in person.</p>
+    </div>
+    <figure class="flex items-center gap-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:flex-col lg:items-stretch lg:gap-0 lg:rounded-2xl lg:border lg:border-border lg:bg-card lg:p-3 lg:shadow-card">
+      <img src="/assets/img/dr-tabansky-portrait-square-640.webp" alt="Dr. Lior Tabansky" width="640" height="640" class="size-24 shrink-0 rounded-xl border border-border object-cover shadow-card lg:size-auto lg:w-full lg:border-0 lg:shadow-none" fetchpriority="high">
+      <figcaption class="lg:px-3 lg:py-4">
+        <p class="font-semibold leading-snug">Dr. Lior Tabansky</p>
+        <p class="text-sm text-muted-foreground">In person · With you present · You control your credentials</p>
+      </figcaption>
+    </figure>
+    <div class="lg:col-start-1 lg:row-start-2">{% include "contact-buttons.njk" %}</div>
+  </div>
+</section>
+
+<section id="situations" class="section scroll-mt-16" aria-labelledby="doors-h">
+  <div class="wrap grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+    <div>
+      <h2 id="doors-h" class="h2">Where this usually begins.</h2>
+      <p class="lede mt-3">Or before anything happens. You don't need a known incident to begin.</p>
+    </div>
+    <ul class="panel divide-y divide-border overflow-hidden">
+      <li><a class="door" href="/en/separation-divorce/"><span class="grow"><span class="block font-semibold">Separation or divorce</span><span class="block text-muted-foreground">What still connects your digital lives.</span></span><svg class="door-go" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li><a class="door" href="#"><span class="grow"><span class="block font-semibold">Business or founder dispute</span><span class="block text-muted-foreground">Where personal and business access still meet.</span></span><svg class="door-go" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li><a class="door" href="#"><span class="grow"><span class="block font-semibold">Inheritance conflict</span><span class="block text-muted-foreground">Family arrangements that outlived the trust.</span></span><svg class="door-go" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li><a class="door" href="#"><span class="grow"><span class="block font-semibold">Someone knows something</span><span class="block text-muted-foreground">Private information has surfaced. Start with what can be checked.</span></span><svg class="door-go" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="how" class="section scroll-mt-16 border-y border-border bg-white" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h" class="h2">Three stages, one person.</h2>
+    <p class="lede mt-3 mb-8">Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.</p>
+    {% include "stages.njk" %}
+    <p class="mt-3"><a class="tlink" href="#">How it works →</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="expert-h">
+  <div class="wrap grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+    <div>
+      <h2 id="expert-h" class="h2">The same expert, from first look to final check.</h2>
+      <div class="mt-5">{% include "credential.njk" %}</div>
+      <p class="mt-2"><a class="tlink" href="#">About Dr. Tabansky →</a></p>
+    </div>
+    {% include "specimen.njk" %}
+  </div>
+</section>
+
+<section class="section border-y border-border bg-white" aria-labelledby="price-h">
+  <div class="wrap">
+    <h2 id="price-h" class="h2 mb-8">Two prices, known in advance.</h2>
+    {% include "prices.njk" %}
+  </div>
+</section>
+
+{% include "contact-block.njk" %}
 </main>

@@ -1,0 +1,232 @@
+@import "./../node_modules/basecoat-css/dist/base/base.css";
+/* Accordion */
+@layer components {
+  .accordion {
+    @apply flex w-full flex-col;
+  }
+
+  .accordion > details > summary {
+    @apply relative flex w-full flex-1 cursor-pointer list-none items-start justify-between border border-transparent transition-all outline-none;
+  }
+
+  .accordion > details > summary > svg:last-child {
+    @apply pointer-events-none shrink-0 transition-transform;
+  }
+
+  .accordion > details[open] > summary > svg:last-child {
+    @apply rotate-180;
+  }
+
+  .accordion > details[aria-disabled='true'] > summary,
+  .accordion > details > summary[aria-disabled='true'] {
+    @apply pointer-events-none opacity-50;
+  }
+
+  .accordion > details > :not(summary) {
+    @apply overflow-hidden;
+  }
+}
+
+/* Button */
+@layer components {
+  .btn {
+    @apply inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0;
+  }
+}
+
+/* Badge */
+@layer components {
+  .badge {
+    @apply inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none;
+  }
+}
+
+/* Card */
+@layer components {
+  .card {
+    @apply flex flex-col;
+
+    > header {
+      @apply @container/card-header grid auto-rows-min items-start has-[>[data-slot=card-action],>.card-action]:grid-cols-[1fr_auto] has-[>p]:grid-rows-[auto_auto];
+    }
+
+    > header > :is(h2, h3, [data-title], .card-title) {
+      @apply leading-none;
+    }
+
+    > header > :is([data-slot='card-action'], .card-action) {
+      @apply col-start-2 row-span-2 row-start-1 self-start justify-self-end;
+    }
+
+    > header > menu.card-action {
+      @apply m-0 list-none p-0;
+    }
+
+    > footer {
+      @apply flex items-center;
+    }
+  }
+}
+
+@layer components {
+
+  .accordion > details {
+    @apply not-last:border-b;
+  }
+
+  .accordion > details > summary {
+    @apply focus-visible:ring-ring/50 focus-visible:border-ring rounded-md py-4 text-left text-sm font-medium hover:underline focus-visible:ring-3;
+  }
+
+  .accordion > details > summary > svg:last-child {
+    @apply text-muted-foreground ms-auto size-4;
+  }
+
+  .accordion > details > :not(summary) {
+    @apply pt-0 pb-4 text-sm;
+  }
+
+
+  .btn {
+    @apply rounded-md border border-transparent bg-clip-padding text-sm font-medium focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:border-destructive aria-invalid:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 active:not-aria-[haspopup]:translate-y-px [&_svg:not([class*='size-'])]:size-4;
+  }
+
+  .btn:not([data-size]),
+  .btn[data-size='default'] {
+    @apply h-9 gap-1.5 px-2.5 has-[[data-icon='inline-end']]:pr-2 has-[[data-icon='inline-start']]:pl-2;
+  }
+
+  .btn[data-size='xs'] {
+    @apply h-6 gap-1 px-2 text-xs rounded-[min(var(--radius-md),8px)] [&_svg:not([class*='size-'])]:size-3 has-[[data-icon='inline-end']]:pr-1.5 has-[[data-icon='inline-start']]:pl-1.5;
+  }
+
+  .btn[data-size='sm'] {
+    @apply h-8 gap-1 px-2.5 rounded-[min(var(--radius-md),10px)] has-[[data-icon='inline-end']]:pr-1.5 has-[[data-icon='inline-start']]:pl-1.5;
+  }
+
+  .btn[data-size='lg'] {
+    @apply h-10 gap-1.5 px-2.5 has-[[data-icon='inline-end']]:pr-2 has-[[data-icon='inline-start']]:pl-2;
+  }
+
+  .btn[data-size='icon'] {
+    @apply size-9;
+  }
+
+  .btn[data-size='icon-xs'] {
+    @apply size-6 rounded-[min(var(--radius-md),8px)] [&_svg:not([class*='size-'])]:size-3;
+  }
+
+  .btn[data-size='icon-sm'] {
+    @apply size-8 rounded-[min(var(--radius-md),10px)];
+  }
+
+  .btn[data-size='icon-lg'] {
+    @apply size-10;
+  }
+
+  .btn:not([data-variant]),
+  .btn[data-variant='primary'] {
+    @apply bg-primary text-primary-foreground hover:bg-primary/80;
+  }
+
+  .btn[data-variant='secondary'] {
+    @apply bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground;
+  }
+
+  .btn[data-variant='outline'] {
+    @apply border-border bg-background shadow-xs hover:bg-muted hover:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground;
+  }
+
+  .btn[data-variant='ghost'] {
+    @apply hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground;
+  }
+
+  .btn[data-variant='link'] {
+    @apply text-primary underline-offset-4 hover:underline;
+  }
+
+  .btn[data-variant='destructive'] {
+    @apply bg-destructive/10 text-destructive hover:bg-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40;
+  }
+
+
+  .badge {
+    @apply h-5 gap-1 rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium transition-all [&>svg]:size-3!;
+  }
+
+  .badge:not([data-variant]),
+  .badge[data-variant='primary'] {
+    @apply bg-primary text-primary-foreground [a]:hover:bg-primary/80;
+  }
+
+  .badge[data-variant='secondary'] {
+    @apply bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80;
+  }
+
+  .badge[data-variant='outline'] {
+    @apply border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground;
+  }
+
+  .badge[data-variant='destructive'] {
+    @apply bg-destructive/10 [a]:hover:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 text-destructive dark:bg-destructive/20;
+  }
+
+  .badge[data-variant='ghost'] {
+    @apply hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50;
+  }
+
+  .badge[data-variant='link'] {
+    @apply text-primary underline-offset-4 hover:underline;
+  }
+
+
+  .card {
+    @apply ring-foreground/10 bg-card text-card-foreground overflow-hidden rounded-xl text-sm shadow-xs ring-1 has-[>img:first-child]:pt-0 [&>img:first-child]:rounded-t-xl [&>img:last-child]:rounded-b-xl;
+  }
+
+  .card {
+    @apply gap-6 py-6;
+  }
+
+  .card[data-size='sm'] {
+    @apply gap-4 py-4;
+  }
+
+  .card > header {
+    @apply gap-1 rounded-t-xl px-6 [.border-b]:pb-6;
+  }
+
+  .card[data-size='sm'] > header {
+    @apply px-4 [.border-b]:pb-4;
+  }
+
+  .card > header > :is(h2, h3, [data-title], .card-title) {
+    @apply text-base leading-normal font-medium;
+  }
+
+  .card[data-size='sm'] > header > :is(h2, h3, [data-title], .card-title) {
+    @apply text-sm;
+  }
+
+  .card > header > :is(p, [data-description], .card-description) {
+    @apply text-muted-foreground text-sm;
+  }
+
+  .card > section {
+    @apply px-6;
+  }
+
+  .card[data-size='sm'] > section {
+    @apply px-4;
+  }
+
+  .card > footer {
+    @apply rounded-b-xl px-6 [.border-t]:pt-6;
+  }
+
+  .card[data-size='sm'] > footer {
+    @apply px-4 [.border-t]:pt-4;
+  }
+
+
+}

@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: Pricing | Toza
+permalink: /en/pricing/index.html
+---
+<main id="main">
+
+<section class="border-b border-border bg-white" aria-label="Pricing">
+  <div class="wrap py-10 sm:py-16">
+    <!-- [draft] hero copy -->
+    <h1 class="max-w-3xl text-[2.125rem] font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]">Three services, priced in advance.</h1>
+    <p class="mt-4 max-w-2xl text-lg text-muted-foreground">All prices include VAT. The first conversation is free and commits you to nothing.</p>
+    <div class="mt-6 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      {% include "founder-line.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Compare services">
+  <div class="wrap">
+    <div class="grid gap-4 lg:grid-cols-3">
+      <article class="card">
+        <header>
+          <h2 class="text-lg font-semibold">Private Exposure Assessment</h2>
+          <p class="mt-2"><span class="text-4xl font-semibold tracking-tight !text-foreground">{{ facts.prices.assessment | ils }}</span> <span class="text-sm text-muted-foreground">including VAT</span></p>
+          <p class="text-muted-foreground">The first visit.</p>
+        </header>
+        <section>
+          <ul class="space-y-2.5 text-muted-foreground">
+            <li class="tick">Typically four hours</li>
+            <li class="tick">One main phone and one computer, iPad or second phone</li>
+            <li class="tick">Your threat model and risks in order</li>
+            <li class="tick">Urgent first aid, including removing a malicious app or profile where it can be done safely</li>
+            <li class="tick">Practical summary, whether or not you continue</li>
+          </ul>
+        </section>
+        <footer class="mt-auto"><a class="btn cta w-full" data-variant="outline" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ contact.whatsapp.label }}</a></footer>
+      </article>
+
+      <article class="card !border-primary ring-1 ring-primary/30">
+        <header>
+          <h2 class="text-lg font-semibold">Personal Shield</h2>
+          <p class="mt-2"><span class="text-4xl font-semibold tracking-tight !text-foreground">{{ facts.prices.personalShield | ils }}</span> <span class="text-sm text-muted-foreground">including VAT</span></p>
+          <p class="text-muted-foreground">{{ facts.prices.personalShieldRemainingAfterCredit | ils }} after the Assessment credit.</p>
+        </header>
+        <section>
+          <ul class="space-y-2.5 text-muted-foreground">
+            <li class="tick">One person, two devices</li>
+            <li class="tick">Two security keys, supplied and configured</li>
+            <li class="tick">{{ facts.personalShield.typicalWorkHours }} work hours</li>
+            <li class="tick">Teaching, so you can run it yourself</li>
+            <li class="tick">Private dated record</li>
+            <li class="tick">{{ facts.personalShield.adjustmentSupportDays }} days of adjustment support</li>
+          </ul>
+        </section>
+        <footer class="mt-auto"><a class="btn cta w-full" data-variant="primary" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ contact.whatsapp.label }}</a></footer>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2 class="text-lg font-semibold">Inner Circle</h2>
+          <p class="mt-2"><span class="text-sm text-muted-foreground">from</span> <span class="text-4xl font-semibold tracking-tight !text-foreground">{{ facts.prices.innerCircleFrom | ils }}</span> <span class="text-sm text-muted-foreground">including VAT</span></p>
+          <p class="text-muted-foreground">{{ facts.prices.innerCircleRemainingAfterCreditFrom | ils }} after the Assessment credit.</p>
+        </header>
+        <section>
+          <ul class="space-y-2.5 text-muted-foreground">
+            <li class="tick">Four people</li>
+            <li class="tick">Eight devices</li>
+            <li class="tick">Eight security keys</li>
+            <li class="tick">Home network</li>
+          </ul>
+        </section>
+        <footer class="mt-auto"><a class="btn cta w-full" data-variant="outline" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ contact.whatsapp.label }}</a></footer>
+      </article>
+    </div>
+    <p class="mt-6 max-w-2xl text-muted-foreground">Your Assessment fee counts toward Personal Shield or Inner Circle when it begins within 14 days of completion of the initial service.</p>
+    <!-- [draft] bespoke line -->
+    <p class="mt-1 max-w-2xl text-muted-foreground">Larger or unusual set-ups are quoted individually.</p>
+    <p class="mt-1"><a class="tlink" href="#">Full conditions →</a></p>
+  </div>
+</section>
+
+<section class="section border-t border-border bg-white" aria-label="Credential">
+  <div class="wrap">{% include "credential.njk" %}</div>
+</section>
+
+{% include "contact-block.njk" %}
+</main>

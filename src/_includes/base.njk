@@ -4,9 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#ffffff">
   <title>{{ title }}</title>
+  <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body class="min-h-screen">
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-2 focus:rounded-md focus:bg-white focus:px-4 focus:py-3">Skip to content</a>
+
+<header class="sticky top-0 z-40 border-b border-border bg-white/90 backdrop-blur">
+  <div class="wrap flex h-16 items-center justify-between gap-3">
+    <a href="/en/" class="flex items-center" aria-label="Toza, home"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="105" height="38" class="h-9 w-auto"></a>
+    <nav aria-label="Main" class="hidden items-center gap-1 lg:flex">
+      <a class="navlink" href="/en/#situations">Situations</a>
+      <a class="navlink" href="/en/#how">How it works</a>
+      <a class="navlink" href="/en/pricing/"{% if page.url == '/en/pricing/' %} aria-current="page"{% endif %}>Pricing</a>
+      <a class="navlink" href="#">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a class="btn cta" data-variant="primary" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">Message</a>
+      <details class="group relative lg:hidden">
+        <summary class="btn cta list-none" data-variant="outline" aria-label="Menu" style="padding-inline:.75rem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <nav aria-label="Menu" class="panel absolute end-0 top-14 flex w-56 flex-col p-2">
+          <a class="navlink" href="/en/#situations">Situations</a>
+          <a class="navlink" href="/en/#how">How it works</a>
+          <a class="navlink" href="/en/pricing/">Pricing</a>
+          <a class="navlink" href="#">FAQ</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
 {{ content | safe }}
+
+<footer class="border-t border-border bg-white">
+  <div class="wrap flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+    <img src="/assets/brand/toza-logo-ink.svg" alt="Toza" width="84" height="31" class="h-8 w-auto self-start">
+    <nav aria-label="Footer" class="flex flex-wrap gap-x-1 gap-y-0 text-sm">
+      <a class="navlink" href="/en/pricing/">Pricing</a>
+      <a class="navlink" href="#">FAQ</a>
+      <a class="navlink" href="#">For attorneys</a>
+      <a class="navlink" href="#">Conditions</a>
+      <a class="navlink" href="#">Privacy</a>
+      <a class="navlink" href="#">Terms</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
