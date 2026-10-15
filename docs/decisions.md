@@ -21,5 +21,8 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-015 | 2026-10-15 | Fonts: Frank Ruhl Libre + Assistant for English and Hebrew, self-hosted. |
 | V-016 | 2026-10-15 | English first; Hebrew after EN copy and design approval. Old Hebrew copy is stale; reuse selected lines only. Layout stays RTL-ready. |
 | V-017 | 2026-10-15 | Copy provenance rule: builders may not invent copy; every non-verbatim text block is listed for owner approval. |
+| V-018 | 2026-10-15 | No visible "including VAT" labels; prices unchanged (VAT-inclusive). |
+| V-019 | 2026-10-15 | Credential line deleted; method line used prominently instead, plus profile link. |
+| V-020 | 2026-10-15 | Pricing: Assessment is the first step, not a tier. Tiers: Personal Shield, Inner Circle, Bespoke (top, individually scoped). Tier architecture developed separately (strategy/pricing/). |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

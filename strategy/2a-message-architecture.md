@@ -19,7 +19,7 @@
 | 1 | **Private information can be used against you, and the route is usually ordinary access you've forgotten.** | Three concrete things to check, drawn from the current copy's themes (what someone can reach, what separate details reveal together): (1) a recovery email or number on your main account that is no longer yours, so one reset can open everything linked to it; (2) an old profile, a delivery address and a tagged photo that each look harmless but together show where you live and when you are out; (3) a smart-home hub or connected-car app set up jointly, whose history and controls the other account holder can still see. |
 | 2 | **One senior expert does the work himself, in person, with you.** | Founder portrait and name. "In person · With you present · You control your credentials." He understands the situation, makes the changes and verifies them. The credential line plus the personal-site link. |
 | 3 | **It is a defined process with tangible results.** | Assess → Harden → Verify, Toza's own method, developed from public guidance of government security agencies and security vendors. Practical summary, even without further purchase. Two security keys supplied, configured and tested. Private dated record. Teaching. 14 days of adjustment support. |
-| 4 | **The price is known, and the first step is a private conversation.** | ₪3,600 Assessment, ₪14,000 Personal Shield, both incl. VAT. Assessment fee credited (14-day condition, linked). The first conversation is free and commits you to nothing. WhatsApp, Signal, call-back. |
+| 4 | **The price is known, and the first step is a private conversation.** | ₪3,600 Assessment (first step), ₪14,000 Personal Shield (main tier). Assessment fee credited (14-day condition, linked). The first conversation is free and commits you to nothing. WhatsApp, Signal, call-back. |
 
 Messages 1–2 go in the first screen, 3 gets one screen, and 4 repeats on every page.
 
@@ -37,7 +37,7 @@ There are still **11 pages**, but the footprint changes: Assessment and How Toza
 | **Inheritance conflict** | Same, for family arrangements made in good faith. | P3 heir | Attorney referral, Home door | Open WhatsApp | "Does not decide entitlement" → FAQ |
 | **They know something** | Same, when private information has surfaced. Urgent route visible. | P4 leak/pressure | Search, Home door | Open WhatsApp | Attribution and forensics limits → FAQ; urgent terms → Conditions |
 | **How it works** (merges *Private Exposure Assessment* + *How Toza helps*) | Show the three stages and what each one produces. | Reader comparing or justifying the price | Home, situation pages | Open WhatsApp | Group mechanics → Pricing; credit, urgent → Conditions |
-| **About Dr. Tabansky** (was *Why Toza*) | The founder's first-person reason for Toza, the credential line and the personal-site link. | Reader checking "who is this man" | Home block 4, nav | Open WhatsApp | Methods-guidance paragraph cut to one line |
+| **About Dr. Tabansky** (was *Why Toza*) | The founder's first-person reason for Toza, the method line and the personal-site link. | Reader checking "who is this man" | Home block 4, nav | Open WhatsApp | Methods-guidance paragraph cut to one line |
 | **Pricing** | All services on one calm page: Assessment, Personal Shield, Inner Circle, Bespoke. ≤300 words. | Reader ready to decide; proactive family (P5) | Nav, price block | Open WhatsApp | Commercial accordions → Conditions; "Service boundaries" accordion → FAQ E |
 | **Conditions** (new, printable) | Commercial terms only, in one place: credit, urgent surcharges, support periods, migration and network scope, follow-up, group records. No boundary sentences (R-2). | Careful buyer, attorney, client's adviser | "Prices and conditions" link only | None (text link to contact) | — |
 | **For attorneys** | Make referring safe and simple. | P6 family, commercial and estate attorneys | Direct link from Dr. Tabansky, nav footer | Open WhatsApp (referral text) | Authority and boundary detail → FAQ F |
@@ -97,7 +97,7 @@ Shared strip (§6.4), real objects, no icons.
 ### Block 4 — Credential + specimen
 
 **Heading:** *The same expert, from first look to final check.*
-Credential line (§6.3) + link **"Professional profile ↗"** (cyberdrtabansky.com, opens in a new tab).
+Method line (§6.3) + link **"Professional profile ↗"** (cyberdrtabansky.com, opens in a new tab).
 **Visual:** illustrative specimen of the practical summary (§6.5), labelled.
 **CTA:** text link "About Dr. Tabansky".
 
@@ -125,7 +125,7 @@ Budget: ≤5 phone screens, ≤400 words. Base layout: the current separation-di
 4. **Three stages:** shared strip + one situation line.
 5. **Extra (optional):** attorney coordination, or urgent visit (They know something).
 6. **Price block** (shared).
-7. **Credential line** (shared).
+7. **Method line** (shared).
 8. **Contact block** + link "Questions about [situation]" → FAQ group.
 
 ### Fully drafted: Separation & Divorce
@@ -157,7 +157,7 @@ Budget: ≤5 phone screens, ≤400 words. Base layout: the current separation-di
 > ## Your attorney can be involved.
 > With your authorization, you receive an attorney-friendly summary of the work and what remains, and timing can be coordinated with counsel.
 
-**6–8.** Price block · credential line · contact block · link "Questions about separation and privacy".
+**6–8.** Price block · method line · contact block · link "Questions about separation and privacy".
 
 (~230 words. The boundary sentences cut from this page (spouse use, invisibility, investigation) move to FAQ group E.)
 
@@ -183,17 +183,17 @@ Budget: ≤5 phone screens, ≤400 words. Base layout: the current separation-di
 ### 6.1 Price block (identical everywhere)
 
 > **Private Exposure Assessment**
-> **₪3,600** including VAT
+> **₪3,600**
 > Typically four hours · One main phone and one computer, iPad or second phone · Practical summary, whether or not you continue
 >
 > **Personal Shield**
-> **₪14,000** including VAT
+> **₪14,000**
 > One person · Two devices · Two security keys, configured · Private dated record
 >
 > Your Assessment fee counts toward Personal Shield when it begins within 14 days of completion of the initial service.
 > [Prices and conditions →]
 
-On Pricing only, Inner Circle is added as a third column: "from ₪42,000 including VAT · Four people · Eight devices · Home network".
+On Pricing only, Inner Circle is added as a third column: "from ₪42,000 · Four people · Eight devices · Home network"; Bespoke Private Protection as the top tier, "Individually scoped". See strategy/pricing/P3-product-architecture.md.
 
 ### 6.2 Contact block
 
@@ -209,11 +209,11 @@ Attorney page (hero, contact block and the 2b flow), one label only: **"Discuss 
 
 **Sticky phone header:** logo · Pricing · **[Message]** (opens WhatsApp).
 
-### 6.3 Credential line (one line, site-wide, approved wording)
+### 6.3 Method line (replaces the credential line, owner decision 15 Oct)
 
-> *Dr. Lior Tabansky's work has included national cybersecurity strategy and collaborative cyber-resilience projects with the World Bank across 11 countries.* [Professional profile ↗]
+> *Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.* [Professional profile ↗]
 
-Link: cyberdrtabansky.com, new tab. Identical on every page and the 2b one-pager.
+Link: cyberdrtabansky.com, new tab. Used prominently on Home (stages lead, block 4), Pricing (above the tiers) and situation pages (stages block). The World Bank credential line is deleted.
 
 ### 6.4 Three-stage strip
 
@@ -294,10 +294,10 @@ All boundaries and warnings live here (R-2). The questions marked *(open)* show 
 1. **One statement per screen.** Heading ≤10 words, support ≤40 words. Phone fold: headline + ≤25 words + button.
 2. **Budgets.** Home ≤420 words / 6 phone screens; situation ≤400 / 5; How it works ≤500; About ≤350; Pricing ≤300; FAQ answers ≤80 each.
 3. **CTA.** Every CTA opens a channel on the first tap (WhatsApp primary, Signal and Call me back beside it). No anchors, no forms. Labels name the channel.
-4. **Price.** Always "₪X including VAT", never "only". Home and situation pages show ₪3,600 and ₪14,000 only. The credit line always says "within 14 days of completion of the initial service" and links to Conditions.
+4. **Price.** Always "₪X" with no VAT label (prices are VAT-inclusive; one VAT statement lives in Conditions), never "only". Home and situation pages show ₪3,600 and ₪14,000 only. The credit line always says "within 14 days of completion of the initial service" and links to Conditions.
 5. **R-2.** "Does not / cannot / not guaranteed / do not send" sentences go in the FAQ only, never in heroes, bodies, CTA zones, footers or Conditions. Conditions holds commercial terms; the FAQ holds boundaries.
 6. **Founder.** Name him in every first screen. First person on About only.
-7. **Proof ceiling.** Credential line + profile link. No logos, press, testimonials, counts, statistics or scarcity.
+7. **Proof ceiling.** Method line + profile link. No logos, press, testimonials, counts, statistics or scarcity.
 8. **Concrete.** Name the device, the recovery email, the shared cloud: ≥3 fact-base examples per situation page. No implied wrongdoing.
 9. **Voice.** Plain, calm, adult. BRIEF banned list applies. At most one rhetorical question per page.
 10. **HE-ready.** No idioms or puns. Hebrew headlines are written natively.
@@ -321,3 +321,4 @@ All boundaries and warnings live here (R-2). The questions marked *(open)* show 
 8. Harden (owner comment, 15 Oct): described as Toza's own method, developed from public guidance of government security agencies and security vendors. Added to message 3, Home block 3 support line and the §6.4 table. Wording says "developed from", never "endorsed by" or "equivalent to" an agency, and avoids "high-end" (luxury adjectives are on the banned list).
 9. Message 1 proof (owner comment, 15 Oct): replaced the four examples with three stronger things to check: recovery chain, separate details read together, shared home or car app. All phrased as checks, with no claim about what anyone is doing.
 10. Home headline (owner comment, 15 Oct): decided C, "Before private information becomes leverage." Subline now names the stake and the person. A is the fallback, tested against C in Phase 5.
+11. Owner edits (15 Oct, round 3): all visible "including VAT" labels removed (prices unchanged, VAT-inclusive); credential line deleted, replaced site-wide by the method line; pricing presents the Assessment as the first step and three protection tiers (Personal Shield, Inner Circle, Bespoke). Tier architecture is developed separately in strategy/pricing/.
