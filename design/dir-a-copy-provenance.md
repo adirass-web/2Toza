@@ -62,3 +62,7 @@ Note for owner: 2a "Changes after review" item 5 says the Home subline "ends 'ar
 ## E. Verbatim check (for reference)
 
 Verbatim from 2a: all Home blocks 1, 2, 3, 4, 6 text; Separation hero, recognition list, sequence, stage situation line, attorney block; price lines (§6.1, split at the "·"); credit line (§6.1); the method line (§6.4, now used verbatim four times: Home blocks 3 and 4, Pricing above the tiers, stages block on Separation); contact heading and reassurance line (§4, §6.2); stage lines for Assess and Verify (§6.4); the specimen label (§6.5); WhatsApp, Signal and Call me back labels (`contact.json`).
+
+## Round 4 (owner, 15 Oct): Bespoke minimised
+- Removed from Pricing table and stage strip: "Bespoke Private Protection", "Individually scoped", "Scope and price agreed with you individually.", strip label "Bespoke".
+- New [draft], one quiet line under the two tiers: "Larger households, several locations or other needs: scope and price agreed with you individually." + link "Ask about it" (opens WhatsApp).

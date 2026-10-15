@@ -83,11 +83,8 @@
     "startHere": "Start here",
     "allTiers": "All protection tiers",
     "bespoke": {
-      "name": "Bespoke Private Protection",
-      "price": "Individually scoped",
-      "items": [
-        "Scope and price agreed with you individually."
-      ]
+      "line": "Larger households, several locations or other needs: scope and price agreed with you individually.",
+      "cta": "Ask about it"
     }
   },
   "stages": {
@@ -117,8 +114,7 @@
     },
     "strip": {
       "assessSpan": "Assess",
-      "protectSpan": "Harden + Verify",
-      "bespoke": "Bespoke"
+      "protectSpan": "Harden + Verify"
     }
   },
   "specimen": {

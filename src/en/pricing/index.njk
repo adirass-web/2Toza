@@ -38,7 +38,7 @@ permalink: /en/pricing/index.html
 
     <p class="mt-12 lg:mt-16 font-serif text-2xl lg:text-3xl leading-snug text-ink max-w-3xl">{{ t.stages.method }}</p>
 
-    <div class="tiers mt-8 lg:mt-10 grid gap-6 lg:grid-cols-3 lg:gap-0">
+    <div class="tiers mt-8 lg:mt-10 grid gap-6 lg:grid-cols-2 lg:gap-0">
       <article class="tier py-7 border-t-2 border-brass lg:border-t-0 lg:border-y lg:border-rule lg:border-y-rule lg:pe-10 lg:py-10 lg:border-e lg:border-e-rule bg-paper-deep/60 px-5 lg:ps-6">
         <h3 class="tier-name font-serif text-2xl lg:text-3xl">{{ t.price.shield.name }}</h3>
         <div class="tier-price"><p class="numeral text-6xl text-ink">{{ facts.prices.personalShield | ils }}</p></div>
@@ -53,14 +53,8 @@ permalink: /en/pricing/index.html
           {% for i in t.price.inner.items %}<li class="py-3">{{ i }}</li>{% endfor %}
         </ul>
       </article>
-      <article class="tier tier-top on-ink py-7 px-5 lg:px-10 lg:py-10">
-        <h3 class="tier-name font-serif text-2xl lg:text-3xl !text-paper">{{ t.price.bespoke.name }}</h3>
-        <div class="tier-price"><p class="font-serif text-4xl leading-none text-brass-light">{{ t.price.bespoke.price }}</p></div>
-        <ul class="tier-list divide-y divide-paper/25 border-y border-paper/25">
-          {% for i in t.price.bespoke.items %}<li class="py-3 text-paper/90">{{ i }}</li>{% endfor %}
-        </ul>
-      </article>
     </div>
+    <p class="mt-6 text-muted max-w-3xl">{{ t.price.bespoke.line }} <a class="link font-semibold" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ t.price.bespoke.cta }}</a></p>
   </div>
 </section>
 
