@@ -1,25 +1,35 @@
-# Direction A: Private bank
+# Direction A: Private bank (round 2)
 
-**Foundation.** Tailwind CSS v4 (CLI, purged, 39 KB minified) with the Flowbite 4 default theme and plugin. Taken from Flowbite: its semantic colour tokens (`brand`, `heading`, `body`, `neutral-primary`, `default`) remapped to our palette, the button and accordion-free card/list patterns, and the forms base. No Flowbite JS shipped; the mobile menu is a `<details>`. `npm run build` builds CSS, then Eleventy.
+**Foundation.** Tailwind v4 CLI with Flowbite 4 tokens remapped to the palette. The Flowbite forms layer is now off (`forms: false`), which removed every physical left/right rule it carried. No framework JS.
 
-**Tokens.**
-- Colour: paper ivory `#f7f2e8`, recessed ivory `#ede5d3`, ink green `#11302a`, text `#1d2723`, muted `#525d57`, brass `#7d5f24` (text-safe, 5:1), brass-light `#cfae6a` (on ink), rule `#cfc4aa`.
-- Type: Frank Ruhl Libre 400 headlines, Assistant 400/600 body, both self-hosted (latin + hebrew woff2, 8 files, about 77 KB; the hebrew subset also carries the shekel sign). Body 18px/1.6. Display 42px on phone, 80px on desktop. H2 clamp 30 to 44px.
-- Spacing: 4.5rem section rhythm on phone, 7rem on desktop; 76rem container; 3px radius; 1px hairlines.
-- Logical properties throughout (`ps-`, `pe-`, `inset-inline-*`, `border-e`), so RTL needs only `dir="rtl"`.
+**Tokens** (unchanged). Ivory `#f7f2e8`, recessed `#ede5d3`, ink green `#11302a`, brass `#7d5f24` (`#cfae6a` on ink). Frank Ruhl Libre for headlines, Assistant for body, for English and Hebrew; both self-hosted, latin and hebrew subsets. Section padding is now 3.5rem on phone, 7rem on desktop.
 
-**Components** (`src/_includes`): header (sticky, details menu), footer, hero with framed portrait, situation "doors" (index rows, not cards), three-stage band with inline SVG objects (laptop, phone and summary sheet; two keys; dated record folder), specimen document card, price block, credential line, contact block, two CTA partials. All CTAs are direct `target="_blank" rel="noopener"` links from `contact.json`; prices come only from `facts.json` through `ils`.
+**What changed this round (review fix list 1 to 10)**
+1. Phone stages are compact rows: drawing at the inline start (120px), text beside it. Price facts flow as one dotted line on phone.
+2. Portrait is 96px on Home and Separation; WhatsApp bottom at 552px and 478px.
+3. Pricing columns use subgrid, so the three prices share one baseline.
+4. Specimen has readable neutral entries; the label is unchanged.
+5. The dated record shows "15 Oct 2026" in brass.
+6. Inline links have a 45px or taller hit area (padding with matching negative margin).
+7. RTL smoke test done (below).
+8. `[draft]` copy is flagged in `design/dir-a-copy-provenance.md` only; pages carry no markers.
+9. Portrait ships plain black and white; the sepia filter is gone.
+10. The three drawings share one rendered stroke of 1.5px (non-scaling) at every size.
 
-**Pages.** `/en/` (6 blocks), `/en/separation-divorce/` (2a section 5 verbatim), `/en/pricing/` (hero, three columns, credit line, contact). `/` links to `/en/`.
+**Language-ready base.** `src/_data/i18n/en.json` holds `lang`, `dir`, nav, buttons, footer, and the copy of shared components. `src/src.11tydata.js` picks the locale. Adding Hebrew means `he.json` and a `src/he` folder with `locale: "he"`.
 
-**Checks.** `npm run build && npm run check` pass. No horizontal overflow at 390 or 1440. Phone fold on Home and Separation: headline, 25-word subline, founder portrait with name, WhatsApp button, Signal and Call me back.
+**Phone length (390x844).** Home 5.92 screens (was 7.3), Separation 5.76, Pricing 3.30.
 
-**Page weight** (transferred bytes excluding portrait, uncompressed): Home 107 KB, Separation 105 KB, Pricing 96 KB. Limit 400 KB.
+**Page weight** (excluding portrait): Home 116 KB, Separation 114 KB, Pricing 89 KB. Limit 400 KB.
 
-**Known gaps.**
-- `[draft]` copy, marked by an HTML comment on Pricing and flagged here: pricing hero, column taglines, "Larger or different needs are quoted individually", and the Home price heading "Two prices, both including VAT."
-- Links to unbuilt pages (FAQ, Conditions, For attorneys, About, How it works) point to `#`.
-- Hebrew not built or tested; Frank Ruhl Libre and Assistant both have Hebrew glyphs.
-- Portrait is black and white; a light CSS sepia tone warms it to the palette.
-- Specimen text is 16px, so it is a little crowded on narrow phones.
-- No contrast tool was run; contrast was checked by token ratios only.
+**RTL test.** Temporary Home and Pricing pages with `dir="rtl"`, a Hebrew paragraph and English strings, screenshotted at 390 and 1440 (`rtl-*.png`), then removed. The sticky header, menu, portrait frame offset, door arrows, link arrows, price columns and the buttons order all flip; no horizontal overflow. The built CSS has no physical left/right properties and the templates have no `ml/mr/pl/pr/text-left`. The drawings are wrapped in `dir="ltr"` on purpose, so they do not mirror.
+
+**Checks.** `npm run build && npm run check` pass.
+
+**Remaining gaps**
+- 8 `[draft]` blocks await owner approval (see provenance).
+- Home subline: 2a has two versions; confirm which one.
+- Links to unbuilt pages still point to `#`.
+- Hebrew not built; English words inside RTL text show misplaced full stops, expected until Hebrew copy exists.
+- Contrast was checked by token ratios, not a tool.
+- Real-device check of the plain portrait on low-end Android is still open.

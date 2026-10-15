@@ -4,19 +4,19 @@ title: Separation and divorce — Toza
 description: Accounts set up for a shared life can outlast it. Dr. Lior Tabansky finds, with you and in person, what still connects you.
 permalink: /en/separation-divorce/index.html
 ---
-<section class="pt-8 pb-14 lg:pt-20 lg:pb-28" aria-labelledby="h1">
-  <div class="wrap grid gap-x-16 gap-y-8 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:[grid-template-areas:'copy_fig'_'act_fig'] max-lg:[grid-template-areas:'copy'_'fig'_'act']">
+<section class="pt-6 pb-10 lg:pt-20 lg:pb-28" aria-labelledby="h1">
+  <div class="wrap grid gap-x-16 gap-y-6 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:[grid-template-areas:'copy_fig'_'act_fig'] max-lg:[grid-template-areas:'copy'_'fig'_'act']">
     <div class="lg:col-span-7 [grid-area:copy]">
       <h1 id="h1" class="display text-[2.625rem] sm:text-6xl lg:text-[4.75rem] !text-ink">Trust can end before access does.</h1>
       <p class="mt-5 lg:mt-8 text-lg lg:text-xl leading-relaxed max-w-[34rem] text-text">Accounts set up for a shared life can outlast it. Dr. Lior Tabansky finds, with you and in person, what still connects you.</p>
     </div>
     <figure class="[grid-area:fig] lg:col-span-4 lg:col-start-9 flex items-center gap-4 lg:block">
-      <div class="frame shrink-0 w-[5.25rem] h-[5.25rem] lg:w-full lg:h-auto lg:aspect-square">
-        <img class="portrait" src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" alt="Dr. Lior Tabansky" fetchpriority="high">
+      <div class="frame shrink-0 w-24 h-24 lg:w-full lg:h-auto lg:aspect-square">
+        <img class="portrait" src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" alt="{{ t.ui.portraitAlt }}" fetchpriority="high">
       </div>
       <figcaption class="lg:mt-9">
-        <p class="font-serif text-xl lg:text-2xl text-ink">Dr. Lior Tabansky</p>
-        <p class="text-[0.9375rem] lg:text-base text-muted leading-snug">In person · You control your credentials</p>
+        <p class="font-serif text-xl lg:text-2xl text-ink">{{ t.person.name }}</p>
+        <p class="text-[0.9375rem] lg:text-base text-muted leading-snug">{{ t.person.taglineShort }}</p>
       </figcaption>
     </figure>
     <div class="[grid-area:act] lg:col-span-7 lg:self-start">
@@ -60,7 +60,7 @@ permalink: /en/separation-divorce/index.html
 
 <div class="bg-paper-deep">{% include "price-block.njk" %}</div>
 
-<section class="section" aria-label="Credential">
+<section class="section" aria-label="{{ t.ui.credentialRegion }}">
   <div class="wrap">{% include "credential.njk" %}</div>
 </section>
 

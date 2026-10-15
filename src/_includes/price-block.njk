@@ -1,27 +1,23 @@
 <section class="section" aria-labelledby="price-h">
   <div class="wrap">
-    <h2 id="price-h" class="h2 max-w-2xl">Two prices, both including VAT.</h2>
-    <div class="mt-12 grid gap-12 md:grid-cols-2 md:gap-0">
+    <h2 id="price-h" class="h2 max-w-2xl">{{ t.price.heading }}</h2>
+    <div class="mt-9 lg:mt-12 grid gap-9 md:grid-cols-2 md:gap-0">
       <div class="md:pe-14 md:border-e md:border-rule">
-        <h3 class="font-serif text-2xl">Private Exposure Assessment</h3>
-        <p class="mt-6 flex items-baseline gap-3"><span class="numeral text-6xl lg:text-7xl text-ink">{{ facts.prices.assessment | ils }}</span><span class="text-muted">including VAT</span></p>
-        <ul class="mt-7 divide-y divide-rule border-y border-rule">
-          <li class="py-3">Typically {{ facts.assessment.typicalHours }} hours</li>
-          <li class="py-3">One main phone and one computer, iPad or second phone</li>
-          <li class="py-3">Practical summary, whether or not you continue</li>
+        <h3 class="font-serif text-2xl">{{ t.price.assessment.name }}</h3>
+        <p class="mt-4 lg:mt-6 flex items-baseline gap-3"><span class="numeral text-6xl lg:text-7xl text-ink">{{ facts.prices.assessment | ils }}</span><span class="text-muted">{{ t.price.including }}</span></p>
+        <ul class="facts mt-4 lg:mt-7 border-y border-rule">
+          {% for i in t.price.assessment.items %}<li>{{ i }}</li>{% endfor %}
         </ul>
       </div>
       <div class="md:ps-14">
-        <h3 class="font-serif text-2xl">Personal Shield</h3>
-        <p class="mt-6 flex items-baseline gap-3"><span class="numeral text-6xl lg:text-7xl text-ink">{{ facts.prices.personalShield | ils }}</span><span class="text-muted">including VAT</span></p>
-        <ul class="mt-7 divide-y divide-rule border-y border-rule">
-          <li class="py-3">One person, two devices</li>
-          <li class="py-3">Two security keys, configured</li>
-          <li class="py-3">Private dated record</li>
+        <h3 class="font-serif text-2xl">{{ t.price.shield.name }}</h3>
+        <p class="mt-4 lg:mt-6 flex items-baseline gap-3"><span class="numeral text-6xl lg:text-7xl text-ink">{{ facts.prices.personalShield | ils }}</span><span class="text-muted">{{ t.price.including }}</span></p>
+        <ul class="facts mt-4 lg:mt-7 border-y border-rule">
+          {% for i in t.price.shield.items %}<li>{{ i }}</li>{% endfor %}
         </ul>
       </div>
     </div>
-    <p class="mt-10 max-w-2xl text-muted">Your Assessment fee counts toward Personal Shield when it begins within {{ facts.credit.windowDays }} days of completion of the initial service.</p>
-    <p class="mt-4"><a class="link font-semibold" href="#">Prices and conditions <span aria-hidden="true">→</span></a></p>
+    <p class="mt-8 lg:mt-10 max-w-2xl text-muted">{{ t.price.credit | fill({ days: facts.credit.windowDays }) }}</p>
+    <p class="mt-3"><a class="link font-semibold" href="#">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
   </div>
 </section>

@@ -1,0 +1,106 @@
+{
+  "_note": "UI strings and shared-component copy for English. Hebrew (he.json) is added after EN copy and design are approved. lang and dir drive <html>.",
+  "lang": "en",
+  "dir": "ltr",
+  "ui": {
+    "skip": "Skip to content",
+    "homeLabel": "Toza, home",
+    "mainNav": "Main",
+    "menuNav": "Menu",
+    "menuButton": "Menu",
+    "footerNav": "Footer",
+    "newTab": "(opens in a new tab)",
+    "portraitAlt": "Dr. Lior Tabansky",
+    "credentialRegion": "Credential",
+    "compareServices": "Compare services",
+    "arrow": "→",
+    "arrowExternal": "↗"
+  },
+  "nav": {
+    "situations": "Situations",
+    "how": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "message": "Message"
+  },
+  "footer": {
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "attorneys": "For attorneys",
+    "conditions": "Conditions",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "buttons": {
+    "whatsapp": "Message on WhatsApp",
+    "signal": "Message on Signal",
+    "signalShort": "Signal",
+    "callback": "Call me back",
+    "profile": "Professional profile"
+  },
+  "person": {
+    "name": "Dr. Lior Tabansky",
+    "tagline": "In person · With you present · You control your credentials",
+    "taglineShort": "In person · You control your credentials"
+  },
+  "credential": {
+    "line": "Dr. Lior Tabansky's work has included national cybersecurity strategy and collaborative cyber-resilience projects with the World Bank across 11 countries.",
+    "about": "About Dr. Tabansky"
+  },
+  "contact": {
+    "heading": "Start with a private conversation.",
+    "reassurance": "Dr. Tabansky replies personally. The first conversation is free and commits you to nothing."
+  },
+  "price": {
+    "heading": "Two prices, both including VAT.",
+    "including": "including VAT",
+    "from": "from",
+    "assessment": {
+      "name": "Private Exposure Assessment",
+      "items": [
+        "Typically four hours",
+        "One main phone and one computer, iPad or second phone",
+        "Practical summary, whether or not you continue"
+      ]
+    },
+    "shield": {
+      "name": "Personal Shield",
+      "items": ["One person", "Two devices", "Two security keys, configured", "Private dated record"]
+    },
+    "inner": {
+      "name": "Inner Circle",
+      "items": ["Four people", "Eight devices", "Home network"]
+    },
+    "credit": "Your Assessment fee counts toward Personal Shield when it begins within {days} days of completion of the initial service.",
+    "conditions": "Prices and conditions"
+  },
+  "stages": {
+    "heading": "Three stages, one person.",
+    "assess": { "name": "Assess", "line": "Your threat model, your risks in order, and urgent first aid. Typically four hours." },
+    "harden": { "name": "Harden", "line": "Settings, accounts and recovery rebuilt around your risks. Two security keys supplied and configured." },
+    "verify": { "name": "Verify", "line": "Changes tested and checked, and you are taught to use them. A private dated record of the work." },
+    "caption": "Assess is the {price} first visit. Harden and Verify are Personal Shield.",
+    "method": "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
+    "link": "How it works",
+    "recordDate": ["15 Oct", "2026"],
+    "alt": {
+      "assess": "A laptop, a phone and a one-page summary on a table",
+      "harden": "Two hardware security keys",
+      "verify": "A closed record folder with a dated label"
+    }
+  },
+  "specimen": {
+    "title": "Practical summary",
+    "subtitle": "Private Exposure Assessment",
+    "circumstances": "Your circumstances",
+    "reviewed": "Reviewed",
+    "reviewedText": "Devices, accounts, recovery routes",
+    "found": "Found and changed",
+    "foundItems": ["Recovery email updated", "Old tablet signed out"],
+    "remaining": "Remaining",
+    "remainingText": "Shared family album, kept by choice",
+    "next": "Ordered next steps",
+    "nextItems": ["Move recovery to your own number", "Review location sharing", "Set up security keys"],
+    "label": "Illustrative example. Your summary reflects your own circumstances."
+  }
+}
