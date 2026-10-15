@@ -1,10 +1,87 @@
 ---
 layout: base.njk
-title: Toza v2 preview
+title: Toza · Private digital security, in person
 permalink: /en/index.html
 ---
-<main>
-  <h1>Toza v2 — preview build</h1>
-  <p>Competing rebuild. Not indexed. Design and copy arrive in phases 3–6.</p>
-  <p>Wiring check: Assessment {{ facts.prices.assessment | ils }} · Personal Shield {{ facts.prices.personalShield | ils }}</p>
-</main>
+<section class="hero">
+  <div class="wrap">
+    <h1>Before private information becomes leverage.</h1>
+    <p class="sub">Private conversations, finances and plans can become leverage over you. Dr. Lior Tabansky assesses and hardens your phone, computer and accounts with you, in person.</p>
+    {% include "founder.njk" %}
+    {% include "hero-actions.njk" %}
+  </div>
+</section>
+
+<section class="sec" id="situations">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">01</span><span class="label">Situations</span></div>
+    <div class="sec__body">
+      <h2>Where this usually begins.</h2>
+      <ul class="doors">
+        <li><a class="door" href="/en/separation-divorce/"><h3>Separation or divorce</h3><p>What still connects your digital lives.</p></a></li>
+        <li><a class="door" href="#"><h3>Business or founder dispute</h3><p>Where personal and business access still meet.</p></a></li>
+        <li><a class="door" href="#"><h3>Inheritance conflict</h3><p>Family arrangements that outlived the trust.</p></a></li>
+        <li><a class="door" href="#"><h3>Someone knows something</h3><p>Private information has surfaced. Start with what can be checked.</p></a></li>
+      </ul>
+      <p class="muted">Or before anything happens. You don’t need a known incident to begin.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how-it-works">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">02</span><span class="label">Method</span></div>
+    <div class="sec__body">
+      <h2>Three stages, one person.</h2>
+      {% include "stages.njk" %}
+      <p class="situation-line">Hardening is Toza’s own method, developed from public guidance of government security agencies and security vendors.</p>
+      <p><a class="cred-link" href="#">How it works</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--tint">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">03</span><span class="label">Credentials</span></div>
+    <div class="sec__body">
+      <h2>The same expert, from first look to final check.</h2>
+      <div class="split">
+        <div>
+          {% include "credential.njk" %}
+          <p><a class="cred-link" href="#">About Dr. Tabansky</a></p>
+        </div>
+        <figure class="specimen">
+          <div class="doc" role="img" aria-label="Illustrative practical summary: circumstances, what was reviewed, found and changed, remaining, ordered next steps">
+            <div class="doc__top"><b>Practical summary</b><span><span class="redact" style="width:64px"></span></span></div>
+            <div><h4>Your circumstances</h4><span class="redact" style="width:78%"></span></div>
+            <div><h4>Reviewed</h4><ul><li>Phone and laptop</li><li>Main email and recovery routes</li><li>Shared cloud and location sharing</li></ul></div>
+            <div><h4>Found and changed</h4><ul><li>Recovery email updated</li><li>Old tablet signed out</li></ul></div>
+            <div><h4>Remaining</h4><span class="redact" style="width:55%"></span></div>
+            <div><h4>Ordered next steps</h4><ol><li>Agree the sequence for the shared cloud</li><li>Move the recovery number</li><li>Set up security keys</li></ol></div>
+          </div>
+          <figcaption>Illustrative example. Your summary reflects your own circumstances.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">04</span><span class="label">Price</span></div>
+    <div class="sec__body">
+      <h2>Two prices, published.</h2>
+      {% include "prices.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="sec contact">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">05</span><span class="label">Contact</span></div>
+    <div class="sec__body">
+      <h2>Start with a private conversation.</h2>
+      {% include "contact.njk" %}
+    </div>
+  </div>
+</section>

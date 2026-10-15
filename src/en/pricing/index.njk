@@ -1,0 +1,67 @@
+---
+layout: base.njk
+title: Pricing · Toza
+permalink: /en/pricing/index.html
+---
+<section class="page-head">
+  <div class="wrap">
+    <h1>Known prices. A private conversation first.</h1><!-- [draft] -->
+    <p class="lede">Every price is published and includes VAT. The first conversation is free and commits you to nothing.</p><!-- [draft] -->
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ contact.whatsapp.label }}</a>
+      <a class="btn btn-quiet" href="{{ contact.signal.url }}" target="_blank" rel="noopener">Signal</a>
+      <a class="btn btn-quiet" href="{{ contact.callback.url }}" target="_blank" rel="noopener">{{ contact.callback.label }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">01</span><span class="label">Services</span></div>
+    <div class="sec__body">
+      <div class="prices compare">
+        <div class="price">
+          <h3>Private Exposure Assessment</h3>
+          <p class="amount">{{ facts.prices.assessment | ils }}<small>including VAT</small></p>
+          <ul>
+            <li>Typically four hours</li>
+            <li>One main phone and one computer, iPad or second phone</li>
+            <li>Personal threat model and urgent first aid</li>
+            <li>Practical summary, whether or not you continue</li>
+          </ul>
+        </div>
+        <div class="price">
+          <h3>Personal Shield</h3>
+          <p class="amount">{{ facts.prices.personalShield | ils }}<small>including VAT</small></p>
+          <ul>
+            <li>One person · Two devices</li>
+            <li>Two security keys, configured</li>
+            <li>{{ facts.personalShield.typicalWorkHours }} work hours, with teaching</li>
+            <li>Private dated record</li>
+            <li>{{ facts.personalShield.adjustmentSupportDays }} days of adjustment support</li>
+          </ul>
+        </div>
+        <div class="price">
+          <h3>Inner Circle</h3>
+          <p class="amount"><span class="from">from </span>{{ facts.prices.innerCircleFrom | ils }}<small>including VAT</small></p>
+          <ul>
+            <li>{{ facts.innerCircle.people }} people · {{ facts.innerCircle.devices }} devices</li>
+            <li>{{ facts.innerCircle.securityKeys }} security keys, configured</li>
+            <li>Home network</li>
+          </ul>
+        </div>
+      </div>
+      <p class="credit">Your Assessment fee counts toward Personal Shield when it begins within 14 days of completion of the initial service. <a href="#">Prices and conditions →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__no">02</span><span class="label">Contact</span></div>
+    <div class="sec__body">
+      <h2>Start with a private conversation.</h2>
+      {% include "contact.njk" %}
+    </div>
+  </div>
+</section>

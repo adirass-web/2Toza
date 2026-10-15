@@ -1,0 +1,22 @@
+// Pico CSS v2, compiled from source with only the modules this site uses.
+@use "../node_modules/@picocss/pico/scss/settings" with (
+  $theme-color: "zinc",
+  $enable-responsive-typography: false,
+  $enable-transitions: false
+);
+@use "../node_modules/@picocss/pico/scss/themes/default";
+@use "../node_modules/@picocss/pico/scss/layout/document";
+@use "../node_modules/@picocss/pico/scss/layout/landmarks";
+@use "../node_modules/@picocss/pico/scss/layout/section";
+@use "../node_modules/@picocss/pico/scss/layout/container";
+@use "../node_modules/@picocss/pico/scss/layout/grid";
+@use "../node_modules/@picocss/pico/scss/content/typography";
+@use "../node_modules/@picocss/pico/scss/content/link";
+@use "../node_modules/@picocss/pico/scss/content/button";
+@use "../node_modules/@picocss/pico/scss/content/embedded";
+@use "../node_modules/@picocss/pico/scss/content/figure";
+@use "../node_modules/@picocss/pico/scss/content/misc";
+@use "../node_modules/@picocss/pico/scss/components/accordion";
+@use "../node_modules/@picocss/pico/scss/components/nav";
+@use "../node_modules/@picocss/pico/scss/utilities/accessibility";
+@use "../node_modules/@picocss/pico/scss/utilities/reduce-motion";
