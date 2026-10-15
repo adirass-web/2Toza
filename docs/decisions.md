@@ -25,5 +25,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-019 | 2026-10-15 | Credential line deleted; method line used prominently instead, plus profile link. |
 | V-020 | 2026-10-15 | Pricing: Assessment is the first step, not a tier. Tiers: Personal Shield, Inner Circle, Bespoke (top, individually scoped). Tier architecture developed separately (strategy/pricing/). |
 | V-021 | 2026-10-15 | Bespoke minimised: not shown as a tier; one line under Personal Shield and Inner Circle. Pricing shows the Assessment (first step) and two tiers. Supersedes the three-tier part of V-020. |
+| V-022 | 2026-10-15 | Pricing reopened: build a new premium (HNW, white-glove) pricing. Business target: higher margin at 1–2 engagements per month. Two-person price adopted (P4 option D). Current prices remain on the site until the new pricing is approved. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.
