@@ -46,7 +46,7 @@ Any change to a price, name or inclusion is marked **[Owner decision required]**
 | Name | Keep. It is the approved term and describes what happens. |
 | Who | Everyone; always the first paid step. |
 | Metric | One visit for the initial client. |
-| Inclusions (facts) | Typically four hours; one main phone and one PC, iPad or second phone with relevant accounts and access; personal threat model and risk assessment; approved urgent first aid where safely possible, including removing a malicious app or profile; practical summary and next steps whether or not you continue. |
+| Inclusions (facts) | Typically four hours; one main phone and one PC, iPad or second phone on the same main account, be it Apple or Android, with access; personal threat model and risk assessment; approved urgent first aid where safely possible, including removing a malicious app or profile; practical summary and next steps whether or not you continue. |
 | Price | Exact: **₪3,600**. |
 | Presentation | Own band above the tiers, "First step", never a column. |
 | Positioning | *First, a clear picture of what can reach you.* |
