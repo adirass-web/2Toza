@@ -1,0 +1,265 @@
+/* Production Pricing-04 page module; approved review CSS with content-only width ownership. */
+/* Pricing04 owns this module; existing identity/fonts/footer assets unchanged. */
+/* 1. Hierarchy */
+.pricing-04 main .wrap { inline-size:min(1120px,calc(100% - 64px)); }
+.pricing-04 .p-review-header { display:flex; align-items:center; justify-content:space-between; gap:20px; min-block-size:84px; }
+.pricing-04 .p-review-header > span { font-size:13px; color:var(--muted); }
+.pricing-04 main { padding-block:42px 30px; }
+.pricing-04 main section { margin-block-end:40px; }
+.pricing-04 main p { margin-block-end:16px; }
+.pricing-04 main h1 { font-size:clamp(36px,4.1vw,54px); margin-block-end:20px; }
+.pricing-04 main h2 { font-size:30px; margin-block-end:18px; }
+.pricing-04 main h3 { font-size:27px; margin-block:0 18px; }
+.pricing-04 main h4 { font-size:22px; font-weight:600; margin:0 0 20px; }
+.pricing-04 .p-hero { max-inline-size:820px; }
+.pricing-04 .p-kicker { font-size:15px; color:var(--muted); }
+.pricing-04 .p-hero-price { font-size:25px; color:var(--action); line-height:1.3; }
+.pricing-04 .p-object { inline-size:38px; block-size:38px; flex:0 0 38px; color:var(--action); }
+.pricing-04 .p-cell-copy { display:block; }
+
+/* 2. Visible price and object comparison */
+.pricing-04 .p-compare { padding-block-start:26px; border-block-start:1px solid var(--line); }
+.pricing-04 .p-credit-condition { max-inline-size:940px; border-inline-start:3px solid var(--action); padding:14px 18px; background:var(--panel); font-size:17px; }
+.pricing-04 .p-core { display:table; table-layout:fixed; font-size:17px; line-height:1.4; margin-block:24px; }
+.pricing-04 .p-core thead { display:table-header-group; position:static; clip-path:none; inline-size:auto; block-size:auto; overflow:visible; }
+.pricing-04 .p-core tbody { display:table-row-group; }
+.pricing-04 .p-core tr { display:table-row; }
+.pricing-04 .p-core th,.pricing-04 .p-core td { display:table-cell; padding:18px; vertical-align:top; border-block-end:1px solid var(--line); overflow-wrap:break-word; font-size:inherit; }
+.pricing-04 .p-core thead th { background:var(--panel); color:var(--action); font-size:22px; }
+.pricing-04 .p-core thead th:first-child { inline-size:25%; color:var(--muted); font-size:16px; }
+.pricing-04 .p-core tbody th { font-size:16px; font-weight:400; padding-inline-start:18px; }
+.pricing-04 .p-core td+td { border-inline-start:1px solid var(--line); }
+.pricing-04 .p-core-row-0 td { font-size:31px; color:var(--action); }
+.pricing-04 .p-core-row-6 { background:var(--panel); }
+.pricing-04 .p-core-row-6 td { font-size:23px; }
+.pricing-04 .p-people { display:flex; gap:6px; margin-block-end:12px; }
+.pricing-04 .p-device-groups,.pricing-04 .p-key-groups { display:flex; flex-wrap:wrap; gap:8px; margin-block-end:12px; }
+.pricing-04 .p-device-pair { display:flex; align-items:end; gap:4px; padding:9px 8px; border:1px solid var(--line); border-radius:5px; }
+.pricing-04 .p-device-pair .p-object:first-child { inline-size:24px; block-size:36px; flex-basis:24px; }
+.pricing-04 .p-device-pair .p-object:last-child { inline-size:36px; block-size:36px; flex-basis:36px; }
+.pricing-04 .p-key-pair { display:flex; gap:3px; padding:7px 4px; }
+.pricing-04 .p-key-pair .p-object { inline-size:28px; block-size:38px; flex-basis:28px; }
+.pricing-04 .p-core-row-4 td>.p-object,.pricing-04 .p-core-row-5 td>.p-object { margin-block-end:12px; }
+
+/* 3. Common protection facts */
+.pricing-04 .p-common { background:var(--panel); padding:26px 28px; }
+.pricing-04 .p-common-item { display:grid; grid-template-columns:260px 1fr; gap:20px; padding-block:14px; border-block-start:1px solid var(--line); }
+.pricing-04 .p-common-item strong { color:var(--action); }
+
+/* 4. Tangible Assessment scene */
+.pricing-04 .p-journey { padding-block-start:20px; }
+.pricing-04 .p-conversation { position:relative; padding:22px 0 28px 70px; border-block-end:1px solid var(--line); margin-block-end:30px; }
+.pricing-04 .p-contact-entry { position:absolute; inset-inline-start:0; inset-block-start:22px; }
+.pricing-04 .p-conversation p { max-inline-size:780px; }
+.pricing-04 .p-assessment-scene { margin-block-end:38px; }
+.pricing-04 .p-assessment-scene>p,.pricing-04 .p-hardening-scene>p { max-inline-size:880px; }
+.pricing-04 .p-assessment-visuals { display:grid; grid-template-columns:1.55fr 1fr; gap:36px; margin-block:28px; align-items:center; }
+.pricing-04 figure { margin:0; }
+.pricing-04 figcaption { font-size:23px; font-weight:600; margin-block-end:18px; }
+.pricing-04 .p-risk-graphic { padding:28px; background:var(--panel); border-radius:6px; }
+.pricing-04 .p-guides { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.pricing-04 .p-guides span { display:flex; align-items:center; gap:10px; font-size:17px; line-height:1.35; }
+.pricing-04 .p-map-connector { block-size:30px; inline-size:1px; background:var(--muted); margin-inline:auto; position:relative; }
+.pricing-04 .p-map-connector::after { content:''; position:absolute; inset-block-end:0; inset-inline-start:-3px; inline-size:7px; block-size:7px; border-inline-end:1px solid var(--muted); border-block-end:1px solid var(--muted); transform:rotate(45deg); }
+.pricing-04 .p-review-objects { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.pricing-04 .p-review-objects>div { display:flex; align-items:center; gap:14px; padding:16px; background:var(--paper); border:1px solid var(--line); border-radius:4px; font-size:17px; line-height:1.35; }
+.pricing-04 .p-priorities { display:block; text-align:center; padding:15px 16px; background:var(--action); color:white; border-radius:4px; font-size:18px; }
+.pricing-04 .p-risk-graphic .p-method-caption { font-size:15px; line-height:1.5; margin-block:18px 0; }
+.pricing-04 .p-summary-graphic { padding:24px 10px; }
+.pricing-04 .p-summary-sheet { border:1px solid var(--line); background:#fffefa; box-shadow:6px 6px 0 var(--panel); border-radius:2px 2px 16px 2px; padding:20px 22px; }
+.pricing-04 .p-summary-sheet>div { display:flex; align-items:center; gap:14px; font-size:18px; padding-block:18px; border-block-end:1px solid var(--line); }
+.pricing-04 .p-summary-sheet>div:last-child { border:0; }
+.pricing-04 .p-summary-sheet .p-object { inline-size:26px; block-size:30px; flex-basis:26px; }
+.pricing-04 .p-summary-graphic>p { font-size:17px; margin-block-start:24px; }
+
+/* 5. Separate decision, implementation and practice */
+.pricing-04 .p-hardening-scene { padding-block-start:28px; border-block-start:1px solid var(--line); }
+.pricing-04 .p-owner-decision { display:flex; align-items:center; gap:20px; padding:17px 20px; background:var(--paper); border:1px solid var(--action); border-radius:4px; margin-block:22px 28px; font-size:17px; }
+.pricing-04 .p-owner-decision strong { color:var(--action); flex:0 0 auto; }
+.pricing-04 .p-work-visuals { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-block-end:28px; }
+.pricing-04 .p-implementation { background:var(--panel); padding:26px; border-radius:6px; }
+.pricing-04 .p-setup-objects { display:flex; gap:30px; align-items:center; border-block-end:1px solid var(--line); padding-block-end:12px; margin-block-end:20px; }
+.pricing-04 .p-implementation-labels { display:grid; gap:12px; }
+.pricing-04 .p-implementation-labels>div { display:flex; align-items:center; gap:12px; font-size:17px; line-height:1.4; }
+.pricing-04 .p-implementation-labels .p-object { inline-size:24px; block-size:24px; flex-basis:24px; }
+.pricing-04 .p-practice { padding:26px 8px; }
+.pricing-04 .p-practice-scenes { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.pricing-04 .p-practice-scenes>div { display:flex; flex-direction:column; align-items:flex-start; gap:12px; min-block-size:120px; padding:18px; border:1px solid var(--line); border-radius:5px; font-size:17px; }
+.pricing-04 .p-practice-scenes .p-object { inline-size:42px; block-size:42px; flex-basis:42px; }
+.pricing-04 .p-practice>p { margin-block-start:18px; font-size:17px; }
+.pricing-04 .p-aftercare { display:flex; gap:16px; max-inline-size:850px; padding:18px; background:var(--panel); margin-block:22px; border-radius:4px; font-size:17px; }
+.pricing-04 .p-aftercare p { margin-block:6px 0; }
+
+/* 6. Exact reference and contact */
+.pricing-04 .p-reference { border-block-start:1px solid var(--line); scroll-margin-block-start:20px; }
+.pricing-04 .p-reference summary { padding-block:18px; font-size:21px; font-weight:600; cursor:pointer; min-block-size:56px; }
+.pricing-04 .p-reference-body { max-inline-size:900px; padding-block:5px 22px; }
+.pricing-04 .p-reference-body p { font-size:17px; }
+.pricing-04 .p-reference-body h3 { margin-block-start:28px; font-size:23px; }
+.pricing-04 .p-contact { margin-block-start:30px; background:var(--panel); padding:28px; }
+.pricing-04 .contact-channels { display:flex; flex-wrap:wrap; gap:12px; margin-block-start:18px; }
+.pricing-04 .contact-channels a { min-block-size:48px; }
+.pricing-04 a:focus-visible,.pricing-04 summary:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+
+/* 7. Phone recomposition; never shrink diagram labels */
+@media(max-width:760px) {
+ .pricing-04 main .wrap { inline-size:calc(100% - 32px); }
+ .pricing-04 .p-review-header .brand-logo { inline-size:106px; }
+ .pricing-04 .p-review-header>span { font-size:11px; max-inline-size:125px; text-align:end; }
+ .pricing-04 main { padding-block-start:30px; }
+ .pricing-04 main h2 { font-size:27px; }
+ .pricing-04 main h3 { font-size:25px; }
+ .pricing-04 .p-hero-price { font-size:23px; }
+ .pricing-04 .p-common { padding:22px 18px; }
+ .pricing-04 .p-common-item { display:block; font-size:17px; }
+ .pricing-04 .p-common-item strong { display:block; margin-block-end:7px; }
+ .pricing-04 .p-conversation { padding-inline-start:0; padding-block-start:0; }
+ .pricing-04 .p-contact-entry { display:none; }
+ .pricing-04 .p-assessment-visuals,.pricing-04 .p-work-visuals { grid-template-columns:1fr; gap:20px; }
+ .pricing-04 .p-risk-graphic { padding:20px 16px; }
+ .pricing-04 figcaption { font-size:22px; }
+ .pricing-04 .p-guides { grid-template-columns:1fr; gap:14px; }
+ .pricing-04 .p-review-objects>div { flex-direction:column; align-items:flex-start; gap:9px; padding:13px; font-size:16px; }
+ .pricing-04 .p-guides span { font-size:16px; }
+ .pricing-04 .p-priorities { font-size:17px; padding:14px; }
+ .pricing-04 .p-summary-graphic { padding:8px 10px 12px; }
+ .pricing-04 .p-summary-sheet { padding:14px; }
+ .pricing-04 .p-summary-sheet>div { font-size:17px; }
+ .pricing-04 .p-owner-decision { display:block; padding:16px; }
+ .pricing-04 .p-owner-decision strong { display:block; margin-block-end:8px; }
+ .pricing-04 .p-implementation { padding:20px 16px; }
+ .pricing-04 .p-practice { padding:8px 0; }
+ .pricing-04 .p-practice-scenes { gap:12px; }
+ .pricing-04 .p-practice-scenes>div { padding:16px; font-size:16px; }
+ .pricing-04 .p-aftercare { padding:16px 12px; font-size:16px; }
+ .pricing-04 .p-contact { padding:22px 18px; }
+ .pricing-04 .p-reference summary { font-size:20px; }
+}
+@media(max-width:640px) {
+ .pricing-04 .p-core { display:block; }
+ .pricing-04 .p-core thead { display:block; position:sticky; inset-block-start:0; z-index:2; background:var(--panel); }
+ .pricing-04 .p-core thead tr { display:grid; grid-template-columns:1fr 1fr; }
+ .pricing-04 .p-core thead th:first-child { position:absolute; inline-size:1px; block-size:1px; clip-path:inset(50%); overflow:hidden; }
+ .pricing-04 .p-core thead th:not(:first-child) { display:block; inline-size:auto; padding:12px; font-size:18px; }
+ .pricing-04 .p-core tbody { display:block; }
+ .pricing-04 .p-core tbody tr { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); padding:0; gap:0; border:0; }
+ .pricing-04 .p-core tbody th { display:block; grid-column:1/-1; padding:12px; font-size:16px; border-block:1px solid var(--line); }
+ .pricing-04 .p-core td,.pricing-04 .p-core td+td { display:block; padding:14px 12px; border-block-end:0; font-size:16px; }
+ .pricing-04 .p-core-row-0 td { font-size:25px; }
+ .pricing-04 .p-core-row-6 td { font-size:22px; }
+ .pricing-04 .p-core tbody tr:last-child td { border-block-end:1px solid var(--line); }
+ .pricing-04 .p-people { gap:3px; }
+ .pricing-04 .p-people .p-object { inline-size:22px; block-size:28px; flex-basis:22px; }
+ .pricing-04 .p-device-groups,.pricing-04 .p-key-groups { gap:5px; }
+ .pricing-04 .p-device-pair { gap:2px; padding:6px 3px; }
+ .pricing-04 .p-device-pair .p-object:first-child { inline-size:20px; block-size:28px; flex-basis:20px; }
+ .pricing-04 .p-device-pair .p-object:last-child { inline-size:28px; block-size:28px; flex-basis:28px; }
+ .pricing-04 .p-key-pair { padding:4px 1px; gap:1px; }
+ .pricing-04 .p-key-pair .p-object { inline-size:22px; block-size:30px; flex-basis:22px; }
+}
+/* 8. Motion and full print text */
+@media(prefers-reduced-motion:reduce) { .pricing-04 * { animation:none; transition:none; scroll-behavior:auto; } }
+@media print {
+ .pricing-04 .p-review-header>span,.pricing-04 .skip-link { display:none; }
+ .pricing-04 main .wrap { inline-size:100%; }
+ .pricing-04 main { padding:0; }
+ .pricing-04 .p-reference-body { display:block!important; }
+ .pricing-04 details::details-content { content-visibility:visible; }
+ .pricing-04 details:not([open])>:not(summary) { display:block!important; }
+ .pricing-04 .p-core { display:table; font-size:10pt; }
+ .pricing-04 .p-core thead { display:table-header-group; position:static; }
+ .pricing-04 .p-core thead tr,.pricing-04 .p-core tbody tr { display:table-row; }
+ .pricing-04 .p-core thead th:first-child { position:static; inline-size:auto; block-size:auto; clip-path:none; overflow:visible; }
+ .pricing-04 .p-core thead th:not(:first-child),.pricing-04 .p-core tbody th,.pricing-04 .p-core td { display:table-cell; }
+ .pricing-04 .p-core tbody { display:table-row-group; }
+ .pricing-04 .p-core tr,.pricing-04 figure { break-inside:avoid; }
+ .pricing-04 .p-core th,.pricing-04 .p-core td { padding:8px; }
+ .pricing-04 .p-object { inline-size:24px; block-size:24px; flex-basis:24px; }
+}
+.pricing-04 .p-per-person { font-size:15px; line-height:1.5; color:var(--muted); }
+.pricing-04 .p-assessment-scene>p:first-of-type { font-size:20px; color:var(--action); }
+/* Both product prices stay equally prominent; supplied keys group by person. */
+@media(max-width:640px) {
+ .pricing-04 .p-core .p-core-row-0 td { font-size:25px; }
+ .pricing-04 .p-core .p-core-row-6 td { font-size:22px; }
+ .pricing-04 .p-core .p-key-groups { display:grid; grid-template-columns:repeat(2,max-content); gap:5px 10px; }
+}
+/* Secondary urgent comparison also keeps its visible native column headings. */
+.pricing-04 .p-reference-body table { display:table; table-layout:fixed; font-size:16px; }
+.pricing-04 .p-reference-body thead { display:table-header-group; position:static; clip-path:none; inline-size:auto; block-size:auto; overflow:visible; }
+.pricing-04 .p-reference-body tbody { display:table-row-group; }
+.pricing-04 .p-reference-body tr { display:table-row; }
+.pricing-04 .p-reference-body th,.pricing-04 .p-reference-body td { display:table-cell; padding:12px; font-size:16px; border-block-end:1px solid var(--line); overflow-wrap:break-word; }
+.pricing-04 .p-reference-body td+td { padding:12px; border-inline-start:1px solid var(--line); }
+@media(max-width:640px) { .pricing-04 .p-reference-body th,.pricing-04 .p-reference-body td,.pricing-04 .p-reference-body td+td { padding:9px 6px; } }
+/* Compact decision surface and integrated service scenes, after B2C research.
+   Readable body/cell sizes remain unchanged; remove repeated catalogue geometry. */
+.pricing-04 main { padding-block-start:34px; }
+.pricing-04 main p { line-height:1.5; margin-block-end:12px; }
+.pricing-04 main section { margin-block-end:28px; }
+.pricing-04 .p-core th,.pricing-04 .p-core td { padding-block:13px; }
+.pricing-04 .p-core-row-1 .p-people { margin-block-end:8px; }
+.pricing-04 .p-device-pair { padding:6px 5px; }
+.pricing-04 .p-device-groups,.pricing-04 .p-key-groups { margin-block-end:8px; }
+.pricing-04 .p-common { padding:22px 26px; }
+.pricing-04 .p-common-item { padding-block:10px; }
+.pricing-04 .p-conversation { padding-block:12px 22px; margin-block-end:24px; }
+.pricing-04 .p-conversation h3 { margin-block-end:12px; }
+.pricing-04 .p-assessment-visuals { grid-template-columns:1.5fr 1fr; gap:26px; margin-block:20px; }
+.pricing-04 .p-risk-graphic { padding:20px; }
+.pricing-04 figcaption { margin-block-end:12px; }
+.pricing-04 .p-map-connector { block-size:20px; }
+.pricing-04 .p-review-objects { gap:8px 12px; }
+.pricing-04 .p-review-objects>div { padding:9px 8px; border:0; background:transparent; }
+.pricing-04 .p-review-objects .p-object { inline-size:30px; block-size:30px; flex-basis:30px; }
+.pricing-04 .p-priorities { padding:12px; }
+.pricing-04 .p-summary-graphic { padding:16px 0; }
+.pricing-04 .p-summary-sheet { padding:12px 16px; }
+.pricing-04 .p-summary-sheet>div { padding-block:12px; }
+.pricing-04 .p-summary-graphic>p { margin-block-start:16px; }
+.pricing-04 .p-scope-caption { font-size:16px; color:var(--muted); }
+.pricing-04 .p-inline-reference { margin-block:12px; border-block:1px solid var(--line); }
+.pricing-04 .p-inline-reference summary { padding-block:12px; min-block-size:44px; cursor:pointer; font-size:17px; font-weight:600; }
+.pricing-04 .p-inline-reference>div { padding-block:6px 12px; }
+.pricing-04 .p-work-visuals { display:block; margin-block-end:20px; }
+.pricing-04 .p-implementation { padding:20px; }
+.pricing-04 .p-implementation h4 { font-size:21px; margin-block-end:12px; }
+.pricing-04 .p-setup-strip { display:flex; align-items:center; justify-content:space-between; gap:28px; }
+.pricing-04 .p-setup-objects { border:0; margin:0; padding:0; gap:20px; }
+.pricing-04 .p-per-person { margin:0!important; }
+.pricing-04 .p-record-object { display:flex; align-items:center; gap:12px; max-inline-size:240px; }
+.pricing-04 .p-record-object .p-object { inline-size:48px; block-size:56px; flex-basis:48px; }
+.pricing-04 .p-practice { padding:20px 0 0; }
+.pricing-04 .p-practice h4 { margin-block-end:12px; }
+.pricing-04 .p-practice-scenes { grid-template-columns:repeat(4,1fr); gap:12px; }
+.pricing-04 .p-practice-scenes>div { min-block-size:90px; padding:14px; gap:8px; }
+.pricing-04 .p-practice-scenes .p-object { inline-size:32px; block-size:32px; flex-basis:32px; }
+.pricing-04 .p-practice>p { margin-block-start:12px; }
+.pricing-04 .p-aftercare { margin-block:16px; padding:14px 16px; }
+@media(max-width:760px) {
+ .pricing-04 .p-assessment-visuals { display:block; }
+ .pricing-04 .p-risk-graphic { padding:16px; }
+ .pricing-04 .p-guides { grid-template-columns:1fr 1fr; gap:10px; }
+ .pricing-04 .p-guides span { flex-direction:column; align-items:flex-start; gap:6px; }
+ .pricing-04 .p-guides .p-object { inline-size:26px; block-size:26px; flex-basis:26px; }
+ .pricing-04 .p-review-objects>div { flex-direction:row; gap:8px; padding:5px 0; align-items:center; }
+ .pricing-04 .p-review-objects .p-object { inline-size:24px; block-size:24px; flex-basis:24px; }
+ .pricing-04 .p-summary-graphic { margin-block-start:16px; }
+ .pricing-04 .p-summary-sheet>div { font-size:16px; padding-block:9px; }
+ .pricing-04 .p-implementation { padding:16px; }
+ .pricing-04 .p-setup-strip { display:block; }
+ .pricing-04 .p-record-object { max-inline-size:none; margin-block-start:12px; padding-block-start:12px; border-block-start:1px solid var(--line); font-size:16px; }
+ .pricing-04 .p-record-object .p-object { inline-size:26px; block-size:30px; flex-basis:26px; }
+ .pricing-04 .p-practice-scenes { grid-template-columns:1fr 1fr; gap:10px; }
+ .pricing-04 .p-practice-scenes>div { min-block-size:88px; padding:12px; }
+ .pricing-04 .p-common { padding:18px; }
+}
+@media(max-width:640px) {
+ .pricing-04 .p-core td,.pricing-04 .p-core td+td { padding-block:12px; }
+ .pricing-04 .p-core tbody th { padding-block:9px; }
+ .pricing-04 .p-core .p-device-pair { padding:4px 3px; }
+ .pricing-04 .p-core .p-device-pair .p-object:first-child { inline-size:18px; block-size:26px; flex-basis:18px; }
+ .pricing-04 .p-core .p-device-pair .p-object:last-child { inline-size:26px; block-size:26px; flex-basis:26px; }
+ .pricing-04 .p-core .p-key-pair { padding:2px 1px; }
+ .pricing-04 .p-core .p-key-pair .p-object { inline-size:20px; block-size:27px; flex-basis:20px; }
+}

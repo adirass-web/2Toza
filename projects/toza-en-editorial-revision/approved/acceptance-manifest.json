@@ -1,0 +1,121 @@
+{
+  "acceptedCommit": "aeb65a51adc3217844be9c465de69a875084b8e4",
+  "acceptedOn": "2026-10-04",
+  "authority": "Owner: I accept the copy. D-024.",
+  "normalization": "CRLF to LF; exact-copy block excludes packet wrapper; trailing whitespace at block end trimmed, one final LF. No other normalization.",
+  "entries": [
+    {
+      "path": "revisions/en-02-v2/01-why-toza.md",
+      "sha256": "5039d061d426ad4d399748725e214013d9bbabedc5ee2a042d97be624ec6e9dd"
+    },
+    {
+      "path": "revisions/en-02-v2/02-pricing.md",
+      "sha256": "100199984c7231aa220256e9ab7b7ca527db4c002dc50392e10e3cb651e92677"
+    },
+    {
+      "path": "revisions/en-02-v2/03-faq.md",
+      "sha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f"
+    },
+    {
+      "path": "revisions/en-02-v2/04-what-happens.md",
+      "sha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7"
+    },
+    {
+      "path": "revisions/en-02-v2/05-shared-copy-system.md",
+      "sha256": "469aad63af109d0d761eb8570355d6f0499a4a61f067c45f7498b044d3003994"
+    },
+    {
+      "path": "revisions/en-02-v2/06-home.md",
+      "sha256": "f6c57ad26430ced23a3e6394c44fbcefb7077e1a9657fbdb1ed8eb2f78c405f4"
+    },
+    {
+      "path": "revisions/en-02-v2/07-separation-divorce.md",
+      "sha256": "d47e1b42046991cd417377d812aaac836645fb773695125154d64d9ea1b9be12"
+    },
+    {
+      "path": "revisions/en-02-v2/08-business-founder-dispute.md",
+      "sha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350"
+    },
+    {
+      "path": "revisions/en-02-v2/09-they-know-something.md",
+      "sha256": "529ad56ff0b5792109ba7e8c29ed8f7e0807178a91971afa5b64ca94f8bc897b"
+    },
+    {
+      "path": "revisions/en-02-v2/10-inheritance-conflict.md",
+      "sha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f"
+    },
+    {
+      "path": "revisions/en-02-v2/11-for-attorneys.md",
+      "sha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21"
+    }
+  ],
+  "protectedAssessment": {
+    "path": "approved/pa-01-v2-effective.md",
+    "source": "source/TOZA_EN_COPY_REVIEW.md:1215–1313",
+    "amendment": "revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+    "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+    "changes": "Only three D-020 duration substitutions; source title/section separators are packet framing, excluded."
+  },
+  "sourceFingerprints": [
+    {
+      "path": "AGENTS.md",
+      "sha256Lf": "d2932142bbec9cf7885cab85e95b04ef2ebbdcab17bf662f1a68e3c36d9f785a"
+    },
+    {
+      "path": "instructions/TOZA-EN-REVISION-ARCHITECTURE-LOCKED.md",
+      "sha256Lf": "398ca2451104d4f4dffffa058ae96560a8356764f258e69a2046c58d6e867c16"
+    },
+    {
+      "path": "instructions/EN-REVISION-EXECUTION-INSTRUCTIONS.md",
+      "sha256Lf": "3e885aec081dd0b03bb6c0c9d560db5b851731f7a133ad58eb428c27b886f3e0"
+    },
+    {
+      "path": "instructions/SHARED-COPY-SYSTEM-REVISION-BRIEF.md",
+      "sha256Lf": "850be36a733b629b215a3d27ccb5b47cbf7e17129dd2619fd59f6027b7525923"
+    },
+    {
+      "path": "harness/TOZA-EDITORIAL-DOCTRINE.md",
+      "sha256Lf": "d49bfae89f2ef40a9c6cbb9b37886723ab0afa825893719e63c78c1e40587adc"
+    },
+    {
+      "path": "harness/TOZA-COPY-WORKFLOW.md",
+      "sha256Lf": "ec82565bf00af756c1bc55e7f99fc6f1443e93586a252052f1299c04ade7fb55"
+    },
+    {
+      "path": "harness/SOURCE-ADOPTION-MATRIX.md",
+      "sha256Lf": "a4984c2a68dfbdbae94e2317bde3d0b949bf9017ea08f92aba65ccd5d3a7e030"
+    },
+    {
+      "path": "harness/CALIBRATION-EN-02-v1.md",
+      "sha256Lf": "8edfc94ea9d0309831bbd8f120969474d87e07382fb5dfaa27123b3aea81db75"
+    },
+    {
+      "path": "harness/PAGE-BY-PAGE-CALIBRATION-EN-02-v1.md",
+      "sha256Lf": "e244025294ce4105fe40aadc7e0776a9bb4126b0df6471672cc8d00dae81d6c7"
+    },
+    {
+      "path": "source/TOZA_EN_COPY_REVIEW.md",
+      "sha256Lf": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc"
+    },
+    {
+      "path": "source/reference/toza-upgrade-english-copy-spec-revised-v2.md",
+      "sha256Lf": "a395a59286f2533211d827d5b6e6c489b7c124400a26bfb31a7389f6236879fa"
+    },
+    {
+      "path": "skills/toza-copy-strategy/SKILL.md",
+      "sha256Lf": "e5bbd91148d031126b25c4485d992a04e928041ecb5a591f0753e472dd6f11c5"
+    },
+    {
+      "path": "skills/toza-copywriter/SKILL.md",
+      "sha256Lf": "d59d7ec213aad696f329c7a7da4b6fceab0aa71b9055fc118a45dd1cf59a4e4f"
+    },
+    {
+      "path": "skills/toza-copy-red-team/SKILL.md",
+      "sha256Lf": "3db4135c2b8832fd23181bee6a23962b0552e334e0f1bc4de2a7c185e4aac181"
+    },
+    {
+      "path": "skills/toza-editor/SKILL.md",
+      "sha256Lf": "a19367e86a807f7f8205120ff13569c1baa453b2d1ce49ad985de3004664d06e"
+    }
+  ]
+}

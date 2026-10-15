@@ -1,0 +1,85 @@
+{
+  "capturedAt": "2026-10-10T21:01:40.279Z",
+  "captures": [
+    {
+      "page": "home",
+      "device": "desktop",
+      "width": 1440,
+      "height": 4182,
+      "client": 1440,
+      "scroll": 1440,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "pricing",
+      "device": "desktop",
+      "width": 1440,
+      "height": 5255,
+      "client": 1440,
+      "scroll": 1440,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "separation",
+      "device": "desktop",
+      "width": 1440,
+      "height": 3330,
+      "client": 1440,
+      "scroll": 1440,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "they-know",
+      "device": "desktop",
+      "width": 1440,
+      "height": 3709,
+      "client": 1440,
+      "scroll": 1440,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "home",
+      "device": "mobile",
+      "width": 390,
+      "height": 6267,
+      "client": 390,
+      "scroll": 390,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "pricing",
+      "device": "mobile",
+      "width": 390,
+      "height": 7743,
+      "client": 390,
+      "scroll": 390,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "separation",
+      "device": "mobile",
+      "width": 390,
+      "height": 4444,
+      "client": 390,
+      "scroll": 390,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "page": "they-know",
+      "device": "mobile",
+      "width": 390,
+      "height": 5181,
+      "client": 390,
+      "scroll": 390,
+      "h1s": 1,
+      "errors": []
+    }
+  ]
+}

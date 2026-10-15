@@ -1,0 +1,64 @@
+{
+  "baseCommit": "9b128422c55d3a91f71bc7d2f241809460429245",
+  "capturedAt": "2026-10-12T21:38:05.329Z",
+  "phase": "Fresh preintegration build; all eleven HTML byte hashes and two raw target snapshots",
+  "pages": [
+    {
+      "route": "why-us",
+      "path": "_site/en/why-us.html",
+      "sha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2"
+    },
+    {
+      "route": "pricing",
+      "path": "_site/en/pricing.html",
+      "sha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c"
+    },
+    {
+      "route": "faq",
+      "path": "_site/en/faq.html",
+      "sha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "snapshot": "docs/batch-c-preview/preintegration/faq.html"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "_site/en/what-happens-during-the-visit.html",
+      "sha256": "61d576e0ac6decc365e7f5aa7da42fbdacc040c4bf4251fdf6133129e5a7b7d9",
+      "snapshot": "docs/batch-c-preview/preintegration/what-happens-during-the-visit.html"
+    },
+    {
+      "route": "index",
+      "path": "_site/en/index.html",
+      "sha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "_site/en/separation-divorce.html",
+      "sha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520"
+    },
+    {
+      "route": "business-dispute",
+      "path": "_site/en/business-dispute.html",
+      "sha256": "d262826c2fdb3ff34b8c287b0847a64bf5371bcab24f517b5662e99cc21d6c16"
+    },
+    {
+      "route": "they-know-something",
+      "path": "_site/en/they-know-something.html",
+      "sha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "_site/en/inheritance-clash.html",
+      "sha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410"
+    },
+    {
+      "route": "attorneys",
+      "path": "_site/en/attorneys.html",
+      "sha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "_site/en/private-exposure-assessment.html",
+      "sha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae"
+    }
+  ]
+}

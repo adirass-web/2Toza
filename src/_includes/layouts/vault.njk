@@ -1,0 +1,105 @@
+{% set t = i18n[locale] %}
+{% set routeSuffix = slug if slug else "" %}
+{% set enLink = "/en/" + routeSuffix %}
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords }}">{% endif %}
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ t.og_site_name or 'Toza' }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ og_description if og_description else description }}">
+    <meta property="og:url" content="{{ canonical | replace(site.prodUrl, site.url) }}">
+    {% set ogImg = (og_image or (site.url + '/assets/img/og-default.png')) | replace(site.prodUrl, site.url) %}
+    <meta property="og:image" content="{{ ogImg }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="{{ og_locale }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ og_description if og_description else description }}">
+    <meta name="twitter:image" content="{{ ogImg }}">
+    <link rel="canonical" href="{{ canonical | replace(site.prodUrl, site.url) }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enLink }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enLink }}">
+
+    <title>{{ title }}</title>
+
+    <link rel="preload" href="/assets/fonts/source-sans-3-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/source-sans-3-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
+    <link rel="stylesheet" href="/assets/css/clear-practice.css?v=clear-practice-2">
+    <link rel="stylesheet" href="/assets/css/footer-compact.css?v=footer-compact-1">{% if pricing_04 %}
+    <link rel="stylesheet" href="/assets/css/pricing-04.css?v=pricing-04-1">{% endif %}{% if marketing_layout %}
+    <link rel="stylesheet" href="/assets/css/marketing-02.css?v=marketing-02-1">{% endif %}{% if narrative_layout %}
+    <link rel="stylesheet" href="/assets/css/home-pricing.css?v=approved-copy-1">{% endif %}{% if process_stages %}
+    <link rel="stylesheet" href="/assets/css/process-stages.css?v=batch-a-1">{% endif %}{% if page_id == "index" or page_id == "business-dispute" %}
+    <link rel="stylesheet" href="/assets/css/visual-refinements.css?v=visual-refinements-1">{% endif %}
+    <link rel="icon" href="/assets/brand/toza/toza-mark-micro-ink.svg" type="image/svg+xml">
+
+    {% include "schema-org.njk" %}
+</head>
+<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+
+    <a class="skip-link" href="#main-content">{{ t.skip_link or 'Skip to main content' }}</a>
+
+    <header class="site-header">
+        <div class="wrap nav">
+            <a class="brand" href="/{{ locale }}/" aria-label="Toza home">
+                <img class="brand-logo" src="/assets/brand/toza/toza-logo-ink.svg" width="421" height="154" alt="" aria-hidden="true">
+                <span class="name sr-only" dir="ltr">toza</span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
+            <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
+                <a href="/{{ locale }}/#situations">{{ t.nav_situations or 'Situations' }}</a>
+                <a href="/{{ locale }}/why-us.html">{{ t.nav_why or 'Why Toza' }}</a>
+                <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
+                <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
+                <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
+                <a class="btn" href="#contact">{{ t.cta_speak or 'Book an assessment' }}</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1" role="main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="foot-bar">
+            <div class="wrap foot-bar-inner">
+                <div class="foot-brand">
+                    <img class="brand-logo" src="/assets/brand/toza/toza-logo-ink.svg" width="421" height="154" alt="toza">
+                    <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span>
+                </div>
+                <nav class="foot-col" aria-label="{{ t.footer_explore or 'Explore' }}">
+                    <h3>{{ t.footer_explore or 'Explore' }}</h3>
+                    <a href="/{{ locale }}/#situations">{{ t.nav_situations or 'Situations' }}</a>
+                    <a href="/{{ locale }}/why-us.html">{{ t.nav_why or 'Why Toza' }}</a>
+                    <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
+                    <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
+                    <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
+                    <a href="/{{ locale }}/attorneys.html">{{ t.nav_attorneys or 'For attorneys' }}</a>
+                </nav>
+                <nav class="foot-col" aria-label="{{ t.footer_legal or 'Legal' }}">
+                    <h3>{{ t.footer_legal or 'Legal' }}</h3>
+                    <a href="/terms.html" hreflang="he">{{ t.footer_terms or 'Terms of Use' }}</a>
+                    <a href="/privacy.html" hreflang="he">{{ t.footer_privacy or 'Privacy' }}</a>
+                </nav>
+            </div>
+            <div class="wrap foot-meta">
+                <span>{{ t.footer_copyright or '© 2026 Toza' }}</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/{% if narrative_layout or marketing_layout %}home-pricing.js?v=narrative-1{% else %}site.js?v=clear-practice-1{% endif %}" defer></script>{% if pricing_04 %}
+    <script src="/assets/js/pricing-04.js?v=pricing-04-1" defer></script>{% endif %}
+
+</body>
+</html>

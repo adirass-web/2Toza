@@ -1,0 +1,116 @@
+{
+  "url": "http://127.0.0.1:8795/_preview/",
+  "status": "PASS",
+  "images": [
+    {
+      "src": "business-desktop.png",
+      "loaded": true
+    },
+    {
+      "src": "business-mobile.png",
+      "loaded": true
+    },
+    {
+      "src": "inheritance-desktop.png",
+      "loaded": true
+    },
+    {
+      "src": "inheritance-mobile.png",
+      "loaded": true
+    },
+    {
+      "src": "attorneys-desktop.png",
+      "loaded": true
+    },
+    {
+      "src": "attorneys-mobile.png",
+      "loaded": true
+    }
+  ],
+  "keyboard": [
+    {
+      "id": "business",
+      "controlFocus": {
+        "tag": "A",
+        "text": "Business",
+        "id": "",
+        "href": "#business",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "nextWorkingPageFocus": {
+        "tag": "A",
+        "text": "Explore working page",
+        "id": "",
+        "href": "/en/business-dispute.html",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      }
+    },
+    {
+      "id": "inheritance",
+      "controlFocus": {
+        "tag": "A",
+        "text": "Inheritance",
+        "id": "",
+        "href": "#inheritance",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "nextWorkingPageFocus": {
+        "tag": "A",
+        "text": "Explore working page",
+        "id": "",
+        "href": "/en/inheritance-clash.html",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      }
+    },
+    {
+      "id": "attorneys",
+      "controlFocus": {
+        "tag": "A",
+        "text": "Attorneys",
+        "id": "",
+        "href": "#attorneys",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "nextWorkingPageFocus": {
+        "tag": "A",
+        "text": "Explore working page",
+        "id": "",
+        "href": "/en/attorneys.html",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      }
+    }
+  ],
+  "widths": [
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "errors": []
+}

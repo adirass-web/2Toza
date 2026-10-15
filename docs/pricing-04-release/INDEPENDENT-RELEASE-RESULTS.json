@@ -1,0 +1,815 @@
+{
+  "status": "PASS",
+  "priorProductionBaselineRecords": 70,
+  "preservedFiles": 79,
+  "addedFiles": [
+    "assets/css/pricing-04.css",
+    "assets/js/pricing-04.js"
+  ],
+  "cases": [
+    {
+      "width": 1440,
+      "scheme": "dark",
+      "visual": {
+        "overflow": false,
+        "rows": [
+          {
+            "label": "Full engagement price",
+            "cells": [
+              {
+                "text": "₪14,000",
+                "rect": {
+                  "x": 440,
+                  "y": 905.203125,
+                  "w": 420,
+                  "h": 70.390625
+                },
+                "font": "31px",
+                "headers": "p-attribute-0 p-product-1"
+              },
+              {
+                "text": "From ₪42,000",
+                "rect": {
+                  "x": 860,
+                  "y": 905.203125,
+                  "w": 420,
+                  "h": 70.390625
+                },
+                "font": "31px",
+                "headers": "p-attribute-0 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "People",
+            "cells": [
+              {
+                "text": "1 person",
+                "rect": {
+                  "x": 440,
+                  "y": 975.59375,
+                  "w": 420,
+                  "h": 96.796875
+                },
+                "font": "17px",
+                "headers": "p-attribute-1 p-product-1"
+              },
+              {
+                "text": "4 people",
+                "rect": {
+                  "x": 860,
+                  "y": 975.59375,
+                  "w": 420,
+                  "h": 96.796875
+                },
+                "font": "17px",
+                "headers": "p-attribute-1 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Your devices worked on",
+            "cells": [
+              {
+                "text": "2: one main phone + one PC, iPad or second phone",
+                "rect": {
+                  "x": 440,
+                  "y": 1072.390625,
+                  "w": 420,
+                  "h": 108.796875
+                },
+                "font": "17px",
+                "headers": "p-attribute-2 p-product-1"
+              },
+              {
+                "text": "8: the same two-device allowance per person",
+                "rect": {
+                  "x": 860,
+                  "y": 1072.390625,
+                  "w": 420,
+                  "h": 108.796875
+                },
+                "font": "17px",
+                "headers": "p-attribute-2 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Yubico security keys supplied",
+            "cells": [
+              {
+                "text": "2 compatible keys, configured and tested",
+                "rect": {
+                  "x": 440,
+                  "y": 1181.1875,
+                  "w": 420,
+                  "h": 134.59375
+                },
+                "font": "17px",
+                "headers": "p-attribute-3 p-product-1"
+              },
+              {
+                "text": "8 compatible keys: two per person, configured and tested",
+                "rect": {
+                  "x": 860,
+                  "y": 1181.1875,
+                  "w": 420,
+                  "h": 134.59375
+                },
+                "font": "17px",
+                "headers": "p-attribute-3 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Shared home/home-office network and router",
+            "cells": [
+              {
+                "text": "Separately scoped",
+                "rect": {
+                  "x": 440,
+                  "y": 1315.78125,
+                  "w": 420,
+                  "h": 107.59375
+                },
+                "font": "17px",
+                "headers": "p-attribute-4 p-product-1"
+              },
+              {
+                "text": "1 included, in addition to the eight personal devices",
+                "rect": {
+                  "x": 860,
+                  "y": 1315.78125,
+                  "w": 420,
+                  "h": 107.59375
+                },
+                "font": "17px",
+                "headers": "p-attribute-4 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "In-person protection work",
+            "cells": [
+              {
+                "text": "Typically 7–14 hours, excluding Assessment",
+                "rect": {
+                  "x": 440,
+                  "y": 1423.375,
+                  "w": 420,
+                  "h": 107.59375
+                },
+                "font": "17px",
+                "headers": "p-attribute-5 p-product-1"
+              },
+              {
+                "text": "Typically 2–4 working days",
+                "rect": {
+                  "x": 860,
+                  "y": 1423.375,
+                  "w": 420,
+                  "h": 107.59375
+                },
+                "font": "17px",
+                "headers": "p-attribute-5 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Remaining payment with eligible Assessment credit",
+            "cells": [
+              {
+                "text": "₪10,400",
+                "rect": {
+                  "x": 440,
+                  "y": 1530.96875,
+                  "w": 420,
+                  "h": 71.78125
+                },
+                "font": "23px",
+                "headers": "p-attribute-6 p-product-1"
+              },
+              {
+                "text": "From ₪38,400 at the starting scope",
+                "rect": {
+                  "x": 860,
+                  "y": 1530.96875,
+                  "w": 420,
+                  "h": 71.78125
+                },
+                "font": "23px",
+                "headers": "p-attribute-6 p-product-2"
+              }
+            ]
+          }
+        ],
+        "details": 8,
+        "visibleScope": true,
+        "counts": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ],
+        "credits": [
+          {
+            "text": "Start with a separate ₪3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+            "rect": {
+              "x": 160,
+              "y": 680.40625,
+              "w": 940,
+              "h": 104.5
+            }
+          },
+          {
+            "text": "Start with a separate ₪3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+            "rect": {
+              "x": 160,
+              "y": 1627.25,
+              "w": 940,
+              "h": 104.5
+            }
+          }
+        ],
+        "styles": [
+          "/assets/css/clear-practice.css?v=clear-practice-2",
+          "/assets/css/footer-compact.css?v=footer-compact-1",
+          "/assets/css/pricing-04.css?v=pricing-04-1"
+        ]
+      },
+      "channels": [
+        {
+          "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "h": 50.390625,
+          "y": 617.21875,
+          "bottom": 667.609375
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "h": 50.390625,
+          "y": 617.21875,
+          "bottom": 667.609375
+        }
+      ],
+      "focus": {
+        "width": "3px",
+        "style": "none"
+      },
+      "navKeyboard": "PASS",
+      "creditRepeat": "PASS",
+      "printRestore": "PASS",
+      "directAssessment": "PASS",
+      "allOpenFits": "PASS",
+      "sharedShell": "PASS",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "scheme": "light",
+      "visual": {
+        "overflow": false,
+        "rows": [
+          {
+            "label": "Full engagement price",
+            "cells": [
+              {
+                "text": "₪14,000",
+                "rect": {
+                  "x": 16,
+                  "y": 1206.109375,
+                  "w": 179,
+                  "h": 94
+                },
+                "font": "25px",
+                "headers": "p-attribute-0 p-product-1"
+              },
+              {
+                "text": "From ₪42,000",
+                "rect": {
+                  "x": 195,
+                  "y": 1206.109375,
+                  "w": 179,
+                  "h": 94
+                },
+                "font": "25px",
+                "headers": "p-attribute-0 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "People",
+            "cells": [
+              {
+                "text": "1 person",
+                "rect": {
+                  "x": 16,
+                  "y": 1342.5,
+                  "w": 179,
+                  "h": 82.390625
+                },
+                "font": "16px",
+                "headers": "p-attribute-1 p-product-1"
+              },
+              {
+                "text": "4 people",
+                "rect": {
+                  "x": 195,
+                  "y": 1342.5,
+                  "w": 179,
+                  "h": 82.390625
+                },
+                "font": "16px",
+                "headers": "p-attribute-1 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Your devices worked on",
+            "cells": [
+              {
+                "text": "2: one main phone + one PC, iPad or second phone",
+                "rect": {
+                  "x": 16,
+                  "y": 1467.28125,
+                  "w": 179,
+                  "h": 153.78125
+                },
+                "font": "16px",
+                "headers": "p-attribute-2 p-product-1"
+              },
+              {
+                "text": "8: the same two-device allowance per person",
+                "rect": {
+                  "x": 195,
+                  "y": 1467.28125,
+                  "w": 179,
+                  "h": 153.78125
+                },
+                "font": "16px",
+                "headers": "p-attribute-2 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Yubico security keys supplied",
+            "cells": [
+              {
+                "text": "2 compatible keys, configured and tested",
+                "rect": {
+                  "x": 16,
+                  "y": 1663.453125,
+                  "w": 179,
+                  "h": 166.171875
+                },
+                "font": "16px",
+                "headers": "p-attribute-3 p-product-1"
+              },
+              {
+                "text": "8 compatible keys: two per person, configured and tested",
+                "rect": {
+                  "x": 195,
+                  "y": 1663.453125,
+                  "w": 179,
+                  "h": 166.171875
+                },
+                "font": "16px",
+                "headers": "p-attribute-3 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Shared home/home-office network and router",
+            "cells": [
+              {
+                "text": "Separately scoped",
+                "rect": {
+                  "x": 16,
+                  "y": 1872.015625,
+                  "w": 179,
+                  "h": 147.5625
+                },
+                "font": "16px",
+                "headers": "p-attribute-4 p-product-1"
+              },
+              {
+                "text": "1 included, in addition to the eight personal devices",
+                "rect": {
+                  "x": 195,
+                  "y": 1872.015625,
+                  "w": 179,
+                  "h": 147.5625
+                },
+                "font": "16px",
+                "headers": "p-attribute-4 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "In-person protection work",
+            "cells": [
+              {
+                "text": "Typically 7–14 hours, excluding Assessment",
+                "rect": {
+                  "x": 16,
+                  "y": 2061.96875,
+                  "w": 179,
+                  "h": 125.171875
+                },
+                "font": "16px",
+                "headers": "p-attribute-5 p-product-1"
+              },
+              {
+                "text": "Typically 2–4 working days",
+                "rect": {
+                  "x": 195,
+                  "y": 2061.96875,
+                  "w": 179,
+                  "h": 125.171875
+                },
+                "font": "16px",
+                "headers": "p-attribute-5 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Remaining payment with eligible Assessment credit",
+            "cells": [
+              {
+                "text": "₪10,400",
+                "rect": {
+                  "x": 16,
+                  "y": 2251.921875,
+                  "w": 179,
+                  "h": 117.390625
+                },
+                "font": "22px",
+                "headers": "p-attribute-6 p-product-1"
+              },
+              {
+                "text": "From ₪38,400 at the starting scope",
+                "rect": {
+                  "x": 195,
+                  "y": 2251.921875,
+                  "w": 179,
+                  "h": 117.390625
+                },
+                "font": "22px",
+                "headers": "p-attribute-6 p-product-2"
+              }
+            ]
+          }
+        ],
+        "details": 8,
+        "visibleScope": true,
+        "counts": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ],
+        "credits": [
+          {
+            "text": "Start with a separate ₪3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+            "rect": {
+              "x": 16,
+              "y": 817.03125,
+              "w": 358,
+              "h": 206.5
+            }
+          },
+          {
+            "text": "Start with a separate ₪3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+            "rect": {
+              "x": 16,
+              "y": 2393.3125,
+              "w": 358,
+              "h": 206.5
+            }
+          }
+        ],
+        "styles": [
+          "/assets/css/clear-practice.css?v=clear-practice-2",
+          "/assets/css/footer-compact.css?v=footer-compact-1",
+          "/assets/css/pricing-04.css?v=pricing-04-1"
+        ]
+      },
+      "channels": [
+        {
+          "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "h": 50.390625,
+          "y": 375,
+          "bottom": 425.390625
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "h": 50.390625,
+          "y": 437.390625,
+          "bottom": 487.78125
+        }
+      ],
+      "focus": {
+        "width": "3px",
+        "style": "none"
+      },
+      "navKeyboard": "PASS",
+      "creditRepeat": "PASS",
+      "printRestore": "PASS",
+      "directAssessment": "PASS",
+      "allOpenFits": "PASS",
+      "sharedShell": "PASS",
+      "errors": []
+    },
+    {
+      "width": 320,
+      "scheme": "dark",
+      "visual": {
+        "overflow": false,
+        "rows": [
+          {
+            "label": "Full engagement price",
+            "cells": [
+              {
+                "text": "₪14,000",
+                "rect": {
+                  "x": 16,
+                  "y": 1388.796875,
+                  "w": 144,
+                  "h": 94
+                },
+                "font": "25px",
+                "headers": "p-attribute-0 p-product-1"
+              },
+              {
+                "text": "From ₪42,000",
+                "rect": {
+                  "x": 160,
+                  "y": 1388.796875,
+                  "w": 144,
+                  "h": 94
+                },
+                "font": "25px",
+                "headers": "p-attribute-0 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "People",
+            "cells": [
+              {
+                "text": "1 person",
+                "rect": {
+                  "x": 16,
+                  "y": 1525.1875,
+                  "w": 144,
+                  "h": 82.390625
+                },
+                "font": "16px",
+                "headers": "p-attribute-1 p-product-1"
+              },
+              {
+                "text": "4 people",
+                "rect": {
+                  "x": 160,
+                  "y": 1525.1875,
+                  "w": 144,
+                  "h": 82.390625
+                },
+                "font": "16px",
+                "headers": "p-attribute-1 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Your devices worked on",
+            "cells": [
+              {
+                "text": "2: one main phone + one PC, iPad or second phone",
+                "rect": {
+                  "x": 16,
+                  "y": 1649.96875,
+                  "w": 144,
+                  "h": 176.171875
+                },
+                "font": "16px",
+                "headers": "p-attribute-2 p-product-1"
+              },
+              {
+                "text": "8: the same two-device allowance per person",
+                "rect": {
+                  "x": 160,
+                  "y": 1649.96875,
+                  "w": 144,
+                  "h": 176.171875
+                },
+                "font": "16px",
+                "headers": "p-attribute-2 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Yubico security keys supplied",
+            "cells": [
+              {
+                "text": "2 compatible keys, configured and tested",
+                "rect": {
+                  "x": 16,
+                  "y": 1868.53125,
+                  "w": 144,
+                  "h": 210.953125
+                },
+                "font": "16px",
+                "headers": "p-attribute-3 p-product-1"
+              },
+              {
+                "text": "8 compatible keys: two per person, configured and tested",
+                "rect": {
+                  "x": 160,
+                  "y": 1868.53125,
+                  "w": 144,
+                  "h": 210.953125
+                },
+                "font": "16px",
+                "headers": "p-attribute-3 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Shared home/home-office network and router",
+            "cells": [
+              {
+                "text": "Separately scoped",
+                "rect": {
+                  "x": 16,
+                  "y": 2144.265625,
+                  "w": 144,
+                  "h": 169.953125
+                },
+                "font": "16px",
+                "headers": "p-attribute-4 p-product-1"
+              },
+              {
+                "text": "1 included, in addition to the eight personal devices",
+                "rect": {
+                  "x": 160,
+                  "y": 2144.265625,
+                  "w": 144,
+                  "h": 169.953125
+                },
+                "font": "16px",
+                "headers": "p-attribute-4 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "In-person protection work",
+            "cells": [
+              {
+                "text": "Typically 7–14 hours, excluding Assessment",
+                "rect": {
+                  "x": 16,
+                  "y": 2356.609375,
+                  "w": 144,
+                  "h": 147.5625
+                },
+                "font": "16px",
+                "headers": "p-attribute-5 p-product-1"
+              },
+              {
+                "text": "Typically 2–4 working days",
+                "rect": {
+                  "x": 160,
+                  "y": 2356.609375,
+                  "w": 144,
+                  "h": 147.5625
+                },
+                "font": "16px",
+                "headers": "p-attribute-5 p-product-2"
+              }
+            ]
+          },
+          {
+            "label": "Remaining payment with eligible Assessment credit",
+            "cells": [
+              {
+                "text": "₪10,400",
+                "rect": {
+                  "x": 16,
+                  "y": 2568.953125,
+                  "w": 144,
+                  "h": 148.1875
+                },
+                "font": "22px",
+                "headers": "p-attribute-6 p-product-1"
+              },
+              {
+                "text": "From ₪38,400 at the starting scope",
+                "rect": {
+                  "x": 160,
+                  "y": 2568.953125,
+                  "w": 144,
+                  "h": 148.1875
+                },
+                "font": "22px",
+                "headers": "p-attribute-6 p-product-2"
+              }
+            ]
+          }
+        ],
+        "details": 8,
+        "visibleScope": true,
+        "counts": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ],
+        "credits": [
+          {
+            "text": "Start with a separate ₪3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+            "rect": {
+              "x": 16,
+              "y": 898.03125,
+              "w": 288,
+              "h": 283
+            }
+          },
+          {
+            "text": "Start with a separate ₪3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+            "rect": {
+              "x": 16,
+              "y": 2741.140625,
+              "w": 288,
+              "h": 283
+            }
+          }
+        ],
+        "styles": [
+          "/assets/css/clear-practice.css?v=clear-practice-2",
+          "/assets/css/footer-compact.css?v=footer-compact-1",
+          "/assets/css/pricing-04.css?v=pricing-04-1"
+        ]
+      },
+      "channels": [
+        {
+          "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "h": 50.390625,
+          "y": 393.9375,
+          "bottom": 444.328125
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "h": 50.390625,
+          "y": 456.328125,
+          "bottom": 506.71875
+        }
+      ],
+      "focus": {
+        "width": "3px",
+        "style": "none"
+      },
+      "navKeyboard": "PASS",
+      "creditRepeat": "PASS",
+      "printRestore": "PASS",
+      "directAssessment": "PASS",
+      "allOpenFits": "PASS",
+      "sharedShell": "PASS",
+      "errors": []
+    }
+  ]
+}

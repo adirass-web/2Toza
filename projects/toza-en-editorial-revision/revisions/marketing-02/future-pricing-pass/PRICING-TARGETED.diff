@@ -1,0 +1,56 @@
+--- marketing-02/pricing.md
++++ future-pricing-pass/PRICING-TARGETED-CANDIDATE.md
+@@ -86,13 +86,26 @@
+ 
+ Personal teaching covers the changed setup and practical security habits: signing in, recovering access, sharing information and granting permissions. The private dated record gives you a reference for the work. A technically blocked or declined action is not presented as completed.
+ 
+-The price includes one primary working day and a second if needed. Fourteen days of limited adjustment support cover issues directly related to Toza's changes through WhatsApp, Signal and scheduled calls; this does not involve remote control of your devices.
++A typical Personal Shield engagement requires 7–14 hours of in-person work, excluding the initial Assessment. The price includes one primary working day and a second if needed. Fourteen days of limited adjustment support cover issues directly related to Toza's changes through WhatsApp, Signal and scheduled calls; this does not involve remote control of your devices.
+ 
+ ### Inner Circle Shield
+ 
+ The initial ₪3,600 Assessment covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased Inner Circle engagement. Each person receives the same standard of hardening, essential migration, teaching and verification as Personal Shield, with two compatible security keys each, eight in total.
+ 
+ One shared home or home-office network and router are included in addition to the eight personal devices. We review and harden accessible settings and authorized administration. Replacement hardware, additional connected devices and additional locations are quoted separately. Scope, schedule and the final group price are confirmed in writing before acceptance.
++
++### Compare the work side by side
++
++| Work carried out | Personal Shield | Inner Circle Shield |
++|---|---|---|
++| Risk-led hardening | Agreed device, identity, account, app and data-access settings around your threat model | The same standard for each of four people |
++| New core accounts and essential migration | Where needed: identity, recovery and critical-service access | The same essential migration for each person |
++| Physical security keys | Two compatible keys supplied, configured and tested | Two per person; eight in total, supplied, configured and tested |
++| Personal teaching and security habits | Using the changed setup, signing in, recovering access, sharing information and granting permissions | Personal teaching for each participant |
++| Verification | Material changes tested and applicable work verified against the checklist | The same testing and verification for each participant |
++| Records | Your private dated record | A private dated record per person and a separate shared-network record |
++| Review and mapping | The initial paid Assessment reviews the initial client's two devices and relevant accounts | Remaining-group review and mapping included in the separately purchased full engagement |
++| Shared home/home-office network and router | Separately scoped | One included in addition to the eight personal devices; accessible settings and authorized administration |
+ 
+ ### Bespoke Private Protection
+ 
+@@ -108,7 +121,7 @@
+ 
+ ## Urgent visits in Central Israel
+ 
+-Request a four-hour urgent visit. We confirm availability before you pay. For an accepted four-hour booking, we arrive within four hours of both Toza's acceptance and receipt of payment. The clock starts when both conditions are met. This is an arrival commitment, not a four-hour completion promise.
++Request an urgent visit with arrival in 2–4 hours. We confirm availability before you pay. For an accepted urgent booking, we arrive within four hours of both Toza's acceptance and receipt of payment. The clock starts when both conditions are met. This is an arrival commitment, not a four-hour completion promise.
+ 
+ | Urgent booking | Surcharge including VAT | Initial visit plus surcharge including VAT |
+ |---|---:|---:|
+@@ -136,14 +149,8 @@
+ 
+ ## Start a private conversation. {#contact}
+ 
+-Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit, urgency and practical arrangements; it includes no device inspection, mapping, diagnosis or technical work and does not commit you to purchase.
++Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The conversation checks fit and urgency and does not commit you to purchase.
+ 
+-If Toza fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms. The Assessment is scheduled after your explicit acceptance and receipt of payment. Personal Shield or another full engagement requires its own acceptance; there is no automatic continuation.
+-
+-### Before you message {#contact-guidance}
+-
+-Suggested message: **“I'd like a private conversation. Please let me know the next step.”**
+-
+-Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in the first message. Contact through WhatsApp or Signal is not guaranteed to be invisible on your device or account.
++[What to send in the first message](/en/faq.html#what-should-i-send-in-the-first-message) · [Contact privacy guidance](/en/faq.html#can-someone-notice-my-contact-with-toza-or-the-changes-we-make)
+ 
+ **Request a private conversation: WhatsApp / Signal**

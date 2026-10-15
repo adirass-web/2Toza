@@ -1,0 +1,160 @@
+{
+  "baselineCommit": "b1f88a081e6c88d8256d0f921e6bcf17e847e02b",
+  "candidates": [
+    {
+      "route": "faq",
+      "path": "projects/toza-en-editorial-revision/revisions/en-07/04-FAQ-CANDIDATE.md",
+      "exactPayloadSha256": "1128e453d6edd13c5c9cbca026239b8c2176fbcce64db686d0b495257e1e5eea",
+      "result": "PASS",
+      "insertions": 1,
+      "restoresFullAcceptedPayload": true,
+      "metadataHeadingsOrderOldLinksFacts": "exact by full byte reconstruction",
+      "target": "#what-should-i-send-in-the-first-message"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "projects/toza-en-editorial-revision/revisions/en-07/05-PROCESS-CANDIDATE.md",
+      "exactPayloadSha256": "55a6c0e3c2c26475fd843f4f822a6ff77c6798e14af28b6f821ea40d638fe8dd",
+      "result": "PASS",
+      "insertions": 1,
+      "restoresFullAcceptedPayload": true,
+      "metadataHeadingsOrderOldLinksFacts": "exact by full byte reconstruction",
+      "target": "/en/faq.html#what-should-i-send-in-the-first-message"
+    }
+  ],
+  "allElevenApprovedCopyAndBuiltHashes": "PASS",
+  "pageHashes": [
+    {
+      "route": "why-us",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "pricing",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "faq",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "index",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "separation-divorce",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "business-dispute",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "they-know-something",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "inheritance-clash",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "attorneys",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "effectiveCopy": "PASS",
+      "builtHtml": "PASS"
+    }
+  ],
+  "protectedAuthority": "PASS via assertAuthority()",
+  "sharedInputs": [
+    {
+      "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+      "status": "PASS"
+    },
+    {
+      "path": "src/_includes/layouts/vault.njk",
+      "status": "PASS"
+    },
+    {
+      "path": "src/_includes/contact-channels.njk",
+      "status": "PASS"
+    },
+    {
+      "path": "src/_includes/schema-org.njk",
+      "status": "PASS"
+    },
+    {
+      "path": "src/_data/i18n/en.json",
+      "status": "PASS"
+    },
+    {
+      "path": "src/_data/site.json",
+      "status": "PASS"
+    },
+    {
+      "path": "llms.txt",
+      "status": "PASS"
+    },
+    {
+      "path": "_redirects",
+      "status": "PASS"
+    }
+  ],
+  "protectedPaths": "PASS unchanged: src/en, src/_includes, assets, scripts, .github, _redirects, _headers",
+  "trackedChangesComparedWithBaseline": [
+    "projects/toza-en-editorial-revision/state/EN-REVISION-DECISION-DELTA.md"
+  ],
+  "mechanicalCandidateGate": "PASS; owner approval remains pending",
+  "closingBeforeAfter": [
+    {
+      "route": "faq",
+      "before": "Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies personally. Contacting Toza does not commit you to purchase; paid work follows only after your explicit acceptance of the written offer and receipt of payment.",
+      "after": "Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies personally. Contacting Toza does not commit you to purchase; paid work follows only after your explicit acceptance of the written offer and receipt of payment.\n\n[What should I send in the first message?](#what-should-i-send-in-the-first-message)",
+      "markerAfter": "**Request a private conversation: WhatsApp / Signal**",
+      "linkPlacement": "between contact paragraph and channel marker"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "before": "Send a short, neutral message through WhatsApp or Signal. We will confirm fit and the next step before you decide about the paid visit.",
+      "after": "Send a short, neutral message through WhatsApp or Signal. We will confirm fit and the next step before you decide about the paid visit.\n\n[What should I send in the first message?](/en/faq.html#what-should-i-send-in-the-first-message)",
+      "markerAfter": "**Request a private conversation: WhatsApp / Signal**",
+      "linkPlacement": "between contact paragraph and channel marker"
+    }
+  ],
+  "candidateLinks": [
+    {
+      "from": "FAQ contact closing",
+      "href": "#what-should-i-send-in-the-first-message",
+      "targetExistsInCurrentBuiltFAQ": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Process contact closing",
+      "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+      "targetExistsInCurrentBuiltFAQ": true,
+      "status": "PASS"
+    }
+  ],
+  "sharedLinkSummary": {
+    "resolved": 14,
+    "broken": 0,
+    "source": "approved shared-copy source 05",
+    "sourceLinkDetailsIn": "02-MECHANICAL-CHECKS.json"
+  },
+  "independentReview": "G3 PASS; both exact payloads ready for owner review"
+}

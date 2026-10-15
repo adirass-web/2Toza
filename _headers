@@ -1,0 +1,34 @@
+# Cloudflare Pages — HTTP response headers
+# This file must live in the build output root (_site/).
+# Eleventy copies it there via addPassthroughCopy("_headers") in .eleventy.js.
+
+# ── Security headers (all routes) ──────────────────────────────────────────
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+
+# ── Static assets: cache 1 year at the edge, immutable ─────────────────────
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── HTML pages: cache 1 hour, must revalidate ───────────────────────────────
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+/en/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+/he/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+/ru/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# ── robots.txt + sitemap: short cache so changes propagate quickly ──────────
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600

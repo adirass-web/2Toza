@@ -1,0 +1,1257 @@
+{
+  "capturedAt": "2026-10-13T09:18:17.085Z",
+  "baselineCommit": "2bc8f90aeea567896cac9c779b273326370785a2",
+  "status": "PASS",
+  "sourceFidelity": [
+    {
+      "route": "why-us",
+      "sourceSha256Lf": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "metadataSha256": "d8dbc0c5dbd6128fe6e158d0c015290aafe9657409009c44fd81a6255f651ee8",
+      "status": "EXACT"
+    },
+    {
+      "route": "pricing",
+      "sourceSha256Lf": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+      "metadataSha256": "41549c0dc37bec932521003b5802418193bca463cadfe20dc7233f06d7bf0216",
+      "status": "EXACT"
+    },
+    {
+      "route": "faq",
+      "sourceSha256Lf": "1128e453d6edd13c5c9cbca026239b8c2176fbcce64db686d0b495257e1e5eea",
+      "metadataSha256": "9300d45f5290bec9ebe299603ee0804e5b1ae15387ee26ec99e1f172b65944c2",
+      "status": "EXACT"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "sourceSha256Lf": "55a6c0e3c2c26475fd843f4f822a6ff77c6798e14af28b6f821ea40d638fe8dd",
+      "metadataSha256": "d9bb2c1810600446a352af8b10151ddcbd97256f808e139dc8fdf46205f81f57",
+      "status": "EXACT"
+    },
+    {
+      "route": "index",
+      "sourceSha256Lf": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+      "metadataSha256": "bb5606020b9ec7257b58b87668e3be565c55a41a9901399f37987d2a6ad522a1",
+      "status": "EXACT"
+    },
+    {
+      "route": "separation-divorce",
+      "sourceSha256Lf": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+      "metadataSha256": "02c9129e74814f5a287717a4bdbe9c748c85a3acd99c3aa6b2ceda21f5ab8a4c",
+      "status": "EXACT"
+    },
+    {
+      "route": "business-dispute",
+      "sourceSha256Lf": "9b469754dfd77fd463aab82e8f87aacf6e90b18dd5c85d41e05c2496e6706c82",
+      "metadataSha256": "3bfb11c2f70d79a802a79e11b54178d23a33033315707d77ad6626a1883e82de",
+      "status": "EXACT"
+    },
+    {
+      "route": "they-know-something",
+      "sourceSha256Lf": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+      "metadataSha256": "abaedd60785b673b56ecb37c9cca64b4920b1b6d8339e2107645396aa0706433",
+      "status": "EXACT"
+    },
+    {
+      "route": "inheritance-clash",
+      "sourceSha256Lf": "cca5d87db669ebf86ca1a8267604e6e5e9a5b481bc11af0a3ba265f16bb63b34",
+      "metadataSha256": "088f3b642e00ada16f0f367f6b91b5564e646366096078b26aa6abc1d62fdcdf",
+      "status": "EXACT"
+    },
+    {
+      "route": "attorneys",
+      "sourceSha256Lf": "2d27f1dcc9ce69bee3faa1573e0243dc555e6607e226761195eae2e8f9762894",
+      "metadataSha256": "85bcf0f193d693ccd5ed17928c55ecf06f72a99bb9d080fcd8dc38efea17f7d9",
+      "status": "EXACT"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "sourceSha256Lf": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "metadataSha256": "9a696525490df8e501c8d2a0ef2803101463efa6ec71cb3371ee23e3f0d940b8",
+      "status": "EXACT"
+    }
+  ],
+  "allPageFidelity": [
+    {
+      "route": "why-us",
+      "mainCharsSha256": "906d6af4b8181d4b1ea210dce9b863dea6d9481d780aea010ea4eb103cf78a8d",
+      "orderedBlocksSha256": "fa5fd57b8b72e37685bb988c9301b68ed188b0b25f57f913448ccbfbb7e89312",
+      "linkInventorySha256": "549565799082144d92f1b64a3ba4b720b84b9ebc7d3313d7bd06811342e150f1",
+      "renderedMetadataSha256": "0f0fe515035348d0686a6e6a16e41736fea31a714bc568a93f22185ee08add17",
+      "builtSha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "pricing",
+      "mainCharsSha256": "e568c2cd4a291fff2f502da8b8565e05bd1df1aa4412c700306f88699b01751a",
+      "orderedBlocksSha256": "17b2837f687e5ce7b7f32952ab2f1263ca0426c29f10560dda0c74f412cb4045",
+      "linkInventorySha256": "b8dac9b390594d1238f9a4af0b7ce173dcc510a6c4c37e32c975159176c26c2e",
+      "renderedMetadataSha256": "ee696c1fc5766a0ce221b70c2f7c22251ae5b3c95bf3199493657e9ad4da7c7e",
+      "builtSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "faq",
+      "mainCharsSha256": "6cf2611a8024f2a2b7fde36ff667e68f15332d81c8eb855d63eeafba88d04c08",
+      "orderedBlocksSha256": "724ca93926a7d11f9abcee811e739ad6975972dd6812cc1ac5fafca81fb92276",
+      "linkInventorySha256": "9092b383d6b6cde71fa9dd58c35198afa407cc7736745b55350cb635208f0178",
+      "renderedMetadataSha256": "72a8af6c43f805cd4d1e4d93c33dada071be44aeabdf5871508aed90622cc00f",
+      "builtSha256": "da70667ce323f44e1550565219084eea8c165150e61fc7fb0f361c4d47440a64",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "mainCharsSha256": "6e7b38b3f2ae4feedc1248024fe06d402f584f62b077535d16b10030e3bafc05",
+      "orderedBlocksSha256": "717fb6c073d10dfcbea26122352573bad84dae9ade7669f25a56386100e1559e",
+      "linkInventorySha256": "46d2d199a08d0b2a0eddda6a3a31a1d50e1e446a32713fa6780177898d743296",
+      "renderedMetadataSha256": "61e9592232c1bc10cbdb342b5c40dc6686016e287733027d23b14634c0497a36",
+      "builtSha256": "e71b4951ba6ae20f97aefa4d724b451c27bcba6ad1a418e64abf60ad2be007c5",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "index",
+      "mainCharsSha256": "714e4d4118048d35610183120674dfba12f234904327395b66ef67d64177d39a",
+      "orderedBlocksSha256": "79668b61c2f8ca559f9ffc7ef6ef9e001ca23e35a06cd6b6a74a47ba7c90b871",
+      "linkInventorySha256": "8bd35f2db570f61eb4bfbba716b564f9d649b0201a1f4243656c60dac21b9fd2",
+      "renderedMetadataSha256": "de1e43e6b0722909bbe3b8a94b563df4e5a57fcc09a8966faab1da298b9fb1f9",
+      "builtSha256": "f0bed4d09607e165d5b3970b838fb72a3372a98dbc6ddc852bc8a089b2d3ad9d",
+      "stylesheetScope": [
+        "/assets/css/visual-refinements.css?v=visual-refinements-1"
+      ],
+      "status": "EXACT"
+    },
+    {
+      "route": "separation-divorce",
+      "mainCharsSha256": "360bdcea9fdca4fe010d5ebfaec88093a7d8510bc5f29fab177f70fdd921e3e4",
+      "orderedBlocksSha256": "c568adbeeea51084f053a81a38e78047fc53f696c0099695f8d6910b63017754",
+      "linkInventorySha256": "f8072fd6ee7c4748980846d63cd751e3a9638d13ff639276ca2ca460bf0b3ede",
+      "renderedMetadataSha256": "1e9795f38bd82036ed9f9deaebd1a789934bd56e0f97ef1b3fe2ccdf710a0244",
+      "builtSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "business-dispute",
+      "mainCharsSha256": "ace2d6716a3adb3e18d2473c7f836cc7756b0206ca63cab05b084844ba4679c8",
+      "orderedBlocksSha256": "bdd125f000c5207494f31778f9791fc0f40835fa1b43e526a98bb8a924704e65",
+      "linkInventorySha256": "251418bb6025f3a4b4bcadd5cb4d32d2801fc2e662ab9cb64d4458d1ab25fbd4",
+      "renderedMetadataSha256": "2b558ca4fd69dcc132c1b08e3c08d04faed287855367b583bc42a49fef786124",
+      "builtSha256": "80cf17b23a51fd2cba5180c34907de3d1d970eb173aa5de121df920e52e36f73",
+      "stylesheetScope": [
+        "/assets/css/visual-refinements.css?v=visual-refinements-1"
+      ],
+      "status": "EXACT"
+    },
+    {
+      "route": "they-know-something",
+      "mainCharsSha256": "26fa20bd918931deaaf8f4865971794f3807fe5cdd02c48c25f5ef84fb60f42d",
+      "orderedBlocksSha256": "fd795059d78b6cf53c2965ff5757bafa0a6ce9f887b19df764cd8c8f26203ec6",
+      "linkInventorySha256": "b4a212281baf88feda4bd4b198a94e22c2ced2c719e9a2c68bf9bf4be8cde841",
+      "renderedMetadataSha256": "9bf24175cc6004310dccc50143545a61b9b55ea45a22e9684656beea23b23a0f",
+      "builtSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "inheritance-clash",
+      "mainCharsSha256": "e7f5bd7b20b8c7a1de24f85496dc216e71ba4637c2ab433b6db6d3a3c06255a2",
+      "orderedBlocksSha256": "997166e685ee3530d506a8e8247d5227b8e12a853fad89cfef070dd16359f606",
+      "linkInventorySha256": "f283381c9be03dfba3df928d27802de2d775d21b707e876f6abe8c7e8080e45b",
+      "renderedMetadataSha256": "6a20662357fe1280c54f10ab1fea720ac1a84a6555b1bb464ac7880ea9c73eda",
+      "builtSha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "attorneys",
+      "mainCharsSha256": "2ac4deee5f3eefde614640db5b5c1ff5cd1c7307c2fb05e4eb6f5939e8de4848",
+      "orderedBlocksSha256": "8593addb02ac8deb17f7b3e305c1ecb9eb815f78e06c8c0f9491629dbde57846",
+      "linkInventorySha256": "6128e0482901ff5fe4d3aaaf11e012433917cf2ccef64a0ef1bbd4ba930e29c1",
+      "renderedMetadataSha256": "a6183cb0d2418283248f874b6dd846344b257e8f3622ae55841f9ca3c08e8807",
+      "builtSha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "mainCharsSha256": "565fda4a73d85c900b713616d22648ebfc8d468a19339442b4478939a2386fc9",
+      "orderedBlocksSha256": "14dfcf1233b1974d659ff47866795375e3d5ca17d58e5fbc614febc451357e3a",
+      "linkInventorySha256": "7c407783e2e7f71db703573efc2c862a43e3d4b41b801adb62f0964329127995",
+      "renderedMetadataSha256": "d339cf6c2a469674f54905235f5e2aaca5fe85dc424238d579ff09f21a6a0220",
+      "builtSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "stylesheetScope": [],
+      "status": "EXACT"
+    }
+  ],
+  "unchangedPages": [
+    {
+      "route": "why-us",
+      "builtSha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+      "templateSha256": "83de444d227cc97f58d52b59fec3c5222840594d27a509bdc37f0f8dcc761ac1",
+      "status": "EXACT"
+    },
+    {
+      "route": "pricing",
+      "builtSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "templateSha256": "f54b62828ae7027e12122bf529fdc1100b97579512a01557f1e3b43a82dfa63b",
+      "status": "EXACT"
+    },
+    {
+      "route": "faq",
+      "builtSha256": "da70667ce323f44e1550565219084eea8c165150e61fc7fb0f361c4d47440a64",
+      "templateSha256": "b4c941fd4ac55cae41882098dc9d141a977a30463e725f7c18a9ab33f606d449",
+      "status": "EXACT"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "builtSha256": "e71b4951ba6ae20f97aefa4d724b451c27bcba6ad1a418e64abf60ad2be007c5",
+      "templateSha256": "43d34b6f865dfbdd3c5e4076ed8278d92f0701b09f4dac05654fe9f21390d89f",
+      "status": "EXACT"
+    },
+    {
+      "route": "separation-divorce",
+      "builtSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "templateSha256": "328be9d5473266bc7844999349baf6eb7d6773c490472eca7ad2a7030e671227",
+      "status": "EXACT"
+    },
+    {
+      "route": "they-know-something",
+      "builtSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "templateSha256": "d8d9e26f7e925f34e5b0a507bad3fd14847e897ae0834096b524d17cb7d8771e",
+      "status": "EXACT"
+    },
+    {
+      "route": "inheritance-clash",
+      "builtSha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410",
+      "templateSha256": "0c5a2b0702516650484a8b6587444889c09980d68f7287e9b95f6146d681e560",
+      "status": "EXACT"
+    },
+    {
+      "route": "attorneys",
+      "builtSha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002",
+      "templateSha256": "b422e572384678c81b855f02fc9576bc232cb899b4ddb96c301b16cde423b255",
+      "status": "EXACT"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "builtSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "templateSha256": "42097ef45d2a8b6a4e3b25a38c926ce976d7d38f1c2edde4096f8629a01c85a9",
+      "status": "EXACT"
+    }
+  ],
+  "immutable": [
+    {
+      "file": "assets/brand/toza/toza-logo-ink.svg",
+      "sha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77"
+    },
+    {
+      "file": "assets/brand/toza/toza-logo-reverse.svg",
+      "sha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-ink.svg",
+      "sha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-micro-ink.svg",
+      "sha256": "75a8d6edb23b3a247c4ce11e078570ed9ea18ac4d4400a311c0e0b9c007fbe57"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-micro-reverse.svg",
+      "sha256": "32613bc8b3586958d8243b26e32124fece1cbb16ee3e8e7c3bcf541b01153b93"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-reverse.svg",
+      "sha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d"
+    },
+    {
+      "file": "assets/brand/toza/toza-wordmark-ink.svg",
+      "sha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f"
+    },
+    {
+      "file": "assets/brand/toza/toza-wordmark-reverse.svg",
+      "sha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553"
+    },
+    {
+      "file": "assets/css/clear-practice.css",
+      "sha256": "3c7f46260347dd201d288c5671847e49aba227590961b42716acc2b796594390"
+    },
+    {
+      "file": "assets/css/fonts.css",
+      "sha256": "d8b7129338ab3fc2f9a63f0a9bbb7fe521367f0155bdd7d3a7504d27d4487192"
+    },
+    {
+      "file": "assets/css/home-pricing.css",
+      "sha256": "5a9b23799d9b0299ecd122c9551b6da9b3b0478e3511f5a7850a2b73381cf12c"
+    },
+    {
+      "file": "assets/css/process-stages.css",
+      "sha256": "83f466c5f63aa441bd2ea2c6c1c973b2c478858268155595e7a866ff3f4a7b7b"
+    },
+    {
+      "file": "assets/css/vault.css",
+      "sha256": "e2a53093730a9facc01d82b56f3f13c7ead1f244fad404494514d72c65109071"
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-400-normal.woff2",
+      "sha256": "9dedc029ea208eec5cc04c6a289dd1ca30bc4adf78a4dc9c146ccbae87512b2e"
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-500-normal.woff2",
+      "sha256": "08f5b82d26b140c763a2b466f20817a3bd0c7842815df49eb8503ab2211b9e7c"
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-700-normal.woff2",
+      "sha256": "1b4fc136888d6c5ee65740aade6660f68bbc75c65bac663938c9ec50f07fe5af"
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-400-normal.woff2",
+      "sha256": "fd102665a417494831fda4d0abb4a3c40df9ea0f16747d721766931d3e8e510c"
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-500-normal.woff2",
+      "sha256": "ccd127367d7e85fc7cb3d500b0d7858ad3e15e14734002c49b7194870b8d110c"
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-700-normal.woff2",
+      "sha256": "c36ca4cfb80e2504582acdafad26bf842034b166cc9dcf5c6f77755b1816ea92"
+    },
+    {
+      "file": "assets/fonts/inter-latin-400-normal.woff2",
+      "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+    },
+    {
+      "file": "assets/fonts/inter-latin-500-normal.woff2",
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "file": "assets/fonts/inter-latin-600-normal.woff2",
+      "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-400-italic.woff2",
+      "sha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-400-normal.woff2",
+      "sha256": "1fe9ad5d8b2ebd8ecb8fbd05bed1e3fdfa52dae3f1a04e1c219918442fe9394d"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-500-italic.woff2",
+      "sha256": "8f074624e50ab805878b26ab5f3e0fa360043d546c35b043947e96a5c7071970"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-500-normal.woff2",
+      "sha256": "1e3429a2122b4171bf393c8de5c501820e17ca2074c498d7080e2326975d825c"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-600-normal.woff2",
+      "sha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd"
+    },
+    {
+      "file": "assets/fonts/source-sans-3-regular.woff2",
+      "sha256": "63de0da0cc05298e2e9c6e5cef506d8454ca665f6e668a99d94f51174b9256ed"
+    },
+    {
+      "file": "assets/fonts/source-sans-3-semibold.woff2",
+      "sha256": "c248b0a178c362916db7c853ed640db77f184d19a0ed9fa5591fa707d3089635"
+    },
+    {
+      "file": "assets/fonts/Source-Sans-LICENSE.md",
+      "sha256": "5d8778c6a43dc2fee25e81ee6ff07e52c6f238473b491cda47f7117a2ce9d467"
+    },
+    {
+      "file": "assets/img/8ec6b8ffe0ad6e45e72f8592d6e537da.webp",
+      "sha256": "dd3e99bf0be82cd2b6cdde0d592c5ed4d2076d7fd1318616c28cbfee17ff1892"
+    },
+    {
+      "file": "assets/img/ap.jpeg",
+      "sha256": "50414589ac095d702b0a8f80afdc410f2ce5ad19c4e061c17ecbac098e8c7c5f"
+    },
+    {
+      "file": "assets/img/AP_ICON_512x512.webp",
+      "sha256": "e6b8be6a573f12c188c11b4ab46053219168f68bbdc3a22dc980d39c34b77485"
+    },
+    {
+      "file": "assets/img/dr-tabansky-portrait-square-640.webp",
+      "sha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47"
+    },
+    {
+      "file": "assets/img/favicon.ico",
+      "sha256": "00d4f3e66cc740a791057e43891383c0c58cb2f3d56134c42d01343c292f6766"
+    },
+    {
+      "file": "assets/img/fi.webp",
+      "sha256": "750f105aafb84e5434c328fc4d56e73a80cc837c494b8af8859f31dea984c4e0"
+    },
+    {
+      "file": "assets/img/icons/flag-il.svg",
+      "sha256": "ccdf7c6d3169a1c896eec2dae041d525102fa56ee959b980c27d49f07d7f4820"
+    },
+    {
+      "file": "assets/img/icons/flag-ru.svg",
+      "sha256": "031635ba959d3bfd9464d6d73affafa408e2f513b2d820461c00436b9698b7bf"
+    },
+    {
+      "file": "assets/img/icons/flag-uk.svg",
+      "sha256": "cff178e0a296b078b12a538fd064545ce30af4254019fe5175605b93061a3681"
+    },
+    {
+      "file": "assets/img/icons/signal.svg",
+      "sha256": "1d4e7f402f8fdd756ae833967b82da1e747fdc9454d0c27ce6a223664cfc14c4"
+    },
+    {
+      "file": "assets/img/icons/whatsapp.svg",
+      "sha256": "7a3e0b9f874dc0ac532a2e84d7b66f262fc7b6fe9e24262ded7828516553a5d4"
+    },
+    {
+      "file": "assets/img/la rep.webp",
+      "sha256": "9f0b8aa0141d7fb0fee33fbbe5e7457d3d0f53e18a43a3a6c93a9bf246a97812"
+    },
+    {
+      "file": "assets/img/Lior Tabansky by Kfir Ziv 86_Rebua_edited.webp",
+      "sha256": "343c73cf10d6a17d13092a327bb9b502a52584fd87b3146cf80ce32f9c1ddd53"
+    },
+    {
+      "file": "assets/img/media/figaro-thumb.webp",
+      "sha256": "666ed4254ca5108f94f01aeb2e795e7100749912d222d3dfc2ff35a0cd466112"
+    },
+    {
+      "file": "assets/img/media/rai-thumb.webp",
+      "sha256": "343247579c51733319c3b192c94205bce66d9b576404fc875502355514f60007"
+    },
+    {
+      "file": "assets/img/media/repubblica-thumb.webp",
+      "sha256": "66a86c63f562fec8a188dc769519c6898c3429bedc166dfa850ed1663789a14b"
+    },
+    {
+      "file": "assets/img/media/wapo-thumb.webp",
+      "sha256": "7dde072cab181cb195461ad65d57c55934f0caf7c3a284bbb0d1a4be2656bd25"
+    },
+    {
+      "file": "assets/img/Newsweek_.webp",
+      "sha256": "5e2826f1345cffb384ee40e807a18634e396d916bf4904f27af31b8551bf1ae0"
+    },
+    {
+      "file": "assets/img/NRC_Handelsblad.webp",
+      "sha256": "ac33a2fc06d86041f609df229319ffee87541998cf4eead5ba477334ca1c3678"
+    },
+    {
+      "file": "assets/img/og-default.png",
+      "sha256": "753cc5eb54705c7a43c37cc93f23a154dfd551300d53c2268ff66fe2f52e2e89"
+    },
+    {
+      "file": "assets/img/rai-italia-radio-rai-television.jpg",
+      "sha256": "7c6dc144a3d6aaccc252f095cb6c410a576db9c92bb262084fe4b5668f03dfd8"
+    },
+    {
+      "file": "assets/img/The National Interest_.webp",
+      "sha256": "60b150b62b2e0a5664a7f4014bcedf9ccea2042a76d4582e68b3064a997468ca"
+    },
+    {
+      "file": "assets/img/Washington Post_Logo_4.webp",
+      "sha256": "a17bb4c280ea876c6969671cdf9719311710b42b7f2fa59e74a196128f8ba827"
+    },
+    {
+      "file": "assets/js/guilloche.js",
+      "sha256": "8892f0f8697670a04207c57eb930cd28671daf41d7fe2531ec5c606857dcab3a"
+    },
+    {
+      "file": "assets/js/home-pricing.js",
+      "sha256": "7f40d285d53ed1237f4d69a0e2c3765383710528bf27eb0b136967e6504b512c"
+    },
+    {
+      "file": "assets/js/site.js",
+      "sha256": "e3ece5cde530180aecb782c4ed05a19a82a778201ee5d13a3ea4149c86b8c9c0"
+    },
+    {
+      "file": "scripts/accepted-copy.cjs",
+      "sha256": "5437dcfe4075ad737c5ca0a87dd33d67ad7343873f7cf06d34fc18b67339d016"
+    },
+    {
+      "file": "functions/en/[[retired]].js",
+      "sha256": "c619c9e1a9a93d6e1623f6e19b0af63733f17f6a5694c8c7f8c17128bf4f74f3"
+    },
+    {
+      "file": "functions/index.js",
+      "sha256": "4d1eae86173e7a9009a8fba8ac04c315b0ce0b5785b137d73deff3cce8afff41"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10-round-02.json",
+      "sha256": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10.json",
+      "sha256": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-12-batch-a.json",
+      "sha256": "25119ca0bcaa02e487e0b75d61c14225c2e05d9b4ad3269a25d4a96cc831dca0"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-12-batch-b.json",
+      "sha256": "81652a0b5818791fed1733a2bcbdcc94056e4e7cf10ce8e92c4b13f8fc7dcde9"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-13-batch-c.json",
+      "sha256": "e55fdf99f4ca97275805fae8cb490420d224e4b6be0ce2bdb060da49fb87091f"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/acceptance-manifest.json",
+      "sha256": "8da441c661cb2416d16c38430fa5227c796e276686166c488147149803bfc0e2"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/approved/pa-01-v2-effective.md",
+      "sha256": "920dd47640f870379cf58c96157266c89acd7a2e6c01f2518835df8f7ecab10a"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/01-why-toza.md",
+      "sha256": "11ffe330817e6f5bdd6506af6c3e8ec8f54c6f876d3707b08d17902cddd46764"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/02-pricing.md",
+      "sha256": "751813d38319171146ad964aa2cbb2e3a0a9563949319aeb2af73027cf8d16a0"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/03-faq.md",
+      "sha256": "c1c029cbdbc4166409c29aadc1c3459fa04d583dabc905cdb4be736ce6446552"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/04-what-happens.md",
+      "sha256": "6d128911f1fd0eebfea52ec614b0036862bf1d4f2e0c1107e4fbeb77c4ac1f63"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+      "sha256": "09aace777d73eda0dd08ae48257f08d623b75364b04b354bcbd43d3a1d6c64b5"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/06-home.md",
+      "sha256": "818a0feeb3d802060c179ae46d95a759a3a3bf7709eebda6220ebab262ad2288"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/07-separation-divorce.md",
+      "sha256": "e4310498815485af02cf8971f3d8429a2d7a12f9435cb6cf988ba4f64af3d557"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/08-business-founder-dispute.md",
+      "sha256": "aecae95ba755c11d3f23a2963e9618b075ff3d67463222025f98175c034125a7"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/09-they-know-something.md",
+      "sha256": "0a12a1df00081b83e98632e42731194fee97994f3984ca0374a448c1ca30cb98"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/10-inheritance-conflict.md",
+      "sha256": "92f176db8e5c31fb8487e0c3a90b0aec1a31550ba88b8f644d808db3a8192334"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/11-for-attorneys.md",
+      "sha256": "60fa03ac4d1975093b88f02b440020a2683777e3adffcd1028a165fb4bdd4929"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+      "sha256": "60d2033762bbcd8931ab9c0938cb67381ca47499c74e2a3bcba32605d197a566"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/README.md",
+      "sha256": "ee3e26e1932845eab02647b7303759e02a6917f7bcd2e165385b24ebd0315960"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/01-why-toza-editorial-record.md",
+      "sha256": "1d1229a800fd4eae3910ae2ee69300ebf31521c7347c9b598df324faa1487d53"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/owner-feedback-01.md",
+      "sha256": "191e65712c527231de61dafbe2ebabefd6524966e19f636b615e6c73373e22a2"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/owner-feedback-02-discussion.md",
+      "sha256": "32b003115628d61291269b292a0d6247a9cedc343b8991765f5366784730b180"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/owner-feedback-03-benefits.md",
+      "sha256": "e9970769bf99f16c3c7dca30dc8ddbe177fc49eddbfe8b1786a28bb5bc100049"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/owner-feedback-04-positioning.md",
+      "sha256": "825d48f8a2971035370b0d701af54b8ae22a5d96f85dbb3d900c39b0da9e9928"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/owner-feedback-05-warmth.md",
+      "sha256": "14aff7b217058985eac8f727748fb1f4a111e498c5cda085b316f5ce2352c01f"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/phase-1-strategy-and-qa.md",
+      "sha256": "68b1dceb8b54b1cc9af06da6cc2ab39fa68039e2710661269e1325aa00b1a83c"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/phase-2-3-strategy-and-qa.md",
+      "sha256": "81747c9f2f54ba16fc103c7960a701d1ae52016f7ff410b7c5c4f9fed1c36ed2"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-02-v2/review/phase-4-5-acceptance-review.md",
+      "sha256": "4d841247b92ed1c7ba725a5ad49863c525e587395eaf1702d33deb4654f2da3f"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/02-pricing.md",
+      "sha256": "9d255c91f4e4d6c21650078ec13b055d5d8b06f05f3d8cfad5cb9df1e74919c7"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/06-home.md",
+      "sha256": "1ac73958d5c450ba1899bf07fc8799180c71dca31323a19c45f60825b8643b3d"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/review/00-BRIEF.md",
+      "sha256": "13ffa40a10301a4c4116d4bd1720dfbf054a7c62bf5774634f7bcfd0f94bca57"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/review/03-EDITORIAL-REVIEW.md",
+      "sha256": "bcb54f254593ce060ab10961d41b906ffbe8a002b82e7a8703188eab35b406df"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/review/04-INDEPENDENT-REVIEW.md",
+      "sha256": "2f2229ec4c592ae5f0084c8813f6a65ab22f15cace27634b63b5bd411b6ad238"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/review/05-OWNER-REVIEW.md",
+      "sha256": "a70e45763de025f3d83670e44423ff356a71cffbb842f99eddce1999795b9e47"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/review/FACT-CHECK.json",
+      "sha256": "eb9aa8ade9adf98802c69d2314b6ad7e8aae9a7ce540ded0c25aff4c9ca59f83"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-03/UNSELECTED-ALTERNATIVES.md",
+      "sha256": "c9cb6e0059bf7ec4c127057ec819334b17b75a62660d8160619a337078ee9063"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/02-pricing.md",
+      "sha256": "09e09bcb8564448fba57825071731712516c89f1119676fd3fd2d4b64e38602b"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/05-EDITORIAL-REVIEW.md",
+      "sha256": "1222d10ded71d7e803785833aa60d6b008cdf7fd6b3d63e94e8588e2b8f63e02"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/06-home.md",
+      "sha256": "ba6e34c03dd3d8639582f1c150f54120ca3e0159e645ea80d2ec4a4739f78c35"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/06-INDEPENDENT-REVIEW.md",
+      "sha256": "b89b75c6491c3b5428f9b55c81dd8bd5426ab387c87c37a85136e86993586673"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/07-separation-divorce.md",
+      "sha256": "e65dae7827a1fd76162bfc964bac5fe180fd6ff1d2ccee364b7b3b9794f1a090"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/09-they-know-something.md",
+      "sha256": "7e2a3bd03f4e17b066bcabc09c9fa890bfa2117e0971dcf5ca8f7bdf306d671a"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/CHANGES.diff",
+      "sha256": "0ea8d16eeff701f82d0f771d44298b5877407703f49e538ed584b74b0f328619"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/FACT-CHECK.json",
+      "sha256": "6b9b0c263366265f34dd01bcfc0d1f70dee11aecebb71e2956793418e6486862"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-04/README.md",
+      "sha256": "74232b1a31c31b8ae6a6f6b122dfc859edf8a0742880ec6fe2e006c36589befa"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/00-BRIEF.md",
+      "sha256": "4645a66cae01c07c8763af94880d5437c23cc4718d6d843b21772074493ad209"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/01-WHY-TOZA-CANDIDATE.md",
+      "sha256": "2529491f98c4b9003849a9bc7a45164d71b4324bbbe7ddd2414ec3b88a6e951e"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/02-HOW-TOZA-HELPS-STAGE-MAP.md",
+      "sha256": "14af90ab3d758fa56a58866a1f03ead3cae12142a8e044f5de5870f044ccd79d"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/03-EDITORIAL-REVIEW.md",
+      "sha256": "92af6fc0d768246b23d5468f6f041f3428893aead5692b9d398103fdb1148f24"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/04-INDEPENDENT-REVIEW.md",
+      "sha256": "8ef3e7623f01198eeb31a832cd36db0a8b1f26f766a369b259d7270a58b6480c"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/05-OWNER-REVIEW.md",
+      "sha256": "1a22a4fcce67f6cd74a135c2084dd61edc6efc801ad89f5b5e0bdda43e0f23ef"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/ACCEPTANCE.md",
+      "sha256": "c4ddfbe8e8574921fbd1a6c5c4a9989607261a8ab49d0b664b2c31a14ccc2258"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/baseline-screenshots/CAPTURE.json",
+      "sha256": "156f96a7957b28fbf2d1f7a6048fb31088fcb5d27f1341cd952faa026788f7eb"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/baseline-screenshots/how-toza-helps-desktop.png",
+      "sha256": "9da20bbcca40e6fab19be6c98d34c9875fa9f52bf854561541273abe6a468486"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/baseline-screenshots/how-toza-helps-mobile.png",
+      "sha256": "463dfeaefde4e07f194f9a9605bb723440ba81004f98653012b1e89b3547db45"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/baseline-screenshots/why-toza-desktop.png",
+      "sha256": "bd1f858d44ac4ef179180cf5e203133da3386557670f2aafd9dc7043cc2ee8ed"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/baseline-screenshots/why-toza-mobile.png",
+      "sha256": "72e74a2e575c886fc064312e850e384c30335ed1d3af9cac7c149846222709c4"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/BASELINE.json",
+      "sha256": "e5b97729bacdd57dccbdbad30474d93911236908717f3713d576c72c8502a68e"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/check-candidates.cjs",
+      "sha256": "71d58619839a21157f3075793c265305edde157c203ce1261f3c13766c26fa00"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/exact-baseline/01-why-toza.md",
+      "sha256": "5039d061d426ad4d399748725e214013d9bbabedc5ee2a042d97be624ec6e9dd"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/exact-baseline/04-what-happens.md",
+      "sha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-05/FACT-CHECK.json",
+      "sha256": "224b5479b0b1c42bc671a8ec09c3892433eb759051d022b937fd9320cd8e7f7c"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/00-BRIEF.md",
+      "sha256": "dab0100856431474af85e7158f17efdeb54fb50f0eddb0546bc2ab0a5487bba8"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/01-BUSINESS-CANDIDATE.md",
+      "sha256": "7121efe457c8917a0ccb1f260c9569c18b4eb1f670d999e41af04dff6212add6"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/02-INHERITANCE-CANDIDATE.md",
+      "sha256": "afa4ee443e7df106ca224d1403d1aecf15f1e1504d3cc9e1c2bb47b5d4cc00fa"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/03-ATTORNEYS-CANDIDATE.md",
+      "sha256": "43e50c7eaba67176d6630d39182ac7627986a81a43d85cc4a100fce387383e89"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/04-EDITORIAL-REVIEW.md",
+      "sha256": "803af1007a0ff20f228baf2f24cb240bfd7ba81d735e2add5254ead54023854d"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/05-INDEPENDENT-REVIEW.md",
+      "sha256": "c1b2dad9d5d9f9e9e28efab1635fb3784264afd8c8bfb0da1df77686e6586e46"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/06-OWNER-REVIEW.md",
+      "sha256": "7de8350abac34976597a085c271f7d09fa03783ea4f20f11c0ec1ed3ed411473"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/ACCEPTANCE.md",
+      "sha256": "7018722346df79380521eabe5f2f9fd4972bed056c6bfccc9242ea431630125e"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/BASELINE.json",
+      "sha256": "ce521ec4f55fc8ef94510f5b0a3b654fbf6f8197dfacfdce17cc8213193fa000"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/check-candidates.cjs",
+      "sha256": "0d1a8d555623b3182979105166849c792094648df3aec9876d5ce23b0e8b2a37"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/exact-baseline/08-business-founder-dispute.md",
+      "sha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/exact-baseline/10-inheritance-conflict.md",
+      "sha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/exact-baseline/11-for-attorneys.md",
+      "sha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-06/FACT-CHECK.json",
+      "sha256": "225c94d0c89e7d994203789eb98ea2702afb80cc8fc8aa939b749eaccb880962"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/00-BRIEF.md",
+      "sha256": "f889d639760fc6895e3082676296e295f07dd0fa05fea6b7b78cbf9c8a5c7957"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/01-EDITORIAL-FINDINGS.md",
+      "sha256": "6c662bf753d1275e5f5d0832bb82f7b088090ddf1935e245941e2ac56901cc8d"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/02-MECHANICAL-CHECKS.json",
+      "sha256": "98c2f13b63fa99171cd9e6fe18f4487cf9703b5636f8de3ebc7cc6c07a3e9344"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/03-INDEPENDENT-REVIEW.md",
+      "sha256": "d8af9949062c12e2648600750fda2d067ff0966f28041021e8ffe0c9604f4818"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/04-FAQ-CANDIDATE.md",
+      "sha256": "3c08c79a335adbfac0f4891e44f9dab57359b1066fc16abd697ae16e4f6a51d8"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/05-PROCESS-CANDIDATE.md",
+      "sha256": "d91411294341cb57e0c22a6951c1c4a13c437229a6818d4ead697159a6283c80"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/06-EDITORIAL-REVIEW.md",
+      "sha256": "50c3646d1b1b2c5698c3e2f92ac3c7f1daab305cf20c6a989d4be4d716b4bccd"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/07-CANDIDATE-CHECKS.json",
+      "sha256": "d3c190a90a320530adce22a58d481677c8cf5314f9cf503a981008ed70b66a76"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/08-OWNER-REVIEW.md",
+      "sha256": "24345a628c84b6d34dbae9b66401319579a6bfb8ebac9bdef9756c5d731909e9"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/ACCEPTANCE.md",
+      "sha256": "43e0c0f15e19e8b47f571da1726dafadb3de31428b5262c6d392f3000be6944d"
+    },
+    {
+      "file": "projects/toza-en-editorial-revision/revisions/en-07/BASELINE.json",
+      "sha256": "80aea0e2989c6eb235344fec4c11e542bd84a003067e59526bb9acfdd5494a61"
+    }
+  ],
+  "widthChecks": [
+    {
+      "name": "business",
+      "width": 320,
+      "scrollWidth": 320,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "groups": {
+        "gap": 30,
+        "assessmentParagraphs": 4,
+        "shieldParagraphs": 1,
+        "scope": true,
+        "summary": true,
+        "separatePurchase": true,
+        "h2OutsideGroups": true,
+        "assessmentBackground": "rgb(232, 235, 227)",
+        "shieldBackground": "rgb(245, 243, 237)",
+        "reading": {
+          "assessmentWidth": 288,
+          "assessmentX": 16,
+          "shieldWidth": 288,
+          "shieldX": 16
+        },
+        "hidden": false
+      }
+    },
+    {
+      "name": "business",
+      "width": 390,
+      "scrollWidth": 390,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "groups": {
+        "gap": 30,
+        "assessmentParagraphs": 4,
+        "shieldParagraphs": 1,
+        "scope": true,
+        "summary": true,
+        "separatePurchase": true,
+        "h2OutsideGroups": true,
+        "assessmentBackground": "rgb(232, 235, 227)",
+        "shieldBackground": "rgb(245, 243, 237)",
+        "reading": {
+          "assessmentWidth": 350,
+          "assessmentX": 20,
+          "shieldWidth": 350,
+          "shieldX": 20
+        },
+        "hidden": false
+      }
+    },
+    {
+      "name": "business",
+      "width": 768,
+      "scrollWidth": 768,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "groups": {
+        "gap": 30,
+        "assessmentParagraphs": 4,
+        "shieldParagraphs": 1,
+        "scope": true,
+        "summary": true,
+        "separatePurchase": true,
+        "h2OutsideGroups": true,
+        "assessmentBackground": "rgb(232, 235, 227)",
+        "shieldBackground": "rgb(245, 243, 237)",
+        "reading": {
+          "assessmentWidth": 672,
+          "assessmentX": 48,
+          "shieldWidth": 672,
+          "shieldX": 48
+        },
+        "hidden": false
+      }
+    },
+    {
+      "name": "business",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "groups": {
+        "gap": 30,
+        "assessmentParagraphs": 4,
+        "shieldParagraphs": 1,
+        "scope": true,
+        "summary": true,
+        "separatePurchase": true,
+        "h2OutsideGroups": true,
+        "assessmentBackground": "rgb(232, 235, 227)",
+        "shieldBackground": "rgb(245, 243, 237)",
+        "reading": {
+          "assessmentWidth": 710,
+          "assessmentX": 294,
+          "shieldWidth": 710,
+          "shieldX": 294
+        },
+        "hidden": false
+      }
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "scrollWidth": 320,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "primaryPairStyleAndGeometryEqual": true,
+      "secondaryRows": [
+        {
+          "text": "Private information has surfaced — examine what your own environment may reveal, without assuming how it happened.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        },
+        {
+          "text": "Inheritance conflict — reconsider access arranged through family help, within your own authority.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "scrollWidth": 390,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "primaryPairStyleAndGeometryEqual": true,
+      "secondaryRows": [
+        {
+          "text": "Private information has surfaced — examine what your own environment may reveal, without assuming how it happened.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        },
+        {
+          "text": "Inheritance conflict — reconsider access arranged through family help, within your own authority.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "width": 768,
+      "scrollWidth": 768,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "primaryPairStyleAndGeometryEqual": true,
+      "secondaryRows": [
+        {
+          "text": "Private information has surfaced — examine what your own environment may reveal, without assuming how it happened.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        },
+        {
+          "text": "Inheritance conflict — reconsider access arranged through family help, within your own authority.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "badImages": [],
+      "bodyFont": "18px",
+      "reduce": true,
+      "scroll": "auto",
+      "primaryPairStyleAndGeometryEqual": true,
+      "secondaryRows": [
+        {
+          "text": "Private information has surfaced — examine what your own environment may reveal, without assuming how it happened.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        },
+        {
+          "text": "Inheritance conflict — reconsider access arranged through family help, within your own authority.",
+          "paddingTop": "16px",
+          "paddingBottom": "16px",
+          "borderTop": "1px",
+          "borderStyle": "solid"
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "name": "business",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "url": "/en/business-dispute.html",
+      "shots": [
+        "after-business-desktop-opening.png",
+        "after-business-desktop-full.png",
+        "after-business-desktop-target.png"
+      ]
+    },
+    {
+      "name": "business",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "url": "/en/business-dispute.html",
+      "shots": [
+        "after-business-mobile-opening.png",
+        "after-business-mobile-full.png",
+        "after-business-mobile-target.png"
+      ]
+    },
+    {
+      "name": "home",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "url": "/en/",
+      "shots": [
+        "after-home-desktop-opening.png",
+        "after-home-desktop-full.png",
+        "after-home-desktop-target.png"
+      ]
+    },
+    {
+      "name": "home",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "url": "/en/",
+      "shots": [
+        "after-home-mobile-opening.png",
+        "after-home-mobile-full.png",
+        "after-home-mobile-target.png"
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "name": "business",
+      "width": 390,
+      "skip": {
+        "text": "Skip to main content",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid"
+      },
+      "channels": [
+        {
+          "text": "Message on WhatsApp",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid"
+        },
+        {
+          "text": "Message on Signal",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid"
+        }
+      ],
+      "sectionAnchorTop": 28.03125,
+      "internalLinkAndBrowserBack": true
+    },
+    {
+      "name": "business",
+      "width": 1440,
+      "skip": {
+        "text": "Skip to main content",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid"
+      },
+      "channels": [
+        {
+          "text": "Message on WhatsApp",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid"
+        },
+        {
+          "text": "Message on Signal",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid"
+        }
+      ],
+      "sectionAnchorTop": 28.28125,
+      "internalLinkAndBrowserBack": true
+    },
+    {
+      "name": "business",
+      "shortPhoneMenu": {
+        "text": "Situations",
+        "href": "/en/#situations",
+        "visible": true,
+        "outline": "solid"
+      },
+      "escapeReturnsFocus": true
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "skip": {
+        "text": "Skip to main content",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid"
+      },
+      "channels": [
+        {
+          "text": "Message on WhatsApp",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid"
+        },
+        {
+          "text": "Message on Signal",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid"
+        }
+      ],
+      "sectionAnchorTop": 27.875,
+      "internalLinkAndBrowserBack": true
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "skip": {
+        "text": "Skip to main content",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid"
+      },
+      "channels": [
+        {
+          "text": "Message on WhatsApp",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid"
+        },
+        {
+          "text": "Message on Signal",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid"
+        }
+      ],
+      "sectionAnchorTop": 28.15625,
+      "internalLinkAndBrowserBack": true
+    },
+    {
+      "name": "home",
+      "shortPhoneMenu": {
+        "text": "Situations",
+        "href": "/en/#situations",
+        "visible": true,
+        "outline": "solid"
+      },
+      "escapeReturnsFocus": true
+    },
+    {
+      "name": "home",
+      "existingDisclosureOpensAndRestoresClosed": true
+    }
+  ],
+  "noScript": [
+    {
+      "name": "business",
+      "staticGroupVisible": true,
+      "nativeContactAnchor": true,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "name": "home",
+      "staticGroupVisible": true,
+      "nativeContactAnchor": true,
+      "width": 390,
+      "scrollWidth": 390
+    }
+  ],
+  "print": [
+    {
+      "name": "business",
+      "completeTargetVisible": true
+    },
+    {
+      "name": "home",
+      "completeTargetVisible": true
+    }
+  ],
+  "errors": [],
+  "completedAt": "2026-10-13T09:18:42.518Z"
+}

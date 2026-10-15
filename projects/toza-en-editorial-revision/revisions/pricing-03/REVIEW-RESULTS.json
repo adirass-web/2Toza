@@ -1,0 +1,652 @@
+{
+  "status": "READY FOR OWNER REVIEW",
+  "method": "Independent block/table comparison against Markdown parser output, functional browser checks and human screenshot review; not customer research",
+  "noJavaScriptDetails": true,
+  "cases": [
+    {
+      "width": 1440,
+      "sourceBlocks": 95,
+      "sourceLinks": 8,
+      "sourceAndRowsExact": true,
+      "keyboardFocus": true,
+      "deepLinkRevealsDetails": true,
+      "printAllAndRestore": true,
+      "overflow": 0,
+      "rows": 12,
+      "rowHeaders": true,
+      "columnHeaders": true,
+      "tableRole": null,
+      "metrics": [
+        {
+          "font": 28,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "32.2px"
+        },
+        {
+          "font": 28,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "32.2px"
+        },
+        {
+          "font": 19,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "26.98px"
+        },
+        {
+          "font": 19,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "26.98px"
+        },
+        {
+          "font": 20,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "28.4px"
+        },
+        {
+          "font": 20,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "28.4px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        },
+        {
+          "font": 16,
+          "width": 420,
+          "usable": 384,
+          "lineHeight": "22.72px"
+        }
+      ],
+      "creditVisible": true,
+      "creditText": "The eligible balances require the full engagement to begin within 14 days of completion of the initial service; booking alone does not qualify. The credit applies once per group engagement. Full credit conditions",
+      "diagramVisible": true,
+      "decisionVisible": true,
+      "acceptanceVisible": true,
+      "summaryValueVisible": true,
+      "completionVisible": true,
+      "contactHeights": [
+        48,
+        48
+      ],
+      "allSvgDecorative": true,
+      "pCountGlyphs": [
+        1,
+        4
+      ],
+      "closedDetails": 9,
+      "title": "Personal Shield and Pricing | Toza",
+      "description": "Personal Shield \u20aa14,000 for one person. Inner Circle Shield from \u20aa42,000 for four. Assessment \u20aa3,600. VAT included. Compare scope and conditional credit.",
+      "socialDescription": "Compare tailored hardening for one person or four: devices, accounts, security keys, personal teaching and verification. Begin with a personal threat model and risk assessment.",
+      "mainHeight": 3731.671875,
+      "tableHeight": 971.0625,
+      "rowBandWidths": [
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        280
+      ],
+      "productHeaderWidths": [
+        420,
+        420
+      ],
+      "explicitAssociations": true,
+      "fullTableWidth": 1120
+    },
+    {
+      "width": 390,
+      "sourceBlocks": 95,
+      "sourceLinks": 8,
+      "sourceAndRowsExact": true,
+      "keyboardFocus": true,
+      "deepLinkRevealsDetails": true,
+      "printAllAndRestore": true,
+      "overflow": 0,
+      "rows": 12,
+      "rowHeaders": true,
+      "columnHeaders": true,
+      "tableRole": null,
+      "metrics": [
+        {
+          "font": 24,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 24,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 19,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "26.22px"
+        },
+        {
+          "font": 19,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "26.22px"
+        },
+        {
+          "font": 20,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 20,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 179,
+          "usable": 155,
+          "lineHeight": "22.08px"
+        }
+      ],
+      "creditVisible": true,
+      "creditText": "The eligible balances require the full engagement to begin within 14 days of completion of the initial service; booking alone does not qualify. The credit applies once per group engagement. Full credit conditions",
+      "diagramVisible": true,
+      "decisionVisible": true,
+      "acceptanceVisible": true,
+      "summaryValueVisible": true,
+      "completionVisible": true,
+      "contactHeights": [
+        48,
+        48
+      ],
+      "allSvgDecorative": true,
+      "pCountGlyphs": [
+        1,
+        4
+      ],
+      "closedDetails": 9,
+      "title": "Personal Shield and Pricing | Toza",
+      "description": "Personal Shield \u20aa14,000 for one person. Inner Circle Shield from \u20aa42,000 for four. Assessment \u20aa3,600. VAT included. Compare scope and conditional credit.",
+      "socialDescription": "Compare tailored hardening for one person or four: devices, accounts, security keys, personal teaching and verification. Begin with a personal threat model and risk assessment.",
+      "mainHeight": 6056.078125,
+      "tableHeight": 2090.34375,
+      "rowBandWidths": [
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358
+      ],
+      "productHeaderWidths": [
+        179,
+        179
+      ],
+      "explicitAssociations": true,
+      "fullTableWidth": 358,
+      "stickyHeadersVerified": true
+    },
+    {
+      "width": 320,
+      "sourceBlocks": 95,
+      "sourceLinks": 8,
+      "sourceAndRowsExact": true,
+      "keyboardFocus": true,
+      "deepLinkRevealsDetails": true,
+      "printAllAndRestore": true,
+      "overflow": 0,
+      "rows": 12,
+      "rowHeaders": true,
+      "columnHeaders": true,
+      "tableRole": null,
+      "metrics": [
+        {
+          "font": 24,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 24,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 19,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "26.22px"
+        },
+        {
+          "font": 19,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "26.22px"
+        },
+        {
+          "font": 20,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 20,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "27.6px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        },
+        {
+          "font": 16,
+          "width": 144,
+          "usable": 120,
+          "lineHeight": "22.08px"
+        }
+      ],
+      "creditVisible": true,
+      "creditText": "The eligible balances require the full engagement to begin within 14 days of completion of the initial service; booking alone does not qualify. The credit applies once per group engagement. Full credit conditions",
+      "diagramVisible": true,
+      "decisionVisible": true,
+      "acceptanceVisible": true,
+      "summaryValueVisible": true,
+      "completionVisible": true,
+      "contactHeights": [
+        48,
+        48
+      ],
+      "allSvgDecorative": true,
+      "pCountGlyphs": [
+        1,
+        4
+      ],
+      "closedDetails": 9,
+      "title": "Personal Shield and Pricing | Toza",
+      "description": "Personal Shield \u20aa14,000 for one person. Inner Circle Shield from \u20aa42,000 for four. Assessment \u20aa3,600. VAT included. Compare scope and conditional credit.",
+      "socialDescription": "Compare tailored hardening for one person or four: devices, accounts, security keys, personal teaching and verification. Begin with a personal threat model and risk assessment.",
+      "mainHeight": 7002.625,
+      "tableHeight": 2500.15625,
+      "rowBandWidths": [
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288
+      ],
+      "productHeaderWidths": [
+        144,
+        144
+      ],
+      "explicitAssociations": true,
+      "fullTableWidth": 288,
+      "stickyHeadersVerified": true
+    }
+  ],
+  "reviewedHashes": {
+    "pricingSha256": "6ea8ed8951d2673048300b4dca3632c4ac23c97a3be73c0659bdb8f9ab299461",
+    "diagramSha256": "dd238e0735c06726feaae309d480ba56c39be694c69cababf96907736e7d64af",
+    "htmlSha256": "cb543c8d6e790152b32566cabdc522917ad21853cc7aabff5cf7390f33c0e816",
+    "cssSha256": "bf4af79166269a1ffc70cd5f62d51501a0d13c2eac1c75379ee818aeaca98a95",
+    "referenceScriptSha256": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab"
+  },
+  "requiredFindingsRemaining": 0,
+  "resolvedFindings": [
+    "Assessment independent summary and first-aid/outcome completion made visible with exact source paragraphs",
+    "Mobile row label bands and two equal16px product cells retain native explicit header associations",
+    "Direct full-services credit qualifier moved before matrix; neutral eligible-balances reference"
+  ],
+  "additionalChecks": {
+    "status": "PASS",
+    "metadataExact": true,
+    "canonicalContactAttributesExact": true,
+    "canonicalFooterLinkAttributesExact": true,
+    "allPricingCssSelectorsScoped": 152,
+    "allOpenReferences320Overflow": 0,
+    "urgentTableAssociation": true,
+    "fullPagesNotProvidedInIsolatedPreview": true
+  },
+  "directFullServicesCreditBeforeMatrix": true,
+  "chromiumAccessibilityTreePreservesTableAndHeaders": true,
+  "contrastRatios": {
+    "mutedOnPaper": 5.85,
+    "bodyOnPaper": 13.15,
+    "actionOnPanel": 7.65,
+    "mutedOnPanel": 5.38,
+    "focusOnPaper": 6.21
+  },
+  "limitations": [
+    "Expert/browser review, not customer comprehension or conversion evidence",
+    "Chromium tested; no manual screen-reader or multi-browser audit",
+    "Single-page prototype does not serve supporting-page canonical paths; site integration remains unapproved"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "review-only",
+  "pricingSha256": "7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25",
+  "visualCopySha256": "b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d",
+  "htmlSha256": "5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f",
+  "cssSha256": "a33e565682c3e63ba1053ff5e1146d143da9b49a087190f81c89e861e7bedf10",
+  "scriptSha256": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab",
+  "sharedBuildSha256": "892a885df7fbe162dbf31d401fca043ff993cabb8e1ba80ce6ccfc184fad7595",
+  "metadata": {
+    "Route": "/en/pricing.html",
+    "Title": "Personal Shield and Pricing | Toza",
+    "Description": "Personal Shield ₪14,000 for one person. Inner Circle Shield from ₪42,000 for four. Compare devices, security keys and work time. Assessment ₪3,600. VAT included.",
+    "Social description": "See what Toza will assess, harden and teach: your personal threat model, device and account changes, supplied security keys and practical OpSec training."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "acceptedOn": "2026-10-10",
+  "authority": "Owner: Approved. Build these four pages into the local preview, run the quality gates, and show me desktop and mobile. Keep service facts unchanged. Don’t change PR #54 or deploy. D-030.",
+  "baseCommit": "09a534e",
+  "historicalManifest": "approved/acceptance-manifest.json",
+  "previousAmendment": "approved/acceptance-amendment-2026-10-10.json",
+  "normalization": "CRLF to LF; exact-copy block excludes packet wrapper; trailing whitespace at block end trimmed, one final LF. No other normalization.",
+  "entries": [
+    {
+      "route": "index",
+      "path": "revisions/en-04/06-home.md",
+      "sha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6"
+    },
+    {
+      "route": "pricing",
+      "path": "revisions/en-04/02-pricing.md",
+      "sha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "revisions/en-04/07-separation-divorce.md",
+      "sha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1"
+    },
+    {
+      "route": "they-know-something",
+      "path": "revisions/en-04/09-they-know-something.md",
+      "sha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f"
+    }
+  ]
+}

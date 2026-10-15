@@ -1,0 +1,74 @@
+name: Preview Toza reviewed release
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: toza-release-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'codex/toza-approved-copy-preview' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-pricing-04-release')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:audit-policy && npm run audit:tools
+      - name: Verify focused visual refinement regressions
+        if: github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement'
+        run: node --test scripts/visual-refinements.test.cjs
+      - run: npm run verify:all
+      - run: node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell
+      - run: npm run test:rtl-visual
+        env:
+          CI: true
+      - name: Verify local Pages routing
+        run: npm run verify:pages
+      - name: Exclude preview from indexing
+        run: node scripts/prepare-preview.cjs
+      - name: Deploy reviewed branch preview
+        env:
+          CLOUDFLARE_ACCOUNT_ID: cfd055f2f8175d13377bd64e9620ea36
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PREVIEW_SHA: ${{ github.event.pull_request.head.sha }}
+          PREVIEW_BRANCH: ${{ github.event.pull_request.head.ref == 'codex/toza-pricing-04-release' && 'pricing-04-release' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' && 'marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' && 'trust-process-release' || 'four-page-release' }}
+        run: npm run pages:deploy -- _site --project-name toza-site --branch "$PREVIEW_BRANCH" --commit-hash "$PREVIEW_SHA"
+      - name: Verify the served marketing preview
+        if: github.event.pull_request.head.ref == 'codex/toza-marketing-02-release'
+        env:
+          PREVIEW_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node scripts/verify-hosted-marketing-02.mjs
+      - name: Verify served Pricing-04 preview
+        if: github.event.pull_request.head.ref == 'codex/toza-pricing-04-release'
+        env:
+          RELEASE_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          TOZA_CHECK_MODE: preview
+        run: node scripts/verify-hosted-release.mjs
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-preview-checks
+          path: |
+            test-results
+            playwright-report
+            .wrangler/pages-runtime-check.log
+            .wrangler/hosted-preview-checks.json
+            .wrangler/hosted-release-checks.json
+            .wrangler/hosted-mismatch.json
+            .wrangler/production-mismatch.json
+          include-hidden-files: true
+          if-no-files-found: ignore

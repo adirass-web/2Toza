@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-09",
+  "status": "redesigned logo proposal, owner review pending",
+  "nameOrigin": "閉ざす (tozasu), to close shut",
+  "wordmark": "Source Serif 4 400 outlines, optically fitted letter spacing",
+  "letterOrigins": [
+    132,
+    180.15,
+    258.75,
+    323.4
+  ],
+  "emblem": "Two fitted solid panels form one shut aperture with a continuous stepped joint. No bottom tail.",
+  "constructionUnits": {
+    "emblemWidth": 88,
+    "emblemHeight": 70,
+    "seam": 3,
+    "step": 8,
+    "exteriorCorner": 2
+  },
+  "colours": {
+    "ink": "#302925",
+    "reverse": "#F4EFE6"
+  },
+  "license": "Source Serif4 OFL notice fonts/OFL-sourceserif4.txt",
+  "rasterConcept": "logo-closed-panels-concept-v1.png generated with built-in imagegen; final SVG is a deliberate geometric reconstruction with A typography, not an automatic raster trace",
+  "smallMark": {
+    "preferredSizes": [
+      16,
+      24
+    ],
+    "seam": 6,
+    "step": 8,
+    "viewBox": "0 0 88 70",
+    "normalMarkPreferredAt": 32
+  }
+}

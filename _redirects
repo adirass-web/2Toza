@@ -1,0 +1,26 @@
+# Russian remains unpublished until its translated mirror is ready.
+/ru/*  /en/  302
+
+# The retired founder route still resolves to the founder's professional site.
+/en/founder.html  https://cyberdrtabansky.com  301
+
+# Retired standards-heavy page replaced by the current visit/process page.
+/en/whats-included.html  /en/what-happens-during-the-visit.html  301
+
+# D-026: temporary Hebrew marketing withdrawal; legal documents stay at root.
+/he  /en/  302
+/he/*  /en/  302
+
+# Replaced English pages, including extensionless aliases.
+/en/commercial-spying.html  /en/business-dispute.html  301
+/en/commercial-spying  /en/business-dispute.html  301
+/en/commercial-spying/  /en/business-dispute.html  301
+/en/commercial-spying.html/  /en/business-dispute.html  301
+/en/private-investigator.html  /en/they-know-something.html  301
+/en/private-investigator  /en/they-know-something.html  301
+/en/private-investigator/  /en/they-know-something.html  301
+/en/private-investigator.html/  /en/they-know-something.html  301
+/en/not-it-support.html  /en/faq.html#how-toza-differs  301
+/en/not-it-support  /en/faq.html#how-toza-differs  301
+/en/not-it-support/  /en/faq.html#how-toza-differs  301
+/en/not-it-support.html/  /en/faq.html#how-toza-differs  301

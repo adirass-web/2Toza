@@ -1,0 +1,87 @@
+{
+  "status": "READY FOR OWNER REVIEW",
+  "ownerAcceptance": "pending; directional approval does not accept this new exact proposal",
+  "publishedBaseline": "b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47",
+  "productionIntegration": false,
+  "unresolvedRequiredFindings": [],
+  "sourceBlocks": 93,
+  "mainComparisonRows": 7,
+  "nativeDisclosures": 8,
+  "manifest": {
+    "status": "review-only",
+    "pricingSha256": "7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25",
+    "visualCopySha256": "b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d",
+    "htmlSha256": "5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f",
+    "cssSha256": "a33e565682c3e63ba1053ff5e1146d143da9b49a087190f81c89e861e7bedf10",
+    "scriptSha256": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab",
+    "sharedBuildSha256": "892a885df7fbe162dbf31d401fca043ff993cabb8e1ba80ce6ccfc184fad7595",
+    "metadata": {
+      "Route": "/en/pricing.html",
+      "Title": "Personal Shield and Pricing | Toza",
+      "Description": "Personal Shield ₪14,000 for one person. Inner Circle Shield from ₪42,000 for four. Compare devices, security keys and work time. Assessment ₪3,600. VAT included.",
+      "Social description": "See what Toza will assess, harden and teach: your personal threat model, device and account changes, supplied security keys and practical OpSec training."
+    }
+  },
+  "measurements": [
+    {
+      "width": 1440,
+      "fullDocumentHeight": 5332,
+      "visibleMainWords": 864
+    },
+    {
+      "width": 390,
+      "fullDocumentHeight": 8213,
+      "visibleMainWords": 864
+    },
+    {
+      "width": 320,
+      "fullDocumentHeight": 9345,
+      "visibleMainWords": 864
+    }
+  ],
+  "files": {
+    "pricing.md": "7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25",
+    "VISUAL-COPY.md": "b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d",
+    "preview/index.html": "5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f",
+    "preview/pricing-04.css": "a33e565682c3e63ba1053ff5e1146d143da9b49a087190f81c89e861e7bedf10",
+    "preview/references.js": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab",
+    "preview/build.cjs": "1f8241858c49f1cd1409ca2e77b59291767a08c79ee7c3416149cd3124a43550",
+    "preview/check.cjs": "506ac4a79dfd6571e16d616ef1785a3620d985f04d92e55b1df9c8b50d502ab1",
+    "preview/build-manifest.json": "b0a445a2e1c61ad20cb9e70ed7477b6b4e6eebb5521c32b749abf066e2e4b81a",
+    "preview/checks.json": "6771e3a1fa699d7fe0ae7ed65fd5f7339ee9f349385d7b7c220373ce00de66ce",
+    "RESEARCH.md": "a90189eb787107225a173bad5be6c5c050e5eff8ad6cd21ba22b9f050dceb9bc",
+    "CONVERSION-PLAN.md": "d219682af2252f065de21e10a40e1afab80b2fc657704b2fedab3c557fe3f52e",
+    "B2C-MARKETING-RESEARCH.md": "8a0e5a6f042f0c3f7a03687d16a594d64c9f4523409412612a453552a3545487",
+    "B2C-DESIGN-RESEARCH.md": "e1c35a0d10aa72de2533f4a07f8e7a662dd231007edbbba23dd135a47e08a3a3",
+    "B2C-TIER-DECISIONS.md": "2d9c7c23d15e0148a588e7cb1f697055eefbbd64eea5957b93f03da2f3d6c230",
+    "INDEPENDENT-COPY-REVIEW.md": "d4948e21f007405faf9a7e1509fc04cdafaef7edc0fe3b8b5e1fb2fb197f9d71",
+    "RESEARCH-REVIEW.md": "7574c135b5e7ea99989d23791e4b0c3a48a336e4ded5f3fc99ab154907e6e382",
+    "B2C-INDEPENDENT-REVIEW.md": "5c2f93d738e96e11e6ca4d836d4259d6d00b890006d17aff382d9a95e4e0c636",
+    "INDEPENDENT-DESIGN-REVIEW.md": "45572850bc1bdeeb8b43839f3b69f99e908e6a721ae60dddafbdb096970ca47a",
+    "INDEPENDENT-DESIGN-RESULTS.json": "af023fae67dd1f496ff1bb7418ca8e50af6458d17034f71630e2e7a5831e0a31",
+    "PUBLIC-OUTPUT-PRESERVATION.json": "a56964a44771d6d3d4199eae9d761c742d142abaa9a50da490afd30b3be7a027",
+    "OWNER-REVIEW.md": "4acb633f840ec3fd28f0488d2fcef48e4f471f8727af8a3646bdfc20a30ad826",
+    "preview/screenshots/hardening-1440.png": "18b929f840cac86399360dfbbb29d1a7b70134ace4f5e8bb5638cebaf72e9960",
+    "preview/screenshots/hardening-320.png": "06e2ff63006f0e940acda0fdf96a8b5ff51def0616cefd77a55e18265fc0174d",
+    "preview/screenshots/hardening-390.png": "5d7646d856627298616fc15fa1908aa5a7fe84d27a7e20fececf19798d442c6a",
+    "preview/screenshots/independent-balance-1440.png": "4d054962a5ca4c9c8fef69f10160acf4876e8c6c7bc3b298a03bbf6f168e66d1",
+    "preview/screenshots/independent-balance-320.png": "b69d55a4c249f9d7187fbdd103a4fe5a129a7f5198de89e457fa34642160e426",
+    "preview/screenshots/independent-balance-390.png": "31a54655bfe527ef2909a0f11993d435333103462eed929326e234cd444d4b27",
+    "preview/screenshots/independent-entry-1440.png": "7fb3285f6a9745f18afb8c7e78966e9d8994dee6bd8743c239d4c505b577b9a4",
+    "preview/screenshots/independent-entry-320.png": "c8844f3c1847b4b484904e4e1bfa6cde2adbade4b7513464e76cf90b1102c6ee",
+    "preview/screenshots/independent-entry-390.png": "f07c719005c3ead155bfb8420ad928bcb5b3d201b2a27c442567ad45263916a5",
+    "preview/screenshots/journey-1440.png": "0e2b15760eb317ed465589b0c4dc542304a62af8b81778e34e1f5940eea09f9a",
+    "preview/screenshots/journey-320.png": "029ee9b457a1e49ee01cd0e93ba1719fa57bed8660d216f99ea2baea97d8b725",
+    "preview/screenshots/journey-390.png": "149088bc2b73cd58f846813d3253be1b7bdc2e98399b7012853bb8153e9268d4",
+    "preview/screenshots/matrix-1440.png": "299df8ee16f46f43787546cca8284409ac2d222ab078c692f380910db0a46ad0",
+    "preview/screenshots/matrix-320.png": "47c4e882fb8a208d3cf4f40d1dfbd0a3d2ceb986d23dd90490b21367d0818180",
+    "preview/screenshots/matrix-390.png": "53e7eb91a0367cebd3d94942326f707598c2f16c63a6508a08fe110d33aa7066",
+    "preview/screenshots/pricing-1440-full.png": "2052068d16e8e979bebe9d476ac2c60068dc7663fee00cf094ae8c2e2d9482da",
+    "preview/screenshots/pricing-1440-viewport.png": "36bbf9b38ec3344e5ddebf90fe12009ddb881ec61ad14312e7bea7988292d765",
+    "preview/screenshots/pricing-320-full.png": "5ef21a6e6df5951edff7c750f6a1d69f3db8f95f733312b5b2ed9215a6f1de8c",
+    "preview/screenshots/pricing-320-viewport.png": "9423c8abeb1f7b4338888fc2a51fef679a7d1b1ea4fc65b2dee20e150d992646",
+    "preview/screenshots/pricing-390-full.png": "6fb5973548ec6971f8373817667e0460607978d6e55776130ef69a0aa32876ad",
+    "preview/screenshots/pricing-390-viewport.png": "3afe79e6753b15d41fed991d0f4bb9353d1946ae09f2d4680cd81b6715e62522",
+    "COMPREHENSION-CHECK.md": "9325de97a1e01005c4bbd6ddb5819a52b89ff5ce83e2e741a7765b413483466f"
+  }
+}

@@ -1,0 +1,3 @@
+# Preserve exact built bytes for baseline hashes across Windows/Linux checkouts.
+# These are archival snapshots, not editable production sources.
+*.html -text -diff

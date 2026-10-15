@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" role="img" aria-labelledby="title-il">
+  <title id="title-il">Flag of Israel</title>
+  <rect width="64" height="40" fill="#ffffff" rx="4"/>
+  <rect y="4" width="64" height="6" fill="#0d47a1"/>
+  <rect y="30" width="64" height="6" fill="#0d47a1"/>
+  <g fill="#0d47a1" stroke="#0d47a1" stroke-width="2" transform="translate(32 20)">
+    <polygon points="0,-8.66 5,0 -5,0" fill="none"/>
+    <polygon points="0,8.66 5,0 -5,0" fill="none"/>
+  </g>
+</svg>

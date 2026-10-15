@@ -1,0 +1,83 @@
+- table "Choose who to protect":
+  - rowgroup:
+    - row "Purchase detail Personal Shield Inner Circle Shield":
+      - columnheader "Purchase detail"
+      - columnheader "Personal Shield"
+      - columnheader "Inner Circle Shield"
+  - rowgroup:
+    - row "Full engagement price ₪14,000 From ₪42,000":
+      - rowheader "Full engagement price"
+      - cell "₪14,000":
+        - strong: ₪14,000
+      - cell "From ₪42,000":
+        - strong: From ₪42,000
+    - row "Remaining payment with eligible Assessment credit ₪10,400 From ₪38,400 at the starting scope":
+      - rowheader "Remaining payment with eligible Assessment credit"
+      - cell "₪10,400":
+        - strong: ₪10,400
+      - cell "From ₪38,400 at the starting scope":
+        - strong: From ₪38,400
+        - text: at the starting scope
+    - row "People One Four":
+      - rowheader "People"
+      - cell "One":
+        - strong: One
+      - cell "Four":
+        - strong: Four
+    - 'row "Personal devices Two: one main phone + one PC, iPad or second phone Eight: the same two-device allowance per person"':
+      - rowheader "Personal devices"
+      - 'cell "Two: one main phone + one PC, iPad or second phone"':
+        - strong: "Two:"
+        - text: one main phone + one PC, iPad or second phone
+      - 'cell "Eight: the same two-device allowance per person"':
+        - strong: "Eight:"
+        - text: the same two-device allowance per person
+    - row "Accounts and access Relevant identities, accounts, apps, permissions and recovery routes The same relevant scope for each person":
+      - rowheader "Accounts and access"
+      - cell "Relevant identities, accounts, apps, permissions and recovery routes"
+      - cell "The same relevant scope for each person"
+    - row "Hardening and essential migration Tailored settings/access changes; new core accounts and essential migration where needed The same individual standard for each person":
+      - rowheader "Hardening and essential migration"
+      - cell "Tailored settings/access changes; new core accounts and essential migration where needed"
+      - cell "The same individual standard for each person"
+    - 'row "Physical security keys Two compatible keys, supplied, configured and tested Eight: two per person, supplied, configured and tested"':
+      - rowheader "Physical security keys"
+      - cell "Two compatible keys, supplied, configured and tested":
+        - strong: Two
+        - text: compatible keys, supplied, configured and tested
+      - 'cell "Eight: two per person, supplied, configured and tested"':
+        - strong: "Eight:"
+        - text: two per person, supplied, configured and tested
+    - row "Teaching and verification Personal teaching; material changes tested; applicable checklist work verified Personal teaching and the same verification for each participant":
+      - rowheader "Teaching and verification"
+      - cell "Personal teaching; material changes tested; applicable checklist work verified"
+      - cell "Personal teaching and the same verification for each participant"
+    - row "Shared network and router Separately scoped One home/home-office network and router, in addition to the eight personal devices":
+      - rowheader "Shared network and router"
+      - cell "Separately scoped"
+      - cell "One home/home-office network and router, in addition to the eight personal devices":
+        - strong: One
+        - text: home/home-office network and router, in addition to the eight personal devices
+    - row "Review and mapping Initial client's two devices and relevant accounts in the separate paid Assessment Initial client in Assessment; remaining-group review and mapping included in the full engagement":
+      - rowheader "Review and mapping"
+      - cell "Initial client's two devices and relevant accounts in the separate paid Assessment"
+      - cell "Initial client in Assessment; remaining-group review and mapping included in the full engagement"
+    - row "In-person work Typically 7–14 hours, excluding Assessment. One primary working day; second included if needed Typically 2–4 working days":
+      - rowheader "In-person work"
+      - cell "Typically 7–14 hours, excluding Assessment. One primary working day; second included if needed":
+        - text: Typically
+        - strong: 7–14 hours
+        - text: ", excluding Assessment. One primary working day; second included if needed"
+      - cell "Typically 2–4 working days":
+        - text: Typically
+        - strong: 2–4 working days
+    - row "Records and adjustment support Your private dated record; 14 days of support for issues directly related to Toza's changes A private dated record per person plus a separate network record; 14 days from group completion for all four people and the included network, for issues directly related to Toza's changes":
+      - rowheader "Records and adjustment support"
+      - cell "Your private dated record; 14 days of support for issues directly related to Toza's changes":
+        - text: Your private dated record;
+        - strong: 14 days
+        - text: of support for issues directly related to Toza's changes
+      - cell "A private dated record per person plus a separate network record; 14 days from group completion for all four people and the included network, for issues directly related to Toza's changes":
+        - text: A private dated record per person plus a separate network record;
+        - strong: 14 days from group completion
+        - text: for all four people and the included network, for issues directly related to Toza's changes

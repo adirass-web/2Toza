@@ -1,0 +1,641 @@
+{
+  "baselineCommit": "b1f88a081e6c88d8256d0f921e6bcf17e847e02b",
+  "branch": "codex/toza-trust-process-refinement",
+  "authorityAssert": "PASS",
+  "acceptedEffectivePageCount": 11,
+  "pages": [
+    {
+      "route": "why-us",
+      "source": "projects/toza-en-editorial-revision/revisions/en-05/01-WHY-TOZA-CANDIDATE.md",
+      "approval": "acceptance-amendment-2026-10-12-batch-a.json",
+      "sourceSha256": "2529491f98c4b9003849a9bc7a45164d71b4324bbbe7ddd2414ec3b88a6e951e",
+      "effectiveCopySha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "builtHtmlSha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+      "metadata": {
+        "title": "Why Toza | A note from Dr. Lior Tabansky",
+        "description": "Why Dr. Lior Tabansky created Toza: personal help to strengthen your digital security and privacy, make agreed changes and learn to use them.",
+        "og_description": "You do not need the right technical question to ask for help. Work directly with me to understand your exposure and strengthen your security and privacy."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "A personal note",
+        "What becomes different for you",
+        "You have someone to help you make sense of it",
+        "Your security and privacy get personal attention",
+        "You can use the changes with confidence",
+        "One person understands your situation and does the work",
+        "You remain in control of the work",
+        "The professional experience behind this work",
+        "You do not need to know where to look. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Private Exposure Assessment",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "How Toza differs from other help",
+          "href": "/en/faq.html#how-toza-differs"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Services and pricing",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "View my professional profile",
+          "href": "https://cyberdrtabansky.com"
+        }
+      ]
+    },
+    {
+      "route": "pricing",
+      "source": "projects/toza-en-editorial-revision/revisions/en-03/02-pricing.md",
+      "approval": "acceptance-amendment-2026-10-10.json",
+      "sourceSha256": "9d255c91f4e4d6c21650078ec13b055d5d8b06f05f3d8cfad5cb9df1e74919c7",
+      "effectiveCopySha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+      "builtHtmlSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "metadata": {
+        "title": "Pricing | Toza",
+        "description": "Personal digital security and privacy with Dr. Tabansky, in person. Assessment ₪3,600. Personal Shield ₪14,000. Inner Circle Shield from ₪42,000. VAT included.",
+        "og_description": "Understand relevant access to your private life and have agreed changes made with expert help. Compare the paid Assessment and separate full hardening services."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Before you book",
+        "Your first paid visit: inspection, diagnosis and urgent first aid",
+        "Hardening and practical security habits, fitted to your life",
+        "Choose the scope that fits your life",
+        "Personal Shield: hardening fitted to your circumstances",
+        "Inner Circle Shield: care for four people, with individual privacy",
+        "Bespoke Private Protection",
+        "Revisit changes after the full engagement",
+        "Your initial fee counts toward the full service",
+        "Urgent visits in Central Israel",
+        "Additional work",
+        "What the service covers",
+        "You do not need to know where to look. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "See the initial visit in detail",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Read how your information is handled",
+          "href": "/en/faq.html#privacy"
+        },
+        {
+          "label": "See the service boundaries",
+          "href": "/en/faq.html#boundaries"
+        }
+      ]
+    },
+    {
+      "route": "faq",
+      "source": "projects/toza-en-editorial-revision/revisions/en-02-v2/03-faq.md",
+      "approval": "acceptance-manifest.json",
+      "sourceSha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f",
+      "effectiveCopySha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f",
+      "builtHtmlSha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "metadata": {
+        "title": "Is Toza Right for Me? | Services, Privacy and Pricing",
+        "description": "Understand what Toza changes, what you learn, and how the service differs from IT support or security software. Clear answers on scope, prices and privacy.",
+        "og_description": "You do not need to diagnose a problem before asking about Toza. Understand the work, its limits and your choices before deciding."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Is Toza the right kind of help? {#how-toza-differs}",
+        "Do I need to know what is wrong before contacting you?",
+        "How is this different from IT support or help from someone I know?",
+        "Do you monitor my devices or install security software?",
+        "Getting started",
+        "Is the first conversation the paid service?",
+        "What happens before I pay or book a visit?",
+        "What should I send in the first message?",
+        "What you gain from the first paid visit",
+        "What does the first visit cover?",
+        "What do I get for ₪3,600?",
+        "How long should I allow?",
+        "What do I receive if I decide not to continue?",
+        "What if you find a serious problem outside my original concern?",
+        "Hardening and teaching for you or your close circle",
+        "What does Personal Shield include?",
+        "Does migration include all my files and old accounts?",
+        "What does the included adjustment support cover?",
+        "What does Inner Circle Shield include?",
+        "Does each person need a separate paid initial visit?",
+        "What work is included on the shared network and router?",
+        "How long does Inner Circle take, and when does support begin?",
+        "What records does the group receive, and who sees them?",
+        "Prices, credit and urgent visits",
+        "How does the ₪3,600 credit work?",
+        "When does the four-hour urgent arrival clock start?",
+        "What does an urgent visit cost?",
+        "What if I need additional work, a bespoke service or later follow-up?",
+        "Privacy and client control {#privacy}",
+        "Do I give you my passwords or remote access?",
+        "Will you see private messages, photos or documents?",
+        "Is cloud processing involved, and do you keep records?",
+        "Can someone notice my contact with Toza or the changes we make?",
+        "Service boundaries {#boundaries}",
+        "Can you prove who accessed my account, investigate someone or collect evidence?",
+        "Is the dated record a certification or a security guarantee?",
+        "Can my attorney or adviser be involved?",
+        "You do not need to know where to look. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Read about the initial visit",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "See the full prices and remaining balances",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "See the full pricing and inclusions",
+          "href": "/en/pricing.html"
+        }
+      ]
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "source": "projects/toza-en-editorial-revision/revisions/en-02-v2/04-what-happens.md",
+      "approval": "acceptance-manifest.json",
+      "sourceSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "effectiveCopySha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "builtHtmlSha256": "61d576e0ac6decc365e7f5aa7da42fbdacc040c4bf4251fdf6133129e5a7b7d9",
+      "metadata": {
+        "title": "How Toza Helps | Personal Security and Privacy",
+        "description": "Work directly with Dr. Tabansky, from hands-on inspection and approved urgent fixes to separately agreed hardening and personal teaching.",
+        "og_description": "From a clearer picture of your exposure to agreed changes and practical security habits. See what you gain at each stage of Toza’s in-person work."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Decide whether Toza fits before you buy",
+        "1. Start with your situation, even if you cannot name the problem",
+        "2. Know the scope and price before committing",
+        "Your paid Assessment: inspection, diagnosis and urgent first aid",
+        "3. See how your devices, identities and data are connected",
+        "4. Have approved first-aid fixes made during the visit",
+        "5. Leave with priorities you can act on",
+        "Have the agreed setup hardened around your life",
+        "6. Choose the scope that suits your situation",
+        "7. Replace accumulated arrangements with deliberate choices",
+        "8. Learn how to use the resulting setup",
+        "Get help with the changes afterward",
+        "You approve changes and decide what an adviser receives",
+        "Need an urgent visit?",
+        "You do not need to know where to look. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "See pricing",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "See the first visit in detail",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Compare services, inclusions and prices",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and client control",
+          "href": "/en/faq.html#privacy"
+        },
+        {
+          "label": "Service boundaries",
+          "href": "/en/faq.html#boundaries"
+        },
+        {
+          "label": "See urgent surcharges and totals",
+          "href": "/en/pricing.html"
+        }
+      ]
+    },
+    {
+      "route": "index",
+      "source": "projects/toza-en-editorial-revision/revisions/en-03/06-home.md",
+      "approval": "acceptance-amendment-2026-10-10.json",
+      "sourceSha256": "1ac73958d5c450ba1899bf07fc8799180c71dca31323a19c45f60825b8643b3d",
+      "effectiveCopySha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+      "builtHtmlSha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0",
+      "metadata": {
+        "title": "Toza | Personal Digital Security and Privacy",
+        "description": "In-person assessment with Dr. Lior Tabansky, approved urgent fixes within scope, and separately agreed hardening and teaching.",
+        "og_description": "Private information can become leverage. Understand relevant access to your digital life and make agreed changes with direct expert help, in person."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Everyday connections can reveal more than you expect.",
+        "Close unwanted access. Build stronger security habits.",
+        "The situation changes the work.",
+        "The paid visit: inspection, diagnosis and urgent first aid",
+        "When private information matters differently {#situations}",
+        "Separation or divorce",
+        "Business or founder dispute",
+        "Your confidence matters. Your approval directs the work.",
+        "You can ask for help before you have answers. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Why I created Toza",
+          "href": "/en/why-us.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Separation and divorce",
+          "href": "/en/separation-divorce.html"
+        },
+        {
+          "label": "Business and founder disputes",
+          "href": "/en/business-dispute.html"
+        },
+        {
+          "label": "Private information has surfaced",
+          "href": "/en/they-know-something.html"
+        },
+        {
+          "label": "Inheritance conflict",
+          "href": "/en/inheritance-clash.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "How Toza differs from other help",
+          "href": "/en/faq.html#how-toza-differs"
+        }
+      ]
+    },
+    {
+      "route": "separation-divorce",
+      "source": "projects/toza-en-editorial-revision/revisions/en-04/07-separation-divorce.md",
+      "approval": "acceptance-amendment-2026-10-10-round-02.json",
+      "sourceSha256": "e65dae7827a1fd76162bfc964bac5fe180fd6ff1d2ccee364b7b3b9794f1a090",
+      "effectiveCopySha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+      "builtHtmlSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "metadata": {
+        "title": "Digital Exposure During Separation or Divorce | Toza",
+        "description": "Shared access can expose private plans during separation. Examine relevant connections and make agreed changes with Dr. Lior Tabansky. Initial visit ₪3,600 including VAT.",
+        "og_description": "Trust can end before access does. Reconsider access to your private conversations and plans, with personal expert help and attention to the effects of changes."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Choose which access you want to keep",
+        "Make changes with their consequences in view",
+        "Have your own devices and access examined, with urgent first aid",
+        "A setup for the life you are moving into",
+        "You decide what is changed and shared",
+        "Start with what is on your mind. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ]
+    },
+    {
+      "route": "business-dispute",
+      "source": "projects/toza-en-editorial-revision/revisions/en-06/01-BUSINESS-CANDIDATE.md",
+      "approval": "acceptance-amendment-2026-10-12-batch-b.json",
+      "sourceSha256": "7121efe457c8917a0ccb1f260c9569c18b4eb1f670d999e41af04dff6212add6",
+      "effectiveCopySha256": "9b469754dfd77fd463aab82e8f87aacf6e90b18dd5c85d41e05c2496e6706c82",
+      "builtHtmlSha256": "d262826c2fdb3ff34b8c287b0847a64bf5371bcab24f517b5662e99cc21d6c16",
+      "metadata": {
+        "title": "Digital Exposure in Business or Founder Disputes | Toza",
+        "description": "Understand where your personal identities, devices and data connect to business access. In-person work, approved urgent fixes and clearly scoped hardening.",
+        "og_description": "A personal email, shared folder or recovery contact may still matter after business interests diverge. Review your own access before making consequential changes."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "See where personal and business access still meet",
+        "Understand what a change will affect before you approve it",
+        "Put the technical questions in experienced hands",
+        "Personal work, with clear authority",
+        "Talk through the next step privately. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Initial visit details",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ]
+    },
+    {
+      "route": "they-know-something",
+      "source": "projects/toza-en-editorial-revision/revisions/en-04/09-they-know-something.md",
+      "approval": "acceptance-amendment-2026-10-10-round-02.json",
+      "sourceSha256": "7e2a3bd03f4e17b066bcabc09c9fa890bfa2117e0971dcf5ca8f7bdf306d671a",
+      "effectiveCopySha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+      "builtHtmlSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "metadata": {
+        "title": "They Know Something They Shouldn't | Toza",
+        "description": "A private detail has surfaced. In-person assessment and approved urgent fixes where safely possible within scope, with Dr. Lior Tabansky.",
+        "og_description": "You can act on current access without proving how a private detail became known. In-person assessment and separately agreed hardening with Dr. Lior Tabansky."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Start with what can be checked",
+        "Understand the effects before making isolated changes",
+        "Have someone examine the access and address urgent problems",
+        "Hardening beyond the first visit",
+        "What the findings can—and cannot—tell you",
+        "You can start without an explanation. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Initial visit details",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "See availability, fees and arrival conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        }
+      ]
+    },
+    {
+      "route": "inheritance-clash",
+      "source": "projects/toza-en-editorial-revision/revisions/en-06/02-INHERITANCE-CANDIDATE.md",
+      "approval": "acceptance-amendment-2026-10-12-batch-b.json",
+      "sourceSha256": "afa4ee443e7df106ca224d1403d1aecf15f1e1504d3cc9e1c2bb47b5d4cc00fa",
+      "effectiveCopySha256": "cca5d87db669ebf86ca1a8267604e6e5e9a5b481bc11af0a3ba265f16bb63b34",
+      "builtHtmlSha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410",
+      "metadata": {
+        "title": "Digital Exposure During Inheritance Conflict | Toza",
+        "description": "Understand family access and recovery arrangements connected to your own accounts before changing them. In-person work. Initial visit ₪3,600 including VAT.",
+        "og_description": "Family help can leave lasting digital connections. Review the access you are authorized to manage and understand which changes fit your circumstances."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Access shared in good faith can still matter",
+        "Understand the connections before changing them",
+        "Work through your own access with expert help",
+        "Make deliberate choices about future access",
+        "Your information and your attorney",
+        "Start with a private conversation about what you need. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ]
+    },
+    {
+      "route": "attorneys",
+      "source": "projects/toza-en-editorial-revision/revisions/en-06/03-ATTORNEYS-CANDIDATE.md",
+      "approval": "acceptance-amendment-2026-10-12-batch-b.json",
+      "sourceSha256": "43e50c7eaba67176d6630d39182ac7627986a81a43d85cc4a100fce387383e89",
+      "effectiveCopySha256": "2d27f1dcc9ce69bee3faa1573e0243dc555e6607e226761195eae2e8f9762894",
+      "builtHtmlSha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002",
+      "metadata": {
+        "title": "Digital Security and Privacy for Your Clients | Toza",
+        "description": "Refer clients for an in-person review of authorized digital access, approved urgent first aid and a practical summary. Broader hardening is agreed separately.",
+        "og_description": "Help your client understand current digital exposure and make informed changes. Direct work with Dr. Lior Tabansky, with client control over access and disclosure."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "When a referral may help",
+        "Work starts with the client's authority",
+        "Hands-on inspection, diagnosis and urgent first aid",
+        "A setup fitted to the client's circumstances",
+        "Coordinate consequential changes",
+        "A practical summary, with clear limits",
+        "Discuss whether Toza fits your client's situation. {#contact}"
+      ],
+      "markdownLinks": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        }
+      ]
+    },
+    {
+      "route": "private-exposure-assessment",
+      "source": "projects/toza-en-editorial-revision/revisions/en-02-v2/null.md",
+      "approval": "acceptance-manifest.json",
+      "sourceSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "effectiveCopySha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "builtHtmlSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "metadata": {
+        "title": "Private Exposure Assessment | Toza",
+        "description": "In-person work on your devices and accounts: access mapping, approved urgent fixes within scope and clear next steps. ₪3,600 including VAT.",
+        "og_description": "Take control of your accounts, devices and private information. Hands-on work with Dr. Lior Tabansky. Typically four hours."
+      },
+      "headings": [
+        "Metadata",
+        "Hero",
+        "Your accounts and private information, across two devices",
+        "What you get for ₪3,600",
+        "Where the first visit ends and Personal Shield begins",
+        "Price and credit",
+        "Urgent visits in Central Israel",
+        "Your presence. Your approval. Your credentials.",
+        "Start with a private conversation"
+      ],
+      "markdownLinks": []
+    }
+  ],
+  "sharedInputs": [
+    {
+      "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+      "sha256": "a66b3352da0136ea4d5caeded461336aa945b72988505ef4a191e834f8092dd4"
+    },
+    {
+      "path": "src/_includes/layouts/vault.njk",
+      "sha256": "492254f5bcc45943dcf88f2fb6074908cd35eeb7da65c98a361385e9471bfab7"
+    },
+    {
+      "path": "src/_includes/contact-channels.njk",
+      "sha256": "6dba4d9aaccc1f40c756a65d1a056376c74feadeddcc2fda46a808659d95a939"
+    },
+    {
+      "path": "src/_includes/schema-org.njk",
+      "sha256": "4dc5c2a5b98b2895bbec53271fda2e37cadf849dfd4d9de524302a832a587440"
+    },
+    {
+      "path": "src/_data/i18n/en.json",
+      "sha256": "995877545a23f00b8cbaef5c52a4a99b4c5ff36fc8abd564dc33d46b263f5935"
+    },
+    {
+      "path": "src/_data/site.json",
+      "sha256": "f6738dda52ef6756f511a3c5b24c4bc131a080297e16ee2d34475bdb4cfbdfcd"
+    },
+    {
+      "path": "llms.txt",
+      "sha256": "dd695379c5f4a247bb07dc2dbcc2ee21113a6f127c1a18e6aa0322d5cc0171d2"
+    },
+    {
+      "path": "_redirects",
+      "sha256": "cfdcb1ab8ba12c828897b54aa565ca460f901d3a9b43baf77c5fc938ac30dc65"
+    }
+  ],
+  "builtEnglish": {
+    "pageCount": 11,
+    "combinedPageHtmlSha256": "ff36b267ff7a2c68d9e2520d212696e73b5f5c636d00a47ac2bb3c6a82e68ebe"
+  },
+  "protectedAssessment": {
+    "path": "projects/toza-en-editorial-revision/approved/pa-01-v2-effective.md",
+    "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695"
+  },
+  "approvalManifests": [
+    {
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-manifest.json",
+      "sha256": "8da441c661cb2416d16c38430fa5227c796e276686166c488147149803bfc0e2"
+    },
+    {
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10.json",
+      "sha256": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5"
+    },
+    {
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10-round-02.json",
+      "sha256": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01"
+    },
+    {
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-12-batch-a.json",
+      "sha256": "25119ca0bcaa02e487e0b75d61c14225c2e05d9b4ad3269a25d4a96cc831dca0"
+    },
+    {
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-12-batch-b.json",
+      "sha256": "81652a0b5818791fed1733a2bcbdcc94056e4e7cf10ce8e92c4b13f8fc7dcde9"
+    }
+  ]
+}

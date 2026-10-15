@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "scriptSha256": "d197800e8095534badc7cecc3cf9d07fe1419182da57ba2134513aec31a09c25",
+  "method": "Isolated VM with bounded mocked responses; not live hosted evidence",
+  "checks": [
+    {
+      "name": "Preview exact raw bytes",
+      "status": "PASS",
+      "rejected": false,
+      "requests": [
+        "https://pricing-04-release.toza-site.pages.dev/en/pricing.html"
+      ]
+    },
+    {
+      "name": "Production exact raw bytes",
+      "status": "PASS",
+      "rejected": false,
+      "requests": [
+        "https://toza-site.pages.dev/en/pricing.html"
+      ]
+    },
+    {
+      "name": "Preview sole pinned insertion",
+      "status": "PASS",
+      "rejected": false,
+      "requests": [
+        "https://pricing-04-release.toza-site.pages.dev/en/pricing.html"
+      ]
+    },
+    {
+      "name": "Production sole pinned insertion",
+      "status": "PASS",
+      "rejected": false,
+      "requests": [
+        "https://toza-site.pages.dev/en/pricing.html"
+      ]
+    },
+    {
+      "name": "Production indexing header rejected",
+      "status": "PASS",
+      "rejected": true,
+      "requests": [
+        "https://toza-site.pages.dev/en/pricing.html"
+      ],
+      "error": "en/pricing.html: production indexing headers"
+    },
+    {
+      "name": "Preview missing nofollow rejected",
+      "status": "PASS",
+      "rejected": true,
+      "requests": [
+        "https://pricing-04-release.toza-site.pages.dev/en/pricing.html"
+      ],
+      "error": "en/pricing.html: preview nofollow"
+    },
+    {
+      "name": "Unknown HTML extra rejected",
+      "status": "PASS",
+      "rejected": true,
+      "requests": [
+        "https://toza-site.pages.dev/en/pricing.html"
+      ],
+      "error": "Pinned provider insertion present"
+    },
+    {
+      "name": "Asset mutation rejected raw",
+      "status": "PASS",
+      "rejected": true,
+      "requests": [
+        "https://pricing-04-release.toza-site.pages.dev/assets/a.css"
+      ],
+      "error": "assets/a.css: exact build bytes after only the pinned provider insertion\n+ actual - expected\n\n+ 'd67e2e944994496c8d8ec76eed0cf9f09679448d584b532bebf941852a37f5ed'\n- '47d4d155357071873cd80259787155622cc3e233ba481ee1e2c009f1fc577239'\n"
+    },
+    {
+      "name": "Foreign redirect rejected before contact",
+      "status": "PASS",
+      "rejected": true,
+      "requests": [
+        "https://pricing-04-release.toza-site.pages.dev/en/pricing.html"
+      ],
+      "error": "en/pricing.html: same-origin redirect destination\n+ actual - expected\n\n+ 'https://pricing-04-release.toza-site.pages.dev.evil.example'\n- 'https://pricing-04-release.toza-site.pages.dev'\n"
+    },
+    {
+      "name": "Foreign origin suffix rejected before contact",
+      "status": "PASS",
+      "rejected": true,
+      "requests": [
+        "https://toza-site.pages.dev/en/pricing.html"
+      ],
+      "error": "en/pricing.html: same-origin redirect destination\n+ actual - expected\n\n+ 'https://toza-site.pages.dev.evil.example'\n- 'https://toza-site.pages.dev'\n                              ^\n"
+    },
+    {
+      "name": "Supplied foreign origin rejected before request",
+      "status": "PASS"
+    }
+  ]
+}

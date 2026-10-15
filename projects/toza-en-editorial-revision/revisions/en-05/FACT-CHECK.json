@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-12T14:34:51.228Z",
+  "baselineHead": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "status": "PASS — draft integrity only; not owner approval",
+  "candidateSha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+  "acceptedWhySha256": "5039d061d426ad4d399748725e214013d9bbabedc5ee2a042d97be624ec6e9dd",
+  "words": {
+    "before": 957,
+    "candidate": 976
+  },
+  "changes": [
+    {
+      "unit": 15,
+      "before": "A conversation you thought was private, an account someone once helped you set up, a service your family shares: each can connect to more of your life than you realize. I look at how the relevant devices, identities, accounts and apps work together, and what their access to your data means for you.",
+      "after": "A conversation you thought was private, an account someone once helped you set up, a service your family shares: each can connect to more of your life than you realize. Private information can be used to pressure you, cost you money or damage your reputation. I look at how the relevant devices, identities, accounts and apps work together, and what that access means in your circumstances."
+    },
+    {
+      "unit": 30,
+      "before": "I learn your circumstances and carry out the technical work with you, in person. You do not have to retell a sensitive situation to a succession of people. A working phone can still leave private information accessible through arrangements that no longer suit your life; my work connects that personal context to the changes we make.",
+      "after": "I learn your circumstances and carry out the technical work with you, in person. You do not have to retell a sensitive situation to a succession of people. I use that understanding to judge which access deserves attention first. Before you decide what to approve, I explain what a proposed material change could affect, including account recovery and services you still need."
+    }
+  ],
+  "unchanged": [
+    "Metadata",
+    "All headings",
+    "Founder experience and professional-profile link",
+    "Portrait instructions",
+    "Three client-gain sections and all service terms",
+    "Client control, confidentiality and exclusions",
+    "Contact mechanics",
+    "All public source and acceptance records",
+    "Protected Assessment and locked harness"
+  ],
+  "process": {
+    "acceptedSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+    "stageMapRequiresIndependentTraceabilityReview": true
+  }
+}

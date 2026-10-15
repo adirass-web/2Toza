@@ -1,0 +1,35 @@
+{
+  "name": "toza-site",
+  "version": "1.0.0",
+  "description": "Toza — personal digital security and privacy.",
+  "scripts": {
+    "build": "node scripts/clean-build.cjs",
+    "start": "eleventy --serve",
+    "verify:he-build": "npm run build && node scripts/verify-hebrew-build.mjs",
+    "verify:he-copy": "node scripts/verify-hebrew-copy.mjs",
+    "verify:leaving-alignment": "node scripts/verify-leaving-alignment.mjs",
+    "verify:rtl": "node scripts/verify-rtl.mjs",
+    "verify:he-links": "npm run build && node scripts/verify-hebrew-links.mjs",
+    "verify:ci-contract": "node scripts/verify-ci-contract.mjs",
+    "verify:all": "npm run verify:he-build && npm run verify:he-copy && npm run verify:leaving-alignment && npm run verify:rtl && npm run verify:he-links && npm run verify:ci-contract",
+    "test:rtl-visual": "node scripts/run-rtl-visual.mjs",
+    "sync:copy": "node scripts/accepted-copy.cjs",
+    "audit:tools": "node scripts/audit-build-tools.cjs",
+    "test:audit-policy": "node --test scripts/audit-build-tools.test.cjs",
+    "verify:pages": "node scripts/check-pages-runtime.mjs",
+    "pages:dev": "wrangler pages dev _site --ip 127.0.0.1 --port 8788 --compatibility-date 2026-10-06 --show-interactive-dev-session=false",
+    "pages:deploy": "wrangler pages deploy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@playwright/test": "1.64.0",
+    "dom-serializer": "1.4.1",
+    "domutils": "2.8.0",
+    "htmlparser2": "7.2.0",
+    "markdown-it": "15.0.2",
+    "wrangler": "4.150.0"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

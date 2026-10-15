@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "include": [
+    "/",
+    "/en/leaving-controlling-relationship",
+    "/en/leaving-controlling-relationship/",
+    "/en/leaving-controlling-relationship.html",
+    "/en/leaving-controlling-relationship.html/"
+  ],
+  "exclude": []
+}

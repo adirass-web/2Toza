@@ -1,0 +1,549 @@
+{
+  "status": "PASS",
+  "capturedAt": "2026-10-13T11:00:40.788Z",
+  "fidelity": [
+    {
+      "route": "why-us",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "pricing",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "faq",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "index",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "separation-divorce",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "business-dispute",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "they-know-something",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "inheritance-clash",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "attorneys",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    },
+    {
+      "route": "private-exposure-assessment",
+      "sourceMainOrderMetadataLinksBodyExact": true,
+      "onlyStylesheetVersionChanged": true
+    }
+  ],
+  "widths": [
+    {
+      "route": "index",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 6645.578125,
+      "footerHeight": 569.90625,
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "route": "index",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 5844.15625,
+      "footerHeight": 545.109375,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "index",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 4684.828125,
+      "footerHeight": 413.53125,
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "route": "index",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 3972.875,
+      "footerHeight": 413.53125,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "pricing",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 8590.015625,
+      "footerHeight": 569.90625,
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "route": "pricing",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 7293.78125,
+      "footerHeight": 545.109375,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "pricing",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 5904.59375,
+      "footerHeight": 413.53125,
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "route": "pricing",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 5001.921875,
+      "footerHeight": 413.53125,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "private-exposure-assessment",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 7635.5,
+      "footerHeight": 569.90625,
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "route": "private-exposure-assessment",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 6518.5625,
+      "footerHeight": 545.109375,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "private-exposure-assessment",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 4649.8125,
+      "footerHeight": 413.53125,
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "route": "private-exposure-assessment",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 4628.609375,
+      "footerHeight": 413.53125,
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "captures": [
+    {
+      "route": "index",
+      "device": "desktop",
+      "margin": "160px",
+      "padding": "44px 24px",
+      "gap": 160,
+      "footerTop": 3972.875,
+      "footerHeight": 413.53125,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "index",
+      "device": "mobile",
+      "margin": "96px",
+      "padding": "44px 24px",
+      "gap": 96,
+      "footerTop": 5844.15625,
+      "footerHeight": 545.109375,
+      "width": 390,
+      "scrollWidth": 390
+    }
+  ],
+  "focus": [
+    {
+      "route": "index",
+      "width": 320,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 456.796875,
+      "bottom": 507.1875,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "index",
+      "width": 320,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 517.1875,
+      "bottom": 567.578125,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "index",
+      "width": 390,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 408.375,
+      "bottom": 458.765625,
+      "outline": "solid",
+      "height": 667
+    },
+    {
+      "route": "index",
+      "width": 390,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 468.765625,
+      "bottom": 519.15625,
+      "outline": "solid",
+      "height": 667
+    },
+    {
+      "route": "index",
+      "width": 768,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 189.046875,
+      "bottom": 239.4375,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "index",
+      "width": 768,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 251.4375,
+      "bottom": 301.828125,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 141.484375,
+      "bottom": 191.875,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 141.484375,
+      "bottom": 191.875,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "pricing",
+      "width": 320,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 505.234375,
+      "bottom": 555.625,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "pricing",
+      "width": 320,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 565.625,
+      "bottom": 616.015625,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "pricing",
+      "width": 390,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 433,
+      "bottom": 483.390625,
+      "outline": "solid",
+      "height": 667
+    },
+    {
+      "route": "pricing",
+      "width": 390,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 493.390625,
+      "bottom": 543.78125,
+      "outline": "solid",
+      "height": 667
+    },
+    {
+      "route": "pricing",
+      "width": 768,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 188.78125,
+      "bottom": 239.171875,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "pricing",
+      "width": 768,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 251.171875,
+      "bottom": 301.5625,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "pricing",
+      "width": 1440,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 140.53125,
+      "bottom": 190.921875,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "pricing",
+      "width": 1440,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 140.53125,
+      "bottom": 190.921875,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 320,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 811.71875,
+      "bottom": 862.109375,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 320,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 849.109375,
+      "bottom": 899.5,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 390,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 322.78125,
+      "bottom": 373.171875,
+      "outline": "solid",
+      "height": 667
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 390,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 385.171875,
+      "bottom": 435.5625,
+      "outline": "solid",
+      "height": 667
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 768,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 488.421875,
+      "bottom": 538.8125,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 768,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 488.421875,
+      "bottom": 538.8125,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 1440,
+      "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+      "top": 488.21875,
+      "bottom": 538.609375,
+      "outline": "solid",
+      "height": 900
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 1440,
+      "href": "https://signal.me/#p/+972533366276",
+      "top": 488.21875,
+      "bottom": 538.609375,
+      "outline": "solid",
+      "height": 900
+    }
+  ],
+  "print": [
+    {
+      "route": "index",
+      "width": 320,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 6410.78125,
+      "footerHeight": 569.90625,
+      "scrollWidth": 320
+    },
+    {
+      "route": "index",
+      "width": 390,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 5634.15625,
+      "footerHeight": 545.109375,
+      "scrollWidth": 390
+    },
+    {
+      "route": "index",
+      "width": 768,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 4405.65625,
+      "footerHeight": 413.53125,
+      "scrollWidth": 768
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 3776.90625,
+      "footerHeight": 413.53125,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "pricing",
+      "width": 320,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 8322.671875,
+      "footerHeight": 569.90625,
+      "scrollWidth": 320
+    },
+    {
+      "route": "pricing",
+      "width": 390,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 7083.78125,
+      "footerHeight": 545.109375,
+      "scrollWidth": 390
+    },
+    {
+      "route": "pricing",
+      "width": 768,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 5674.578125,
+      "footerHeight": 413.53125,
+      "scrollWidth": 768
+    },
+    {
+      "route": "pricing",
+      "width": 1440,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 4829.953125,
+      "footerHeight": 413.53125,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 320,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 7539.5,
+      "footerHeight": 569.90625,
+      "scrollWidth": 320
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 390,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 6422.5625,
+      "footerHeight": 545.109375,
+      "scrollWidth": 390
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 768,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 4489.8125,
+      "footerHeight": 413.53125,
+      "scrollWidth": 768
+    },
+    {
+      "route": "private-exposure-assessment",
+      "width": 1440,
+      "margin": "0px",
+      "padding": "44px 24px",
+      "gap": 0,
+      "footerTop": 4468.609375,
+      "footerHeight": 413.53125,
+      "scrollWidth": 1440
+    }
+  ],
+  "errors": [],
+  "completedAt": "2026-10-13T11:00:56.330Z"
+}

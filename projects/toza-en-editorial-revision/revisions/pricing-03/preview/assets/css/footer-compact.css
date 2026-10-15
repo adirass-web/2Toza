@@ -1,0 +1,21 @@
+/* Owner-requested compact footer; words and destinations stay intact. */
+.site-footer { margin-block-start: 16px; padding-block: 6px 10px; }
+.foot-bar-inner { grid-template-columns: 1.4fr 1.8fr 1fr; align-items: start; gap: 24px; }
+.foot-brand { display: flex; align-items: center; gap: 16px; }
+.foot-brand .brand-logo { inline-size: 90px; flex-shrink: 0; margin: 0; }
+.fb-tag { font-size: 14px; line-height: 1.4; max-inline-size: 300px; }
+.foot-col { flex-direction: row; flex-wrap: wrap; gap: 0 18px; }
+.foot-col h3 { flex-basis: 100%; margin-block-end: 4px; }
+.foot-col a { padding-block: 5px; line-height: 1.4; }
+.foot-meta { margin-block-start: 8px; padding-block-start: 4px; }
+@media (max-width: 640px) {
+  .site-footer { margin-block-start: 24px; }
+  .foot-bar-inner { grid-template-columns: 1fr; gap: 12px; }
+  .foot-brand { grid-column: auto; display: flex; align-items: center; gap: 16px; }
+  .foot-brand .brand-logo { flex-shrink: 0; margin: 0; }
+  .foot-col { gap: 0 20px; }
+  .foot-col a { min-block-size: 44px; display: inline-flex; align-items: center; }
+}
+@media print {
+  .site-footer { margin-block-start: 0; }
+}

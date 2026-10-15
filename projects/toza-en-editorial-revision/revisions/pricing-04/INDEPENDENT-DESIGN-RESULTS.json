@@ -1,0 +1,404 @@
+{
+  "status": "READY FOR OWNER REVIEW",
+  "method": "Independent Markdown/block/cell/ordered-link comparison and browser states; no customer/conversion evidence",
+  "manifest": {
+    "status": "review-only",
+    "pricingSha256": "7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25",
+    "visualCopySha256": "b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d",
+    "htmlSha256": "5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f",
+    "cssSha256": "a33e565682c3e63ba1053ff5e1146d143da9b49a087190f81c89e861e7bedf10",
+    "scriptSha256": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab",
+    "sharedBuildSha256": "892a885df7fbe162dbf31d401fca043ff993cabb8e1ba80ce6ccfc184fad7595",
+    "metadata": {
+      "Route": "/en/pricing.html",
+      "Title": "Personal Shield and Pricing | Toza",
+      "Description": "Personal Shield \u20aa14,000 for one person. Inner Circle Shield from \u20aa42,000 for four. Compare devices, security keys and work time. Assessment \u20aa3,600. VAT included.",
+      "Social description": "See what Toza will assess, harden and teach: your personal threat model, device and account changes, supplied security keys and practical OpSec training."
+    }
+  },
+  "noJavaScriptNativeDetails": true,
+  "cases": [
+    {
+      "width": 1440,
+      "sourceBlocks": 93,
+      "sourceLinks": 8,
+      "sourceOrderAndRowsExact": true,
+      "keyboardAndDeepLink": true,
+      "printAndRestore": true,
+      "allOpenReferencesNoOverflow": true,
+      "overflow": 0,
+      "rows": 7,
+      "cells": [
+        {
+          "width": 420,
+          "font": 31
+        },
+        {
+          "width": 420,
+          "font": 31
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 17
+        },
+        {
+          "width": 420,
+          "font": 23
+        },
+        {
+          "width": 420,
+          "font": 23
+        }
+      ],
+      "rowHeaderScope": true,
+      "columnHeaderScope": true,
+      "headersResolve": true,
+      "counts": {
+        "people": [
+          1,
+          4
+        ],
+        "devices": [
+          2,
+          8
+        ],
+        "keys": [
+          2,
+          8
+        ]
+      },
+      "allSvgDecorative": true,
+      "creditNotes": [
+        {
+          "text": "Start with a separate \u20aa3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+          "visible": true,
+          "beforeTable": true
+        },
+        {
+          "text": "Start with a separate \u20aa3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+          "visible": true,
+          "beforeTable": false
+        }
+      ],
+      "summaryVisible": true,
+      "firstAidVisible": true,
+      "initialClientScopeVisible": true,
+      "illustrationCaptionVisible": true,
+      "decisionBeforeImplementation": true,
+      "practiceLabels": [
+        "Sign in",
+        "Recover access",
+        "Share information",
+        "Grant permissions"
+      ],
+      "aftercareInsideFullWork": true,
+      "aftercareText": "14 days of limited adjustment supportFor issues directly related to Toza's changes. Inner Circle's period starts at group completion.",
+      "contactHeights": [
+        50.390625,
+        50.390625
+      ],
+      "mainHeight": 5101.109375,
+      "documentHeight": 5332,
+      "tableHeight": 755.34375,
+      "fullMainWords": 1650,
+      "visibleMainWords": 864
+    },
+    {
+      "width": 390,
+      "sourceBlocks": 93,
+      "sourceLinks": 8,
+      "sourceOrderAndRowsExact": true,
+      "keyboardAndDeepLink": true,
+      "printAndRestore": true,
+      "allOpenReferencesNoOverflow": true,
+      "overflow": 0,
+      "rows": 7,
+      "cells": [
+        {
+          "width": 179,
+          "font": 25
+        },
+        {
+          "width": 179,
+          "font": 25
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 16
+        },
+        {
+          "width": 179,
+          "font": 22
+        },
+        {
+          "width": 179,
+          "font": 22
+        }
+      ],
+      "rowHeaderScope": true,
+      "columnHeaderScope": true,
+      "headersResolve": true,
+      "counts": {
+        "people": [
+          1,
+          4
+        ],
+        "devices": [
+          2,
+          8
+        ],
+        "keys": [
+          2,
+          8
+        ]
+      },
+      "allSvgDecorative": true,
+      "creditNotes": [
+        {
+          "text": "Start with a separate \u20aa3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+          "visible": true,
+          "beforeTable": true
+        },
+        {
+          "text": "Start with a separate \u20aa3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+          "visible": true,
+          "beforeTable": false
+        }
+      ],
+      "summaryVisible": true,
+      "firstAidVisible": true,
+      "initialClientScopeVisible": true,
+      "illustrationCaptionVisible": true,
+      "decisionBeforeImplementation": true,
+      "practiceLabels": [
+        "Sign in",
+        "Recover access",
+        "Share information",
+        "Grant permissions"
+      ],
+      "aftercareInsideFullWork": true,
+      "aftercareText": "14 days of limited adjustment supportFor issues directly related to Toza's changes. Inner Circle's period starts at group completion.",
+      "contactHeights": [
+        50.390625,
+        50.390625
+      ],
+      "mainHeight": 7795.28125,
+      "documentHeight": 8213,
+      "tableHeight": 1255.78125,
+      "fullMainWords": 1650,
+      "visibleMainWords": 864,
+      "mobileStickyVerified": true
+    },
+    {
+      "width": 320,
+      "sourceBlocks": 93,
+      "sourceLinks": 8,
+      "sourceOrderAndRowsExact": true,
+      "keyboardAndDeepLink": true,
+      "printAndRestore": true,
+      "allOpenReferencesNoOverflow": true,
+      "overflow": 0,
+      "rows": 7,
+      "cells": [
+        {
+          "width": 144,
+          "font": 25
+        },
+        {
+          "width": 144,
+          "font": 25
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 16
+        },
+        {
+          "width": 144,
+          "font": 22
+        },
+        {
+          "width": 144,
+          "font": 22
+        }
+      ],
+      "rowHeaderScope": true,
+      "columnHeaderScope": true,
+      "headersResolve": true,
+      "counts": {
+        "people": [
+          1,
+          4
+        ],
+        "devices": [
+          2,
+          8
+        ],
+        "keys": [
+          2,
+          8
+        ]
+      },
+      "allSvgDecorative": true,
+      "creditNotes": [
+        {
+          "text": "Start with a separate \u20aa3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+          "visible": true,
+          "beforeTable": true
+        },
+        {
+          "text": "Start with a separate \u20aa3,600 Private Exposure Assessment for the initial client. Its fee counts toward the selected full engagement only if that engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once per group engagement.",
+          "visible": true,
+          "beforeTable": false
+        }
+      ],
+      "summaryVisible": true,
+      "firstAidVisible": true,
+      "initialClientScopeVisible": true,
+      "illustrationCaptionVisible": true,
+      "decisionBeforeImplementation": true,
+      "practiceLabels": [
+        "Sign in",
+        "Recover access",
+        "Share information",
+        "Grant permissions"
+      ],
+      "aftercareInsideFullWork": true,
+      "aftercareText": "14 days of limited adjustment supportFor issues directly related to Toza's changes. Inner Circle's period starts at group completion.",
+      "contactHeights": [
+        50.390625,
+        50.390625
+      ],
+      "mainHeight": 8907.71875,
+      "documentHeight": 9345,
+      "tableHeight": 1446.109375,
+      "fullMainWords": 1650,
+      "visibleMainWords": 864,
+      "mobileStickyVerified": true
+    }
+  ],
+  "requiredFindingsRemaining": 0,
+  "resolvedRequiredFindings": [
+    "Full exact Assessment device allowance and remaining-group mapping paragraph visible for direct paid-stage entry",
+    "Exact credit condition repeated near the bottom remaining-payment row"
+  ],
+  "optionalRefinementAdopted": "Compact grouped objects, integrated method/summary and four practical activities replace repeated feature catalogues",
+  "finalAdditionalChecks": {
+    "metadataAndCanonicalContactFooterAttributes": "unchanged from independently checked compact snapshot; final delta only scope visibility and redundant-caption removal",
+    "cssScopedSelectors": 253,
+    "sharedIdentityFooterAssets": "unchanged exact copies",
+    "disclosures": 8
+  },
+  "limitations": [
+    "Expert and Chromium checks, not customer comprehension or conversion results",
+    "No manual screen-reader or multi-browser audit",
+    "Single-page prototype preserves canonical supporting paths but does not serve their page responses"
+  ]
+}

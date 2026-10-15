@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title-signal">
+  <title id="title-signal">Signal</title>
+  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l4.93-1.37A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a7.95 7.95 0 0 1-4.07-1.12l-.29-.17-2.95.82.82-2.95-.17-.29A7.95 7.95 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
+  <circle fill="currentColor" cx="8.5" cy="12" r="1.25"/>
+  <circle fill="currentColor" cx="12" cy="12" r="1.25"/>
+  <circle fill="currentColor" cx="15.5" cy="12" r="1.25"/>
+</svg>

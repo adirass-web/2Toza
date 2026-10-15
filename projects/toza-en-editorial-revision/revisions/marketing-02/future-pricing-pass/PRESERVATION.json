@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "unchangedCurrentFiles": [
+    "index.md",
+    "why-us.md",
+    "pricing.md",
+    "OWNER-REVIEW.md"
+  ],
+  "publicChanges": 0,
+  "scope": "Separate future comparisons and pointed-to discussion only"
+}

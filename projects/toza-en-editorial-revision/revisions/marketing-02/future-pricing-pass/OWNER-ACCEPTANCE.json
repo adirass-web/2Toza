@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "timezone": "Asia/Jerusalem",
+  "authority": "Current-chat explicit owner approval",
+  "status": "accepted-exact-pricing-copy",
+  "candidate": "PRICING-TARGETED-CANDIDATE.md",
+  "candidateSha256": "e416b43f5936aaf448dca0966a2bbbec337ffb491f2d46179dfb2cd4c1e74a8e",
+  "typicalPersonalShieldHours": [7, 14],
+  "assessmentAdditional": true,
+  "futureMainComparison": "B — purchase-decision version in DISCUSSION.md",
+  "futureComparisonApplied": false,
+  "hardeningExpansionApplied": false,
+  "otherPageApprovalInferred": false,
+  "publicationAuthorizedByThisMessage": false,
+  "verifiedMainSha": "81a11a12c49eefd124c54bd2da227e0f815b083b",
+  "localDecision": "D-049; reconcile numbering before canonical integration"
+}

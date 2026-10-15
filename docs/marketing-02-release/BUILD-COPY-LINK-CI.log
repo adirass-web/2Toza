@@ -1,0 +1,70 @@
+
+> toza-site@1.0.0 verify:all
+> npm run verify:he-build && npm run verify:he-copy && npm run verify:leaving-alignment && npm run verify:rtl && npm run verify:he-links && npm run verify:ci-contract
+
+
+> toza-site@1.0.0 verify:he-build
+> npm run build && node scripts/verify-hebrew-build.mjs
+
+
+> toza-site@1.0.0 build
+> node scripts/clean-build.cjs
+
+[11ty] Writing ./_site/en/attorneys.html from ./src/en/attorneys.njk
+[11ty] Writing ./_site/en/business-dispute.html from ./src/en/business-dispute.njk
+[11ty] Writing ./_site/en/faq.html from ./src/en/faq.njk
+[11ty] Writing ./_site/en/index.html from ./src/en/index.njk
+[11ty] Writing ./_site/en/inheritance-clash.html from ./src/en/inheritance-clash.njk
+[11ty] Writing ./_site/en/pricing.html from ./src/en/pricing.njk
+[11ty] Writing ./_site/en/private-exposure-assessment.html from ./src/en/private-exposure-assessment.njk
+[11ty] Writing ./_site/en/separation-divorce.html from ./src/en/separation-divorce.njk
+[11ty] Writing ./_site/en/they-know-something.html from ./src/en/they-know-something.njk
+[11ty] Writing ./_site/en/what-happens-during-the-visit.html from ./src/en/what-happens-during-the-visit.njk
+[11ty] Writing ./_site/en/why-us.html from ./src/en/why-us.njk
+[11ty] Copied 68 Wrote 11 files in 0.17 seconds (v3.1.6)
+ACCEPTED SOURCES AND TEMPLATE FIDELITY VERIFIED
+ENGLISH PUBLICATION AND ACCEPTED SOURCE CONTRACT VERIFIED
+PRESENTATION VERIFIED: 11 exact-copy pages; table associations; protected PA order; shared identity
+COPY AMENDMENT VERIFIED: four EN-04 pages; exactly two Why and four Batch B paragraph changes; exactly two approved Batch C links; original protected Assessment; historical and unchanged Process stage-map hashes; metadata/tables/terms/link order/facts preserved
+MARKETING-02 VERIFIED: three frozen payloads, exact block/link order, five complete tables; 75 prior public files unchanged, including eight supporting pages and protected Assessment.
+
+> toza-site@1.0.0 verify:he-copy
+> node scripts/verify-hebrew-copy.mjs
+
+HE MIRROR COPY VERIFIED
+
+> toza-site@1.0.0 verify:leaving-alignment
+> node scripts/verify-leaving-alignment.mjs
+
+RETIREMENT RESPONSE VERIFIED; EDGE ROUTING REQUIRES RUNTIME GATE
+
+> toza-site@1.0.0 verify:rtl
+> node scripts/verify-rtl.mjs
+
+RTL CONTRACT VERIFIED
+
+> toza-site@1.0.0 verify:he-links
+> npm run build && node scripts/verify-hebrew-links.mjs
+
+
+> toza-site@1.0.0 build
+> node scripts/clean-build.cjs
+
+[11ty] Writing ./_site/en/attorneys.html from ./src/en/attorneys.njk
+[11ty] Writing ./_site/en/business-dispute.html from ./src/en/business-dispute.njk
+[11ty] Writing ./_site/en/faq.html from ./src/en/faq.njk
+[11ty] Writing ./_site/en/index.html from ./src/en/index.njk
+[11ty] Writing ./_site/en/inheritance-clash.html from ./src/en/inheritance-clash.njk
+[11ty] Writing ./_site/en/pricing.html from ./src/en/pricing.njk
+[11ty] Writing ./_site/en/private-exposure-assessment.html from ./src/en/private-exposure-assessment.njk
+[11ty] Writing ./_site/en/separation-divorce.html from ./src/en/separation-divorce.njk
+[11ty] Writing ./_site/en/they-know-something.html from ./src/en/they-know-something.njk
+[11ty] Writing ./_site/en/what-happens-during-the-visit.html from ./src/en/what-happens-during-the-visit.njk
+[11ty] Writing ./_site/en/why-us.html from ./src/en/why-us.njk
+[11ty] Copied 68 Wrote 11 files in 0.16 seconds (v3.1.6)
+PUBLIC LINKS, ANCHORS AND LANGUAGE DISCOVERY VERIFIED
+
+> toza-site@1.0.0 verify:ci-contract
+> node scripts/verify-ci-contract.mjs
+
+CI CONTRACT VERIFIED

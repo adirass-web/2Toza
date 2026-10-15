@@ -1,0 +1,665 @@
+{
+  "purpose": "Mechanical EN-06 candidate-support inventory only; not new acceptance, strategy judgment, or authorization.",
+  "capturedAt": "2026-10-12",
+  "baselineHead": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "expectedBaselineHead": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "sourceResolution": {
+    "loader": "scripts/accepted-copy.cjs",
+    "api": [
+      "pages()",
+      "assertAuthority()",
+      "exact()"
+    ],
+    "assertAuthority": "PASS",
+    "normalization": "accepted-copy.cjs exact blocks are LF-normalized, block-end trailing whitespace trimmed, with exactly one final LF; no other normalization.",
+    "effectiveAuthority": {
+      "businessDispute": "revisions/en-02-v2/08-business-founder-dispute.md",
+      "inheritanceConflict": "revisions/en-02-v2/10-inheritance-conflict.md",
+      "attorneys": "revisions/en-02-v2/11-for-attorneys.md",
+      "whyUs": "approved EN-05/Batch A effective overlay, verified through accepted-copy.cjs",
+      "whatHappens": "revisions/en-02-v2/04-what-happens.md",
+      "pricing": "revisions/en-04/02-pricing.md via 2026-10-10 round-02 amendment",
+      "protectedAssessment": "approved/pa-01-v2-effective.md"
+    }
+  },
+  "integrity": {
+    "headMatchesExpected": true,
+    "acceptedHashesMatchManifests": true,
+    "pages": [
+      {
+        "route": "why-us",
+        "sourceName": "01-why-toza",
+        "sha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+        "match": true
+      },
+      {
+        "route": "pricing",
+        "sourceName": "02-pricing",
+        "sha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+        "match": true
+      },
+      {
+        "route": "faq",
+        "sourceName": "03-faq",
+        "sha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f",
+        "match": true
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "sourceName": "04-what-happens",
+        "sha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+        "match": true
+      },
+      {
+        "route": "index",
+        "sourceName": "06-home",
+        "sha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+        "match": true
+      },
+      {
+        "route": "separation-divorce",
+        "sourceName": "07-separation-divorce",
+        "sha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+        "match": true
+      },
+      {
+        "route": "business-dispute",
+        "sourceName": "08-business-founder-dispute",
+        "sha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350",
+        "match": true
+      },
+      {
+        "route": "they-know-something",
+        "sourceName": "09-they-know-something",
+        "sha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+        "match": true
+      },
+      {
+        "route": "inheritance-clash",
+        "sourceName": "10-inheritance-conflict",
+        "sha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f",
+        "match": true
+      },
+      {
+        "route": "attorneys",
+        "sourceName": "11-for-attorneys",
+        "sha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21",
+        "match": true
+      },
+      {
+        "route": "private-exposure-assessment",
+        "sourceName": null,
+        "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+        "match": true
+      }
+    ],
+    "protectedSourcePathsAndHashes": [
+      {
+        "path": "source/TOZA_EN_COPY_REVIEW.md",
+        "sha256Lf": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc"
+      },
+      {
+        "path": "revisions/en-02-v2/04-what-happens.md",
+        "sha256Lf": "38cc8545ead297a4bbca46f8235ae1669047b4884035d01e90f8fa896170d044"
+      },
+      {
+        "path": "revisions/en-04/02-pricing.md",
+        "sha256Lf": "09e09bcb8564448fba57825071731712516c89f1119676fd3fd2d4b64e38602b"
+      },
+      {
+        "path": "approved/pa-01-v2-effective.md",
+        "sha256Lf": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695"
+      },
+      {
+        "path": "revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+        "sha256Lf": "08a813ea62c3bb00976159261412043e749a930038931ebd7203bd1419848b4b"
+      },
+      {
+        "path": "approved/acceptance-manifest.json",
+        "sha256Lf": "f4398102602975d0d54ac2c4311bc015954ed5d69e98a90314ec9ca2d3126577"
+      },
+      {
+        "path": "approved/acceptance-amendment-2026-10-10.json",
+        "sha256Lf": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5"
+      },
+      {
+        "path": "approved/acceptance-amendment-2026-10-10-round-02.json",
+        "sha256Lf": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01"
+      },
+      {
+        "path": "approved/acceptance-amendment-2026-10-12-batch-a.json",
+        "sha256Lf": "25119ca0bcaa02e487e0b75d61c14225c2e05d9b4ad3269a25d4a96cc831dca0"
+      },
+      {
+        "path": "revisions/en-02-v2/08-business-founder-dispute.md",
+        "sha256Lf": "703dfd52fed348649d790f12a484f6d0cbe6ec845eae43787440151181cbcab3"
+      },
+      {
+        "path": "revisions/en-02-v2/10-inheritance-conflict.md",
+        "sha256Lf": "7d333a77c6f141e7039b2048b5f6dc46c46b4ab20ea0a91ab47c1452a0d5aab2"
+      },
+      {
+        "path": "revisions/en-02-v2/11-for-attorneys.md",
+        "sha256Lf": "1df715d9f2cc631634699b27559f81bb2595fe0828da8d0e998c29533eacdb6d"
+      }
+    ],
+    "preExistingWorktreeStatus": [
+      "?? projects/toza-en-editorial-revision/revisions/en-06/"
+    ]
+  },
+  "affectedPages": [
+    {
+      "route": "business-dispute",
+      "sourceName": "08-business-founder-dispute",
+      "authority": "revisions/en-02-v2/08-business-founder-dispute.md",
+      "sha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350",
+      "metadata": {
+        "title": "Digital Exposure in Business or Founder Disputes | Toza",
+        "description": "Understand where your personal identities, devices and data connect to business access. In-person work, approved urgent fixes and clearly scoped hardening.",
+        "og_description": "A personal email, shared folder or recovery contact may still matter after business interests diverge. Review your own access before making consequential changes."
+      },
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Initial visit details",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ],
+      "numericInventory": [
+        {
+          "line": 43,
+          "text": "**₪3,600 including VAT**"
+        }
+      ],
+      "headings": [
+        {
+          "line": 1,
+          "text": "## Metadata"
+        },
+        {
+          "line": 11,
+          "text": "## Hero"
+        },
+        {
+          "line": 15,
+          "text": "# When business interests diverge, ordinary access can become commercial leverage."
+        },
+        {
+          "line": 25,
+          "text": "## See where personal and business access still meet"
+        },
+        {
+          "line": 33,
+          "text": "## Understand what a change will affect before you approve it"
+        },
+        {
+          "line": 39,
+          "text": "## Put the technical questions in experienced hands"
+        },
+        {
+          "line": 53,
+          "text": "## Personal work, with clear authority"
+        },
+        {
+          "line": 63,
+          "text": "## Talk through the next step privately. {#contact}"
+        }
+      ],
+      "commercialOperationalBoundarySections": [
+        {
+          "heading": "## See where personal and business access still meet",
+          "text": "## See where personal and business access still meet\n\nA personal identity may control business access while a work service exposes private information. Looking at either account alone can miss the relationship between them.\n\nDr. Tabansky examines the relevant connections across your devices, identities and services, including what they permit and what depends on them. The work gives you a basis for separating access deliberately while accounting for services you still need. It stays within your lawful authority and agreed scope.\n\nA connection does not establish that a partner, competitor or adviser has used access improperly."
+        },
+        {
+          "heading": "## Understand what a change will affect before you approve it",
+          "text": "## Understand what a change will affect before you approve it\n\nA password change can leave a recovery address or shared session unchanged. Removing an account can interrupt services you still use.\n\nWe trace the relevant identities, permissions and recovery routes, explain what they allow, and agree the sequence with you. You gain a clearer basis for changing access without having to work out those dependencies alone. Work beyond the agreed scope or price requires fresh agreement."
+        },
+        {
+          "heading": "## Personal work, with clear authority",
+          "text": "## Personal work, with clear authority\n\nShared business accounts are reviewed only where lawful access and agreed authority permit. A dispute does not itself authorize changes to company systems or another person's accounts.\n\nToza is not a corporate security audit, security-operations service or counter-espionage engagement. We do not investigate the other side, reconstruct events forensically, collect legal evidence or give legal opinions. We do not promise to find or close every possible access path.\n\nYou remain present, approve material changes and control your credentials. Toza does not keep them for ongoing use, remotely control your devices, monitor them or install security software on them.\n\nYour attorney or adviser can be involved with your permission. An authorized summary explains the work; it is not a forensic report or evidence document. [Privacy and service boundaries](/en/faq.html) · [Information for attorneys](/en/attorneys.html)"
+        }
+      ],
+      "exactBaselinePath": "revisions/en-06/exact-baseline/08-business-founder-dispute.md"
+    },
+    {
+      "route": "inheritance-clash",
+      "sourceName": "10-inheritance-conflict",
+      "authority": "revisions/en-02-v2/10-inheritance-conflict.md",
+      "sha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f",
+      "metadata": {
+        "title": "Digital Exposure During Inheritance Conflict | Toza",
+        "description": "Understand family access and recovery arrangements connected to your own accounts before changing them. In-person work. Initial visit ₪3,600 including VAT.",
+        "og_description": "Family help can leave lasting digital connections. Review the access you are authorized to manage and understand which changes fit your circumstances."
+      },
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ],
+      "numericInventory": [
+        {
+          "line": 7,
+          "text": "Description: Understand family access and recovery arrangements connected to your own accounts before changing them. In-person work. Initial visit ₪3,600 including VAT."
+        },
+        {
+          "line": 43,
+          "text": "**₪3,600 including VAT**"
+        }
+      ],
+      "headings": [
+        {
+          "line": 1,
+          "text": "## Metadata"
+        },
+        {
+          "line": 11,
+          "text": "## Hero"
+        },
+        {
+          "line": 15,
+          "text": "# Family access is still access when trust breaks."
+        },
+        {
+          "line": 25,
+          "text": "## Access shared in good faith can still matter"
+        },
+        {
+          "line": 33,
+          "text": "## Understand the connections before changing them"
+        },
+        {
+          "line": 39,
+          "text": "## Work through your own access with expert help"
+        },
+        {
+          "line": 51,
+          "text": "## Make deliberate choices about future access"
+        },
+        {
+          "line": 57,
+          "text": "## Your information and your attorney"
+        },
+        {
+          "line": 67,
+          "text": "## Start with a private conversation about what you need. {#contact}"
+        }
+      ],
+      "commercialOperationalBoundarySections": [
+        {
+          "heading": "## Access shared in good faith can still matter",
+          "text": "## Access shared in good faith can still matter\n\nHelp with an account or a shared family service can connect several parts of your digital life. The effects may extend beyond the arrangement you remember making.\n\nDr. Tabansky examines the relevant connections within your authorized environment and agreed scope, including access to private data and the arrangements you depend on to manage your accounts. You gain an explanation of what remains connected and what separating it would mean.\n\nRemaining access does not establish that a relative has used it or acted improperly."
+        },
+        {
+          "heading": "## Work through your own access with expert help",
+          "text": "## Work through your own access with expert help\n\n**Private Exposure Assessment · Typically four hours**\n\n**₪3,600 including VAT**\n\nThe paid visit includes inspection of relevant access on one main phone and one PC, iPad or second phone, including digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.\n\nYou receive a practical summary of what was reviewed, found and changed, what remains and the next steps, even if you buy nothing further. We review only what is disclosed, observable or otherwise lawfully accessible within your authorized environment and agreed scope. Additional work or price requires your agreement first.\n\n[What the initial visit includes](/en/private-exposure-assessment.html)"
+        },
+        {
+          "heading": "## Make deliberate choices about future access",
+          "text": "## Make deliberate choices about future access\n\nPersonal Shield hardens the agreed settings and access arrangements to reflect your current circumstances. It includes personal teaching and verification. You learn practical habits for granting access, sharing information and recovering accounts in the resulting setup. The scope and price are agreed separately; additional people or a different environment require their own agreed scope.\n\n[Full services, prices and credit conditions](/en/pricing.html) · [How Toza helps](/en/what-happens-during-the-visit.html)"
+        },
+        {
+          "heading": "## Your information and your attorney",
+          "text": "## Your information and your attorney\n\nYou remain present, approve material changes and control your credentials. Toza does not keep them for ongoing use, remotely control your devices, monitor them or install security software on them.\n\nA family connection does not authorize work on someone else's account or device. Toza does not determine who is entitled to an account, document or asset. We do not investigate relatives, reconstruct past events forensically, collect evidence or give legal advice.\n\nWith your authorization, an attorney-friendly summary can describe the work and remaining issues. A referral does not automatically give counsel access to findings or personal information. The summary is not a forensic report or evidence document, and the work does not guarantee that every exposure is found or removed.\n\n[Privacy and service boundaries](/en/faq.html) · [Information for attorneys](/en/attorneys.html)"
+        }
+      ],
+      "exactBaselinePath": "revisions/en-06/exact-baseline/10-inheritance-conflict.md"
+    },
+    {
+      "route": "attorneys",
+      "sourceName": "11-for-attorneys",
+      "authority": "revisions/en-02-v2/11-for-attorneys.md",
+      "sha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21",
+      "metadata": {
+        "title": "Digital Security and Privacy for Your Clients | Toza",
+        "description": "Refer clients for an in-person review of authorized digital access, approved urgent first aid and a practical summary. Broader hardening is agreed separately.",
+        "og_description": "Help your client understand current digital exposure and make informed changes. Direct work with Dr. Lior Tabansky, with client control over access and disclosure."
+      },
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        }
+      ],
+      "numericInventory": [
+        {
+          "line": 43,
+          "text": "**₪3,600 including VAT**"
+        }
+      ],
+      "headings": [
+        {
+          "line": 1,
+          "text": "## Metadata"
+        },
+        {
+          "line": 11,
+          "text": "## Hero"
+        },
+        {
+          "line": 15,
+          "text": "# When your client's digital life may become leverage."
+        },
+        {
+          "line": 23,
+          "text": "## When a referral may help"
+        },
+        {
+          "line": 33,
+          "text": "## Work starts with the client's authority"
+        },
+        {
+          "line": 39,
+          "text": "## Hands-on inspection, diagnosis and urgent first aid"
+        },
+        {
+          "line": 51,
+          "text": "## A setup fitted to the client's circumstances"
+        },
+        {
+          "line": 59,
+          "text": "## Coordinate consequential changes"
+        },
+        {
+          "line": 63,
+          "text": "## A practical summary, with clear limits"
+        },
+        {
+          "line": 71,
+          "text": "## Discuss whether Toza fits your client's situation. {#contact}"
+        }
+      ],
+      "commercialOperationalBoundarySections": [
+        {
+          "heading": "## When a referral may help",
+          "text": "## When a referral may help\n\n- Someone appears to know private information the client did not knowingly share.\n- The client is unsure which devices, recovery routes or shared services still connect them to a former partner, colleague or relative.\n- Password changes have not clarified who can regain access or see shared information.\n- Personal accounts or devices overlap with a business or family dispute.\n- The client needs to understand the consequences of changes before authorizing them.\n\nThese concerns can justify a review. They do not establish unauthorized access or wrongdoing."
+        },
+        {
+          "heading": "## Work starts with the client's authority",
+          "text": "## Work starts with the client's authority\n\nA referral does not authorize access to devices, accounts or findings. The client must authorize the work and have lawful authority over the environment being reviewed. They remain present, control their credentials and approve material changes.\n\nToza does not keep credentials for ongoing use, remotely control or monitor devices, or install security software on them. Coordination with counsel requires the client's permission; the referring attorney is not automatically a recipient of personal information or findings."
+        },
+        {
+          "heading": "## Hands-on inspection, diagnosis and urgent first aid",
+          "text": "## Hands-on inspection, diagnosis and urgent first aid\n\n**Private Exposure Assessment · Typically four hours**\n\n**₪3,600 including VAT**\n\nDr. Tabansky inspects the relevant access with the client on one main phone and one PC, iPad or second phone, including digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.\n\nThe client receives a practical summary of what was reviewed, found and changed, what remains and the next steps, even if they buy nothing further. Review is limited to what is disclosed, observable or otherwise lawfully accessible within the authorized environment and agreed scope. Additional work or price requires agreement first.\n\n[What the initial visit includes](/en/private-exposure-assessment.html)"
+        },
+        {
+          "heading": "## Coordinate consequential changes",
+          "text": "## Coordinate consequential changes\n\nChanging recovery details, ending shared access or separating services can interrupt access or create notifications. Toza explains the relevant effects before material changes are approved. With the client's permission, timing can be coordinated with counsel. Legal strategy remains with the attorney; the client authorizes technical changes."
+        },
+        {
+          "heading": "## A practical summary, with clear limits",
+          "text": "## A practical summary, with clear limits\n\nWith the client's explicit authorization, an attorney-friendly summary can describe the work and remaining issues. The client decides what may be disclosed. A summary or dated record does not establish what another person did.\n\nToza does not investigate other people, reconstruct events forensically, preserve a chain of custody, prepare court evidence or provide legal conclusions. The work and its records are not a forensic report or evidence document and do not guarantee that every exposure is found or removed.\n\n[Privacy and service boundaries](/en/faq.html)"
+        }
+      ],
+      "exactBaselinePath": "revisions/en-06/exact-baseline/11-for-attorneys.md"
+    }
+  ],
+  "currentServiceFactNumericInventory": {
+    "sources": [
+      "effective Pricing exact block (EN-04 round 02)",
+      "protected PA-01-v2 effective exact block"
+    ],
+    "pages": [
+      {
+        "route": "pricing",
+        "authority": "revisions/en-04/02-pricing.md",
+        "sha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+        "numericInventory": [
+          {
+            "line": 7,
+            "text": "Description: Personal digital security and privacy with Dr. Tabansky, in person. Assessment ₪3,600. Personal Shield ₪14,000. Inner Circle Shield from ₪42,000. VAT included."
+          },
+          {
+            "line": 37,
+            "text": "**₪3,600 including VAT**"
+          },
+          {
+            "line": 61,
+            "text": "| Price, including VAT | **₪14,000** | **From ₪42,000** |"
+          },
+          {
+            "line": 69,
+            "text": "| In-person work | One primary working day; a second included if needed | Typically 2–4 working days |"
+          },
+          {
+            "line": 71,
+            "text": "| Adjustment support | 14 days for issues directly related to Toza's changes | 14 days for all four people and the included network, starting when the group engagement is complete, for issues directly related to Toza's changes |"
+          },
+          {
+            "line": 83,
+            "text": "Four people receive coordinated hardening under one agreed engagement, with the same standard of device and account hardening, essential migration, training and verification as Personal Shield for each person. The initial ₪3,600 visit covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased Inner Circle engagement."
+          },
+          {
+            "line": 100,
+            "text": "Both are available after a completed full service, not after the initial visit alone. They are separate from the 14-day adjustment support included with Personal Shield and Inner Circle Shield."
+          },
+          {
+            "line": 104,
+            "text": "The full **₪3,600** is credited toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement **begins within 14 days of completion of the initial service**. Booking alone does not qualify."
+          },
+          {
+            "line": 108,
+            "text": "| Personal Shield | ₪14,000 | ₪10,400 |"
+          },
+          {
+            "line": 109,
+            "text": "| Inner Circle Shield at its starting scope | ₪42,000 | ₪38,400 |"
+          },
+          {
+            "line": 111,
+            "text": "The credit applies once to the group engagement. Agreed additions are separate. For Bespoke, deduct ₪3,600 from the agreed total when the same conditions are met."
+          },
+          {
+            "line": 119,
+            "text": "| Ordinary urgent visit | ₪4,800 | ₪8,400 |"
+          },
+          {
+            "line": 120,
+            "text": "| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |"
+          }
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "authority": "approved/pa-01-v2-effective.md",
+        "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+        "numericInventory": [
+          {
+            "line": 5,
+            "text": "Description: In-person work on your devices and accounts: access mapping, approved urgent fixes within scope and clear next steps. ₪3,600 including VAT."
+          },
+          {
+            "line": 11,
+            "text": "Private Exposure Assessment · ₪3,600 including VAT"
+          },
+          {
+            "line": 36,
+            "text": "## What you get for ₪3,600"
+          },
+          {
+            "line": 52,
+            "text": "**Personal Shield carries out the broader protection work.** We tighten security across the two devices and relevant accounts, set up new core accounts where needed, migrate essential access and recovery, supply and configure two security keys, train you, test the changes and provide a private dated record. It includes one primary working day, a second if needed, and 14 days of limited support for issues arising directly from our changes."
+          },
+          {
+            "line": 58,
+            "text": "**Initial visit: ₪3,600 including VAT.** Scheduled after you accept the written scope and price and payment is received."
+          },
+          {
+            "line": 60,
+            "text": "The fee is credited in full toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement begins within 14 days of completion of the initial service. Booking alone does not qualify."
+          },
+          {
+            "line": 62,
+            "text": "**Personal Shield: ₪14,000 including VAT.** With the eligible ₪3,600 credit, the remaining balance is **₪10,400 including VAT**. Agreed additions are separate."
+          },
+          {
+            "line": 74,
+            "text": "| Ordinary urgent visit | ₪4,800 | ₪8,400 |"
+          },
+          {
+            "line": 75,
+            "text": "| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |"
+          }
+        ]
+      }
+    ],
+    "interpretation": "Mechanical numeric/currency occurrence lines only; no semantic claims judgment."
+  },
+  "pricingTables": {
+    "count": 4,
+    "algorithm": "SHA-256 of each table block after LF normalization and trimming trailing whitespace at block end.",
+    "tables": [
+      {
+        "index": 1,
+        "sha256": "b8e7ba0387628cf37d2d6c9c45456ba9711417cf06179b6f55c15b959e4ea0a8",
+        "text": "| Service details | Personal Shield | Inner Circle Shield |\n|---|---|---|\n| Price, including VAT | **₪14,000** | **From ₪42,000** |\n| People | One | Four |\n| Personal devices | One main phone + one PC, iPad or second phone | One main phone + one PC, iPad or second phone per person; eight devices in total |\n| Accounts and apps | Relevant identities, accounts, apps, permissions and recovery routes | Relevant identities, accounts, apps, permissions and recovery routes for each person; remaining-group review and mapping included |\n| Essential migration | New core accounts and migration of essential identity, recovery and service access where needed | The same essential migration standard for each person |\n| Physical security keys | Two compatible keys, supplied, configured and tested | Two per person, eight in total, supplied, configured and tested |\n| Training and verification | Personal training, checklist verification and testing of material changes | Personal training and verification for each participant |\n| Shared home/home-office network and router | Separately scoped | One included, in addition to the eight personal devices |\n| In-person work | One primary working day; a second included if needed | Typically 2–4 working days |\n| Record of work | A private dated record | A private dated record per person and a separate shared-network record |\n| Adjustment support | 14 days for issues directly related to Toza's changes | 14 days for all four people and the included network, starting when the group engagement is complete, for issues directly related to Toza's changes |"
+      },
+      {
+        "index": 2,
+        "sha256": "020fe46adab3dca551ad15ccedd0157b934936199897ca8edfbe6b6d9febf690",
+        "text": "| Service | What it covers | Price |\n|---|---|---|\n| Annual Shield Review | Review of changes in devices, accounts and access | Quoted individually after scope is agreed |\n| Priority Retainer | Priority scheduling and advice within an agreed scope | Quoted individually after scope is agreed |"
+      },
+      {
+        "index": 3,
+        "sha256": "36f5b9bfb7edd12f1f6dbb16019c02f1f871a8acc5a98f26ef509673f95fd115",
+        "text": "| Full service | Price including VAT | Remaining balance with the eligible credit |\n|---|---:|---:|\n| Personal Shield | ₪14,000 | ₪10,400 |\n| Inner Circle Shield at its starting scope | ₪42,000 | ₪38,400 |"
+      },
+      {
+        "index": 4,
+        "sha256": "a327baf1d050781d6d78ba5d4ac21c4b91f2ffc72ddd1cc65a23c0a5ec027bf2",
+        "text": "| Urgent booking | Surcharge including VAT | Initial visit plus surcharge including VAT |\n|---|---:|---:|\n| Ordinary urgent visit | ₪4,800 | ₪8,400 |\n| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |"
+      }
+    ]
+  },
+  "protectedAssessment": {
+    "acceptedPath": "approved/pa-01-v2-effective.md",
+    "approvedBlockSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+    "originalSourcePath": "source/TOZA_EN_COPY_REVIEW.md",
+    "originalPathSha256Lf": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc",
+    "amendmentPath": "revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+    "loaderResolvedSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695"
+  },
+  "note": "Candidate support for EN-06 baseline fact-check only. Inventories are mechanical; no strategy judgment, claims judgment, copy recommendation, acceptance, or authorization.",
+  "allEffectiveRouteHashes": {
+    "purpose": "All routes supplied by accepted-copy.cjs pages(), retaining current Batch A overlays for preview provenance.",
+    "pages": [
+      {
+        "route": "why-us",
+        "sourceName": "01-why-toza",
+        "sha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+        "match": true
+      },
+      {
+        "route": "pricing",
+        "sourceName": "02-pricing",
+        "sha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+        "match": true
+      },
+      {
+        "route": "faq",
+        "sourceName": "03-faq",
+        "sha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f",
+        "match": true
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "sourceName": "04-what-happens",
+        "sha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+        "match": true
+      },
+      {
+        "route": "index",
+        "sourceName": "06-home",
+        "sha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+        "match": true
+      },
+      {
+        "route": "separation-divorce",
+        "sourceName": "07-separation-divorce",
+        "sha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+        "match": true
+      },
+      {
+        "route": "business-dispute",
+        "sourceName": "08-business-founder-dispute",
+        "sha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350",
+        "match": true
+      },
+      {
+        "route": "they-know-something",
+        "sourceName": "09-they-know-something",
+        "sha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+        "match": true
+      },
+      {
+        "route": "inheritance-clash",
+        "sourceName": "10-inheritance-conflict",
+        "sha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f",
+        "match": true
+      },
+      {
+        "route": "attorneys",
+        "sourceName": "11-for-attorneys",
+        "sha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21",
+        "match": true
+      },
+      {
+        "route": "private-exposure-assessment",
+        "sourceName": null,
+        "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+        "match": true
+      }
+    ]
+  }
+}

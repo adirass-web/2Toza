@@ -1,0 +1,856 @@
+{
+  "capturedAt": "2026-10-12T21:41:26.579Z",
+  "engine": "Chromium",
+  "captures": [
+    {
+      "name": "faq",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "states": [
+        "contact before activation",
+        "guidance after activation"
+      ],
+      "errors": []
+    },
+    {
+      "name": "faq",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "states": [
+        "contact before activation",
+        "guidance after activation"
+      ],
+      "errors": []
+    },
+    {
+      "name": "process",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "states": [
+        "contact before activation",
+        "guidance after activation"
+      ],
+      "errors": []
+    },
+    {
+      "name": "process",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "states": [
+        "contact before activation",
+        "guidance after activation"
+      ],
+      "errors": []
+    }
+  ],
+  "flows": [
+    {
+      "name": "faq",
+      "width": 320,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 63.890625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 354.03125,
+        "bottom": 377.03125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.953125,
+        "bottom": 477.53125,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 27.921875,
+        "height": 514.03125
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 399.171875,
+        "bottom": 449.5625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 461.5625,
+        "bottom": 511.953125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "faq",
+      "width": 390,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 63.890625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 327.15625,
+        "bottom": 350.15625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.9375,
+        "bottom": 393.84375,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 27.609375,
+        "height": 487.6875
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 372.515625,
+        "bottom": 422.90625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 434.90625,
+        "bottom": 485.296875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "faq",
+      "width": 768,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 64.796875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 354.828125,
+        "bottom": 377.828125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.875,
+        "bottom": 287.65625,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 153.671875,
+        "height": 332.71875
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 400,
+        "bottom": 450.390625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 400,
+        "bottom": 450.390625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "faq",
+      "width": 1440,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 64.796875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 354.578125,
+        "bottom": 377.578125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.625,
+        "bottom": 287.40625,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 153.421875,
+        "height": 332.71875
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 399.75,
+        "bottom": 450.140625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 399.75,
+        "bottom": 450.140625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "process",
+      "width": 320,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 63.890625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 274.390625,
+        "bottom": 297.390625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.953125,
+        "bottom": 477.53125,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 27.515625,
+        "height": 435
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 319.734375,
+        "bottom": 370.125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 382.125,
+        "bottom": 432.515625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "process",
+      "width": 390,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 63.890625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 248.28125,
+        "bottom": 271.28125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.9375,
+        "bottom": 393.84375,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 27.75,
+        "height": 408.65625
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 293.625,
+        "bottom": 344.015625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 356.015625,
+        "bottom": 406.40625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "process",
+      "width": 768,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 64.796875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 354.484375,
+        "bottom": 377.484375,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.875,
+        "bottom": 287.65625,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 180.53125,
+        "height": 305.53125
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 399.671875,
+        "bottom": 450.0625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 399.671875,
+        "bottom": 450.0625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    },
+    {
+      "name": "process",
+      "width": 1440,
+      "skip": {
+        "tag": "A",
+        "id": "",
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "top": 12,
+        "bottom": 64.796875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "guidanceFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 354.75,
+        "bottom": 377.75,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.625,
+        "bottom": 287.40625,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "returned": {
+        "top": 180.796875,
+        "height": 305.53125
+      },
+      "whatsapp": {
+        "tag": "A",
+        "id": "",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "text": "Message on WhatsApp",
+        "top": 399.9375,
+        "bottom": 450.328125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "signal": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 399.9375,
+        "bottom": 450.328125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "pointerAnswerOpen": true,
+      "contactReachableAfterReturn": true
+    }
+  ],
+  "widthChecks": [
+    {
+      "name": "faq",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "faq",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "faq",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "faq",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "process",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "process",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "process",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "name": "process",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "badImages": []
+    }
+  ],
+  "shortPhone": [
+    {
+      "name": "faq",
+      "menuFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/#situations",
+        "text": "Situations",
+        "top": 92,
+        "bottom": 137.6875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "shortFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 327.15625,
+        "bottom": 350.15625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.9375,
+        "bottom": 393.84375,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "channel": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 434.90625,
+        "bottom": 485.296875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "process",
+      "menuFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/#situations",
+        "text": "Situations",
+        "top": 92,
+        "bottom": 137.6875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "shortFocus": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+        "text": "What should I send in the first message?",
+        "top": 248.28125,
+        "bottom": 271.28125,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "answer": {
+        "open": true,
+        "top": 27.9375,
+        "bottom": 393.84375,
+        "text": "What should I send in the first message?\n\nSend a short, neutral message through WhatsApp or Signal, such as: “I'd like a private conversation. Please let me know the next step.” Dr. Tabansky replies personally as soon as possible.\n\nDo not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message."
+      },
+      "channel": {
+        "tag": "A",
+        "id": "",
+        "href": "https://signal.me/#p/+972533366276",
+        "text": "Message on Signal",
+        "top": 356.015625,
+        "bottom": 406.40625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      }
+    }
+  ],
+  "print": [
+    {
+      "name": "faq",
+      "hiddenSections": [],
+      "closedDetails": [],
+      "guidanceAndServiceTextVisible": true
+    },
+    {
+      "name": "process",
+      "hiddenSections": [],
+      "closedDetails": [],
+      "guidanceAndServiceTextVisible": true
+    }
+  ],
+  "motion": [
+    {
+      "name": "faq",
+      "reduce": true,
+      "scroll": "auto",
+      "animated": 0
+    },
+    {
+      "name": "process",
+      "reduce": true,
+      "scroll": "auto",
+      "animated": 0
+    }
+  ],
+  "linkChecks": [
+    {
+      "name": "faq",
+      "href": "/en/",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/#situations",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/why-us.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/what-happens-during-the-visit.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/pricing.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/faq.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/private-exposure-assessment.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/en/attorneys.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/terms.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "href": "/privacy.html",
+      "status": 200
+    },
+    {
+      "name": "faq",
+      "channels": [
+        {
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on WhatsApp"
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on Signal"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "href": "/en/",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/#situations",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/why-us.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/what-happens-during-the-visit.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/pricing.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/faq.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/private-exposure-assessment.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/faq.html#privacy",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/faq.html#boundaries",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/faq.html#what-should-i-send-in-the-first-message",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/en/attorneys.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/terms.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "href": "/privacy.html",
+      "status": 200
+    },
+    {
+      "name": "process",
+      "channels": [
+        {
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on WhatsApp"
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on Signal"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

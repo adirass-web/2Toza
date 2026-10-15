@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-10-12T14:49:12.344Z",
+  "captures": [
+    {
+      "name": "why",
+      "device": "desktop",
+      "route": "/en/why-us.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 4132,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "name": "process",
+      "device": "desktop",
+      "route": "/en/what-happens-during-the-visit.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 5764,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "name": "why",
+      "device": "mobile",
+      "route": "/en/why-us.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 6133,
+      "h1s": 1,
+      "errors": []
+    },
+    {
+      "name": "process",
+      "device": "mobile",
+      "route": "/en/what-happens-during-the-visit.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 8588,
+      "h1s": 1,
+      "errors": []
+    }
+  ]
+}

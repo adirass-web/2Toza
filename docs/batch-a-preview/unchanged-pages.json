@@ -1,0 +1,266 @@
+{
+  "baseline": "unchanged-pages-baseline.json",
+  "baseCommit": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "routes": [
+    "index",
+    "pricing",
+    "separation-divorce",
+    "they-know-something",
+    "business-dispute",
+    "inheritance-clash",
+    "attorneys",
+    "faq",
+    "private-exposure-assessment"
+  ],
+  "checkedAt": "2026-10-12T14:51:51.573Z",
+  "status": "PASS",
+  "pages": [
+    {
+      "route": "index",
+      "path": "_site/en/index.html",
+      "baselineSha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0",
+      "currentSha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0",
+      "status": "PASS"
+    },
+    {
+      "route": "pricing",
+      "path": "_site/en/pricing.html",
+      "baselineSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "currentSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "status": "PASS"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "_site/en/separation-divorce.html",
+      "baselineSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "currentSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "status": "PASS"
+    },
+    {
+      "route": "they-know-something",
+      "path": "_site/en/they-know-something.html",
+      "baselineSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "currentSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "status": "PASS"
+    },
+    {
+      "route": "business-dispute",
+      "path": "_site/en/business-dispute.html",
+      "baselineSha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d",
+      "currentSha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d",
+      "status": "PASS"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "_site/en/inheritance-clash.html",
+      "baselineSha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7",
+      "currentSha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7",
+      "status": "PASS"
+    },
+    {
+      "route": "attorneys",
+      "path": "_site/en/attorneys.html",
+      "baselineSha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430",
+      "currentSha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430",
+      "status": "PASS"
+    },
+    {
+      "route": "faq",
+      "path": "_site/en/faq.html",
+      "baselineSha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "currentSha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "status": "PASS"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "_site/en/private-exposure-assessment.html",
+      "baselineSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "currentSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Accepted-copy authority check",
+      "status": "PASS",
+      "details": "Historical accepted blocks, all source fingerprints, and protected Assessment validated by scripts/accepted-copy.cjs."
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "AGENTS.md",
+      "expectedSha256Lf": "d2932142bbec9cf7885cab85e95b04ef2ebbdcab17bf662f1a68e3c36d9f785a",
+      "currentSha256Lf": "d2932142bbec9cf7885cab85e95b04ef2ebbdcab17bf662f1a68e3c36d9f785a",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "instructions/TOZA-EN-REVISION-ARCHITECTURE-LOCKED.md",
+      "expectedSha256Lf": "398ca2451104d4f4dffffa058ae96560a8356764f258e69a2046c58d6e867c16",
+      "currentSha256Lf": "398ca2451104d4f4dffffa058ae96560a8356764f258e69a2046c58d6e867c16",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "instructions/EN-REVISION-EXECUTION-INSTRUCTIONS.md",
+      "expectedSha256Lf": "3e885aec081dd0b03bb6c0c9d560db5b851731f7a133ad58eb428c27b886f3e0",
+      "currentSha256Lf": "3e885aec081dd0b03bb6c0c9d560db5b851731f7a133ad58eb428c27b886f3e0",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "instructions/SHARED-COPY-SYSTEM-REVISION-BRIEF.md",
+      "expectedSha256Lf": "850be36a733b629b215a3d27ccb5b47cbf7e17129dd2619fd59f6027b7525923",
+      "currentSha256Lf": "850be36a733b629b215a3d27ccb5b47cbf7e17129dd2619fd59f6027b7525923",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "harness/TOZA-EDITORIAL-DOCTRINE.md",
+      "expectedSha256Lf": "d49bfae89f2ef40a9c6cbb9b37886723ab0afa825893719e63c78c1e40587adc",
+      "currentSha256Lf": "d49bfae89f2ef40a9c6cbb9b37886723ab0afa825893719e63c78c1e40587adc",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "harness/TOZA-COPY-WORKFLOW.md",
+      "expectedSha256Lf": "ec82565bf00af756c1bc55e7f99fc6f1443e93586a252052f1299c04ade7fb55",
+      "currentSha256Lf": "ec82565bf00af756c1bc55e7f99fc6f1443e93586a252052f1299c04ade7fb55",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "harness/SOURCE-ADOPTION-MATRIX.md",
+      "expectedSha256Lf": "a4984c2a68dfbdbae94e2317bde3d0b949bf9017ea08f92aba65ccd5d3a7e030",
+      "currentSha256Lf": "a4984c2a68dfbdbae94e2317bde3d0b949bf9017ea08f92aba65ccd5d3a7e030",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "harness/CALIBRATION-EN-02-v1.md",
+      "expectedSha256Lf": "8edfc94ea9d0309831bbd8f120969474d87e07382fb5dfaa27123b3aea81db75",
+      "currentSha256Lf": "8edfc94ea9d0309831bbd8f120969474d87e07382fb5dfaa27123b3aea81db75",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "harness/PAGE-BY-PAGE-CALIBRATION-EN-02-v1.md",
+      "expectedSha256Lf": "e244025294ce4105fe40aadc7e0776a9bb4126b0df6471672cc8d00dae81d6c7",
+      "currentSha256Lf": "e244025294ce4105fe40aadc7e0776a9bb4126b0df6471672cc8d00dae81d6c7",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "source/TOZA_EN_COPY_REVIEW.md",
+      "expectedSha256Lf": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc",
+      "currentSha256Lf": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "source/reference/toza-upgrade-english-copy-spec-revised-v2.md",
+      "expectedSha256Lf": "a395a59286f2533211d827d5b6e6c489b7c124400a26bfb31a7389f6236879fa",
+      "currentSha256Lf": "a395a59286f2533211d827d5b6e6c489b7c124400a26bfb31a7389f6236879fa",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "skills/toza-copy-strategy/SKILL.md",
+      "expectedSha256Lf": "e5bbd91148d031126b25c4485d992a04e928041ecb5a591f0753e472dd6f11c5",
+      "currentSha256Lf": "e5bbd91148d031126b25c4485d992a04e928041ecb5a591f0753e472dd6f11c5",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "skills/toza-copywriter/SKILL.md",
+      "expectedSha256Lf": "d59d7ec213aad696f329c7a7da4b6fceab0aa71b9055fc118a45dd1cf59a4e4f",
+      "currentSha256Lf": "d59d7ec213aad696f329c7a7da4b6fceab0aa71b9055fc118a45dd1cf59a4e4f",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "skills/toza-copy-red-team/SKILL.md",
+      "expectedSha256Lf": "3db4135c2b8832fd23181bee6a23962b0552e334e0f1bc4de2a7c185e4aac181",
+      "currentSha256Lf": "3db4135c2b8832fd23181bee6a23962b0552e334e0f1bc4de2a7c185e4aac181",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected source fingerprint",
+      "path": "skills/toza-editor/SKILL.md",
+      "expectedSha256Lf": "a19367e86a807f7f8205120ff13569c1baa453b2d1ce49ad985de3004664d06e",
+      "currentSha256Lf": "a19367e86a807f7f8205120ff13569c1baa453b2d1ce49ad985de3004664d06e",
+      "status": "PASS"
+    },
+    {
+      "check": "Protected Assessment",
+      "path": "approved/pa-01-v2-effective.md",
+      "expectedSha256Lf": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "currentSha256Lf": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "status": "PASS"
+    },
+    {
+      "check": "Batch A Why accepted source",
+      "path": "projects/toza-en-editorial-revision/revisions/en-05/01-WHY-TOZA-CANDIDATE.md",
+      "expectedSha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "currentSha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "status": "PASS"
+    },
+    {
+      "check": "Stage map approved raw provenance",
+      "path": "projects/toza-en-editorial-revision/revisions/en-05/02-HOW-TOZA-HELPS-STAGE-MAP.md",
+      "expectedSha256Raw": "14af90ab3d758fa56a58866a1f03ead3cae12142a8e044f5de5870f044ccd79d",
+      "status": "PASS"
+    },
+    {
+      "check": "Stage map current LF-normalized content",
+      "path": "projects/toza-en-editorial-revision/revisions/en-05/02-HOW-TOZA-HELPS-STAGE-MAP.md",
+      "expectedSha256Lf": "f3093b5514a9a6d2ed99414781d6b4e14d7a625132aef914d21690cb52923e56",
+      "currentSha256Lf": "f3093b5514a9a6d2ed99414781d6b4e14d7a625132aef914d21690cb52923e56",
+      "status": "PASS"
+    },
+    {
+      "check": "Process source remains EN-02-v2",
+      "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/04-what-happens.md",
+      "expectedSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "currentSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "status": "PASS"
+    },
+    {
+      "check": "Historical approval manifest unchanged from base",
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-manifest.json",
+      "baseline": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f:projects/toza-en-editorial-revision/approved/acceptance-manifest.json",
+      "baselineSha256Lf": "f4398102602975d0d54ac2c4311bc015954ed5d69e98a90314ec9ca2d3126577",
+      "currentSha256Lf": "f4398102602975d0d54ac2c4311bc015954ed5d69e98a90314ec9ca2d3126577",
+      "status": "PASS"
+    },
+    {
+      "check": "Historical approval manifest unchanged from base",
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10.json",
+      "baseline": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f:projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10.json",
+      "baselineSha256Lf": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5",
+      "currentSha256Lf": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5",
+      "status": "PASS"
+    },
+    {
+      "check": "Historical approval manifest unchanged from base",
+      "path": "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10-round-02.json",
+      "baseline": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f:projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10-round-02.json",
+      "baselineSha256Lf": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01",
+      "currentSha256Lf": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01",
+      "status": "PASS"
+    },
+    {
+      "check": "PR #54 local branch ref",
+      "ref": "refs/heads/codex/toza-home-pricing-narrative",
+      "currentHead": "c5e7e243764605463cd0b6e05fa33b115240729d",
+      "expectedHead": "c5e7e243764605463cd0b6e05fa33b115240729d",
+      "status": "PASS"
+    },
+    {
+      "check": "PR #54 sibling checkout",
+      "path": "V:\\TOZA hardening biz\\VIP-narrative",
+      "currentHead": "c5e7e243764605463cd0b6e05fa33b115240729d",
+      "expectedHead": "c5e7e243764605463cd0b6e05fa33b115240729d",
+      "status": "PASS"
+    }
+  ]
+}

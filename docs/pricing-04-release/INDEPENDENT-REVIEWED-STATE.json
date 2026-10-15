@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Reviewed working-tree files, before release commit and live CI",
+  "sha256": {
+    "scripts/accepted-copy.cjs": "84717cdf967b1e26c4f1a8136eec4a278463cac630f22a8b9adda32d41b9673f",
+    "scripts/pricing-layout.cjs": "c7abb7673c4c0916a2c5e507a0961826b85e150943688a78ddc6a3779260ec27",
+    "scripts/verify-pricing-04.cjs": "c93fbcd222faa86dfcda142557c12703d2bdba03d1d805e0606847529ddd5fb6",
+    "scripts/verify-hosted-release.mjs": "d197800e8095534badc7cecc3cf9d07fe1419182da57ba2134513aec31a09c25",
+    "scripts/verify-ci-contract.mjs": "5f5fcc18120844320ef294ce96d57c5663d1bb090f765b729de6730317e9194f",
+    "scripts/verify-hosted-marketing-02.mjs": "e119890f4c14cd3887edf0126fc231b812c9ccb911902918a719a038c2a63b66",
+    "src/_includes/layouts/vault.njk": "d9359d7871d5e6deaa258d0f3353e621b87fbf93056e349fbb6fdd303b77af37",
+    "assets/css/pricing-04.css": "e07425694d14c839df5a7cd5e5bb6da978d8b5cc6f57e33ce91c28666c8fbf91",
+    "assets/js/pricing-04.js": "272d6c0e6502a8417e2f81efb5c44acd11b9346e1e56c168a69d989deeea92e2",
+    "_site/en/pricing.html": "2947f86d6ee18ab7ba746f95ad81005662768e530a921570157b158fb7e57d1f",
+    ".github/workflows/preview.yml": "946feab94d041db182b5941b7617f762ca19e7c6e0230167010797571bd33b8e",
+    ".github/workflows/deploy.yml": "214a988475c00d34c0e164e872977543e3e60c5d65a547e00853293c18736858",
+    "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-15-pricing-04.json": "2058ce7ab04910753221efc7da07a2826ab7f749193c9a9796b8b1a1e96473ed"
+  }
+}

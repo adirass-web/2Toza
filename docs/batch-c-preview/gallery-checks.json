@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8796/_preview/",
+  "images": [
+    {
+      "src": "faq-desktop-contact.png",
+      "loaded": true
+    },
+    {
+      "src": "faq-mobile-contact.png",
+      "loaded": true
+    },
+    {
+      "src": "faq-desktop-guidance.png",
+      "loaded": true
+    },
+    {
+      "src": "faq-mobile-guidance.png",
+      "loaded": true
+    },
+    {
+      "src": "process-desktop-contact.png",
+      "loaded": true
+    },
+    {
+      "src": "process-mobile-contact.png",
+      "loaded": true
+    },
+    {
+      "src": "process-desktop-guidance.png",
+      "loaded": true
+    },
+    {
+      "src": "process-mobile-guidance.png",
+      "loaded": true
+    }
+  ],
+  "keyboard": [
+    {
+      "id": "faq",
+      "focus": {
+        "tag": "A",
+        "id": "",
+        "href": "#faq",
+        "text": "FAQ",
+        "top": 172.09375,
+        "bottom": 219.59375,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "next": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/faq.html#contact",
+        "text": "Explore working contact",
+        "top": 112.40625,
+        "bottom": 137.90625,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "id": "process",
+      "focus": {
+        "tag": "A",
+        "id": "",
+        "href": "#process",
+        "text": "How Toza helps",
+        "top": 172.09375,
+        "bottom": 219.59375,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "next": {
+        "tag": "A",
+        "id": "",
+        "href": "/en/what-happens-during-the-visit.html#contact",
+        "text": "Explore working contact",
+        "top": 112.71875,
+        "bottom": 138.21875,
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px"
+      }
+    }
+  ],
+  "widths": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "h1s": 1,
+      "badImages": []
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1s": 1,
+      "badImages": []
+    }
+  ],
+  "errors": []
+}

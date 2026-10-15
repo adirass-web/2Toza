@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-12T11:03:22.521Z",
+  "baselineCommit": "09a534e",
+  "pr54CheckoutHead": "c5e7e243764605463cd0b6e05fa33b115240729d",
+  "pages": [
+    {
+      "route": "why-us",
+      "path": "_site/en/why-us.html",
+      "sha256": "7ddee4762239d8916cca46d28c83ad2ccbe5baf8d0ca32ce24e2c32a208f8703",
+      "currentSha256": "7ddee4762239d8916cca46d28c83ad2ccbe5baf8d0ca32ce24e2c32a208f8703",
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "path": "_site/en/faq.html",
+      "sha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "currentSha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "result": "PASS"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "_site/en/what-happens-during-the-visit.html",
+      "sha256": "654188a79c5514010f5e70e01a57ef9c226e5d65480bf05570678131d48213fa",
+      "currentSha256": "654188a79c5514010f5e70e01a57ef9c226e5d65480bf05570678131d48213fa",
+      "result": "PASS"
+    },
+    {
+      "route": "business-dispute",
+      "path": "_site/en/business-dispute.html",
+      "sha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d",
+      "currentSha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d",
+      "result": "PASS"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "_site/en/inheritance-clash.html",
+      "sha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7",
+      "currentSha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7",
+      "result": "PASS"
+    },
+    {
+      "route": "attorneys",
+      "path": "_site/en/attorneys.html",
+      "sha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430",
+      "currentSha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430",
+      "result": "PASS"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "_site/en/private-exposure-assessment.html",
+      "sha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "currentSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "result": "PASS"
+    }
+  ]
+}

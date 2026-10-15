@@ -1,0 +1,42 @@
+{
+  "baseline": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "capturedAt": "2026-10-12T14:21:57.649Z",
+  "record": [
+    {
+      "name": "why-toza",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "url": "https://toza-site.pages.dev/en/why-us",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "name": "how-toza-helps",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "url": "https://toza-site.pages.dev/en/what-happens-during-the-visit",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "name": "why-toza",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "url": "https://toza-site.pages.dev/en/why-us",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "name": "how-toza-helps",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "url": "https://toza-site.pages.dev/en/what-happens-during-the-visit",
+      "status": 200,
+      "errors": []
+    }
+  ]
+}

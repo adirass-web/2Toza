@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "metadataExact": true,
+  "canonicalContactAttributesExact": true,
+  "canonicalFooterLinkAttributesExact": true,
+  "allPricingCssSelectorsScoped": 152,
+  "allOpenReferences320Overflow": 0,
+  "urgentTableAssociation": true,
+  "fullPagesNotProvidedInIsolatedPreview": true
+}

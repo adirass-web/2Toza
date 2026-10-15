@@ -1,0 +1,25 @@
+{
+  "acceptedOn": "2026-10-12",
+  "authority": "Owner: Approved. Build Batch A into the local preview using this copy and stage map. Keep service facts unchanged, run the quality gates and independent review, and show me desktop and mobile. Don’t deploy yet. D-033.",
+  "baseCommit": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "historicalManifest": "approved/acceptance-manifest.json",
+  "previousAmendment": "approved/acceptance-amendment-2026-10-10-round-02.json",
+  "normalization": "CRLF to LF; exact-copy block excludes packet wrapper; trailing whitespace at block end trimmed, one final LF. No other normalization.",
+  "entries": [
+    {
+      "route": "why-us",
+      "path": "revisions/en-05/01-WHY-TOZA-CANDIDATE.md",
+      "sha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575"
+    }
+  ],
+  "presentation": {
+    "route": "what-happens-during-the-visit",
+    "path": "revisions/en-05/02-HOW-TOZA-HELPS-STAGE-MAP.md",
+    "sha256Raw": "14af90ab3d758fa56a58866a1f03ead3cae12142a8e044f5de5870f044ccd79d",
+    "copySource": "revisions/en-02-v2/04-what-happens.md",
+    "copySha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+    "authority": "Stage map accepted; wording, order and visibility unchanged.",
+    "sha256Lf": "f3093b5514a9a6d2ed99414781d6b4e14d7a625132aef914d21690cb52923e56",
+    "normalization": "Validate the complete map with CRLF to LF only; sha256Raw retains the original reviewed bytes as provenance."
+  }
+}

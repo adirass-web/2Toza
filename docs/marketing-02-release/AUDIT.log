@@ -1,0 +1,7 @@
+
+> toza-site@1.0.0 audit:tools
+> node scripts/audit-build-tools.cjs
+
+BUILD-TOOL AUDIT: 9 affected packages; 2 documented, unpatched upstream advisories; no additional advisories.
+UNRESOLVED UPSTREAM: https://github.com/advisories/GHSA-vfj7-8cjw-p6xm
+UNRESOLVED UPSTREAM: https://github.com/advisories/GHSA-hp3w-g68c-fv3c

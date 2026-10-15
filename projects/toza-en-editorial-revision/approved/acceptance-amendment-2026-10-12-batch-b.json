@@ -1,0 +1,26 @@
+{
+  "acceptedOn": "2026-10-12",
+  "authority": "Owner: I ,the owner approve complete candidate payloads. D-035.",
+  "baseCommit": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "historicalManifest": "approved/acceptance-manifest.json",
+  "previousAmendment": "approved/acceptance-amendment-2026-10-12-batch-a.json",
+  "normalization": "CRLF to LF; exact-copy block excludes packet wrapper; trailing whitespace at block end trimmed, one final LF. No other normalization.",
+  "scope": "Exact copy acceptance, including metadata. Runtime loader integration and rendered preview remain subsequent work; no publication authorization.",
+  "entries": [
+    {
+      "route": "business-dispute",
+      "path": "revisions/en-06/01-BUSINESS-CANDIDATE.md",
+      "sha256": "9b469754dfd77fd463aab82e8f87aacf6e90b18dd5c85d41e05c2496e6706c82"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "revisions/en-06/02-INHERITANCE-CANDIDATE.md",
+      "sha256": "cca5d87db669ebf86ca1a8267604e6e5e9a5b481bc11af0a3ba265f16bb63b34"
+    },
+    {
+      "route": "attorneys",
+      "path": "revisions/en-06/03-ATTORNEYS-CANDIDATE.md",
+      "sha256": "2d27f1dcc9ce69bee3faa1573e0243dc555e6607e226761195eae2e8f9762894"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "fullHeight": 5332,
+      "visibleWords": 864,
+      "totalWords": 1650,
+      "tableDisplay": "table",
+      "headerClip": "none",
+      "rowDisplay": "table-row",
+      "columns": 3,
+      "tableWidth": 1120,
+      "matrixRows": 7,
+      "explicitHeaders": true,
+      "assessmentOutcomesVisible": true,
+      "countedObjects": {
+        "people": [
+          1,
+          4
+        ],
+        "devices": [
+          2,
+          8
+        ],
+        "keys": [
+          2,
+          8
+        ]
+      },
+      "decorativeSVG": true,
+      "assessmentFullScopeVisible": true,
+      "disclosures": 8,
+      "headings": [
+        "Personal Shield. Protection built around your risks."
+      ],
+      "actions": [
+        {
+          "text": "Message on WhatsApp",
+          "height": 50.390625
+        },
+        {
+          "text": "Message on Signal",
+          "height": 50.390625
+        }
+      ],
+      "footerHeight": 130.375,
+      "duplicateIDs": [],
+      "sourceIntegrity": {
+        "blocks": 93,
+        "failures": []
+      },
+      "creditBeforeMatrix": true,
+      "errors": [],
+      "creditLink": "PASS",
+      "nativeKeyboard": "PASS",
+      "printExpansion": "PASS"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "fullHeight": 8213,
+      "visibleWords": 864,
+      "totalWords": 1650,
+      "tableDisplay": "block",
+      "headerClip": "none",
+      "rowDisplay": "grid",
+      "columns": 3,
+      "tableWidth": 358,
+      "matrixRows": 7,
+      "explicitHeaders": true,
+      "assessmentOutcomesVisible": true,
+      "countedObjects": {
+        "people": [
+          1,
+          4
+        ],
+        "devices": [
+          2,
+          8
+        ],
+        "keys": [
+          2,
+          8
+        ]
+      },
+      "decorativeSVG": true,
+      "assessmentFullScopeVisible": true,
+      "disclosures": 8,
+      "headings": [
+        "Personal Shield. Protection built around your risks."
+      ],
+      "actions": [
+        {
+          "text": "Message on WhatsApp",
+          "height": 50.390625
+        },
+        {
+          "text": "Message on Signal",
+          "height": 50.390625
+        }
+      ],
+      "footerHeight": 308.375,
+      "duplicateIDs": [],
+      "sourceIntegrity": {
+        "blocks": 93,
+        "failures": []
+      },
+      "creditBeforeMatrix": true,
+      "errors": [],
+      "creditLink": "PASS",
+      "nativeKeyboard": "PASS",
+      "printExpansion": "PASS"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "fullHeight": 9345,
+      "visibleWords": 864,
+      "totalWords": 1650,
+      "tableDisplay": "block",
+      "headerClip": "none",
+      "rowDisplay": "grid",
+      "columns": 3,
+      "tableWidth": 288,
+      "matrixRows": 7,
+      "explicitHeaders": true,
+      "assessmentOutcomesVisible": true,
+      "countedObjects": {
+        "people": [
+          1,
+          4
+        ],
+        "devices": [
+          2,
+          8
+        ],
+        "keys": [
+          2,
+          8
+        ]
+      },
+      "decorativeSVG": true,
+      "assessmentFullScopeVisible": true,
+      "disclosures": 8,
+      "headings": [
+        "Personal Shield. Protection built around your risks."
+      ],
+      "actions": [
+        {
+          "text": "Message on WhatsApp",
+          "height": 50.390625
+        },
+        {
+          "text": "Message on Signal",
+          "height": 50.390625
+        }
+      ],
+      "footerHeight": 327.96875,
+      "duplicateIDs": [],
+      "sourceIntegrity": {
+        "blocks": 93,
+        "failures": []
+      },
+      "creditBeforeMatrix": true,
+      "errors": [],
+      "creditLink": "PASS",
+      "nativeKeyboard": "PASS",
+      "printExpansion": "PASS"
+    }
+  ]
+}

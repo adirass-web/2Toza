@@ -1,0 +1,30 @@
+{
+  "baseCommit": "81a11a12c49eefd124c54bd2da227e0f815b083b",
+  "localBranch": "editorial/toza-copy-harness",
+  "intendedRemoteReviewBranch": "codex/toza-marketing-02-release",
+  "previewDestination": "marketing-02-release",
+  "status": "Independent local source/build/render review PASS; hosted/CI/release gate pending",
+  "reviewedFileSha256": {
+    ".github/workflows/preview.yml": "96f9cfe4c3faf2dd5fd9bf2945e266f6c8e94911b5c0b98a9c92ae70549684b7",
+    "assets/css/marketing-02.css": "cc2bf42ea3933e3eeb34a1b4825130e0cf49c11ce0bb0c80f44b1ca5dacb00c1",
+    "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-14-marketing-02.json": "ca1bceeea4f658bf72346bb005134a2dc2e8bbce346364d0c87ef6d820a2a46d",
+    "projects/toza-en-editorial-revision/revisions/marketing-02/index.md": "940828ba8c1df1092bf9cca9b2db3d5a2d4f8b42c593d49138103e2c7ea96864",
+    "projects/toza-en-editorial-revision/revisions/marketing-02/pricing.md": "e416b43f5936aaf448dca0966a2bbbec337ffb491f2d46179dfb2cd4c1e74a8e",
+    "projects/toza-en-editorial-revision/revisions/marketing-02/why-us.md": "03e473a5f58dc6bab4243d259df8610c266a838d6b6830903b279aea9b8bc196",
+    "projects/toza-en-editorial-revision/state/CURRENT-STATUS.md": "c6df195b8230ee9256898bb682694aad7996a32f599c2ecd948c47fe982f5b13",
+    "projects/toza-en-editorial-revision/state/EN-REVISION-DECISION-DELTA.md": "e317becde6fc6b9f52f60dfc7b75b6ada94c296d0489d95be7841261c5a11566",
+    "scripts/accepted-copy.cjs": "8cf0815410edfe5512315570f17520ed52765e8f3dd9a4a6b04d976caf674d5c",
+    "scripts/marketing-layout.cjs": "14b916dc8955fc71aa10a627c0d9cc848d46a151537e8e38bbe88172379b5c0e",
+    "scripts/verify-ci-contract.mjs": "1701b5642927da6900d5c5ca442d3343568b7ac29e3deab79280c1bf9b3dd945",
+    "scripts/verify-copy-amendment.cjs": "44543f1d35719e65f61ed07d3070d1d03cda6e844db6980e6addf747657054fd",
+    "scripts/verify-hebrew-build.mjs": "367df840614fa41692308d57d4d1d979181eccda517d1bbbcc4a93d59b70d3a5",
+    "scripts/verify-marketing-02.cjs": "8bc7a00bdca7bccb5a204d56322412cb738fe9efa562bca73ad16eace04ba8ec",
+    "scripts/visual-refinements.test.cjs": "ca11cb37cb9b128546f37dd2981251195492f86f16ebba24254b6a1ebca7c2f3",
+    "src/_includes/layouts/vault.njk": "84a184351c3891f1d1270201c4722a5f625537abac3dcb5cbaefec15184cde05",
+    "src/en/index.njk": "7f0b5f2998b90635d637232fb16bbd2a71ad6fe19f805a990c49a9f6d975d48a",
+    "src/en/pricing.njk": "149af5918886707e6dff2693b348c4b426a963fd9852fb4a70e1b8f5b59c2f3b",
+    "src/en/why-us.njk": "6141113545ea02dd0f0d1b439dbab672e34fd91791ae60b4e558afa748e2aa90",
+    "tests/rtl.spec.cjs": "fffa114e986249291f84e0fec9d61eb9e9d823195330afab991af8a6aa4889eb"
+  },
+  "reviewedStateSha256": "861e9cf425f5d17d5ff11854cb1003364fad25c2181fbd24cc6370c3645e73ab"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": [
+    "index reflow/IDs/contact/hash/assets 320",
+    "why-us reflow/IDs/contact/hash/assets 320",
+    "Pricing5tables/column labels/keyboard/hash/print 320",
+    "pricing reflow/IDs/contact/hash/assets 320",
+    "Menu/Escape 320",
+    "index reflow/IDs/contact/hash/assets 390",
+    "why-us reflow/IDs/contact/hash/assets 390",
+    "Pricing5tables/column labels/keyboard/hash/print 390",
+    "pricing reflow/IDs/contact/hash/assets 390",
+    "Menu/Escape 390",
+    "index reflow/IDs/contact/hash/assets 1024",
+    "why-us reflow/IDs/contact/hash/assets 1024",
+    "Pricing5tables/column labels/keyboard/hash/print 1024",
+    "pricing reflow/IDs/contact/hash/assets 1024",
+    "index reflow/IDs/contact/hash/assets 1440",
+    "why-us reflow/IDs/contact/hash/assets 1440",
+    "Pricing5tables/column labels/keyboard/hash/print 1440",
+    "pricing reflow/IDs/contact/hash/assets 1440",
+    "Home → protected Assessment → targeted Pricing; both closing FAQ hashes open",
+    "Marketing CSS absent all8supporting pages"
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "Focused local Chromium checks only; no hosted preview/CI/live deployment review yet",
+    "No assistive technology/Safari/physical-device/commercial outcome test"
+  ]
+}

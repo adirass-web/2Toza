@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "publishedRelease": "b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47",
+  "comparison": "Current local production build versus verified PR #59 production build hashes; this is not a new live-network test.",
+  "htmlPages": 11,
+  "assetFiles": 59,
+  "checks": [
+    {
+      "file": "assets/brand/toza/toza-logo-ink.svg",
+      "expectedSha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77",
+      "actualSha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77"
+    },
+    {
+      "file": "assets/brand/toza/toza-logo-reverse.svg",
+      "expectedSha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26",
+      "actualSha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-ink.svg",
+      "expectedSha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570",
+      "actualSha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-micro-ink.svg",
+      "expectedSha256": "75a8d6edb23b3a247c4ce11e078570ed9ea18ac4d4400a311c0e0b9c007fbe57",
+      "actualSha256": "75a8d6edb23b3a247c4ce11e078570ed9ea18ac4d4400a311c0e0b9c007fbe57"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-micro-reverse.svg",
+      "expectedSha256": "32613bc8b3586958d8243b26e32124fece1cbb16ee3e8e7c3bcf541b01153b93",
+      "actualSha256": "32613bc8b3586958d8243b26e32124fece1cbb16ee3e8e7c3bcf541b01153b93"
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-reverse.svg",
+      "expectedSha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d",
+      "actualSha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d"
+    },
+    {
+      "file": "assets/brand/toza/toza-wordmark-ink.svg",
+      "expectedSha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f",
+      "actualSha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f"
+    },
+    {
+      "file": "assets/brand/toza/toza-wordmark-reverse.svg",
+      "expectedSha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553",
+      "actualSha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553"
+    },
+    {
+      "file": "assets/css/clear-practice.css",
+      "expectedSha256": "5caf68dd5e2930c8fee179b4f6047222e108f4f186d1edff209cc965d64f050c",
+      "actualSha256": "5caf68dd5e2930c8fee179b4f6047222e108f4f186d1edff209cc965d64f050c"
+    },
+    {
+      "file": "assets/css/fonts.css",
+      "expectedSha256": "d8b7129338ab3fc2f9a63f0a9bbb7fe521367f0155bdd7d3a7504d27d4487192",
+      "actualSha256": "d8b7129338ab3fc2f9a63f0a9bbb7fe521367f0155bdd7d3a7504d27d4487192"
+    },
+    {
+      "file": "assets/css/footer-compact.css",
+      "expectedSha256": "229fe9b02973928954a141eecb0ddbd0b2c57b35ada566c6972e1f86d4f4b4f0",
+      "actualSha256": "229fe9b02973928954a141eecb0ddbd0b2c57b35ada566c6972e1f86d4f4b4f0"
+    },
+    {
+      "file": "assets/css/home-pricing.css",
+      "expectedSha256": "ad50f8e0ea494a2af63d62a9c20bcdea0b9b01c0fd7b6c98fe2c6e4157b78e02",
+      "actualSha256": "ad50f8e0ea494a2af63d62a9c20bcdea0b9b01c0fd7b6c98fe2c6e4157b78e02"
+    },
+    {
+      "file": "assets/css/marketing-02.css",
+      "expectedSha256": "cc2bf42ea3933e3eeb34a1b4825130e0cf49c11ce0bb0c80f44b1ca5dacb00c1",
+      "actualSha256": "cc2bf42ea3933e3eeb34a1b4825130e0cf49c11ce0bb0c80f44b1ca5dacb00c1"
+    },
+    {
+      "file": "assets/css/process-stages.css",
+      "expectedSha256": "83f466c5f63aa441bd2ea2c6c1c973b2c478858268155595e7a866ff3f4a7b7b",
+      "actualSha256": "83f466c5f63aa441bd2ea2c6c1c973b2c478858268155595e7a866ff3f4a7b7b"
+    },
+    {
+      "file": "assets/css/vault.css",
+      "expectedSha256": "e2a53093730a9facc01d82b56f3f13c7ead1f244fad404494514d72c65109071",
+      "actualSha256": "e2a53093730a9facc01d82b56f3f13c7ead1f244fad404494514d72c65109071"
+    },
+    {
+      "file": "assets/css/visual-refinements.css",
+      "expectedSha256": "ca0bb7b91f49b3588d588549ed495fa0135e467f2793404023457a5f6cd53992",
+      "actualSha256": "ca0bb7b91f49b3588d588549ed495fa0135e467f2793404023457a5f6cd53992"
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-400-normal.woff2",
+      "expectedSha256": "9dedc029ea208eec5cc04c6a289dd1ca30bc4adf78a4dc9c146ccbae87512b2e",
+      "actualSha256": "9dedc029ea208eec5cc04c6a289dd1ca30bc4adf78a4dc9c146ccbae87512b2e"
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-500-normal.woff2",
+      "expectedSha256": "08f5b82d26b140c763a2b466f20817a3bd0c7842815df49eb8503ab2211b9e7c",
+      "actualSha256": "08f5b82d26b140c763a2b466f20817a3bd0c7842815df49eb8503ab2211b9e7c"
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-700-normal.woff2",
+      "expectedSha256": "1b4fc136888d6c5ee65740aade6660f68bbc75c65bac663938c9ec50f07fe5af",
+      "actualSha256": "1b4fc136888d6c5ee65740aade6660f68bbc75c65bac663938c9ec50f07fe5af"
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-400-normal.woff2",
+      "expectedSha256": "fd102665a417494831fda4d0abb4a3c40df9ea0f16747d721766931d3e8e510c",
+      "actualSha256": "fd102665a417494831fda4d0abb4a3c40df9ea0f16747d721766931d3e8e510c"
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-500-normal.woff2",
+      "expectedSha256": "ccd127367d7e85fc7cb3d500b0d7858ad3e15e14734002c49b7194870b8d110c",
+      "actualSha256": "ccd127367d7e85fc7cb3d500b0d7858ad3e15e14734002c49b7194870b8d110c"
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-700-normal.woff2",
+      "expectedSha256": "c36ca4cfb80e2504582acdafad26bf842034b166cc9dcf5c6f77755b1816ea92",
+      "actualSha256": "c36ca4cfb80e2504582acdafad26bf842034b166cc9dcf5c6f77755b1816ea92"
+    },
+    {
+      "file": "assets/fonts/inter-latin-400-normal.woff2",
+      "expectedSha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+      "actualSha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+    },
+    {
+      "file": "assets/fonts/inter-latin-500-normal.woff2",
+      "expectedSha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+      "actualSha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "file": "assets/fonts/inter-latin-600-normal.woff2",
+      "expectedSha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+      "actualSha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-400-italic.woff2",
+      "expectedSha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de",
+      "actualSha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-400-normal.woff2",
+      "expectedSha256": "1fe9ad5d8b2ebd8ecb8fbd05bed1e3fdfa52dae3f1a04e1c219918442fe9394d",
+      "actualSha256": "1fe9ad5d8b2ebd8ecb8fbd05bed1e3fdfa52dae3f1a04e1c219918442fe9394d"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-500-italic.woff2",
+      "expectedSha256": "8f074624e50ab805878b26ab5f3e0fa360043d546c35b043947e96a5c7071970",
+      "actualSha256": "8f074624e50ab805878b26ab5f3e0fa360043d546c35b043947e96a5c7071970"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-500-normal.woff2",
+      "expectedSha256": "1e3429a2122b4171bf393c8de5c501820e17ca2074c498d7080e2326975d825c",
+      "actualSha256": "1e3429a2122b4171bf393c8de5c501820e17ca2074c498d7080e2326975d825c"
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-600-normal.woff2",
+      "expectedSha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd",
+      "actualSha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd"
+    },
+    {
+      "file": "assets/fonts/source-sans-3-regular.woff2",
+      "expectedSha256": "63de0da0cc05298e2e9c6e5cef506d8454ca665f6e668a99d94f51174b9256ed",
+      "actualSha256": "63de0da0cc05298e2e9c6e5cef506d8454ca665f6e668a99d94f51174b9256ed"
+    },
+    {
+      "file": "assets/fonts/source-sans-3-semibold.woff2",
+      "expectedSha256": "c248b0a178c362916db7c853ed640db77f184d19a0ed9fa5591fa707d3089635",
+      "actualSha256": "c248b0a178c362916db7c853ed640db77f184d19a0ed9fa5591fa707d3089635"
+    },
+    {
+      "file": "assets/fonts/Source-Sans-LICENSE.md",
+      "expectedSha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+      "actualSha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328"
+    },
+    {
+      "file": "assets/img/8ec6b8ffe0ad6e45e72f8592d6e537da.webp",
+      "expectedSha256": "dd3e99bf0be82cd2b6cdde0d592c5ed4d2076d7fd1318616c28cbfee17ff1892",
+      "actualSha256": "dd3e99bf0be82cd2b6cdde0d592c5ed4d2076d7fd1318616c28cbfee17ff1892"
+    },
+    {
+      "file": "assets/img/AP_ICON_512x512.webp",
+      "expectedSha256": "e6b8be6a573f12c188c11b4ab46053219168f68bbdc3a22dc980d39c34b77485",
+      "actualSha256": "e6b8be6a573f12c188c11b4ab46053219168f68bbdc3a22dc980d39c34b77485"
+    },
+    {
+      "file": "assets/img/ap.jpeg",
+      "expectedSha256": "50414589ac095d702b0a8f80afdc410f2ce5ad19c4e061c17ecbac098e8c7c5f",
+      "actualSha256": "50414589ac095d702b0a8f80afdc410f2ce5ad19c4e061c17ecbac098e8c7c5f"
+    },
+    {
+      "file": "assets/img/dr-tabansky-portrait-square-640.webp",
+      "expectedSha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47",
+      "actualSha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47"
+    },
+    {
+      "file": "assets/img/favicon.ico",
+      "expectedSha256": "00d4f3e66cc740a791057e43891383c0c58cb2f3d56134c42d01343c292f6766",
+      "actualSha256": "00d4f3e66cc740a791057e43891383c0c58cb2f3d56134c42d01343c292f6766"
+    },
+    {
+      "file": "assets/img/fi.webp",
+      "expectedSha256": "750f105aafb84e5434c328fc4d56e73a80cc837c494b8af8859f31dea984c4e0",
+      "actualSha256": "750f105aafb84e5434c328fc4d56e73a80cc837c494b8af8859f31dea984c4e0"
+    },
+    {
+      "file": "assets/img/icons/flag-il.svg",
+      "expectedSha256": "ccdf7c6d3169a1c896eec2dae041d525102fa56ee959b980c27d49f07d7f4820",
+      "actualSha256": "ccdf7c6d3169a1c896eec2dae041d525102fa56ee959b980c27d49f07d7f4820"
+    },
+    {
+      "file": "assets/img/icons/flag-ru.svg",
+      "expectedSha256": "031635ba959d3bfd9464d6d73affafa408e2f513b2d820461c00436b9698b7bf",
+      "actualSha256": "031635ba959d3bfd9464d6d73affafa408e2f513b2d820461c00436b9698b7bf"
+    },
+    {
+      "file": "assets/img/icons/flag-uk.svg",
+      "expectedSha256": "cff178e0a296b078b12a538fd064545ce30af4254019fe5175605b93061a3681",
+      "actualSha256": "cff178e0a296b078b12a538fd064545ce30af4254019fe5175605b93061a3681"
+    },
+    {
+      "file": "assets/img/icons/signal.svg",
+      "expectedSha256": "1d4e7f402f8fdd756ae833967b82da1e747fdc9454d0c27ce6a223664cfc14c4",
+      "actualSha256": "1d4e7f402f8fdd756ae833967b82da1e747fdc9454d0c27ce6a223664cfc14c4"
+    },
+    {
+      "file": "assets/img/icons/whatsapp.svg",
+      "expectedSha256": "7a3e0b9f874dc0ac532a2e84d7b66f262fc7b6fe9e24262ded7828516553a5d4",
+      "actualSha256": "7a3e0b9f874dc0ac532a2e84d7b66f262fc7b6fe9e24262ded7828516553a5d4"
+    },
+    {
+      "file": "assets/img/la rep.webp",
+      "expectedSha256": "9f0b8aa0141d7fb0fee33fbbe5e7457d3d0f53e18a43a3a6c93a9bf246a97812",
+      "actualSha256": "9f0b8aa0141d7fb0fee33fbbe5e7457d3d0f53e18a43a3a6c93a9bf246a97812"
+    },
+    {
+      "file": "assets/img/Lior Tabansky by Kfir Ziv 86_Rebua_edited.webp",
+      "expectedSha256": "343c73cf10d6a17d13092a327bb9b502a52584fd87b3146cf80ce32f9c1ddd53",
+      "actualSha256": "343c73cf10d6a17d13092a327bb9b502a52584fd87b3146cf80ce32f9c1ddd53"
+    },
+    {
+      "file": "assets/img/media/figaro-thumb.webp",
+      "expectedSha256": "666ed4254ca5108f94f01aeb2e795e7100749912d222d3dfc2ff35a0cd466112",
+      "actualSha256": "666ed4254ca5108f94f01aeb2e795e7100749912d222d3dfc2ff35a0cd466112"
+    },
+    {
+      "file": "assets/img/media/rai-thumb.webp",
+      "expectedSha256": "343247579c51733319c3b192c94205bce66d9b576404fc875502355514f60007",
+      "actualSha256": "343247579c51733319c3b192c94205bce66d9b576404fc875502355514f60007"
+    },
+    {
+      "file": "assets/img/media/repubblica-thumb.webp",
+      "expectedSha256": "66a86c63f562fec8a188dc769519c6898c3429bedc166dfa850ed1663789a14b",
+      "actualSha256": "66a86c63f562fec8a188dc769519c6898c3429bedc166dfa850ed1663789a14b"
+    },
+    {
+      "file": "assets/img/media/wapo-thumb.webp",
+      "expectedSha256": "7dde072cab181cb195461ad65d57c55934f0caf7c3a284bbb0d1a4be2656bd25",
+      "actualSha256": "7dde072cab181cb195461ad65d57c55934f0caf7c3a284bbb0d1a4be2656bd25"
+    },
+    {
+      "file": "assets/img/Newsweek_.webp",
+      "expectedSha256": "5e2826f1345cffb384ee40e807a18634e396d916bf4904f27af31b8551bf1ae0",
+      "actualSha256": "5e2826f1345cffb384ee40e807a18634e396d916bf4904f27af31b8551bf1ae0"
+    },
+    {
+      "file": "assets/img/NRC_Handelsblad.webp",
+      "expectedSha256": "ac33a2fc06d86041f609df229319ffee87541998cf4eead5ba477334ca1c3678",
+      "actualSha256": "ac33a2fc06d86041f609df229319ffee87541998cf4eead5ba477334ca1c3678"
+    },
+    {
+      "file": "assets/img/og-default.png",
+      "expectedSha256": "753cc5eb54705c7a43c37cc93f23a154dfd551300d53c2268ff66fe2f52e2e89",
+      "actualSha256": "753cc5eb54705c7a43c37cc93f23a154dfd551300d53c2268ff66fe2f52e2e89"
+    },
+    {
+      "file": "assets/img/rai-italia-radio-rai-television.jpg",
+      "expectedSha256": "7c6dc144a3d6aaccc252f095cb6c410a576db9c92bb262084fe4b5668f03dfd8",
+      "actualSha256": "7c6dc144a3d6aaccc252f095cb6c410a576db9c92bb262084fe4b5668f03dfd8"
+    },
+    {
+      "file": "assets/img/The National Interest_.webp",
+      "expectedSha256": "60b150b62b2e0a5664a7f4014bcedf9ccea2042a76d4582e68b3064a997468ca",
+      "actualSha256": "60b150b62b2e0a5664a7f4014bcedf9ccea2042a76d4582e68b3064a997468ca"
+    },
+    {
+      "file": "assets/img/Washington Post_Logo_4.webp",
+      "expectedSha256": "a17bb4c280ea876c6969671cdf9719311710b42b7f2fa59e74a196128f8ba827",
+      "actualSha256": "a17bb4c280ea876c6969671cdf9719311710b42b7f2fa59e74a196128f8ba827"
+    },
+    {
+      "file": "assets/js/guilloche.js",
+      "expectedSha256": "8892f0f8697670a04207c57eb930cd28671daf41d7fe2531ec5c606857dcab3a",
+      "actualSha256": "8892f0f8697670a04207c57eb930cd28671daf41d7fe2531ec5c606857dcab3a"
+    },
+    {
+      "file": "assets/js/home-pricing.js",
+      "expectedSha256": "aa2baf8882653d920f37a02d561ab0935fda96d9870c77a581e2b5c84af08e31",
+      "actualSha256": "aa2baf8882653d920f37a02d561ab0935fda96d9870c77a581e2b5c84af08e31"
+    },
+    {
+      "file": "assets/js/site.js",
+      "expectedSha256": "2632e8324e5f4acf07d12137894bc4095c26b0dbd93406f7c27720ac3bcc09e3",
+      "actualSha256": "2632e8324e5f4acf07d12137894bc4095c26b0dbd93406f7c27720ac3bcc09e3"
+    },
+    {
+      "file": "en/attorneys.html",
+      "expectedSha256": "6a23a30467bb57dd118bb9bf31192f450e65540c0cd377bd4f8c200efa5d504d",
+      "actualSha256": "6a23a30467bb57dd118bb9bf31192f450e65540c0cd377bd4f8c200efa5d504d"
+    },
+    {
+      "file": "en/business-dispute.html",
+      "expectedSha256": "1a5735804a88f0a05c457e02c4605722ce51ee8942ad70055eaa86cea946d067",
+      "actualSha256": "1a5735804a88f0a05c457e02c4605722ce51ee8942ad70055eaa86cea946d067"
+    },
+    {
+      "file": "en/faq.html",
+      "expectedSha256": "8761e49e5867539d17a62e5a10908d98f47ff114bcbb6a74c1992c3218a621f3",
+      "actualSha256": "8761e49e5867539d17a62e5a10908d98f47ff114bcbb6a74c1992c3218a621f3"
+    },
+    {
+      "file": "en/index.html",
+      "expectedSha256": "42ca217aef2a10db3bfdf88728365484dba951938a5b4e46c34a2c83945b8b74",
+      "actualSha256": "42ca217aef2a10db3bfdf88728365484dba951938a5b4e46c34a2c83945b8b74"
+    },
+    {
+      "file": "en/inheritance-clash.html",
+      "expectedSha256": "faa6a14433464dcce024e437b34df1928550d2cc06a1e1c8c5025c701550981a",
+      "actualSha256": "faa6a14433464dcce024e437b34df1928550d2cc06a1e1c8c5025c701550981a"
+    },
+    {
+      "file": "en/pricing.html",
+      "expectedSha256": "892a885df7fbe162dbf31d401fca043ff993cabb8e1ba80ce6ccfc184fad7595",
+      "actualSha256": "892a885df7fbe162dbf31d401fca043ff993cabb8e1ba80ce6ccfc184fad7595"
+    },
+    {
+      "file": "en/private-exposure-assessment.html",
+      "expectedSha256": "da3f620bd3066f4a701fcacf3511d2fa266651de9420af2c1c15358c438eff16",
+      "actualSha256": "da3f620bd3066f4a701fcacf3511d2fa266651de9420af2c1c15358c438eff16"
+    },
+    {
+      "file": "en/separation-divorce.html",
+      "expectedSha256": "ab807e3723353b9943ea1147985d703b4aeec40854f4c895f9f4e3f49766fd07",
+      "actualSha256": "ab807e3723353b9943ea1147985d703b4aeec40854f4c895f9f4e3f49766fd07"
+    },
+    {
+      "file": "en/they-know-something.html",
+      "expectedSha256": "bd4184bce48afa024a86cfb8d1f98e57e478078ba710b5e44290ae5253bab664",
+      "actualSha256": "bd4184bce48afa024a86cfb8d1f98e57e478078ba710b5e44290ae5253bab664"
+    },
+    {
+      "file": "en/what-happens-during-the-visit.html",
+      "expectedSha256": "41230b1086bf8d0a091f38fe53efb95a8b15abf8c3391cf38f4c761a427b25f5",
+      "actualSha256": "41230b1086bf8d0a091f38fe53efb95a8b15abf8c3391cf38f4c761a427b25f5"
+    },
+    {
+      "file": "en/why-us.html",
+      "expectedSha256": "83d5dc1d43a878791b5105f6470db0770f27556cedf0f37b9a93fa53d2fd3f7f",
+      "actualSha256": "83d5dc1d43a878791b5105f6470db0770f27556cedf0f37b9a93fa53d2fd3f7f"
+    }
+  ]
+}

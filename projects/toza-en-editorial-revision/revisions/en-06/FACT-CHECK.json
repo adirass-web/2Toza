@@ -1,0 +1,703 @@
+{
+  "purpose": "Mechanical source-integrity QA only; not independent editorial judgment or owner acceptance.",
+  "checkedAt": "2026-10-12T20:41:12.290Z",
+  "baselineHead": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "currentHead": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "normalization": "LF exact payload; trimEnd plus one final LF, as accepted-copy.exact(). No other candidate normalization.",
+  "scope": "Draft-only. No build, browser, template synchronization, acceptance or release action.",
+  "checks": [
+    {
+      "name": "HEAD remains baseline",
+      "status": "PASS"
+    },
+    {
+      "name": "accepted-copy.assertAuthority()",
+      "status": "PASS"
+    },
+    {
+      "name": "11 effective accepted routes",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: why-us",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: pricing",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: faq",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: what-happens-during-the-visit",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: index",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: separation-divorce",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: business-dispute",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: they-know-something",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: inheritance-clash",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: attorneys",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted route unchanged: private-exposure-assessment",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: source/TOZA_EN_COPY_REVIEW.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: revisions/en-02-v2/04-what-happens.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: revisions/en-04/02-pricing.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: approved/pa-01-v2-effective.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: approved/acceptance-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: approved/acceptance-amendment-2026-10-10.json",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: approved/acceptance-amendment-2026-10-10-round-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: approved/acceptance-amendment-2026-10-12-batch-a.json",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: revisions/en-02-v2/08-business-founder-dispute.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: revisions/en-02-v2/10-inheritance-conflict.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Protected source unchanged: revisions/en-02-v2/11-for-attorneys.md",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: exact baseline hash",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: saved baseline equals current accepted source",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: paragraph/block count unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: only nominated paragraph count",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: nominated source unique: A personal email may recover a business account.",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: exact reviewed replacement: A personal email may recover a business account.",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: nominated source unique: Personal Shield hardens the agreed settings",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: exact reviewed replacement: Personal Shield hardens the agreed settings",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: all other paragraphs byte-identical and same order",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: metadata exact",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: headings and order exact",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: headings match BASELINE inventory",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: link labels, destinations and order exact",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: numeric and written-number inventory exact",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: contact ending exact",
+      "status": "PASS"
+    },
+    {
+      "name": "business-dispute: at most five change bullets",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: exact baseline hash",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: saved baseline equals current accepted source",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: paragraph/block count unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: only nominated paragraph count",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: nominated source unique: An estate dispute can change the meaning",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: exact reviewed replacement: An estate dispute can change the meaning",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: all other paragraphs byte-identical and same order",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: metadata exact",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: headings and order exact",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: headings match BASELINE inventory",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: link labels, destinations and order exact",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: numeric and written-number inventory exact",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: contact ending exact",
+      "status": "PASS"
+    },
+    {
+      "name": "inheritance-clash: at most five change bullets",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: exact baseline hash",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: saved baseline equals current accepted source",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: paragraph/block count unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: only nominated paragraph count",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: nominated source unique: Dr. Lior Tabansky works directly with the client,",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: exact reviewed replacement: Dr. Lior Tabansky works directly with the client,",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: all other paragraphs byte-identical and same order",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: metadata exact",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: headings and order exact",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: headings match BASELINE inventory",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: link labels, destinations and order exact",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: numeric and written-number inventory exact",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: contact ending exact",
+      "status": "PASS"
+    },
+    {
+      "name": "attorneys: at most five change bullets",
+      "status": "PASS"
+    },
+    {
+      "name": "Exactly four nominated paragraph changes across batch",
+      "status": "PASS"
+    },
+    {
+      "name": "Owner packet contains exact eight before/after excerpts in page order",
+      "status": "PASS"
+    },
+    {
+      "name": "Owner packet paragraph counts match 2 / 1 / 1",
+      "status": "PASS"
+    },
+    {
+      "name": "Owner packet links complete candidate: 01-BUSINESS-CANDIDATE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Owner packet links complete candidate: 02-INHERITANCE-CANDIDATE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Owner packet links complete candidate: 03-ATTORNEYS-CANDIDATE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "Business full-service facts retained; paragraph is intentionally NOT byte-identical",
+      "status": "PASS"
+    },
+    {
+      "name": "Only EN-06 artifacts and authorized decision delta changed",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "name": "No production/templates/assets/scripts/workflows/manifests changed vs baseline",
+      "status": "PASS",
+      "details": []
+    }
+  ],
+  "candidatePages": [
+    {
+      "route": "business-dispute",
+      "file": "01-BUSINESS-CANDIDATE.md",
+      "source": "revisions/en-02-v2/08-business-founder-dispute.md",
+      "baselineSha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350",
+      "candidateSha256": "9b469754dfd77fd463aab82e8f87aacf6e90b18dd5c85d41e05c2496e6706c82",
+      "blockCount": 37,
+      "changedParagraphCount": 2,
+      "unchangedBlockCount": 35,
+      "changedUnits": [
+        {
+          "blockIndex": 9,
+          "before": "A personal email may recover a business account. A phone may authenticate both private and work services. A folder shared during a partnership may still reveal documents after the relationship changes.",
+          "after": "A personal email may recover a business account. A phone may authenticate both private and work services. A folder shared during a partnership may still reveal confidential documents or plans you intend to keep private after the relationship changes."
+        },
+        {
+          "blockIndex": 25,
+          "before": "Personal Shield hardens the agreed settings and access arrangements around your personal and professional circumstances, with practical security habits, teaching and verification. You learn how to manage the changed setup. Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.",
+          "after": "Personal Shield hardens the agreed settings and access arrangements around your personal and professional circumstances, with practical security habits, teaching and verification. The work can include closing unwanted shared access and strengthening sign-in and recovery. You learn how to manage the changed setup. Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service."
+        }
+      ],
+      "metadataUnchanged": true,
+      "headings": [
+        "## Metadata",
+        "## Hero",
+        "# When business interests diverge, ordinary access can become commercial leverage.",
+        "## See where personal and business access still meet",
+        "## Understand what a change will affect before you approve it",
+        "## Put the technical questions in experienced hands",
+        "## Personal work, with clear authority",
+        "## Talk through the next step privately. {#contact}"
+      ],
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Initial visit details",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ],
+      "numericInventory": [
+        "four",
+        "₪3,600",
+        "one",
+        "one"
+      ],
+      "changeBulletCount": 3
+    },
+    {
+      "route": "inheritance-clash",
+      "file": "02-INHERITANCE-CANDIDATE.md",
+      "source": "revisions/en-02-v2/10-inheritance-conflict.md",
+      "baselineSha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f",
+      "candidateSha256": "cca5d87db669ebf86ca1a8267604e6e5e9a5b481bc11af0a3ba265f16bb63b34",
+      "blockCount": 39,
+      "changedParagraphCount": 1,
+      "unchangedBlockCount": 38,
+      "changedUnits": [
+        {
+          "blockIndex": 9,
+          "before": "An estate dispute can change the meaning of arrangements made years earlier. Help with an account, a shared cloud folder or a family recovery contact may still connect someone else to your private information.",
+          "after": "An estate dispute can change the meaning of arrangements made years earlier. Help with an account, a shared cloud folder or a family recovery contact may still connect someone else to your private correspondence or financial information."
+        }
+      ],
+      "metadataUnchanged": true,
+      "headings": [
+        "## Metadata",
+        "## Hero",
+        "# Family access is still access when trust breaks.",
+        "## Access shared in good faith can still matter",
+        "## Understand the connections before changing them",
+        "## Work through your own access with expert help",
+        "## Make deliberate choices about future access",
+        "## Your information and your attorney",
+        "## Start with a private conversation about what you need. {#contact}"
+      ],
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "Information for attorneys",
+          "href": "/en/attorneys.html"
+        }
+      ],
+      "numericInventory": [
+        "₪3,600",
+        "one",
+        "four",
+        "₪3,600",
+        "one",
+        "one"
+      ],
+      "changeBulletCount": 3
+    },
+    {
+      "route": "attorneys",
+      "file": "03-ATTORNEYS-CANDIDATE.md",
+      "source": "revisions/en-02-v2/11-for-attorneys.md",
+      "baselineSha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21",
+      "candidateSha256": "2d27f1dcc9ce69bee3faa1573e0243dc555e6607e226761195eae2e8f9762894",
+      "blockCount": 39,
+      "changedParagraphCount": 1,
+      "unchangedBlockCount": 38,
+      "changedUnits": [
+        {
+          "blockIndex": 10,
+          "before": "Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client has someone to work through the technical questions with them and explain what they can do next.",
+          "after": "Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client gains a clearer basis for deciding which technical changes to authorize."
+        }
+      ],
+      "metadataUnchanged": true,
+      "headings": [
+        "## Metadata",
+        "## Hero",
+        "# When your client's digital life may become leverage.",
+        "## When a referral may help",
+        "## Work starts with the client's authority",
+        "## Hands-on inspection, diagnosis and urgent first aid",
+        "## A setup fitted to the client's circumstances",
+        "## Coordinate consequential changes",
+        "## A practical summary, with clear limits",
+        "## Discuss whether Toza fits your client's situation. {#contact}"
+      ],
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "What the initial visit includes",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Full services, prices and credit conditions",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        }
+      ],
+      "numericInventory": [
+        "four",
+        "₪3,600",
+        "one",
+        "one",
+        "four"
+      ],
+      "changeBulletCount": 3
+    }
+  ],
+  "effectiveAcceptedRoutes": [
+    {
+      "route": "why-us",
+      "baselineSha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "currentSha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "unchanged": true
+    },
+    {
+      "route": "pricing",
+      "baselineSha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+      "currentSha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+      "unchanged": true
+    },
+    {
+      "route": "faq",
+      "baselineSha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f",
+      "currentSha256": "cbeb7e896b6e91d32c8f44b98159e8f077e24180e9da6bbee7f8819f383c6a2f",
+      "unchanged": true
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "baselineSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "currentSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "unchanged": true
+    },
+    {
+      "route": "index",
+      "baselineSha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+      "currentSha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+      "unchanged": true
+    },
+    {
+      "route": "separation-divorce",
+      "baselineSha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+      "currentSha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+      "unchanged": true
+    },
+    {
+      "route": "business-dispute",
+      "baselineSha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350",
+      "currentSha256": "fc0712aa6850838931ed38ee7d69db816514b377b182d9a0af9dc2e2a5b20350",
+      "unchanged": true
+    },
+    {
+      "route": "they-know-something",
+      "baselineSha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+      "currentSha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+      "unchanged": true
+    },
+    {
+      "route": "inheritance-clash",
+      "baselineSha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f",
+      "currentSha256": "8447b552857a517735da5d2b03f426c09fe5be818b38e0e849f9b75a3e477b7f",
+      "unchanged": true
+    },
+    {
+      "route": "attorneys",
+      "baselineSha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21",
+      "currentSha256": "dee2f5766ca3c5887973c39751849b1a0a02570006cbd9ea0264f7c38566aa21",
+      "unchanged": true
+    },
+    {
+      "route": "private-exposure-assessment",
+      "baselineSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "currentSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "unchanged": true
+    }
+  ],
+  "protectedSources": [
+    {
+      "path": "source/TOZA_EN_COPY_REVIEW.md",
+      "baselineSha256": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc",
+      "currentSha256": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc",
+      "unchanged": true
+    },
+    {
+      "path": "revisions/en-02-v2/04-what-happens.md",
+      "baselineSha256": "38cc8545ead297a4bbca46f8235ae1669047b4884035d01e90f8fa896170d044",
+      "currentSha256": "38cc8545ead297a4bbca46f8235ae1669047b4884035d01e90f8fa896170d044",
+      "unchanged": true
+    },
+    {
+      "path": "revisions/en-04/02-pricing.md",
+      "baselineSha256": "09e09bcb8564448fba57825071731712516c89f1119676fd3fd2d4b64e38602b",
+      "currentSha256": "09e09bcb8564448fba57825071731712516c89f1119676fd3fd2d4b64e38602b",
+      "unchanged": true
+    },
+    {
+      "path": "approved/pa-01-v2-effective.md",
+      "baselineSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "currentSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "unchanged": true
+    },
+    {
+      "path": "revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+      "baselineSha256": "08a813ea62c3bb00976159261412043e749a930038931ebd7203bd1419848b4b",
+      "currentSha256": "08a813ea62c3bb00976159261412043e749a930038931ebd7203bd1419848b4b",
+      "unchanged": true
+    },
+    {
+      "path": "approved/acceptance-manifest.json",
+      "baselineSha256": "f4398102602975d0d54ac2c4311bc015954ed5d69e98a90314ec9ca2d3126577",
+      "currentSha256": "f4398102602975d0d54ac2c4311bc015954ed5d69e98a90314ec9ca2d3126577",
+      "unchanged": true
+    },
+    {
+      "path": "approved/acceptance-amendment-2026-10-10.json",
+      "baselineSha256": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5",
+      "currentSha256": "f0aed1c22880ffb2bbea5ad9733825665de2c80bdcb32a3eea8b1507da4870d5",
+      "unchanged": true
+    },
+    {
+      "path": "approved/acceptance-amendment-2026-10-10-round-02.json",
+      "baselineSha256": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01",
+      "currentSha256": "f31a108dad9755f3159a00cc699a8f106cd6b411772c05a37ce76fc9433dbd01",
+      "unchanged": true
+    },
+    {
+      "path": "approved/acceptance-amendment-2026-10-12-batch-a.json",
+      "baselineSha256": "25119ca0bcaa02e487e0b75d61c14225c2e05d9b4ad3269a25d4a96cc831dca0",
+      "currentSha256": "25119ca0bcaa02e487e0b75d61c14225c2e05d9b4ad3269a25d4a96cc831dca0",
+      "unchanged": true
+    },
+    {
+      "path": "revisions/en-02-v2/08-business-founder-dispute.md",
+      "baselineSha256": "703dfd52fed348649d790f12a484f6d0cbe6ec845eae43787440151181cbcab3",
+      "currentSha256": "703dfd52fed348649d790f12a484f6d0cbe6ec845eae43787440151181cbcab3",
+      "unchanged": true
+    },
+    {
+      "path": "revisions/en-02-v2/10-inheritance-conflict.md",
+      "baselineSha256": "7d333a77c6f141e7039b2048b5f6dc46c46b4ab20ea0a91ab47c1452a0d5aab2",
+      "currentSha256": "7d333a77c6f141e7039b2048b5f6dc46c46b4ab20ea0a91ab47c1452a0d5aab2",
+      "unchanged": true
+    },
+    {
+      "path": "revisions/en-02-v2/11-for-attorneys.md",
+      "baselineSha256": "1df715d9f2cc631634699b27559f81bb2595fe0828da8d0e998c29533eacdb6d",
+      "currentSha256": "1df715d9f2cc631634699b27559f81bb2595fe0828da8d0e998c29533eacdb6d",
+      "unchanged": true
+    }
+  ],
+  "businessFullServiceFactPreservation": {
+    "method": "Removing only the nominated illustrative action sentence reproduces the complete original paragraph exactly.",
+    "retained": [
+      "agreed settings/access arrangements",
+      "personal and professional circumstances",
+      "practical security habits",
+      "teaching and verification",
+      "learning resulting setup",
+      "separate scope and price decision",
+      "different agreed service for group or unusually complex situation"
+    ],
+    "addedSentence": "The work can include closing unwanted shared access and strengthening sign-in and recovery.",
+    "paragraphByteIdentical": false
+  },
+  "repositoryScope": {
+    "trackedChanges": [
+      "projects/toza-en-editorial-revision/state/EN-REVISION-DECISION-DELTA.md"
+    ],
+    "untrackedFiles": [
+      "projects/toza-en-editorial-revision/revisions/en-06/00-BRIEF.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/01-BUSINESS-CANDIDATE.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/02-INHERITANCE-CANDIDATE.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/03-ATTORNEYS-CANDIDATE.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/04-EDITORIAL-REVIEW.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/05-INDEPENDENT-REVIEW.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/06-OWNER-REVIEW.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/BASELINE.json",
+      "projects/toza-en-editorial-revision/revisions/en-06/FACT-CHECK.json",
+      "projects/toza-en-editorial-revision/revisions/en-06/check-candidates.cjs",
+      "projects/toza-en-editorial-revision/revisions/en-06/exact-baseline/08-business-founder-dispute.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/exact-baseline/10-inheritance-conflict.md",
+      "projects/toza-en-editorial-revision/revisions/en-06/exact-baseline/11-for-attorneys.md"
+    ],
+    "allowedDecisionDelta": "projects/toza-en-editorial-revision/state/EN-REVISION-DECISION-DELTA.md",
+    "unexpectedChanges": [],
+    "prohibitedChanges": []
+  },
+  "status": "PASS",
+  "summary": {
+    "checks": 79,
+    "passed": 79,
+    "failed": 0,
+    "changedParagraphs": 4,
+    "effectiveAcceptedRoutesUnchanged": 11
+  }
+}

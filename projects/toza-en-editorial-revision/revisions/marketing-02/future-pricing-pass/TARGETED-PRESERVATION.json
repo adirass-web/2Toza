@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "changes": [
+    "Additional delivery matrix",
+    "Personal Shield typical hours; day inclusion retained",
+    "Urgent arrival2\u20134h; existing maximum/clock/fees retained",
+    "Shorter Pricing closing with FAQ guidance links"
+  ],
+  "allOtherPricingCopyReconstructsExactly": true,
+  "currentScopeTableExact": true,
+  "originalFourFilesStillExact": true,
+  "candidateSha256": "e416b43f5936aaf448dca0966a2bbbec337ffb491f2d46179dfb2cd4c1e74a8e",
+  "hardeningExpansionApplied": false
+}

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-10T20:45:37.743Z",
+  "method": "Source integrity checks supplement semantic editorial/adversarial review; not conversion evidence",
+  "unchangedPreviewRepository": true,
+  "pr54LocalHead": "c5e7e243764605463cd0b6e05fa33b115240729d",
+  "pages": [
+    {
+      "page": "home",
+      "baselineWords": 930,
+      "candidateWords": 935,
+      "delta": 5,
+      "exactBlockSha256": "a4bbe8e7eb5f4a84b98945eb8e3d9537fbd8ccca8745e04363851c1fdd3b5291",
+      "checks": "PASS"
+    },
+    {
+      "page": "pricing",
+      "baselineWords": 1724,
+      "candidateWords": 1722,
+      "delta": -2,
+      "exactBlockSha256": "75861311a5606d19d90604b88bc78f2bfa2218a29ed3a2e62660b4e8f17ea7b5",
+      "checks": "PASS"
+    },
+    {
+      "page": "separation",
+      "baselineWords": 732,
+      "candidateWords": 735,
+      "delta": 3,
+      "exactBlockSha256": "f1f2e60652e052ada7bb4933a5f2fea3af95ab920579dcf9d3fc568983a8a613",
+      "checks": "PASS"
+    },
+    {
+      "page": "they-know",
+      "baselineWords": 798,
+      "candidateWords": 737,
+      "delta": -61,
+      "exactBlockSha256": "3951c503e10363b0b2bbb49c76d89ea473431977f69b95f9cf82f5af3897af7c",
+      "checks": "PASS"
+    }
+  ]
+}

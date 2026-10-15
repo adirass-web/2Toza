@@ -1,0 +1,50 @@
+{
+  "baseCommit": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "pages": [
+    {
+      "route": "index",
+      "path": "_site/en/index.html",
+      "sha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0"
+    },
+    {
+      "route": "pricing",
+      "path": "_site/en/pricing.html",
+      "sha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "_site/en/separation-divorce.html",
+      "sha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520"
+    },
+    {
+      "route": "they-know-something",
+      "path": "_site/en/they-know-something.html",
+      "sha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a"
+    },
+    {
+      "route": "business-dispute",
+      "path": "_site/en/business-dispute.html",
+      "sha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "_site/en/inheritance-clash.html",
+      "sha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7"
+    },
+    {
+      "route": "attorneys",
+      "path": "_site/en/attorneys.html",
+      "sha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430"
+    },
+    {
+      "route": "faq",
+      "path": "_site/en/faq.html",
+      "sha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "_site/en/private-exposure-assessment.html",
+      "sha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae"
+    }
+  ]
+}

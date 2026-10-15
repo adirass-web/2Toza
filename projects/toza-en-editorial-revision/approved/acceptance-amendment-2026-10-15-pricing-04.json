@@ -1,0 +1,27 @@
+{
+  "acceptedOn": "2026-10-15",
+  "authority": "Owner: ok deploy it @GitHub then clean up the repo; later will provide line edits for next version. Exact Pricing-04 owner packet and final rendered proposal accepted. D-055.",
+  "baseCommit": "b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47",
+  "historicalManifest": "approved/acceptance-manifest.json",
+  "previousAmendment": "approved/acceptance-amendment-2026-10-14-marketing-02.json",
+  "normalization": "Complete frozen raw Markdown; CRLF to LF only. No prose or metadata revision.",
+  "entries": [
+    {
+      "route": "pricing",
+      "path": "revisions/pricing-04/pricing.md",
+      "format": "raw-markdown",
+      "sha256": "7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25"
+    }
+  ],
+  "visualCopy": {
+    "path": "revisions/pricing-04/VISUAL-COPY.md",
+    "sha256": "b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d"
+  },
+  "reviewedPresentation": {
+    "htmlSha256": "5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f",
+    "cssSha256": "a33e565682c3e63ba1053ff5e1146d143da9b49a087190f81c89e861e7bedf10",
+    "snapshot": "revisions/pricing-04/OWNER-REVIEW-SNAPSHOT.json"
+  },
+  "controlledLabel": "Yubico names the included compatible physical security keys. No model, connector, protocol or capability is specified.",
+  "releaseAuthorization": "Integrate, verify, publish through GitHub, verify production, then tidy repository state. Later wording edits belong to a subsequent version. Preserve other page copy and the protected Assessment."
+}

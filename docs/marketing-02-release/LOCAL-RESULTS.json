@@ -1,0 +1,21 @@
+{
+  "baseCommit": "81a11a12c49eefd124c54bd2da227e0f815b083b",
+  "scope": [
+    "index",
+    "why-us",
+    "pricing"
+  ],
+  "exactCopyAndOrder": "PASS",
+  "historicalApprovals": "PASS",
+  "unchangedPriorPublicFiles": 75,
+  "unchangedSupportingPages": 8,
+  "browserTestsPassed": 56,
+  "browserFailures": 0,
+  "pagesRuntimeChecksPassed": 78,
+  "auditPolicyTestsPassed": 6,
+  "buildAudit": "PASS; previously documented upstream residuals unchanged",
+  "futureComparisonApplied": false,
+  "hardeningExpansionApplied": false,
+  "productionPublished": false,
+  "historicalPresentationRegressionsPassed": 4
+}

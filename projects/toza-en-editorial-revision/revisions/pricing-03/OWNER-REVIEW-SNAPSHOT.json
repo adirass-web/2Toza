@@ -1,0 +1,11 @@
+{
+  "status": "READY FOR OWNER REVIEW",
+  "publicationApproved": false,
+  "publishedRelease": "b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47",
+  "pricingSha256": "6ea8ed8951d2673048300b4dca3632c4ac23c97a3be73c0659bdb8f9ab299461",
+  "diagramSha256": "dd238e0735c06726feaae309d480ba56c39be694c69cababf96907736e7d64af",
+  "htmlSha256": "cb543c8d6e790152b32566cabdc522917ad21853cc7aabff5cf7390f33c0e816",
+  "cssSha256": "bf4af79166269a1ffc70cd5f62d51501a0d13c2eac1c75379ee818aeaca98a95",
+  "referenceScriptSha256": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab",
+  "ownerPacketSha256": "76262e999152245310c4f39f3ea9459a368b1060583aa91ec94d32eb4fd7288d"
+}

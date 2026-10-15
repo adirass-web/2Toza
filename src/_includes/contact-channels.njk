@@ -1,0 +1,5 @@
+{% set channels = i18n[locale] %}
+<nav class="contact-channels" aria-label="{{ channels.footer_cta_nav_label }}">
+  <a class="btn" href="{{ channels.wa_url }}" target="_blank" rel="noopener noreferrer">{{ channels.wa_label }}</a>
+  <a class="btn ghost" href="{{ channels.signal_url }}" target="_blank" rel="noopener noreferrer">{{ channels.signal_label }}</a>
+</nav>

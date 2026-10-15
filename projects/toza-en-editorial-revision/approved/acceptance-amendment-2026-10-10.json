@@ -1,0 +1,19 @@
+{
+  "acceptedOn": "2026-10-10",
+  "authority": "Owner: approved, go build. D-029. Main reviewed Home and Pricing versions; alternatives not selected.",
+  "baseCommit": "c5e7e243764605463cd0b6e05fa33b115240729d",
+  "historicalManifest": "approved/acceptance-manifest.json",
+  "normalization": "CRLF to LF; exact-copy block excludes packet wrapper; trailing whitespace at block end trimmed, one final LF. No other normalization.",
+  "entries": [
+    {
+      "route": "index",
+      "path": "revisions/en-03/06-home.md",
+      "sha256": "0f64c92d071c114c8c5726871976ad1cf655cb18f9586a0dcdde0935f37f2374"
+    },
+    {
+      "route": "pricing",
+      "path": "revisions/en-03/02-pricing.md",
+      "sha256": "f2d504a3066c1fdbfb5683e313cef4bbbbf563ac2175536f61b1e023770be62c"
+    }
+  ]
+}

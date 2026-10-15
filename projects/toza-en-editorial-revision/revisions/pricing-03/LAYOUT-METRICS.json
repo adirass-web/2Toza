@@ -1,0 +1,65 @@
+{
+  "method": "Same viewport/fonts-ready, initial collapsed state; main height, full and visibly rendered text-node words excluding closed disclosure content; layout metrics, not customer comprehension",
+  "cases": [
+    {
+      "variant": "published",
+      "width": 1440,
+      "mainHeight": 7489.359375,
+      "documentHeight": 7737,
+      "visibleMainWords": 1593,
+      "fullMainWords": 1812,
+      "initialOpenDetails": 0,
+      "overflow": 0
+    },
+    {
+      "variant": "proposal",
+      "width": 1440,
+      "mainHeight": 3731.671875,
+      "documentHeight": 3963,
+      "visibleMainWords": 748,
+      "fullMainWords": 1413,
+      "initialOpenDetails": 0,
+      "overflow": 0
+    },
+    {
+      "variant": "published",
+      "width": 390,
+      "mainHeight": 11893.625,
+      "documentHeight": 12303,
+      "visibleMainWords": 1690,
+      "fullMainWords": 1812,
+      "initialOpenDetails": 0,
+      "overflow": 0
+    },
+    {
+      "variant": "proposal",
+      "width": 390,
+      "mainHeight": 6056.078125,
+      "documentHeight": 6473,
+      "visibleMainWords": 748,
+      "fullMainWords": 1413,
+      "initialOpenDetails": 0,
+      "overflow": 0
+    },
+    {
+      "variant": "published",
+      "width": 320,
+      "mainHeight": 14687.390625,
+      "documentHeight": 15116,
+      "visibleMainWords": 1690,
+      "fullMainWords": 1812,
+      "initialOpenDetails": 0,
+      "overflow": 0
+    },
+    {
+      "variant": "proposal",
+      "width": 320,
+      "mainHeight": 7002.625,
+      "documentHeight": 7440,
+      "visibleMainWords": 748,
+      "fullMainWords": 1413,
+      "initialOpenDetails": 0,
+      "overflow": 0
+    }
+  ]
+}

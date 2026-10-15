@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8798/_preview/",
+  "images": [
+    {
+      "src": "before-business-desktop-target.png",
+      "loaded": true
+    },
+    {
+      "src": "after-business-desktop-target.png",
+      "loaded": true
+    },
+    {
+      "src": "before-business-mobile-target.png",
+      "loaded": true
+    },
+    {
+      "src": "after-business-mobile-target.png",
+      "loaded": true
+    },
+    {
+      "src": "before-home-desktop-target.png",
+      "loaded": true
+    },
+    {
+      "src": "after-home-desktop-target.png",
+      "loaded": true
+    },
+    {
+      "src": "before-home-mobile-target.png",
+      "loaded": true
+    },
+    {
+      "src": "after-home-mobile-target.png",
+      "loaded": true
+    }
+  ],
+  "keyboard": [
+    {
+      "name": "business",
+      "focus": {
+        "text": "Business",
+        "href": "#business",
+        "visible": true,
+        "outline": "solid"
+      }
+    },
+    {
+      "name": "home",
+      "focus": {
+        "text": "Home",
+        "href": "#home",
+        "visible": true,
+        "outline": "solid"
+      }
+    }
+  ],
+  "widths": [
+    {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "errors": []
+}

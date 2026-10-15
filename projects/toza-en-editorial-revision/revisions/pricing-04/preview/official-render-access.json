@@ -1,0 +1,21 @@
+{
+  "status": "external-render-attempt",
+  "usesConfiguredProxy": true,
+  "results": [
+    {
+      "name": "1password",
+      "url": "https://1password.com/pricing/personal",
+      "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://1password.com/pricing/personal"
+    },
+    {
+      "name": "bitwarden",
+      "url": "https://bitwarden.com/pricing/",
+      "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://bitwarden.com/pricing/"
+    },
+    {
+      "name": "adobe",
+      "url": "https://www.adobe.com/creativecloud/photography/compare-plans.html",
+      "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.adobe.com/creativecloud/photography/compare-plans.html"
+    }
+  ]
+}

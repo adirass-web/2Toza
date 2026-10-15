@@ -1,0 +1,33 @@
+# Allow all AI search bots explicitly so they can cite this site
+# These are search/answer bots — not training harvesters
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block Common Crawl — used for bulk AI training data, not for search citation
+User-agent: CCBot
+Disallow: /
+
+# Everyone else
+User-agent: *
+Allow: /
+
+Sitemap: https://toza-site.pages.dev/sitemap.xml

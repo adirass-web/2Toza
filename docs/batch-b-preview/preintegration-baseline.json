@@ -1,0 +1,73 @@
+{
+  "baseCommit": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "capturedAt": "2026-10-12T20:47:54.377Z",
+  "phase": "Before Batch B loader integration; fresh clean build",
+  "pages": [
+    {
+      "route": "why-us",
+      "path": "_site/en/why-us.html",
+      "snapshot": "docs/batch-b-preview/preintegration/why-us.html",
+      "sha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2"
+    },
+    {
+      "route": "pricing",
+      "path": "_site/en/pricing.html",
+      "snapshot": "docs/batch-b-preview/preintegration/pricing.html",
+      "sha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c"
+    },
+    {
+      "route": "faq",
+      "path": "_site/en/faq.html",
+      "snapshot": "docs/batch-b-preview/preintegration/faq.html",
+      "sha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "_site/en/what-happens-during-the-visit.html",
+      "snapshot": "docs/batch-b-preview/preintegration/what-happens-during-the-visit.html",
+      "sha256": "61d576e0ac6decc365e7f5aa7da42fbdacc040c4bf4251fdf6133129e5a7b7d9"
+    },
+    {
+      "route": "index",
+      "path": "_site/en/index.html",
+      "snapshot": "docs/batch-b-preview/preintegration/index.html",
+      "sha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "_site/en/separation-divorce.html",
+      "snapshot": "docs/batch-b-preview/preintegration/separation-divorce.html",
+      "sha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520"
+    },
+    {
+      "route": "business-dispute",
+      "path": "_site/en/business-dispute.html",
+      "snapshot": "docs/batch-b-preview/preintegration/business-dispute.html",
+      "sha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d"
+    },
+    {
+      "route": "they-know-something",
+      "path": "_site/en/they-know-something.html",
+      "snapshot": "docs/batch-b-preview/preintegration/they-know-something.html",
+      "sha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "_site/en/inheritance-clash.html",
+      "snapshot": "docs/batch-b-preview/preintegration/inheritance-clash.html",
+      "sha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7"
+    },
+    {
+      "route": "attorneys",
+      "path": "_site/en/attorneys.html",
+      "snapshot": "docs/batch-b-preview/preintegration/attorneys.html",
+      "sha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "_site/en/private-exposure-assessment.html",
+      "snapshot": "docs/batch-b-preview/preintegration/private-exposure-assessment.html",
+      "sha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae"
+    }
+  ]
+}

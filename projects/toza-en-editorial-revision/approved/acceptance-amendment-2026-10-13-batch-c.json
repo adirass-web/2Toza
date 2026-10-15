@@ -1,0 +1,21 @@
+{
+  "acceptedOn": "2026-10-13",
+  "authority": "Owner: approve. proceed. D-038, following the complete reviewed Batch C candidate packet.",
+  "baseCommit": "9b128422c55d3a91f71bc7d2f241809460429245",
+  "historicalManifest": "approved/acceptance-manifest.json",
+  "previousAmendment": "approved/acceptance-amendment-2026-10-12-batch-b.json",
+  "normalization": "CRLF to LF; exact-copy block excludes packet wrapper; trailing whitespace at block end trimmed, one final LF. No other normalization.",
+  "scope": "Two approved guidance-link additions, including unchanged complete metadata/body; local integration and QA only. Process stage-map content remains unchanged. No publication authorization.",
+  "entries": [
+    {
+      "route": "faq",
+      "path": "revisions/en-07/04-FAQ-CANDIDATE.md",
+      "sha256": "1128e453d6edd13c5c9cbca026239b8c2176fbcce64db686d0b495257e1e5eea"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "revisions/en-07/05-PROCESS-CANDIDATE.md",
+      "sha256": "55a6c0e3c2c26475fd843f4f822a6ff77c6798e14af28b6f821ea40d638fe8dd"
+    }
+  ]
+}

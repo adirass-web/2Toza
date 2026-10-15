@@ -1,0 +1,734 @@
+{
+  "status": "PASS",
+  "mode": "production",
+  "origin": "https://toza-site.pages.dev",
+  "release": "91e52ee8a8b6d9191a609c5353ac068445bc7147",
+  "checkedHead": "91e52ee8a8b6d9191a609c5353ac068445bc7147",
+  "htmlPages": 11,
+  "assetFiles": 61,
+  "routeChecks": 78,
+  "robotsVerified": true,
+  "normalization": "Only the existing exact pinned Cloudflare insertion, if present; every other HTML byte and raw asset exact.",
+  "checks": [
+    {
+      "file": "assets/brand/toza/toza-logo-ink.svg",
+      "rawSha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77",
+      "buildSha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77",
+      "comparedSha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-logo-reverse.svg",
+      "rawSha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26",
+      "buildSha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26",
+      "comparedSha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-ink.svg",
+      "rawSha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570",
+      "buildSha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570",
+      "comparedSha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-micro-ink.svg",
+      "rawSha256": "75a8d6edb23b3a247c4ce11e078570ed9ea18ac4d4400a311c0e0b9c007fbe57",
+      "buildSha256": "75a8d6edb23b3a247c4ce11e078570ed9ea18ac4d4400a311c0e0b9c007fbe57",
+      "comparedSha256": "75a8d6edb23b3a247c4ce11e078570ed9ea18ac4d4400a311c0e0b9c007fbe57",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-micro-reverse.svg",
+      "rawSha256": "32613bc8b3586958d8243b26e32124fece1cbb16ee3e8e7c3bcf541b01153b93",
+      "buildSha256": "32613bc8b3586958d8243b26e32124fece1cbb16ee3e8e7c3bcf541b01153b93",
+      "comparedSha256": "32613bc8b3586958d8243b26e32124fece1cbb16ee3e8e7c3bcf541b01153b93",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-mark-reverse.svg",
+      "rawSha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d",
+      "buildSha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d",
+      "comparedSha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-wordmark-ink.svg",
+      "rawSha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f",
+      "buildSha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f",
+      "comparedSha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/brand/toza/toza-wordmark-reverse.svg",
+      "rawSha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553",
+      "buildSha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553",
+      "comparedSha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/clear-practice.css",
+      "rawSha256": "5caf68dd5e2930c8fee179b4f6047222e108f4f186d1edff209cc965d64f050c",
+      "buildSha256": "5caf68dd5e2930c8fee179b4f6047222e108f4f186d1edff209cc965d64f050c",
+      "comparedSha256": "5caf68dd5e2930c8fee179b4f6047222e108f4f186d1edff209cc965d64f050c",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/fonts.css",
+      "rawSha256": "d8b7129338ab3fc2f9a63f0a9bbb7fe521367f0155bdd7d3a7504d27d4487192",
+      "buildSha256": "d8b7129338ab3fc2f9a63f0a9bbb7fe521367f0155bdd7d3a7504d27d4487192",
+      "comparedSha256": "d8b7129338ab3fc2f9a63f0a9bbb7fe521367f0155bdd7d3a7504d27d4487192",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/footer-compact.css",
+      "rawSha256": "229fe9b02973928954a141eecb0ddbd0b2c57b35ada566c6972e1f86d4f4b4f0",
+      "buildSha256": "229fe9b02973928954a141eecb0ddbd0b2c57b35ada566c6972e1f86d4f4b4f0",
+      "comparedSha256": "229fe9b02973928954a141eecb0ddbd0b2c57b35ada566c6972e1f86d4f4b4f0",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/home-pricing.css",
+      "rawSha256": "ad50f8e0ea494a2af63d62a9c20bcdea0b9b01c0fd7b6c98fe2c6e4157b78e02",
+      "buildSha256": "ad50f8e0ea494a2af63d62a9c20bcdea0b9b01c0fd7b6c98fe2c6e4157b78e02",
+      "comparedSha256": "ad50f8e0ea494a2af63d62a9c20bcdea0b9b01c0fd7b6c98fe2c6e4157b78e02",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/marketing-02.css",
+      "rawSha256": "cc2bf42ea3933e3eeb34a1b4825130e0cf49c11ce0bb0c80f44b1ca5dacb00c1",
+      "buildSha256": "cc2bf42ea3933e3eeb34a1b4825130e0cf49c11ce0bb0c80f44b1ca5dacb00c1",
+      "comparedSha256": "cc2bf42ea3933e3eeb34a1b4825130e0cf49c11ce0bb0c80f44b1ca5dacb00c1",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/pricing-04.css",
+      "rawSha256": "e07425694d14c839df5a7cd5e5bb6da978d8b5cc6f57e33ce91c28666c8fbf91",
+      "buildSha256": "e07425694d14c839df5a7cd5e5bb6da978d8b5cc6f57e33ce91c28666c8fbf91",
+      "comparedSha256": "e07425694d14c839df5a7cd5e5bb6da978d8b5cc6f57e33ce91c28666c8fbf91",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/process-stages.css",
+      "rawSha256": "83f466c5f63aa441bd2ea2c6c1c973b2c478858268155595e7a866ff3f4a7b7b",
+      "buildSha256": "83f466c5f63aa441bd2ea2c6c1c973b2c478858268155595e7a866ff3f4a7b7b",
+      "comparedSha256": "83f466c5f63aa441bd2ea2c6c1c973b2c478858268155595e7a866ff3f4a7b7b",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/vault.css",
+      "rawSha256": "e2a53093730a9facc01d82b56f3f13c7ead1f244fad404494514d72c65109071",
+      "buildSha256": "e2a53093730a9facc01d82b56f3f13c7ead1f244fad404494514d72c65109071",
+      "comparedSha256": "e2a53093730a9facc01d82b56f3f13c7ead1f244fad404494514d72c65109071",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/css/visual-refinements.css",
+      "rawSha256": "ca0bb7b91f49b3588d588549ed495fa0135e467f2793404023457a5f6cd53992",
+      "buildSha256": "ca0bb7b91f49b3588d588549ed495fa0135e467f2793404023457a5f6cd53992",
+      "comparedSha256": "ca0bb7b91f49b3588d588549ed495fa0135e467f2793404023457a5f6cd53992",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-400-normal.woff2",
+      "rawSha256": "9dedc029ea208eec5cc04c6a289dd1ca30bc4adf78a4dc9c146ccbae87512b2e",
+      "buildSha256": "9dedc029ea208eec5cc04c6a289dd1ca30bc4adf78a4dc9c146ccbae87512b2e",
+      "comparedSha256": "9dedc029ea208eec5cc04c6a289dd1ca30bc4adf78a4dc9c146ccbae87512b2e",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-500-normal.woff2",
+      "rawSha256": "08f5b82d26b140c763a2b466f20817a3bd0c7842815df49eb8503ab2211b9e7c",
+      "buildSha256": "08f5b82d26b140c763a2b466f20817a3bd0c7842815df49eb8503ab2211b9e7c",
+      "comparedSha256": "08f5b82d26b140c763a2b466f20817a3bd0c7842815df49eb8503ab2211b9e7c",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/david-libre-hebrew-700-normal.woff2",
+      "rawSha256": "1b4fc136888d6c5ee65740aade6660f68bbc75c65bac663938c9ec50f07fe5af",
+      "buildSha256": "1b4fc136888d6c5ee65740aade6660f68bbc75c65bac663938c9ec50f07fe5af",
+      "comparedSha256": "1b4fc136888d6c5ee65740aade6660f68bbc75c65bac663938c9ec50f07fe5af",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-400-normal.woff2",
+      "rawSha256": "fd102665a417494831fda4d0abb4a3c40df9ea0f16747d721766931d3e8e510c",
+      "buildSha256": "fd102665a417494831fda4d0abb4a3c40df9ea0f16747d721766931d3e8e510c",
+      "comparedSha256": "fd102665a417494831fda4d0abb4a3c40df9ea0f16747d721766931d3e8e510c",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-500-normal.woff2",
+      "rawSha256": "ccd127367d7e85fc7cb3d500b0d7858ad3e15e14734002c49b7194870b8d110c",
+      "buildSha256": "ccd127367d7e85fc7cb3d500b0d7858ad3e15e14734002c49b7194870b8d110c",
+      "comparedSha256": "ccd127367d7e85fc7cb3d500b0d7858ad3e15e14734002c49b7194870b8d110c",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/david-libre-latin-700-normal.woff2",
+      "rawSha256": "c36ca4cfb80e2504582acdafad26bf842034b166cc9dcf5c6f77755b1816ea92",
+      "buildSha256": "c36ca4cfb80e2504582acdafad26bf842034b166cc9dcf5c6f77755b1816ea92",
+      "comparedSha256": "c36ca4cfb80e2504582acdafad26bf842034b166cc9dcf5c6f77755b1816ea92",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/inter-latin-400-normal.woff2",
+      "rawSha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+      "buildSha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+      "comparedSha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/inter-latin-500-normal.woff2",
+      "rawSha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+      "buildSha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+      "comparedSha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/inter-latin-600-normal.woff2",
+      "rawSha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+      "buildSha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+      "comparedSha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-400-italic.woff2",
+      "rawSha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de",
+      "buildSha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de",
+      "comparedSha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-400-normal.woff2",
+      "rawSha256": "1fe9ad5d8b2ebd8ecb8fbd05bed1e3fdfa52dae3f1a04e1c219918442fe9394d",
+      "buildSha256": "1fe9ad5d8b2ebd8ecb8fbd05bed1e3fdfa52dae3f1a04e1c219918442fe9394d",
+      "comparedSha256": "1fe9ad5d8b2ebd8ecb8fbd05bed1e3fdfa52dae3f1a04e1c219918442fe9394d",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-500-italic.woff2",
+      "rawSha256": "8f074624e50ab805878b26ab5f3e0fa360043d546c35b043947e96a5c7071970",
+      "buildSha256": "8f074624e50ab805878b26ab5f3e0fa360043d546c35b043947e96a5c7071970",
+      "comparedSha256": "8f074624e50ab805878b26ab5f3e0fa360043d546c35b043947e96a5c7071970",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-500-normal.woff2",
+      "rawSha256": "1e3429a2122b4171bf393c8de5c501820e17ca2074c498d7080e2326975d825c",
+      "buildSha256": "1e3429a2122b4171bf393c8de5c501820e17ca2074c498d7080e2326975d825c",
+      "comparedSha256": "1e3429a2122b4171bf393c8de5c501820e17ca2074c498d7080e2326975d825c",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/playfair-display-latin-600-normal.woff2",
+      "rawSha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd",
+      "buildSha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd",
+      "comparedSha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/source-sans-3-regular.woff2",
+      "rawSha256": "63de0da0cc05298e2e9c6e5cef506d8454ca665f6e668a99d94f51174b9256ed",
+      "buildSha256": "63de0da0cc05298e2e9c6e5cef506d8454ca665f6e668a99d94f51174b9256ed",
+      "comparedSha256": "63de0da0cc05298e2e9c6e5cef506d8454ca665f6e668a99d94f51174b9256ed",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/source-sans-3-semibold.woff2",
+      "rawSha256": "c248b0a178c362916db7c853ed640db77f184d19a0ed9fa5591fa707d3089635",
+      "buildSha256": "c248b0a178c362916db7c853ed640db77f184d19a0ed9fa5591fa707d3089635",
+      "comparedSha256": "c248b0a178c362916db7c853ed640db77f184d19a0ed9fa5591fa707d3089635",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/fonts/Source-Sans-LICENSE.md",
+      "rawSha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+      "buildSha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+      "comparedSha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/8ec6b8ffe0ad6e45e72f8592d6e537da.webp",
+      "rawSha256": "dd3e99bf0be82cd2b6cdde0d592c5ed4d2076d7fd1318616c28cbfee17ff1892",
+      "buildSha256": "dd3e99bf0be82cd2b6cdde0d592c5ed4d2076d7fd1318616c28cbfee17ff1892",
+      "comparedSha256": "dd3e99bf0be82cd2b6cdde0d592c5ed4d2076d7fd1318616c28cbfee17ff1892",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/AP_ICON_512x512.webp",
+      "rawSha256": "e6b8be6a573f12c188c11b4ab46053219168f68bbdc3a22dc980d39c34b77485",
+      "buildSha256": "e6b8be6a573f12c188c11b4ab46053219168f68bbdc3a22dc980d39c34b77485",
+      "comparedSha256": "e6b8be6a573f12c188c11b4ab46053219168f68bbdc3a22dc980d39c34b77485",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/ap.jpeg",
+      "rawSha256": "50414589ac095d702b0a8f80afdc410f2ce5ad19c4e061c17ecbac098e8c7c5f",
+      "buildSha256": "50414589ac095d702b0a8f80afdc410f2ce5ad19c4e061c17ecbac098e8c7c5f",
+      "comparedSha256": "50414589ac095d702b0a8f80afdc410f2ce5ad19c4e061c17ecbac098e8c7c5f",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/dr-tabansky-portrait-square-640.webp",
+      "rawSha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47",
+      "buildSha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47",
+      "comparedSha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/favicon.ico",
+      "rawSha256": "00d4f3e66cc740a791057e43891383c0c58cb2f3d56134c42d01343c292f6766",
+      "buildSha256": "00d4f3e66cc740a791057e43891383c0c58cb2f3d56134c42d01343c292f6766",
+      "comparedSha256": "00d4f3e66cc740a791057e43891383c0c58cb2f3d56134c42d01343c292f6766",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/fi.webp",
+      "rawSha256": "750f105aafb84e5434c328fc4d56e73a80cc837c494b8af8859f31dea984c4e0",
+      "buildSha256": "750f105aafb84e5434c328fc4d56e73a80cc837c494b8af8859f31dea984c4e0",
+      "comparedSha256": "750f105aafb84e5434c328fc4d56e73a80cc837c494b8af8859f31dea984c4e0",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/icons/flag-il.svg",
+      "rawSha256": "ccdf7c6d3169a1c896eec2dae041d525102fa56ee959b980c27d49f07d7f4820",
+      "buildSha256": "ccdf7c6d3169a1c896eec2dae041d525102fa56ee959b980c27d49f07d7f4820",
+      "comparedSha256": "ccdf7c6d3169a1c896eec2dae041d525102fa56ee959b980c27d49f07d7f4820",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/icons/flag-ru.svg",
+      "rawSha256": "031635ba959d3bfd9464d6d73affafa408e2f513b2d820461c00436b9698b7bf",
+      "buildSha256": "031635ba959d3bfd9464d6d73affafa408e2f513b2d820461c00436b9698b7bf",
+      "comparedSha256": "031635ba959d3bfd9464d6d73affafa408e2f513b2d820461c00436b9698b7bf",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/icons/flag-uk.svg",
+      "rawSha256": "cff178e0a296b078b12a538fd064545ce30af4254019fe5175605b93061a3681",
+      "buildSha256": "cff178e0a296b078b12a538fd064545ce30af4254019fe5175605b93061a3681",
+      "comparedSha256": "cff178e0a296b078b12a538fd064545ce30af4254019fe5175605b93061a3681",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/icons/signal.svg",
+      "rawSha256": "1d4e7f402f8fdd756ae833967b82da1e747fdc9454d0c27ce6a223664cfc14c4",
+      "buildSha256": "1d4e7f402f8fdd756ae833967b82da1e747fdc9454d0c27ce6a223664cfc14c4",
+      "comparedSha256": "1d4e7f402f8fdd756ae833967b82da1e747fdc9454d0c27ce6a223664cfc14c4",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/icons/whatsapp.svg",
+      "rawSha256": "7a3e0b9f874dc0ac532a2e84d7b66f262fc7b6fe9e24262ded7828516553a5d4",
+      "buildSha256": "7a3e0b9f874dc0ac532a2e84d7b66f262fc7b6fe9e24262ded7828516553a5d4",
+      "comparedSha256": "7a3e0b9f874dc0ac532a2e84d7b66f262fc7b6fe9e24262ded7828516553a5d4",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/la rep.webp",
+      "rawSha256": "9f0b8aa0141d7fb0fee33fbbe5e7457d3d0f53e18a43a3a6c93a9bf246a97812",
+      "buildSha256": "9f0b8aa0141d7fb0fee33fbbe5e7457d3d0f53e18a43a3a6c93a9bf246a97812",
+      "comparedSha256": "9f0b8aa0141d7fb0fee33fbbe5e7457d3d0f53e18a43a3a6c93a9bf246a97812",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/Lior Tabansky by Kfir Ziv 86_Rebua_edited.webp",
+      "rawSha256": "343c73cf10d6a17d13092a327bb9b502a52584fd87b3146cf80ce32f9c1ddd53",
+      "buildSha256": "343c73cf10d6a17d13092a327bb9b502a52584fd87b3146cf80ce32f9c1ddd53",
+      "comparedSha256": "343c73cf10d6a17d13092a327bb9b502a52584fd87b3146cf80ce32f9c1ddd53",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/media/figaro-thumb.webp",
+      "rawSha256": "666ed4254ca5108f94f01aeb2e795e7100749912d222d3dfc2ff35a0cd466112",
+      "buildSha256": "666ed4254ca5108f94f01aeb2e795e7100749912d222d3dfc2ff35a0cd466112",
+      "comparedSha256": "666ed4254ca5108f94f01aeb2e795e7100749912d222d3dfc2ff35a0cd466112",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/media/rai-thumb.webp",
+      "rawSha256": "343247579c51733319c3b192c94205bce66d9b576404fc875502355514f60007",
+      "buildSha256": "343247579c51733319c3b192c94205bce66d9b576404fc875502355514f60007",
+      "comparedSha256": "343247579c51733319c3b192c94205bce66d9b576404fc875502355514f60007",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/media/repubblica-thumb.webp",
+      "rawSha256": "66a86c63f562fec8a188dc769519c6898c3429bedc166dfa850ed1663789a14b",
+      "buildSha256": "66a86c63f562fec8a188dc769519c6898c3429bedc166dfa850ed1663789a14b",
+      "comparedSha256": "66a86c63f562fec8a188dc769519c6898c3429bedc166dfa850ed1663789a14b",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/media/wapo-thumb.webp",
+      "rawSha256": "7dde072cab181cb195461ad65d57c55934f0caf7c3a284bbb0d1a4be2656bd25",
+      "buildSha256": "7dde072cab181cb195461ad65d57c55934f0caf7c3a284bbb0d1a4be2656bd25",
+      "comparedSha256": "7dde072cab181cb195461ad65d57c55934f0caf7c3a284bbb0d1a4be2656bd25",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/Newsweek_.webp",
+      "rawSha256": "5e2826f1345cffb384ee40e807a18634e396d916bf4904f27af31b8551bf1ae0",
+      "buildSha256": "5e2826f1345cffb384ee40e807a18634e396d916bf4904f27af31b8551bf1ae0",
+      "comparedSha256": "5e2826f1345cffb384ee40e807a18634e396d916bf4904f27af31b8551bf1ae0",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/NRC_Handelsblad.webp",
+      "rawSha256": "ac33a2fc06d86041f609df229319ffee87541998cf4eead5ba477334ca1c3678",
+      "buildSha256": "ac33a2fc06d86041f609df229319ffee87541998cf4eead5ba477334ca1c3678",
+      "comparedSha256": "ac33a2fc06d86041f609df229319ffee87541998cf4eead5ba477334ca1c3678",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/og-default.png",
+      "rawSha256": "753cc5eb54705c7a43c37cc93f23a154dfd551300d53c2268ff66fe2f52e2e89",
+      "buildSha256": "753cc5eb54705c7a43c37cc93f23a154dfd551300d53c2268ff66fe2f52e2e89",
+      "comparedSha256": "753cc5eb54705c7a43c37cc93f23a154dfd551300d53c2268ff66fe2f52e2e89",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/rai-italia-radio-rai-television.jpg",
+      "rawSha256": "7c6dc144a3d6aaccc252f095cb6c410a576db9c92bb262084fe4b5668f03dfd8",
+      "buildSha256": "7c6dc144a3d6aaccc252f095cb6c410a576db9c92bb262084fe4b5668f03dfd8",
+      "comparedSha256": "7c6dc144a3d6aaccc252f095cb6c410a576db9c92bb262084fe4b5668f03dfd8",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/The National Interest_.webp",
+      "rawSha256": "60b150b62b2e0a5664a7f4014bcedf9ccea2042a76d4582e68b3064a997468ca",
+      "buildSha256": "60b150b62b2e0a5664a7f4014bcedf9ccea2042a76d4582e68b3064a997468ca",
+      "comparedSha256": "60b150b62b2e0a5664a7f4014bcedf9ccea2042a76d4582e68b3064a997468ca",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/img/Washington Post_Logo_4.webp",
+      "rawSha256": "a17bb4c280ea876c6969671cdf9719311710b42b7f2fa59e74a196128f8ba827",
+      "buildSha256": "a17bb4c280ea876c6969671cdf9719311710b42b7f2fa59e74a196128f8ba827",
+      "comparedSha256": "a17bb4c280ea876c6969671cdf9719311710b42b7f2fa59e74a196128f8ba827",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/js/guilloche.js",
+      "rawSha256": "8892f0f8697670a04207c57eb930cd28671daf41d7fe2531ec5c606857dcab3a",
+      "buildSha256": "8892f0f8697670a04207c57eb930cd28671daf41d7fe2531ec5c606857dcab3a",
+      "comparedSha256": "8892f0f8697670a04207c57eb930cd28671daf41d7fe2531ec5c606857dcab3a",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/js/home-pricing.js",
+      "rawSha256": "aa2baf8882653d920f37a02d561ab0935fda96d9870c77a581e2b5c84af08e31",
+      "buildSha256": "aa2baf8882653d920f37a02d561ab0935fda96d9870c77a581e2b5c84af08e31",
+      "comparedSha256": "aa2baf8882653d920f37a02d561ab0935fda96d9870c77a581e2b5c84af08e31",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/js/pricing-04.js",
+      "rawSha256": "272d6c0e6502a8417e2f81efb5c44acd11b9346e1e56c168a69d989deeea92e2",
+      "buildSha256": "272d6c0e6502a8417e2f81efb5c44acd11b9346e1e56c168a69d989deeea92e2",
+      "comparedSha256": "272d6c0e6502a8417e2f81efb5c44acd11b9346e1e56c168a69d989deeea92e2",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "assets/js/site.js",
+      "rawSha256": "2632e8324e5f4acf07d12137894bc4095c26b0dbd93406f7c27720ac3bcc09e3",
+      "buildSha256": "2632e8324e5f4acf07d12137894bc4095c26b0dbd93406f7c27720ac3bcc09e3",
+      "comparedSha256": "2632e8324e5f4acf07d12137894bc4095c26b0dbd93406f7c27720ac3bcc09e3",
+      "providerInsertionRemoved": false,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/attorneys.html",
+      "rawSha256": "bb4e30a261ba5e443eaa5289483c070f372b1bb33dc44a9f1c78a3c1ae6c48ac",
+      "buildSha256": "6a23a30467bb57dd118bb9bf31192f450e65540c0cd377bd4f8c200efa5d504d",
+      "comparedSha256": "6a23a30467bb57dd118bb9bf31192f450e65540c0cd377bd4f8c200efa5d504d",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/business-dispute.html",
+      "rawSha256": "6e7d4d36177a65b21fca4bf022008911713846542f835a4d609345ba6b7dd8e4",
+      "buildSha256": "1a5735804a88f0a05c457e02c4605722ce51ee8942ad70055eaa86cea946d067",
+      "comparedSha256": "1a5735804a88f0a05c457e02c4605722ce51ee8942ad70055eaa86cea946d067",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/faq.html",
+      "rawSha256": "358f21976ad67caa9ec40408cf8852dd4eb168816479269b2e25ea95ab8a3989",
+      "buildSha256": "8761e49e5867539d17a62e5a10908d98f47ff114bcbb6a74c1992c3218a621f3",
+      "comparedSha256": "8761e49e5867539d17a62e5a10908d98f47ff114bcbb6a74c1992c3218a621f3",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/index.html",
+      "rawSha256": "63268a65fa3abb81c8b3e13ada1985fba0af1092d64fbde6c2dedba04ec6e5e3",
+      "buildSha256": "42ca217aef2a10db3bfdf88728365484dba951938a5b4e46c34a2c83945b8b74",
+      "comparedSha256": "42ca217aef2a10db3bfdf88728365484dba951938a5b4e46c34a2c83945b8b74",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/inheritance-clash.html",
+      "rawSha256": "fc020d1e4b4fd1dcaf717ed9d21a7da20e3b842e550d70679cf2f18c8d2b8faf",
+      "buildSha256": "faa6a14433464dcce024e437b34df1928550d2cc06a1e1c8c5025c701550981a",
+      "comparedSha256": "faa6a14433464dcce024e437b34df1928550d2cc06a1e1c8c5025c701550981a",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/pricing.html",
+      "rawSha256": "af78323c604428b2dd6dcf6a2c20d9a1417ac1dc035dec754118571351dc5c41",
+      "buildSha256": "2947f86d6ee18ab7ba746f95ad81005662768e530a921570157b158fb7e57d1f",
+      "comparedSha256": "2947f86d6ee18ab7ba746f95ad81005662768e530a921570157b158fb7e57d1f",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/private-exposure-assessment.html",
+      "rawSha256": "e2e72feb7ccc7f79375bc4d74354f23d23f06e861046a9b0f276bd317e1b1d6c",
+      "buildSha256": "da3f620bd3066f4a701fcacf3511d2fa266651de9420af2c1c15358c438eff16",
+      "comparedSha256": "da3f620bd3066f4a701fcacf3511d2fa266651de9420af2c1c15358c438eff16",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/separation-divorce.html",
+      "rawSha256": "34c963c12bac9dd438cc33407ee315d4d8fb7d8fa70a9bc83f36e0b2aa19b279",
+      "buildSha256": "ab807e3723353b9943ea1147985d703b4aeec40854f4c895f9f4e3f49766fd07",
+      "comparedSha256": "ab807e3723353b9943ea1147985d703b4aeec40854f4c895f9f4e3f49766fd07",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/they-know-something.html",
+      "rawSha256": "bb48e7552eb782f2f49b19a4b4d875a5dbe3e4c83d7a0b43f8a525c9ec8fbd82",
+      "buildSha256": "bd4184bce48afa024a86cfb8d1f98e57e478078ba710b5e44290ae5253bab664",
+      "comparedSha256": "bd4184bce48afa024a86cfb8d1f98e57e478078ba710b5e44290ae5253bab664",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/what-happens-during-the-visit.html",
+      "rawSha256": "d7ae6be3f8653dfc1bcb2c12028cca61e13b6e299ebb58012cb92d70cf859223",
+      "buildSha256": "41230b1086bf8d0a091f38fe53efb95a8b15abf8c3391cf38f4c761a427b25f5",
+      "comparedSha256": "41230b1086bf8d0a091f38fe53efb95a8b15abf8c3391cf38f4c761a427b25f5",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    },
+    {
+      "file": "en/why-us.html",
+      "rawSha256": "ce8c01207b60158772a736222c74fc1b6e236abf97a1109060869031d89720a8",
+      "buildSha256": "83d5dc1d43a878791b5105f6470db0770f27556cedf0f37b9a93fa53d2fd3f7f",
+      "comparedSha256": "83d5dc1d43a878791b5105f6470db0770f27556cedf0f37b9a93fa53d2fd3f7f",
+      "providerInsertionRemoved": true,
+      "status": 200,
+      "indexingAllowed": true,
+      "securityHeaders": true
+    }
+  ]
+}

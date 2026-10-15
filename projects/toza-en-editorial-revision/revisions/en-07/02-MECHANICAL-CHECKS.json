@@ -1,0 +1,2791 @@
+{
+  "baselineCommit": "b1f88a081e6c88d8256d0f921e6bcf17e847e02b",
+  "checks": {
+    "authority": "PASS",
+    "acceptedCopy": "PASS",
+    "copyAmendment": "PASS",
+    "presentation": "PASS"
+  },
+  "pageCount": 11,
+  "links": {
+    "count": 296,
+    "pass": 251,
+    "redirects": 0,
+    "external": 23,
+    "brokenCount": 0,
+    "broken": [],
+    "all": [
+      {
+        "from": "/en/why-us.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "#a-personal-note",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "#the-professional-experience-behind-this-work",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/faq.html#how-toza-differs",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "https://cyberdrtabansky.com",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/why-us.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "#your-first-paid-visit-inspection-diagnosis-and-urgent-first-aid",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "#hardening-and-practical-security-habits-fitted-to-your-life",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/faq.html#privacy",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/faq.html#boundaries",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/pricing.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#how-toza-differs",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#getting-started",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#what-you-gain-from-the-first-paid-visit",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#hardening-and-teaching-for-you-or-your-close-circle",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#prices-credit-and-urgent-visits",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#privacy",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "#boundaries",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/faq.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#decide-whether-toza-fits-before-you-buy",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#your-paid-assessment-inspection-diagnosis-and-urgent-first-aid",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#have-the-agreed-setup-hardened-around-your-life",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/faq.html#privacy",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/faq.html#boundaries",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/what-happens-during-the-visit.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/",
+        "href": "#the-paid-visit-inspection-diagnosis-and-urgent-first-aid",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/",
+        "href": "#situations",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/separation-divorce.html",
+        "status": "PASS",
+        "target": "_site/en/separation-divorce.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/business-dispute.html",
+        "status": "PASS",
+        "target": "_site/en/business-dispute.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/they-know-something.html",
+        "status": "PASS",
+        "target": "_site/en/they-know-something.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/inheritance-clash.html",
+        "status": "PASS",
+        "target": "_site/en/inheritance-clash.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/faq.html#how-toza-differs",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "#have-your-own-devices-and-access-examined-with-urgent-first-aid",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "#a-setup-for-the-life-you-are-moving-into",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/separation-divorce.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "#see-where-personal-and-business-access-still-meet",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "#put-the-technical-questions-in-experienced-hands",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/business-dispute.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "#start-with-what-can-be-checked",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "#have-someone-examine-the-access-and-address-urgent-problems",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/they-know-something.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "#access-shared-in-good-faith-can-still-matter",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "#work-through-your-own-access-with-expert-help",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/inheritance-clash.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "#when-a-referral-may-help",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "#hands-on-inspection-diagnosis-and-urgent-first-aid",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/attorneys.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "#main-content",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "#contact",
+        "status": "PASS"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "https://signal.me/#p/+972533366276",
+        "status": "EXTERNAL"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/#situations",
+        "status": "PASS",
+        "target": "_site/en/index.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/why-us.html",
+        "status": "PASS",
+        "target": "_site/en/why-us.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/what-happens-during-the-visit.html",
+        "status": "PASS",
+        "target": "_site/en/what-happens-during-the-visit.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/faq.html",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/en/attorneys.html",
+        "status": "PASS",
+        "target": "_site/en/attorneys.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/terms.html",
+        "status": "PASS_FILE",
+        "target": "/terms.html"
+      },
+      {
+        "from": "/en/private-exposure-assessment.html",
+        "href": "/privacy.html",
+        "status": "PASS_FILE",
+        "target": "/privacy.html"
+      }
+    ],
+    "resolvedInternalTotal": 273,
+    "englishPageTargets": 251,
+    "rootLegalOrOtherFiles": 22,
+    "externalTotal": 23,
+    "classificationNote": "273 internal targets = 251 English page/fragment targets + 22 root legal or other files; 23 external destinations/handlers. Per-anchor statuses remain in all[]."
+  },
+  "sharedSource05": {
+    "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+    "sha256": "a66b3352da0136ea4d5caeded461336aa945b72988505ef4a191e834f8092dd4",
+    "runtimeFiles": [
+      {
+        "path": "src/_includes/layouts/vault.njk",
+        "sha256": "492254f5bcc45943dcf88f2fb6074908cd35eeb7da65c98a361385e9471bfab7"
+      },
+      {
+        "path": "src/_includes/contact-channels.njk",
+        "sha256": "6dba4d9aaccc1f40c756a65d1a056376c74feadeddcc2fda46a808659d95a939"
+      },
+      {
+        "path": "src/_includes/schema-org.njk",
+        "sha256": "4dc5c2a5b98b2895bbec53271fda2e37cadf849dfd4d9de524302a832a587440"
+      },
+      {
+        "path": "src/_data/i18n/en.json",
+        "sha256": "995877545a23f00b8cbaef5c52a4a99b4c5ff36fc8abd564dc33d46b263f5935"
+      },
+      {
+        "path": "src/_data/site.json",
+        "sha256": "f6738dda52ef6756f511a3c5b24c4bc131a080297e16ee2d34475bdb4cfbdfcd"
+      },
+      {
+        "path": "llms.txt",
+        "sha256": "dd695379c5f4a247bb07dc2dbcc2ee21113a6f127c1a18e6aa0322d5cc0171d2"
+      },
+      {
+        "path": "_redirects",
+        "sha256": "cfdcb1ab8ba12c828897b54aa565ca460f901d3a9b43baf77c5fc938ac30dc65"
+      }
+    ],
+    "usage": "Raw approved shared source is a specification/provenance. vault.njk supplies shared navigation/footer/schema include; contact-channels.njk is included at generated contact sections; accepted-copy generates eleven page-specific bodies. Unused raw source lines are not automatically a runtime gap.",
+    "markdownLinks": [
+      {
+        "label": "See the full services and their limits",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "Privacy and client control",
+        "href": "/en/faq.html#privacy",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "label": "Service boundaries",
+        "href": "/en/faq.html#boundaries",
+        "status": "PASS",
+        "target": "_site/en/faq.html"
+      },
+      {
+        "label": "View his professional background",
+        "href": "https://cyberdrtabansky.com/en/",
+        "status": "EXTERNAL"
+      },
+      {
+        "label": "What the first paid visit includes",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "label": "See the full inclusions and limits",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "See group inclusions and limits",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "Discuss the bespoke service and its terms",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "See follow-up options",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "See retainer terms",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "See the initial visit",
+        "href": "/en/private-exposure-assessment.html",
+        "status": "PASS",
+        "target": "_site/en/private-exposure-assessment.html"
+      },
+      {
+        "label": "Full inclusions and limits",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "Full inclusions and network limits",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      },
+      {
+        "label": "Urgent fees and totals",
+        "href": "/en/pricing.html",
+        "status": "PASS",
+        "target": "_site/en/pricing.html"
+      }
+    ]
+  },
+  "factualTokenInventory": {
+    "money": [
+      {
+        "route": "pricing",
+        "matches": [
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪3,600",
+          "₪14,000",
+          "₪10,400",
+          "₪42,000",
+          "₪38,400",
+          "₪3,600",
+          "₪4,800",
+          "₪8,400",
+          "₪6,000",
+          "₪9,600"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪3,600",
+          "₪3,600",
+          "₪3,600",
+          "₪4,800",
+          "₪3,600",
+          "₪8,400",
+          "₪6,000",
+          "₪9,600"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "₪3,600",
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "index",
+        "matches": [
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "separation-divorce",
+        "matches": [
+          "₪3,600",
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "business-dispute",
+        "matches": [
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "they-know-something",
+        "matches": [
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "inheritance-clash",
+        "matches": [
+          "₪3,600",
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "attorneys",
+        "matches": [
+          "₪3,600"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "₪3,600",
+          "₪3,600",
+          "₪3,600",
+          "₪3,600",
+          "₪14,000",
+          "₪3,600",
+          "₪10,400",
+          "₪4,800",
+          "₪8,400",
+          "₪6,000",
+          "₪9,600"
+        ]
+      }
+    ],
+    "vat": [
+      {
+        "route": "pricing",
+        "matches": [
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "VAT"
+        ]
+      },
+      {
+        "route": "index",
+        "matches": [
+          "VAT"
+        ]
+      },
+      {
+        "route": "separation-divorce",
+        "matches": [
+          "VAT",
+          "VAT"
+        ]
+      },
+      {
+        "route": "business-dispute",
+        "matches": [
+          "VAT"
+        ]
+      },
+      {
+        "route": "they-know-something",
+        "matches": [
+          "VAT"
+        ]
+      },
+      {
+        "route": "inheritance-clash",
+        "matches": [
+          "VAT",
+          "VAT"
+        ]
+      },
+      {
+        "route": "attorneys",
+        "matches": [
+          "VAT"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT"
+        ]
+      }
+    ],
+    "duration": [
+      {
+        "route": "pricing",
+        "matches": [
+          "Typically four hours",
+          "four-hour",
+          "four-hour",
+          "four hours",
+          "four-hour"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "Typically four hours",
+          "four-hour",
+          "four-hour",
+          "four hours",
+          "four-hour"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "Typically four hours",
+          "four-hour",
+          "four hours",
+          "four hours"
+        ]
+      },
+      {
+        "route": "index",
+        "matches": [
+          "Typically four hours"
+        ]
+      },
+      {
+        "route": "separation-divorce",
+        "matches": [
+          "Typically four hours"
+        ]
+      },
+      {
+        "route": "business-dispute",
+        "matches": [
+          "Typically four hours"
+        ]
+      },
+      {
+        "route": "they-know-something",
+        "matches": [
+          "Typically four hours"
+        ]
+      },
+      {
+        "route": "inheritance-clash",
+        "matches": [
+          "Typically four hours"
+        ]
+      },
+      {
+        "route": "attorneys",
+        "matches": [
+          "Typically four hours"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "Typically four hours",
+          "Typically four hours",
+          "Typically four hours",
+          "four-hour",
+          "four-hour",
+          "four hours",
+          "four-hour"
+        ]
+      }
+    ],
+    "device": [
+      {
+        "route": "pricing",
+        "matches": [
+          "one main phone",
+          "one other device",
+          "PC",
+          "iPad",
+          "second phone",
+          "PC",
+          "iPad",
+          "second phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "one main phone",
+          "one other device",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "one other device",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "one main phone",
+          "one other device",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "index",
+        "matches": [
+          "one other device",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "separation-divorce",
+        "matches": [
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "business-dispute",
+        "matches": [
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "they-know-something",
+        "matches": [
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "inheritance-clash",
+        "matches": [
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "attorneys",
+        "matches": [
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "one main phone",
+          "one other device",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      }
+    ],
+    "people": [
+      {
+        "route": "pricing",
+        "matches": [
+          "participant",
+          "four people",
+          "participant",
+          "participants",
+          "four people"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "one person",
+          "four people",
+          "participant",
+          "four people",
+          "participant",
+          "participant",
+          "participant"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "one person",
+          "four people",
+          "participant",
+          "participant",
+          "four people"
+        ]
+      }
+    ],
+    "network": [
+      {
+        "route": "pricing",
+        "matches": [
+          "network",
+          "router",
+          "network",
+          "network",
+          "network",
+          "network",
+          "router",
+          "network"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "network",
+          "router",
+          "network",
+          "router",
+          "network",
+          "router",
+          "network",
+          "router",
+          "network",
+          "router",
+          "network",
+          "network",
+          "network"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "network",
+          "router",
+          "network",
+          "network"
+        ]
+      }
+    ],
+    "credit": [
+      {
+        "route": "pricing",
+        "matches": [
+          "credited",
+          "credit",
+          "credit"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "credit",
+          "credit",
+          "credit",
+          "credited",
+          "credit",
+          "credit"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "credited",
+          "credit"
+        ]
+      },
+      {
+        "route": "index",
+        "matches": [
+          "credit"
+        ]
+      },
+      {
+        "route": "separation-divorce",
+        "matches": [
+          "credit"
+        ]
+      },
+      {
+        "route": "business-dispute",
+        "matches": [
+          "credit"
+        ]
+      },
+      {
+        "route": "they-know-something",
+        "matches": [
+          "credit"
+        ]
+      },
+      {
+        "route": "inheritance-clash",
+        "matches": [
+          "credit"
+        ]
+      },
+      {
+        "route": "attorneys",
+        "matches": [
+          "credit"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "credit",
+          "credited",
+          "credit",
+          "credit"
+        ]
+      }
+    ],
+    "deadline": [
+      {
+        "route": "pricing",
+        "matches": [
+          "14 days",
+          "14 days",
+          "within 14 days"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "14 days",
+          "within 14 days"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "within 14 days",
+          "14 days"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "14 days",
+          "within 14 days"
+        ]
+      }
+    ],
+    "supportDates": [
+      {
+        "route": "why-us",
+        "matches": [
+          "urgent",
+          "as soon as possible",
+          "urgent"
+        ]
+      },
+      {
+        "route": "pricing",
+        "matches": [
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "urgent",
+          "urgent",
+          "holiday",
+          "urgent",
+          "weekend",
+          "holiday",
+          "Central Israel",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "faq",
+        "matches": [
+          "urgent",
+          "as soon as possible",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "Central Israel",
+          "urgent",
+          "urgent",
+          "weekend",
+          "holiday",
+          "weekend",
+          "holiday"
+        ]
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "matches": [
+          "urgent",
+          "urgent",
+          "as soon as possible",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "Central Israel",
+          "urgent"
+        ]
+      },
+      {
+        "route": "index",
+        "matches": [
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "separation-divorce",
+        "matches": [
+          "urgent",
+          "urgent",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "business-dispute",
+        "matches": [
+          "urgent",
+          "urgent",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "they-know-something",
+        "matches": [
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "inheritance-clash",
+        "matches": [
+          "urgent",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "attorneys",
+        "matches": [
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "as soon as possible"
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "matches": [
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "urgent",
+          "urgent",
+          "holiday",
+          "urgent",
+          "weekend",
+          "holiday",
+          "Central Israel",
+          "as soon as possible"
+        ]
+      }
+    ]
+  },
+  "builtHtmlBaselineDrift": [],
+  "generatedEnglishTemplates": [
+    "src/en/why-us.njk",
+    "src/en/pricing.njk",
+    "src/en/faq.njk",
+    "src/en/what-happens-during-the-visit.njk",
+    "src/en/index.njk",
+    "src/en/separation-divorce.njk",
+    "src/en/business-dispute.njk",
+    "src/en/they-know-something.njk",
+    "src/en/inheritance-clash.njk",
+    "src/en/attorneys.njk",
+    "src/en/private-exposure-assessment.njk"
+  ],
+  "siblingCommitExists": true,
+  "factualTokenInventoryBySource": {
+    "money": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪4,800",
+          "₪6,000",
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪4,800",
+          "₪6,000"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "₪3,600",
+          "₪14,000",
+          "₪42,000",
+          "₪3,600",
+          "₪4,800",
+          "₪6,000"
+        ]
+      }
+    ],
+    "vat": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "VAT",
+          "VAT",
+          "VAT",
+          "VAT"
+        ]
+      }
+    ],
+    "duration": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "Typically four hours",
+          "Typically four hours",
+          "four-hour",
+          "four hours",
+          "four hours",
+          "Typically four hours",
+          "four-hour",
+          "Typically four hours"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "Typically four hours",
+          "four-hour"
+        ]
+      }
+    ],
+    "device": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone",
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "one main phone",
+          "PC",
+          "iPad",
+          "second phone"
+        ]
+      }
+    ],
+    "people": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "participant",
+          "participant",
+          "one person",
+          "participant",
+          "one person",
+          "four people",
+          "one person",
+          "four people",
+          "participant"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "one person",
+          "four people",
+          "participant"
+        ]
+      }
+    ],
+    "network": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "network",
+          "network",
+          "router",
+          "network",
+          "router",
+          "network",
+          "network",
+          "network",
+          "network",
+          "network",
+          "router"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "network",
+          "router"
+        ]
+      }
+    ],
+    "credit": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "credited",
+          "credit",
+          "credited",
+          "credit"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "credited",
+          "credit"
+        ]
+      }
+    ],
+    "deadline": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "14 days",
+          "14 days",
+          "within 14 days",
+          "within 14 days"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "within 14 days"
+        ]
+      }
+    ],
+    "supportDates": [
+      {
+        "path": "projects/toza-en-editorial-revision/revisions/en-02-v2/05-shared-copy-system.md",
+        "matches": [
+          "as soon as possible",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "weekend",
+          "holiday",
+          "Central Israel",
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "weekend",
+          "holiday",
+          "Central Israel",
+          "urgent"
+        ]
+      },
+      {
+        "path": "llms.txt",
+        "matches": [
+          "urgent",
+          "urgent",
+          "Central Israel",
+          "weekend",
+          "holiday",
+          "Central Israel"
+        ]
+      }
+    ]
+  }
+}

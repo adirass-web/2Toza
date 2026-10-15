@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-10T19:55:21.211Z",
+  "method": "Text/source integrity checks; not conversion or semantic proof",
+  "acceptedAuthority": "PASS",
+  "results": [
+    {
+      "page": "home",
+      "result": "PASS",
+      "baselineWords": 865,
+      "candidateWords": 930,
+      "tables": 0
+    },
+    {
+      "page": "pricing",
+      "result": "PASS",
+      "baselineWords": 1706,
+      "candidateWords": 1724,
+      "tables": 4
+    }
+  ]
+}

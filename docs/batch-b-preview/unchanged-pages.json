@@ -1,0 +1,150 @@
+{
+  "baseline": "preintegration-baseline.json",
+  "baseCommit": "c85f7fee6c8bb11e97711d33a93c2037a6ae876d",
+  "checkedAt": "2026-10-12T20:49:26.842Z",
+  "status": "PASS",
+  "unchangedRoutes": [
+    "why-us",
+    "pricing",
+    "faq",
+    "what-happens-during-the-visit",
+    "index",
+    "separation-divorce",
+    "they-know-something",
+    "private-exposure-assessment"
+  ],
+  "pages": [
+    {
+      "route": "why-us",
+      "path": "_site/en/why-us.html",
+      "snapshot": "docs/batch-b-preview/preintegration/why-us.html",
+      "sha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+      "currentSha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "pricing",
+      "path": "_site/en/pricing.html",
+      "snapshot": "docs/batch-b-preview/preintegration/pricing.html",
+      "sha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "currentSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "faq",
+      "path": "_site/en/faq.html",
+      "snapshot": "docs/batch-b-preview/preintegration/faq.html",
+      "sha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "currentSha256": "520282b1e1e1a8b019beded7351d9269cf5b9f748b245803182572ad1c5ab066",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "_site/en/what-happens-during-the-visit.html",
+      "snapshot": "docs/batch-b-preview/preintegration/what-happens-during-the-visit.html",
+      "sha256": "61d576e0ac6decc365e7f5aa7da42fbdacc040c4bf4251fdf6133129e5a7b7d9",
+      "currentSha256": "61d576e0ac6decc365e7f5aa7da42fbdacc040c4bf4251fdf6133129e5a7b7d9",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "index",
+      "path": "_site/en/index.html",
+      "snapshot": "docs/batch-b-preview/preintegration/index.html",
+      "sha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0",
+      "currentSha256": "5f606eb9e5357f58a44bd52d8b331fbce12e568adb7c62b067e4c926c82b52d0",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "_site/en/separation-divorce.html",
+      "snapshot": "docs/batch-b-preview/preintegration/separation-divorce.html",
+      "sha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "currentSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "business-dispute",
+      "path": "_site/en/business-dispute.html",
+      "snapshot": "docs/batch-b-preview/preintegration/business-dispute.html",
+      "sha256": "6e6801f39a360e9e92488693d7f7b57b7e6ec80cd016580a3e8bfb6ba717c67d",
+      "currentSha256": "d262826c2fdb3ff34b8c287b0847a64bf5371bcab24f517b5662e99cc21d6c16",
+      "expected": "APPROVED COPY CHANGE",
+      "status": "PASS"
+    },
+    {
+      "route": "they-know-something",
+      "path": "_site/en/they-know-something.html",
+      "snapshot": "docs/batch-b-preview/preintegration/they-know-something.html",
+      "sha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "currentSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "_site/en/inheritance-clash.html",
+      "snapshot": "docs/batch-b-preview/preintegration/inheritance-clash.html",
+      "sha256": "d31f9bd74390a31430667ee9d8c1c3d19091d6affc1785c23e4c53f9a55131c7",
+      "currentSha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410",
+      "expected": "APPROVED COPY CHANGE",
+      "status": "PASS"
+    },
+    {
+      "route": "attorneys",
+      "path": "_site/en/attorneys.html",
+      "snapshot": "docs/batch-b-preview/preintegration/attorneys.html",
+      "sha256": "e53fa9719f9a345a1205c0f819c57b3ddb4f7d3fdaadff045e5ff7708cfbf430",
+      "currentSha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002",
+      "expected": "APPROVED COPY CHANGE",
+      "status": "PASS"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "_site/en/private-exposure-assessment.html",
+      "snapshot": "docs/batch-b-preview/preintegration/private-exposure-assessment.html",
+      "sha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "currentSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "expected": "BYTE IDENTICAL",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Batch B three exact approved hashes",
+      "status": "PASS",
+      "hashes": {
+        "business-dispute": "9b469754dfd77fd463aab82e8f87aacf6e90b18dd5c85d41e05c2496e6706c82",
+        "inheritance-clash": "cca5d87db669ebf86ca1a8267604e6e5e9a5b481bc11af0a3ba265f16bb63b34",
+        "attorneys": "2d27f1dcc9ce69bee3faa1573e0243dc555e6607e226761195eae2e8f9762894"
+      }
+    },
+    {
+      "check": "Historical authority and source fingerprints",
+      "status": "PASS"
+    },
+    {
+      "check": "Prior four approval manifests unchanged from base",
+      "status": "PASS",
+      "files": [
+        "projects/toza-en-editorial-revision/approved/acceptance-manifest.json",
+        "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10.json",
+        "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-10-round-02.json",
+        "projects/toza-en-editorial-revision/approved/acceptance-amendment-2026-10-12-batch-a.json"
+      ]
+    },
+    {
+      "check": "Protected Assessment source and built HTML",
+      "status": "PASS"
+    },
+    {
+      "check": "All three changed-route metadata and links unchanged",
+      "status": "PASS"
+    }
+  ]
+}

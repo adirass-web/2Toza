@@ -1,0 +1,57 @@
+{
+  "status": "review-only",
+  "pricingSha256": "6ea8ed8951d2673048300b4dca3632c4ac23c97a3be73c0659bdb8f9ab299461",
+  "diagramSha256": "dd238e0735c06726feaae309d480ba56c39be694c69cababf96907736e7d64af",
+  "htmlSha256": "cb543c8d6e790152b32566cabdc522917ad21853cc7aabff5cf7390f33c0e816",
+  "cssSha256": "bf4af79166269a1ffc70cd5f62d51501a0d13c2eac1c75379ee818aeaca98a95",
+  "referenceScriptSha256": "20bec6226be744ff3be0061b82d1d4f04218a2c5634f01848186037dc859a9ab",
+  "sharedBuildSha256": "892a885df7fbe162dbf31d401fca043ff993cabb8e1ba80ce6ccfc184fad7595",
+  "metadata": {
+    "Route": "/en/pricing.html",
+    "Title": "Personal Shield and Pricing | Toza",
+    "Description": "Personal Shield ₪14,000 for one person. Inner Circle Shield from ₪42,000 for four. Assessment ₪3,600. VAT included. Compare scope and conditional credit.",
+    "Social description": "Compare tailored hardening for one person or four: devices, accounts, security keys, personal teaching and verification. Begin with a personal threat model and risk assessment."
+  },
+  "sections": [
+    {
+      "heading": "Personal Shield and pricing",
+      "words": 116
+    },
+    {
+      "heading": "## Choose who to protect {#full-services}",
+      "words": 410
+    },
+    {
+      "heading": "## From conversation to protection",
+      "words": 247
+    },
+    {
+      "heading": "## Your Assessment credit {#credit}",
+      "words": 81
+    },
+    {
+      "heading": "## What the protection work includes",
+      "words": 163
+    },
+    {
+      "heading": "## Different scope and additional work",
+      "words": 72
+    },
+    {
+      "heading": "## Urgent visits in Central Israel",
+      "words": 116
+    },
+    {
+      "heading": "## Optional follow-up",
+      "words": 52
+    },
+    {
+      "heading": "## Service boundaries {#service-details}",
+      "words": 136
+    },
+    {
+      "heading": "## Start a private conversation. {#contact}",
+      "words": 55
+    }
+  ]
+}

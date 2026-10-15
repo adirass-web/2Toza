@@ -1,0 +1,333 @@
+{
+  "purpose": "Mechanical candidate-support inventory only; not new acceptance or authorization.",
+  "capturedAt": "2026-10-12",
+  "baselineHead": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "expectedBaselineHead": "6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f",
+  "sourceResolution": {
+    "loader": "scripts/accepted-copy.cjs",
+    "api": [
+      "pages()",
+      "assertAuthority()",
+      "exact()"
+    ],
+    "assertAuthority": "PASS",
+    "normalization": "exact() returns the exact-copy block; CRLF becomes LF, block-end trailing whitespace is trimmed, and exactly one final LF is emitted; no other normalization.",
+    "effectiveAuthority": {
+      "whyUs": "revisions/en-02-v2/01-why-toza.md",
+      "whatHappens": "revisions/en-02-v2/04-what-happens.md",
+      "pricing": "revisions/en-04/02-pricing.md via 2026-10-10 round-02 amendment",
+      "protectedAssessment": "approved/pa-01-v2-effective.md"
+    }
+  },
+  "integrity": {
+    "headMatchesExpected": true,
+    "acceptedHashesMatchManifests": true,
+    "pages": [
+      {
+        "route": "why-us",
+        "sha256": "5039d061d426ad4d399748725e214013d9bbabedc5ee2a042d97be624ec6e9dd",
+        "manifestSha256": "5039d061d426ad4d399748725e214013d9bbabedc5ee2a042d97be624ec6e9dd",
+        "match": true
+      },
+      {
+        "route": "what-happens-during-the-visit",
+        "sha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+        "manifestSha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+        "match": true
+      },
+      {
+        "route": "pricing",
+        "sha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+        "manifestSha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+        "match": true
+      },
+      {
+        "route": "private-exposure-assessment",
+        "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+        "manifestSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+        "match": true
+      }
+    ],
+    "preExistingWorktreeStatus": [
+      "M projects/toza-en-editorial-revision/state/EN-REVISION-DECISION-DELTA.md",
+      "?? projects/toza-en-editorial-revision/planning/2026-10-12-next-editorial-design-execution-plan.md"
+    ]
+  },
+  "affectedPages": [
+    {
+      "route": "why-us",
+      "sourceName": "01-why-toza",
+      "authority": "revisions/en-02-v2/01-why-toza.md",
+      "sha256": "5039d061d426ad4d399748725e214013d9bbabedc5ee2a042d97be624ec6e9dd",
+      "metadata": {
+        "title": "Why Toza | A note from Dr. Lior Tabansky",
+        "description": "Why Dr. Lior Tabansky created Toza: personal help to strengthen your digital security and privacy, make agreed changes and learn to use them.",
+        "og_description": "You do not need the right technical question to ask for help. Work directly with me to understand your exposure and strengthen your security and privacy."
+      },
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "Private Exposure Assessment",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "How Toza differs from other help",
+          "href": "/en/faq.html#how-toza-differs"
+        },
+        {
+          "label": "How Toza helps",
+          "href": "/en/what-happens-during-the-visit.html"
+        },
+        {
+          "label": "Services and pricing",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and service boundaries",
+          "href": "/en/faq.html"
+        },
+        {
+          "label": "View my professional profile",
+          "href": "https://cyberdrtabansky.com"
+        }
+      ],
+      "numericInventory": []
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "sourceName": "04-what-happens",
+      "authority": "revisions/en-02-v2/04-what-happens.md",
+      "sha256": "349d9cfc41e95868b7fad0266af3b2a942acc2311e40904da8d38cd5f59566d7",
+      "metadata": {
+        "title": "How Toza Helps | Personal Security and Privacy",
+        "description": "Work directly with Dr. Tabansky, from hands-on inspection and approved urgent fixes to separately agreed hardening and personal teaching.",
+        "og_description": "From a clearer picture of your exposure to agreed changes and practical security habits. See what you gain at each stage of Toza’s in-person work."
+      },
+      "links": [
+        {
+          "label": "Request a private conversation",
+          "href": "#contact"
+        },
+        {
+          "label": "See pricing",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "See the first visit in detail",
+          "href": "/en/private-exposure-assessment.html"
+        },
+        {
+          "label": "Compare services, inclusions and prices",
+          "href": "/en/pricing.html"
+        },
+        {
+          "label": "Privacy and client control",
+          "href": "/en/faq.html#privacy"
+        },
+        {
+          "label": "Service boundaries",
+          "href": "/en/faq.html#boundaries"
+        },
+        {
+          "label": "See urgent surcharges and totals",
+          "href": "/en/pricing.html"
+        }
+      ],
+      "numericInventory": [
+        {
+          "line": 27,
+          "text": "### 1. Start with your situation, even if you cannot name the problem"
+        },
+        {
+          "line": 35,
+          "text": "### 2. Know the scope and price before committing"
+        },
+        {
+          "line": 43,
+          "text": "**₪3,600 including VAT**"
+        },
+        {
+          "line": 45,
+          "text": "### 3. See how your devices, identities and data are connected"
+        },
+        {
+          "line": 51,
+          "text": "### 4. Have approved first-aid fixes made during the visit"
+        },
+        {
+          "line": 57,
+          "text": "### 5. Leave with priorities you can act on"
+        },
+        {
+          "line": 67,
+          "text": "### 6. Choose the scope that suits your situation"
+        },
+        {
+          "line": 71,
+          "text": "We explain the recommendation and set out the work and price in writing before you decide. The full ₪3,600 Assessment fee is credited toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. The credit applies once to a group engagement; agreed additions are separate."
+        },
+        {
+          "line": 75,
+          "text": "### 7. Replace accumulated arrangements with deliberate choices"
+        },
+        {
+          "line": 83,
+          "text": "### 8. Learn how to use the resulting setup"
+        },
+        {
+          "line": 91,
+          "text": "Personal Shield includes 14 days of limited adjustment support for issues directly related to Toza’s changes, through WhatsApp, Signal and scheduled calls. Inner Circle’s 14-day period begins when the group engagement is complete and covers all four people and the included network, for issues directly related to Toza’s changes."
+        }
+      ]
+    }
+  ],
+  "currentServiceFactNumericInventory": {
+    "sources": [
+      "effective Pricing exact block (EN-04 round 02)",
+      "protected PA-01-v2 effective exact block"
+    ],
+    "pages": [
+      {
+        "route": "pricing",
+        "authority": "revisions/en-04/02-pricing.md",
+        "sha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+        "numericInventory": [
+          {
+            "line": 7,
+            "text": "Description: Personal digital security and privacy with Dr. Tabansky, in person. Assessment ₪3,600. Personal Shield ₪14,000. Inner Circle Shield from ₪42,000. VAT included."
+          },
+          {
+            "line": 37,
+            "text": "**₪3,600 including VAT**"
+          },
+          {
+            "line": 61,
+            "text": "| Price, including VAT | **₪14,000** | **From ₪42,000** |"
+          },
+          {
+            "line": 69,
+            "text": "| In-person work | One primary working day; a second included if needed | Typically 2–4 working days |"
+          },
+          {
+            "line": 71,
+            "text": "| Adjustment support | 14 days for issues directly related to Toza's changes | 14 days for all four people and the included network, starting when the group engagement is complete, for issues directly related to Toza's changes |"
+          },
+          {
+            "line": 83,
+            "text": "Four people receive coordinated hardening under one agreed engagement, with the same standard of device and account hardening, essential migration, training and verification as Personal Shield for each person. The initial ₪3,600 visit covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased Inner Circle engagement."
+          },
+          {
+            "line": 100,
+            "text": "Both are available after a completed full service, not after the initial visit alone. They are separate from the 14-day adjustment support included with Personal Shield and Inner Circle Shield."
+          },
+          {
+            "line": 104,
+            "text": "The full **₪3,600** is credited toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement **begins within 14 days of completion of the initial service**. Booking alone does not qualify."
+          },
+          {
+            "line": 108,
+            "text": "| Personal Shield | ₪14,000 | ₪10,400 |"
+          },
+          {
+            "line": 109,
+            "text": "| Inner Circle Shield at its starting scope | ₪42,000 | ₪38,400 |"
+          },
+          {
+            "line": 111,
+            "text": "The credit applies once to the group engagement. Agreed additions are separate. For Bespoke, deduct ₪3,600 from the agreed total when the same conditions are met."
+          },
+          {
+            "line": 119,
+            "text": "| Ordinary urgent visit | ₪4,800 | ₪8,400 |"
+          },
+          {
+            "line": 120,
+            "text": "| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |"
+          }
+        ]
+      },
+      {
+        "route": "private-exposure-assessment",
+        "authority": "approved/pa-01-v2-effective.md",
+        "sha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+        "numericInventory": [
+          {
+            "line": 5,
+            "text": "Description: In-person work on your devices and accounts: access mapping, approved urgent fixes within scope and clear next steps. ₪3,600 including VAT."
+          },
+          {
+            "line": 11,
+            "text": "Private Exposure Assessment · ₪3,600 including VAT"
+          },
+          {
+            "line": 36,
+            "text": "## What you get for ₪3,600"
+          },
+          {
+            "line": 52,
+            "text": "**Personal Shield carries out the broader protection work.** We tighten security across the two devices and relevant accounts, set up new core accounts where needed, migrate essential access and recovery, supply and configure two security keys, train you, test the changes and provide a private dated record. It includes one primary working day, a second if needed, and 14 days of limited support for issues arising directly from our changes."
+          },
+          {
+            "line": 58,
+            "text": "**Initial visit: ₪3,600 including VAT.** Scheduled after you accept the written scope and price and payment is received."
+          },
+          {
+            "line": 60,
+            "text": "The fee is credited in full toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement begins within 14 days of completion of the initial service. Booking alone does not qualify."
+          },
+          {
+            "line": 62,
+            "text": "**Personal Shield: ₪14,000 including VAT.** With the eligible ₪3,600 credit, the remaining balance is **₪10,400 including VAT**. Agreed additions are separate."
+          },
+          {
+            "line": 74,
+            "text": "| Ordinary urgent visit | ₪4,800 | ₪8,400 |"
+          },
+          {
+            "line": 75,
+            "text": "| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |"
+          }
+        ]
+      }
+    ],
+    "interpretation": "Mechanical numeric/currency occurrence lines only; no semantic claims judgment."
+  },
+  "pricingTables": {
+    "count": 4,
+    "algorithm": "SHA-256 of each table block after LF normalization and trimming trailing whitespace at block end.",
+    "tables": [
+      {
+        "index": 1,
+        "sha256": "b8e7ba0387628cf37d2d6c9c45456ba9711417cf06179b6f55c15b959e4ea0a8",
+        "text": "| Service details | Personal Shield | Inner Circle Shield |\n|---|---|---|\n| Price, including VAT | **₪14,000** | **From ₪42,000** |\n| People | One | Four |\n| Personal devices | One main phone + one PC, iPad or second phone | One main phone + one PC, iPad or second phone per person; eight devices in total |\n| Accounts and apps | Relevant identities, accounts, apps, permissions and recovery routes | Relevant identities, accounts, apps, permissions and recovery routes for each person; remaining-group review and mapping included |\n| Essential migration | New core accounts and migration of essential identity, recovery and service access where needed | The same essential migration standard for each person |\n| Physical security keys | Two compatible keys, supplied, configured and tested | Two per person, eight in total, supplied, configured and tested |\n| Training and verification | Personal training, checklist verification and testing of material changes | Personal training and verification for each participant |\n| Shared home/home-office network and router | Separately scoped | One included, in addition to the eight personal devices |\n| In-person work | One primary working day; a second included if needed | Typically 2–4 working days |\n| Record of work | A private dated record | A private dated record per person and a separate shared-network record |\n| Adjustment support | 14 days for issues directly related to Toza's changes | 14 days for all four people and the included network, starting when the group engagement is complete, for issues directly related to Toza's changes |"
+      },
+      {
+        "index": 2,
+        "sha256": "020fe46adab3dca551ad15ccedd0157b934936199897ca8edfbe6b6d9febf690",
+        "text": "| Service | What it covers | Price |\n|---|---|---|\n| Annual Shield Review | Review of changes in devices, accounts and access | Quoted individually after scope is agreed |\n| Priority Retainer | Priority scheduling and advice within an agreed scope | Quoted individually after scope is agreed |"
+      },
+      {
+        "index": 3,
+        "sha256": "36f5b9bfb7edd12f1f6dbb16019c02f1f871a8acc5a98f26ef509673f95fd115",
+        "text": "| Full service | Price including VAT | Remaining balance with the eligible credit |\n|---|---:|---:|\n| Personal Shield | ₪14,000 | ₪10,400 |\n| Inner Circle Shield at its starting scope | ₪42,000 | ₪38,400 |"
+      },
+      {
+        "index": 4,
+        "sha256": "a327baf1d050781d6d78ba5d4ac21c4b91f2ffc72ddd1cc65a23c0a5ec027bf2",
+        "text": "| Urgent booking | Surcharge including VAT | Initial visit plus surcharge including VAT |\n|---|---:|---:|\n| Ordinary urgent visit | ₪4,800 | ₪8,400 |\n| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |"
+      }
+    ]
+  },
+  "protectedAssessment": {
+    "acceptedPath": "approved/pa-01-v2-effective.md",
+    "approvedBlockSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+    "originalSourcePath": "source/TOZA_EN_COPY_REVIEW.md",
+    "originalPathSha256Lf": "325f418e26adaa68e4ff667a044de204e35878a48ae97de260f9f118898eb6fc",
+    "amendmentPath": "revisions/en-02-v2/pa-01-v2-duration-amendment.md",
+    "loaderResolvedSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695"
+  },
+  "note": "Candidate support for Phase 0 / G0. No strategy judgment, claims judgment, or copy acceptance."
+}

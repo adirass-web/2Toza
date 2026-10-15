@@ -1,0 +1,12 @@
+✔ Business keeps the complete Assessment, separate purchase paragraph and final links in source order (30.625737ms)
+✔ Home groups only complete supporting paragraphs after the unchanged primary pair (12.689233ms)
+✔ Business fails closed for missing, reordered or split commercial blocks (6.909602ms)
+✔ Home fails closed for absent or wrong supporting destinations (7.457626ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 177.911162

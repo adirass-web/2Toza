@@ -1,0 +1,12 @@
+node_modules/
+_site/
+test-results/
+playwright-report/
+.claude/
+Session-Handoff-*.md
+
+# Junk / legacy — kept out of the repo
+VIP/
+_pricing-preview/
+
+.wrangler/

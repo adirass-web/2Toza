@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8800/_preview/",
+  "widths": [
+    {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "errors": [],
+  "images": [
+    {
+      "src": "before-home-desktop-footer.png",
+      "loaded": true
+    },
+    {
+      "src": "after-home-desktop-footer.png",
+      "loaded": true
+    },
+    {
+      "src": "before-home-mobile-footer.png",
+      "loaded": true
+    },
+    {
+      "src": "after-home-mobile-footer.png",
+      "loaded": true
+    }
+  ]
+}

@@ -1,0 +1,1080 @@
+{
+  "capturedAt": "2026-10-12T20:49:59.228Z",
+  "engine": "Chromium",
+  "captures": [
+    {
+      "name": "business",
+      "device": "desktop",
+      "route": "/en/business-dispute.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 3657,
+      "h1s": 1,
+      "bodyFont": "18px",
+      "fonts": [
+        "\"Source Sans 3\", Arial, sans-serif"
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "When business interests diverge, ordinary access can become commercial leverage.",
+          "size": "54px"
+        },
+        {
+          "tag": "H2",
+          "text": "See where personal and business access still meet",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Understand what a change will affect before you approve it",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Put the technical questions in experienced hands",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Personal work, with clear authority",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Talk through the next step privately.",
+          "size": "31px"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore",
+          "size": "14px"
+        },
+        {
+          "tag": "H3",
+          "text": "Legal",
+          "size": "14px"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "business",
+      "device": "mobile",
+      "route": "/en/business-dispute.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 5338,
+      "h1s": 1,
+      "bodyFont": "18px",
+      "fonts": [
+        "\"Source Sans 3\", Arial, sans-serif"
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "When business interests diverge, ordinary access can become commercial leverage.",
+          "size": "36px"
+        },
+        {
+          "tag": "H2",
+          "text": "See where personal and business access still meet",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Understand what a change will affect before you approve it",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Put the technical questions in experienced hands",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Personal work, with clear authority",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Talk through the next step privately.",
+          "size": "28px"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore",
+          "size": "14px"
+        },
+        {
+          "tag": "H3",
+          "text": "Legal",
+          "size": "14px"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "inheritance",
+      "device": "desktop",
+      "route": "/en/inheritance-clash.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 3701,
+      "h1s": 1,
+      "bodyFont": "18px",
+      "fonts": [
+        "\"Source Sans 3\", Arial, sans-serif"
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Family access is still access when trust breaks.",
+          "size": "54px"
+        },
+        {
+          "tag": "H2",
+          "text": "Access shared in good faith can still matter",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Understand the connections before changing them",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Work through your own access with expert help",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Make deliberate choices about future access",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Your information and your attorney",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with a private conversation about what you need.",
+          "size": "31px"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore",
+          "size": "14px"
+        },
+        {
+          "tag": "H3",
+          "text": "Legal",
+          "size": "14px"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "inheritance",
+      "device": "mobile",
+      "route": "/en/inheritance-clash.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 5404,
+      "h1s": 1,
+      "bodyFont": "18px",
+      "fonts": [
+        "\"Source Sans 3\", Arial, sans-serif"
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Family access is still access when trust breaks.",
+          "size": "36px"
+        },
+        {
+          "tag": "H2",
+          "text": "Access shared in good faith can still matter",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Understand the connections before changing them",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Work through your own access with expert help",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Make deliberate choices about future access",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Your information and your attorney",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with a private conversation about what you need.",
+          "size": "28px"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore",
+          "size": "14px"
+        },
+        {
+          "tag": "H3",
+          "text": "Legal",
+          "size": "14px"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "attorneys",
+      "device": "desktop",
+      "route": "/en/attorneys.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 4064,
+      "h1s": 1,
+      "bodyFont": "18px",
+      "fonts": [
+        "\"Source Sans 3\", Arial, sans-serif"
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "When your client's digital life may become leverage.",
+          "size": "54px"
+        },
+        {
+          "tag": "H2",
+          "text": "When a referral may help",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Work starts with the client's authority",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Hands-on inspection, diagnosis and urgent first aid",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "A setup fitted to the client's circumstances",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Coordinate consequential changes",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "A practical summary, with clear limits",
+          "size": "31px"
+        },
+        {
+          "tag": "H2",
+          "text": "Discuss whether Toza fits your client's situation.",
+          "size": "31px"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore",
+          "size": "14px"
+        },
+        {
+          "tag": "H3",
+          "text": "Legal",
+          "size": "14px"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "attorneys",
+      "device": "mobile",
+      "route": "/en/attorneys.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 5959,
+      "h1s": 1,
+      "bodyFont": "18px",
+      "fonts": [
+        "\"Source Sans 3\", Arial, sans-serif"
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "When your client's digital life may become leverage.",
+          "size": "36px"
+        },
+        {
+          "tag": "H2",
+          "text": "When a referral may help",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Work starts with the client's authority",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Hands-on inspection, diagnosis and urgent first aid",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "A setup fitted to the client's circumstances",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Coordinate consequential changes",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "A practical summary, with clear limits",
+          "size": "28px"
+        },
+        {
+          "tag": "H2",
+          "text": "Discuss whether Toza fits your client's situation.",
+          "size": "28px"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore",
+          "size": "14px"
+        },
+        {
+          "tag": "H3",
+          "text": "Legal",
+          "size": "14px"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "widthChecks": [
+    {
+      "name": "business",
+      "width": 320,
+      "scrollWidth": 320,
+      "sectionCount": 6,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "business",
+      "width": 390,
+      "scrollWidth": 390,
+      "sectionCount": 6,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "business",
+      "width": 768,
+      "scrollWidth": 768,
+      "sectionCount": 6,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "business",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "sectionCount": 6,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "inheritance",
+      "width": 320,
+      "scrollWidth": 320,
+      "sectionCount": 7,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "inheritance",
+      "width": 390,
+      "scrollWidth": 390,
+      "sectionCount": 7,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "inheritance",
+      "width": 768,
+      "scrollWidth": 768,
+      "sectionCount": 7,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "inheritance",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "sectionCount": 7,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "attorneys",
+      "width": 320,
+      "scrollWidth": 320,
+      "sectionCount": 8,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "attorneys",
+      "width": 390,
+      "scrollWidth": 390,
+      "sectionCount": 8,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "attorneys",
+      "width": 768,
+      "scrollWidth": 768,
+      "sectionCount": 8,
+      "hiddenSections": [],
+      "badImages": []
+    },
+    {
+      "name": "attorneys",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "sectionCount": 8,
+      "hiddenSections": [],
+      "badImages": []
+    }
+  ],
+  "interactionChecks": [
+    {
+      "name": "business",
+      "skip": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "id": "",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "menuFocus": {
+        "tag": "A",
+        "text": "Situations",
+        "id": "",
+        "href": "/en/#situations",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "contact": {
+        "top": 27.75,
+        "height": 835.84375,
+        "headerBottom": -3852,
+        "scrollY": 3929
+      },
+      "channelFocus": [
+        {
+          "tag": "A",
+          "text": "Message on WhatsApp",
+          "id": "",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        },
+        {
+          "tag": "A",
+          "text": "Message on Signal",
+          "id": "",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        }
+      ],
+      "assessmentAnchor": {
+        "top": 28.03125,
+        "headerBottom": -1909
+      }
+    },
+    {
+      "name": "inheritance",
+      "skip": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "id": "",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "menuFocus": {
+        "tag": "A",
+        "text": "Situations",
+        "id": "",
+        "href": "/en/#situations",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "contact": {
+        "top": 28.28125,
+        "height": 868.59375,
+        "headerBottom": -3885,
+        "scrollY": 3962
+      },
+      "channelFocus": [
+        {
+          "tag": "A",
+          "text": "Message on WhatsApp",
+          "id": "",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        },
+        {
+          "tag": "A",
+          "text": "Message on Signal",
+          "id": "",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        }
+      ],
+      "assessmentAnchor": {
+        "top": 27.953125,
+        "headerBottom": -1802
+      }
+    },
+    {
+      "name": "attorneys",
+      "skip": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "id": "",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "menuFocus": {
+        "tag": "A",
+        "text": "Situations",
+        "id": "",
+        "href": "/en/#situations",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "contact": {
+        "top": 27.671875,
+        "height": 835.84375,
+        "headerBottom": -4473,
+        "scrollY": 4550
+      },
+      "channelFocus": [
+        {
+          "tag": "A",
+          "text": "Message on WhatsApp",
+          "id": "",
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        },
+        {
+          "tag": "A",
+          "text": "Message on Signal",
+          "id": "",
+          "href": "https://signal.me/#p/+972533366276",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        }
+      ],
+      "assessmentAnchor": {
+        "top": 27.5,
+        "headerBottom": -2054
+      }
+    }
+  ],
+  "linkChecks": [
+    {
+      "name": "business",
+      "href": "/en/",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/#situations",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/why-us.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/what-happens-during-the-visit.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/pricing.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/faq.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/private-exposure-assessment.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/en/attorneys.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/terms.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "href": "/privacy.html",
+      "status": 200
+    },
+    {
+      "name": "business",
+      "contactDestinations": [
+        {
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on WhatsApp"
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on Signal"
+        }
+      ]
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/#situations",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/why-us.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/what-happens-during-the-visit.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/pricing.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/faq.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/private-exposure-assessment.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/en/attorneys.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/terms.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "href": "/privacy.html",
+      "status": 200
+    },
+    {
+      "name": "inheritance",
+      "contactDestinations": [
+        {
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on WhatsApp"
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on Signal"
+        }
+      ]
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/#situations",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/why-us.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/what-happens-during-the-visit.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/pricing.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/faq.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/private-exposure-assessment.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/en/attorneys.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/terms.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "href": "/privacy.html",
+      "status": 200
+    },
+    {
+      "name": "attorneys",
+      "contactDestinations": [
+        {
+          "href": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on WhatsApp"
+        },
+        {
+          "href": "https://signal.me/#p/+972533366276",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "text": "Message on Signal"
+        }
+      ]
+    }
+  ],
+  "printChecks": [
+    {
+      "name": "business",
+      "hiddenSections": [],
+      "feeAndContactVisible": true
+    },
+    {
+      "name": "inheritance",
+      "hiddenSections": [],
+      "feeAndContactVisible": true
+    },
+    {
+      "name": "attorneys",
+      "hiddenSections": [],
+      "feeAndContactVisible": true
+    }
+  ],
+  "reducedMotionChecks": [
+    {
+      "name": "business",
+      "reduce": true,
+      "scrollBehavior": "auto",
+      "animated": []
+    },
+    {
+      "name": "inheritance",
+      "reduce": true,
+      "scrollBehavior": "auto",
+      "animated": []
+    },
+    {
+      "name": "attorneys",
+      "reduce": true,
+      "scrollBehavior": "auto",
+      "animated": []
+    }
+  ],
+  "status": "PASS",
+  "gallery": {
+    "url": "http://127.0.0.1:8795/_preview/",
+    "status": "PASS",
+    "images": [
+      {
+        "src": "business-desktop.png",
+        "loaded": true
+      },
+      {
+        "src": "business-mobile.png",
+        "loaded": true
+      },
+      {
+        "src": "inheritance-desktop.png",
+        "loaded": true
+      },
+      {
+        "src": "inheritance-mobile.png",
+        "loaded": true
+      },
+      {
+        "src": "attorneys-desktop.png",
+        "loaded": true
+      },
+      {
+        "src": "attorneys-mobile.png",
+        "loaded": true
+      }
+    ],
+    "keyboard": [
+      {
+        "id": "business",
+        "controlFocus": {
+          "tag": "A",
+          "text": "Business",
+          "id": "",
+          "href": "#business",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        },
+        "nextWorkingPageFocus": {
+          "tag": "A",
+          "text": "Explore working page",
+          "id": "",
+          "href": "/en/business-dispute.html",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        }
+      },
+      {
+        "id": "inheritance",
+        "controlFocus": {
+          "tag": "A",
+          "text": "Inheritance",
+          "id": "",
+          "href": "#inheritance",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        },
+        "nextWorkingPageFocus": {
+          "tag": "A",
+          "text": "Explore working page",
+          "id": "",
+          "href": "/en/inheritance-clash.html",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        }
+      },
+      {
+        "id": "attorneys",
+        "controlFocus": {
+          "tag": "A",
+          "text": "Attorneys",
+          "id": "",
+          "href": "#attorneys",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        },
+        "nextWorkingPageFocus": {
+          "tag": "A",
+          "text": "Explore working page",
+          "id": "",
+          "href": "/en/attorneys.html",
+          "visible": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(114, 85, 40)"
+        }
+      }
+    ],
+    "widths": [
+      {
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    ],
+    "errors": []
+  },
+  "desktopInteraction": [
+    {
+      "name": "business",
+      "skip": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "id": "",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "primary": {
+        "tag": "A",
+        "text": "Request a private conversation",
+        "id": "",
+        "href": "#contact",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "contact": {
+        "top": 65.34375,
+        "bottom": 101.921875
+      },
+      "assessmentAnchorReached": true
+    },
+    {
+      "name": "inheritance",
+      "skip": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "id": "",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "primary": {
+        "tag": "A",
+        "text": "Request a private conversation",
+        "id": "",
+        "href": "#contact",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "contact": {
+        "top": 64.8125,
+        "bottom": 101.390625
+      },
+      "assessmentAnchorReached": true
+    },
+    {
+      "name": "attorneys",
+      "skip": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "id": "",
+        "href": "#main-content",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "primary": {
+        "tag": "A",
+        "text": "Request a private conversation",
+        "id": "",
+        "href": "#contact",
+        "visible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(114, 85, 40)"
+      },
+      "contact": {
+        "top": 64.5,
+        "bottom": 101.078125
+      },
+      "assessmentAnchorReached": true
+    }
+  ]
+}

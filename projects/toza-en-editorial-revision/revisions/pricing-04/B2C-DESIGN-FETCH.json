@@ -1,0 +1,29 @@
+{
+  "status": "Official text extraction; rendered inspection unavailable",
+  "extractId": "extract_087cbb72c227b9e12d657e1ab03fe0e7",
+  "results": [
+    {
+      "url": "https://www.adobe.com/creativecloud/photography/compare-plans.html",
+      "title": "Compare pricing & plans | Adobe Creative Cloud Photography Plan",
+      "access": "connected web reader succeeded",
+      "selectedExcerpt": "Annual, billed monthly",
+      "notes": "App bundles and storage stated before fuller product comparison; price billing qualifier repeated."
+    },
+    {
+      "url": "https://www.apple.com/icloud/",
+      "title": "iCloud+ - Apple",
+      "access": "connected web reader succeeded",
+      "selectedExcerpt": "All iCloud+ plans can be shared with up to five other family members at no extra cost.",
+      "notes": "Storage quantities and short use cases followed by detailed plan inclusions and family sharing guidance."
+    },
+    {
+      "url": "https://1password.com/pricing/personal",
+      "title": "Password Manager Pricing for Individuals & Families | 1Password",
+      "access": "connected web reader succeeded",
+      "selectedExcerpt": "Everything from Individual, plus:",
+      "notes": "Individual and Families short descriptions, user counts, trial action, then detailed comparison."
+    }
+  ],
+  "errors": [],
+  "renderAccessEvidence": "preview/official-render-access.json"
+}

@@ -1,0 +1,71 @@
+name: Verify Toza site
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+permissions:
+  contents: read
+
+concurrency:
+  group: toza-verify-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CI: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify build-tool audit policy and upstream residuals
+        run: npm run test:audit-policy && npm run audit:tools
+
+      - name: Verify focused visual refinement regressions
+        run: node --test scripts/visual-refinements.test.cjs
+
+      - name: Verify route, copy, RTL, links, and CI contracts
+        run: npm run verify:all
+
+      - name: Verify local Pages routing
+        run: npm run verify:pages
+
+      - name: Install Chromium for RTL visual checks
+        run: node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell
+
+      - name: Run RTL visual checks
+        run: npm run test:rtl-visual
+
+      - name: Upload visual test artifacts
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: rtl-visual-artifacts
+          path: |
+            test-results
+            playwright-report
+            .wrangler/pages-runtime-check.log
+          include-hidden-files: true
+          if-no-files-found: ignore

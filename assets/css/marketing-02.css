@@ -1,0 +1,21 @@
+/* Frozen marketing-02 copy uses the published Clear Practice identity. */
+.marketing-page .hero > .wrap { max-inline-size: 1120px; }
+.marketing-page .hero-lead { max-inline-size: 820px; }
+.marketing-page .copy-body { max-inline-size: 1000px; }
+.marketing-page .copy-body > p, .marketing-page .section-detail > p { max-inline-size: 760px; }
+.marketing-page .copy-hero .wrap > .hero-lead > p { max-inline-size: 760px; }
+.marketing-page.index-page .copy-hero > .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 48px; align-items: start; }
+.marketing-portrait { margin: 54px 0 0; }
+.marketing-portrait img { display: block; inline-size: 100%; block-size: auto; }
+.marketing-portrait figcaption { font-size: 12px; line-height: 1.45; padding-block-start: 10px; color: var(--muted); }
+.marketing-page .copy-contact .section-detail > p:first-child { padding: 0; border: 0; background: transparent; }
+.marketing-page .contact-channels { margin-block: 18px 28px; }
+.marketing-page .section-disclosure .section-detail { max-inline-size: 760px; }
+@media (max-width: 800px) {
+  .marketing-page.index-page .copy-hero > .wrap { display: block; }
+  .marketing-portrait { max-inline-size: 160px; margin-block: 28px 0; }
+}
+@media print {
+  .marketing-page.index-page .copy-hero > .wrap { display: block; }
+  .marketing-portrait { max-inline-size: 140px; }
+}

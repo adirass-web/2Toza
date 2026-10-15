@@ -1,0 +1,249 @@
+{
+  "status": "EXPECTED_ONLY_NOT_HOSTED",
+  "recordedAt": "2026-10-13T09:31:24.871Z",
+  "baselineCommit": "b81da1acdc2bf9a40bee24bf3bee304b97b4a9b2",
+  "pages": [
+    {
+      "route": "why-us",
+      "file": "_site/en/why-us.html",
+      "path": "/en/why-us",
+      "alias": "/en/why-us.html",
+      "rawSha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+      "lfSha256": "8e073b4c2caee100c0f85f4ad2344c1f0cf895b76ffd6e74e3f9f3238ecc6f0d",
+      "sourceSha256": "53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575",
+      "metadataSha256": "d8dbc0c5dbd6128fe6e158d0c015290aafe9657409009c44fd81a6255f651ee8",
+      "semantic": {
+        "route": "why-us",
+        "mainCharsSha256": "906d6af4b8181d4b1ea210dce9b863dea6d9481d780aea010ea4eb103cf78a8d",
+        "orderedBlocksSha256": "fa5fd57b8b72e37685bb988c9301b68ed188b0b25f57f913448ccbfbb7e89312",
+        "linkInventorySha256": "549565799082144d92f1b64a3ba4b720b84b9ebc7d3313d7bd06811342e150f1",
+        "renderedMetadataSha256": "0f0fe515035348d0686a6e6a16e41736fea31a714bc568a93f22185ee08add17",
+        "builtSha256": "25e8bc4309a45b44a8d91d5efc615743cf25b40ca294576122c213590db228c2",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "pricing",
+      "file": "_site/en/pricing.html",
+      "path": "/en/pricing",
+      "alias": "/en/pricing.html",
+      "rawSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+      "lfSha256": "49fa9c4d65139e9ebf33606051fc022222f50711ccaa0e3a99a439568427dc81",
+      "sourceSha256": "898f0a609a157b5c7c1c86085c83f710fcfb3af54d053be619350a93a4099e54",
+      "metadataSha256": "41549c0dc37bec932521003b5802418193bca463cadfe20dc7233f06d7bf0216",
+      "semantic": {
+        "route": "pricing",
+        "mainCharsSha256": "e568c2cd4a291fff2f502da8b8565e05bd1df1aa4412c700306f88699b01751a",
+        "orderedBlocksSha256": "17b2837f687e5ce7b7f32952ab2f1263ca0426c29f10560dda0c74f412cb4045",
+        "linkInventorySha256": "b8dac9b390594d1238f9a4af0b7ce173dcc510a6c4c37e32c975159176c26c2e",
+        "renderedMetadataSha256": "ee696c1fc5766a0ce221b70c2f7c22251ae5b3c95bf3199493657e9ad4da7c7e",
+        "builtSha256": "0bf00a845db4e8a6ff5988abc2a3069dbc5e536f1e4ba3223100a8f874776b7c",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "faq",
+      "file": "_site/en/faq.html",
+      "path": "/en/faq",
+      "alias": "/en/faq.html",
+      "rawSha256": "da70667ce323f44e1550565219084eea8c165150e61fc7fb0f361c4d47440a64",
+      "lfSha256": "5b9a943020dc3e5692fc27d24b31f2aec5de578c2e0cd585d0df83735f2e738d",
+      "sourceSha256": "1128e453d6edd13c5c9cbca026239b8c2176fbcce64db686d0b495257e1e5eea",
+      "metadataSha256": "9300d45f5290bec9ebe299603ee0804e5b1ae15387ee26ec99e1f172b65944c2",
+      "semantic": {
+        "route": "faq",
+        "mainCharsSha256": "6cf2611a8024f2a2b7fde36ff667e68f15332d81c8eb855d63eeafba88d04c08",
+        "orderedBlocksSha256": "724ca93926a7d11f9abcee811e739ad6975972dd6812cc1ac5fafca81fb92276",
+        "linkInventorySha256": "9092b383d6b6cde71fa9dd58c35198afa407cc7736745b55350cb635208f0178",
+        "renderedMetadataSha256": "72a8af6c43f805cd4d1e4d93c33dada071be44aeabdf5871508aed90622cc00f",
+        "builtSha256": "da70667ce323f44e1550565219084eea8c165150e61fc7fb0f361c4d47440a64",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "file": "_site/en/what-happens-during-the-visit.html",
+      "path": "/en/what-happens-during-the-visit",
+      "alias": "/en/what-happens-during-the-visit.html",
+      "rawSha256": "e71b4951ba6ae20f97aefa4d724b451c27bcba6ad1a418e64abf60ad2be007c5",
+      "lfSha256": "42c408f763caa94a362e81c01594f33060dd339a2b7ca1f180c3b66ad8ed2954",
+      "sourceSha256": "55a6c0e3c2c26475fd843f4f822a6ff77c6798e14af28b6f821ea40d638fe8dd",
+      "metadataSha256": "d9bb2c1810600446a352af8b10151ddcbd97256f808e139dc8fdf46205f81f57",
+      "semantic": {
+        "route": "what-happens-during-the-visit",
+        "mainCharsSha256": "6e7b38b3f2ae4feedc1248024fe06d402f584f62b077535d16b10030e3bafc05",
+        "orderedBlocksSha256": "717fb6c073d10dfcbea26122352573bad84dae9ade7669f25a56386100e1559e",
+        "linkInventorySha256": "46d2d199a08d0b2a0eddda6a3a31a1d50e1e446a32713fa6780177898d743296",
+        "renderedMetadataSha256": "61e9592232c1bc10cbdb342b5c40dc6686016e287733027d23b14634c0497a36",
+        "builtSha256": "e71b4951ba6ae20f97aefa4d724b451c27bcba6ad1a418e64abf60ad2be007c5",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "index",
+      "file": "_site/en/index.html",
+      "path": "/en/",
+      "alias": "/en/index.html",
+      "rawSha256": "f0bed4d09607e165d5b3970b838fb72a3372a98dbc6ddc852bc8a089b2d3ad9d",
+      "lfSha256": "811e0b1b86fb5937dea1413aa18e6b56ea4ecd84b1ebde835e6c8e7a89a37ad5",
+      "sourceSha256": "e4d76c2969e29c597d7435ea866149b82ed928fcd4f8de4195fdc21125a3d3d6",
+      "metadataSha256": "bb5606020b9ec7257b58b87668e3be565c55a41a9901399f37987d2a6ad522a1",
+      "semantic": {
+        "route": "index",
+        "mainCharsSha256": "714e4d4118048d35610183120674dfba12f234904327395b66ef67d64177d39a",
+        "orderedBlocksSha256": "79668b61c2f8ca559f9ffc7ef6ef9e001ca23e35a06cd6b6a74a47ba7c90b871",
+        "linkInventorySha256": "8bd35f2db570f61eb4bfbba716b564f9d649b0201a1f4243656c60dac21b9fd2",
+        "renderedMetadataSha256": "de1e43e6b0722909bbe3b8a94b563df4e5a57fcc09a8966faab1da298b9fb1f9",
+        "builtSha256": "f0bed4d09607e165d5b3970b838fb72a3372a98dbc6ddc852bc8a089b2d3ad9d",
+        "stylesheetScope": [
+          "/assets/css/visual-refinements.css?v=visual-refinements-1"
+        ],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "separation-divorce",
+      "file": "_site/en/separation-divorce.html",
+      "path": "/en/separation-divorce",
+      "alias": "/en/separation-divorce.html",
+      "rawSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+      "lfSha256": "f6122ead6a122739c4caa69ba144c8e52252c12059c2d9db421d4673db0162d1",
+      "sourceSha256": "ca84b2a3f025ffd08366018479d9b9fc8633403cea09f9a8d47e04fdb63355f1",
+      "metadataSha256": "02c9129e74814f5a287717a4bdbe9c748c85a3acd99c3aa6b2ceda21f5ab8a4c",
+      "semantic": {
+        "route": "separation-divorce",
+        "mainCharsSha256": "360bdcea9fdca4fe010d5ebfaec88093a7d8510bc5f29fab177f70fdd921e3e4",
+        "orderedBlocksSha256": "c568adbeeea51084f053a81a38e78047fc53f696c0099695f8d6910b63017754",
+        "linkInventorySha256": "f8072fd6ee7c4748980846d63cd751e3a9638d13ff639276ca2ca460bf0b3ede",
+        "renderedMetadataSha256": "1e9795f38bd82036ed9f9deaebd1a789934bd56e0f97ef1b3fe2ccdf710a0244",
+        "builtSha256": "6cfde8e51f46e9352905e2d234c442ca96d0d2462808e1096c7fb7ed42624520",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "business-dispute",
+      "file": "_site/en/business-dispute.html",
+      "path": "/en/business-dispute",
+      "alias": "/en/business-dispute.html",
+      "rawSha256": "80cf17b23a51fd2cba5180c34907de3d1d970eb173aa5de121df920e52e36f73",
+      "lfSha256": "649bf71200bc7bc0b18cf98142a74510f8db403038bd6f61211d06b15fe58466",
+      "sourceSha256": "9b469754dfd77fd463aab82e8f87aacf6e90b18dd5c85d41e05c2496e6706c82",
+      "metadataSha256": "3bfb11c2f70d79a802a79e11b54178d23a33033315707d77ad6626a1883e82de",
+      "semantic": {
+        "route": "business-dispute",
+        "mainCharsSha256": "ace2d6716a3adb3e18d2473c7f836cc7756b0206ca63cab05b084844ba4679c8",
+        "orderedBlocksSha256": "bdd125f000c5207494f31778f9791fc0f40835fa1b43e526a98bb8a924704e65",
+        "linkInventorySha256": "251418bb6025f3a4b4bcadd5cb4d32d2801fc2e662ab9cb64d4458d1ab25fbd4",
+        "renderedMetadataSha256": "2b558ca4fd69dcc132c1b08e3c08d04faed287855367b583bc42a49fef786124",
+        "builtSha256": "80cf17b23a51fd2cba5180c34907de3d1d970eb173aa5de121df920e52e36f73",
+        "stylesheetScope": [
+          "/assets/css/visual-refinements.css?v=visual-refinements-1"
+        ],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "they-know-something",
+      "file": "_site/en/they-know-something.html",
+      "path": "/en/they-know-something",
+      "alias": "/en/they-know-something.html",
+      "rawSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+      "lfSha256": "994b509fe3110ad20888a635a108a7daaef96c005f44ca92be737700a18bf03e",
+      "sourceSha256": "58208a1dbfb604dc55bf141e2daa50dc546e7dae7f765788a77b42e15e97d01f",
+      "metadataSha256": "abaedd60785b673b56ecb37c9cca64b4920b1b6d8339e2107645396aa0706433",
+      "semantic": {
+        "route": "they-know-something",
+        "mainCharsSha256": "26fa20bd918931deaaf8f4865971794f3807fe5cdd02c48c25f5ef84fb60f42d",
+        "orderedBlocksSha256": "fd795059d78b6cf53c2965ff5757bafa0a6ce9f887b19df764cd8c8f26203ec6",
+        "linkInventorySha256": "b4a212281baf88feda4bd4b198a94e22c2ced2c719e9a2c68bf9bf4be8cde841",
+        "renderedMetadataSha256": "9bf24175cc6004310dccc50143545a61b9b55ea45a22e9684656beea23b23a0f",
+        "builtSha256": "d0ef73da8aae36059b18670250ca736815a1c32e41eb9ea695917fcb1747ce0a",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "inheritance-clash",
+      "file": "_site/en/inheritance-clash.html",
+      "path": "/en/inheritance-clash",
+      "alias": "/en/inheritance-clash.html",
+      "rawSha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410",
+      "lfSha256": "35345157e81bab0b9987065109ffccafc41e0f846365d0df68ebb00858ccf873",
+      "sourceSha256": "cca5d87db669ebf86ca1a8267604e6e5e9a5b481bc11af0a3ba265f16bb63b34",
+      "metadataSha256": "088f3b642e00ada16f0f367f6b91b5564e646366096078b26aa6abc1d62fdcdf",
+      "semantic": {
+        "route": "inheritance-clash",
+        "mainCharsSha256": "e7f5bd7b20b8c7a1de24f85496dc216e71ba4637c2ab433b6db6d3a3c06255a2",
+        "orderedBlocksSha256": "997166e685ee3530d506a8e8247d5227b8e12a853fad89cfef070dd16359f606",
+        "linkInventorySha256": "f283381c9be03dfba3df928d27802de2d775d21b707e876f6abe8c7e8080e45b",
+        "renderedMetadataSha256": "6a20662357fe1280c54f10ab1fea720ac1a84a6555b1bb464ac7880ea9c73eda",
+        "builtSha256": "7d37118aa7065746074fa4f1c0688902d16379e5d8b5d07a9fc293bd66d30410",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "attorneys",
+      "file": "_site/en/attorneys.html",
+      "path": "/en/attorneys",
+      "alias": "/en/attorneys.html",
+      "rawSha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002",
+      "lfSha256": "73a4d3a322e305e1a41bbbf6cb4529d13741d9f05557869f4c7358af282651df",
+      "sourceSha256": "2d27f1dcc9ce69bee3faa1573e0243dc555e6607e226761195eae2e8f9762894",
+      "metadataSha256": "85bcf0f193d693ccd5ed17928c55ecf06f72a99bb9d080fcd8dc38efea17f7d9",
+      "semantic": {
+        "route": "attorneys",
+        "mainCharsSha256": "2ac4deee5f3eefde614640db5b5c1ff5cd1c7307c2fb05e4eb6f5939e8de4848",
+        "orderedBlocksSha256": "8593addb02ac8deb17f7b3e305c1ecb9eb815f78e06c8c0f9491629dbde57846",
+        "linkInventorySha256": "6128e0482901ff5fe4d3aaaf11e012433917cf2ccef64a0ef1bbd4ba930e29c1",
+        "renderedMetadataSha256": "a6183cb0d2418283248f874b6dd846344b257e8f3622ae55841f9ca3c08e8807",
+        "builtSha256": "f533bb0550bc69f1be5f0277fad4ac09cba42b5fb55f05e0494b21e2cbf8d002",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    },
+    {
+      "route": "private-exposure-assessment",
+      "file": "_site/en/private-exposure-assessment.html",
+      "path": "/en/private-exposure-assessment",
+      "alias": "/en/private-exposure-assessment.html",
+      "rawSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+      "lfSha256": "0450f060b7ac114daf83af3b15b31c504887e645abcd331c36c0cd744a9ec031",
+      "sourceSha256": "e2edc8537e161cd7fab6bb253e21cbe04ec8114a0b6b968aab9a607def67f695",
+      "metadataSha256": "9a696525490df8e501c8d2a0ef2803101463efa6ec71cb3371ee23e3f0d940b8",
+      "semantic": {
+        "route": "private-exposure-assessment",
+        "mainCharsSha256": "565fda4a73d85c900b713616d22648ebfc8d468a19339442b4478939a2386fc9",
+        "orderedBlocksSha256": "14dfcf1233b1974d659ff47866795375e3d5ca17d58e5fbc614febc451357e3a",
+        "linkInventorySha256": "7c407783e2e7f71db703573efc2c862a43e3d4b41b801adb62f0964329127995",
+        "renderedMetadataSha256": "d339cf6c2a469674f54905235f5e2aaca5fe85dc424238d579ff09f21a6a0220",
+        "builtSha256": "7f7ca1bd9531ec394a6008af5989002e1f65baeace88c9d44391cd3fcf4892ae",
+        "stylesheetScope": [],
+        "status": "EXACT"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/css/clear-practice.css",
+      "sha256": "3c7f46260347dd201d288c5671847e49aba227590961b42716acc2b796594390"
+    },
+    {
+      "path": "/assets/css/visual-refinements.css",
+      "sha256": "ca0bb7b91f49b3588d588549ed495fa0135e467f2793404023457a5f6cd53992"
+    }
+  ],
+  "protectedAssessment": "private-exposure-assessment",
+  "unchangedReferenceRoutes": [
+    "pricing",
+    "separation-divorce",
+    "they-know-something",
+    "private-exposure-assessment"
+  ],
+  "productionFilesMutated": false
+}

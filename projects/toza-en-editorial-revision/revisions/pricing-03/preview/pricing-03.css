@@ -1,0 +1,173 @@
+/* Pricing owns these rules. Shared brand/header/footer assets are copied unchanged.
+   No other page consumes this proposal module. */
+
+/* 1. Page hierarchy and review shell */
+.pricing-03 .wrap { inline-size:min(1120px,calc(100% - 64px)); }
+.pricing-03 .p-prototype-header { display:flex; align-items:center; justify-content:space-between; gap:20px; min-block-size:84px; }
+.pricing-03 .p-review-label { font-size:13px; color:var(--muted); }
+.pricing-03 main { padding-block:48px 32px; }
+.pricing-03 main section { margin-block-end:44px; }
+.pricing-03 main h1 { max-inline-size:850px; font-size:clamp(34px,4.1vw,56px); margin-block-end:20px; }
+.pricing-03 main h2 { margin-block-end:16px; }
+.pricing-03 main p { margin-block-end:16px; }
+.pricing-03 .p-hero { max-inline-size:850px; }
+.pricing-03 .p-hero-price { font-size:24px; line-height:1.3; color:var(--action); }
+.pricing-03 .p-hero .hero-kicker { margin-block-end:16px; }
+.pricing-03 .p-assurance { font-size:14px; color:var(--muted); }
+.pricing-03 .p-icon { inline-size:24px; block-size:24px; flex:0 0 24px; color:var(--action); }
+
+/* 2. Purchase comparison: native table with persistent product columns */
+.pricing-03 .p-compare { border-block-start:1px solid var(--line); padding-block-start:32px; }
+.pricing-03 .p-compare > p { max-inline-size:920px; }
+.pricing-03 table { border-collapse:collapse; inline-size:100%; margin-block:24px; table-layout:fixed; font-size:16px; line-height:1.42; }
+.pricing-03 table .p-label-col { inline-size:25%; }
+.pricing-03 th,.pricing-03 td { padding:14px 18px; border-block-end:1px solid var(--line); vertical-align:top; text-align:start; overflow-wrap:break-word; }
+.pricing-03 thead th { font-size:20px; border-block-start:1px solid var(--line); background:var(--panel); color:var(--action); }
+.pricing-03 thead th:first-child { font-size:15px; color:var(--muted); }
+.pricing-03 tbody th { font-size:15px; font-weight:400; }
+.pricing-03 .p-row-label { display:flex; align-items:flex-start; gap:10px; }
+.pricing-03 .p-row-0 td { font-size:28px; line-height:1.15; color:var(--action); padding-block:22px; }
+.pricing-03 .p-row-1 { background:#edefe8; }
+.pricing-03 .p-row-1 td { font-size:19px; }
+.pricing-03 .p-row-2 td { font-size:20px; }
+.pricing-03 .p-row-8 > *, .pricing-03 .p-row-10 > * { border-block-start:2px solid var(--line); }
+.pricing-03 .p-credit-note { font-size:16px; border-inline-start:3px solid var(--action); padding-inline-start:18px; }
+
+/* 3. Client decision path — hardening depends on a separate decision */
+.pricing-03 .p-process { padding-block-start:28px; border-block-start:1px solid var(--line); }
+.pricing-03 .p-journey { display:grid; grid-template-columns:1fr 1fr .6fr 1fr; margin-block:24px 18px; border:1px solid var(--line); }
+.pricing-03 .p-stage { padding:22px; display:flex; flex-direction:column; gap:10px; }
+.pricing-03 .p-stage + .p-stage { border-inline-start:1px solid var(--line); }
+.pricing-03 .p-stage-icon { display:flex; align-items:center; justify-content:center; inline-size:40px; block-size:40px; border:1px solid var(--line); border-radius:50%; }
+.pricing-03 .p-stage strong { font-size:20px; line-height:1.25; }
+.pricing-03 .p-stage p { font-size:16px; line-height:1.45; margin:0; }
+.pricing-03 .p-decision { padding:20px 16px; background:var(--panel); display:flex; flex-direction:column; justify-content:center; gap:10px; font-size:14px; line-height:1.4; border-inline:1px solid var(--line); }
+.pricing-03 .p-decision strong { color:var(--action); font-size:17px; }
+.pricing-03 .p-decision::before { content:'→'; font-size:26px; color:var(--action); }
+.pricing-03 .p-diagram-note { font-size:16px; max-inline-size:900px; }
+.pricing-03 .p-process > p:has(strong) { font-size:17px; margin-block-start:24px; }
+
+/* 4. Native references: precise labels, all terms remain accessible */
+.pricing-03 .p-reference { border-block-start:1px solid var(--line); scroll-margin-block-start:20px; }
+.pricing-03 .p-reference:last-of-type { border-block-end:1px solid var(--line); }
+.pricing-03 .p-reference summary { cursor:pointer; padding-block:18px; font-size:20px; font-weight:600; min-block-size:56px; }
+.pricing-03 .p-reference summary:hover { color:var(--action); }
+.pricing-03 .p-reference-body { max-inline-size:920px; padding-block:4px 22px; }
+.pricing-03 .p-reference-body p { font-size:17px; }
+.pricing-03 .p-journey-reference summary { font-size:18px; padding-block:14px; }
+.pricing-03 main > .p-reference:last-of-type { margin-block-end:40px; }
+
+/* 5. Contact action */
+.pricing-03 .p-contact { background:var(--panel); padding:30px; }
+.pricing-03 .p-contact p { max-inline-size:850px; }
+.pricing-03 .contact-channels { display:flex; flex-wrap:wrap; gap:12px; margin-block-start:18px; }
+.pricing-03 .contact-channels a { display:inline-flex; align-items:center; gap:10px; min-block-size:48px; padding:10px 18px; border:1px solid var(--action); text-decoration:none; font-weight:600; background:var(--paper); }
+.pricing-03 .contact-channels img { inline-size:20px; block-size:20px; }
+
+/* 6. Responsive comparison: keep both services side by side */
+@media(max-width:760px) {
+ .pricing-03 .wrap { inline-size:calc(100% - 32px); }
+ .pricing-03 main { padding-block-start:32px; }
+ .pricing-03 .p-prototype-header .brand-logo { inline-size:106px; }
+ .pricing-03 .p-review-label { font-size:11px; max-inline-size:125px; text-align:end; }
+ .pricing-03 main h2 { font-size:28px; }
+ .pricing-03 .p-hero-price { font-size:22px; }
+ .pricing-03 table { font-size:14px; line-height:1.38; margin-block:20px; }
+ .pricing-03 table .p-label-col { inline-size:25%; }
+ .pricing-03 th,.pricing-03 td { padding:12px 9px; }
+ .pricing-03 tbody th { font-size:13px; }
+ .pricing-03 thead th { font-size:17px; }
+ .pricing-03 thead th:first-child { font-size:12px; }
+ .pricing-03 .p-row-label { flex-direction:column; gap:5px; }
+ .pricing-03 .p-row-0 td { font-size:22px; padding-block:18px; }
+ .pricing-03 .p-row-1 td { font-size:17px; }
+ .pricing-03 .p-row-2 td { font-size:18px; }
+ .pricing-03 .p-credit-note { font-size:16px; padding-inline-start:12px; }
+ .pricing-03 .p-journey { grid-template-columns:1fr; }
+ .pricing-03 .p-stage { padding:18px; display:grid; grid-template-columns:40px 1fr; gap:8px 14px; }
+ .pricing-03 .p-stage-icon { grid-row:span 2; }
+ .pricing-03 .p-stage strong { font-size:19px; }
+ .pricing-03 .p-stage p { grid-column:2; }
+ .pricing-03 .p-stage + .p-stage { border-inline-start:0; border-block-start:1px solid var(--line); }
+ .pricing-03 .p-decision { border-inline:0; border-block:1px solid var(--line); padding:16px 18px; display:grid; grid-template-columns:40px 1fr; gap:4px 14px; }
+ .pricing-03 .p-decision::before { content:'↓'; grid-row:span 2; align-self:center; text-align:center; }
+ .pricing-03 .p-decision span { grid-column:2; }
+ .pricing-03 .p-contact { padding:22px 18px; }
+ .pricing-03 .p-reference summary { font-size:19px; }
+ .pricing-03 .site-footer .wrap { inline-size:calc(100% - 32px); }
+}
+@media(max-width:350px) {
+ .pricing-03 th,.pricing-03 td { padding-inline:6px; }
+ .pricing-03 .p-row-0 td { font-size:20px; }
+ .pricing-03 thead th { font-size:16px; }
+ .pricing-03 .p-row-1 td { font-size:16px; }
+}
+
+/* 7. Accessibility, reduced motion and print */
+.pricing-03 a:focus-visible,.pricing-03 summary:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+@media(prefers-reduced-motion:reduce) { .pricing-03 * { scroll-behavior:auto; transition:none; animation:none; } }
+@media print {
+ .pricing-03 .p-review-label,.pricing-03 .skip-link { display:none; }
+ .pricing-03 .wrap { inline-size:100%; }
+ .pricing-03 main { padding:0; }
+ .pricing-03 .p-reference-body { display:block!important; }
+ .pricing-03 details::details-content { content-visibility:visible; }
+ .pricing-03 details:not([open]) > :not(summary) { display:block!important; }
+ .pricing-03 .p-journey { display:block; }
+ .pricing-03 .p-stage,.pricing-03 .p-decision { break-inside:avoid; }
+ .pricing-03 table { font-size:10pt; }
+ .pricing-03 tr { break-inside:avoid; }
+ .pricing-03 .p-contact { padding:0; }
+}
+.pricing-03 .p-assessment-price { display:block; font-size:16px; font-weight:400; margin-block-start:8px; line-height:1.45; }
+/* Preserve native table presentation over shared legacy mobile card rules. */
+.pricing-03 table { display:table; }
+.pricing-03 thead { display:table-header-group; position:static; clip-path:none; inline-size:auto; block-size:auto; overflow:visible; }
+.pricing-03 tbody { display:table-row-group; }
+.pricing-03 tbody tr { display:table-row; }
+.pricing-03 tbody th,.pricing-03 td { display:table-cell; }
+.pricing-03 td { font-size:inherit; }
+.pricing-03 td + td { padding:14px 18px; border-inline-start:1px solid var(--line); }
+@media(max-width:760px) {
+ .pricing-03 tbody th { color:var(--muted); font-size:13px; }
+ .pricing-03 td + td { padding:12px 9px; }
+ .pricing-03 td { overflow-wrap:break-word; }
+}
+@media(max-width:350px) { .pricing-03 td + td { padding-inline:6px; } }
+@media(max-width:760px) {
+ .pricing-03 .p-matrix thead th { position:sticky; inset-block-start:0; z-index:2; }
+}
+@media print { .pricing-03 .p-matrix thead th { position:static; } }
+.pricing-03 .p-count-icons { display:flex; align-items:center; gap:3px; margin-block-end:8px; }
+@media(max-width:760px) { .pricing-03 .p-count-icons .p-icon { inline-size:18px; block-size:18px; flex-basis:18px; } }
+/* Narrow screens: row-label band followed by two equal comparison cells.
+   Native th/td DOM and explicit headers keep product associations intact. */
+.pricing-03 .p-assessment-outcomes { max-inline-size:920px; padding-block:8px 20px; }
+.pricing-03 .p-assessment-outcomes p { font-size:17px; }
+@media(max-width:640px) {
+ .pricing-03 .p-matrix { display:block; table-layout:auto; }
+ .pricing-03 .p-matrix colgroup { display:none; }
+ .pricing-03 .p-matrix thead { display:block; position:sticky; inset-block-start:0; z-index:2; background:var(--panel); }
+ .pricing-03 .p-matrix thead tr { display:grid; grid-template-columns:1fr 1fr; }
+ .pricing-03 .p-matrix thead th:first-child { position:absolute; inline-size:1px; block-size:1px; clip-path:inset(50%); overflow:hidden; }
+ .pricing-03 .p-matrix thead th:not(:first-child) { display:block; position:static; inline-size:auto; font-size:18px; padding:12px; border:0; border-block:1px solid var(--line); }
+ .pricing-03 .p-matrix tbody { display:block; }
+ .pricing-03 .p-matrix tbody tr { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:0; padding:0; border:0; }
+ .pricing-03 .p-matrix tbody th { display:block; grid-column:1/-1; padding:10px 12px; font-size:15px; border-block:1px solid var(--line); }
+ .pricing-03 .p-matrix .p-row-label { flex-direction:row; gap:10px; align-items:center; }
+ .pricing-03 .p-matrix td,.pricing-03 .p-matrix td+td { display:block; padding:14px 12px; font-size:16px; border-block-end:0; }
+ .pricing-03 .p-matrix .p-row-0 td { font-size:24px; }
+ .pricing-03 .p-matrix .p-row-1 td { font-size:19px; }
+ .pricing-03 .p-matrix .p-row-2 td { font-size:20px; }
+ .pricing-03 .p-matrix tbody tr:last-child td { border-block-end:1px solid var(--line); }
+ .pricing-03 .p-matrix .p-count-icons .p-icon { inline-size:20px; block-size:20px; flex-basis:20px; }
+}
+@media print {
+ .pricing-03 .p-matrix { display:table; }
+ .pricing-03 .p-matrix colgroup { display:table-column-group; }
+ .pricing-03 .p-matrix thead { display:table-header-group; position:static; }
+ .pricing-03 .p-matrix thead tr,.pricing-03 .p-matrix tbody tr { display:table-row; }
+ .pricing-03 .p-matrix thead th:first-child { position:static; inline-size:auto; block-size:auto; clip-path:none; overflow:visible; }
+ .pricing-03 .p-matrix thead th:not(:first-child),.pricing-03 .p-matrix tbody th,.pricing-03 .p-matrix td { display:table-cell; }
+ .pricing-03 .p-matrix tbody { display:table-row-group; }
+}
