@@ -35,7 +35,19 @@ jobs:
       - run: npm run check
       - name: Require deployment secrets
         run: |
-          test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "Cloudflare secrets not set; skipping deploy."; echo "SKIP=1" >> "$GITHUB_ENV"; }
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "Cloudflare secrets not set; skipping deploy (build and checks still ran)."
+            echo "SKIP=1" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          if ! [[ "$CLOUDFLARE_ACCOUNT_ID" =~ ^[0-9a-f]{32}$ ]]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID must be exactly 32 lowercase hex characters, with no spaces or line breaks. Re-enter it in repo Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          if [[ "$CLOUDFLARE_API_TOKEN" =~ [[:space:]] ]]; then
+            echo "::error::CLOUDFLARE_API_TOKEN contains whitespace. Re-create the token and paste it without spaces or line breaks."
+            exit 1
+          fi
       - name: Ensure Pages project exists
         if: env.SKIP != '1'
         run: |
