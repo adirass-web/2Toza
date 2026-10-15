@@ -200,3 +200,7 @@ P2 §4 items 1–10 (logged hours, travel, target rate, key and router costs, ca
 6. Copy: "honest" → "clear"; "rebuilt" → "hardened"; "people closest to you" → "people you live with"; "usual starting point" removed; "every person and place included" → "the people and places you agree"; Bespoke grid cells merged; "Yours" → "One".
 7. Test plan reduced to T1–T5; decision list reduced to seven prioritised decisions plus one presentation batch.
 8. Unexplained references P5 and V-007 now cited (1b persona; BRIEF and decisions.md).
+
+
+## Owner update (15 Oct, after review)
+Bespoke is removed from the pricing table (or minimised): the site shows the Assessment as the first step and two tiers, Personal Shield and Inner Circle, with one line under them for larger households, several locations or other needs (scope and price agreed individually). Where this document treats Bespoke as a displayed third tier, read it as this minimised line; its inclusions and any "from" figure remain internal options.
