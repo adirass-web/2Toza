@@ -15,5 +15,7 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-009 | 2026-10-15 | Harden is Toza's own method, developed from public agency and vendor guidance. |
 | V-010 | 2026-10-15 | Model tiers: Opus lead and reviews, Sonnet specialists, Haiku checks. No Fable. |
 | V-011 | 2026-10-15 | Ads postponed. When resumed: Hebrew only, Dr. Tabansky reviews search terms. |
+| V-012 | 2026-10-15 | No Cloudflare Access on the preview (user decision). Previews are public URLs with noindex. |
+| V-013 | 2026-10-15 | Phase 3 starts from established open-source design systems and templates, not from scratch. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

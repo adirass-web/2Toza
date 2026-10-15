@@ -3,7 +3,7 @@
 Competing rebuild of the Toza website (front end and message architecture). The approved site (`adirass-web/VIP`) is untouched and stays live until v2 passes its gates and the owner chooses.
 
 - **Approver:** Dr. Lior Tabansky. Hebrew-first market; English copy is drafted first, Hebrew after copy and design are approved.
-- **Preview only:** every page is `noindex`; host is the Cloudflare Pages project `toza-v2`, behind Cloudflare Access. No custom domain until approval.
+- **Preview only:** every page is `noindex`; host is the Cloudflare Pages project `toza-v2` (public URL, no Access by decision V-012). No custom domain until approval.
 
 ## Branches
 | Branch | Purpose |
@@ -24,7 +24,7 @@ Competing rebuild of the Toza website (front end and message architecture). The 
 `npm ci` · `npm run build` · `npm run check` · `npm start`
 
 ## Deploy (owner side, one-time)
-Repository secrets: `CLOUDFLARE_API_TOKEN` (scope: Pages edit, nothing else) and `CLOUDFLARE_ACCOUNT_ID`. Then in Cloudflare Zero Trust, add an Access policy on `toza-v2.pages.dev` and `*.toza-v2.pages.dev` allowing only named emails. Without the secrets, the workflow builds and checks but skips the deploy.
+Repository secrets `CLOUDFLARE_API_TOKEN` (Pages edit only) and `CLOUDFLARE_ACCOUNT_ID` are set. Pushes to `main` deploy to `toza-v2.pages.dev`; pushes to `design/*` deploy to `<branch>.toza-v2.pages.dev`.
 
 ## Layout
 `strategy/` message architecture, referral model, brief · `research/` phase 1 · `docs/decisions.md` decision log · `reference/` frozen upstream facts.

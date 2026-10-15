@@ -1,0 +1,17 @@
+{
+  "_note": "Contact channels from the approved site. First tap opens the channel; never an on-page anchor.",
+  "whatsapp": {
+    "label": "Message on WhatsApp",
+    "url": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+  },
+  "signal": { "label": "Message on Signal", "url": "https://signal.me/#p/+972533366276" },
+  "callback": {
+    "label": "Call me back",
+    "url": "https://wa.me/972533366276?text=Hello%2C%20I'd%20like%20a%20private%20conversation.%20Please%20call%20me%20back%20when%20convenient."
+  },
+  "referral": {
+    "label": "Discuss a referral",
+    "url": "https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation%20about%20a%20possible%20referral.%20Please%20let%20me%20know%20the%20next%20step."
+  },
+  "profile": { "label": "Professional profile", "url": "https://cyberdrtabansky.com" }
+}

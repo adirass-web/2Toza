@@ -1,10 +1,10 @@
 name: Deploy preview (toza-v2)
 
-# Deploys ONLY to the Cloudflare Pages project "toza-v2" (Access-protected, noindex).
+# Deploys ONLY to the Cloudflare Pages project "toza-v2" (noindex). Branch previews: <branch>.toza-v2.pages.dev
 # Never deploys to the production project of the approved site.
 on:
   push:
-    branches: [main]
+    branches: [main, 'design/**']
   pull_request:
 
 permissions:
