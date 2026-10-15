@@ -1,0 +1,31 @@
+# Toza
+
+Toza provides private, in-person assessment and hardening of agreed personal devices, digital identities, accounts, apps and data-access arrangements. Clients work directly with Dr. Lior Tabansky to understand relevant exposure and, through separately purchased hardening, build a setup fitted to their circumstances and learn how to use it. The work combines settings and access changes with practical security habits and personal teaching. Toza does not monitor your devices or install security software on them.
+
+The service helps clients strengthen personal digital security and privacy, proactively or when circumstances change. Separation, business or inheritance disputes and uncertainty about private information are examples. A client need not identify a technical problem or have a known incident before making contact. Work remains within the client’s authorized environment, with the client present and controlling credentials. Material changes require approval; additional scope or price is agreed before that work begins.
+
+Start with a private conversation through WhatsApp or Signal. Qualification includes no device inspection, mapping, diagnosis or technical work. Paid work requires a written scope and price, explicit acceptance and receipt of payment.
+
+The initial Private Exposure Assessment costs ₪3,600 including VAT and covers one main phone and one PC, iPad or second phone with relevant accounts and access. Typically four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid safely possible within scope. The client receives a practical summary and next steps even without further purchase.
+
+Personal Shield costs ₪14,000 including VAT for one person with the same two-device allowance and two compatible physical security keys, supplied, configured and tested. Inner Circle Shield starts at ₪42,000 including VAT for four people, eight personal devices, eight security keys and one included shared home/home-office network and router. Full-service inclusions and limits are set out on Pricing. Bespoke Private Protection, extras and optional follow-up are individually scoped and priced. Optional follow-up follows a completed full service and is separate from included adjustment support.
+
+The full ₪3,600 initial fee is credited toward Personal Shield, Inner Circle Shield or Bespoke Private Protection when the selected engagement begins within 14 days of initial-service completion. Booking alone does not qualify. The credit applies once to a group engagement; agreed additions are separate.
+
+For accepted four-hour urgent bookings in Central Israel, availability is confirmed before payment and the arrival clock starts after both acceptance and payment receipt. The ordinary VAT-inclusive surcharge is ₪4,800; the weekend or holiday surcharge is ₪6,000 instead. It is added to the agreed base service price. Arrival is not a completion promise. Outside Central Israel, arrival time and travel terms are agreed before acceptance.
+
+Toza does not upload a client dataset to a Toza cloud-analysis platform during the core engagement or retain a copy or comprehensive log of a client's digital life beyond agreed deliverables and ordinary lawful business records. Toza does not retain client credentials for ongoing use. The service does not include remote device control, investigation of another person, forensic reconstruction, evidence collection or legal advice. A record or summary does not certify security or guarantee that every exposure has been found or removed. Adviser disclosure requires client authorization; group participation does not authorize disclosure of another participant’s personal details.
+
+## English page directory
+
+- Home: /en/
+- Why Toza: /en/why-us.html
+- Initial paid visit: /en/private-exposure-assessment.html
+- How Toza helps: /en/what-happens-during-the-visit.html
+- Pricing: /en/pricing.html
+- FAQ: /en/faq.html
+- Separation/Divorce: /en/separation-divorce.html
+- Business/Founder Dispute: /en/business-dispute.html
+- Inheritance Conflict: /en/inheritance-clash.html
+- They Know Something: /en/they-know-something.html
+- Attorneys: /en/attorneys.html

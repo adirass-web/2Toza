@@ -1,0 +1,30 @@
+{
+  "_note": "Single source of commercial facts. Copied from the approved site (adirass-web/VIP @ ed9ba06, llms.txt). Change only on an owner decision. CI fails if pages show a price not listed here.",
+  "source": "adirass-web/VIP@ed9ba06 llms.txt",
+  "currency": "ILS",
+  "vatIncluded": true,
+  "prices": {
+    "assessment": 3600,
+    "personalShield": 14000,
+    "innerCircleFrom": 42000,
+    "personalShieldRemainingAfterCredit": 10400,
+    "innerCircleRemainingAfterCreditFrom": 38400,
+    "urgentSurchargeOrdinary": 4800,
+    "urgentSurchargeWeekendHoliday": 6000
+  },
+  "assessment": {
+    "typicalHours": 4,
+    "devices": "one main phone and one PC, iPad or second phone",
+    "summaryWithoutFurtherPurchase": true
+  },
+  "personalShield": {
+    "people": 1,
+    "devices": 2,
+    "securityKeys": 2,
+    "typicalWorkHours": "7–14",
+    "adjustmentSupportDays": 14
+  },
+  "innerCircle": { "people": 4, "devices": 8, "securityKeys": 8, "sharedNetworkIncluded": 1 },
+  "credit": { "windowDays": 14, "appliesOncePerGroupEngagement": true },
+  "contact": { "channels": ["WhatsApp", "Signal", "Call-back (WhatsApp prefill)"] }
+}

@@ -1,0 +1,10 @@
+# Toza v2 preview. Every route is noindex and protected by Cloudflare Access.
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+
+/assets/*
+  Cache-Control: public, max-age=3600

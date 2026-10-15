@@ -1,0 +1,3 @@
+# Toza v2 preview: not for indexing.
+User-agent: *
+Disallow: /

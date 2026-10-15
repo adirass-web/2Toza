@@ -1,0 +1,51 @@
+name: Deploy preview (toza-v2)
+
+# Deploys ONLY to the Cloudflare Pages project "toza-v2" (Access-protected, noindex).
+# Never deploys to the production project of the approved site.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: preview-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    # Same-repo branches only; secrets are not exposed to forks.
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_PROJECT_NAME: toza-v2
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - name: Require deployment secrets
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "Cloudflare secrets not set; skipping deploy."; echo "SKIP=1" >> "$GITHUB_ENV"; }
+      - name: Ensure Pages project exists
+        if: env.SKIP != '1'
+        run: |
+          set -euo pipefail
+          API="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}"
+          if ! curl -fsS "$API" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" >/dev/null; then
+            curl -fsS -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" -H "Content-Type: application/json" \
+              --data "{\"name\":\"${CF_PROJECT_NAME}\",\"production_branch\":\"main\"}" >/dev/null
+          fi
+      - name: Deploy
+        if: env.SKIP != '1'
+        run: npm run pages:deploy -- _site --project-name "$CF_PROJECT_NAME" --branch "${{ github.head_ref || github.ref_name }}" --commit-hash "$GITHUB_SHA"
