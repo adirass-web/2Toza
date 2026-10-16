@@ -6,11 +6,12 @@ const facts = readJson("src/_data/facts.json");
 const baseline = readText("reference/llms.baseline.txt");
 const fmt = (n) => "₪" + n.toLocaleString("en-US");
 
-const proposal = facts.status === "proposal";
+const proposal = facts.status === "proposal" || facts.status === "owner-approved";
 if (proposal) {
   // Proposal branch: prices come from an owner-reviewed proposal, not the approved baseline.
-  if (!facts.proposalSource) fail("proposal facts must name proposalSource");
-  console.log(`facts: PROPOSAL prices from ${facts.proposalSource} (baseline check skipped)`);
+  const src = facts.proposalSource || facts.approvalSource;
+  if (!src) fail("non-baseline facts must name proposalSource or approvalSource");
+  console.log(`facts: ${facts.status.toUpperCase()} prices from ${src} (baseline check skipped)`);
 }
 
 // Derived amounts are not stated verbatim in llms.txt.

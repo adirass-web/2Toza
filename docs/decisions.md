@@ -34,5 +34,7 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-028 | 2026-10-16 | Attorney referral fee on a paid first step: ₪600. |
 | V-029 | 2026-10-16 | Travel scope is not spelled out on the site (handled in conversation). |
 | V-030 | 2026-10-16 | Build the new pricing as a separate preview branch for side-by-side comparison. Annual Care to be developed. |
+| V-031 | 2026-10-16 | OWNER-BRIEF-01 approved in full (P1–P7, W1–W8): new grid ₪4,000 / ₪32,000 / ₪45,000 / ₪70,000 / from ₪90,000 with fallback grid; first step counted in full within 30 days; network in Personal Shield; inclusions; Annual Care ₪12,000 / ₪15,000 / ₪20,000; referral fees; validation plan; design A; headline C; method line; contact; page restructure; new copy list; specimen; device scope "same main account (Apple or Android)". Inputs: Inner Circle 4 days realistic; key price includes VAT. |
+| V-032 | 2026-10-16 | Approved design and pricing merged into main; preview bar removed; facts.json is owner-approved. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

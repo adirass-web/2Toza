@@ -1,15 +1,38 @@
 {
-  "_note": "Single source of commercial facts for the PRICING PROPOSAL preview (pricing-v2). Not the approved site prices. Change only on an owner decision. CI fails if pages show a price not listed here.",
-  "status": "proposal",
-  "proposalSource": "strategy/pricing/P7-new-pricing.md + P8-annual-care.md (16 Oct 2026)",
+  "_note": "Single source of commercial facts for Toza v2. Owner-approved via OWNER-BRIEF-01 (16 Oct 2026). Change only on an owner decision. CI fails if pages show a ₪ amount not listed here.",
+  "status": "owner-approved",
+  "approvalSource": "strategy/OWNER-BRIEF-01.md (all items approved 16 Oct 2026); details in strategy/pricing/P7-new-pricing.md and P8-annual-care.md",
   "currency": "ILS",
+  "vatIncluded": true,
   "prices": {
     "assessment": 4000,
+    "assessmentFallback": 3600,
     "personalShield": 32000,
     "shieldForTwo": 45000,
     "innerCircle": 70000,
     "largerFrom": 90000,
-    "annualCareFrom": 12000
+    "balanceShield": 28000,
+    "balanceTwo": 41000,
+    "balanceInnerCircle": 66000,
+    "annualCareFrom": 12000,
+    "annualCareOne": 12000,
+    "annualCareTwo": 15000,
+    "annualCareHousehold": 20000,
+    "urgentSurcharge": 4800,
+    "urgentSurchargeWeekend": 6000
   },
-  "credit": { "windowDays": 30 }
+  "credit": {
+    "windowDays": 30
+  },
+  "questionLineDays": 60,
+  "annualCare": {
+    "joinWindowMonths": 6
+  },
+  "assessmentScope": "one main phone and one computer, iPad or second phone, on the same main account (Apple or Android)",
+  "devicesPerPerson": 3,
+  "securityKeys": {
+    "personalShield": 2,
+    "shieldForTwo": 4,
+    "innerCircle": 8
+  }
 }
