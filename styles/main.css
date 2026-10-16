@@ -1,4 +1,6 @@
 @import "tailwindcss" source("../src");
+/* The old hand-built page templates no longer render (permalink: false); keep their classes out of the generated CSS. */
+@source not "../src/en";
 @import "flowbite/src/themes/default";
 /* Design tokens: generated from tokens/tokens.json (scripts/build-tokens.mjs). Do not add @theme here. */
 @import "./tokens.css";
@@ -30,6 +32,5 @@
   src: url("/assets/fonts/assistant-hebrew-600-normal.woff2") format("woff2");
   unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
 
-/* Toza layer on top of Flowbite: the few rules the library cannot express (see custom.css) and the frozen legacy pages. */
+/* Toza layer on top of Flowbite: the few rules the library cannot express (see custom.css). styles/legacy-pages.css (old hand-built page styles) is no longer imported: every page renders from content. */
 @import "./custom.css";
-@import "./legacy-pages.css";

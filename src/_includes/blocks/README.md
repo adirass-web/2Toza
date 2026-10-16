@@ -2,7 +2,7 @@
 
 Each file here, `<type>.njk`, renders one content block. The generic layout `src/_layouts/blocks.njk` loops over the page's `blocks` and includes `blocks/<type>.njk` with the loop variable `block`. A page whose type has no template here fails the build, on purpose.
 
-The templates in this directory are **reference templates**: plain semantic HTML, no classes, no copy. Every visible string comes from `block`; the only interface strings are `t.ui.pricesLabel` and `t.ui.print`. A library build (Flowbite or daisyUI) replaces the files with the same names and keeps the data contract below.
+The templates in this directory are **reference templates**: plain semantic HTML, no classes, no copy. Every visible string comes from `block`; the only interface strings are `t.ui.pricesLabel` and `t.ui.print`. The Flowbite build (the owner pick) replaces them in place and keeps the data contract below.
 
 Data comes from `siteContent.<lang>.pages.<page>.blocks` (global data `src/_data/siteContent.mjs`, resolver in `scripts/lib/content.mjs`). `siteContent` is not called `content` because Eleventy reserves that name for the rendered page body.
 
@@ -615,9 +615,61 @@ Example: pricing, `tiers.first_step`.
 
 ---
 
-## Types not covered by these templates
+## steps
 
-`steps`, `letter`, `faq-group` and `terms-section` (how-it-works, about, faq, conditions) resolve by the same rules. Their fields are listed in `content/CONTENT-MODEL.md` §6.1; `md` fields (`step.body`, `letter.body`, `faq_item.answer`/`after`, `terms-section.items`/`intro`/`notes`) become `{ md, text, html }`; `faq_item.action` becomes an action object; `price_row` gets `price` with its `price_format` applied. A page that uses one of these types cannot be rendered from content until its template exists.
+The three stages in detail (how-it-works). Dark section, one hairline row per stage with the shared drawing.
+
+| Field | Type | | Notes |
+|---|---|---|---|
+| `heading` | text | required | |
+| `lead` | text | optional | |
+| `keep_label` | text | optional | Label above each `keep` line ("You keep") |
+| `items[].key` | `assess` \| `harden` \| `verify` | required | Selects the drawing |
+| `items[].name` | text | required | Shown as "n · name" (the number is the position) |
+| `items[].image_alt` | text | required | Alt of the drawing |
+| `items[].heading` | text | required | h3 |
+| `items[].statement` | text | optional | Method line, harden only |
+| `items[].body` | md | required | |
+| `items[].keep` | text | optional | What the client keeps |
+| `record_date` | text | optional | Dated label on the Verify drawing |
+
+## letter
+
+First-person note (about). `heading` text, `body` md (paragraphs), `signature` text.
+
+## faq-group
+
+A titled group of questions. Consecutive groups share one page grid with a navigation list of `nav_label`s and an expand-all button (labels `t.ui.faqGroups|faqExpand|faqCollapse`; the button needs `site.js`). Questions are native `<details>`/`<summary>`: usable by keyboard without JavaScript. `site.js` opens the question a `#hash` points at.
+
+| Field | Type | | Notes |
+|---|---|---|---|
+| `id` | slug | required | Anchor of the group (`#a` to `#g`) |
+| `nav_label` | text | required | |
+| `heading` | text | required | h2, id `<id>-h` |
+| `items[].id` | slug | required | Anchor of the question (`#a1`) |
+| `items[].question` | text | required | summary |
+| `items[].answer` | md | required | |
+| `items[].open` | bool | optional | Open by default |
+| `items[].table` | `{ caption, head[], rows[{ label, cells[] }] }` | optional | After the answer |
+| `items[].after` | md | optional | After the table |
+| `items[].action` | action | optional | Button after the answer |
+| `link` | link | optional | After the group |
+
+## terms-section
+
+A numbered section of terms. Consecutive sections share one page grid with a contents list (label `pg.labels.toc`, hidden when printed). Section and clause numbers are CSS counters. Prints cleanly (no header, footer, contents or contact; white paper).
+
+| Field | Type | | Notes |
+|---|---|---|---|
+| `id` | slug | required | Anchor (`#urgent`); heading id `<id>-h` |
+| `nav_label` | text | required | Contents entry |
+| `heading` | text | required | h2 |
+| `intro` | md | optional | |
+| `items` | md[] | optional | One numbered clause each; may hold a list |
+| `price_table` | `{ caption, head[], rows[{ label, for, price_key, price, price_value }] }` | optional | Table, price column right |
+| `notes` | md | optional | |
+
+Hero `print: true` shows a print button (`data-print`, handled by `site.js`) and a print-only logo.
 
 ## Trying a template
 
