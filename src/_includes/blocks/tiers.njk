@@ -10,7 +10,7 @@
       <h3 class="font-serif text-2xl font-normal text-heading lg:text-3xl">{{ tier.name }}</h3>
       <p class="mt-5 text-heading lg:mt-4">{{ price(tier, 'text-5xl sm:text-6xl lg:text-5xl xl:text-6xl') }}</p>
       <p class="mt-4 text-lg lg:mt-3">{{ tier.for }}</p>
-      {{ features(tier.items, 'mt-5 border-t border-default pt-5 lg:mt-6 lg:self-start') }}
+      {{ features(tier.items, 'mt-5 lg:mt-6 lg:self-start') }}
     </li>
     {% endfor %}
   </ul>

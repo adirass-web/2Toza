@@ -38,9 +38,7 @@
 {#- Flowbite large badge. -#}
 {% macro badge(text) %}<span class="inline-block rounded-xs border border-brand-subtle bg-brand-softer px-2 py-1 text-sm font-medium text-fg-brand-strong">{{ text }}</span>{% endmacro %}
 
-{#- Flowbite check-circle icon, for feature lists. -#}
-{% macro check() %}<svg class="mt-0.5 size-5 shrink-0 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>{% endmacro %}
-
+{#- Inclusion list as plain ruled rows (Direction A): a rule-colour hairline between and around the items, no icons. -#}
 {% macro features(items, cls) %}{% if items and items.length %}
-<ul role="list" class="space-y-3 {{ cls }}">{% for i in items %}<li class="flex items-start gap-2">{{ check() }}<span>{{ i }}</span></li>{% endfor %}</ul>
+<ul role="list" class="divide-y divide-default border-y border-default {{ cls }}">{% for i in items %}<li class="py-3">{{ i }}</li>{% endfor %}</ul>
 {% endif %}{% endmacro %}
