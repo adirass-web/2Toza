@@ -37,5 +37,8 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-031 | 2026-10-16 | OWNER-BRIEF-01 approved in full (P1–P7, W1–W8): new grid ₪4,000 / ₪32,000 / ₪45,000 / ₪70,000 / from ₪90,000 with fallback grid; first step counted in full within 30 days; network in Personal Shield; inclusions; Annual Care ₪12,000 / ₪15,000 / ₪20,000; referral fees; validation plan; design A; headline C; method line; contact; page restructure; new copy list; specimen; device scope "same main account (Apple or Android)". Inputs: Inner Circle 4 days realistic; key price includes VAT. |
 | V-032 | 2026-10-16 | Approved design and pricing merged into main; preview bar removed; facts.json is owner-approved. |
 | V-033 | 2026-10-16 | Copy defaults confirmed: 60-day question line starts on completion of the tier's work; the ₪4,000 first step counts toward the larger-household price on the same 30-day terms; referral fee described without amounts (amounts in the one-page agreement). Builder choices stay as built (no hero eyebrow on situation pages, FAQ expand/collapse control, no phone table of contents on Conditions). |
+| V-034 | 2026-10-16 | Hebrew copy uses digits for numbers (avoids gendered number words); `{factword:}` is English-only; Hebrew content uses `{fact:}`. |
+| V-035 | 2026-10-16 | Facts (question-line days, key counts, credit window) are referenced from facts.json in content files, not typed. |
+| V-036 | 2026-10-16 | Sentences used on more than one page live once in _shared.yaml. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

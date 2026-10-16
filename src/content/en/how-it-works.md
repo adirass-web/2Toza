@@ -21,20 +21,20 @@ blocks:
       - key: assess
         name: "{shared:stages.names.assess}"
         image_alt: "{shared:stages.image_alts.assess}"
-        heading: Your threat model, your risks in order, and urgent first aid.
+        heading: "{shared:stages.headings.assess}"
         body: "Dr. Tabansky starts with your situation: what changed, what concerns you, which accounts matter and who previously had legitimate access. He then examines how your devices, identities and accounts are connected, and what those connections allow."
         keep: A written exposure summary of what was reviewed, found and changed, what remains, and your next steps in order.
       - key: harden
         name: "{shared:stages.names.harden}"
         image_alt: "{shared:stages.image_alts.harden}"
-        heading: Settings, accounts and recovery rebuilt around your risks. Security keys supplied and configured.
+        heading: "{shared:stages.lines.harden}"
         statement: "{shared:method}"
         body: The work can include closing unwanted access, strengthening sign-in and recovery, and changing sharing permissions. Dr. Tabansky explains each material change and its effects before you approve it.
         keep: Your phone, computer, accounts and home network, hardened around your risks.
       - key: verify
         name: "{shared:stages.names.verify}"
         image_alt: "{shared:stages.image_alts.verify}"
-        heading: Changes tested and checked, and you are taught to use them. A private dated record of the work.
+        heading: "{shared:stages.lines.verify}"
         body: Dr. Tabansky works with you on granting access, sharing information, signing in and recovering accounts. You learn how to use the changed arrangements in daily life. Every tier includes a follow-up visit after about four weeks.
         keep: A private dated record of the work, one for each person.
     record_date: "{shared:stages.record_date}"
@@ -63,12 +63,12 @@ blocks:
         for: For one person.
       - name: "{shared:offers.two.name}"
         price_key: shieldForTwo
-        for: For you and one other person.
+        for: "{shared:offers.two.for}"
       - name: "{shared:offers.inner.name}"
         price_key: innerCircle
-        for: For a household of up to four.
+        for: "{shared:offers.inner.for}"
     notes:
-      - The first step is included. Each price is fixed and agreed in writing before work begins.
+      - The first step is included. {shared:common.price_fixed}
       - "Every tier includes questions answered by WhatsApp or Signal within one working day, for {fact:questionLineDays} days."
       - "{shared:offers.care}"
     link:

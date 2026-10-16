@@ -11,7 +11,7 @@ labels:
 blocks:
   - type: hero
     heading: Prices and conditions.
-    lead: Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. Each price is fixed and agreed in writing before work begins.
+    lead: "{shared:common.engagement_in_person} {shared:common.price_fixed}"
     byline: none
     actions: []
     note: Terms as of 16 October 2026.
@@ -74,12 +74,12 @@ blocks:
 
   - type: terms-section
     id: thirty-day
-    nav_label: The 30-day rule
-    heading: The 30-day rule
+    nav_label: "The {fact:credit.windowDays}-day rule"
+    heading: "The {fact:credit.windowDays}-day rule"
     items:
       - "The {price:assessment} counts in full toward a tier whose work begins within {fact:credit.windowDays} days of completion of the first step. You then pay the balance."
       - "Balances: Personal Shield {price:balanceShield} · Personal Shield for Two {price:balanceTwo} · Inner Circle {price:balanceInnerCircle}."
-      - "After day {fact:credit.windowDays}, the tier is charged at its full price."
+      - "{shared:common.after_window}"
       - "Moving up a tier: if the first step shows the next tier is needed, you pay that tier's price less the {price:assessment} already paid, within the same {fact:credit.windowDays} days."
       - "The first step counts once per engagement, also for a group."
       - "Larger households: the fixed price is set in writing after the first step, from {price:largerFrom}, and the {price:assessment} counts toward it on the same {fact:credit.windowDays}-day terms."
@@ -99,10 +99,10 @@ blocks:
     nav_label: Allowances in every tier
     heading: Allowances in every tier
     items:
-      - "Everyday devices (phone, computer, tablet or second phone): up to {numword:devicesPerPerson} per person, shared within the tier. Personal Shield {numword:devicesPerPerson}, Personal Shield for Two {numword:devicesPerPerson*2}, Inner Circle {numword:devicesPerPerson*4}."
-      - "Security keys, supplied, configured and tested: Personal Shield {numword:securityKeys.personalShield}, Personal Shield for Two {numword:securityKeys.shieldForTwo}, Inner Circle {numword:securityKeys.innerCircle}."
+      - "Everyday devices (phone, computer, tablet or second phone): up to {factword:devicesPerPerson} per person, shared within the tier. Personal Shield {factword:devicesPerPerson}, Personal Shield for Two {factword:devicesPerPerson*2}, Inner Circle {factword:devicesPerPerson*4}."
+      - "Security keys, supplied, configured and tested: Personal Shield {factword:securityKeys.personalShield}, Personal Shield for Two {factword:securityKeys.shieldForTwo}, Inner Circle {factword:securityKeys.innerCircle}."
       - "One home network and router, in addition to the devices. The work covers accessible settings and authorized administration. Replacement hardware, further connected devices and additional locations are quoted separately."
-      - "Essential migration covers identity, recovery routes and critical-service access where needed. Historical archives and bulk data migration are scoped separately."
+      - "{shared:common.essential_migration} Historical archives and bulk data migration are scoped separately."
       - "A follow-up visit after about four weeks."
       - "Questions answered by WhatsApp or Signal for {fact:questionLineDays} days (see [the {fact:questionLineDays}-day question line](#question-line))."
       - "Coordination with your lawyer or family office, if you authorize it."
@@ -136,7 +136,7 @@ blocks:
       - "The term starts the day the {fact:questionLineDays}-day question line ends."
       - "For a household of up to four, Annual Care covers up to two new or replaced devices and up to two replacement keys. For Inner Circle, the first Care term moves the check visit to about month six; the twelve-month review stays."
       - "Further keys and any replacement router are charged at cost. Added devices are scoped separately."
-      - "Joining: within {numword:annualCare.joinWindowMonths} months of the question line ending. After that, we start again with a first step ({price:assessment}), which counts in full toward Annual Care within {fact:credit.windowDays} days."
+      - "Joining: within {factword:annualCare.joinWindowMonths} months of the question line ending. After that, we start again with a first step ({price:assessment}), which counts in full toward Annual Care within {fact:credit.windowDays} days."
       - "Renewal: at the published price at the time. The invoice is sent 30 days before the term ends, and the line stays open for 14 days while it is settled."
       - "Scoped and priced separately: new people; a new or second home; company devices or staff; devices beyond the original allowance; any incident, such as a suspected compromise; urgent visits, on the [urgent terms](#urgent) below."
 
@@ -145,8 +145,8 @@ blocks:
     nav_label: Urgent visits
     heading: Urgent visits
     items:
-      - "Availability is confirmed before you pay."
-      - "For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment. The clock starts when both conditions are met."
+      - "{shared:common.availability}"
+      - "{shared:common.urgent_arrival} The clock starts when both conditions are met."
       - "The four hours are an arrival commitment; the visit then runs its agreed course."
       - "Surcharge {price:urgentSurcharge}, added to the agreed base service price. At weekends or holidays the surcharge is {price:urgentSurchargeWeekend}, replacing the ordinary surcharge. Other charges apply only if separately agreed."
 
@@ -157,7 +157,7 @@ blocks:
     items:
       - "Every paid service follows three steps: a written scope and price (the work, inclusions, exclusions, price, agreed additions and payment terms); your explicit acceptance; receipt of payment. The work is then scheduled."
       - "This applies to the first step, each tier or its balance, Annual Care and any agreed addition."
-      - "The first conversation is free and commits you to nothing."
+      - "{shared:common.first_conversation}"
 
   - type: contact
     heading: Questions about these terms?

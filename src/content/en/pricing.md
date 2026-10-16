@@ -1,7 +1,7 @@
 ---
 page: pricing
 title: Pricing — Toza
-description: Toza's fees. One first step, then the protection that fits your household.
+description: "Toza's fees. {shared:common.one_first_step}"
 permalink: /en/pricing/index.html
 lang: en
 dir: ltr

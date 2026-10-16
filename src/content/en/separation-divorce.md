@@ -15,7 +15,7 @@ blocks:
 
   - type: recognition
     heading: Choose which access you keep.
-    lead: Some of it you still need. Dr. Tabansky shows you what each connection allows, so you can tell access you want to keep from access you want to end.
+    lead: "{shared:common.some_of_it} Dr. Tabansky shows you what each connection allows, so you can tell access you want to keep from access you want to end."
     items:
       - A family cloud that still shares photos and documents.
       - A recovery number or email that belongs to your spouse.
@@ -24,15 +24,15 @@ blocks:
 
   - type: text
     heading: Change things in the right order.
-    body: A password change can leave another route open, and changing a family service can cut access you rely on. You agree the sequence together before anything changes.
+    body: A password change can leave another route open, and changing a family service can cut access you rely on. {shared:common.sequence}
 
   - type: stages
     ref: stages
-    line: Assess what still connects you. Harden a setup for the life you are moving into. Verify it works, and learn to run it.
+    line: Assess what still connects you. Harden a setup for the life you are moving into. {shared:common.verify_and_learn}
 
   - type: text
     heading: Your attorney can be involved.
-    body: With your authorization, you receive an attorney-friendly summary of the work and what remains, and timing can be coordinated with counsel.
+    body: "{shared:common.attorney_summary}"
 
   - type: price-summary
     ref: price_summary

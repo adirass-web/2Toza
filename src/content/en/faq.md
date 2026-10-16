@@ -78,11 +78,11 @@ blocks:
         question: What does Personal Shield include?
         open: true
         answer: |-
-          Personal Shield costs {price:personalShield} for one person, with the first step included. Dr. Tabansky hardens your phone, computer, accounts and home network around your risks, in person. It includes {numword:securityKeys.personalShield} security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for {fact:questionLineDays} days.
+          Personal Shield costs {price:personalShield} for one person, with the first step included. Dr. Tabansky hardens your phone, computer, accounts and home network around your risks, in person. It includes {factword:securityKeys.personalShield} security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for {fact:questionLineDays} days.
       - id: c2
         question: What do Personal Shield for Two and Inner Circle include?
         answer: |-
-          Personal Shield for Two ({price:shieldForTwo}) is for you and one other person: each person's phone, computer and accounts, your home network and {numword:securityKeys.shieldForTwo} security keys. Inner Circle ({price:innerCircle}) is for a household of up to four, with {numword:securityKeys.innerCircle} security keys and a review visit at twelve months. Both include the follow-up visit and {fact:questionLineDays} days of answered questions. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.
+          Personal Shield for Two ({price:shieldForTwo}) is for you and one other person: each person's phone, computer and accounts, your home network and {factword:securityKeys.shieldForTwo} security keys. Inner Circle ({price:innerCircle}) is for a household of up to four, with {factword:securityKeys.innerCircle} security keys and a review visit at twelve months. Both include the follow-up visit and {fact:questionLineDays} days of answered questions. {shared:common.coordinates}
       - id: c3
         question: In Personal Shield for Two or Inner Circle, who sees whose records?
         answer: |-
@@ -90,7 +90,7 @@ blocks:
       - id: c4
         question: Does migration include all my files and old accounts?
         answer: |-
-          Essential migration covers identity, recovery routes and critical-service access where needed. Historical archives and bulk data migration require a separately agreed scope. The written offer identifies the work to be done; the service does not promise unlimited accounts or data transfers.
+          {shared:common.essential_migration} Historical archives and bulk data migration require a separately agreed scope. The written offer identifies the work to be done; the service does not promise unlimited accounts or data transfers.
       - id: c5
         question: "What does the {fact:questionLineDays}-day question line cover?"
         answer: |-
@@ -194,7 +194,7 @@ blocks:
         question: "How does the {price:assessment} first step count toward a tier?"
         open: true
         answer: |-
-          In full, when the tier's work begins within {fact:credit.windowDays} days of completion of the first step. You then pay the balance: {price:balanceShield} for Personal Shield, {price:balanceTwo} for Personal Shield for Two or {price:balanceInnerCircle} for Inner Circle. After day {fact:credit.windowDays}, the tier is charged at its full price. If the first step shows you need the next tier, you pay that tier's price less the {price:assessment} already paid, within the same {fact:credit.windowDays} days.
+          In full, when the tier's work begins within {fact:credit.windowDays} days of completion of the first step. You then pay the balance: {price:balanceShield} for Personal Shield, {price:balanceTwo} for Personal Shield for Two or {price:balanceInnerCircle} for Inner Circle. {shared:common.after_window} If the first step shows you need the next tier, you pay that tier's price less the {price:assessment} already paid, within the same {fact:credit.windowDays} days.
       - id: g2
         question: What if the first step shows I need more than a tier includes?
         answer: |-
@@ -202,11 +202,11 @@ blocks:
       - id: g3
         question: Can you come urgently, and what does it cost?
         answer: |-
-          Availability is confirmed before you pay. For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment. This is an arrival commitment, not a four-hour completion promise. The surcharge is {price:urgentSurcharge}, added to the agreed service price; at weekends or holidays it is {price:urgentSurchargeWeekend} instead.
+          {shared:common.availability} {shared:common.urgent_arrival} This is an arrival commitment, not a four-hour completion promise. The surcharge is {price:urgentSurcharge}, added to the agreed service price; at weekends or holidays it is {price:urgentSurchargeWeekend} instead.
       - id: g4
         question: "What happens after the {fact:questionLineDays} days?"
         answer: |-
-          Past clients can continue with Annual Care: the question line on the same terms for twelve months, a check visit, setup of a new or replaced phone or computer, a replacement security key and an update to the dated record. It costs {price:annualCareOne} a year for one person, {price:annualCareTwo} for two and {price:annualCareHousehold} for a household of up to four. Join within {numword:annualCare.joinWindowMonths} months of the question line ending.
+          Past clients can continue with Annual Care: the question line on the same terms for twelve months, a check visit, setup of a new or replaced phone or computer, a replacement security key and an update to the dated record. It costs {price:annualCareOne} a year for one person, {price:annualCareTwo} for two and {price:annualCareHousehold} for a household of up to four. Join within {factword:annualCare.joinWindowMonths} months of the question line ending.
     link:
       label: "All terms: Conditions"
       href: /en/conditions/

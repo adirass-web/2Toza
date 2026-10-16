@@ -13,8 +13,12 @@
 # `npm run check:content` fails if any editorial i18n string is missing from
 # this file, so the two cannot drift before the wiring step removes them.
 #
-# Tokens: {price:key} {fact:path} {numword:path} {shared:path} {ui:path}.
-# Never type a price; facts live in src/_data/facts.json.
+# Tokens: {price:key} {fact:path} {factword:path} {Factword:path} {shared:path} {ui:path}.
+# Never type a price, a day count or a key count; facts live in src/_data/facts.json.
+#
+# `common:` holds sentences used on more than one page (V-036). Pages refer to
+# them as {shared:common.<key>}. check:content fails on a sentence of 6+ words
+# that is typed on two pages instead.
 
 person:
   name: Dr. Lior Tabansky
@@ -22,6 +26,23 @@ person:
   tagline_short: In person · You control your credentials
 
 method: Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
+
+common:
+  same_expert: The same expert, from first look to final check.
+  some_of_it: Some of it you still need.
+  start_checked: Start with what can be checked.
+  sequence: You agree the sequence together before anything changes.
+  verify_and_learn: Verify it works, and learn to run it.
+  attorney_summary: With your authorization, you receive an attorney-friendly summary of the work and what remains, and timing can be coordinated with counsel.
+  coordinates: If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.
+  engagement_in_person: Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials.
+  price_fixed: Each price is fixed and agreed in writing before work begins.
+  one_first_step: One first step, then the protection that fits your household.
+  first_conversation: The first conversation is free and commits you to nothing.
+  after_window: "After day {fact:credit.windowDays}, the tier is charged at its full price."
+  essential_migration: Essential migration covers identity, recovery routes and critical-service access where needed.
+  availability: Availability is confirmed before you pay.
+  urgent_arrival: For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment.
 
 labels:
   start_here: Start here
@@ -43,9 +64,9 @@ offers:
     short: Personal Shield
     for: For one person. Your phone, computer, accounts and home network hardened around your risks.
     items:
-      - Two security keys, configured and tested
+      - "{Factword:securityKeys.personalShield} security keys, configured and tested"
       - A follow-up visit after about four weeks
-      - Questions answered by WhatsApp or Signal for 60 days
+      - "Questions answered by WhatsApp or Signal for {fact:questionLineDays} days"
     home_line: Fixed and agreed in writing before any work, first step included.
   two:
     name: Personal Shield for Two
@@ -53,23 +74,23 @@ offers:
     for: For you and one other person.
     items:
       - Each person's phone, computer and accounts
-      - Your home network · four security keys
-      - Follow-up visit · 60 days of answered questions
+      - "Your home network · {factword:securityKeys.shieldForTwo} security keys"
+      - "Follow-up visit · {fact:questionLineDays} days of answered questions"
   inner:
     name: Inner Circle
     for: For a household of up to four.
     items:
       - Everyone's phones, computers and accounts, each kept private
-      - Your home network · eight security keys
-      - Follow-up visit · 60 days of answered questions · review visit at twelve months
-  under_all: The first step is included. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.
+      - "Your home network · {factword:securityKeys.innerCircle} security keys"
+      - "Follow-up visit · {fact:questionLineDays} days of answered questions · review visit at twelve months"
+  under_all: "The first step is included. {shared:common.coordinates}"
   larger: "Larger households, several residences or household staff: one fixed price, set out after the first step, from {price:largerFrom}."
-  care: "After the 60 days: Annual Care for past clients, from {price:annualCareFrom} a year."
+  care: "After the {fact:questionLineDays} days: Annual Care for past clients, from {price:annualCareFrom} a year."
 
 pricing:
   heading: Fees
-  lead: One first step, then the protection that fits your household. Each price is fixed and agreed in writing before work begins.
-  method: Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
+  lead: "{shared:common.one_first_step} {shared:common.price_fixed}"
+  method: "{shared:common.engagement_in_person} {shared:method}"
 
 stages:
   heading: Three stages, one person.
@@ -77,8 +98,10 @@ stages:
     assess: Assess
     harden: Harden
     verify: Verify
+  headings:
+    assess: Your threat model, your risks in order, and urgent first aid.
   lines:
-    assess: Your threat model, your risks in order, and urgent first aid. Typically four hours.
+    assess: "{shared:stages.headings.assess} Typically four hours."
     harden: Settings, accounts and recovery rebuilt around your risks. Security keys supplied and configured.
     verify: Changes tested and checked, and you are taught to use them. A private dated record of the work.
   image_alts:
@@ -200,5 +223,5 @@ blocks:
   contact:
     type: contact
     heading: Start with a private conversation.
-    body: Dr. Tabansky replies personally. The first conversation is free and commits you to nothing.
+    body: "Dr. Tabansky replies personally. {shared:common.first_conversation}"
     actions: [whatsapp, signal, callback]

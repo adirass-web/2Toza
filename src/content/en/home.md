@@ -27,7 +27,7 @@ blocks:
         line: Family arrangements that outlived the trust.
         href: /en/inheritance-conflict/
       - title: Someone knows something
-        line: Private information has surfaced. Start with what can be checked.
+        line: Private information has surfaced. {shared:common.start_checked}
         href: /en/they-know-something/
     aside: Or before anything happens. You don't need a known incident to begin.
 
@@ -36,7 +36,7 @@ blocks:
 
   - type: method-statement
     ref: method
-    heading: The same expert, from first look to final check.
+    heading: "{shared:common.same_expert}"
     links:
       - label: "{ui:buttons.profile}"
         action: profile

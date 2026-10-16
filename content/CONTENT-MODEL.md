@@ -7,9 +7,9 @@ Machine-readable schema: `content/content-model.json`. Validator: `npm run check
 
 1. **Semantic, not visual.** A block says *what the copy is* (a promise, a set of signals, an offer, a term), never how it looks. No grid, colour, CSS class or component-library names appear in content. The later component library maps each block type to one component; design tokens stay out of content.
 2. **One home for each string.** Copy for one page lives in that page's file. Copy shown on two or more pages lives once in `_shared.yaml`. Interface chrome lives in `i18n/<lang>.json`. Commercial facts live only in `facts.json`.
-3. **Facts are referenced, never typed.** No `₪` and no price figure appears in any content file. Structured prices use `price_key`; prices inside sentences use `{price:key}`. The check fails on a typed amount.
-4. **The extraction mirrors the templates' data binding.** Where a template read `t.*`, the content uses a `{shared:…}`/`{ui:…}` token or a shared block; where it read `facts.*`, a fact token; where it held literal text, the content holds the literal text. Places where literal text duplicates a fact are listed as open questions, not silently changed.
-5. **Hebrew-ready.** Every user-visible string is in a content field, including alt text, captions, table headings and visually hidden headings. Nothing depends on English word order: amounts are slotted into templates (`price_format: "from {amount}"`), and number words come from a per-language `numword` filter. `lang`/`dir` are page fields.
+3. **Facts are referenced, never typed.** No `₪` and no price figure appears in any content file. Structured prices use `price_key`; prices inside sentences use `{price:key}`. The check fails on a typed amount. Day counts, key counts, device counts and month windows come from facts.json through `{fact:…}` / `{factword:…}` (V-035); the check warns on a typed one.
+4. **The extraction mirrors the templates' data binding.** Where a template read `t.*`, the content uses a `{shared:…}`/`{ui:…}` token or a shared block; where it read `facts.*`, a fact token; where it held literal text, the content holds the literal text, except that literals equal to a fact are tokens (V-035) and sentences repeated across pages live once in `_shared.yaml: common` (V-036).
+5. **Hebrew-ready.** Every user-visible string is in a content field, including alt text, captions, table headings and visually hidden headings. Nothing depends on English word order: amounts are slotted into templates (`price_format: "from {amount}"`), and number words come from `{factword:…}` (English only; Hebrew uses digits, V-034). `lang`/`dir` are page fields.
 
 ## 2. Files
 
@@ -49,12 +49,26 @@ Page files: `home`, `how-it-works`, `about`, `pricing`, `faq`, `conditions`, `se
 | `price_format: "from {amount}"` | price table rows | the amount slotted into words | from ₪90,000 |
 | `{price:key}` | any text/md field | formatted price | "The first step is {price:assessment}…" |
 | `{fact:path}` | any text/md field | a value from facts.json; `\|capfirst` capitalises | `{fact:credit.windowDays}` → 30 |
-| `{numword:path}` / `{numword:path*N}` | any text/md field | the number as a word in the page language | `{numword:devicesPerPerson*2}` → six |
-| `{shared:path}` | any text/md field | a string in `_shared.yaml` (arrays join with a space) | `{shared:offers.shield.name}` |
+| `{factword:path}` / `{factword:path*N}` | any text/md field, English only | the fact as an English number word (digits above twelve) | `{factword:devicesPerPerson*2}` → six |
+| `{Factword:path}` | same | the same, capitalised for sentence start | `{Factword:securityKeys.personalShield} security keys` → Two security keys |
+| `{shared:path}` | any text/md field | a string in `_shared.yaml` (arrays join with a space); may itself contain tokens | `{shared:offers.shield.name}` |
+| `{shared:common.key}` | any text/md field | a sentence used on more than one page (V-036) | `{shared:common.sequence}` |
 | `{ui:path}` | any text/md field | a UI string in i18n | `{ui:buttons.profile}` |
 | `actions: [whatsapp, signal, callback]` | hero, contact | contact.json channel + its UI label | — |
 | `action: referral` | link, FAQ item | one channel as a link/button | — |
 | `ref: stages` | any block | the shared block of that name; local fields override | `line:` on situation pages |
+
+### 4.1 Fact tokens
+
+- Which facts: `questionLineDays` (60), `credit.windowDays` (30), `securityKeys.personalShield|shieldForTwo|innerCircle` (2/4/8), `devicesPerPerson` (3, with `*2`, `*4` for the household tiers), `annualCare.joinWindowMonths` (6). Anything else in facts.json that is a whole number also works.
+- Use `{fact:…}` for digits ("{fact:questionLineDays} days", "the {fact:credit.windowDays}-day rule") and `{factword:…}` for words ("{factword:securityKeys.shieldForTwo} security keys"). At the start of a sentence or list item use `{Factword:…}`. Never type the number or the word.
+- Hebrew content uses digits only: `{fact:…}`. `{factword:}` and `{Factword:}` fail in non-English content (V-034).
+- An unknown key fails the check. Tokens resolve before the length and parity checks, so parity runs on the resolved text.
+- A typed number that equals one of these facts next to "days", "keys", "devices" or "months" (also in words: "sixty days", "Two security keys") produces a **warning** with the token to use. It is a warning because the same number can mean something else (Conditions: the Annual Care invoice goes out 30 days before the term ends, which is not the credit window).
+
+### 4.2 Shared sentences
+
+Pages already reference shared strings with `{shared:path}` and shared blocks with `ref:`. A sentence of six or more words used on two or more pages lives once in `_shared.yaml: common` and each page writes `{shared:common.key}` in its place, alone or inside a longer field ("Private information has surfaced. {shared:common.start_checked}"). A field that starts with a token must be quoted in YAML. The check fails if such a sentence is typed on two pages, or on a page and in `_shared.yaml`.
 
 The renderer adds a little copy implied by a field: `byline: full|short` adds the person's name and tagline from `_shared.yaml: person`; `stage_names: true` adds the three stage names; a step's position number ("1 · Assess") is generated.
 
@@ -63,6 +77,8 @@ The renderer adds a little copy implied by a field: `byline: full|short` adds th
 - **UI chrome → `i18n/<lang>.json`** (`ui`, `nav`, `footer`, `buttons`): words that *operate the interface* and would be translated as interface — navigation and footer link labels, action-button labels, skip link, aria/landmark labels, "opens in a new tab", expand/collapse toggles, print, arrows. Content refers to them with `{ui:…}` or `actions`.
 - **Shared editorial copy → `_shared.yaml`**: words that *say something about Toza*, shown on more than one page — the person byline, the method statement, offer names, descriptions, inclusions and credit lines, price labels ("Start here", "All protection tiers"), the three stages, the exposure-summary specimen, the contact block. This includes the method line, contact text and price-block labels; nav and footer are chrome and stay in i18n.
 - **Page copy → page file**: everything else, even if a similar sentence exists elsewhere.
+
+Sentences used on more than one page: `_shared.yaml: common` (§4.2).
 
 Reusable shared blocks in `_shared.yaml: blocks`: `stages`, `price_strip`, `price_summary`, `method`, `specimen`, `offer_first_step`, `contact`.
 
@@ -391,6 +407,8 @@ The invitation to make contact: heading, reassurance, channel actions, optional 
 2. **No typed prices:** no `₪` and no figure equal to a facts.json price anywhere in content files.
 3. **Parity with the built site:** for each page in `_site/en/`, every sentence of visible text (and alt/aria-label text) must be found in that page's content, its shared blocks or UI chrome; every content sentence must be found in the page HTML. `<title>` and meta description must match exactly. Whitespace is normalised.
 4. **Drift guard:** editorial strings still in i18n must equal a `_shared.yaml` string.
+5. **Facts as tokens:** `{fact:}` / `{factword:}` / `{Factword:}` keys must exist and be whole numbers; number words fail outside English; a typed number equal to one of these facts next to days/keys/devices/months is a warning (§4.1).
+6. **No repeated sentences:** a sentence of 6+ words typed on two pages (or on a page and in `_shared.yaml`) fails (§4.2).
 
 ## 9. Notes for the wiring step
 

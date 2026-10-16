@@ -24,15 +24,15 @@ blocks:
 
   - type: text
     heading: Understand the connections before changing them.
-    body: One password change leaves a shared service or recovery setting as it was, and ending an arrangement can cut access you rely on. You agree the sequence together before anything changes.
+    body: One password change leaves a shared service or recovery setting as it was, and ending an arrangement can cut access you rely on. {shared:common.sequence}
 
   - type: stages
     ref: stages
-    line: Assess what family arrangements still connect. Harden a setup that fits your circumstances now. Verify it works, and learn to run it.
+    line: Assess what family arrangements still connect. Harden a setup that fits your circumstances now. {shared:common.verify_and_learn}
 
   - type: text
     heading: Your attorney can be involved.
-    body: With your authorization, you receive an attorney-friendly summary of the work and what remains, and timing can be coordinated with counsel.
+    body: "{shared:common.attorney_summary}"
 
   - type: price-summary
     ref: price_summary

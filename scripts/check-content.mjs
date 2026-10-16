@@ -34,8 +34,10 @@ const UI_NAMESPACES = ["ui", "nav", "footer", "buttons"];
 const EDITORIAL_NAMESPACES = ["person", "credential", "contact", "price", "stages", "specimen"];
 
 const errors = [];
+const warnings = [];
 const notes = [];
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
+const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 
 // ---------- helpers ----------
 const get = (obj, path) => path.split(".").reduce((o, k) => (o == null ? undefined : o[k]), obj);
@@ -47,7 +49,9 @@ const formatPrice = (n) => "₪" + Number(n).toLocaleString("en-US");
 const usedShared = new Set();
 
 // ---------- tokens ----------
-const TOKEN = /\{(price|fact|numword|shared|ui):([A-Za-z0-9_.]+)(?:\*(\d+))?(?:\|(capfirst))?\}/g;
+// {fact:path} digits · {factword:path} English number word · {Factword:path} the same, capitalised
+// (sentence start). `*N` multiplies the fact first (e.g. {factword:devicesPerPerson*2}).
+const TOKEN = /\{(price|fact|factword|Factword|shared|ui):([A-Za-z0-9_.]+)(?:\*(\d+))?(?:\|(capfirst))?\}/g;
 function resolve(str, where, depth = 0) {
   if (str == null) return "";
   if (Array.isArray(str)) return str.map((s) => resolve(s, where, depth)).join(" ");
@@ -59,11 +63,15 @@ function resolve(str, where, depth = 0) {
       v = facts.prices[path];
       if (typeof v !== "number") { err(where, `unknown price key ${m}`); return m; }
       v = formatPrice(v);
-    } else if (ns === "fact" || ns === "numword") {
+    } else if (ns === "fact" || ns === "factword" || ns === "Factword") {
       v = get(facts, path);
-      if (v === undefined || typeof v === "object") { err(where, `unknown fact ${m}`); return m; }
+      if (v === undefined || v === null || typeof v === "object" || (ns !== "fact" && !Number.isInteger(v))) { err(where, `unknown fact ${m}`); return m; }
+      if (ns !== "fact" && LANG !== "en") { err(where, `${m}: number words are English-only (V-034); use {fact:${path}} in ${LANG} content`); return m; }
       if (mul) v = Number(v) * Number(mul);
-      if (ns === "numword") v = NUMWORDS[Number(v)] ?? String(v);
+      if (ns !== "fact") {
+        v = NUMWORDS[Number(v)] ?? String(v);
+        if (ns === "Factword") v = v.charAt(0).toUpperCase() + v.slice(1);
+      }
     } else if (ns === "shared") {
       v = get(shared, path);
       if (v === undefined || (typeof v === "object" && !Array.isArray(v))) { err(where, `unknown shared string ${m}`); return m; }
@@ -77,7 +85,7 @@ function resolve(str, where, depth = 0) {
     if (filter === "capfirst") v = v.charAt(0).toUpperCase() + v.slice(1);
     return v;
   });
-  if (/\{[a-z]+:[^}]*\}/.test(out)) err(where, `unresolved token in "${out}"`);
+  if (/\{[A-Za-z]+:[^}]*\}/.test(out)) err(where, `unresolved token in "${out}"`);
   return out;
 }
 
@@ -133,6 +141,60 @@ function scanRaw(label, raw) {
 }
 scanRaw(`${CONTENT_DIR}/_shared.yaml`, readFileSync(join(CONTENT_DIR, "_shared.yaml"), "utf8"));
 for (const p of pages) scanRaw(p.file, p.raw);
+
+// ---------- literal facts (warning) ----------
+// A number typed next to "days" / "keys" / "devices" / "months" that equals a facts.json value
+// should be a token. Warning only: the same number can mean something else ("30 days before
+// the term ends").
+const FACT_UNITS = [
+  { unit: "days", key: "questionLineDays" },
+  { unit: "days", key: "credit.windowDays" },
+  { unit: "keys", key: "securityKeys.personalShield" },
+  { unit: "keys", key: "securityKeys.shieldForTwo" },
+  { unit: "keys", key: "securityKeys.innerCircle" },
+  { unit: "devices", key: "devicesPerPerson" },
+  { unit: "months", key: "annualCare.joinWindowMonths" },
+];
+const LITERAL = new RegExp(`(?<![\\w.:{])(\\d+|${NUMWORDS.slice(1).join("|")})(?:-| )(days?|(?:security )?keys?|devices?|months?)(?![\\w])`, "gi");
+function scanLiteralFacts(label, raw) {
+  raw.split("\n").forEach((line, i) => {
+    if (/^\s*#/.test(line)) return;
+    for (const m of line.matchAll(LITERAL)) {
+      const n = /^\d+$/.test(m[1]) ? Number(m[1]) : NUMWORDS.indexOf(m[1].toLowerCase());
+      const unit = m[2].toLowerCase().replace(/^security /, "").replace(/s$/, "") + "s";
+      const hits = FACT_UNITS.filter((f) => f.unit === unit && get(facts, f.key) === n);
+      if (!hits.length) continue;
+      const suggest = hits.map((h) => (/^\d/.test(m[1]) ? `{fact:${h.key}}` : `{${m[1][0] === m[1][0].toUpperCase() ? "Factword" : "factword"}:${h.key}}`)).join(" or ");
+      warn(`${label}:${i + 1}`, `literal "${m[0]}" equals a facts.json value; use ${suggest}`);
+    }
+  });
+}
+scanLiteralFacts(`${CONTENT_DIR}/_shared.yaml`, readFileSync(join(CONTENT_DIR, "_shared.yaml"), "utf8"));
+for (const p of pages) scanLiteralFacts(p.file, p.raw);
+
+// ---------- repeated sentences (V-036) ----------
+// A sentence of 6+ words typed on two or more pages (or on a page and in _shared.yaml) must live
+// once in _shared.yaml and be referenced with {shared:...}. Compared on the raw text, so a token
+// that references a shared sentence is not a repeat.
+function rawSentences(value, acc = []) {
+  if (typeof value === "string") {
+    for (const para of value.split(/\n\s*\n|\n- /)) {
+      norm(para).replace(/\b(Dr|Mr|Mrs|Ms)\. /g, "$1.\u0000").split(/(?<=[.!?]) (?=[A-Z{"])/)
+        .map((x) => x.replace(/\u0000/g, " ").trim())
+        .filter((x) => x.split(" ").length >= 6).forEach((x) => acc.push(x));
+    }
+  } else if (Array.isArray(value)) value.forEach((v) => rawSentences(v, acc));
+  else if (value && typeof value === "object") Object.values(value).forEach((v) => rawSentences(v, acc));
+  return acc;
+}
+{
+  const seen = new Map(); // sentence -> Set of places
+  const add = (place, data) => { for (const s of new Set(rawSentences(data))) { if (!seen.has(s)) seen.set(s, new Set()); seen.get(s).add(place); } };
+  for (const p of pages) add(`${p.data.page}.md`, p.data);
+  add("_shared.yaml", shared);
+  for (const [s, where] of seen) if (where.size > 1)
+    err("repeated sentence", `"${s}" is typed in ${[...where].join(", ")}; keep it once in _shared.yaml under common: and use {shared:common.…}`);
+}
 
 // ---------- model validation + string collection ----------
 const lengths = new Map(); // "type.field" -> max observed
@@ -442,6 +504,8 @@ console.log(`HTML → content: ${totals.htmlUnits} text units (${totals.htmlExac
 console.log(`Content → HTML: ${totals.contentUnits} sentences, ${totals.contentFound} found, ${totals.contentSpacing} found ignoring spaces, ${totals.contentMissing} missing`);
 console.log(`Drift guard: ${driftChecked} editorial i18n strings checked against _shared.yaml`);
 if (ARGS.has("--verbose") || errors.length === 0) for (const n of notes) console.log("note: " + n);
+console.log(`Literal-fact warnings: ${warnings.length}`);
+for (const w of warnings) console.log("warn: " + w);
 for (const e of errors) console.error("FAIL: " + e);
 if (errors.length) { console.error(`\ncheck:content FAILED with ${errors.length} problem(s)`); process.exit(1); }
 const pct = totals.htmlUnits ? (((totals.htmlUnits - totals.htmlMissing) / totals.htmlUnits) * 100).toFixed(1) : "0";

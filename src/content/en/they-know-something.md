@@ -14,7 +14,7 @@ blocks:
     actions: [whatsapp, signal, callback]
 
   - type: recognition
-    heading: Start with what can be checked.
+    heading: "{shared:common.start_checked}"
     lead: Exposure can run through a connected device or service, beyond the account you first suspect. Dr. Tabansky shows what each one reveals or allows, and what to change now.
     items:
       - Devices still signed in to your messages or email.
@@ -28,11 +28,11 @@ blocks:
 
   - type: text
     heading: Understand the effects before making isolated changes.
-    body: Changing a password may leave another session or recovery route open, and deleting an account can affect services you still need. You agree the sequence together before anything changes.
+    body: Changing a password may leave another session or recovery route open, and deleting an account can affect services you still need. {shared:common.sequence}
 
   - type: stages
     ref: stages
-    line: Assess what can be checked. Harden what you decide to close, even if the original concern stays unexplained. Verify it works, and learn to run it.
+    line: Assess what can be checked. Harden what you decide to close, even if the original concern stays unexplained. {shared:common.verify_and_learn}
 
   - type: text
     heading: Urgent visits.
