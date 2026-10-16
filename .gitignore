@@ -3,3 +3,4 @@ _site/
 .wrangler/
 .DS_Store
 .tmp-proj/
+assets/css/main.css
