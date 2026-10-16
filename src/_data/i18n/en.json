@@ -38,8 +38,8 @@
     "terms": "Terms"
   },
   "buttons": {
-    "whatsapp": "Message on WhatsApp",
-    "signal": "Message on Signal",
+    "whatsapp": "WhatsApp",
+    "signal": "Signal",
     "signalShort": "Signal",
     "callback": "Call me back",
     "referral": "Discuss a referral",

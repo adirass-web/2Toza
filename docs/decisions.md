@@ -44,5 +44,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-038 | 2026-10-16 | No paid licences: only free, MIT/OFL-licensed code and fonts (Flowbite core or daisyUI, Tailwind, Eleventy, fontsource). No Flowbite Pro, paid blocks, store templates or Tailwind Plus. Component library finalists: Flowbite 4 and daisyUI 5; owner picks after a three-page comparison. |
 | V-039 | 2026-10-16 | Owner picked Flowbite 4 (free core) as the fixed component library. daisyUI branch kept, not merged. |
 | V-040 | 2026-10-16 | Owner approved deletion of the switched-off old page templates, old includes, legacy CSS and superseded scripts. All 11 pages render from content. |
+| V-041 | 2026-10-16 | Contact buttons read "WhatsApp" and "Signal" (no "Message on"), in blocks and floating buttons. Owner request. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

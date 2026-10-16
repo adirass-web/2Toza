@@ -14,7 +14,7 @@ Data comes from `siteContent.<lang>.pages.<page>.blocks` (global data `src/_data
 - **Plain text** fields are strings. Autoescape is on; print them with `{{ x }}`.
 - **Markdown** fields (`md`) are objects `{ md, text, html }`: `md` the resolved source, `text` the reader-visible text (paragraphs joined by a space, the basis of the length limits), `html` rendered by markdown-it with the check's settings (paragraphs, lists, links; no raw HTML). Print with `{{ x.html | safe }}`.
 - **Links** (`link` objects) are `{ label, href, kind, external, aria? }`. `kind` is `plain` (default), `more` (leads to a fuller page; usually shown with an arrow) or `external` (leaves the site; shown with the external glyph). `external` is true for `https://` targets: open them with `target="_blank" rel="noopener"`. `aria` is the screen-reader hint "(opens in a new tab)" and is present when `kind` is `external`. A link written with `action:` in content is already resolved to its `href`.
-- **Actions** (contact channels) are `{ key, label, href, external, aria? }`, built from `contact.json` and the i18n button labels, as the current templates do. `key` is `whatsapp`, `signal`, `callback` or `referral` (or `profile`). The first entry of a list is the lead action. The label depends on where the list sits: in a **hero** the Signal button reads "Signal" (short), in a **contact** block "Message on Signal". `external` is true for all channels.
+- **Actions** (contact channels) are `{ key, label, href, external, aria? }`, built from `contact.json` and the i18n button labels, as the current templates do. `key` is `whatsapp`, `signal`, `callback` or `referral` (or `profile`). The first entry of a list is the lead action. The label depends on where the list sits: in a **hero** the Signal button reads "Signal" (short), in a **contact** block "Signal". `external` is true for all channels.
 - **Prices**: an object with a `price_key` also carries `price` (display string, formatted like the `ils` filter, with any `price_format` applied, e.g. "from ₪90,000") and `price_value` (number, for `<data value>`). `price_format` itself is not passed on.
 - **Nested blocks** (`stages.price_strip`, `tiers.first_step`) are complete blocks of their own type with the same shape. Render them by including that type's template with `block` set to the nested block (see `stages.njk`).
 - **Order of items** is reading order. Do not sort.
@@ -55,7 +55,7 @@ Example: home.
   "actions": [
     {
       "key": "whatsapp",
-      "label": "Message on WhatsApp",
+      "label": "WhatsApp",
       "href": "https://wa.me/972533366276?text=…",
       "external": true
     },
@@ -96,13 +96,13 @@ Example: separation-divorce (with `note`).
   "actions": [
     {
       "key": "whatsapp",
-      "label": "Message on WhatsApp",
+      "label": "WhatsApp",
       "href": "https://wa.me/972533366276?text=…",
       "external": true
     },
     {
       "key": "signal",
-      "label": "Message on Signal",
+      "label": "Signal",
       "href": "https://signal.me/#p/+972533366276",
       "external": true
     },
