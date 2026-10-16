@@ -96,8 +96,8 @@
   --layout-max-width: 76rem;  /* Content width (.wrap). */
   --layout-gutter: 1rem;  /* Side gutter below sm (640px). */
   --layout-gutter-wide: 2rem;  /* Side gutter from sm (640px). */
-  --layout-section-padding: 2.75rem;  /* Section vertical padding below lg (1024px). */
-  --layout-section-padding-wide: 7rem;  /* Section vertical padding from lg (1024px). */
+  --layout-section-padding: 2rem;  /* Section vertical padding below lg (1024px). */
+  --layout-section-padding-wide: 4.5rem;  /* Section vertical padding from lg (1024px). */
   --text-hero-sm: 2.625rem;  /* h1 on phone (text-hero-sm). */
   --text-hero-md: 3.75rem;  /* h1 from sm, 640px (text-hero-md). */
   --text-hero-lg: 5rem;  /* h1 from lg, 1024px (text-hero-lg). */

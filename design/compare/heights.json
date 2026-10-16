@@ -1,6 +1,6 @@
 {
  "home-d": {
-  "total": 4884,
+  "total": 4444,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -13,50 +13,50 @@
    },
    {
     "n": "situations",
-    "h": 666,
-    "pt": 112,
-    "pb": 112,
+    "h": 586,
+    "pt": 72,
+    "pb": 72,
     "text": "Where this usually begins."
    },
    {
     "n": "how",
-    "h": 977,
-    "pt": 112,
-    "pb": 112,
+    "h": 897,
+    "pt": 72,
+    "pb": 72,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 441,
-    "pt": 112,
-    "pb": 112,
+    "h": 361,
+    "pt": 72,
+    "pb": 72,
     "text": "The same expert, from first look"
    },
    {
     "n": "scroll-mt-24.pt-0",
-    "h": 745,
+    "h": 705,
     "pt": 0,
-    "pb": 112,
+    "pb": 72,
     "text": "What you take home after the fir"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 603,
-    "pt": 112,
-    "pb": 112,
+    "h": 523,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "how-it-works-d": {
-  "total": 4358,
+  "total": 4078,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -69,36 +69,36 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 1512,
-    "pt": 112,
-    "pb": 112,
+    "h": 1432,
+    "pt": 72,
+    "pb": 72,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 756,
-    "pt": 112,
-    "pb": 112,
+    "h": 676,
+    "pt": 72,
+    "pb": 72,
     "text": "A senior check-up of your digita"
    },
    {
     "n": "scroll-mt-24.pt-0",
-    "h": 639,
+    "h": 599,
     "pt": 0,
-    "pb": 112,
+    "pb": 72,
     "text": "Then the protection that fits yo"
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "pricing-d": {
-  "total": 2718,
+  "total": 2598,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -118,22 +118,22 @@
    },
    {
     "n": "scroll-mt-24.pt-0",
-    "h": 1551,
+    "h": 1511,
     "pt": 0,
-    "pb": 112,
+    "pb": 72,
     "text": "Compare services"
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "about-d": {
-  "total": 3061,
+  "total": 2741,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -146,36 +146,36 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 758,
-    "pt": 112,
-    "pb": 112,
+    "h": 678,
+    "pt": 72,
+    "pb": 72,
     "text": "A personal note."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 336,
-    "pt": 112,
-    "pb": 112,
+    "h": 256,
+    "pt": 72,
+    "pb": 72,
     "text": "The same expert, from first look"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 516,
-    "pt": 112,
-    "pb": 112,
+    "h": 436,
+    "pt": 72,
+    "pb": 72,
     "text": "Establish the risks. Build the p"
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "faq-d": {
-  "total": 5524,
+  "total": 5444,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -195,15 +195,15 @@
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "conditions-d": {
-  "total": 6479,
+  "total": 6399,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -223,15 +223,15 @@
    },
    {
     "n": "contact",
-    "h": 323,
-    "pt": 112,
-    "pb": 112,
+    "h": 243,
+    "pt": 72,
+    "pb": 72,
     "text": "Questions about these terms?"
    }
   ]
  },
  "separation-divorce-d": {
-  "total": 4410,
+  "total": 3850,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -244,57 +244,57 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 521,
-    "pt": 112,
-    "pb": 112,
+    "h": 441,
+    "pt": 72,
+    "pb": 72,
     "text": "Choose which access you keep."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 323,
-    "pt": 112,
-    "pb": 112,
+    "h": 243,
+    "pt": 72,
+    "pb": 72,
     "text": "Change things in the right order"
    },
    {
     "n": "how",
-    "h": 1041,
-    "pt": 112,
-    "pb": 112,
+    "h": 961,
+    "pt": 72,
+    "pb": 72,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 323,
-    "pt": 112,
-    "pb": 112,
+    "h": 243,
+    "pt": 72,
+    "pb": 72,
     "text": "Your attorney can be involved."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 603,
-    "pt": 112,
-    "pb": 112,
+    "h": 523,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 360,
-    "pt": 112,
-    "pb": 112,
+    "h": 280,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "business-dispute-d": {
-  "total": 4614,
+  "total": 4054,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -307,57 +307,57 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 521,
-    "pt": 112,
-    "pb": 112,
+    "h": 441,
+    "pt": 72,
+    "pb": 72,
     "text": "See where personal and business "
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 372,
-    "pt": 112,
-    "pb": 112,
+    "h": 292,
+    "pt": 72,
+    "pb": 72,
     "text": "Understand what a change will af"
    },
    {
     "n": "how",
-    "h": 1041,
-    "pt": 112,
-    "pb": 112,
+    "h": 961,
+    "pt": 72,
+    "pb": 72,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 372,
-    "pt": 112,
-    "pb": 112,
+    "h": 292,
+    "pt": 72,
+    "pb": 72,
     "text": "Your attorney or adviser can be "
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 603,
-    "pt": 112,
-    "pb": 112,
+    "h": 523,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 360,
-    "pt": 112,
-    "pb": 112,
+    "h": 280,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "inheritance-conflict-d": {
-  "total": 4513,
+  "total": 3953,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -370,57 +370,57 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 554,
-    "pt": 112,
-    "pb": 112,
+    "h": 474,
+    "pt": 72,
+    "pb": 72,
     "text": "Access shared in good faith can "
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 372,
-    "pt": 112,
-    "pb": 112,
+    "h": 292,
+    "pt": 72,
+    "pb": 72,
     "text": "Understand the connections befor"
    },
    {
     "n": "how",
-    "h": 1041,
-    "pt": 112,
-    "pb": 112,
+    "h": 961,
+    "pt": 72,
+    "pb": 72,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 323,
-    "pt": 112,
-    "pb": 112,
+    "h": 243,
+    "pt": 72,
+    "pb": 72,
     "text": "Your attorney can be involved."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 603,
-    "pt": 112,
-    "pb": 112,
+    "h": 523,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 360,
-    "pt": 112,
-    "pb": 112,
+    "h": 280,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "they-know-something-d": {
-  "total": 4813,
+  "total": 4173,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -433,64 +433,64 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 521,
-    "pt": 112,
-    "pb": 112,
+    "h": 441,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with what can be checked."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 323,
-    "pt": 112,
-    "pb": 112,
+    "h": 243,
+    "pt": 72,
+    "pb": 72,
     "text": "Urgent first aid on the spot."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 372,
-    "pt": 112,
-    "pb": 112,
+    "h": 292,
+    "pt": 72,
+    "pb": 72,
     "text": "Understand the effects before ma"
    },
    {
     "n": "how",
-    "h": 1041,
-    "pt": 112,
-    "pb": 112,
+    "h": 961,
+    "pt": 72,
+    "pb": 72,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 333,
-    "pt": 112,
-    "pb": 112,
+    "h": 253,
+    "pt": 72,
+    "pb": 72,
     "text": "Urgent visits."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 603,
-    "pt": 112,
-    "pb": 112,
+    "h": 523,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 360,
-    "pt": 112,
-    "pb": 112,
+    "h": 280,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "attorneys-d": {
-  "total": 4247,
+  "total": 3607,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -503,64 +503,64 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 461,
-    "pt": 112,
-    "pb": 112,
+    "h": 381,
+    "pt": 72,
+    "pb": 72,
     "text": "What Toza does for your client."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 686,
-    "pt": 112,
-    "pb": 112,
+    "h": 606,
+    "pt": 72,
+    "pb": 72,
     "text": "When a referral may help."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 408,
-    "pt": 112,
-    "pb": 112,
+    "h": 328,
+    "pt": 72,
+    "pb": 72,
     "text": "Your client makes contact with o"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 408,
-    "pt": 112,
-    "pb": 112,
+    "h": 328,
+    "pt": 72,
+    "pb": 72,
     "text": "Coordination, with your client's"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 323,
-    "pt": 112,
-    "pb": 112,
+    "h": 243,
+    "pt": 72,
+    "pb": 72,
     "text": "A referral fee, agreed in writin"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 361,
-    "pt": 112,
-    "pb": 112,
+    "h": 281,
+    "pt": 72,
+    "pb": 72,
     "text": "What your client pays."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 360,
-    "pt": 112,
-    "pb": 112,
+    "h": 280,
+    "pt": 72,
+    "pb": 72,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 399,
-    "pt": 112,
-    "pb": 112,
+    "h": 319,
+    "pt": 72,
+    "pb": 72,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "home-m": {
-  "total": 4979,
+  "total": 4847,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -573,50 +573,50 @@
    },
    {
     "n": "situations",
-    "h": 799,
-    "pt": 44,
-    "pb": 44,
+    "h": 775,
+    "pt": 32,
+    "pb": 32,
     "text": "Where this usually begins."
    },
    {
     "n": "how",
-    "h": 991,
-    "pt": 44,
-    "pb": 44,
+    "h": 967,
+    "pt": 32,
+    "pb": 32,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 364,
-    "pt": 44,
-    "pb": 44,
+    "h": 340,
+    "pt": 32,
+    "pb": 32,
     "text": "The same expert, from first look"
    },
    {
     "n": "scroll-mt-24.pt-0",
-    "h": 770,
+    "h": 758,
     "pt": 0,
-    "pb": 44,
+    "pb": 32,
     "text": "What you take home after the fir"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 697,
-    "pt": 44,
-    "pb": 44,
+    "h": 673,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 465,
-    "pt": 44,
-    "pb": 44,
+    "h": 441,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "how-it-works-m": {
-  "total": 4975,
+  "total": 4891,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -629,36 +629,36 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 1869,
-    "pt": 44,
-    "pb": 44,
+    "h": 1845,
+    "pt": 32,
+    "pb": 32,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 951,
-    "pt": 44,
-    "pb": 44,
+    "h": 927,
+    "pt": 32,
+    "pb": 32,
     "text": "A senior check-up of your digita"
    },
    {
     "n": "scroll-mt-24.pt-0",
-    "h": 722,
+    "h": 710,
     "pt": 0,
-    "pb": 44,
+    "pb": 32,
     "text": "Then the protection that fits yo"
    },
    {
     "n": "contact",
-    "h": 465,
-    "pt": 44,
-    "pb": 44,
+    "h": 441,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "pricing-m": {
-  "total": 3912,
+  "total": 3876,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -678,22 +678,22 @@
    },
    {
     "n": "scroll-mt-24.pt-0",
-    "h": 2580,
+    "h": 2568,
     "pt": 0,
-    "pb": 44,
+    "pb": 32,
     "text": "Compare services"
    },
    {
     "n": "contact",
-    "h": 465,
-    "pt": 44,
-    "pb": 44,
+    "h": 441,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "about-m": {
-  "total": 2956,
+  "total": 2860,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -706,36 +706,36 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 779,
-    "pt": 44,
-    "pb": 44,
+    "h": 755,
+    "pt": 32,
+    "pb": 32,
     "text": "A personal note."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 355,
-    "pt": 44,
-    "pb": 44,
+    "h": 331,
+    "pt": 32,
+    "pb": 32,
     "text": "The same expert, from first look"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 527,
-    "pt": 44,
-    "pb": 44,
+    "h": 503,
+    "pt": 32,
+    "pb": 32,
     "text": "Establish the risks. Build the p"
    },
    {
     "n": "contact",
-    "h": 465,
-    "pt": 44,
-    "pb": 44,
+    "h": 441,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "faq-m": {
-  "total": 6726,
+  "total": 6702,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -755,15 +755,15 @@
    },
    {
     "n": "contact",
-    "h": 465,
-    "pt": 44,
-    "pb": 44,
+    "h": 441,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "conditions-m": {
-  "total": 9685,
+  "total": 9661,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -783,15 +783,15 @@
    },
    {
     "n": "contact",
-    "h": 410,
-    "pt": 44,
-    "pb": 44,
+    "h": 386,
+    "pt": 32,
+    "pb": 32,
     "text": "Questions about these terms?"
    }
   ]
  },
  "separation-divorce-m": {
-  "total": 4674,
+  "total": 4506,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -804,57 +804,57 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 689,
-    "pt": 44,
-    "pb": 44,
+    "h": 665,
+    "pt": 32,
+    "pb": 32,
     "text": "Choose which access you keep."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 299,
-    "pt": 44,
-    "pb": 44,
+    "h": 275,
+    "pt": 32,
+    "pb": 32,
     "text": "Change things in the right order"
    },
    {
     "n": "how",
-    "h": 1083,
-    "pt": 44,
-    "pb": 44,
+    "h": 1059,
+    "pt": 32,
+    "pb": 32,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 299,
-    "pt": 44,
-    "pb": 44,
+    "h": 275,
+    "pt": 32,
+    "pb": 32,
     "text": "Your attorney can be involved."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 697,
-    "pt": 44,
-    "pb": 44,
+    "h": 673,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 273,
-    "pt": 44,
-    "pb": 44,
+    "h": 249,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 514,
-    "pt": 44,
-    "pb": 44,
+    "h": 490,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "business-dispute-m": {
-  "total": 4880,
+  "total": 4712,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -867,57 +867,57 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 716,
-    "pt": 44,
-    "pb": 44,
+    "h": 692,
+    "pt": 32,
+    "pb": 32,
     "text": "See where personal and business "
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 361,
-    "pt": 44,
-    "pb": 44,
+    "h": 337,
+    "pt": 32,
+    "pb": 32,
     "text": "Understand what a change will af"
    },
    {
     "n": "how",
-    "h": 1083,
-    "pt": 44,
-    "pb": 44,
+    "h": 1059,
+    "pt": 32,
+    "pb": 32,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 299,
-    "pt": 44,
-    "pb": 44,
+    "h": 275,
+    "pt": 32,
+    "pb": 32,
     "text": "Your attorney or adviser can be "
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 697,
-    "pt": 44,
-    "pb": 44,
+    "h": 673,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 273,
-    "pt": 44,
-    "pb": 44,
+    "h": 249,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 514,
-    "pt": 44,
-    "pb": 44,
+    "h": 490,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "inheritance-conflict-m": {
-  "total": 4802,
+  "total": 4634,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -930,57 +930,57 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 716,
-    "pt": 44,
-    "pb": 44,
+    "h": 692,
+    "pt": 32,
+    "pb": 32,
     "text": "Access shared in good faith can "
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 327,
-    "pt": 44,
-    "pb": 44,
+    "h": 303,
+    "pt": 32,
+    "pb": 32,
     "text": "Understand the connections befor"
    },
    {
     "n": "how",
-    "h": 1083,
-    "pt": 44,
-    "pb": 44,
+    "h": 1059,
+    "pt": 32,
+    "pb": 32,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 299,
-    "pt": 44,
-    "pb": 44,
+    "h": 275,
+    "pt": 32,
+    "pb": 32,
     "text": "Your attorney can be involved."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 697,
-    "pt": 44,
-    "pb": 44,
+    "h": 673,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 273,
-    "pt": 44,
-    "pb": 44,
+    "h": 249,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 514,
-    "pt": 44,
-    "pb": 44,
+    "h": 490,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "they-know-something-m": {
-  "total": 5065,
+  "total": 4873,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -993,64 +993,64 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 716,
-    "pt": 44,
-    "pb": 44,
+    "h": 692,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with what can be checked."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 266,
-    "pt": 44,
-    "pb": 44,
+    "h": 242,
+    "pt": 32,
+    "pb": 32,
     "text": "Urgent first aid on the spot."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 361,
-    "pt": 44,
-    "pb": 44,
+    "h": 337,
+    "pt": 32,
+    "pb": 32,
     "text": "Understand the effects before ma"
    },
    {
     "n": "how",
-    "h": 1111,
-    "pt": 44,
-    "pb": 44,
+    "h": 1087,
+    "pt": 32,
+    "pb": 32,
     "text": "Three stages, one person."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 263,
-    "pt": 44,
-    "pb": 44,
+    "h": 239,
+    "pt": 32,
+    "pb": 32,
     "text": "Urgent visits."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 697,
-    "pt": 44,
-    "pb": 44,
+    "h": 673,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 273,
-    "pt": 44,
-    "pb": 44,
+    "h": 249,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 514,
-    "pt": 44,
-    "pb": 44,
+    "h": 490,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "attorneys-m": {
-  "total": 4370,
+  "total": 4178,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -1063,58 +1063,58 @@
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 480,
-    "pt": 44,
-    "pb": 44,
+    "h": 456,
+    "pt": 32,
+    "pb": 32,
     "text": "What Toza does for your client."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 822,
-    "pt": 44,
-    "pb": 44,
+    "h": 798,
+    "pt": 32,
+    "pb": 32,
     "text": "When a referral may help."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 399,
-    "pt": 44,
-    "pb": 44,
+    "h": 375,
+    "pt": 32,
+    "pb": 32,
     "text": "Your client makes contact with o"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 399,
-    "pt": 44,
-    "pb": 44,
+    "h": 375,
+    "pt": 32,
+    "pb": 32,
     "text": "Coordination, with your client's"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 299,
-    "pt": 44,
-    "pb": 44,
+    "h": 275,
+    "pt": 32,
+    "pb": 32,
     "text": "A referral fee, agreed in writin"
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 319,
-    "pt": 44,
-    "pb": 44,
+    "h": 295,
+    "pt": 32,
+    "pb": 32,
     "text": "What your client pays."
    },
    {
     "n": "scroll-mt-24.py-section",
-    "h": 273,
-    "pt": 44,
-    "pb": 44,
+    "h": 249,
+    "pt": 32,
+    "pb": 32,
     "text": ""
    },
    {
     "n": "contact",
-    "h": 514,
-    "pt": 44,
-    "pb": 44,
+    "h": 490,
+    "pt": 32,
+    "pb": 32,
     "text": "Start with a private conversatio"
    }
   ]
