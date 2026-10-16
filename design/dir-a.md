@@ -41,3 +41,5 @@
 - Hebrew not built; English words inside RTL text show misplaced full stops, expected until Hebrew copy exists.
 - Contrast was checked by token ratios, not a tool.
 - Real-device check of the plain portrait on low-end Android is still open.
+
+**pricing-v2 branch.** Pricing proposal preview (P7/P8, 16 Oct 2026): three-tier Pricing page (subgrid rows span 4), first-step band, updated price strip, two-column Home/Separation price block, and a slim "Pricing proposal — preview for review" bar on every page. Phone: Home 5.76, Separation 5.40, Pricing 4.59 screens; desktop: Home 5.20, Separation 4.94, Pricing 2.89. Screenshots in `design/screenshots/pricing-v2/`.

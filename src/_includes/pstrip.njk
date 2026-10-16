@@ -4,7 +4,7 @@
     <li>{{ t.stages.assess.name }}</li><li>{{ t.stages.harden.name }}</li><li>{{ t.stages.verify.name }}</li>
   </ol>{% endif %}
   <div class="pstrip-bands">
-    <p class="band band-1"><span class="band-cap">{{ t.stages.strip.assessSpan }}</span><span class="band-label"><span>{{ t.price.assessment.name }}</span> · <span class="amt">{{ facts.prices.assessment | ils }}</span></span></p>
-    <p class="band band-2"><span class="band-cap">{{ t.stages.strip.protectSpan }}</span><span class="band-label"><span>{{ t.price.shield.name }}</span> <span class="amt">{{ facts.prices.personalShield | ils }}</span> · <span>{{ t.price.inner.name }}</span> {{ t.price.from }} <span class="amt">{{ facts.prices.innerCircleFrom | ils }}</span></span></p>
+    <p class="band band-1"><span class="band-cap">{{ t.stages.strip.assessSpan }}</span><span class="band-label"><span>{{ t.price.firstStep }}</span> <span class="amt">{{ facts.prices.assessment | ils }}</span></span></p>
+    <p class="band band-2"><span class="band-cap">{{ t.stages.strip.protectSpan }}</span><span class="band-label"><span>{{ t.price.shield.short }}</span> <span class="amt">{{ facts.prices.personalShield | ils }}</span> · <span>{{ t.price.two.short }}</span> <span class="amt">{{ facts.prices.shieldForTwo | ils }}</span> · <span>{{ t.price.inner.name }}</span> <span class="amt">{{ facts.prices.innerCircle | ils }}</span></span></p>
   </div>
 </div>

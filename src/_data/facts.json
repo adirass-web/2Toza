@@ -1,30 +1,15 @@
 {
-  "_note": "Single source of commercial facts. Copied from the approved site (adirass-web/VIP @ ed9ba06, llms.txt). Change only on an owner decision. CI fails if pages show a price not listed here.",
-  "source": "adirass-web/VIP@ed9ba06 llms.txt",
+  "_note": "Single source of commercial facts for the PRICING PROPOSAL preview (pricing-v2). Not the approved site prices. Change only on an owner decision. CI fails if pages show a price not listed here.",
+  "status": "proposal",
+  "proposalSource": "strategy/pricing/P7-new-pricing.md + P8-annual-care.md (16 Oct 2026)",
   "currency": "ILS",
-  "vatIncluded": true,
   "prices": {
-    "assessment": 3600,
-    "personalShield": 14000,
-    "innerCircleFrom": 42000,
-    "personalShieldRemainingAfterCredit": 10400,
-    "innerCircleRemainingAfterCreditFrom": 38400,
-    "urgentSurchargeOrdinary": 4800,
-    "urgentSurchargeWeekendHoliday": 6000
+    "assessment": 4000,
+    "personalShield": 32000,
+    "shieldForTwo": 45000,
+    "innerCircle": 70000,
+    "largerFrom": 90000,
+    "annualCareFrom": 12000
   },
-  "assessment": {
-    "typicalHours": 4,
-    "devices": "one main phone and one PC, iPad or second phone",
-    "summaryWithoutFurtherPurchase": true
-  },
-  "personalShield": {
-    "people": 1,
-    "devices": 2,
-    "securityKeys": 2,
-    "typicalWorkHours": "7–14",
-    "adjustmentSupportDays": 14
-  },
-  "innerCircle": { "people": 4, "devices": 8, "securityKeys": 8, "sharedNetworkIncluded": 1 },
-  "credit": { "windowDays": 14, "appliesOncePerGroupEngagement": true },
-  "contact": { "channels": ["WhatsApp", "Signal", "Call-back (WhatsApp prefill)"] }
+  "credit": { "windowDays": 30 }
 }
