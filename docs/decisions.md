@@ -30,5 +30,9 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-024 | 2026-10-16 | First step ₪4,000 (test fallback ₪3,600); counted in full toward a tier started within 30 days. Health-check format may frame it; no health-check price comparison. |
 | V-025 | 2026-10-16 | No public sales, discounts or time-limited deals. The 30-day window is the only time element; private value-adds at owner discretion, never advertised. |
 | V-026 | 2026-10-16 | Direct question line 60 days (WhatsApp/Signal, within one working day, questions only). Ongoing access via the paid Annual Care plan. |
+| V-027 | 2026-10-16 | Urgent surcharge stays ₪4,800 / ₪6,000 (weekend, holiday). |
+| V-028 | 2026-10-16 | Attorney referral fee on a paid first step: ₪600. |
+| V-029 | 2026-10-16 | Travel scope is not spelled out on the site (handled in conversation). |
+| V-030 | 2026-10-16 | Build the new pricing as a separate preview branch for side-by-side comparison. Annual Care to be developed. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.
