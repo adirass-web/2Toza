@@ -29,6 +29,10 @@ blocks:
   - type: stages
     ref: stages
     variant: compact
+    statement_link:
+      label: "{ui:buttons.profile}"
+      action: profile
+      kind: external
     line: Assess where personal and business access meet. Harden what is yours to change. {shared:common.verify_and_learn}
 
   - type: text

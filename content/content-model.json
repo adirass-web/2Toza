@@ -574,6 +574,10 @@
           "kind": "text",
           "max": 160
         },
+        "statement_link": {
+          "kind": "object",
+          "type": "link"
+        },
         "heading": {
           "kind": "text",
           "required": true,

@@ -29,6 +29,10 @@ blocks:
   - type: stages
     ref: stages
     variant: compact
+    statement_link:
+      label: "{ui:buttons.profile}"
+      action: profile
+      kind: external
     line: Assess what family arrangements still connect. Harden a setup that fits your circumstances now. {shared:common.verify_and_learn}
 
   - type: text

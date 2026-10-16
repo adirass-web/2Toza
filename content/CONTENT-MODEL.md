@@ -160,6 +160,7 @@ The three-stage method (Assess, Harden, Verify) as a summary, with the path to p
 |---|---|---|---|---|
 | `variant` | full \| compact |  |  |  |
 | `statement` | text |  | 160 | 116 |
+| `statement_link` | `link` |  |  |  |
 | `heading` | text | yes | 40 | 25 |
 | `line` | text |  | 190 | 146 |
 | `items` | list of `stage` | yes |  |  |

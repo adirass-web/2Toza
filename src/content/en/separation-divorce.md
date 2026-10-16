@@ -29,6 +29,10 @@ blocks:
   - type: stages
     ref: stages
     variant: compact
+    statement_link:
+      label: "{ui:buttons.profile}"
+      action: profile
+      kind: external
     line: Assess what still connects you. Harden a setup for the life you are moving into. {shared:common.verify_and_learn}
 
   - type: text

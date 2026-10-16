@@ -3,6 +3,7 @@
 {% set compact = block.variant == 'compact' %}
 {% call section(block, 'dark', '') %}
   {% if block.statement %}<p class="font-serif text-2xl leading-display font-normal tracking-display text-balance text-paper sm:text-4xl {{ 'max-w-5xl lg:text-4xl' if compact else 'max-w-4xl lg:text-5xl' }}">{{ block.statement }}</p>{% endif %}
+  {% if block.statement_link %}<p class="mt-3">{{ lnk(block.statement_link, 'dark') }}</p>{% endif %}
   <h2 class="{{ 'mt-6 lg:mt-9' if block.statement else '' }} font-serif text-xl font-normal text-accent-on-dark lg:text-2xl">{{ block.heading }}</h2>
   {% if block.line %}<p class="mt-2 text-lg text-on-dark-text {{ 'max-w-4xl' if compact else 'max-w-2xl' }}">{{ block.line }}</p>{% endif %}
   <ol class="{{ 'mt-4 grid gap-3 md:mt-6 md:grid-cols-3 md:gap-0' if compact else 'mt-6 grid gap-5 md:mt-10 md:grid-cols-3 md:gap-0' }}">

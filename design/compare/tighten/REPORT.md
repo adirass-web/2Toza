@@ -23,3 +23,5 @@ Page heights (px, scrollHeight), before → after, all 11 pages:
 **JS.** site.js gzip 1748 → ~2030 B.
 
 **Checks.** build, check, check:content (parity 100%) pass; anchors: 0 missing vs main; axe: 0 violations except one pre-existing target-size on FAQ (#g nav link partially covered by the float button at the captured scroll); no overflow; no external requests; RTL at 390 (faq, conditions, separation-divorce) mirrors; JS off: FAQ and Conditions fully open; print PDF (design/compare/tighten/conditions-print.pdf): 9 sections, single column, made from a 390 viewport with sections collapsed.
+
+**Follow-up (profile link).** New optional `stages.statement_link` (link object), set on the four situation pages to the existing profile action and label ("Professional profile ↗", on-dark link, 44px target) directly under the method line. Parity 100%. axe 0 on the four pages at 390/1440 (only the FAQ finding above remains). Heights desktop/phone: separation-divorce 3298/3991, business-dispute 3502/4197, inheritance-conflict 3429/4119, they-know-something 3649/4358.

@@ -300,6 +300,7 @@ The three-stage method as a summary, with the path to prices.
 |---|---|---|---|
 | `variant` | `full` \| `compact` | optional | `full` (default, Home): large drawings. `compact` (situation pages): same copy and elements, small drawings, three stages in a tight row |
 | `statement` | text | optional | The method line; leads the dark section, set large above the heading (the shared `stages` block carries it, so the situation pages no longer need a separate `method-statement` block) |
+| `statement_link` | link | optional | Proof link row directly under the statement (situation pages: the profile link, `action: profile`, `kind: external`) |
 | `heading` | text | required | |
 | `line` | text | optional | Page-specific sentence under the heading (situation pages) |
 | `items` | stage[] | required | Exactly 3, in order assess, harden, verify |
