@@ -12,8 +12,12 @@
   </aside>
   <div class="lg:col-span-9 print:block">
 {% endif %}
-    <section id="{{ block.id }}" aria-labelledby="{{ block.id }}-h" class="terms-section mt-12 scroll-mt-24 first:mt-0 print:mt-5">
-      <h2 id="{{ block.id }}-h" class="terms-h flex gap-4 border-t-2 border-accent pt-4 pb-5 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading print:break-after-avoid print:pb-2 print:text-2xl">{{ block.heading }}</h2>
+    <section id="{{ block.id }}" aria-labelledby="{{ block.id }}-h" class="terms-section mt-6 scroll-mt-24 first:mt-0 md:mt-12 print:mt-5">
+      <details open data-collapsible class="group/panel">
+      <summary class="flex cursor-pointer list-none items-start justify-between gap-4 border-t-2 border-accent pt-4 pb-5 md:pointer-events-none print:break-after-avoid print:pb-2">
+        <h2 id="{{ block.id }}-h" class="terms-h flex gap-4 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading print:text-2xl">{{ block.heading }}</h2>
+        <svg class="mt-2 size-5 shrink-0 rotate-180 text-accent group-open/panel:rotate-0 md:hidden motion-safe:transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
+      </summary>
       {% if block.intro %}<div class="md-flow mb-4 max-w-3xl space-y-4">{{ block.intro.html | safe }}</div>{% endif %}
       {% if block.price_table %}
       {% set tb = block.price_table %}
@@ -32,11 +36,13 @@
       </table>
       {% endif %}
       {% if block.items %}
-      <ol class="terms-list">
-        {% for item in block.items %}<li class="terms-item relative max-w-3xl border-t border-default py-3 ps-12 first:border-t-0 print:break-inside-avoid print:py-1"><div class="md-flow space-y-2">{{ item.html | safe }}</div></li>{% endfor %}
+      {% set cols = block.items.length > 4 %}
+      <ol class="terms-list{{ ' md:columns-2 md:gap-x-10 print:columns-auto' if cols }}">
+        {% for item in block.items %}<li class="terms-item relative {{ 'break-inside-avoid border-b py-3' if cols else 'max-w-3xl border-t first:border-t-0 py-3' }} border-default ps-12 print:break-inside-avoid print:py-1"><div class="md-flow space-y-2">{{ item.html | safe }}</div></li>{% endfor %}
       </ol>
       {% endif %}
       {% if block.notes %}<div class="md-flow mt-5 max-w-3xl space-y-2">{{ block.notes.html | safe }}</div>{% endif %}
+      </details>
     </section>
 {% if not next or next.type != 'terms-section' %}
   </div>

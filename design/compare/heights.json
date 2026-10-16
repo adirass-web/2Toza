@@ -175,7 +175,7 @@
   ]
  },
  "faq-d": {
-  "total": 5372,
+  "total": 4472,
   "header": 73,
   "footer": 129,
   "blocks": [
@@ -188,7 +188,7 @@
    },
    {
     "n": "mx-auto.grid",
-    "h": 4284,
+    "h": 3384,
     "pt": 0,
     "pb": 112,
     "text": "Before you get in touch."
@@ -203,7 +203,7 @@
   ]
  },
  "conditions-d": {
-  "total": 6334,
+  "total": 5918,
   "header": 73,
   "footer": 129,
   "blocks": [
@@ -216,7 +216,7 @@
    },
    {
     "n": "terms-doc.mx-auto",
-    "h": 5427,
+    "h": 5011,
     "pt": 0,
     "pb": 96,
     "text": "Prices"
@@ -707,7 +707,7 @@
   ]
  },
  "faq-m": {
-  "total": 6516,
+  "total": 2363,
   "header": 61,
   "footer": 153,
   "blocks": [
@@ -720,7 +720,7 @@
    },
    {
     "n": "mx-auto.grid",
-    "h": 5470,
+    "h": 1316,
     "pt": 0,
     "pb": 56,
     "text": "Before you get in touch."
@@ -735,7 +735,7 @@
   ]
  },
  "conditions-m": {
-  "total": 9479,
+  "total": 3508,
   "header": 61,
   "footer": 153,
   "blocks": [
@@ -748,7 +748,7 @@
    },
    {
     "n": "terms-doc.mx-auto",
-    "h": 8525,
+    "h": 2554,
     "pt": 0,
     "pb": 56,
     "text": "Prices"

@@ -657,7 +657,7 @@ A titled group of questions. Consecutive groups share one page grid with a navig
 
 ## terms-section
 
-A numbered section of terms. Consecutive sections share one page grid with a contents list (label `pg.labels.toc`, hidden when printed). Section and clause numbers are CSS counters. Prints cleanly (no header, footer, contents or contact; white paper).
+A numbered section of terms. Consecutive sections share one page grid with a contents list (label `pg.labels.toc`, hidden when printed). Section and clause numbers are CSS counters. Sections with more than four clauses lay the clause list out in two balanced columns from md up (single column in print). Each section is a `<details open data-collapsible>` with the h2 in its `<summary>`: on phones `site.js` collapses all but the targeted (else the first) section; from md up and without script they stay open, and printing opens them all. Prints cleanly (no header, footer, contents or contact; white paper).
 
 | Field | Type | | Notes |
 |---|---|---|---|
