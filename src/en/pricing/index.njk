@@ -32,7 +32,7 @@ permalink: /en/pricing/index.html
       <div class="start-side lg:self-end">
         <p class="font-serif text-xl lg:text-2xl leading-snug text-ink">{{ t.price.credit | fill({ days: facts.credit.windowDays }) }}</p>
         <p class="mt-4 text-lg">{{ t.price.assessment.body }}</p>
-        <p class="mt-4"><a class="link font-semibold" href="#">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
+        <p class="mt-4"><a class="link font-semibold" href="/en/conditions/">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
       </div>
     </article>
 
@@ -66,7 +66,7 @@ permalink: /en/pricing/index.html
     <div class="mt-8 grid gap-3 text-muted max-w-3xl">
       <p>{{ t.price.underAll }}</p>
       <p>{{ t.price.larger | fill({ price: facts.prices.largerFrom | ils }) }}</p>
-      <p>{{ t.price.care | fill({ price: facts.prices.annualCareFrom | ils }) }} <a class="link font-semibold" href="#">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
+      <p>{{ t.price.care | fill({ price: facts.prices.annualCareFrom | ils }) }} <a class="link font-semibold" href="/en/conditions/">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
     </div>
   </div>
 </section>

@@ -15,7 +15,11 @@
     "compareServices": "Compare services",
     "arrow": "→",
     "arrowExternal": "↗",
-    "pricesLabel": "Prices"
+    "pricesLabel": "Prices",
+    "faqGroups": "Question groups",
+    "faqExpand": "Expand all answers",
+    "faqCollapse": "Collapse all answers",
+    "print": "Print this page"
   },
   "nav": {
     "situations": "Situations",
@@ -29,6 +33,7 @@
     "faq": "FAQ",
     "attorneys": "For attorneys",
     "conditions": "Conditions",
+    "about": "About",
     "privacy": "Privacy",
     "terms": "Terms"
   },
@@ -37,6 +42,7 @@
     "signal": "Message on Signal",
     "signalShort": "Signal",
     "callback": "Call me back",
+    "referral": "Discuss a referral",
     "profile": "Professional profile"
   },
   "person": {

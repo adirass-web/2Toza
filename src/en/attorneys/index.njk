@@ -1,0 +1,108 @@
+---
+layout: base.njk
+title: For attorneys — Toza
+description: "Refer a client to Dr. Lior Tabansky for in-person digital security on their own devices and accounts. Your client decides what you are told."
+permalink: /en/attorneys/index.html
+---
+{% set referral = true %}
+<section class="pt-6 pb-10 lg:pt-20 lg:pb-28" aria-labelledby="h1">
+  <div class="wrap grid gap-x-16 gap-y-6 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:[grid-template-areas:'copy_fig'_'act_fig'] max-lg:[grid-template-areas:'copy'_'fig'_'act']">
+    <div class="lg:col-span-7 [grid-area:copy]">
+      <h1 id="h1" class="display text-[2.625rem] sm:text-6xl lg:text-[4.5rem] !text-ink">When your client's phone is part of the dispute.</h1>
+      <p class="mt-5 lg:mt-8 text-lg lg:text-xl leading-relaxed max-w-[34rem] text-text">Dr. Lior Tabansky sees your client in person, on their own devices and accounts. Your client decides what you are told.</p>
+    </div>
+    <figure class="[grid-area:fig] lg:col-span-4 lg:col-start-9 flex items-center gap-4 lg:block">
+      <div class="frame shrink-0 w-24 h-24 lg:w-full lg:h-auto lg:aspect-square">
+        <img class="portrait" src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" alt="{{ t.ui.portraitAlt }}" fetchpriority="high">
+      </div>
+      <figcaption class="lg:mt-9">
+        <p class="font-serif text-xl lg:text-2xl text-ink">{{ t.person.name }}</p>
+        <p class="text-[0.9375rem] lg:text-base text-muted leading-snug">{{ t.person.taglineShort }}</p>
+      </figcaption>
+    </figure>
+    <div class="[grid-area:act] lg:col-span-7 lg:self-start">
+      {% include "cta-hero.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper-deep" aria-labelledby="does-h">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <h2 id="does-h" class="h2 lg:col-span-5">What Toza does for your client.</h2>
+    <div class="lg:col-span-6 lg:col-start-7 grid gap-5 text-lg lg:text-xl leading-relaxed text-text">
+      <p>The first step is half a day in person with Dr. Tabansky. He reviews {{ facts.assessmentScope }}, and gives urgent first aid on the spot.</p>
+      <p>Your client keeps a written exposure summary whether or not they continue. Protection follows only if they choose it.</p>
+      <p><a class="link font-semibold" href="/en/how-it-works/">{{ t.stages.link }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="when-h">
+  <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-5">
+      <h2 id="when-h" class="h2">When a referral may help.</h2>
+    </div>
+    <div class="lg:col-span-7 lg:col-start-6">
+      <ul class="border-b border-rule">
+        <li class="py-5 border-t border-rule font-serif text-xl lg:text-2xl text-ink leading-snug">Someone appears to know private information your client did not knowingly share.</li>
+        <li class="py-5 border-t border-rule font-serif text-xl lg:text-2xl text-ink leading-snug">Your client is unsure which devices, recovery routes or shared services still connect them to a former partner, colleague or relative.</li>
+        <li class="py-5 border-t border-rule font-serif text-xl lg:text-2xl text-ink leading-snug">Personal accounts or devices overlap with a business or family dispute.</li>
+        <li class="py-5 border-t border-rule font-serif text-xl lg:text-2xl text-ink leading-snug">Your client needs to understand the consequences of changes before authorizing them.</li>
+      </ul>
+      <div class="mt-8 grid sm:grid-cols-2 sm:gap-x-10 border-b border-rule [&>.door:last-of-type]:border-b-0">
+        <a class="door" href="/en/separation-divorce/"><span class="font-serif text-xl text-ink">Separation or divorce</span><svg class="door-a flip" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 7h26M20 1l6 6-6 6"/></svg></a>
+        <a class="door" href="/en/business-dispute/"><span class="font-serif text-xl text-ink">Business or founder dispute</span><svg class="door-a flip" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 7h26M20 1l6 6-6 6"/></svg></a>
+        <a class="door" href="/en/inheritance-conflict/"><span class="font-serif text-xl text-ink">Inheritance conflict</span><svg class="door-a flip" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 7h26M20 1l6 6-6 6"/></svg></a>
+        <a class="door" href="/en/they-know-something/"><span class="font-serif text-xl text-ink">Someone knows something</span><svg class="door-a flip" width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 7h26M20 1l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper-deep" aria-labelledby="tap-h">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <h2 id="tap-h" class="h2 lg:col-span-5">Your client makes contact with one tap.</h2>
+    <div class="lg:col-span-6 lg:col-start-7 grid gap-5 text-lg lg:text-xl leading-relaxed text-text">
+      <p>You receive a personal code and link, and a short neutral message to forward. Your client's tap opens WhatsApp with the code already in the message. On Signal, they quote the code.</p>
+      <p>The first conversation is free, private and short. Dr. Tabansky replies personally. Written scope and price come before any paid work.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="consent-h">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <h2 id="consent-h" class="h2 lg:col-span-5">Coordination, with your client's consent.</h2>
+    <div class="lg:col-span-6 lg:col-start-7 grid gap-5 text-lg lg:text-xl leading-relaxed text-text">
+      <p>Dr. Tabansky asks your client whether he may confirm to you that the referral arrived.</p>
+      <p>With your client's authorization, the timing of changes can be coordinated with you around a filing, a negotiation or a hearing. You receive an attorney-friendly summary in the form your client approves. Legal strategy stays with you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper-deep" aria-labelledby="fee-h">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <h2 id="fee-h" class="h2 lg:col-span-5">A referral fee, agreed in writing.</h2>
+    <p class="lg:col-span-6 lg:col-start-7 text-lg lg:text-xl leading-relaxed text-text">Toza pays a fee when a referred client's first step is paid, and a further fee if they continue to a protection tier. Amounts and terms are in a one-page agreement, sent after a short call.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="pay-h">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <h2 id="pay-h" class="h2 lg:col-span-5">What your client pays.</h2>
+    <div class="lg:col-span-6 lg:col-start-7">
+      <p class="text-lg lg:text-xl leading-relaxed text-text">The first step is {{ facts.prices.assessment | ils }} and counts in full toward a protection tier that begins within {{ facts.credit.windowDays }} days. Personal Shield, for one person, is {{ facts.prices.personalShield | ils }}, first step included. Your client pays Toza directly.</p>
+      <p class="mt-5 flex flex-wrap gap-x-8">
+        <a class="link font-semibold" href="/en/pricing/">{{ t.price.allTiers }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a>
+        <a class="link font-semibold" href="/en/conditions/">{{ t.price.conditions }} <span class="flip" aria-hidden="true">{{ t.ui.arrow }}</span></a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper-deep" aria-label="{{ t.ui.credentialRegion }}">
+  <div class="wrap">{% include "credential.njk" %}</div>
+</section>
+
+{% set contactNote = 'Questions from attorneys' %}
+{% set contactHref = '/en/faq/#f' %}
+{% include "contact-block.njk" %}

@@ -1,0 +1,12 @@
+# Old approved-site URLs to Toza v2. Cloudflare Pages format: source destination status.
+/                                          /en/                          301
+/en/inheritance-clash.html                 /en/inheritance-conflict/     301
+/en/private-exposure-assessment.html       /en/how-it-works/             301
+/en/what-happens-during-the-visit.html     /en/how-it-works/             301
+/en/why-us.html                            /en/about/                    301
+/en/pricing.html                           /en/pricing/                  301
+/en/faq.html                               /en/faq/                      301
+/en/separation-divorce.html                /en/separation-divorce/       301
+/en/business-dispute.html                  /en/business-dispute/         301
+/en/they-know-something.html               /en/they-know-something/      301
+/en/attorneys.html                         /en/attorneys/                301
