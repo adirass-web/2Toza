@@ -103,6 +103,7 @@ export function buildModel(tree) {
         add(name, css, t.description, from);
         break;
       }
+      case "string": // keyword values (e.g. float.side: right); emitted as written
       case "color": case "dimension": case "number": case "fontWeight": case "duration":
         add(name, sub(t.value, from), t.description, from);
         break;

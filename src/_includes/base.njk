@@ -9,6 +9,7 @@
   <meta name="theme-color" content="{{ tokens.paper }}">
   <link rel="preload" href="/assets/fonts/frank-ruhl-libre-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/assistant-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/site.js" defer></script>
 </head>
@@ -19,5 +20,6 @@
 {{ content | safe }}
 </main>
 {% include "footer.njk" %}
+{% include "float-contact.njk" %}
 </body>
 </html>

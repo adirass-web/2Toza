@@ -113,9 +113,20 @@
   --spacing-gutter-wide: var(--layout-gutter-wide);  /* Side gutter from sm (sm:px-gutter-wide). */
   --spacing-section: var(--layout-section-padding);  /* Section vertical padding below lg (py-section). */
   --spacing-section-wide: var(--layout-section-padding-wide);  /* Section vertical padding from lg (lg:py-section-wide). */
+  --spacing-float: var(--float-size);  /* Floating contact button size (size-float). */
+  --spacing-float-gap: var(--float-gap);  /* Gap between the floating contact buttons (gap-float-gap). */
+  --spacing-float-edge: var(--float-edge);  /* Distance of the floating contact group from the viewport side (px-float-edge). */
+  --float-side: right;  /* Physical side of the viewport the group sits on: right or left. The one deliberate exception to logical properties: the owner wants the buttons in the same screen corner in LTR and RTL. Change this one value to move them. */
+  --float-size: 3.25rem;  /* Button diameter (52px, above the 44px target minimum). */
+  --float-gap: 0.5rem;  /* Gap between the two buttons. */
+  --float-edge: var(--layout-gutter);  /* Distance from the viewport side; equals the page gutter. */
+  --float-offset: 1.25rem;  /* Distance above the bottom edge, added to the iOS safe-area inset. */
+  --float-z: 30;  /* Stacking order: above page content, below the sticky header (z-40). */
+  --float-fade: 150ms;  /* Fade in and out. Not applied under prefers-reduced-motion. */
   --focus-width: 3px;  /* Focus outline width (:focus-visible). */
   --focus-offset: 3px;  /* Focus outline offset. */
   --focus-color: var(--color-brass);  /* Focus outline on light surfaces. */
   --focus-color-on-dark: var(--color-brass-light);  /* Focus outline on inverse surfaces (.on-ink). */
   --shadow-doc: 0 1px 0 0 var(--color-shadow-edge), 0 18px 40px -24px var(--color-shadow-ambient);  /* Specimen document (.doc). */
+  --shadow-float: 0 6px 18px -6px var(--color-shadow-ambient);  /* Floating contact buttons: soft ink shadow (shadow-float). */
 }

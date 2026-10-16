@@ -1,6 +1,6 @@
 {% from "blocks/_macros.njk" import actions with context %}
 {% set by = block.byline %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-6 pb-10 lg:pt-20 {{ 'lg:pb-28' if by else 'lg:pb-16' }}">
+<section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-6 pb-10 lg:pt-20 {{ 'lg:pb-28' if by else 'lg:pb-16' }}">
   <div class="mx-auto grid w-full max-w-wrap gap-x-16 print:block gap-y-6 px-gutter sm:px-gutter-wide lg:grid-cols-12">
     <div class="max-lg:contents {{ 'lg:col-span-7' if by else 'lg:col-span-8' }}">
       <div class="max-lg:order-1">

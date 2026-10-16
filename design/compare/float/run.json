@@ -1,0 +1,119 @@
+{
+ "axe": {
+  "home d": [],
+  "home m": [],
+  "separation-divorce d": [],
+  "separation-divorce m": [],
+  "business-dispute d": [],
+  "business-dispute m": [],
+  "inheritance-conflict d": [],
+  "inheritance-conflict m": [],
+  "they-know-something d": [],
+  "they-know-something m": [],
+  "attorneys d": [],
+  "attorneys m": [],
+  "how-it-works d": [],
+  "how-it-works m": [],
+  "about d": [],
+  "about m": [],
+  "faq d": [],
+  "faq m": [
+   "target-size x1 <a href=\"#g\" class=\"inline-flex min-h-11 items-center text-heading underline decoration-tr Target has insufficient size because it is partially obscured (smallest space is 129px by 18px, should be at least 24px by 24px)"
+  ],
+  "conditions d": [],
+  "conditions m": [],
+  "pricing d": [],
+  "pricing m": []
+ },
+ "overflow": [],
+ "shots": {
+  "home-1440-hero": {
+   "visible": false,
+   "box": {
+    "x": 1372,
+    "y": 768,
+    "w": 52,
+    "h": 112,
+    "vw": 1440,
+    "vh": 900
+   }
+  },
+  "home-1440-mid": {
+   "visible": true,
+   "box": {
+    "x": 1372,
+    "y": 768,
+    "w": 52,
+    "h": 112,
+    "vw": 1440,
+    "vh": 900
+   }
+  },
+  "home-1440-mid-rtl": {
+   "visible": true,
+   "box": {
+    "x": 1372,
+    "y": 768,
+    "w": 52,
+    "h": 112,
+    "vw": 1440,
+    "vh": 900
+   }
+  },
+  "home-390-mid-rtl": {
+   "visible": true,
+   "box": {
+    "x": 322,
+    "y": 712,
+    "w": 52,
+    "h": 112,
+    "vw": 390,
+    "vh": 844
+   }
+  },
+  "home-1440-contact": {
+   "visible": false,
+   "box": {
+    "x": 1372,
+    "y": 768,
+    "w": 52,
+    "h": 112,
+    "vw": 1440,
+    "vh": 900
+   }
+  },
+  "faq-390-mid": {
+   "visible": true,
+   "box": {
+    "x": 322,
+    "y": 712,
+    "w": 52,
+    "h": 112,
+    "vw": 390,
+    "vh": 844
+   }
+  }
+ },
+ "focus": {
+  "390": {
+   "tabs": 67,
+   "covered": [],
+   "tap": [
+    "52x52",
+    "52x52"
+   ]
+  },
+  "1440": {
+   "tabs": 67,
+   "covered": [],
+   "tap": [
+    "52x52",
+    "52x52"
+   ]
+  }
+ },
+ "print": {
+  "floatDisplay": "none"
+ },
+ "noJs": true
+}

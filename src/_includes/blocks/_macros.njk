@@ -5,7 +5,7 @@
 
 {#- Section with the page container. inner: grid or flow classes for the container; label: aria-label for a section without a heading; pad: vertical padding classes when the default does not fit. -#}
 {% macro section(block, tone, inner, label, pad) %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}{% if label %} aria-label="{{ label }}"{% endif %} class="scroll-mt-24 {{ pad or 'py-section lg:py-section-wide' }}{% if tone == 'sunken' %} bg-neutral-secondary-soft{% elif tone == 'dark' %} bg-dark text-paper{% endif %}"{% if tone == 'dark' %} data-tone="dark"{% endif %}>
+<section{% if block.type == 'contact' %} data-contact{% endif %}{% if block.id %} id="{{ block.id }}"{% endif %}{% if label %} aria-label="{{ label }}"{% endif %} class="scroll-mt-24 {{ pad or 'py-section lg:py-section-wide' }}{% if tone == 'sunken' %} bg-neutral-secondary-soft{% elif tone == 'dark' %} bg-dark text-paper{% endif %}"{% if tone == 'dark' %} data-tone="dark"{% endif %}>
   <div class="mx-auto w-full max-w-wrap px-gutter sm:px-gutter-wide {{ inner }}">{{ caller() }}</div>
 </section>
 {% endmacro %}

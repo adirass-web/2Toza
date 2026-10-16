@@ -32,3 +32,14 @@ const openTarget = () => {
 };
 openTarget();
 addEventListener("hashchange", openTarget);
+
+// Floating contact group: shown once the hero has scrolled away, hidden while the contact block or footer is on screen.
+const float = document.querySelector("[data-float]");
+if (float && "IntersectionObserver" in window) {
+  const on = new Set();
+  const io = new IntersectionObserver((es) => {
+    es.forEach((e) => on[e.isIntersecting ? "add" : "delete"](e.target));
+    float.toggleAttribute("data-shown", !on.size);
+  });
+  document.querySelectorAll("[data-hero],[data-contact],footer").forEach((el) => io.observe(el));
+}
