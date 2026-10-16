@@ -1,9 +1,16 @@
-{#- Flowbite pricing cards. From lg the cards share four grid rows (subgrid), so the prices sit on one baseline. -#}
+{#- Flowbite pricing cards (detail full); ruled price rows when detail is summary (how-it-works, Direction A tier rows). From lg the cards share four grid rows (subgrid), so the prices sit on one baseline. -#}
 {% from "blocks/_macros.njk" import section, price, lnk, features with context %}
 {% call section(block, '', '', '', 'pt-0 pb-section lg:pb-section-wide') %}
   <h2{% if not block.heading_visible %} class="sr-only"{% else %} class="mb-6 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading"{% endif %}>{{ block.heading }}</h2>
   {% if block.statement %}<p class="max-w-3xl font-serif text-xl leading-snug text-heading lg:text-2xl">{{ block.statement }}</p>{% endif %}
   {% if block.first_step %}<div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.first_step %}{% include "blocks/offer.njk" %}{% set block = outer %}</div>{% endif %}
+  {% if block.detail == 'summary' %}
+  <ul class="mt-8 border-b border-default lg:mt-0">
+    {% for tier in block.tiers %}
+    <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-default py-5"><h3 class="font-serif text-2xl font-normal text-heading">{{ tier.name }}</h3>{{ price(tier, 'text-4xl text-heading') }}<p class="w-full text-body-subtle">{{ tier.for }}</p></li>
+    {% endfor %}
+  </ul>
+  {% else %}
   <ul class="mt-10 grid gap-6 lg:mt-14 lg:grid-cols-3 lg:content-start lg:gap-8">
     {% for tier in block.tiers %}
     <li class="rounded-base border border-default border-t-2 border-t-accent bg-neutral-primary-soft p-6 shadow-xs lg:row-span-4 lg:grid lg:grid-rows-subgrid lg:p-8">
@@ -14,6 +21,7 @@
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
   {% if block.notes %}<div class="mt-8 max-w-3xl space-y-3 text-body-subtle">{% for note in block.notes %}{{ note.html | safe }}{% endfor %}</div>{% endif %}
   {% if block.link %}<p class="mt-4">{{ lnk(block.link) }}</p>{% endif %}
 {% endcall %}

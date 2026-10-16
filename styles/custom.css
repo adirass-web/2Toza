@@ -7,6 +7,29 @@
 }
 
 @layer components {
+  /* Native <summary> shows a disclosure triangle in Safari through a vendor pseudo-element that no Tailwind utility reaches; the accordion draws its own chevron. */
+  summary::-webkit-details-marker { display: none; }
+  /* Markdown from content (answers, terms, letter) is rendered to bare <ul>; the lists cannot take classes, so the same utilities are applied to them here. */
+  .md-flow ul { @apply list-disc ps-5 marker:text-accent; }
+  .md-flow li { @apply py-0.5; }
+  /* Section and clause numbers (1., 1.1) are CSS counters; Tailwind has no counter utilities, and the numbers are generated, not copy. */
+  .terms-doc { counter-reset: sec toc; }
+  .terms-section { counter-increment: sec; counter-reset: term; }
+  .terms-h::before { content: counter(sec) "."; @apply min-w-7 text-accent; font-feature-settings: "lnum"; }
+  .terms-item { counter-increment: term; }
+  .terms-item::before { content: counter(sec) "." counter(term); @apply absolute inset-s-0 top-3.5 text-base font-semibold text-accent; font-feature-settings: "lnum", "tnum"; }
+  .terms-toc li { counter-increment: toc; }
+  .terms-toc a::before { content: counter(toc) "."; @apply font-semibold text-accent; font-feature-settings: "lnum"; }
+
   /* Stage drawings: one rendered stroke weight at every size; Tailwind has no vector-effect utility and the property does not inherit, so it cannot sit on the svg root. */
   .stage-drawing * { vector-effect: non-scaling-stroke; }
+}
+
+@layer base {
+  /* Printing: the page content is printed on white. Surfaces, text colour and the print-only parts are set per element with print: utilities; only the root needs a rule, because html and body backgrounds are not reachable from a block template. */
+  @media print {
+    html, body { background: var(--color-print-paper); color: var(--color-print-ink); }
+    html { font-size: 80%; }
+    a { color: inherit; text-decoration: none; }
+  }
 }

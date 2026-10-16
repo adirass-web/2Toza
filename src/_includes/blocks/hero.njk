@@ -1,16 +1,17 @@
 {% from "blocks/_macros.njk" import actions with context %}
 {% set by = block.byline %}
 <section{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-6 pb-10 lg:pt-20 {{ 'lg:pb-28' if by else 'lg:pb-16' }}">
-  <div class="mx-auto grid w-full max-w-wrap gap-x-16 gap-y-6 px-gutter sm:px-gutter-wide lg:grid-cols-12">
+  <div class="mx-auto grid w-full max-w-wrap gap-x-16 print:block gap-y-6 px-gutter sm:px-gutter-wide lg:grid-cols-12">
     <div class="max-lg:contents {{ 'lg:col-span-7' if by else 'lg:col-span-8' }}">
       <div class="max-lg:order-1">
+        {% if block.print %}<img class="mb-4 hidden h-10 w-auto print:block" src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154">{% endif %}
         <h1 class="font-serif text-hero-sm leading-display font-normal tracking-display text-balance text-heading sm:text-hero-md lg:text-hero-lg">{{ block.heading }}</h1>
         {% if block.lead %}<p class="mt-5 max-w-xl text-lg text-body lg:mt-8 lg:text-xl">{{ block.lead }}</p>{% endif %}
       </div>
       <div class="max-lg:order-3 lg:mt-8">
         {{ actions(block.actions, '', 'grid grid-cols-2 gap-3 sm:flex sm:flex-wrap', 'col-span-2 sm:col-auto') }}
         {% if block.note %}<p class="mt-4 text-base text-body-subtle">{{ block.note }}</p>{% endif %}
-        {% if block.print %}<button type="button" onclick="window.print()" class="mt-4 box-border inline-flex min-h-12 items-center justify-center rounded-base border border-brand bg-neutral-primary px-5 py-3 text-base leading-6 font-medium text-fg-brand hover:bg-brand hover:text-on-action">{{ t.ui.print }}</button>{% endif %}
+        {% if block.print %}<button type="button" data-print class="print:hidden mt-4 box-border inline-flex min-h-12 items-center justify-center rounded-base border border-brand bg-neutral-primary px-5 py-3 text-base leading-6 font-medium text-fg-brand hover:bg-brand hover:text-on-action">{{ t.ui.print }}</button>{% endif %}
       </div>
     </div>
     {% if by %}

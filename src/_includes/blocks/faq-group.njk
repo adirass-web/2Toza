@@ -1,0 +1,45 @@
+{#- FAQ group: Flowbite flush accordion look on native <details>/<summary> (keyboard-usable without JS). The first group opens the page grid with the group navigation; the last one closes it. -#}
+{% from "blocks/_macros.njk" import h2, lnk, btn, links %}
+{% set prev = blocks[loop.index0 - 1] %}{% set next = blocks[loop.index0 + 1] %}
+{% if not prev or prev.type != 'faq-group' %}
+<div class="mx-auto grid w-full max-w-wrap gap-8 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-28">
+  <nav class="lg:sticky lg:top-26 lg:col-span-3 lg:self-start" aria-label="{{ t.ui.faqGroups }}">
+    <ul class="flex flex-wrap gap-x-5 gap-y-1 lg:grid lg:gap-0 lg:border-s lg:border-default">
+      {% for g in blocks %}{% if g.type == 'faq-group' %}
+      <li><a href="#{{ g.id }}" class="inline-flex min-h-11 items-center text-heading underline decoration-transparent decoration-1 underline-offset-4 hover:decoration-accent lg:-ms-px lg:border-s lg:border-transparent lg:ps-4 lg:no-underline lg:hover:border-accent">{{ g.nav_label }}</a></li>
+      {% endif %}{% endfor %}
+    </ul>
+    <button type="button" data-faq-toggle data-open="{{ t.ui.faqCollapse }}" data-closed="{{ t.ui.faqExpand }}" class="mt-3 -mb-3 min-h-11 font-medium text-fg-brand underline decoration-accent decoration-1 underline-offset-4 hover:decoration-2 lg:ms-4" hidden>{{ t.ui.faqExpand }}</button>
+  </nav>
+  <div class="grid gap-14 lg:col-span-9 lg:gap-20">
+{% endif %}
+    <section id="{{ block.id }}" aria-labelledby="{{ block.id }}-h" class="scroll-mt-24">
+      <h2 id="{{ block.id }}-h" class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading">{{ block.heading }}</h2>
+      <div class="mt-6 border-b border-default">
+        {% for q in block.items %}
+        <details class="group scroll-mt-24 border-t border-default" id="{{ q.id }}"{% if q.open %} open{% endif %}>
+          <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-4 font-serif text-xl leading-snug text-heading hover:text-fg-brand-strong lg:text-2xl">
+            <span class="underline decoration-transparent decoration-1 underline-offset-4 group-hover:decoration-accent">{{ q.question }}</span>
+            <svg class="size-5 shrink-0 rotate-180 text-accent motion-safe:transition-transform group-open:rotate-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
+          </summary>
+          <div class="max-w-2xl space-y-4 pb-6 text-lg">
+            {{ q.answer.html | safe }}
+            {% if q.table %}
+            <table class="w-full text-start text-base text-body">
+              <caption class="sr-only">{{ q.table.caption }}</caption>
+              <thead><tr class="border-b border-brand">{% for h in q.table.head %}<th scope="col" class="py-2.5 pe-4 text-start font-semibold text-heading">{{ h }}</th>{% endfor %}</tr></thead>
+              <tbody>{% for r in q.table.rows %}<tr class="border-t border-default"><th scope="row" class="w-2/5 py-2.5 pe-4 text-start align-top font-semibold text-heading">{{ r.label }}</th>{% for c in r.cells %}<td class="py-2.5 pe-4 align-top">{{ c }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+            </table>
+            {% endif %}
+            {% if q.after %}{{ q.after.html | safe }}{% endif %}
+            {% if q.action %}<p>{{ btn(q.action, 'outline', '') }}</p>{% endif %}
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+      {% if block.link %}<p class="mt-8">{{ lnk(block.link) }}</p>{% endif %}
+    </section>
+{% if not next or next.type != 'faq-group' %}
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,44 @@
+{#- Numbered terms: Flowbite table (prices) and ruled rows (terms). The first section opens the page grid with the Flowbite sidebar-style contents list (hidden when printed); the last one closes it. Numbers are CSS counters (see custom.css). -#}
+{% from "blocks/_macros.njk" import price, lnk %}
+{% set prev = blocks[loop.index0 - 1] %}{% set next = blocks[loop.index0 + 1] %}
+{% if not prev or prev.type != 'terms-section' %}
+<div class="terms-doc mx-auto grid w-full max-w-wrap gap-10 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-24 print:block print:px-0">
+  <aside class="hidden self-start lg:sticky lg:top-26 lg:col-span-3 lg:block print:hidden" aria-label="{{ pg.labels.toc }}">
+    <ol class="terms-toc grid">
+      {% for s in blocks %}{% if s.type == 'terms-section' %}
+      <li><a href="#{{ s.id }}" class="flex min-h-9 items-center gap-2 text-heading underline decoration-transparent decoration-1 underline-offset-4 hover:decoration-accent">{{ s.nav_label }}</a></li>
+      {% endif %}{% endfor %}
+    </ol>
+  </aside>
+  <div class="lg:col-span-9 print:block">
+{% endif %}
+    <section id="{{ block.id }}" aria-labelledby="{{ block.id }}-h" class="terms-section mt-12 scroll-mt-24 first:mt-0 print:mt-5">
+      <h2 id="{{ block.id }}-h" class="terms-h flex gap-4 border-t-2 border-accent pt-4 pb-5 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading print:break-after-avoid print:pb-2 print:text-2xl">{{ block.heading }}</h2>
+      {% if block.intro %}<div class="md-flow mb-4 max-w-3xl space-y-4">{{ block.intro.html | safe }}</div>{% endif %}
+      {% if block.price_table %}
+      {% set tb = block.price_table %}
+      <table class="w-full text-start text-body">
+        <caption class="sr-only">{{ tb.caption }}</caption>
+        <thead class="max-sm:sr-only"><tr class="border-b border-brand">{% for h in tb.head %}<th scope="col" class="py-3 pe-4 text-base font-semibold text-heading {{ 'text-end pe-0' if loop.last else 'text-start' }}">{{ h }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for r in tb.rows %}
+          <tr class="border-t border-default first:border-t-0 max-sm:grid max-sm:grid-cols-3 max-sm:gap-x-4 max-sm:py-3 print:break-inside-avoid">
+            <th scope="row" class="w-2/5 py-3 pe-4 text-start align-baseline font-semibold text-heading max-sm:col-span-2 max-sm:p-0">{{ r.label }}</th>
+            <td class="py-3 pe-4 align-baseline text-body-subtle max-sm:col-span-2 max-sm:p-0 max-sm:text-base">{{ r.for }}</td>
+            <td class="py-3 text-end align-baseline whitespace-nowrap max-sm:col-start-3 max-sm:row-span-2 max-sm:row-start-1 max-sm:self-center max-sm:p-0">{{ price(r, 'text-xl text-heading') }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+      {% if block.items %}
+      <ol class="terms-list">
+        {% for item in block.items %}<li class="terms-item relative max-w-3xl border-t border-default py-3 ps-12 first:border-t-0 print:break-inside-avoid print:py-1"><div class="md-flow space-y-2">{{ item.html | safe }}</div></li>{% endfor %}
+      </ol>
+      {% endif %}
+      {% if block.notes %}<div class="md-flow mt-5 max-w-3xl space-y-2">{{ block.notes.html | safe }}</div>{% endif %}
+    </section>
+{% if not next or next.type != 'terms-section' %}
+  </div>
+</div>
+{% endif %}

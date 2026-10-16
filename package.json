@@ -11,7 +11,7 @@
     "check:content": "npm run build && node scripts/check-content.mjs",
     "pages:deploy": "wrangler pages deploy",
     "build:css": "node scripts/build-tokens.mjs && tailwindcss -i styles/main.css -o assets/css/main.css --minify",
-    "build:js": "esbuild scripts/flowbite-lite.js --bundle --minify --format=iife --outfile=assets/js/flowbite-lite.js"
+    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

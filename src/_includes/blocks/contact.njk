@@ -1,5 +1,5 @@
 {% from "blocks/_macros.njk" import section, h2, actions, lnk with context %}
-{% call section(block, 'dark', 'grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-10') %}
+{% call section(block, 'dark', 'grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-10', '', 'py-section lg:py-section-wide print:hidden') %}
   <div class="lg:col-span-5">
     {{ h2(block.heading, 'text-paper') }}
     {% if block.body %}<p class="mt-5 max-w-xl text-lg text-on-dark-text">{{ block.body }}</p>{% endif %}

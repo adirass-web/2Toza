@@ -10,9 +10,9 @@
   <link rel="preload" href="/assets/fonts/frank-ruhl-libre-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/assistant-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/main.css">
-  <script src="/assets/js/flowbite-lite.js" defer></script>
+  <script src="/assets/js/site.js" defer></script>
 </head>
-<body class="bg-neutral-primary font-sans text-lg leading-relaxed text-body{% if legacy %} legacy{% endif %}">
+<body class="print:bg-print-paper print:text-print-ink bg-neutral-primary font-sans text-lg leading-relaxed text-body{% if legacy %} legacy{% endif %}">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-neutral-primary focus:p-3">{{ t.ui.skip }}</a>
 {% include "header.njk" %}
 <main id="main">
