@@ -32,5 +32,5 @@
   src: url("/assets/fonts/assistant-hebrew-600-normal.woff2") format("woff2");
   unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
 
-/* Toza layer on top of Flowbite: the few rules the library cannot express (see custom.css). styles/legacy-pages.css (old hand-built page styles) is no longer imported: every page renders from content. */
+/* Toza layer on top of Flowbite: the few rules the library cannot express (see custom.css). */
 @import "./custom.css";
