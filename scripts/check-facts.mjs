@@ -6,15 +6,22 @@ const facts = readJson("src/_data/facts.json");
 const baseline = readText("reference/llms.baseline.txt");
 const fmt = (n) => "₪" + n.toLocaleString("en-US");
 
+const proposal = facts.status === "proposal";
+if (proposal) {
+  // Proposal branch: prices come from an owner-reviewed proposal, not the approved baseline.
+  if (!facts.proposalSource) fail("proposal facts must name proposalSource");
+  console.log(`facts: PROPOSAL prices from ${facts.proposalSource} (baseline check skipped)`);
+}
+
 // Derived amounts are not stated verbatim in llms.txt.
 const derived = new Set(["personalShieldRemainingAfterCredit", "innerCircleRemainingAfterCreditFrom"]);
-for (const [key, value] of Object.entries(facts.prices)) {
+for (const [key, value] of Object.entries(proposal ? {} : facts.prices)) {
   if (derived.has(key)) continue;
   if (!baseline.includes(fmt(value))) fail(`facts.prices.${key}=${fmt(value)} not found in reference/llms.baseline.txt`);
 }
-if (facts.prices.personalShield - facts.prices.assessment !== facts.prices.personalShieldRemainingAfterCredit)
+if (!proposal && facts.prices.personalShield - facts.prices.assessment !== facts.prices.personalShieldRemainingAfterCredit)
   fail("personalShieldRemainingAfterCredit is not personalShield - assessment");
-if (facts.prices.innerCircleFrom - facts.prices.assessment !== facts.prices.innerCircleRemainingAfterCreditFrom)
+if (!proposal && facts.prices.innerCircleFrom - facts.prices.assessment !== facts.prices.innerCircleRemainingAfterCreditFrom)
   fail("innerCircleRemainingAfterCreditFrom is not innerCircleFrom - assessment");
 
 const allowed = new Set(Object.values(facts.prices));

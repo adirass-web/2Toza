@@ -1,0 +1,157 @@
+{
+  "_note": "UI strings and shared-component copy for English. Hebrew (he.json) is added after EN copy and design are approved. lang and dir drive <html>.",
+  "lang": "en",
+  "dir": "ltr",
+  "ui": {
+    "skip": "Skip to content",
+    "homeLabel": "Toza, home",
+    "mainNav": "Main",
+    "menuNav": "Menu",
+    "menuButton": "Menu",
+    "footerNav": "Footer",
+    "newTab": "(opens in a new tab)",
+    "portraitAlt": "Dr. Lior Tabansky",
+    "credentialRegion": "Credential",
+    "compareServices": "Compare services",
+    "arrow": "→",
+    "arrowExternal": "↗",
+    "pricesLabel": "Prices",
+    "previewBar": "Pricing proposal — preview for review"
+  },
+  "nav": {
+    "situations": "Situations",
+    "how": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "message": "Message"
+  },
+  "footer": {
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "attorneys": "For attorneys",
+    "conditions": "Conditions",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "buttons": {
+    "whatsapp": "Message on WhatsApp",
+    "signal": "Message on Signal",
+    "signalShort": "Signal",
+    "callback": "Call me back",
+    "profile": "Professional profile"
+  },
+  "person": {
+    "name": "Dr. Lior Tabansky",
+    "tagline": "In person · With you present · You control your credentials",
+    "taglineShort": "In person · You control your credentials"
+  },
+  "credential": {
+    "about": "About Dr. Tabansky"
+  },
+  "contact": {
+    "heading": "Start with a private conversation.",
+    "reassurance": "Dr. Tabansky replies personally. The first conversation is free and commits you to nothing."
+  },
+  "price": {
+    "from": "from",
+    "h1": "Fees",
+    "lead": "One first step, then the protection that fits your household. Each price is fixed and agreed in writing before work begins.",
+    "method": "Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
+    "firstStep": "First step",
+    "assessment": {
+      "name": "Private Exposure Assessment",
+      "body": "A senior check-up of your digital life: half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue."
+    },
+    "credit": "Counts in full toward your protection if you continue within {days} days.",
+    "creditShort": "Counts in full toward your protection within {days} days.",
+    "shield": {
+      "name": "Personal Shield",
+      "short": "Personal Shield",
+      "for": "For one person. Your phone, computer, accounts and home network hardened around your risks.",
+      "items": [
+        "Two security keys, configured and tested",
+        "A follow-up visit after about four weeks",
+        "Questions answered by WhatsApp or Signal for 60 days"
+      ],
+      "homeLine": "Fixed and agreed in writing before any work, first step included."
+    },
+    "two": {
+      "name": "Personal Shield for Two",
+      "short": "for Two",
+      "for": "For you and one other person.",
+      "items": [
+        "Each person's phone, computer and accounts",
+        "Your home network · four security keys",
+        "Follow-up visit · 60 days of answered questions"
+      ]
+    },
+    "inner": {
+      "name": "Inner Circle",
+      "for": "For a household of up to four.",
+      "items": [
+        "Everyone's phones, computers and accounts, each kept private",
+        "Your home network · eight security keys",
+        "Follow-up visit · 60 days of answered questions · review visit at twelve months"
+      ]
+    },
+    "underAll": "The first step is included. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.",
+    "larger": "Larger households, several residences or household staff: one fixed price, set out after the first step, from {price}.",
+    "care": "After the 60 days: Annual Care for past clients, from {price} a year.",
+    "conditions": "Conditions",
+    "startHere": "Start here",
+    "allTiers": "All protection tiers"
+  },
+  "stages": {
+    "heading": "Three stages, one person.",
+    "assess": {
+      "name": "Assess",
+      "line": "Your threat model, your risks in order, and urgent first aid. Typically four hours."
+    },
+    "harden": {
+      "name": "Harden",
+      "line": "Settings, accounts and recovery rebuilt around your risks. Security keys supplied and configured."
+    },
+    "verify": {
+      "name": "Verify",
+      "line": "Changes tested and checked, and you are taught to use them. A private dated record of the work."
+    },
+    "method": "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
+    "link": "How it works",
+    "recordDate": [
+      "15 Oct",
+      "2026"
+    ],
+    "alt": {
+      "assess": "A laptop, a phone and a one-page summary on a table",
+      "harden": "Two hardware security keys",
+      "verify": "A closed record folder with a dated label"
+    },
+    "strip": {
+      "assessSpan": "Assess",
+      "protectSpan": "Harden + Verify"
+    }
+  },
+  "specimen": {
+    "heading": "What you take home after the first visit.",
+    "confidential": "Confidential",
+    "title": "Exposure summary",
+    "subtitle": "Private Exposure Assessment",
+    "circumstances": "Your circumstances",
+    "reviewed": "Reviewed",
+    "reviewedText": "Devices, accounts, recovery routes",
+    "found": "Found and changed",
+    "foundItems": [
+      "Recovery email updated",
+      "Old tablet signed out"
+    ],
+    "remaining": "Remaining",
+    "remainingText": "Shared family album, kept by choice",
+    "next": "Ordered next steps",
+    "nextItems": [
+      "Move recovery to your own number",
+      "Review location sharing",
+      "Set up security keys"
+    ],
+    "label": "Illustrative example. Your summary reflects your own circumstances."
+  }
+}

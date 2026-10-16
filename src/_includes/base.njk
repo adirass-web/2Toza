@@ -1,12 +1,23 @@
 <!doctype html>
-<html lang="{{ lang or 'en' }}" dir="{{ dir or 'ltr' }}">
+<html lang="{{ t.lang }}" dir="{{ t.dir }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#f7f2e8">
+  <link rel="preload" href="/assets/fonts/frank-ruhl-libre-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/assistant-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
+<div class="preview-bar" role="note">{{ t.ui.previewBar }}</div>
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-paper focus:p-3">{{ t.ui.skip }}</a>
+{% include "header.njk" %}
+<main id="main">
 {{ content | safe }}
+</main>
+{% include "footer.njk" %}
 </body>
 </html>
