@@ -26,5 +26,9 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-020 | 2026-10-15 | Pricing: Assessment is the first step, not a tier. Tiers: Personal Shield, Inner Circle, Bespoke (top, individually scoped). Tier architecture developed separately (strategy/pricing/). |
 | V-021 | 2026-10-15 | Bespoke minimised: not shown as a tier; one line under Personal Shield and Inner Circle. Pricing shows the Assessment (first step) and two tiers. Supersedes the three-tier part of V-020. |
 | V-022 | 2026-10-15 | Pricing reopened: build a new premium (HNW, white-glove) pricing. Business target: higher margin at 1–2 engagements per month. Two-person price adopted (P4 option D). Current prices remain on the site until the new pricing is approved. |
+| V-023 | 2026-10-16 | Larger households shown as "from ₪90,000" (below six figures). |
+| V-024 | 2026-10-16 | First step ₪4,000 (test fallback ₪3,600); counted in full toward a tier started within 30 days. Health-check format may frame it; no health-check price comparison. |
+| V-025 | 2026-10-16 | No public sales, discounts or time-limited deals. The 30-day window is the only time element; private value-adds at owner discretion, never advertised. |
+| V-026 | 2026-10-16 | Direct question line 60 days (WhatsApp/Signal, within one working day, questions only). Ongoing access via the paid Annual Care plan. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.
