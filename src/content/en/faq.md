@@ -28,12 +28,10 @@ blocks:
           Contact through WhatsApp or Signal is not guaranteed to be invisible on your device or account. Keep the first message short and neutral.
       - id: a3
         question: Is the first conversation the paid service?
-        open: true
         answer: |-
           No. The first conversation checks whether Toza fits your situation, whether anything appears urgent and what the next step should be. It is free and includes no device inspection, mapping, diagnosis or technical work. Contacting Toza does not commit you to a purchase.
       - id: a4
         question: What happens before I pay?
-        open: true
         answer: |-
           If the service fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms. You accept it explicitly and pay; then the visit is scheduled. No paid work starts before acceptance and receipt of payment. Preparation instructions are sent directly.
       - id: a5
@@ -48,7 +46,6 @@ blocks:
     items:
       - id: b1
         question: "What do I get for {price:assessment}?"
-        open: true
         answer: |-
           A senior check-up of your digital life: half a day in person with Dr. Tabansky. He listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you. Where urgent exposure can be addressed safely within the agreed scope, he makes the changes with your approval. You keep a written exposure summary with ordered next steps. The {price:assessment} counts in full toward a tier that begins within {fact:credit.windowDays} days.
       - id: b2
@@ -57,7 +54,6 @@ blocks:
           {fact:assessmentScope|capfirst}. Dr. Tabansky reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. Allow half a day; it typically takes four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified.
       - id: b3
         question: What do I receive if I don't continue?
-        open: true
         answer: |-
           A written exposure summary: what was reviewed, what urgent exposure was found, what was changed, what remains and the recommended next steps. You keep it whether or not you continue. There is no automatic continuation to a protection tier.
       - id: b4
@@ -76,7 +72,6 @@ blocks:
     items:
       - id: c1
         question: What does Personal Shield include?
-        open: true
         answer: |-
           Personal Shield costs {price:personalShield} for one person, with the first step included. Dr. Tabansky hardens your phone, computer, accounts and home network around your risks, in person. It includes {factword:securityKeys.personalShield} security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for {fact:questionLineDays} days.
       - id: c2
@@ -192,7 +187,6 @@ blocks:
     items:
       - id: g1
         question: "How does the {price:assessment} first step count toward a tier?"
-        open: true
         answer: |-
           In full, when the tier's work begins within {fact:credit.windowDays} days of completion of the first step. You then pay the balance: {price:balanceShield} for Personal Shield, {price:balanceTwo} for Personal Shield for Two or {price:balanceInnerCircle} for Inner Circle. {shared:common.after_window} If the first step shows you need the next tier, you pay that tier's price less the {price:assessment} already paid, within the same {fact:credit.windowDays} days.
       - id: g2

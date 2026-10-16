@@ -302,9 +302,6 @@
         "required": true,
         "max": 660
       },
-      "open": {
-        "kind": "bool"
-      },
       "table": {
         "kind": "object",
         "type": "table"

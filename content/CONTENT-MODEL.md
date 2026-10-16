@@ -353,7 +353,6 @@ The invitation to make contact: heading, reassurance, channel actions, optional 
 | `id` | id | yes |  |  |
 | `question` | text | yes | 110 | 79 |
 | `answer` | md | yes | 660 | 507 |
-| `open` | bool |  |  |  |
 | `table` | `table` |  |  |  |
 | `after` | md |  | 210 | 155 |
 | `action` | action |  |  |  |

@@ -640,7 +640,7 @@ First-person note (about). `heading` text, `body` md (paragraphs), `signature` t
 
 ## faq-group
 
-A titled group of questions. Consecutive groups share one page grid with a navigation list of `nav_label`s and an expand-all button (labels `t.ui.faqGroups|faqExpand|faqCollapse`; the button needs `site.js`). Questions are native `<details>`/`<summary>`: usable by keyboard without JavaScript. `site.js` opens the question a `#hash` points at.
+A titled group of questions. Consecutive groups share one page grid with a navigation list of `nav_label`s and an expand-all button (labels `t.ui.faqGroups|faqExpand|faqCollapse`; the button needs `site.js`). Questions are native `<details>`/`<summary>`: usable by keyboard without JavaScript. All questions are closed on load. Each group is a `<details open data-collapsible>` whose `<summary>` holds the h2: on phones (<768px) `site.js` collapses all groups but the one a `#hash` (or the first) points at; from md up they stay open and the summary is inert. Without script every group is open. `site.js` opens the question or group a `#hash` points at.
 
 | Field | Type | | Notes |
 |---|---|---|---|
@@ -650,7 +650,6 @@ A titled group of questions. Consecutive groups share one page grid with a navig
 | `items[].id` | slug | required | Anchor of the question (`#a1`) |
 | `items[].question` | text | required | summary |
 | `items[].answer` | md | required | |
-| `items[].open` | bool | optional | Open by default |
 | `items[].table` | `{ caption, head[], rows[{ label, cells[] }] }` | optional | After the answer |
 | `items[].after` | md | optional | After the table |
 | `items[].action` | action | optional | Button after the answer |
