@@ -7,10 +7,10 @@
   { href: "/en/about/", label: t.footer.about }
 ] %}
 <footer class="print:hidden border-t border-default bg-neutral-primary-soft">
-  <div class="mx-auto flex w-full max-w-wrap flex-col gap-6 px-gutter py-10 sm:px-gutter-wide md:flex-row md:items-center md:justify-between lg:py-12">
-    <a href="/en/" class="flex items-center" aria-label="{{ t.ui.homeLabel }}"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-12 w-auto"></a>
+  <div class="mx-auto flex w-full max-w-wrap flex-col gap-2 px-gutter py-3 sm:px-gutter-wide md:flex-row md:items-center md:justify-between md:gap-6 md:py-8 lg:py-10">
+    <a href="/en/" class="flex items-center" aria-label="{{ t.ui.homeLabel }}"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-8 w-auto md:h-12"></a>
     <nav aria-label="{{ t.ui.footerNav }}">
-      <ul class="flex flex-wrap gap-x-7 gap-y-1 font-medium text-body">
+      <ul class="flex flex-wrap gap-x-6 gap-y-0 md:gap-x-7 md:gap-y-1 font-medium text-body">
         {% for item in footItems %}
         <li><a href="{{ item.href }}" class="inline-flex min-h-11 items-center underline decoration-transparent decoration-1 underline-offset-8 hover:decoration-accent">{{ item.label }}</a></li>
         {% endfor %}

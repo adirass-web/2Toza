@@ -1,8 +1,8 @@
 {
  "home-d": {
-  "total": 4444,
+  "total": 4372,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -48,17 +48,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "how-it-works-d": {
-  "total": 4078,
+  "total": 4006,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -90,17 +90,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "pricing-d": {
-  "total": 2598,
+  "total": 2526,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -125,17 +125,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "about-d": {
-  "total": 2741,
+  "total": 2669,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -167,17 +167,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "faq-d": {
-  "total": 5444,
+  "total": 5372,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -195,17 +195,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "conditions-d": {
-  "total": 6399,
+  "total": 6334,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -223,17 +223,17 @@
    },
    {
     "n": "contact",
-    "h": 243,
-    "pt": 72,
-    "pb": 72,
+    "h": 195,
+    "pt": 48,
+    "pb": 48,
     "text": "Questions about these terms?"
    }
   ]
  },
  "separation-divorce-d": {
-  "total": 3328,
+  "total": 3256,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -279,17 +279,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "business-dispute-d": {
-  "total": 3533,
+  "total": 3461,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -335,17 +335,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "inheritance-conflict-d": {
-  "total": 3460,
+  "total": 3388,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -391,17 +391,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "they-know-something-d": {
-  "total": 3680,
+  "total": 3608,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -454,17 +454,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "attorneys-d": {
-  "total": 3607,
+  "total": 3535,
   "header": 73,
-  "footer": 145,
+  "footer": 129,
   "blocks": [
    {
     "n": "hero",
@@ -524,17 +524,17 @@
    },
    {
     "n": "contact",
-    "h": 319,
-    "pt": 72,
-    "pb": 72,
+    "h": 263,
+    "pt": 48,
+    "pb": 48,
     "text": "Start with a private conversatio"
    }
   ]
  },
  "home-m": {
-  "total": 4847,
+  "total": 4661,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -580,7 +580,7 @@
    },
    {
     "n": "contact",
-    "h": 441,
+    "h": 347,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -588,9 +588,9 @@
   ]
  },
  "how-it-works-m": {
-  "total": 4891,
+  "total": 4705,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -622,7 +622,7 @@
    },
    {
     "n": "contact",
-    "h": 441,
+    "h": 347,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -630,9 +630,9 @@
   ]
  },
  "pricing-m": {
-  "total": 3876,
+  "total": 3690,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -657,7 +657,7 @@
    },
    {
     "n": "contact",
-    "h": 441,
+    "h": 347,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -665,9 +665,9 @@
   ]
  },
  "about-m": {
-  "total": 2860,
+  "total": 2674,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -699,7 +699,7 @@
    },
    {
     "n": "contact",
-    "h": 441,
+    "h": 347,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -707,9 +707,9 @@
   ]
  },
  "faq-m": {
-  "total": 6702,
+  "total": 6516,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -727,7 +727,7 @@
    },
    {
     "n": "contact",
-    "h": 441,
+    "h": 347,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -735,9 +735,9 @@
   ]
  },
  "conditions-m": {
-  "total": 9661,
+  "total": 9479,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -755,7 +755,7 @@
    },
    {
     "n": "contact",
-    "h": 386,
+    "h": 296,
     "pt": 32,
     "pb": 32,
     "text": "Questions about these terms?"
@@ -763,9 +763,9 @@
   ]
  },
  "separation-divorce-m": {
-  "total": 4144,
+  "total": 3950,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -811,7 +811,7 @@
    },
    {
     "n": "contact",
-    "h": 490,
+    "h": 388,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -819,9 +819,9 @@
   ]
  },
  "business-dispute-m": {
-  "total": 4350,
+  "total": 4156,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -867,7 +867,7 @@
    },
    {
     "n": "contact",
-    "h": 490,
+    "h": 388,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -875,9 +875,9 @@
   ]
  },
  "inheritance-conflict-m": {
-  "total": 4272,
+  "total": 4078,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -923,7 +923,7 @@
    },
    {
     "n": "contact",
-    "h": 490,
+    "h": 388,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -931,9 +931,9 @@
   ]
  },
  "they-know-something-m": {
-  "total": 4511,
+  "total": 4317,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -986,7 +986,7 @@
    },
    {
     "n": "contact",
-    "h": 490,
+    "h": 388,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
@@ -994,9 +994,9 @@
   ]
  },
  "attorneys-m": {
-  "total": 4178,
+  "total": 3984,
   "header": 61,
-  "footer": 245,
+  "footer": 153,
   "blocks": [
    {
     "n": "hero",
@@ -1056,7 +1056,7 @@
    },
    {
     "n": "contact",
-    "h": 490,
+    "h": 388,
     "pt": 32,
     "pb": 32,
     "text": "Start with a private conversatio"
