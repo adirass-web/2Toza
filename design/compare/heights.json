@@ -231,7 +231,7 @@
   ]
  },
  "separation-divorce-d": {
-  "total": 3850,
+  "total": 3570,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -278,13 +278,6 @@
     "text": ""
    },
    {
-    "n": "scroll-mt-24.py-section",
-    "h": 280,
-    "pt": 72,
-    "pb": 72,
-    "text": ""
-   },
-   {
     "n": "contact",
     "h": 319,
     "pt": 72,
@@ -294,7 +287,7 @@
   ]
  },
  "business-dispute-d": {
-  "total": 4054,
+  "total": 3774,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -341,13 +334,6 @@
     "text": ""
    },
    {
-    "n": "scroll-mt-24.py-section",
-    "h": 280,
-    "pt": 72,
-    "pb": 72,
-    "text": ""
-   },
-   {
     "n": "contact",
     "h": 319,
     "pt": 72,
@@ -357,7 +343,7 @@
   ]
  },
  "inheritance-conflict-d": {
-  "total": 3953,
+  "total": 3673,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -404,13 +390,6 @@
     "text": ""
    },
    {
-    "n": "scroll-mt-24.py-section",
-    "h": 280,
-    "pt": 72,
-    "pb": 72,
-    "text": ""
-   },
-   {
     "n": "contact",
     "h": 319,
     "pt": 72,
@@ -420,7 +399,7 @@
   ]
  },
  "they-know-something-d": {
-  "total": 4173,
+  "total": 3893,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -469,13 +448,6 @@
    {
     "n": "scroll-mt-24.py-section",
     "h": 523,
-    "pt": 72,
-    "pb": 72,
-    "text": ""
-   },
-   {
-    "n": "scroll-mt-24.py-section",
-    "h": 280,
     "pt": 72,
     "pb": 72,
     "text": ""
@@ -791,7 +763,7 @@
   ]
  },
  "separation-divorce-m": {
-  "total": 4506,
+  "total": 4257,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -838,13 +810,6 @@
     "text": ""
    },
    {
-    "n": "scroll-mt-24.py-section",
-    "h": 249,
-    "pt": 32,
-    "pb": 32,
-    "text": ""
-   },
-   {
     "n": "contact",
     "h": 490,
     "pt": 32,
@@ -854,7 +819,7 @@
   ]
  },
  "business-dispute-m": {
-  "total": 4712,
+  "total": 4463,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -901,13 +866,6 @@
     "text": ""
    },
    {
-    "n": "scroll-mt-24.py-section",
-    "h": 249,
-    "pt": 32,
-    "pb": 32,
-    "text": ""
-   },
-   {
     "n": "contact",
     "h": 490,
     "pt": 32,
@@ -917,7 +875,7 @@
   ]
  },
  "inheritance-conflict-m": {
-  "total": 4634,
+  "total": 4385,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -964,13 +922,6 @@
     "text": ""
    },
    {
-    "n": "scroll-mt-24.py-section",
-    "h": 249,
-    "pt": 32,
-    "pb": 32,
-    "text": ""
-   },
-   {
     "n": "contact",
     "h": 490,
     "pt": 32,
@@ -980,7 +931,7 @@
   ]
  },
  "they-know-something-m": {
-  "total": 4873,
+  "total": 4623,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -1029,13 +980,6 @@
    {
     "n": "scroll-mt-24.py-section",
     "h": 673,
-    "pt": 32,
-    "pb": 32,
-    "text": ""
-   },
-   {
-    "n": "scroll-mt-24.py-section",
-    "h": 249,
     "pt": 32,
     "pb": 32,
     "text": ""

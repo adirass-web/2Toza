@@ -566,9 +566,15 @@
     "stages": {
       "summary": "The three-stage method (Assess, Harden, Verify) as a summary, with the path to prices.",
       "fields": {
+        "variant": {
+          "kind": "enum",
+          "values": [
+            "full",
+            "compact"
+          ]
+        },
         "statement": {
           "kind": "text",
-          "required": true,
           "max": 160
         },
         "heading": {

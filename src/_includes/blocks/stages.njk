@@ -1,8 +1,8 @@
 {#- Flowbite stepper timeline (horizontal from md): a dot and a hairline above each stage. The drawings are the shared SVG partials. -#}
 {% from "blocks/_macros.njk" import section, lnk with context %}
 {% call section(block, 'dark', '') %}
-  <p class="max-w-4xl font-serif text-2xl leading-display font-normal tracking-display text-balance text-paper sm:text-4xl lg:text-5xl">{{ block.statement }}</p>
-  <h2 class="mt-6 font-serif text-xl font-normal text-accent-on-dark lg:mt-9 lg:text-2xl">{{ block.heading }}</h2>
+  {% if block.statement %}<p class="max-w-4xl font-serif text-2xl leading-display font-normal tracking-display text-balance text-paper sm:text-4xl lg:text-5xl">{{ block.statement }}</p>{% endif %}
+  <h2 class="{{ 'mt-6 lg:mt-9' if block.statement else '' }} font-serif text-xl font-normal text-accent-on-dark lg:text-2xl">{{ block.heading }}</h2>
   {% if block.line %}<p class="mt-2 max-w-2xl text-lg text-on-dark-text">{{ block.line }}</p>{% endif %}
   <ol class="mt-6 grid gap-5 md:mt-10 md:grid-cols-3 md:gap-0">
     {% for stage in block.items %}

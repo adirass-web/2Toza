@@ -37,9 +37,6 @@ blocks:
   - type: price-summary
     ref: price_summary
 
-  - type: method-statement
-    ref: method
-
   - type: contact
     ref: contact
     note:

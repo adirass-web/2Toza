@@ -154,11 +154,12 @@ The method/credential statement, with optional framing heading, explanation and 
 | `links` | list of `link` |  |  |  |
 
 #### `stages`
-The three-stage method (Assess, Harden, Verify) as a summary, with the path to prices.
+The three-stage method (Assess, Harden, Verify) as a summary, with the path to prices. `statement` is the method line shown first in the dark section (optional; the shared block carries it). `variant: compact` is the tighter layout with smaller drawings (situation pages); `full` is the default (Home).
 
 | Field | Kind | Req. | Max | Now |
 |---|---|---|---|---|
-| `statement` | text | yes | 160 | 116 |
+| `variant` | full \| compact |  |  |  |
+| `statement` | text |  | 160 | 116 |
 | `heading` | text | yes | 40 | 25 |
 | `line` | text |  | 190 | 146 |
 | `items` | list of `stage` | yes |  |  |
@@ -395,8 +396,8 @@ The invitation to make contact: heading, reassurance, channel actions, optional 
 | pricing | hero · price-strip* · tiers (full, first_step = offer_first_step*) · contact* |
 | faq | hero · faq-group ×7 · contact* |
 | conditions | hero · terms-section ×9 · contact |
-| separation-divorce, business-dispute, inheritance-conflict | hero · recognition · text · stages* (+ line) · text · price-summary* · method-statement* · contact* (+ note) |
-| they-know-something | hero · recognition · text ×2 · stages* (+ line) · text (+ link) · price-summary* · method-statement* · contact* (+ note) |
+| separation-divorce, business-dispute, inheritance-conflict | hero · recognition · text · stages* (+ line, compact; carries the method line) · text · price-summary* · contact* (+ note) |
+| they-know-something | hero · recognition · text ×2 · stages* (+ line, compact; carries the method line) · text (+ link) · price-summary* · contact* (+ note) |
 | attorneys | hero · text · recognition (+ links) · text ×4 · method-statement* · contact* (referral, + note) |
 
 \* uses a shared block via `ref`.
