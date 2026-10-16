@@ -1,0 +1,18 @@
+{% from "blocks/_macros.njk" import link, links %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %}>
+  <p>{{ block.statement }}</p>
+  <h2>{{ block.heading }}</h2>
+  {% if block.line %}<p>{{ block.line }}</p>{% endif %}
+  <ol>
+    {% for stage in block.items %}
+    <li data-stage="{{ stage.key }}">
+      <svg role="img" aria-label="{{ stage.image_alt }}"></svg>
+      <h3>{{ stage.name }}</h3>
+      <p>{{ stage.line }}</p>
+      {% if stage.key == "verify" and block.record_date %}<p>{{ block.record_date }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% if block.price_strip %}{% set outer = block %}{% set block = outer.price_strip %}{% include "blocks/price-strip.njk" %}{% set block = outer %}{% endif %}
+  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+</section>

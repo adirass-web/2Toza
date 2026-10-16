@@ -1,0 +1,18 @@
+{% from "blocks/_macros.njk" import link, links, price %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} data-detail="{{ block.detail or 'full' }}">
+  <h2{% if not block.heading_visible %} data-visually-hidden{% endif %}>{{ block.heading }}</h2>
+  {% if block.statement %}<p>{{ block.statement }}</p>{% endif %}
+  {% if block.first_step %}{% set outer = block %}{% set block = outer.first_step %}{% include "blocks/offer.njk" %}{% set block = outer %}{% endif %}
+  <ul>
+    {% for tier in block.tiers %}
+    <li>
+      <h3>{{ tier.name }}</h3>
+      <p>{{ price(tier) }}</p>
+      <p>{{ tier.for }}</p>
+      {% if tier.items %}<ul>{% for i in tier.items %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% for note in block.notes %}{{ note.html | safe }}{% endfor %}
+  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+</section>

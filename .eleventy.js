@@ -4,6 +4,10 @@ module.exports = function (eleventyConfig) {
   const words = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"];
   eleventyConfig.addFilter("numword", (n) => words[Number(n)] ?? String(n));
   eleventyConfig.addFilter("capfirst", (s) => { s = String(s); return s.charAt(0).toUpperCase() + s.slice(1); });
+  // Layouts for pages rendered from content live in src/_layouts (not in _includes); never emit them as pages.
+  eleventyConfig.ignores.add("src/_layouts/**");
+  eleventyConfig.addWatchTarget("src/content/");
+  eleventyConfig.addWatchTarget("content/content-model.json");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("robots.txt");

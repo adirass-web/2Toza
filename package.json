@@ -6,11 +6,11 @@
   "scripts": {
     "build": "npm run build:css && eleventy",
     "start": "npm run build:css && eleventy --serve",
-    "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs",
+    "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs",
     "check:upstream": "node scripts/check-upstream.mjs",
     "check:content": "npm run build && node scripts/check-content.mjs",
     "pages:deploy": "wrangler pages deploy",
-    "build:css": "tailwindcss -i styles/main.css -o assets/css/main.css --minify"
+    "build:css": "node scripts/build-tokens.mjs && tailwindcss -i styles/main.css -o assets/css/main.css --minify"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

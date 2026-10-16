@@ -1,0 +1,5 @@
+{#- Shared by the reference block templates. link: a link or contact action ({ label, href, external, aria? }).
+    The `aria` text is the "opens in a new tab" hint; it sits in its own span so a style can hide it visually. -#}
+{% macro link(l) %}<a href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% if l.aria %} <span>{{ l.aria }}</span>{% endif %}{% endmacro %}
+{% macro links(list) %}{% if list and list.length %}<ul>{% for l in list %}<li>{{ link(l) }}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
+{% macro price(b) %}<data value="{{ b.price_value }}">{{ b.price }}</data>{% endmacro %}

@@ -40,5 +40,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-034 | 2026-10-16 | Hebrew copy uses digits for numbers (avoids gendered number words); `{factword:}` is English-only; Hebrew content uses `{fact:}`. |
 | V-035 | 2026-10-16 | Facts (question-line days, key counts, credit window) are referenced from facts.json in content files, not typed. |
 | V-036 | 2026-10-16 | Sentences used on more than one page live once in _shared.yaml. |
+| V-037 | 2026-10-16 | One tokens file (tokens/tokens.json, DTCG) is the single source of colours, type, spacing and radii; styles/tokens.css is generated. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

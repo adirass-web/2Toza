@@ -8,26 +8,27 @@
 //       missing from HTML.
 //   (c) Drift guard (transition): editorial strings still held in
 //       src/_data/i18n/en.json must equal a string in _shared.yaml.
-// Usage: node scripts/check-content.mjs [--lengths] [--verbose]
+// Usage: node scripts/check-content.mjs [--lengths] [--verbose] [--prefix=/_ref --only=page,page]
 // Run after `npm run build` (npm run check:content does both).
-import { readFileSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import yaml from "js-yaml";
-import MarkdownIt from "markdown-it";
-import { Parser } from "htmlparser2";
 import { walk } from "./util.mjs";
+import { loadSources, createResolver, readPages, mdUnits, plainLength, norm, NUMWORDS, formatPrice, get } from "./lib/content.mjs";
+import { squash, hasWords, sentences, extract, boundedIncludes } from "./lib/parity.mjs";
 
 const ARGS = new Set(process.argv.slice(2));
+const argValue = (name) => process.argv.slice(2).find((a) => a.startsWith("--" + name + "="))?.slice(name.length + 3);
 const LANG = "en";
 const CONTENT_DIR = `src/content/${LANG}`;
 const SITE = "_site";
+// Optional: check pages rendered from content under another permalink prefix, e.g.
+//   node scripts/check-content.mjs --prefix=/_ref --only=pricing
+// Default: the real site, every page.
+const PREFIX = argValue("prefix") || "";
+const ONLY = argValue("only") ? argValue("only").split(",") : null;
 
-const model = JSON.parse(readFileSync("content/content-model.json", "utf8"));
-const facts = JSON.parse(readFileSync("src/_data/facts.json", "utf8"));
-const contact = JSON.parse(readFileSync("src/_data/contact.json", "utf8"));
-const i18n = JSON.parse(readFileSync(`src/_data/i18n/${LANG}.json`, "utf8"));
-const shared = yaml.load(readFileSync(join(CONTENT_DIR, "_shared.yaml"), "utf8"));
-const md = new MarkdownIt({ html: false, linkify: false, typographer: false });
+const src = loadSources({ lang: LANG });
+const { model, facts, contact, i18n, shared } = src;
 
 // i18n namespaces that are UI chrome (stay in i18n) vs editorial (moved to _shared.yaml).
 const UI_NAMESPACES = ["ui", "nav", "footer", "buttons"];
@@ -39,95 +40,10 @@ const notes = [];
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 
-// ---------- helpers ----------
-const get = (obj, path) => path.split(".").reduce((o, k) => (o == null ? undefined : o[k]), obj);
-const norm = (s) => String(s).replace(/[   ]/g, " ").replace(/\s+/g, " ").trim();
-const squash = (s) => String(s).replace(/\s+/g, "");
-const hasWords = (s) => /[A-Za-z֐-׿]/.test(s) || s.includes("₪");
-const NUMWORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
-const formatPrice = (n) => "₪" + Number(n).toLocaleString("en-US");
-const usedShared = new Set();
-
-// ---------- tokens ----------
-// {fact:path} digits · {factword:path} English number word · {Factword:path} the same, capitalised
-// (sentence start). `*N` multiplies the fact first (e.g. {factword:devicesPerPerson*2}).
-const TOKEN = /\{(price|fact|factword|Factword|shared|ui):([A-Za-z0-9_.]+)(?:\*(\d+))?(?:\|(capfirst))?\}/g;
-function resolve(str, where, depth = 0) {
-  if (str == null) return "";
-  if (Array.isArray(str)) return str.map((s) => resolve(s, where, depth)).join(" ");
-  if (typeof str !== "string") return String(str);
-  if (depth > 6) { err(where, "token recursion too deep"); return str; }
-  const out = str.replace(TOKEN, (m, ns, path, mul, filter) => {
-    let v;
-    if (ns === "price") {
-      v = facts.prices[path];
-      if (typeof v !== "number") { err(where, `unknown price key ${m}`); return m; }
-      v = formatPrice(v);
-    } else if (ns === "fact" || ns === "factword" || ns === "Factword") {
-      v = get(facts, path);
-      if (v === undefined || v === null || typeof v === "object" || (ns !== "fact" && !Number.isInteger(v))) { err(where, `unknown fact ${m}`); return m; }
-      if (ns !== "fact" && LANG !== "en") { err(where, `${m}: number words are English-only (V-034); use {fact:${path}} in ${LANG} content`); return m; }
-      if (mul) v = Number(v) * Number(mul);
-      if (ns !== "fact") {
-        v = NUMWORDS[Number(v)] ?? String(v);
-        if (ns === "Factword") v = v.charAt(0).toUpperCase() + v.slice(1);
-      }
-    } else if (ns === "shared") {
-      v = get(shared, path);
-      if (v === undefined || (typeof v === "object" && !Array.isArray(v))) { err(where, `unknown shared string ${m}`); return m; }
-      usedShared.add(path);
-      v = resolve(v, where, depth + 1);
-    } else if (ns === "ui") {
-      v = get(i18n, path);
-      if (typeof v !== "string") { err(where, `unknown ui string ${m}`); return m; }
-    }
-    v = String(v);
-    if (filter === "capfirst") v = v.charAt(0).toUpperCase() + v.slice(1);
-    return v;
-  });
-  if (/\{[A-Za-z]+:[^}]*\}/.test(out)) err(where, `unresolved token in "${out}"`);
-  return out;
-}
-
-// Markdown -> reader-visible units. full = one per paragraph / list item / cell;
-// runs = the same split additionally at link boundaries (for fragment matching).
-function mdUnits(src) {
-  const full = [], runs = [];
-  for (const t of md.parse(src, {})) {
-    if (t.type !== "inline") continue;
-    let f = "", r = "";
-    for (const c of t.children) {
-      if (c.type === "text" || c.type === "code_inline") { f += c.content; r += c.content; }
-      else if (c.type === "softbreak" || c.type === "hardbreak") { f += " "; r += " "; }
-      else if (c.type === "link_open" || c.type === "link_close") { runs.push(r); r = ""; }
-    }
-    full.push(f); runs.push(r);
-  }
-  return { full: full.map(norm).filter(Boolean), runs: runs.map(norm).filter(Boolean) };
-}
-const plainLength = (kind, resolved) => (kind === "md" ? mdUnits(resolved).full.join(" ").length : norm(resolved).length);
-
-// Sentence segmentation shared by both sides of the parity check.
-function sentences(s) {
-  s = norm(s).replace(/\b(Dr|Mr|Mrs|Ms|St|vs|e\.g|i\.e)\. /g, "$1.\u0000");
-  return s
-    .split(/(?<=[.!?]["”’)]?) (?=["“(]?[A-Z0-9₪֐-׿])| · /)
-    .map((x) => x.replace(/\u0000/g, " ").trim())
-    .filter(Boolean);
-}
+const { resolve, mergeRef, usedShared } = createResolver(src, { err });
 
 // ---------- load pages ----------
-function loadPage(file) {
-  const raw = readFileSync(file, "utf8");
-  const m = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-  if (!m) { err(file, "missing YAML front matter"); return null; }
-  let data;
-  try { data = yaml.load(m[1]); } catch (e) { err(file, "YAML: " + e.message); return null; }
-  if (m[2].trim()) err(file, "body after front matter is not used; put copy in blocks");
-  return { file, raw, data };
-}
-const pageFiles = readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md")).sort();
-const pages = pageFiles.map((f) => loadPage(join(CONTENT_DIR, f))).filter(Boolean);
+const pages = readPages(src, err);
 const permalinks = new Set(pages.map((p) => p.data.permalink));
 const pathTargets = new Set([...permalinks].map((p) => p.replace(/index\.html$/, "")));
 
@@ -200,18 +116,6 @@ function rawSentences(value, acc = []) {
 const lengths = new Map(); // "type.field" -> max observed
 const blockCounts = new Map();
 function observe(key, n) { lengths.set(key, Math.max(lengths.get(key) || 0, n)); }
-
-function mergeRef(block, where, expectType) {
-  if (!block || typeof block !== "object") return block;
-  if (!block.ref) return block;
-  const base = shared.blocks?.[block.ref];
-  if (!base) { err(where, `unknown shared block ref "${block.ref}"`); return block; }
-  const { ref, ...local } = block;
-  const merged = { ...structuredClone(base), ...local };
-  if (expectType && merged.type && merged.type !== expectType) err(where, `ref "${ref}" is a ${merged.type}, expected ${expectType}`);
-  if (local.type && base.type !== local.type) err(where, `ref "${ref}" is a ${base.type}, block says ${local.type}`);
-  return merged;
-}
 
 // collector: { strings: [{kind, text, where}], prices: [string] }
 function checkField(spec, value, where, key, col) {
@@ -330,46 +234,6 @@ for (const p of pages) {
 // Shared blocks validated on their own too (even if unused).
 for (const [name, b] of Object.entries(shared.blocks || {})) checkBlock(b, `_shared.yaml:blocks.${name}`, null, { strings: [], prices: [] }, null);
 
-// ---------- HTML extraction ----------
-const INLINE = new Set(["a", "span", "em", "strong", "b", "i", "small", "abbr", "code", "sup", "sub", "time", "mark", "s", "u", "q", "cite", "label"]);
-const SKIP = new Set(["script", "style", "template", "noscript"]);
-const ATTRS = ["alt", "aria-label", "data-open", "data-closed", "title", "placeholder"];
-function extract(html) {
-  const out = { title: "", description: "", nodes: [], blocks: [], attrs: [] };
-  let skip = 0, inTitle = false, inBody = false, buf = "", node = "";
-  // htmlparser2 splits a text node at entities; join adjacent text callbacks.
-  const endNode = () => { if (norm(node)) out.nodes.push(norm(node)); node = ""; };
-  const flush = () => { endNode(); if (norm(buf)) out.blocks.push(norm(buf)); buf = ""; };
-  const p = new Parser({
-    onopentag(name, a) {
-      endNode();
-      if (name === "body") inBody = true;
-      if (name === "title") inTitle = true;
-      if (name === "meta" && a.name === "description") out.description = a.content || "";
-      if (SKIP.has(name)) skip++;
-      if (!inBody || skip) return;
-      for (const k of ATTRS) if (a[k] && norm(a[k])) out.attrs.push(norm(a[k]));
-      if (name === "br") buf += " ";
-      else if (!INLINE.has(name)) flush();
-    },
-    ontext(t) {
-      if (inTitle) { out.title += t; return; }
-      if (!inBody || skip) return;
-      node += t;
-      buf += t;
-    },
-    onclosetag(name) {
-      endNode();
-      if (name === "title") inTitle = false;
-      if (SKIP.has(name)) { skip--; return; }
-      if (inBody && !skip && !INLINE.has(name)) flush();
-    },
-  }, { decodeEntities: true });
-  p.write(html); p.end(); flush();
-  out.title = norm(out.title); out.description = norm(out.description);
-  return out;
-}
-
 // ---------- parity ----------
 function flattenStrings(obj, acc = []) {
   if (typeof obj === "string") acc.push(obj);
@@ -389,23 +253,13 @@ function unitsOf(col) {
   return { full, runs };
 }
 
-function boundedIncludes(hay, needle) {
-  let i = hay.indexOf(needle);
-  while (i !== -1) {
-    const b = hay[i - 1], a = hay[i + needle.length];
-    if (!(b && /[\p{L}\p{N}]/u.test(b)) && !(a && /[\p{L}\p{N}]/u.test(a))) return true;
-    i = hay.indexOf(needle, i + 1);
-  }
-  return false;
-}
-
 if (!existsSync(SITE)) { console.error(`FAIL: ${SITE}/ not found — run npm run build first`); process.exit(1); }
-const builtPages = walk(join(SITE, LANG)).sort();
+const builtPages = walk(join(SITE, PREFIX, LANG)).sort();
 let totals = { htmlUnits: 0, htmlExact: 0, htmlFragment: 0, htmlMissing: 0, contentUnits: 0, contentFound: 0, contentSpacing: 0, contentMissing: 0, attrUnits: 0, attrMissing: 0 };
 const report = [];
 
 for (const file of builtPages) {
-  const permalink = "/" + file.slice(SITE.length + 1).replace(/\\/g, "/");
+  const permalink = "/" + file.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/");
   const entry = pageCollections.get(permalink);
   if (!entry) { err(file, `built page has no content file (permalink ${permalink})`); continue; }
   const html = extract(readFileSync(file, "utf8"));
@@ -451,7 +305,8 @@ for (const file of builtPages) {
   report.push({ page: entry.page.data.page, blocks: entry.page.data.blocks.length, missingHtml: missingHtml.length, missingContent: missingContent.length });
 }
 for (const [permalink, e] of pageCollections) {
-  if (!builtPages.some((f) => "/" + f.slice(SITE.length + 1) === permalink)) err(e.page.file, `no built page at ${permalink}`);
+  if (ONLY && !ONLY.includes(e.page.data.page)) continue;
+  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1) === permalink)) err(e.page.file, `no built page at ${permalink}`);
 }
 
 // ---------- drift guard: i18n editorial strings must exist in _shared.yaml ----------

@@ -1,0 +1,24 @@
+---js
+{
+  // Renders pages from content files (src/content/<lang>/*.md) with the blocks layout.
+  // Off by default: only pages named in src/_data/system.json "renderFromContent" are emitted,
+  // so with the empty list this template writes nothing. "permalinkPrefix" is "" for the real
+  // site; set it (e.g. "/_ref") to render beside a hand-built page that still owns the permalink.
+  layout: "../_layouts/blocks.njk",
+  pagination: {
+    data: "siteContent.en.pages",
+    resolve: "values",
+    size: 1,
+    alias: "pg",
+    before: (pages, data) => pages.filter((p) => (data.system.renderFromContent || []).includes(p.page)),
+  },
+  permalink: (data) => `${data.system.permalinkPrefix || ""}${data.pg.permalink}`,
+  eleventyComputed: {
+    title: (data) => data.pg.title,
+    description: (data) => data.pg.description,
+    locale: (data) => data.pg.lang,
+    blocks: (data) => data.pg.blocks,
+  },
+  eleventyExcludeFromCollections: true,
+}
+---

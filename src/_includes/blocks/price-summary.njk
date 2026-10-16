@@ -1,0 +1,14 @@
+{% from "blocks/_macros.njk" import link, links, price %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} aria-label="{{ t.ui.pricesLabel }}">
+  <ul>
+    {% for item in block.items %}
+    <li>
+      {% if item.tag %}<p>{{ item.tag }}</p>{% endif %}
+      <h3>{{ item.name }}</h3>
+      <p>{{ price(item) }}</p>
+      <p>{{ item.note }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+</section>

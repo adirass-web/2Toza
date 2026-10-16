@@ -1,0 +1,9 @@
+<section{% if block.id %} id="{{ block.id }}"{% endif %}>
+  <h2>{{ block.heading }}</h2>
+  <ul>
+    {% for door in block.items %}
+    <li><a href="{{ door.href }}"><span>{{ door.title }}</span> <span>{{ door.line }}</span></a></li>
+    {% endfor %}
+  </ul>
+  {% if block.aside %}<p>{{ block.aside }}</p>{% endif %}
+</section>

@@ -1,0 +1,7 @@
+{% from "blocks/_macros.njk" import link, links %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %}>
+  <h2>{{ block.heading }}</h2>
+  {% if block.body %}<p>{{ block.body }}</p>{% endif %}
+  {{ links(block.actions) }}
+  {% if block.note %}<p>{{ link(block.note) }}</p>{% endif %}
+</section>

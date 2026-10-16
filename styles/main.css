@@ -1,5 +1,7 @@
 @import "tailwindcss" source("../src");
 @import "flowbite/src/themes/default";
+/* Design tokens: generated from tokens/tokens.json (scripts/build-tokens.mjs). Do not add @theme here. */
+@import "./tokens.css";
 @plugin "flowbite/plugin" { charts: false; forms: false; datatables: false; wysiwyg: false; tooltips: false; }
 
 /* Self-hosted fonts (fontsource, latin + hebrew subsets) */
@@ -27,36 +29,6 @@
 @font-face { font-family: "Assistant"; font-style: normal; font-weight: 600; font-display: swap;
   src: url("/assets/fonts/assistant-hebrew-600-normal.woff2") format("woff2");
   unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
-
-/* Direction A tokens. Overrides Flowbite's default theme variables. */
-@theme {
-  --font-sans: "Assistant", system-ui, "Segoe UI", Arial, sans-serif;
-  --font-body: "Assistant", system-ui, "Segoe UI", Arial, sans-serif;
-  --font-serif: "Frank Ruhl Libre", "Times New Roman", Georgia, serif;
-
-  --color-paper: #f7f2e8;        /* warm ivory */
-  --color-paper-deep: #ede5d3;   /* recessed ivory */
-  --color-ink: #11302a;          /* deep ink green */
-  --color-ink-soft: #1b4237;
-  --color-text: #1d2723;
-  --color-muted: #525d57;        /* 6.3:1 on paper */
-  --color-brass: #7d5f24;        /* 5.2:1 on paper, text-safe */
-  --color-brass-light: #cfae6a;  /* on ink: 7:1 */
-  --color-rule: #cfc4aa;
-
-  /* Flowbite semantic tokens remapped */
-  --color-body: var(--color-muted);
-  --color-heading: var(--color-ink);
-  --color-neutral-primary: var(--color-paper);
-  --color-neutral-primary-soft: var(--color-paper);
-  --color-brand: var(--color-ink);
-  --color-brand-strong: var(--color-ink-soft);
-  --color-brand-soft: var(--color-paper-deep);
-  --color-default: var(--color-rule);
-  --color-default-medium: var(--color-rule);
-  --radius-base: 3px;
-  --radius: 3px;
-}
 
 @layer base {
   html { background: var(--color-paper); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }

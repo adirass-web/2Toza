@@ -1,0 +1,11 @@
+{% from "blocks/_macros.njk" import link, links, price %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %}>
+  {% if block.tag %}<p>{{ block.tag }}</p>{% endif %}
+  {% if block.heading %}<h2>{{ block.heading }}</h2>{% endif %}
+  <h3>{{ block.name }}</h3>
+  <p>{{ price(block) }}</p>
+  {% if block.body %}<p>{{ block.body }}</p>{% endif %}
+  {% if block.items %}<ul>{% for i in block.items %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+  {% if block.credit %}<p>{{ block.credit }}</p>{% endif %}
+  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+</section>

@@ -1,0 +1,15 @@
+{% from "blocks/_macros.njk" import price %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %}>
+  {% if block.label %}<h2>{{ block.label }}</h2>{% endif %}
+  {% if block.stage_names %}<ol>{% for s in block.stage_names %}<li data-stage="{{ s.key }}">{{ s.name }}</li>{% endfor %}</ol>{% endif %}
+  <ul>
+    {% for band in block.bands %}
+    <li>
+      <p>{{ band.caption }}</p>
+      <ul>
+        {% for item in band.items %}<li><span>{{ item.label }}</span> {{ price(item) }}</li>{% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

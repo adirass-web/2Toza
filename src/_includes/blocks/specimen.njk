@@ -1,0 +1,21 @@
+<section{% if block.id %} id="{{ block.id }}"{% endif %}>
+  <h2>{{ block.heading }}</h2>
+  <figure>
+    <article>
+      <p>{{ block.document.stamp }}</p>
+      <h3>{{ block.document.title }}</h3>
+      {% if block.document.subtitle %}<p>{{ block.document.subtitle }}</p>{% endif %}
+      {% if block.document.date %}<p>{{ block.document.date }}</p>{% endif %}
+      <dl>
+        {% for entry in block.document.entries %}
+        <dt>{{ entry.label }}</dt>
+        <dd{% if entry.redacted %} data-redacted{% endif %}>
+          {% if entry.text %}{{ entry.text }}{% endif %}
+          {% if entry.items %}{% if entry.ordered %}<ol>{% else %}<ul>{% endif %}{% for i in entry.items %}<li>{{ i }}</li>{% endfor %}{% if entry.ordered %}</ol>{% else %}</ul>{% endif %}{% endif %}
+        </dd>
+        {% endfor %}
+      </dl>
+    </article>
+    <figcaption>{{ block.caption }}</figcaption>
+  </figure>
+</section>
