@@ -1,18 +1,19 @@
-{% from "blocks/_macros.njk" import link, links, price %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %} data-detail="{{ block.detail or 'full' }}">
-  <h2{% if not block.heading_visible %} data-visually-hidden{% endif %}>{{ block.heading }}</h2>
-  {% if block.statement %}<p>{{ block.statement }}</p>{% endif %}
-  {% if block.first_step %}{% set outer = block %}{% set block = outer.first_step %}{% include "blocks/offer.njk" %}{% set block = outer %}{% endif %}
-  <ul>
+{#- Flowbite pricing cards. From lg the cards share four grid rows (subgrid), so the prices sit on one baseline. -#}
+{% from "blocks/_macros.njk" import section, price, lnk, features with context %}
+{% call section(block, '', '', '', 'pt-0 pb-section lg:pb-section-wide') %}
+  <h2{% if not block.heading_visible %} class="sr-only"{% else %} class="mb-6 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading"{% endif %}>{{ block.heading }}</h2>
+  {% if block.statement %}<p class="max-w-3xl font-serif text-xl leading-snug text-heading lg:text-2xl">{{ block.statement }}</p>{% endif %}
+  {% if block.first_step %}<div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.first_step %}{% include "blocks/offer.njk" %}{% set block = outer %}</div>{% endif %}
+  <ul class="mt-10 grid gap-6 lg:mt-14 lg:grid-cols-3 lg:content-start lg:gap-8">
     {% for tier in block.tiers %}
-    <li>
-      <h3>{{ tier.name }}</h3>
-      <p>{{ price(tier) }}</p>
-      <p>{{ tier.for }}</p>
-      {% if tier.items %}<ul>{% for i in tier.items %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+    <li class="rounded-base border border-default border-t-2 border-t-accent bg-neutral-primary-soft p-6 shadow-xs lg:row-span-4 lg:grid lg:grid-rows-subgrid lg:p-8">
+      <h3 class="font-serif text-2xl font-normal text-heading lg:text-3xl">{{ tier.name }}</h3>
+      <p class="mt-5 text-heading lg:mt-4">{{ price(tier, 'text-5xl sm:text-6xl lg:text-5xl xl:text-6xl') }}</p>
+      <p class="mt-4 text-lg lg:mt-3">{{ tier.for }}</p>
+      {{ features(tier.items, 'mt-5 border-t border-default pt-5 lg:mt-6 lg:self-start') }}
     </li>
     {% endfor %}
   </ul>
-  {% for note in block.notes %}{{ note.html | safe }}{% endfor %}
-  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
-</section>
+  {% if block.notes %}<div class="mt-8 max-w-3xl space-y-3 text-body-subtle">{% for note in block.notes %}{{ note.html | safe }}{% endfor %}</div>{% endif %}
+  {% if block.link %}<p class="mt-4">{{ lnk(block.link) }}</p>{% endif %}
+{% endcall %}

@@ -1,18 +1,26 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <p>{{ block.statement }}</p>
-  <h2>{{ block.heading }}</h2>
-  {% if block.line %}<p>{{ block.line }}</p>{% endif %}
-  <ol>
+{#- Flowbite stepper timeline (horizontal from md): a dot and a hairline above each stage. The drawings are the shared SVG partials. -#}
+{% from "blocks/_macros.njk" import section, lnk with context %}
+{% call section(block, 'dark', '') %}
+  <p class="max-w-4xl font-serif text-2xl leading-display font-normal tracking-display text-balance text-paper sm:text-4xl lg:text-5xl">{{ block.statement }}</p>
+  <h2 class="mt-6 font-serif text-xl font-normal text-accent-on-dark lg:mt-9 lg:text-2xl">{{ block.heading }}</h2>
+  {% if block.line %}<p class="mt-2 max-w-2xl text-lg text-on-dark-text">{{ block.line }}</p>{% endif %}
+  <ol class="mt-6 grid gap-5 md:mt-10 md:grid-cols-3 md:gap-0">
     {% for stage in block.items %}
-    <li data-stage="{{ stage.key }}">
-      <svg role="img" aria-label="{{ stage.image_alt }}"></svg>
-      <h3>{{ stage.name }}</h3>
-      <p>{{ stage.line }}</p>
-      {% if stage.key == "verify" and block.record_date %}<p>{{ block.record_date }}</p>{% endif %}
+    <li class="relative flex items-center gap-5 md:block md:pe-10">
+      <div class="mb-8 hidden items-center md:flex" aria-hidden="true"><span class="size-3 shrink-0 rounded-full bg-accent-on-dark"></span><span class="h-px w-full bg-on-dark-rule"></span></div>
+      <div class="relative w-30 shrink-0 md:mb-8 md:w-full md:max-w-60" dir="ltr">
+        {% set alt = stage.image_alt %}{% include "drawing-" + stage.key + ".njk" %}
+        {% if stage.key == 'verify' and block.record_date %}<p class="absolute inset-e-0 inset-bs-1/6 w-1/4 text-end font-serif text-sm leading-tight text-accent-on-dark md:text-lg" aria-hidden="true">{{ block.record_date }}</p>{% endif %}
+      </div>
+      <div>
+        <h3 class="font-serif text-2xl font-normal text-paper lg:text-3xl">{{ stage.name }}</h3>
+        <p class="mt-1.5 max-w-xs text-on-dark-text lg:mt-3">{{ stage.line }}</p>
+      </div>
     </li>
     {% endfor %}
   </ol>
-  {% if block.price_strip %}{% set outer = block %}{% set block = outer.price_strip %}{% include "blocks/price-strip.njk" %}{% set block = outer %}{% endif %}
-  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
-</section>
+  {% if block.price_strip %}
+  <div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.price_strip %}{% set stripTone = 'dark' %}{% include "blocks/price-strip.njk" %}{% set stripTone = '' %}{% set block = outer %}</div>
+  {% endif %}
+  {% if block.link %}<p class="mt-4">{{ lnk(block.link, 'dark') }}</p>{% endif %}
+{% endcall %}

@@ -1,15 +1,29 @@
-{% from "blocks/_macros.njk" import price %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  {% if block.label %}<h2>{{ block.label }}</h2>{% endif %}
-  {% if block.stage_names %}<ol>{% for s in block.stage_names %}<li data-stage="{{ s.key }}">{{ s.name }}</li>{% endfor %}</ol>{% endif %}
-  <ul>
+{#- Stages-to-price strip. On phone each band is a labelled row; from md a hairline bracket sits under the stage columns it spans.
+    Nested in stages (stripTone set to "dark") it is the strip alone; as a page block it gets its own section. -#}
+{% from "blocks/_macros.njk" import section, price with context %}
+{% macro strip(block, dark) %}
+{% set colStart = ['md:col-start-1', 'md:col-start-2', 'md:col-start-3'] %}
+{% set colSpan = ['', 'md:col-span-1', 'md:col-span-2', 'md:col-span-3'] %}
+<div>
+  {% if block.label %}<h2 class="sr-only">{{ block.label }}</h2>{% endif %}
+  {% if block.stage_names %}
+  <ol class="mb-3 hidden grid-cols-3 font-serif text-2xl text-heading md:grid" aria-hidden="true">
+    {% for s in block.stage_names %}<li class="px-4">{{ s.name }}</li>{% endfor %}
+  </ol>
+  {% endif %}
+  <ul class="grid gap-3 md:grid-cols-3 md:gap-0">
     {% for band in block.bands %}
-    <li>
-      <p>{{ band.caption }}</p>
-      <ul>
-        {% for item in band.items %}<li><span>{{ item.label }}</span> {{ price(item) }}</li>{% endfor %}
+    {% set first = ['assess', 'harden', 'verify'].indexOf(band.stages[0]) if band.stages else -1 %}
+    <li class="border-s-3 ps-4 md:border-s-0 md:ps-0 md:text-center md:before:mx-2 md:before:block md:before:h-3 md:before:border md:before:border-t-0 {{ 'border-accent-on-dark md:before:border-accent-on-dark' if dark else 'border-accent md:before:border-accent' }} {{ colStart[first] }} {{ colSpan[band.stages.length] }}">
+      <p class="text-base md:hidden {{ 'text-on-dark-text-muted' if dark else 'text-body-subtle' }}">{{ band.caption }}</p>
+      <ul class="flex flex-wrap items-baseline gap-x-2 text-lg md:justify-center md:px-2 md:pt-3 {{ 'text-paper' if dark else 'text-heading' }}">
+        {% for item in band.items %}
+        <li class="whitespace-nowrap">{% if not loop.first %}<span class="me-2 {{ 'text-accent-on-dark' if dark else 'text-accent' }}" aria-hidden="true">·</span>{% endif %}<span>{{ item.label }}</span> {{ price(item, 'text-2xl ' + ('text-accent-on-dark' if dark else 'text-accent')) }}</li>
+        {% endfor %}
       </ul>
     </li>
     {% endfor %}
   </ul>
-</section>
+</div>
+{% endmacro %}
+{% if stripTone %}{{ strip(block, stripTone == 'dark') }}{% else %}{% call section(block, '', '', '', 'pt-0 pb-10 lg:pb-14') %}{{ strip(block, false) }}{% endcall %}{% endif %}

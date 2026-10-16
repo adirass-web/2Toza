@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="{{ t.lang }}" dir="{{ t.dir }}">
+<html lang="{{ t.lang }}" dir="{{ t.dir }}" class="motion-safe:scroll-smooth">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
-  <meta name="theme-color" content="#f7f2e8">
+  <meta name="theme-color" content="{{ tokens.paper }}">
   <link rel="preload" href="/assets/fonts/frank-ruhl-libre-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/assistant-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/flowbite-lite.js" defer></script>
 </head>
-<body>
-<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-paper focus:p-3">{{ t.ui.skip }}</a>
+<body class="bg-neutral-primary font-sans text-lg leading-relaxed text-body{% if legacy %} legacy{% endif %}">
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-neutral-primary focus:p-3">{{ t.ui.skip }}</a>
 {% include "header.njk" %}
 <main id="main">
 {{ content | safe }}

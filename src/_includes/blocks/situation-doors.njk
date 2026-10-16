@@ -1,9 +1,16 @@
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <h2>{{ block.heading }}</h2>
-  <ul>
+{#- Flowbite list group with links, one row per door. -#}
+{% from "blocks/_macros.njk" import section, h2 with context %}
+{% call section(block, 'sunken', 'grid gap-10 lg:grid-cols-12 lg:gap-x-16') %}
+  <div class="max-lg:contents lg:col-span-4">
+    <div class="max-lg:order-1">{{ h2(block.heading) }}</div>
+    {% if block.aside %}<p class="max-w-xs font-serif text-xl text-body-subtle italic max-lg:order-3 lg:mt-6">{{ block.aside }}</p>{% endif %}
+  </div>
+  <ul class="divide-y divide-default rounded-base border border-default bg-neutral-primary-soft text-heading max-lg:order-2 lg:col-span-8 lg:col-start-5">
     {% for door in block.items %}
-    <li><a href="{{ door.href }}"><span>{{ door.title }}</span> <span>{{ door.line }}</span></a></li>
+    <li><a href="{{ door.href }}" class="flex min-h-11 items-center justify-between gap-4 px-5 py-5 hover:bg-neutral-secondary-medium hover:text-fg-brand-strong lg:px-8">
+      <span><span class="block font-serif text-2xl lg:text-3xl">{{ door.title }}</span><span class="mt-1 block text-body-subtle">{{ door.line }}</span></span>
+      <svg class="size-6 shrink-0 text-accent rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+    </a></li>
     {% endfor %}
   </ul>
-  {% if block.aside %}<p>{{ block.aside }}</p>{% endif %}
-</section>
+{% endcall %}

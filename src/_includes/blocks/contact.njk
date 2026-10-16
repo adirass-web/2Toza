@@ -1,7 +1,11 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <h2>{{ block.heading }}</h2>
-  {% if block.body %}<p>{{ block.body }}</p>{% endif %}
-  {{ links(block.actions) }}
-  {% if block.note %}<p>{{ link(block.note) }}</p>{% endif %}
-</section>
+{% from "blocks/_macros.njk" import section, h2, actions, lnk with context %}
+{% call section(block, 'dark', 'grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-10') %}
+  <div class="lg:col-span-5">
+    {{ h2(block.heading, 'text-paper') }}
+    {% if block.body %}<p class="mt-5 max-w-xl text-lg text-on-dark-text">{{ block.body }}</p>{% endif %}
+  </div>
+  <div class="lg:col-span-7">
+    {{ actions(block.actions, 'dark', 'grid gap-3 sm:flex sm:flex-wrap') }}
+    {% if block.note %}<p class="mt-5">{{ lnk(block.note, 'dark') }}</p>{% endif %}
+  </div>
+{% endcall %}

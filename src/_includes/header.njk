@@ -1,28 +1,28 @@
-<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur border-b border-rule">
-  <div class="wrap flex items-center justify-between gap-3 h-16 lg:h-20">
-    <a href="/en/" class="flex items-center shrink-0" aria-label="{{ t.ui.homeLabel }}">
-      <img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-11 lg:h-12 w-auto">
+{#- Flowbite "Navbar with CTA button" (data-collapse-toggle, Flowbite JS collapse). Links and labels come from i18n. -#}
+{% set navItems = [
+  { href: "/en/#situations", label: t.nav.situations },
+  { href: "/en/how-it-works/", label: t.nav.how },
+  { href: "/en/pricing/", label: t.nav.pricing },
+  { href: "/en/faq/", label: t.nav.faq }
+] %}
+<header class="sticky top-0 z-40 border-b border-default bg-neutral-primary/95 backdrop-blur">
+  <nav aria-label="{{ t.ui.mainNav }}" class="mx-auto flex w-full max-w-wrap flex-wrap items-center justify-between px-gutter py-2 sm:px-gutter-wide md:flex-nowrap lg:py-3">
+    <a href="/en/" class="flex shrink-0 items-center" aria-label="{{ t.ui.homeLabel }}">
+      <img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-11 w-auto lg:h-12">
     </a>
-    <nav aria-label="{{ t.ui.mainNav }}" class="hidden lg:flex items-center gap-9 text-[1.0625rem]">
-      <a class="link-nav" href="/en/#situations">{{ t.nav.situations }}</a>
-      <a class="link-nav" href="/en/how-it-works/">{{ t.nav.how }}</a>
-      <a class="link-nav" href="/en/pricing/">{{ t.nav.pricing }}</a>
-      <a class="link-nav" href="/en/faq/">{{ t.nav.faq }}</a>
-    </nav>
-    <div class="flex items-center gap-1 sm:gap-3">
-      <a href="/en/pricing/" class="lg:hidden inline-flex items-center min-h-11 px-2 text-ink font-semibold">{{ t.nav.pricing }}</a>
-      <a class="btn btn-primary !min-h-11 !px-4 sm:!px-5" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ t.nav.message }}</a>
-      <details class="lg:hidden relative">
-        <summary class="inline-flex items-center justify-center w-11 h-11 cursor-pointer text-ink" aria-label="{{ t.ui.menuButton }}">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h16M3 15h16"/></svg>
-        </summary>
-        <nav aria-label="{{ t.ui.menuNav }}" class="absolute inset-e-0 top-12 w-56 bg-paper border border-rule shadow-lg py-2">
-          <a class="block px-5 py-3" href="/en/#situations">{{ t.nav.situations }}</a>
-          <a class="block px-5 py-3" href="/en/how-it-works/">{{ t.nav.how }}</a>
-          <a class="block px-5 py-3" href="/en/pricing/">{{ t.nav.pricing }}</a>
-          <a class="block px-5 py-3" href="/en/faq/">{{ t.nav.faq }}</a>
-        </nav>
-      </details>
+    <div class="inline-flex items-center gap-2 md:order-2 md:gap-0">
+      <a href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener" class="box-border inline-flex min-h-11 items-center rounded-base border border-transparent bg-brand px-4 py-2 text-base font-medium leading-6 text-on-action shadow-xs hover:bg-brand-strong sm:px-5">{{ t.nav.message }}</a>
+      <button data-collapse-toggle="navbar-main" type="button" class="inline-flex size-11 items-center justify-center rounded-base text-body hover:bg-neutral-secondary-soft hover:text-heading md:hidden" aria-controls="navbar-main" aria-expanded="false">
+        <span class="sr-only">{{ t.ui.menuButton }}</span>
+        <svg class="size-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+      </button>
     </div>
-  </div>
+    <div class="hidden w-full items-center md:order-1 md:flex md:w-auto" id="navbar-main">
+      <ul class="mt-2 flex w-full flex-col rounded-base border border-default bg-neutral-secondary-soft p-2 font-medium md:mt-0 md:w-auto md:flex-row md:gap-9 md:border-0 md:bg-transparent md:p-0">
+        {% for item in navItems %}
+        <li><a href="{{ item.href }}" class="flex min-h-11 items-center rounded-base px-3 text-heading hover:bg-neutral-tertiary md:px-0 md:underline md:decoration-transparent md:decoration-1 md:underline-offset-8 md:hover:bg-transparent md:hover:decoration-accent"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
 </header>

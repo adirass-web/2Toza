@@ -1,9 +1,10 @@
-<svg viewBox="0 0 160 90" fill="none" stroke="#f7f2e8" stroke-linejoin="round" stroke-linecap="round" role="img" aria-label="{{ t.stages.alt.verify }}">
+{#- Stage drawing. Strokes read tokens (stroke-paper, stroke-accent-on-dark). The alt text is the block's image_alt when given (alt), else the legacy i18n string. -#}
+<svg viewBox="0 0 160 90" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" class="stage-drawing block h-auto w-full stroke-paper" role="img" aria-label="{{ alt or t.stages.alt.verify }}">
   <rect x="14" y="4" width="68" height="82" rx="2"/>
   <path d="M23 4v82"/>
-  <rect x="34" y="22" width="40" height="26" rx="1" stroke="#cfae6a"/>
-  <path d="M40 31h28M40 39h18" stroke="#cfae6a"/>
+  <rect x="34" y="22" width="40" height="26" rx="1" class="stroke-accent-on-dark"/>
+  <path d="M40 31h28M40 39h18" class="stroke-accent-on-dark"/>
   <path d="M34 64h26"/>
   <path d="M66 86V70l5 4 5-4v16"/>
-  <path d="M74 35h14" stroke="#cfae6a" stroke-dasharray="2 3"/>
+  <path d="M74 35h14" class="stroke-accent-on-dark" stroke-dasharray="2 3"/>
 </svg>
