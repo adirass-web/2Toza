@@ -2,7 +2,7 @@
 
 16 Oct 2026. Follows `strategy/copy/COPY-BRIEF.md`. Template: 2a §5 and the built Separation page (`src/en/separation-divorce/index.njk`). Every line of page copy is a `>` quote line, so it can be pasted straight into the template.
 
-**Tags.** `[2a §x]`, `[2b §x]`, `[P7 §4]`, `[baseline: page]` mean verbatim. "trimmed" means words cut and nothing added or reworded. `[new; from …]` means reworded or newly written, with its origin; all of these need owner approval (V-017). `[shared]` means an existing include or `en.json` / `contact.json` string, used unchanged.
+**Tags.** `[2a §x]`, `[2b §x]`, `[P7 §4]`, `[baseline: page]` mean verbatim. "trimmed" means words cut and nothing added or reworded. `[new; from …]` means reworded or newly written, with its origin; all of these need owner approval (V-017). `[new, review]` marks a change made in the copy-chief review (C-review.md) that changes meaning. `[shared]` means an existing include or `en.json` / `contact.json` string, used unchanged.
 
 **Shared components (unchanged, not repeated per page).**
 - **S-hero:** founder portrait + `Dr. Lior Tabansky` / `In person · You control your credentials`. Buttons: `Message on WhatsApp` · `Signal` · `Call me back` (`cta-hero.njk`). [shared]
@@ -11,7 +11,7 @@
 - **S-method:** `credential.njk`: "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors." + "Professional profile ↗" (cyberdrtabansky.com, new tab). [shared; 2a §6.3]
 - **S-contact:** `contact-block.njk`: "Start with a private conversation." / "Dr. Tabansky replies personally. The first conversation is free and commits you to nothing." + Message on WhatsApp · Message on Signal · Call me back. Each page sets only `contactNote` (the FAQ link). [shared; 2a §6.2]
 
-**FAQ link targets.** All three situation pages link to FAQ group E ("What Toza does not do"), as the 2a §3 page map assigns. Attorneys links to group F. The anchors `/en/faq/#e` and `/en/faq/#f` are proposals until the FAQ page exists.
+**FAQ link targets.** All three situation pages link to FAQ group E ("What Toza does not do"), as the 2a §3 page map assigns. Attorneys links to group F. The anchors `/en/faq/#e` and `/en/faq/#f` match the FAQ copy in C1 (groups `#a`…`#g`).
 
 ---
 
@@ -145,8 +145,8 @@ S-hero.
 **3. Urgent first aid**
 > ## Urgent first aid on the spot.
 [P7 §4, trimmed]
-> With your approval, pressing problems are handled during the first visit, including removing a malicious app or profile where it can be done safely.
-[new; from 2a §5 hero draft and baseline: they-know-something ("approved urgent first aid where safely possible")]
+> With your approval, pressing problems are handled during the first step, including removing a malicious app or profile where that can be done safely.
+[new; from 2a §5 hero draft and baseline: they-know-something ("approved urgent first aid where safely possible"); edited in review: "first visit" → "first step" (site name), "where that can" as in 2a]
 
 **4. Sequence**
 > ## Understand the effects before making isolated changes.
@@ -159,8 +159,8 @@ S-hero.
 [new; middle sentence from baseline: they-know-something ("even if the original concern remains unexplained")]
 
 **6. Extra: urgent visit**
-> ## If it can't wait.
-[new]
+> ## Urgent visits.
+[2a §5, trimmed in review: region cut per V-029]
 > Arrival within four hours of acceptance and payment, when available. Surcharge applies.
 [2a §5]
 > Urgent terms →
@@ -174,7 +174,7 @@ S-hero.
 
 *Moved to FAQ (R-2):* E: no proof of how information reached someone, no identifying an actor, forensics or court evidence; recovering copies already shared is outside the service; some changes can be noticed, no promise of invisibility; no guarantee every exposure is found. A: contact via WhatsApp or Signal is not guaranteed invisible on the device. Surcharge amounts (₪4,800 / ₪6,000) stay on Pricing and Conditions only.
 
-**Choice to confirm:** 2a's urgent heading was "Urgent visits in Central Israel." I left out "Central Israel" because the brief bans travel scope (V-029). If the owner treats the region as part of the urgent service, not as travel scope, use 2a's heading instead.
+**Urgent heading:** 2a's heading is used without its region, as on Conditions 9 (V-029: no travel scope or region on the site).
 
 ---
 
@@ -199,7 +199,7 @@ Founder caption as S-hero. Buttons: **`Discuss a referral`** (primary; `contact.
 > Your client keeps a written exposure summary whether or not they continue. Protection follows only if they choose it.
 [new; from P7 §4 and 2b §3 Block 1]
 > How it works →
-[shared UI label]
+[shared UI label] → `/en/how-it-works/`
 
 **3. When to refer**
 > ## When a referral may help.
@@ -210,7 +210,7 @@ Founder caption as S-hero. Buttons: **`Discuss a referral`** (primary; `contact.
 > - Your client needs to understand the consequences of changes before authorizing them.
 [baseline: attorneys; "the client" changed to "your client" only]
 > Separation or divorce · Business or founder dispute · Inheritance conflict · Someone knows something
-[2a §4 door labels; each links to its situation page]
+[2a §4 door labels; links: `/en/separation-divorce/`, `/en/business-dispute/`, `/en/inheritance-conflict/`, `/en/they-know-something/`]
 
 **4. How your client makes contact**
 > ## Your client makes contact with one tap.
@@ -234,7 +234,7 @@ Founder caption as S-hero. Buttons: **`Discuss a referral`** (primary; `contact.
 > Toza pays a fee when a referred client's first step is paid, and a further fee if they continue to a protection tier. Amounts and terms are in a one-page agreement, sent after a short call.
 [new; from 2b §1 Option C, §2 steps 2–3, 2z item 9]
 
-**Fee visibility (my choice):** the fee and its trigger are named, with **no amounts** on the public page. 2b leaves public visibility to the owner (2b §5 item 4; 2z open item 6). 2z moved the fee out of the hero because it reads as transactional, and V-007 says only that "a referral fee exists". The amounts (₪600 on a paid first step, then ₪2,000 / ₪3,000 / ₪4,500) go in the one-page agreement and the conversation. None of these figures are in facts.json, so CI would reject them on the page anyway.
+**Fee visibility (default, open owner item):** the fee and its trigger are named, with **no amounts** on the public page. 2b leaves public visibility to the owner (2b §5 item 4; 2z open item 6). 2z moved the fee out of the hero because it reads as transactional, and V-007 says only that "a referral fee exists". The amounts (₪600 on a paid first step, then ₪2,000 / ₪3,000 / ₪4,500) go in the one-page agreement and the conversation. None of these figures are in facts.json, so CI would reject them on the page anyway.
 
 **7. Prices summary**
 > ## What your client pays.
@@ -250,7 +250,7 @@ Founder caption as S-hero. Buttons: **`Discuss a referral`** (primary; `contact.
 > Questions from attorneys
 [new; 2a §7 group F] → `/en/faq/#f`
 
-*Moved to FAQ F (R-2), not on this page:* a referral does not authorize access to devices, accounts or findings; the attorney is not automatically told anything; a client's "no" means the attorney hears nothing about that client; the confirmation says nothing about the client's circumstances; the summary is not a forensic report or evidence and does not establish what another person did; no investigation, chain of custody or legal conclusions; the concerns listed above do not establish wrongdoing; keep identifying case details out of the first message.
+*Kept off this page (R-2).* Covered in the FAQ: a referral does not authorize access to devices, accounts or findings, and the attorney is not automatically a recipient of anything (F1); the summary is not legal advice or a forensic report and does not establish what another person did (F2); no investigation, evidence or legal advice (E1); keep identifying case details out of the first message (A1). **Not on the site at all** (owner may add to F1 later, or leave to the conversation and the one-page agreement): a client's "no" means the attorney hears nothing about that client; the confirmation says nothing about the client's circumstances; chain of custody; the listed concerns do not establish wrongdoing.
 
 *Left out on purpose:* the one-pager download and the forwardable-message "Copy" buttons (2b §5 item 6). The messages carry each attorney's personal code, so they are sent in the conversation after the agreement, not shown on the public page. The `/go/TZ-xxxx` redirect needs a Pages Function (2b §2 step 5).
 
@@ -262,7 +262,7 @@ Founder caption as S-hero. Buttons: **`Discuss a referral`** (primary; `contact.
 |---|---|---|---|---|---|---|
 | Business dispute | 200 | 179 | 379 | ≤400 | 5 | 2 |
 | Inheritance conflict | 198 | 179 | 377 | ≤400 | 7 | 2 |
-| Someone knows something | 218 | 179 | 397 | ≤400 | 7 | 1 |
+| Someone knows something | 216 | 179 | 395 | ≤400 | 6 | 1 |
 | For attorneys | 374 | 62 | 436 | ≤450 | 12 | 2 |
 
-Counting method: page-specific copy is every `>` line on the page (headings, body, lists, link labels), excluding title and meta. Shared components are S-hero caption and buttons, the S-stages strip (method line, heading, three stage lines, price strip, link), S-price, S-method and S-contact. Attorneys uses S-hero, S-method and S-contact only, with no stages strip or price block. A "[new] block" is one tagged block (a list counts once), not one sentence. In all: 31 [new] blocks of page copy, plus 7 [new] titles or meta descriptions.
+Counting method: page-specific copy is every `>` line on the page (headings, body, lists, link labels), excluding title and meta. Shared components are S-hero caption and buttons, the S-stages strip (method line, heading, three stage lines, price strip, link), S-price, S-method and S-contact. Attorneys uses S-hero, S-method and S-contact only, with no stages strip or price block. A "[new] block" is one tagged block (a list counts once), not one sentence. In all: 30 [new] blocks of page copy, plus 7 [new] titles or meta descriptions (after review; see C-review.md for the consolidated list).

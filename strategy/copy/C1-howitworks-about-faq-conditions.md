@@ -2,7 +2,7 @@
 
 16 Oct 2026. Written to `strategy/copy/COPY-BRIEF.md`. Facts from `src/_data/facts.json`; every ₪ amount below is listed there. Ready to build, block by block.
 
-**Provenance tags.** [2a §x], [P7 §x], [P8 §x], [2b §x] = verbatim or a direct excerpt of that source. [baseline: page] = verbatim from the approved old page; "edited" means only a term swap (e.g. "Assessment" → "first step", "we" → "Dr. Tabansky", tier names) or a cut, with no new claim. [facts] = `facts.json` (incl. `assessmentScope`). [UI] = existing label in `src/_data/i18n/en.json` or `contact.json`. **[new]** = new wording; every [new] item needs owner approval.
+**Provenance tags.** [2a §x], [P7 §x], [P8 §x], [2b §x] = verbatim or a direct excerpt of that source. [baseline: page] = verbatim from the approved old page; "edited" means only a term swap (e.g. "Assessment" → "first step", "we" → "Dr. Tabansky", tier names) or a cut, with no new claim. [facts] = `facts.json` (incl. `assessmentScope`). [UI] = existing label in `src/_data/i18n/en.json` or `contact.json`. **[new]** = new wording; every [new] item needs owner approval. **[new, review]** = changed by the copy-chief review (C-review.md) in a way that changes meaning; owner approval needed.
 
 **Shared components used as built (no new copy):** hero buttons "Message on WhatsApp · Signal · Call me back" and contact block "Start with a private conversation." / "Message on WhatsApp · Message on Signal · Call me back" / "Dr. Tabansky replies personally. The first conversation is free and commits you to nothing." [2a §6.2, contact.json]. Method line [2a §6.3]: "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors." + "Professional profile ↗" (cyberdrtabansky.com, new tab).
 
@@ -17,7 +17,7 @@
 
 ### 1. Hero
 - **Eyebrow:** How it works [UI]
-- **H1:** Work it through with the person who makes the changes. [new] *(old H1 cut from 11 to 10 words to fit the heading limit; old: "Work through your concerns with the person who makes the changes.")*
+- **H1:** Work through your concerns with the person who makes changes. [baseline: what-happens-during-the-visit, trimmed in review: "the" cut to fit the 10-word heading limit; replaces the draft "Work it through…", whose "it" had no referent]
 - **Support:** You do not have to work out what is wrong before you meet. [baseline: what-happens-during-the-visit, edited] Dr. Lior Tabansky assesses your devices and accounts with you, hardens them around your risks and tests the changes. [new]
 - **Caption:** In person · With you present · You control your credentials [2a §4]
 - **Buttons:** Message on WhatsApp · Signal · Call me back [2a §6.2]
@@ -54,7 +54,7 @@
   - Covers one main phone and one computer, iPad or second phone, on the same main account (Apple or Android). [facts]
   - Urgent first aid with your approval, including removing a malicious app or profile where that can be done safely. [2a §5 They know something]
 - **Credit line:** Counts in full toward your protection if you continue within 30 days. [P7 §4]
-- **Link:** Conditions → [UI]
+- **Link:** Conditions → (/en/conditions/) [UI]
 
 ### 7. Protection tiers
 - **H2:** Then the protection that fits your household. [P7 §4, edited from the Pricing lead]
@@ -100,7 +100,7 @@
 - **H2:** Establish the risks. Build the protection around them. [baseline: why-us]
 - **Method line:** Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors. [2a §6.3]
 - **Body:** I select and adapt the relevant measures to your threat model and the services you need to keep using. The result is protection fitted to your circumstances, with practical teaching so you can use it. [baseline: why-us]
-- **Links:** Professional profile ↗ [2a §6.3] · How it works → [UI]
+- **Links:** Professional profile ↗ (https://cyberdrtabansky.com, new tab) [2a §6.3] · How it works → (/en/how-it-works/) [UI]
 
 ### 5. Contact
 - Shared contact block, unchanged. [2a §6.2]
@@ -111,7 +111,7 @@
 
 ## 3. FAQ — `/en/faq/`
 
-- **Page title:** Questions — Toza [new]
+- **Page title:** FAQ — Toza [new]
 - **Meta description (139 chars):** Plain answers about the first step, protection tiers, privacy, Annual Care and what Toza does not do, before you contact Dr. Lior Tabansky. [new]
 
 ### 1. Hero
@@ -123,11 +123,11 @@
 - **Group links:** Before you get in touch · The first step · Protection tiers · Privacy and control · What Toza does not do · For attorneys · Prices and timing [2a §7, edited]
 - **Toggle:** Expand all answers [baseline: faq]
 
-Suggested anchors for deep links: `#before`, `#first-step`, `#tiers`, `#privacy`, `#boundaries`, `#attorneys`, `#prices`. Situation pages link to `#boundaries` ("Questions about separation and privacy" etc.); the Attorneys page links to `#attorneys`.
+Anchors for deep links, one per group: `#a`, `#b`, `#c`, `#d`, `#e`, `#f`, `#g` (the group links above point to them). The four situation pages link to `/en/faq/#e` ("Questions about separation and privacy" etc.); the Attorneys page links to `/en/faq/#f`.
 
 **Open by default (6):** A3, A4, B1, B3, C1, G1. All others are closed.
 
-### 2. Group A — Before you get in touch (`#before`)
+### 2. Group A — Before you get in touch (`#a`)
 **H2:** Before you get in touch. [2a §7]
 
 **A1. What should I send in the first message?**
@@ -145,7 +145,7 @@ If the service fits, you receive a written offer with the work, inclusions, excl
 **A5. Do I need to know what's wrong before I get in touch?**
 No. You can have a concern, a hunch, or a wish to take a more deliberate approach to your digital life. You do not need to identify an account, setting or technical fault. The first conversation checks whether Toza fits; examining your digital environment belongs to the first step. A concern alone does not establish that someone has accessed your information. [baseline: faq, edited]
 
-### 3. Group B — The first step (`#first-step`)
+### 3. Group B — The first step (`#b`)
 **H2:** The first step (₪4,000). [2a §7, price from facts]
 
 **B1. What do I get for ₪4,000?** *(open)*
@@ -163,25 +163,25 @@ Dr. Tabansky explains it and obtains your approval before addressing it. If the 
 **B5. Can you remove spyware or a malicious app?**
 Where it can be done safely within the agreed scope, yes. Urgent first aid during the first step can include removing a malicious app or profile, with your approval. Dr. Tabansky explains each material change before acting. [2a §5; baseline: what-happens-during-the-visit] Removing it does not prove who installed it or how. [new]
 
-### 4. Group C — Protection tiers (`#tiers`)
-**H2:** Personal Shield, for Two and Inner Circle. [2a §7, edited for the new tier names]
+### 4. Group C — Protection tiers (`#c`)
+**H2:** Protection tiers. [2a §7, edited: matches the group link label and the new tier names]
 
 **C1. What does Personal Shield include?** *(open)*
-Personal Shield costs ₪32,000 for one person, with the first step included. Dr. Tabansky hardens your phone, computer, accounts and home network around your risks, in person. [P7 §4] It includes up to three everyday devices, two security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for 60 days. [P7 §1; baseline: faq]
+Personal Shield costs ₪32,000 for one person, with the first step included. Dr. Tabansky hardens your phone, computer, accounts and home network around your risks, in person. [P7 §4] It includes two security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for 60 days. [P7 §1; baseline: faq; edited in review: device count cut, P7 keeps device caps in Conditions only]
 
 **C2. What do Personal Shield for Two and Inner Circle include?**
 Personal Shield for Two (₪45,000) is for you and one other person: each person's phone, computer and accounts, your home network and four security keys. Inner Circle (₪70,000) is for a household of up to four, with eight security keys and a review visit at twelve months. Both include the follow-up visit and 60 days of answered questions. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office. [P7 §4]
 
-**C3. In Two or Inner Circle, who sees whose records?**
+**C3. In Personal Shield for Two or Inner Circle, who sees whose records?** [edited in review: full tier name]
 Each person receives a private dated record. The home-network work is recorded separately. Personal details are shared only with that person's consent; being part of the same engagement does not grant access to another person's information. [baseline: faq, edited]
 
 **C4. Does migration include all my files and old accounts?**
 Essential migration covers identity, recovery routes and critical-service access where needed. Historical archives and bulk data migration require a separately agreed scope. The written offer identifies the work to be done; the service does not promise unlimited accounts or data transfers. [baseline: faq]
 
 **C5. What does the 60-day question line cover?**
-For 60 days after the work is complete, you can send questions by WhatsApp or Signal and receive an answer within one working day. [P7 §1; "after the work is complete" new] It covers questions and guidance about your setup. It is not new work and not an emergency line; urgent needs go through an urgent visit. [P7 §1] There is no remote control of your devices. [baseline: faq, edited]
+For 60 days from completion of the tier's work, you can send questions by WhatsApp or Signal and receive an answer within one working day. [P7 §1; start point **new, review** (default: completion of the tier's work, same wording as Conditions 7.1)] It covers questions and guidance about your setup. It is not new work and not an emergency line; urgent needs go through an urgent visit. [P7 §1] There is no remote control of your devices. [baseline: faq, edited]
 
-### 5. Group D — Privacy and control (`#privacy`)
+### 5. Group D — Privacy and control (`#d`)
 **H2:** Privacy and control. [2a §7]
 
 **D1. Do I give you my passwords or remote access?**
@@ -196,7 +196,7 @@ Your situation and the information you share are handled confidentially. Your ac
 **D4. Do you monitor my devices or install software?**
 No. Toza does not monitor your devices or install security software on them. The work focuses on the settings and access arrangements within your authorized environment. Every protection tier also includes practical security habits and personal teaching so you understand how to use the resulting setup. [baseline: faq, edited: "Personal Shield and Inner Circle Shield" → "Every protection tier"]
 
-### 6. Group E — What Toza does not do (`#boundaries`)
+### 6. Group E — What Toza does not do (`#e`)
 **H2:** What Toza does not do. [2a §7]
 
 **E1. Can you prove who accessed my account, investigate someone or collect evidence?**
@@ -226,7 +226,7 @@ Other help is useful for its own scope: [baseline: faq, edited]
 
 Toza applies expert judgment to your actual setup: tracing relevant connections, explaining what they allow and selecting changes in a considered sequence. [baseline: faq] *(table cut from 7 rows and 2 columns to 4 rows and 1 column to fit 80 words)*
 
-### 7. Group F — For attorneys (`#attorneys`)
+### 7. Group F — For attorneys (`#f`)
 **H2:** For attorneys. [2a §7]
 
 **F1. Does a referral authorize access to my client's information?**
@@ -239,10 +239,11 @@ With the client's explicit authorization, an attorney-friendly summary can descr
 Yes, with the client's permission. Timing of changes can be coordinated with counsel around a filing, a negotiation or a hearing. [2b §3, edited] Legal strategy remains with the attorney; the client authorizes technical changes. [baseline: attorneys]
 
 **F4. How does referral work commercially?**
-A referral fee is paid when a referred client's first step is paid, and a further fee if the client continues to a protection tier. The terms are in a one-page agreement. [2b §3, edited] To discuss it, tap "Discuss a referral". [UI]
-*(Fee amounts are left out on purpose: ₪600 and the continuation fees are not in facts.json, and their public visibility is still an open owner item, 2a "Open items" (2).)*
+A referral fee is paid when a referred client's first step is paid, and a further fee if the client continues to a protection tier. Amounts and terms are in a one-page agreement. [2b §3, edited; "Amounts and terms" **new, review**, same wording as the Attorneys page block 6]
+- **Button under F4:** Discuss a referral (contact.referral, opens WhatsApp with the referral prefill) [UI; 2a §6.2]
+*(Fee amounts are left out on purpose (default): ₪600 and the continuation fees are not in facts.json, and their public visibility is still an open owner item, 2a "Open items" (2).)*
 
-### 8. Group G — Prices and timing (`#prices`)
+### 8. Group G — Prices and timing (`#g`)
 **H2:** Prices and timing. [2a §7]
 
 **G1. How does the ₪4,000 first step count toward a tier?** *(open)*
@@ -252,12 +253,12 @@ In full, when the tier's work begins within 30 days of completion of the first s
 Dr. Tabansky proposes the next tier, with its full allowance, before any work begins. Larger households, several residences or household staff receive one fixed price in writing after the first step, from ₪90,000. There are no per-device or per-hour charges. [P7 §1, §4]
 
 **G3. Can you come urgently, and what does it cost?**
-In Central Israel, when available. Availability is confirmed before you pay. For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment. This is an arrival commitment, not a four-hour completion promise. The surcharge is ₪4,800, added to the agreed service price; at weekends or holidays it is ₪6,000 instead. [baseline: faq, edited]
+Availability is confirmed before you pay. For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment. This is an arrival commitment, not a four-hour completion promise. The surcharge is ₪4,800, added to the agreed service price; at weekends or holidays it is ₪6,000 instead. [baseline: faq, edited; region cut in review per V-029]
 
 **G4. What happens after the 60 days?**
 Past clients can continue with Annual Care: the question line on the same terms for twelve months, a check visit, setup of a new or replaced phone or computer, a replacement security key and an update to the dated record. It costs ₪12,000 a year for one person, ₪15,000 for two and ₪20,000 for a household of up to four. Join within six months of the question line ending. [P8 §5, edited]
 
-- **Link under group G:** All terms: Conditions → [new]
+- **Link under group G:** All terms: Conditions → (/en/conditions/) [new]
 
 ### 9. Contact
 - Shared contact block, unchanged. [2a §6.2]
@@ -273,7 +274,7 @@ Printable. Commercial terms only (R-2): no boundary or warning sentences. Plain 
 
 ### 1. Header
 - **Eyebrow:** Conditions [UI]
-- **H1:** Prices and conditions. [UI, link label "Prices and conditions →" (2a §6.1)]
+- **H1:** Prices and conditions. [2a §6.1, link label "Prices and conditions →"]
 - **Lead:** Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. Each price is fixed and agreed in writing before work begins. [P7 §4]
 - **Date line:** Terms as of 16 October 2026. [new]
 - **Button:** Print this page [new]
@@ -310,17 +311,16 @@ Printable. Commercial terms only (R-2): no boundary or warning sentences. Plain 
 - **H2:** The 30-day rule [new]
 1. The ₪4,000 counts in full toward a tier whose work begins within 30 days of completion of the first step. You then pay the balance. [P7 §1; baseline: faq, edited]
 2. Balances: Personal Shield ₪28,000 · Personal Shield for Two ₪41,000 · Inner Circle ₪66,000. [P7 §1, facts]
-3. The tier qualifies once its work begins within the 30 days. [new, from baseline "Booking alone does not qualify", turned positive]
-4. After day 30, the tier is charged at its full price. [P7 §1]
-5. Moving up a tier: if the first step shows the next tier is needed, you pay that tier's price less the ₪4,000 already paid, within the same 30 days. [P7 §1]
-6. The first step counts once per engagement, also for a group. [baseline: faq, edited]
-7. Larger households: the fixed price is set in writing after the first step, from ₪90,000, and the ₪4,000 counts toward it on the same 30-day terms. [P7 §4; credit clause new, from baseline Bespoke credit rule]
+3. After day 30, the tier is charged at its full price. [P7 §1]
+4. Moving up a tier: if the first step shows the next tier is needed, you pay that tier's price less the ₪4,000 already paid, within the same 30 days. [P7 §1]
+5. The first step counts once per engagement, also for a group. [baseline: faq, edited]
+6. Larger households: the fixed price is set in writing after the first step, from ₪90,000, and the ₪4,000 counts toward it on the same 30-day terms. [P7 §4; credit clause **new, review** (default: counts on the same 30-day terms), from baseline Bespoke credit rule]
 
 ### 5. Choosing the tier
 - **H2:** When a household needs more [new]
 1. If the first step shows more than a tier includes, such as more people or devices, a second home, staff or company devices, Dr. Tabansky proposes the next tier, with its full allowance, before any work begins. [P7 §1]
 2. Beyond Inner Circle, he sets one fixed price in writing. [P7 §1]
-3. Each tier has one fixed price, whatever the number of devices or hours within its allowance. [new, positive form of P7 §1 "There are no per-device or per-hour charges"]
+3. Each tier has one fixed price for everything within its allowance. [**new, review**; positive form of P7 §1 "There are no per-device or per-hour charges"; "hours" removed because P7 keeps hours off the site and the allowance is not in hours]
 4. Agreed additions are separate, and any added scope or price is agreed in writing before that work begins. [baseline: llms, edited]
 
 ### 6. What each tier includes
@@ -337,7 +337,7 @@ Printable. Commercial terms only (R-2): no boundary or warning sentences. Plain 
 
 ### 7. The 60-day question line
 - **H2:** The 60-day question line [new]
-1. Questions answered by WhatsApp or Signal within one working day, for 60 days from completion of the tier's work. [P7 §1; start point new]
+1. Questions answered by WhatsApp or Signal within one working day, for 60 days from completion of the tier's work. [P7 §1; start point **new, review** (default: completion of the tier's work)]
 2. For questions and guidance about the work done. New work is agreed and priced separately; urgent needs go through an urgent visit. [P7 §1, turned positive]
 3. After the 60 days, the line can continue through Annual Care. [P7 §1, P8]
 
@@ -352,19 +352,19 @@ Printable. Commercial terms only (R-2): no boundary or warning sentences. Plain 
    - Coordination with your lawyer or family office, if you authorize it [P8 §2]
 2. ₪12,000 a year for one person, ₪15,000 for two, ₪20,000 for a household of up to four. Paid yearly in advance. [P8 §5]
 3. The term starts the day the 60-day question line ends. [P8 §3]
-4. Household Care covers up to two new or replaced devices and up to two replacement keys. For Inner Circle, the first Care term moves the check visit to about month six; the twelve-month review stays. [P8 §2, edited]
+4. For a household of up to four, Annual Care covers up to two new or replaced devices and up to two replacement keys. For Inner Circle, the first Care term moves the check visit to about month six; the twelve-month review stays. [P8 §2, edited; "Household Care" replaced by the site name Annual Care in review]
 5. Further keys and any replacement router are charged at cost. Added devices are scoped separately. [P8 §2, edited]
 6. Joining: within six months of the question line ending. After that, we start again with a first step (₪4,000), which counts in full toward Annual Care within 30 days. [P8 §3, §5]
 7. Renewal: at the published price at the time. The invoice is sent 30 days before the term ends, and the line stays open for 14 days while it is settled. [P8 §3, edited]
 8. Scoped and priced separately: new people; a new or second home; company devices or staff; devices beyond the original allowance; any incident, such as a suspected compromise; urgent visits, on the urgent terms below. [P8 §2, §5, edited]
 
 ### 9. Urgent visits
-- **H2:** Urgent visits in Central Israel [2a §5]
+- **Anchor:** `#urgent` (target of "Urgent terms →" on Someone knows something)
+- **H2:** Urgent visits [2a §5, trimmed in review: region cut per V-029]
 1. Availability is confirmed before you pay. [baseline: faq]
 2. For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment. The clock starts when both conditions are met. [baseline: faq, edited]
 3. The four hours are an arrival commitment; the visit then runs its agreed course. [new, positive form of baseline "an arrival commitment, not a four-hour completion promise"]
 4. Surcharge ₪4,800, added to the agreed base service price. At weekends or holidays the surcharge is ₪6,000, replacing the ordinary surcharge. Other charges apply only if separately agreed. [baseline: faq, edited]
-5. Elsewhere in Israel, the arrival time is agreed before you accept. [new, from baseline; "travel terms" dropped per V-029]
 
 ### 10. Payment before work
 - **H2:** Payment before work [new]
@@ -374,15 +374,15 @@ Printable. Commercial terms only (R-2): no boundary or warning sentences. Plain 
 
 ### 11. Footer of the page
 - **Line:** Questions about these terms? [new] Message on WhatsApp · Message on Signal · Call me back (text links) [2a §6.2]
-- **Link:** Privacy, boundaries and other questions: FAQ → [new]
+- **Link:** Privacy, boundaries and other questions: FAQ → (/en/faq/) [new]
 
 ---
 
 ## Notes for the owner and builder
 
 1. **Fee amounts left off the site:** referral fees (₪600, ₪2,000 / ₪3,000 / ₪4,500) are not in facts.json, so FAQ F4 states the mechanism only. Add them to facts.json first if they should be public.
-2. **Travel (V-029):** baseline "Outside Central Israel, arrival time and travel terms are agreed" is shortened to "Elsewhere in Israel, the arrival time is agreed before you accept." (Conditions 9.5). Delete the line if even that is too much.
-3. **New start point:** the 60-day line runs "from completion of the tier's work" (FAQ C5, Conditions 7.1). P7 does not say when it starts; the baseline started support at completion. Please confirm.
-4. **Larger households and the first step:** Conditions 4.7 applies the 30-day credit to the "from ₪90,000" price, following the baseline Bespoke rule. Please confirm.
-5. **Positive wording in Conditions:** three baseline "not" terms are rephrased positively to keep Conditions free of negative sentences (R-2, 2a §8.5): 3.3, 4.3, 9.3. The negative originals stay in the FAQ (B2, G3).
+2. **Travel (V-029):** no region or travel line appears on any page (FAQ G3, Conditions 9). Removed in review.
+3. **New start point (default kept):** the 60-day line runs "from completion of the tier's work" (FAQ C5, Conditions 7.1). P7 does not say when it starts; the baseline started support at completion. Please confirm.
+4. **Larger households and the first step (default kept):** Conditions 4.6 applies the 30-day credit to the "from ₪90,000" price, following the baseline Bespoke rule. Please confirm.
+5. **Positive wording in Conditions:** baseline "not" terms are rephrased positively to keep Conditions free of negative sentences (R-2, 2a §8.5): 3.3, 5.3, 9.3. The negative originals stay in the FAQ (B2, G2, G3). The former 4.3 ("The tier qualifies once its work begins…") was cut in review as a repeat of 4.1.
 6. **Old URLs → 301:** `/en/private-exposure-assessment.html` and `/en/what-happens-during-the-visit.html` → `/en/how-it-works/`; `/en/why-us.html` → `/en/about/`; `/en/faq.html` → `/en/faq/` (2a §3).
