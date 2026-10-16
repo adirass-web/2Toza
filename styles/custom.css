@@ -1,0 +1,12 @@
+/* Toza custom CSS for the Flowbite build. Each rule says why the library (Flowbite + Tailwind utilities) could not do it. */
+@layer base {
+  /* Flowbite's focus style is a ring that its own examples pair with outline-none; Direction A needs one visible brass outline on every focusable element, set once instead of on every element. */
+  :focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: var(--focus-offset); }
+  /* Same outline in the lighter brass on ink sections (dark tone is set with data-tone="dark"). */
+  [data-tone="dark"] :focus-visible { outline-color: var(--focus-color-on-dark); }
+}
+
+@layer components {
+  /* Stage drawings: one rendered stroke weight at every size; Tailwind has no vector-effect utility and the property does not inherit, so it cannot sit on the svg root. */
+  .stage-drawing * { vector-effect: non-scaling-stroke; }
+}

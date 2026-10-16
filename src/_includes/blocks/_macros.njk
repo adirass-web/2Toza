@@ -1,5 +1,46 @@
-{#- Shared by the reference block templates. link: a link or contact action ({ label, href, external, aria? }).
-    The `aria` text is the "opens in a new tab" hint; it sits in its own span so a style can hide it visually. -#}
-{% macro link(l) %}<a href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% if l.aria %} <span>{{ l.aria }}</span>{% endif %}{% endmacro %}
-{% macro links(list) %}{% if list and list.length %}<ul>{% for l in list %}<li>{{ link(l) }}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
-{% macro price(b) %}<data value="{{ b.price_value }}">{{ b.price }}</data>{% endmacro %}
+{#- Helpers shared by the Flowbite block templates. Import with context: {% from "blocks/_macros.njk" import … with context %}.
+    Every class string is a Flowbite component pattern (docs: buttons, card, list-group, badge, timeline, navbar) whose semantic colours
+    (bg-brand, text-heading, text-body, border-default, bg-neutral-*) resolve to the Toza tokens through tokens/tokens.json. No copy lives here.
+    tone: "" (page paper), "sunken" (recessed paper), "dark" (ink). Dark sections carry data-tone="dark" for the focus outline. -#}
+
+{#- Section with the page container. inner: grid or flow classes for the container; label: aria-label for a section without a heading; pad: vertical padding classes when the default does not fit. -#}
+{% macro section(block, tone, inner, label, pad) %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %}{% if label %} aria-label="{{ label }}"{% endif %} class="scroll-mt-24 {{ pad or 'py-section lg:py-section-wide' }}{% if tone == 'sunken' %} bg-neutral-secondary-soft{% elif tone == 'dark' %} bg-dark text-paper{% endif %}"{% if tone == 'dark' %} data-tone="dark"{% endif %}>
+  <div class="mx-auto w-full max-w-wrap px-gutter sm:px-gutter-wide {{ inner }}">{{ caller() }}</div>
+</section>
+{% endmacro %}
+
+{% macro h2(text, cls) %}<h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance {{ cls or 'text-heading' }}">{{ text }}</h2>{% endmacro %}
+
+{% macro price(b, cls) %}<data value="{{ b.price_value }}" class="font-serif leading-numeral font-normal tracking-numeral tabular-nums lining-nums {{ cls }}">{{ b.price }}</data>{% endmacro %}
+
+{#- Flowbite button (default = primary, outline = secondary). -#}
+{% macro btn(a, kind, tone, extra) %}
+<a href="{{ a.href }}"{% if a.external %} target="_blank" rel="noopener"{% endif %} class="box-border inline-flex min-h-12 items-center justify-center rounded-base border px-5 py-3 text-base leading-6 font-medium {% if tone == 'dark' %}{% if kind == 'primary' %}border-transparent bg-action-inverse text-on-action-inverse hover:bg-action-inverse-hover{% else %}border-on-dark-border-strong bg-transparent text-paper hover:bg-paper hover:text-ink{% endif %}{% elif kind == 'primary' %}border-transparent bg-brand text-on-action shadow-xs hover:bg-brand-strong{% else %}border-brand bg-neutral-primary text-fg-brand hover:bg-brand hover:text-on-action{% endif %} {{ extra }}">{{ a.label }}</a>
+{% endmacro %}
+
+{#- The lead action is primary, the rest outline. first: extra classes for the lead button. -#}
+{% macro actions(list, tone, wrapper, first) %}
+<div class="{{ wrapper }}">
+  {% for a in list %}{{ btn(a, 'primary' if loop.first else 'outline', tone, first if loop.first else '') }}{% endfor %}
+</div>
+{% endmacro %}
+
+{#- Flowbite link (Typography > Links) with the brass underline. kind more: arrow; external: glyph and the new-tab hint. -#}
+{% macro lnk(l, tone) %}
+<a href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %} class="-my-2 inline-block py-2 font-medium underline decoration-1 underline-offset-4 hover:decoration-2 {% if tone == 'dark' %}text-paper decoration-accent-on-dark{% else %}text-fg-brand decoration-accent{% endif %}">{{ l.label }}{% if l.kind == 'more' %} <span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrow }}</span>{% elif l.kind == 'external' %} <span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrowExternal }}</span><span class="sr-only"> {{ l.aria }}</span>{% endif %}</a>
+{% endmacro %}
+
+{% macro links(list, tone, cls) %}{% if list and list.length %}
+<ul class="flex flex-wrap gap-x-8 gap-y-2 {{ cls }}">{% for l in list %}<li>{{ lnk(l, tone) }}</li>{% endfor %}</ul>
+{% endif %}{% endmacro %}
+
+{#- Flowbite large badge. -#}
+{% macro badge(text) %}<span class="inline-block rounded-xs border border-brand-subtle bg-brand-softer px-2 py-1 text-sm font-medium text-fg-brand-strong">{{ text }}</span>{% endmacro %}
+
+{#- Flowbite check-circle icon, for feature lists. -#}
+{% macro check() %}<svg class="mt-0.5 size-5 shrink-0 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>{% endmacro %}
+
+{% macro features(items, cls) %}{% if items and items.length %}
+<ul role="list" class="space-y-3 {{ cls }}">{% for i in items %}<li class="flex items-start gap-2">{{ check() }}<span>{{ i }}</span></li>{% endfor %}</ul>
+{% endif %}{% endmacro %}

@@ -1,14 +1,15 @@
-{% from "blocks/_macros.njk" import link, links, price %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %} aria-label="{{ t.ui.pricesLabel }}">
-  <ul>
+{#- Flowbite pricing card, one per anchor price. -#}
+{% from "blocks/_macros.njk" import section, price, badge, lnk with context %}
+{% call section(block, 'sunken', '', t.ui.pricesLabel) %}
+  <ul class="grid gap-6 md:grid-cols-2 lg:gap-8">
     {% for item in block.items %}
-    <li>
-      {% if item.tag %}<p>{{ item.tag }}</p>{% endif %}
-      <h3>{{ item.name }}</h3>
-      <p>{{ price(item) }}</p>
-      <p>{{ item.note }}</p>
+    <li class="rounded-base border border-default bg-neutral-primary-soft p-6 shadow-xs lg:p-10">
+      <div class="mb-3 min-h-8">{% if item.tag %}{{ badge(item.tag) }}{% endif %}</div>
+      <h3 class="font-serif text-2xl font-normal text-heading">{{ item.name }}</h3>
+      <p class="mt-4 text-heading lg:mt-6">{{ price(item, 'text-5xl sm:text-6xl lg:text-7xl') }}</p>
+      <p class="mt-4 text-lg lg:mt-7">{{ item.note }}</p>
     </li>
     {% endfor %}
   </ul>
-  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
-</section>
+  {% if block.link %}<p class="mt-8 lg:mt-10">{{ lnk(block.link) }}</p>{% endif %}
+{% endcall %}

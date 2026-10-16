@@ -1,13 +1,19 @@
-<footer class="border-t border-rule bg-paper">
-  <div class="wrap py-10 lg:py-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-    <a href="/en/" aria-label="{{ t.ui.homeLabel }}"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-12 w-auto"></a>
+{#- Flowbite "Footer with logo". Links and labels come from i18n. -#}
+{% set footItems = [
+  { href: "/en/pricing/", label: t.footer.pricing },
+  { href: "/en/faq/", label: t.footer.faq },
+  { href: "/en/attorneys/", label: t.footer.attorneys },
+  { href: "/en/conditions/", label: t.footer.conditions },
+  { href: "/en/about/", label: t.footer.about }
+] %}
+<footer class="border-t border-default bg-neutral-primary-soft">
+  <div class="mx-auto flex w-full max-w-wrap flex-col gap-6 px-gutter py-10 sm:px-gutter-wide md:flex-row md:items-center md:justify-between lg:py-12">
+    <a href="/en/" class="flex items-center" aria-label="{{ t.ui.homeLabel }}"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-12 w-auto"></a>
     <nav aria-label="{{ t.ui.footerNav }}">
-      <ul class="flex flex-wrap gap-x-7 gap-y-1 text-[1.0625rem]">
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/pricing/">{{ t.footer.pricing }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/faq/">{{ t.footer.faq }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/attorneys/">{{ t.footer.attorneys }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/conditions/">{{ t.footer.conditions }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/about/">{{ t.footer.about }}</a></li>
+      <ul class="flex flex-wrap gap-x-7 gap-y-1 font-medium text-body">
+        {% for item in footItems %}
+        <li><a href="{{ item.href }}" class="inline-flex min-h-11 items-center underline decoration-transparent decoration-1 underline-offset-8 hover:decoration-accent">{{ item.label }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </div>

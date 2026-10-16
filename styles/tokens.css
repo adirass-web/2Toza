@@ -36,14 +36,41 @@
   --color-on-action: var(--color-paper);  /* Text on the primary action. */
   --color-action-inverse: var(--color-paper);  /* Primary action on inverse surfaces: background. */
   --color-on-action-inverse: var(--color-ink);  /* Primary action on inverse surfaces: text. */
-  --color-body: var(--color-muted);
+  --color-body: var(--color-text);
+  --color-body-subtle: var(--color-muted);
+  --color-fg-brand: var(--color-ink);
+  --color-fg-brand-strong: var(--color-ink-soft);
+  --color-fg-brand-subtle: var(--color-rule);
   --color-neutral-primary: var(--color-paper);
   --color-neutral-primary-soft: var(--color-paper);
+  --color-neutral-primary-medium: var(--color-paper);
+  --color-neutral-primary-strong: var(--color-paper);
+  --color-neutral-secondary-soft: var(--color-paper-deep);
+  --color-neutral-secondary: var(--color-paper-deep);
+  --color-neutral-secondary-medium: var(--color-paper-deep);
+  --color-neutral-secondary-strong: var(--color-paper-deep);
+  --color-neutral-tertiary-soft: var(--color-paper-deep);
+  --color-neutral-tertiary: var(--color-paper-deep);
+  --color-neutral-tertiary-medium: var(--color-paper-deep);
+  --color-neutral-quaternary: var(--color-rule);
+  --color-neutral-quaternary-medium: var(--color-rule);
   --color-brand: var(--color-ink);
   --color-brand-strong: var(--color-ink-soft);
+  --color-brand-medium: var(--color-rule);
   --color-brand-soft: var(--color-paper-deep);
+  --color-brand-softer: var(--color-paper-deep);
+  --color-brand-subtle: var(--color-rule);
+  --color-dark: var(--color-ink);
+  --color-dark-soft: var(--color-ink-soft);
+  --color-dark-strong: var(--color-ink);
+  --color-dark-subtle: var(--color-ink);
+  --color-buffer: var(--color-paper);
+  --color-buffer-medium: var(--color-paper);
+  --color-buffer-strong: var(--color-paper);
   --color-default: var(--color-rule);
+  --color-default-subtle: var(--color-rule);
   --color-default-medium: var(--color-rule);
+  --color-default-strong: var(--color-rule);
   --radius-base: 3px;  /* Buttons and inputs. */
   --radius: 3px;  /* Flowbite --radius; equal to radius.base. */
   --radius-stamp: 2px;  /* Stamp label on the specimen. */
@@ -71,6 +98,21 @@
   --layout-gutter-wide: 2rem;  /* Side gutter from sm (640px). */
   --layout-section-padding: 2.75rem;  /* Section vertical padding below lg (1024px). */
   --layout-section-padding-wide: 7rem;  /* Section vertical padding from lg (1024px). */
+  --text-hero-sm: 2.625rem;  /* h1 on phone (text-hero-sm). */
+  --text-hero-md: 3.75rem;  /* h1 from sm, 640px (text-hero-md). */
+  --text-hero-lg: 5rem;  /* h1 from lg, 1024px (text-hero-lg). */
+  --text-h2: clamp(1.875rem, 1.4rem + 1.8vw, 2.75rem);  /* Section heading, fluid (text-h2); same value as type.h2 font size. */
+  --leading-display: 1.06;  /* h1 line height (leading-display). */
+  --leading-h2: 1.12;  /* Section heading line height (leading-h2). */
+  --leading-numeral: 1;  /* Prices line height (leading-numeral). Tailwind's leading-none is overridden by Flowbite's theme, so prices name their own. */
+  --tracking-display: -0.015em;  /* h1 letter spacing (tracking-display). */
+  --tracking-h2: -0.01em;  /* Section heading letter spacing (tracking-h2). */
+  --tracking-numeral: -0.02em;  /* Prices letter spacing (tracking-numeral). */
+  --container-wrap: var(--layout-max-width);  /* Content width as a Tailwind container size (max-w-wrap). */
+  --spacing-gutter: var(--layout-gutter);  /* Side gutter below sm (px-gutter). */
+  --spacing-gutter-wide: var(--layout-gutter-wide);  /* Side gutter from sm (sm:px-gutter-wide). */
+  --spacing-section: var(--layout-section-padding);  /* Section vertical padding below lg (py-section). */
+  --spacing-section-wide: var(--layout-section-padding-wide);  /* Section vertical padding from lg (lg:py-section-wide). */
   --focus-width: 3px;  /* Focus outline width (:focus-visible). */
   --focus-offset: 3px;  /* Focus outline offset. */
   --focus-color: var(--color-brass);  /* Focus outline on light surfaces. */
