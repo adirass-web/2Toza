@@ -24,11 +24,11 @@ Tier prices **[Owner decision required]**. One line beneath the tiers: larger ho
 
 **What the buyer pays (first step folded in)** **[Owner-approved 16 Oct]**. Tier prices include the first step; tier totals are unchanged by the lower first-step price. The client pays ₪4,000 first; if a tier starts within **30 days**, the ₪4,000 counts in full and the client pays the balance (₪28,000 / ₪41,000 / ₪66,000). Conditions: after day 30, the tier is charged at its full price; if the first step shows the next tier is needed, the client pays that tier's price less the ₪4,000 already paid, within the same 30 days. Partial credit rejected: it raises the total while looking like a penalty.
 
-**Why ₪4,000 works as the first step.** It is framed in the health-check format, "a senior check-up of your digital life": half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep. The lead message is that it **counts in full toward your protection if you continue within 30 days**. No health-check price is named and no per-hour comparison appears in copy. The lower figure keeps the first step easy to refer and within reach for a separating spouse with frozen funds (P7z §3); the tier totals carry the margin.
+**Why ₪4,000 works as the first step.** It is framed in the health-check format, "a senior check-up of your digital life": half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep. The lead message is that it **counts in full toward your protection if you continue within 30 days**. No health-check price is named and no per-hour comparison appears in copy. It stays easy to refer and within reach of a spouse with frozen funds (P7z §3); tier totals carry the margin.
 
 ### Names
 
-Keep **Personal Shield** and **Inner Circle** (existing equity in copy and attorney notes). Add **Personal Shield for Two**, described as "For you and one other person", never "sharing a home": it fits a parent and adult child, partners, or a principal and assistant, and does not describe the spouse a divorce buyer is leaving. "Inner Circle Shield" is retired **[Owner decision required]**. The large option stays nameless on site; internally "Private Office".
+Keep **Personal Shield** and **Inner Circle** (existing equity in copy and attorney notes). Add **Personal Shield for Two**, described as "For you and one other person", never "sharing a home": it fits a parent and adult child, partners or a principal and assistant, not the spouse a divorce buyer is leaving. "Inner Circle Shield" is retired **[Owner decision required]**. The large option stays nameless on site; internally "Private Office".
 
 ### What each includes
 
@@ -65,7 +65,7 @@ Changes vs fact base still **[Owner decision required]**: device allowance 2 →
 
 > If the first step shows more than the tier includes (more people or devices, a second home, staff, company devices), Dr. Tabansky proposes the next tier, with its full allowance, before any work begins. Beyond Inner Circle, he sets one fixed price in writing. There are no per-device or per-hour charges.
 
-No meter; a step-up brings more, so it reads as fit, not penalty. With the network in Shield, a single person moves up only for extra devices or a second home. The buffer absorbs ordinary variance; P5 #4 ("when unsure, quote the higher tier") governs edge cases.
+No meter; a step-up brings more, so it reads as fit, not penalty. The buffer absorbs ordinary variance; P5 #4 ("when unsure, quote the higher tier") governs edge cases.
 
 ### Annual Care (optional, past clients only)
 
@@ -103,7 +103,7 @@ Assumptions (P4/P6): VAT 18%; keys ₪450, router ₪700 gross, at cost; travel 
 | Care, 1–2 people | 12,000/yr | 9,788 | 18 / 1 | 20 | 489 | 415 | none | — |
 | Care, household | 18,000/yr | 14,492 | 26 / 1 | 28 | 518 | 436 | none | — |
 
-"Today" = today's price with today's thinner inclusions. Tier figures are unaffected by the first-step price because the first step is folded into the tier total. The ₪90k floor yields less per hour than Inner Circle; acceptable because it is a floor and real large cases are scoped higher (₪100k ≈ ₪831/h).
+"Today" = today's price with today's thinner inclusions. The ₪90k floor yields less per hour than Inner Circle; acceptable because it is a floor and real large cases are scoped higher (₪100k ≈ ₪831/h).
 
 **Referral fee rescale** (2b, proposal; set before T2) **[Owner decision required]**: ₪400 when the referred client's first step is paid; on continuation ₪2,000 (Shield), ₪3,000 (Two), ₪4,500 (Inner Circle), 5% of the agreed price (larger). Totals ≈7–8% of fee, as today (₪1,300 on ₪14,000 ≈ 9%). It lowers net by about ₪50–60/h on referred engagements. An attorney one-pager with the fixed prices and the one-sentence reason ("fixed, in writing, in person, he coordinates with you") ships before live quotes.
 
@@ -131,7 +131,6 @@ Today one Personal Shield a month nets ₪11.1k; the new grid nets ₪25.8k. ₪
 - *Anchoring and order:* Inner Circle and the "from ₪90,000" line are in view; ₪32,000 is judged against ₪70,000, not zero.
 - *Low-friction first step:* ₪4,000 that counts in full is a small, safe commitment (foot-in-the-door) that leads to the tier total already shown.
 - *Per-person contrast:* "for Two" at ₪13,000 more makes the second place the obvious choice for pairs.
-- *Round prices:* fear- and relief-led purchases convert better at round figures (P5 #9).
 - *Risk reversal, premium form:* no refund guarantee; instead a stand-alone first step, scope and price fixed in writing, a follow-up visit, 60 days of answered questions.
 
 **Israeli context.** Lawyer-led word of mouth: one public price, no negotiation, no public promotions (P5 #7); published prices filter price-shoppers.
