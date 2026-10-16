@@ -1,14 +1,18 @@
-{% from "blocks/_macros.njk" import link, links, price %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %} aria-label="{{ t.ui.pricesLabel }}">
-  <ul>
-    {% for item in block.items %}
-    <li>
-      {% if item.tag %}<p>{{ item.tag }}</p>{% endif %}
-      <h3>{{ item.name }}</h3>
-      <p>{{ price(item) }}</p>
-      <p>{{ item.note }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+{% from "blocks/_macros.njk" import link, price with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="section bg-base-200" aria-label="{{ t.ui.pricesLabel }}">
+  <div class="wrap">
+    <ul class="grid gap-6 md:grid-cols-2">
+      {% for item in block.items %}
+      <li class="card card-border bg-base-100 {{ 'border-t-2 border-t-accent' if item.tag }}">
+        <div class="card-body gap-0 p-6 lg:p-10">
+          {% if item.tag %}<p class="badge badge-outline badge-accent mb-3 font-semibold">{{ item.tag }}</p>{% endif %}
+          <h3 class="card-title font-serif text-2xl font-normal text-primary">{{ item.name }}</h3>
+          <p class="mt-4 lg:mt-6">{{ price(item, "font-serif text-5xl leading-none tracking-tight text-primary lining-nums tabular-nums sm:text-6xl lg:text-7xl") }}</p>
+          <p class="mt-4 text-lg lg:mt-7">{{ item.note }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if block.link %}<p class="mt-6 lg:mt-8">{{ link(block.link) }}</p>{% endif %}
+  </div>
 </section>

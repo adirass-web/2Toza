@@ -1,11 +1,21 @@
-{% from "blocks/_macros.njk" import link, links, price %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  {% if block.tag %}<p>{{ block.tag }}</p>{% endif %}
-  {% if block.heading %}<h2>{{ block.heading }}</h2>{% endif %}
-  <h3>{{ block.name }}</h3>
-  <p>{{ price(block) }}</p>
-  {% if block.body %}<p>{{ block.body }}</p>{% endif %}
-  {% if block.items %}<ul>{% for i in block.items %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
-  {% if block.credit %}<p>{{ block.credit }}</p>{% endif %}
-  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+{% from "blocks/_macros.njk" import link, price with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="{{ 'section' if block.heading }}">
+  <div class="{{ 'wrap' if block.heading }}">
+    {% if block.heading %}<h2 class="mb-8 font-serif font-normal text-primary text-balance text-(length:--type-h2-font-size) leading-(--type-h2-line-height) tracking-(--type-h2-letter-spacing)">{{ block.heading }}</h2>{% endif %}
+    <article class="card card-border border-t-2 border-t-accent bg-base-200">
+      <div class="card-body gap-6 p-5 lg:grid lg:grid-cols-12 lg:gap-16 lg:p-10">
+        <div class="lg:col-span-5">
+          {% if block.tag %}<p class="badge badge-outline badge-accent mb-3 font-semibold">{{ block.tag }}</p>{% endif %}
+          <h3 class="card-title font-serif text-3xl font-normal text-primary lg:text-4xl">{{ block.name }}</h3>
+          <p class="mt-4 lg:mt-6">{{ price(block, "font-serif text-6xl leading-none tracking-tight text-primary lining-nums tabular-nums lg:text-7xl") }}</p>
+        </div>
+        <div class="grid content-end gap-4 lg:col-span-7">
+          {% if block.body %}<p class="text-lg">{{ block.body }}</p>{% endif %}
+          {% if block.items %}<ul class="list-disc ps-5 text-lg marker:text-accent">{% for i in block.items %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+          {% if block.credit %}<p class="font-serif text-xl leading-snug text-primary lg:text-2xl">{{ block.credit }}</p>{% endif %}
+          {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+        </div>
+      </div>
+    </article>
+  </div>
 </section>

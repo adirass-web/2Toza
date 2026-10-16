@@ -1,7 +1,15 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <h2>{{ block.heading }}</h2>
-  {% if block.body %}<p>{{ block.body }}</p>{% endif %}
-  {{ links(block.actions) }}
-  {% if block.note %}<p>{{ link(block.note) }}</p>{% endif %}
+{% from "blocks/_macros.njk" import link, actions with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="hero on-ink section bg-primary text-primary-content">
+  <div class="hero-content wrap">
+    <div class="grid w-full gap-8 lg:grid-cols-12 lg:items-end lg:gap-10">
+      <div class="lg:col-span-5">
+        <h2 class="font-serif font-normal text-primary-content text-balance text-(length:--type-h2-font-size) leading-(--type-h2-line-height) tracking-(--type-h2-letter-spacing)">{{ block.heading }}</h2>
+        {% if block.body %}<p class="mt-5 max-w-xl text-lg text-on-dark-text">{{ block.body }}</p>{% endif %}
+      </div>
+      <div class="lg:col-span-7">
+        {{ actions(block.actions, true) }}
+        {% if block.note %}<p class="mt-5">{{ link(block.note, true) }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
 </section>

@@ -48,11 +48,18 @@
   --radius: 3px;  /* Flowbite --radius; equal to radius.base. */
   --radius-stamp: 2px;  /* Stamp label on the specimen. */
   --radius-bar: 1px;  /* Redacted-text bar on the specimen. */
+  --shape-radius-box: var(--radius-base);  /* Cards, tables, alerts (daisyUI --radius-box). */
+  --shape-radius-field: var(--radius-base);  /* Buttons, menu items, inputs (daisyUI --radius-field). */
+  --shape-radius-selector: var(--radius-stamp);  /* Badges, checkboxes, status dots (daisyUI --radius-selector). */
+  --shape-size-field: 0.28125rem;  /* Base unit of controls: a medium button is 10 units, 2.8125rem (45px), so every control clears the 44px target. */
+  --shape-size-selector: 0.25rem;  /* Base unit of badges and selectors (daisyUI default). */
+  --shape-border: 1px;  /* Hairline weight (daisyUI --border). */
   --type-body-font-family: var(--font-sans);  /* Body copy (html/body). */
   --type-body-font-size: 1.125rem;
   --type-body-font-weight: 400;
   --type-body-line-height: 1.6;
-  --type-display-font-family: var(--font-serif);  /* h1 / .display. Size is set per page (home hero: 2.625rem, 3.75rem from sm, 5rem from lg). */
+  --type-display-font-family: var(--font-serif);  /* h1 / .display. Fluid size: 2.625rem on phones up to 5rem from about 1100px; CSS clamp(), not expressible as a DTCG dimension. */
+  --type-display-font-size: clamp(2.625rem, 0.9rem + 6vw, 5rem);
   --type-display-font-weight: 400;
   --type-display-letter-spacing: -0.015em;
   --type-display-line-height: 1.06;

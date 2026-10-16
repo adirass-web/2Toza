@@ -1,0 +1,43 @@
+/* Custom CSS for the daisyUI build. Allowed only where daisyUI/Tailwind have no class: page grid, stage drawings,
+   portrait frame, and three accessibility baselines. Tokens only. Logical properties only. */
+
+/* LAYOUT 1. Content width and gutters from layout tokens; Tailwind's container steps at breakpoints instead of using the token. */
+.wrap { width: 100%; max-width: var(--layout-max-width); margin-inline: auto; padding-inline: var(--layout-gutter); }
+@media (min-width: 640px) { .wrap { padding-inline: var(--layout-gutter-wide); } }
+
+/* LAYOUT 2. Section rhythm from layout tokens (Tailwind spacing steps do not match 2.75rem / 7rem). */
+.section { padding-block: var(--layout-section-padding); }
+@media (min-width: 1024px) { .section { padding-block: var(--layout-section-padding-wide); } }
+
+/* LAYOUT 3. Hero: copy, portrait and actions share a 12-column grid whose portrait spans two rows (needs a 'auto 1fr' row template, an arbitrary value in Tailwind). */
+@media (min-width: 1024px) { .hero-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto 1fr; } }
+
+/* PORTRAIT 1. Offset brass hairline behind the portrait on desktop; daisyUI's avatar/mask have no offset frame. */
+.frame { position: relative; isolation: isolate; }
+@media (min-width: 1024px) {
+  .frame::before { content: ""; position: absolute; z-index: -1; inset-block: var(--layout-gutter) calc(var(--layout-gutter) * -1);
+    inset-inline: var(--layout-gutter) calc(var(--layout-gutter) * -1); border: var(--shape-border) solid var(--color-accent); }
+}
+
+/* PORTRAIT 2. Crop that keeps the face in frame; object-position is an arbitrary value in Tailwind. */
+.portrait { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+
+/* DRAWINGS. Stage drawings keep one rendered stroke weight at every size; vector-effect is not a Tailwind utility. */
+.drawing * { vector-effect: non-scaling-stroke; }
+
+/* A11Y 1. Visible brass focus ring on every focusable element; daisyUI sets a different outline per component. */
+:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: var(--focus-offset); }
+
+/* A11Y 2. The ring switches to the light brass on the dark (ink) sections. */
+.on-ink :focus-visible { outline-color: var(--focus-color-on-dark); }
+
+/* A11Y 3. No motion for people who ask for none; daisyUI and Tailwind transitions respect it only in places. */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+
+/* MARKDOWN 1. Spacing, bullets and numbering inside rendered markdown (paragraphs, lists); Tailwind preflight resets them and daisyUI ships no prose style. */
+.md > * + * { margin-block-start: var(--layout-gutter); }
+.md ul { list-style: disc; padding-inline-start: 1.25rem; }
+.md ol { list-style: decimal; padding-inline-start: 1.25rem; }
+
+/* MARKDOWN 2. Links inside rendered markdown are underlined in brass; daisyUI's .link cannot be put on generated anchors. */
+.md a { text-decoration: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: var(--shape-border); text-underline-offset: 0.28em; }

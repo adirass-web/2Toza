@@ -1,15 +1,26 @@
+{#- Stages-to-price strip. Each band is a daisyUI divider (the bracket, with its caption) over a row of stats (label and amount).
+    `inverse` is set by a parent on a dark section. When the stage names are shown above, the caption stays for screen readers only. -#}
 {% from "blocks/_macros.njk" import price %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  {% if block.label %}<h2>{{ block.label }}</h2>{% endif %}
-  {% if block.stage_names %}<ol>{% for s in block.stage_names %}<li data-stage="{{ s.key }}">{{ s.name }}</li>{% endfor %}</ol>{% endif %}
-  <ul>
-    {% for band in block.bands %}
-    <li>
-      <p>{{ band.caption }}</p>
-      <ul>
-        {% for item in band.items %}<li><span>{{ item.label }}</span> {{ price(item) }}</li>{% endfor %}
-      </ul>
-    </li>
-    {% endfor %}
-  </ul>
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="{{ 'on-ink' if inverse else 'pb-10 lg:pb-14' }}">
+  <div class="{{ '' if inverse else 'wrap' }}">
+    {% if block.label %}<h2 class="mb-6 font-serif font-normal text-primary text-balance text-(length:--type-h2-font-size) leading-(--type-h2-line-height) tracking-(--type-h2-letter-spacing)">{{ block.label }}</h2>{% endif %}
+    {% if block.stage_names %}
+    <ol class="hidden font-serif text-2xl text-primary md:grid md:grid-cols-3" aria-hidden="true">{% for s in block.stage_names %}<li class="px-4">{{ s.name }}</li>{% endfor %}</ol>
+    {% endif %}
+    <div class="grid gap-x-0 md:grid-cols-3">
+      {% for band in block.bands %}
+      <div class="{{ 'md:col-span-2' if band.stages.length == 2 }}">
+        <div class="divider divider-start mx-2 {{ 'divider-secondary text-on-dark-text-muted' if inverse else 'divider-accent text-muted' }}"><span class="{{ 'sr-only' if block.stage_names }}">{{ band.caption }}</span></div>
+        <div class="stats stats-vertical sm:stats-horizontal w-full bg-transparent {{ 'text-primary-content' if inverse else 'text-primary' }}">
+          {% for item in band.items %}
+          <div class="stat px-4 py-2">
+            <div class="stat-title text-lg {{ 'text-primary-content' if inverse else 'text-primary' }}">{{ item.label }}</div>
+            <div class="stat-value font-serif text-3xl font-normal lining-nums tabular-nums {{ 'text-secondary' if inverse else 'text-accent' }}">{{ price(item) }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>

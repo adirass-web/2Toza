@@ -1,18 +1,25 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <p>{{ block.statement }}</p>
-  <h2>{{ block.heading }}</h2>
-  {% if block.line %}<p>{{ block.line }}</p>{% endif %}
-  <ol>
-    {% for stage in block.items %}
-    <li data-stage="{{ stage.key }}">
-      <svg role="img" aria-label="{{ stage.image_alt }}"></svg>
-      <h3>{{ stage.name }}</h3>
-      <p>{{ stage.line }}</p>
-      {% if stage.key == "verify" and block.record_date %}<p>{{ block.record_date }}</p>{% endif %}
-    </li>
-    {% endfor %}
-  </ol>
-  {% if block.price_strip %}{% set outer = block %}{% set block = outer.price_strip %}{% include "blocks/price-strip.njk" %}{% set block = outer %}{% endif %}
-  {% if block.link %}<p>{{ link(block.link) }}</p>{% endif %}
+{% from "blocks/_macros.njk" import link with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="on-ink section bg-primary text-primary-content">
+  <div class="wrap">
+    <p class="max-w-4xl font-serif text-3xl leading-(--type-display-line-height) tracking-(--type-display-letter-spacing) text-primary-content sm:text-4xl lg:text-5xl">{{ block.statement }}</p>
+    <h2 class="mt-6 font-serif text-xl font-normal text-secondary lg:mt-9 lg:text-2xl">{{ block.heading }}</h2>
+    {% if block.line %}<p class="mt-2 max-w-2xl text-lg text-on-dark-text">{{ block.line }}</p>{% endif %}
+    <ol class="mt-6 flex flex-col gap-5 lg:mt-12 lg:flex-row lg:gap-0">
+      {% for stage in block.items %}
+      <li class="flex items-center gap-5 lg:block lg:flex-1 {{ 'lg:pe-4' if loop.first else ('lg:ps-4' if loop.last else 'lg:px-4') }}">
+        <div class="drawing relative w-28 shrink-0 lg:mb-8 lg:w-full lg:max-w-60" dir="ltr">
+          {% set alt = stage.image_alt %}{% include "blocks/_drawing-" + stage.key + ".njk" %}
+          {% if stage.key == "verify" and block.record_date %}<p class="absolute top-4 inset-e-0 w-14 text-end font-serif text-sm leading-tight text-secondary lg:text-lg" aria-hidden="true">{{ block.record_date }}</p>{% endif %}
+        </div>
+        <div>
+          <h3 class="font-serif text-2xl font-normal text-primary-content lg:text-3xl">{{ stage.name }}</h3>
+          <p class="mt-1.5 max-w-xs text-on-dark-text lg:mt-3">{{ stage.line }}</p>
+        </div>
+      </li>
+      {% if not loop.last %}<li class="divider m-0 hidden before:bg-on-dark-rule after:bg-on-dark-rule lg:flex lg:divider-horizontal" aria-hidden="true"></li>{% endif %}
+      {% endfor %}
+    </ol>
+    {% if block.price_strip %}<div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.price_strip %}{% set inverse = true %}{% include "blocks/price-strip.njk" %}{% set inverse = false %}{% set block = outer %}</div>{% endif %}
+    {% if block.link %}<p class="mt-4">{{ link(block.link, true) }}</p>{% endif %}
+  </div>
 </section>

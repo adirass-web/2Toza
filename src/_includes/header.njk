@@ -1,26 +1,32 @@
-<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur border-b border-rule">
-  <div class="wrap flex items-center justify-between gap-3 h-16 lg:h-20">
-    <a href="/en/" class="flex items-center shrink-0" aria-label="{{ t.ui.homeLabel }}">
-      <img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-11 lg:h-12 w-auto">
-    </a>
-    <nav aria-label="{{ t.ui.mainNav }}" class="hidden lg:flex items-center gap-9 text-[1.0625rem]">
-      <a class="link-nav" href="/en/#situations">{{ t.nav.situations }}</a>
-      <a class="link-nav" href="/en/how-it-works/">{{ t.nav.how }}</a>
-      <a class="link-nav" href="/en/pricing/">{{ t.nav.pricing }}</a>
-      <a class="link-nav" href="/en/faq/">{{ t.nav.faq }}</a>
+<header class="sticky top-0 z-40 border-b border-base-300 bg-base-100/95 backdrop-blur">
+  <div class="navbar wrap min-h-16 lg:min-h-20">
+    <div class="navbar-start">
+      <a href="/en/" class="inline-flex min-h-11 items-center" aria-label="{{ t.ui.homeLabel }}">
+        <img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-11 w-auto lg:h-12">
+      </a>
+    </div>
+    <nav class="navbar-center hidden lg:flex" aria-label="{{ t.ui.mainNav }}">
+      <ul class="menu menu-lg menu-horizontal gap-2">
+        <li><a class="min-h-11 items-center" href="/en/#situations">{{ t.nav.situations }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/how-it-works/">{{ t.nav.how }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/pricing/">{{ t.nav.pricing }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/faq/">{{ t.nav.faq }}</a></li>
+      </ul>
     </nav>
-    <div class="flex items-center gap-1 sm:gap-3">
-      <a href="/en/pricing/" class="lg:hidden inline-flex items-center min-h-11 px-2 text-ink font-semibold">{{ t.nav.pricing }}</a>
-      <a class="btn btn-primary !min-h-11 !px-4 sm:!px-5" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ t.nav.message }}</a>
-      <details class="lg:hidden relative">
-        <summary class="inline-flex items-center justify-center w-11 h-11 cursor-pointer text-ink" aria-label="{{ t.ui.menuButton }}">
+    <div class="navbar-end gap-1 sm:gap-3">
+      <a class="btn btn-ghost px-2 font-semibold text-primary lg:hidden" href="/en/pricing/">{{ t.nav.pricing }}</a>
+      <a class="btn btn-primary px-4 sm:px-5" href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener">{{ t.nav.message }}</a>
+      <details class="dropdown dropdown-end lg:hidden">
+        <summary class="btn btn-ghost btn-square text-primary" aria-label="{{ t.ui.menuButton }}">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h16M3 15h16"/></svg>
         </summary>
-        <nav aria-label="{{ t.ui.menuNav }}" class="absolute inset-e-0 top-12 w-56 bg-paper border border-rule shadow-lg py-2">
-          <a class="block px-5 py-3" href="/en/#situations">{{ t.nav.situations }}</a>
-          <a class="block px-5 py-3" href="/en/how-it-works/">{{ t.nav.how }}</a>
-          <a class="block px-5 py-3" href="/en/pricing/">{{ t.nav.pricing }}</a>
-          <a class="block px-5 py-3" href="/en/faq/">{{ t.nav.faq }}</a>
+        <nav class="dropdown-content z-50 mt-2 w-56 border border-base-300 bg-base-100" aria-label="{{ t.ui.menuNav }}">
+          <ul class="menu menu-lg w-full">
+            <li><a class="min-h-12 items-center" href="/en/#situations">{{ t.nav.situations }}</a></li>
+            <li><a class="min-h-12 items-center" href="/en/how-it-works/">{{ t.nav.how }}</a></li>
+            <li><a class="min-h-12 items-center" href="/en/pricing/">{{ t.nav.pricing }}</a></li>
+            <li><a class="min-h-12 items-center" href="/en/faq/">{{ t.nav.faq }}</a></li>
+          </ul>
         </nav>
       </details>
     </div>

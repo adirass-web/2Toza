@@ -1,13 +1,15 @@
-<footer class="border-t border-rule bg-paper">
-  <div class="wrap py-10 lg:py-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-    <a href="/en/" aria-label="{{ t.ui.homeLabel }}"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-12 w-auto"></a>
+<footer class="border-t border-base-300 bg-base-100">
+  <div class="footer wrap gap-6 py-10 md:footer-horizontal md:items-center md:justify-between lg:py-12">
+    <aside>
+      <a href="/en/" class="inline-flex min-h-11 items-center" aria-label="{{ t.ui.homeLabel }}"><img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-12 w-auto"></a>
+    </aside>
     <nav aria-label="{{ t.ui.footerNav }}">
-      <ul class="flex flex-wrap gap-x-7 gap-y-1 text-[1.0625rem]">
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/pricing/">{{ t.footer.pricing }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/faq/">{{ t.footer.faq }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/attorneys/">{{ t.footer.attorneys }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/conditions/">{{ t.footer.conditions }}</a></li>
-        <li><a class="inline-flex items-center min-h-11 link-nav" href="/en/about/">{{ t.footer.about }}</a></li>
+      <ul class="menu menu-lg menu-horizontal -ms-4 flex-wrap">
+        <li><a class="min-h-11 items-center" href="/en/pricing/">{{ t.footer.pricing }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/faq/">{{ t.footer.faq }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/attorneys/">{{ t.footer.attorneys }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/conditions/">{{ t.footer.conditions }}</a></li>
+        <li><a class="min-h-11 items-center" href="/en/about/">{{ t.footer.about }}</a></li>
       </ul>
     </nav>
   </div>

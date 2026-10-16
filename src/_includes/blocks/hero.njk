@@ -1,10 +1,26 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <h1>{{ block.heading }}</h1>
-  {% if block.lead %}<p>{{ block.lead }}</p>{% endif %}
-  {% if block.byline %}<p>{{ block.byline.name }}</p>
-  <p>{{ block.byline.tagline }}</p>{% endif %}
-  {{ links(block.actions) }}
-  {% if block.note %}<p>{{ block.note }}</p>{% endif %}
-  {% if block.print %}<button type="button" onclick="window.print()">{{ t.ui.print }}</button>{% endif %}
+{% from "blocks/_macros.njk" import actions with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="hero bg-base-100 py-8 lg:py-20">
+  <div class="hero-content wrap">
+    <div class="hero-grid grid w-full gap-x-16 gap-y-6">
+      <div class="lg:col-span-7 lg:row-start-1">
+        <h1 class="font-serif font-normal text-primary text-balance text-(length:--type-display-font-size) leading-(--type-display-line-height) tracking-(--type-display-letter-spacing)">{{ block.heading }}</h1>
+        {% if block.lead %}<p class="mt-5 max-w-xl text-lg leading-relaxed lg:mt-8 lg:text-xl">{{ block.lead }}</p>{% endif %}
+      </div>
+      {% if block.byline %}
+      <figure class="flex items-center gap-4 lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1 lg:block">
+        <div class="frame h-24 w-24 shrink-0 lg:h-auto lg:w-full {{ 'lg:aspect-4/5' if block.byline.variant == 'full' else 'lg:aspect-square' }}">
+          <img class="portrait" src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" alt="{{ t.ui.portraitAlt }}" fetchpriority="high">
+        </div>
+        <figcaption class="lg:mt-9">
+          <p class="font-serif text-xl text-primary lg:text-2xl">{{ block.byline.name }}</p>
+          <p class="text-muted leading-snug lg:text-base">{{ block.byline.tagline }}</p>
+        </figcaption>
+      </figure>
+      {% endif %}
+      <div class="lg:col-span-7 lg:row-start-2 lg:self-start">
+        {{ actions(block.actions) }}
+        {% if block.note %}<p class="mt-4 text-muted">{{ block.note }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
 </section>

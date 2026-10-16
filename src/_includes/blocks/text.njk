@@ -1,6 +1,10 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <h2>{{ block.heading }}</h2>
-  {{ block.body.html | safe }}
-  {{ links(block.links) }}
+{% from "blocks/_macros.njk" import links with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="section">
+  <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-16">
+    <h2 class="font-serif font-normal text-primary text-balance text-(length:--type-h2-font-size) leading-(--type-h2-line-height) tracking-(--type-h2-letter-spacing) lg:col-span-5">{{ block.heading }}</h2>
+    <div class="lg:col-span-6 lg:col-start-7">
+      <div class="md text-lg leading-relaxed lg:text-xl">{{ block.body.html | safe }}</div>
+      {% if block.links %}<div class="mt-4">{{ links(block.links) }}</div>{% endif %}
+    </div>
+  </div>
 </section>

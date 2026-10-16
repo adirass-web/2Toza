@@ -1,5 +1,9 @@
-{#- Shared by the reference block templates. link: a link or contact action ({ label, href, external, aria? }).
-    The `aria` text is the "opens in a new tab" hint; it sits in its own span so a style can hide it visually. -#}
-{% macro link(l) %}<a href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% if l.aria %} <span>{{ l.aria }}</span>{% endif %}{% endmacro %}
-{% macro links(list) %}{% if list and list.length %}<ul>{% for l in list %}<li>{{ link(l) }}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
-{% macro price(b) %}<data value="{{ b.price_value }}">{{ b.price }}</data>{% endmacro %}
+{#- Shared by the block templates (import with context: they read t.ui for the arrow glyphs).
+    link(l, dark): a link or contact action as a daisyUI link. kind "more" adds the arrow, "external" the external glyph; both mirror in RTL.
+    The `aria` hint ("opens in a new tab") stays in the DOM for screen readers only. -#}
+{% macro link(l, dark) %}<a class="link inline-flex min-h-11 items-center gap-1.5 {{ 'text-primary-content decoration-secondary' if dark else 'text-primary decoration-accent' }}" href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}{% if l.kind == 'more' %}<span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrow }}</span>{% elif l.kind == 'external' %}<span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrowExternal }}</span>{% endif %}{% if l.aria %}<span class="sr-only"> {{ l.aria }}</span>{% endif %}</a>{% endmacro %}
+{% macro links(list, dark) %}{% if list and list.length %}<ul class="flex flex-wrap gap-x-8">{% for l in list %}<li>{{ link(l, dark) }}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
+{#- actions(list, dark): contact channels as daisyUI buttons. The first is the lead (solid), the rest outlined. -#}
+{% macro actions(list, dark) %}<div class="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">{% for a in list %}<a class="btn btn-lg {% if loop.first %}col-span-2 sm:col-auto {{ 'border-base-100 bg-base-100 text-primary hover:bg-base-200' if dark else 'btn-primary' }}{% else %}{{ 'border-on-dark-border-strong bg-transparent text-primary-content hover:border-base-100 hover:bg-base-100 hover:text-primary' if dark else 'btn-outline' }}{% endif %}" href="{{ a.href }}"{% if a.external %} target="_blank" rel="noopener"{% endif %}>{{ a.label }}{% if a.aria %}<span class="sr-only"> {{ a.aria }}</span>{% endif %}</a>{% endfor %}</div>{% endmacro %}
+{#- price(b, cls): the amount as machine-readable <data>. -#}
+{% macro price(b, cls) %}<data class="{{ cls }}" value="{{ b.price_value }}">{{ b.price }}</data>{% endmacro %}

@@ -1,9 +1,13 @@
-{% from "blocks/_macros.njk" import link, links %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %}>
-  <h2>{{ block.heading }}</h2>
-  {% if block.lead %}<p>{{ block.lead }}</p>{% endif %}
-  <ul>
-    {% for item in block.items %}<li>{{ item }}</li>{% endfor %}
-  </ul>
-  {{ links(block.links) }}
+{% from "blocks/_macros.njk" import links with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="section bg-base-200">
+  <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-5">
+      <h2 class="font-serif font-normal text-primary text-balance text-(length:--type-h2-font-size) leading-(--type-h2-line-height) tracking-(--type-h2-letter-spacing)">{{ block.heading }}</h2>
+      {% if block.lead %}<p class="mt-6 max-w-md text-lg">{{ block.lead }}</p>{% endif %}
+      {% if block.links %}<div class="mt-4">{{ links(block.links) }}</div>{% endif %}
+    </div>
+    <ul class="list border-y border-base-300 text-base lg:col-span-7 lg:col-start-6">
+      {% for item in block.items %}<li class="list-row px-0 py-5 font-serif text-xl leading-snug text-primary after:border-base-300 lg:text-2xl">{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
 </section>
