@@ -28,6 +28,7 @@ blocks:
 
   - type: stages
     ref: stages
+    variant: compact
     line: Assess where personal and business access meet. Harden what is yours to change. {shared:common.verify_and_learn}
 
   - type: text

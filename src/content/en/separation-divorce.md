@@ -28,6 +28,7 @@ blocks:
 
   - type: stages
     ref: stages
+    variant: compact
     line: Assess what still connects you. Harden a setup for the life you are moving into. {shared:common.verify_and_learn}
 
   - type: text

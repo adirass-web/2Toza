@@ -28,6 +28,7 @@ blocks:
 
   - type: stages
     ref: stages
+    variant: compact
     line: Assess what family arrangements still connect. Harden a setup that fits your circumstances now. {shared:common.verify_and_learn}
 
   - type: text

@@ -32,6 +32,7 @@ blocks:
 
   - type: stages
     ref: stages
+    variant: compact
     line: Assess what can be checked. Harden what you decide to close, even if the original concern stays unexplained. {shared:common.verify_and_learn}
 
   - type: text

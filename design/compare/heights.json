@@ -231,7 +231,7 @@
   ]
  },
  "separation-divorce-d": {
-  "total": 3570,
+  "total": 3328,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -258,7 +258,7 @@
    },
    {
     "n": "how",
-    "h": 961,
+    "h": 719,
     "pt": 72,
     "pb": 72,
     "text": "Three stages, one person."
@@ -287,7 +287,7 @@
   ]
  },
  "business-dispute-d": {
-  "total": 3774,
+  "total": 3533,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -314,7 +314,7 @@
    },
    {
     "n": "how",
-    "h": 961,
+    "h": 719,
     "pt": 72,
     "pb": 72,
     "text": "Three stages, one person."
@@ -343,7 +343,7 @@
   ]
  },
  "inheritance-conflict-d": {
-  "total": 3673,
+  "total": 3460,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -370,7 +370,7 @@
    },
    {
     "n": "how",
-    "h": 961,
+    "h": 747,
     "pt": 72,
     "pb": 72,
     "text": "Three stages, one person."
@@ -399,7 +399,7 @@
   ]
  },
  "they-know-something-d": {
-  "total": 3893,
+  "total": 3680,
   "header": 73,
   "footer": 145,
   "blocks": [
@@ -433,7 +433,7 @@
    },
    {
     "n": "how",
-    "h": 961,
+    "h": 747,
     "pt": 72,
     "pb": 72,
     "text": "Three stages, one person."
@@ -763,7 +763,7 @@
   ]
  },
  "separation-divorce-m": {
-  "total": 4257,
+  "total": 4144,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -790,7 +790,7 @@
    },
    {
     "n": "how",
-    "h": 1059,
+    "h": 946,
     "pt": 32,
     "pb": 32,
     "text": "Three stages, one person."
@@ -819,7 +819,7 @@
   ]
  },
  "business-dispute-m": {
-  "total": 4463,
+  "total": 4350,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -846,7 +846,7 @@
    },
    {
     "n": "how",
-    "h": 1059,
+    "h": 946,
     "pt": 32,
     "pb": 32,
     "text": "Three stages, one person."
@@ -875,7 +875,7 @@
   ]
  },
  "inheritance-conflict-m": {
-  "total": 4385,
+  "total": 4272,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -902,7 +902,7 @@
    },
    {
     "n": "how",
-    "h": 1059,
+    "h": 946,
     "pt": 32,
     "pb": 32,
     "text": "Three stages, one person."
@@ -931,7 +931,7 @@
   ]
  },
  "they-know-something-m": {
-  "total": 4623,
+  "total": 4511,
   "header": 61,
   "footer": 245,
   "blocks": [
@@ -965,7 +965,7 @@
    },
    {
     "n": "how",
-    "h": 1087,
+    "h": 974,
     "pt": 32,
     "pb": 32,
     "text": "Three stages, one person."

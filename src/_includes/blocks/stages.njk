@@ -1,26 +1,27 @@
 {#- Flowbite stepper timeline (horizontal from md): a dot and a hairline above each stage. The drawings are the shared SVG partials. -#}
 {% from "blocks/_macros.njk" import section, lnk with context %}
+{% set compact = block.variant == 'compact' %}
 {% call section(block, 'dark', '') %}
-  {% if block.statement %}<p class="max-w-4xl font-serif text-2xl leading-display font-normal tracking-display text-balance text-paper sm:text-4xl lg:text-5xl">{{ block.statement }}</p>{% endif %}
+  {% if block.statement %}<p class="font-serif text-2xl leading-display font-normal tracking-display text-balance text-paper sm:text-4xl {{ 'max-w-5xl lg:text-4xl' if compact else 'max-w-4xl lg:text-5xl' }}">{{ block.statement }}</p>{% endif %}
   <h2 class="{{ 'mt-6 lg:mt-9' if block.statement else '' }} font-serif text-xl font-normal text-accent-on-dark lg:text-2xl">{{ block.heading }}</h2>
-  {% if block.line %}<p class="mt-2 max-w-2xl text-lg text-on-dark-text">{{ block.line }}</p>{% endif %}
-  <ol class="mt-6 grid gap-5 md:mt-10 md:grid-cols-3 md:gap-0">
+  {% if block.line %}<p class="mt-2 text-lg text-on-dark-text {{ 'max-w-4xl' if compact else 'max-w-2xl' }}">{{ block.line }}</p>{% endif %}
+  <ol class="{{ 'mt-4 grid gap-3 md:mt-6 md:grid-cols-3 md:gap-0' if compact else 'mt-6 grid gap-5 md:mt-10 md:grid-cols-3 md:gap-0' }}">
     {% for stage in block.items %}
-    <li class="relative flex items-center gap-5 md:block md:pe-10">
-      <div class="mb-8 hidden items-center md:flex" aria-hidden="true"><span class="size-3 shrink-0 rounded-full bg-accent-on-dark"></span><span class="h-px w-full bg-on-dark-rule"></span></div>
-      <div class="relative w-30 shrink-0 md:mb-8 md:w-full md:max-w-60" dir="ltr">
+    <li class="relative flex items-center {{ 'gap-4 md:block md:pe-6' if compact else 'gap-5 md:block md:pe-10' }}">
+      <div class="{{ 'mb-4' if compact else 'mb-8' }} hidden items-center md:flex" aria-hidden="true"><span class="size-3 shrink-0 rounded-full bg-accent-on-dark"></span><span class="h-px w-full bg-on-dark-rule"></span></div>
+      <div class="relative shrink-0 {{ 'w-20 md:mb-4 md:w-full md:max-w-32' if compact else 'w-30 md:mb-8 md:w-full md:max-w-60' }}" dir="ltr">
         {% set alt = stage.image_alt %}{% include "drawing-" + stage.key + ".njk" %}
-        {% if stage.key == 'verify' and block.record_date %}<p class="absolute inset-e-0 inset-bs-1/6 w-1/4 text-end font-serif text-sm leading-tight text-accent-on-dark md:text-lg" aria-hidden="true">{{ block.record_date }}</p>{% endif %}
+        {% if stage.key == 'verify' and block.record_date %}<p class="absolute inset-e-0 inset-bs-1/6 text-end font-serif text-sm leading-tight text-accent-on-dark {{ 'w-1/3 md:text-sm' if compact else 'w-1/4 md:text-lg' }}" aria-hidden="true">{{ block.record_date }}</p>{% endif %}
       </div>
       <div>
-        <h3 class="font-serif text-2xl font-normal text-paper lg:text-3xl">{{ stage.name }}</h3>
-        <p class="mt-1.5 max-w-xs text-on-dark-text lg:mt-3">{{ stage.line }}</p>
+        <h3 class="font-serif font-normal text-paper {{ 'text-xl lg:text-2xl' if compact else 'text-2xl lg:text-3xl' }}">{{ stage.name }}</h3>
+        <p class="max-w-xs text-on-dark-text {{ 'mt-1 lg:mt-1.5' if compact else 'mt-1.5 lg:mt-3' }}">{{ stage.line }}</p>
       </div>
     </li>
     {% endfor %}
   </ol>
   {% if block.price_strip %}
-  <div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.price_strip %}{% set stripTone = 'dark' %}{% include "blocks/price-strip.njk" %}{% set stripTone = '' %}{% set block = outer %}</div>
+  <div class="{{ 'mt-5 lg:mt-8' if compact else 'mt-8 lg:mt-12' }}">{% set outer = block %}{% set block = outer.price_strip %}{% set stripTone = 'dark' %}{% include "blocks/price-strip.njk" %}{% set stripTone = '' %}{% set block = outer %}</div>
   {% endif %}
   {% if block.link %}<p class="mt-4">{{ lnk(block.link, 'dark') }}</p>{% endif %}
 {% endcall %}
