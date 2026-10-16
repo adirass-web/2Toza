@@ -41,5 +41,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-035 | 2026-10-16 | Facts (question-line days, key counts, credit window) are referenced from facts.json in content files, not typed. |
 | V-036 | 2026-10-16 | Sentences used on more than one page live once in _shared.yaml. |
 | V-037 | 2026-10-16 | One tokens file (tokens/tokens.json, DTCG) is the single source of colours, type, spacing and radii; styles/tokens.css is generated. |
+| V-038 | 2026-10-16 | No paid licences: only free, MIT/OFL-licensed code and fonts (Flowbite core or daisyUI, Tailwind, Eleventy, fontsource). No Flowbite Pro, paid blocks, store templates or Tailwind Plus. Component library finalists: Flowbite 4 and daisyUI 5; owner picks after a three-page comparison. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.
