@@ -1,0 +1,887 @@
+{
+  "$comment": "Toza v2 semantic content model. Machine-readable source for scripts/check-content.mjs; documented in content/CONTENT-MODEL.md. Layout-free: no CSS, grid or component-library terms. max = characters of the RESOLVED, reader-visible text (tokens expanded, Markdown stripped).",
+  "version": 1,
+  "kinds": {
+    "text": "Plain text, one line, no Markdown. Tokens allowed.",
+    "md": "Markdown (paragraphs, lists, inline links). Tokens allowed.",
+    "bool": "true / false",
+    "enum": "One of `values`",
+    "id": "Anchor slug: lowercase letters, digits, hyphen",
+    "href": "Internal path (/en/...), in-page anchor (#...) or https URL",
+    "action": "Contact channel key from src/_data/contact.json",
+    "price_key": "Key of src/_data/facts.json prices",
+    "stage_key": "assess | harden | verify",
+    "list": "Array of `of`",
+    "object": "Object of named `type`",
+    "block": "Nested block of type `block`, inline or {ref: <shared block>}",
+    "labels": "Map of page-local chrome strings (text)"
+  },
+  "page": {
+    "page": {
+      "kind": "id",
+      "required": true
+    },
+    "title": {
+      "kind": "text",
+      "required": true,
+      "max": 50
+    },
+    "description": {
+      "kind": "text",
+      "required": true,
+      "max": 190
+    },
+    "permalink": {
+      "kind": "href",
+      "required": true
+    },
+    "lang": {
+      "kind": "enum",
+      "values": [
+        "en",
+        "he"
+      ],
+      "required": true
+    },
+    "dir": {
+      "kind": "enum",
+      "values": [
+        "ltr",
+        "rtl"
+      ],
+      "required": true
+    },
+    "labels": {
+      "kind": "labels",
+      "max": 20
+    },
+    "blocks": {
+      "kind": "list",
+      "of": {
+        "kind": "pageblock"
+      },
+      "required": true,
+      "min_items": 1
+    }
+  },
+  "types": {
+    "link": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 60
+      },
+      "href": {
+        "kind": "href"
+      },
+      "action": {
+        "kind": "action"
+      },
+      "kind": {
+        "kind": "enum",
+        "values": [
+          "plain",
+          "more",
+          "external"
+        ]
+      }
+    },
+    "door": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "max": 40
+      },
+      "line": {
+        "kind": "text",
+        "required": true,
+        "max": 90
+      },
+      "href": {
+        "kind": "href",
+        "required": true
+      }
+    },
+    "stage": {
+      "key": {
+        "kind": "stage_key",
+        "required": true
+      },
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 16
+      },
+      "line": {
+        "kind": "text",
+        "required": true,
+        "max": 130
+      },
+      "image_alt": {
+        "kind": "text",
+        "required": true,
+        "max": 70
+      }
+    },
+    "step": {
+      "key": {
+        "kind": "stage_key",
+        "required": true
+      },
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 16
+      },
+      "image_alt": {
+        "kind": "text",
+        "required": true,
+        "max": 70
+      },
+      "heading": {
+        "kind": "text",
+        "required": true,
+        "max": 130
+      },
+      "statement": {
+        "kind": "text",
+        "max": 160
+      },
+      "body": {
+        "kind": "md",
+        "required": true,
+        "max": 320
+      },
+      "keep": {
+        "kind": "text",
+        "required": true,
+        "max": 150
+      }
+    },
+    "band": {
+      "caption": {
+        "kind": "text",
+        "required": true,
+        "max": 25
+      },
+      "stages": {
+        "kind": "list",
+        "of": {
+          "kind": "stage_key"
+        }
+      },
+      "items": {
+        "kind": "list",
+        "of": {
+          "kind": "object",
+          "type": "price_item"
+        },
+        "required": true,
+        "min_items": 1
+      }
+    },
+    "price_item": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 25
+      },
+      "price_key": {
+        "kind": "price_key",
+        "required": true
+      }
+    },
+    "summary_item": {
+      "tag": {
+        "kind": "text",
+        "max": 20
+      },
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 25
+      },
+      "price_key": {
+        "kind": "price_key",
+        "required": true
+      },
+      "note": {
+        "kind": "text",
+        "required": true,
+        "max": 90
+      }
+    },
+    "tier": {
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 33
+      },
+      "price_key": {
+        "kind": "price_key",
+        "required": true
+      },
+      "for": {
+        "kind": "text",
+        "required": true,
+        "max": 120
+      },
+      "items": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 110
+        },
+        "max_items": 6
+      }
+    },
+    "document": {
+      "stamp": {
+        "kind": "text",
+        "required": true,
+        "max": 22
+      },
+      "title": {
+        "kind": "text",
+        "required": true,
+        "max": 30
+      },
+      "subtitle": {
+        "kind": "text",
+        "max": 40
+      },
+      "date": {
+        "kind": "text",
+        "max": 21
+      },
+      "entries": {
+        "kind": "list",
+        "of": {
+          "kind": "object",
+          "type": "document_entry"
+        },
+        "required": true
+      }
+    },
+    "document_entry": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 30
+      },
+      "text": {
+        "kind": "text",
+        "max": 50
+      },
+      "items": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 50
+        }
+      },
+      "ordered": {
+        "kind": "bool"
+      },
+      "redacted": {
+        "kind": "bool"
+      }
+    },
+    "faq_item": {
+      "id": {
+        "kind": "id",
+        "required": true
+      },
+      "question": {
+        "kind": "text",
+        "required": true,
+        "max": 110
+      },
+      "answer": {
+        "kind": "md",
+        "required": true,
+        "max": 660
+      },
+      "open": {
+        "kind": "bool"
+      },
+      "table": {
+        "kind": "object",
+        "type": "table"
+      },
+      "after": {
+        "kind": "md",
+        "max": 210
+      },
+      "action": {
+        "kind": "action"
+      }
+    },
+    "table": {
+      "caption": {
+        "kind": "text",
+        "required": true,
+        "max": 70
+      },
+      "head": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 20
+        },
+        "required": true
+      },
+      "rows": {
+        "kind": "list",
+        "of": {
+          "kind": "object",
+          "type": "table_row"
+        },
+        "required": true
+      }
+    },
+    "table_row": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 50
+      },
+      "cells": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 80
+        },
+        "required": true
+      }
+    },
+    "price_table": {
+      "caption": {
+        "kind": "text",
+        "required": true,
+        "max": 30
+      },
+      "head": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 17
+        },
+        "required": true
+      },
+      "rows": {
+        "kind": "list",
+        "of": {
+          "kind": "object",
+          "type": "price_row"
+        },
+        "required": true
+      }
+    },
+    "price_row": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 80
+      },
+      "for": {
+        "kind": "text",
+        "required": true,
+        "max": 60
+      },
+      "price_key": {
+        "kind": "price_key",
+        "required": true
+      },
+      "price_format": {
+        "kind": "text",
+        "max": 25,
+        "must_contain": "{amount}"
+      }
+    }
+  },
+  "blocks": {
+    "hero": {
+      "summary": "Page opening: the promise (h1), one supporting sentence, who does the work, the first actions.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 80
+        },
+        "lead": {
+          "kind": "text",
+          "max": 270
+        },
+        "byline": {
+          "kind": "enum",
+          "values": [
+            "full",
+            "short",
+            "none"
+          ],
+          "required": true
+        },
+        "actions": {
+          "kind": "list",
+          "of": {
+            "kind": "action"
+          },
+          "required": true,
+          "max_items": 3
+        },
+        "note": {
+          "kind": "text",
+          "max": 40
+        },
+        "print": {
+          "kind": "bool"
+        }
+      }
+    },
+    "situation-doors": {
+      "summary": "Entry points by life situation, each leading to its page.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "door"
+          },
+          "required": true,
+          "min_items": 2,
+          "max_items": 6
+        },
+        "aside": {
+          "kind": "text",
+          "max": 90
+        }
+      }
+    },
+    "recognition": {
+      "summary": "\"Does this sound familiar?\" — concrete signals the reader recognises in their own life.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 70
+        },
+        "lead": {
+          "kind": "text",
+          "max": 220
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "text",
+            "max": 180
+          },
+          "required": true,
+          "min_items": 2,
+          "max_items": 6
+        },
+        "links": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "link"
+          }
+        }
+      }
+    },
+    "text": {
+      "summary": "A titled passage of prose, optionally followed by links.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 80
+        },
+        "body": {
+          "kind": "md",
+          "required": true,
+          "max": 430
+        },
+        "links": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "link"
+          },
+          "max_items": 3
+        }
+      }
+    },
+    "letter": {
+      "summary": "First-person note, signed.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 30
+        },
+        "body": {
+          "kind": "md",
+          "required": true,
+          "max": 760
+        },
+        "signature": {
+          "kind": "text",
+          "required": true,
+          "max": 30
+        }
+      }
+    },
+    "method-statement": {
+      "summary": "The method/credential statement, with optional framing heading, explanation and proof links.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "max": 80
+        },
+        "statement": {
+          "kind": "text",
+          "required": true,
+          "max": 160
+        },
+        "body": {
+          "kind": "md",
+          "max": 260
+        },
+        "links": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "link"
+          },
+          "max_items": 3
+        }
+      }
+    },
+    "stages": {
+      "summary": "The three-stage method (Assess, Harden, Verify) as a summary, with the path to prices.",
+      "fields": {
+        "statement": {
+          "kind": "text",
+          "required": true,
+          "max": 160
+        },
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "line": {
+          "kind": "text",
+          "max": 190
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "stage"
+          },
+          "required": true,
+          "min_items": 3,
+          "max_items": 3
+        },
+        "record_date": {
+          "kind": "text",
+          "max": 21
+        },
+        "price_strip": {
+          "kind": "block",
+          "block": "price-strip"
+        },
+        "link": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    },
+    "steps": {
+      "summary": "The three stages in detail: what happens and what the client keeps from each.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "lead": {
+          "kind": "text",
+          "max": 40
+        },
+        "keep_label": {
+          "kind": "text",
+          "max": 20
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "step"
+          },
+          "required": true,
+          "min_items": 2,
+          "max_items": 6
+        },
+        "record_date": {
+          "kind": "text",
+          "max": 21
+        }
+      }
+    },
+    "price-strip": {
+      "summary": "Maps stages to what they cost: one band per span of stages, each with priced items.",
+      "fields": {
+        "label": {
+          "kind": "text",
+          "max": 40
+        },
+        "stage_names": {
+          "kind": "bool"
+        },
+        "bands": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "band"
+          },
+          "required": true
+        }
+      }
+    },
+    "price-summary": {
+      "summary": "The two anchor prices (first step, Personal Shield) with one condition line each, and a link to all tiers.",
+      "fields": {
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "summary_item"
+          },
+          "required": true,
+          "max_items": 3
+        },
+        "link": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    },
+    "offer": {
+      "summary": "The first step as a purchasable offer: name, price, what it includes, how it counts toward protection.",
+      "fields": {
+        "tag": {
+          "kind": "text",
+          "max": 20
+        },
+        "heading": {
+          "kind": "text",
+          "max": 60
+        },
+        "name": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "price_key": {
+          "kind": "price_key",
+          "required": true
+        },
+        "body": {
+          "kind": "text",
+          "max": 240
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "text",
+            "max": 150
+          },
+          "max_items": 5
+        },
+        "credit": {
+          "kind": "text",
+          "max": 90
+        },
+        "link": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    },
+    "tiers": {
+      "summary": "Protection tiers with prices; `detail: full` lists inclusions, `summary` gives one line each.",
+      "fields": {
+        "detail": {
+          "kind": "enum",
+          "values": [
+            "full",
+            "summary"
+          ]
+        },
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "heading_visible": {
+          "kind": "bool"
+        },
+        "statement": {
+          "kind": "text",
+          "max": 340
+        },
+        "first_step": {
+          "kind": "block",
+          "block": "offer"
+        },
+        "tiers": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "tier"
+          },
+          "required": true,
+          "min_items": 1,
+          "max_items": 4
+        },
+        "notes": {
+          "kind": "list",
+          "of": {
+            "kind": "md",
+            "max": 160
+          }
+        },
+        "link": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    },
+    "specimen": {
+      "summary": "An illustrative deliverable (the exposure summary) shown as a document, with its caveat.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "document": {
+          "kind": "object",
+          "type": "document",
+          "required": true
+        },
+        "caption": {
+          "kind": "text",
+          "required": true,
+          "max": 90
+        }
+      }
+    },
+    "faq-group": {
+      "summary": "A titled group of questions and answers; answers are Markdown.",
+      "fields": {
+        "nav_label": {
+          "kind": "text",
+          "required": true,
+          "max": 33
+        },
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "faq_item"
+          },
+          "required": true,
+          "min_items": 1
+        },
+        "link": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    },
+    "terms-section": {
+      "summary": "A numbered section of commercial terms (or the price table).",
+      "fields": {
+        "nav_label": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "intro": {
+          "kind": "md",
+          "max": 300
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "md",
+            "max": 600
+          }
+        },
+        "price_table": {
+          "kind": "object",
+          "type": "price_table"
+        },
+        "notes": {
+          "kind": "md",
+          "max": 160
+        }
+      }
+    },
+    "contact": {
+      "summary": "The invitation to make contact: heading, reassurance, channel actions, optional related link.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 50
+        },
+        "body": {
+          "kind": "text",
+          "max": 120
+        },
+        "actions": {
+          "kind": "list",
+          "of": {
+            "kind": "action"
+          },
+          "required": true,
+          "min_items": 1,
+          "max_items": 3
+        },
+        "note": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    }
+  },
+  "common_block_fields": {
+    "type": "Block type (required)",
+    "ref": "Name of a block in src/content/en/_shared.yaml `blocks:`; local fields override it",
+    "id": "Optional anchor slug (required for faq-group and terms-section)"
+  },
+  "required_ids": [
+    "faq-group",
+    "terms-section"
+  ]
+}

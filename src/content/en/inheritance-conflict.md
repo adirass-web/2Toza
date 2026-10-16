@@ -1,0 +1,48 @@
+---
+page: inheritance-conflict
+title: Inheritance conflict — Toza
+description: Help with an account, years ago, may still connect someone to your correspondence. Dr. Lior Tabansky works through it with you, in person.
+permalink: /en/inheritance-conflict/index.html
+lang: en
+dir: ltr
+
+blocks:
+  - type: hero
+    heading: Family access is still access when trust breaks.
+    lead: Help with an account, years ago, may still connect someone to your correspondence. Dr. Lior Tabansky works through it with you, in person.
+    byline: short
+    actions: [whatsapp, signal, callback]
+
+  - type: recognition
+    heading: Access shared in good faith can still matter.
+    lead: Some of these arrangements still help you. Dr. Tabansky explains what each one allows and what ending it would mean. You decide what to change.
+    items:
+      - A relative listed as the recovery contact for your email.
+      - A shared family cloud folder that still holds your documents.
+      - A password shared years ago, when someone helped with an account.
+      - Bank or card alerts that still go to a shared family email.
+
+  - type: text
+    heading: Understand the connections before changing them.
+    body: One password change leaves a shared service or recovery setting as it was, and ending an arrangement can cut access you rely on. You agree the sequence together before anything changes.
+
+  - type: stages
+    ref: stages
+    line: Assess what family arrangements still connect. Harden a setup that fits your circumstances now. Verify it works, and learn to run it.
+
+  - type: text
+    heading: Your attorney can be involved.
+    body: With your authorization, you receive an attorney-friendly summary of the work and what remains, and timing can be coordinated with counsel.
+
+  - type: price-summary
+    ref: price_summary
+
+  - type: method-statement
+    ref: method
+
+  - type: contact
+    ref: contact
+    note:
+      label: Questions about inheritance and family access
+      href: /en/faq/#e
+---

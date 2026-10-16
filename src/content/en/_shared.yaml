@@ -1,0 +1,204 @@
+# Toza v2 — shared editorial copy (English).
+#
+# Rule (see content/CONTENT-MODEL.md §5):
+#   * Page file (src/content/en/<page>.md) — copy that appears on one page only.
+#   * This file — editorial copy that appears on more than one page: the person
+#     byline, the method statement, offer names and descriptions, price labels,
+#     the three stages, the exposure-summary specimen and the contact block.
+#   * src/_data/i18n/en.json `ui`, `nav`, `footer`, `buttons` — UI chrome: words
+#     that operate the interface (navigation, footer links, action buttons,
+#     accessibility-only labels, toggles, glyphs). Not duplicated here.
+#
+# Transition: the templates still read the editorial strings from i18n/en.json.
+# `npm run check:content` fails if any editorial i18n string is missing from
+# this file, so the two cannot drift before the wiring step removes them.
+#
+# Tokens: {price:key} {fact:path} {numword:path} {shared:path} {ui:path}.
+# Never type a price; facts live in src/_data/facts.json.
+
+person:
+  name: Dr. Lior Tabansky
+  tagline: In person · With you present · You control your credentials
+  tagline_short: In person · You control your credentials
+
+method: Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
+
+labels:
+  start_here: Start here
+  first_step: First step
+  from: from            # i18n price.from — not shown on any page at present
+  conditions: Conditions
+  all_tiers: All protection tiers
+  how_it_works: How it works
+  about: About Dr. Tabansky
+
+offers:
+  assessment:
+    name: Private Exposure Assessment
+    body: "A senior check-up of your digital life: half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue."
+    credit: "Counts in full toward your protection if you continue within {fact:credit.windowDays} days."
+    credit_short: "Counts in full toward your protection within {fact:credit.windowDays} days."
+  shield:
+    name: Personal Shield
+    short: Personal Shield
+    for: For one person. Your phone, computer, accounts and home network hardened around your risks.
+    items:
+      - Two security keys, configured and tested
+      - A follow-up visit after about four weeks
+      - Questions answered by WhatsApp or Signal for 60 days
+    home_line: Fixed and agreed in writing before any work, first step included.
+  two:
+    name: Personal Shield for Two
+    short: for Two
+    for: For you and one other person.
+    items:
+      - Each person's phone, computer and accounts
+      - Your home network · four security keys
+      - Follow-up visit · 60 days of answered questions
+  inner:
+    name: Inner Circle
+    for: For a household of up to four.
+    items:
+      - Everyone's phones, computers and accounts, each kept private
+      - Your home network · eight security keys
+      - Follow-up visit · 60 days of answered questions · review visit at twelve months
+  under_all: The first step is included. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.
+  larger: "Larger households, several residences or household staff: one fixed price, set out after the first step, from {price:largerFrom}."
+  care: "After the 60 days: Annual Care for past clients, from {price:annualCareFrom} a year."
+
+pricing:
+  heading: Fees
+  lead: One first step, then the protection that fits your household. Each price is fixed and agreed in writing before work begins.
+  method: Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
+
+stages:
+  heading: Three stages, one person.
+  names:
+    assess: Assess
+    harden: Harden
+    verify: Verify
+  lines:
+    assess: Your threat model, your risks in order, and urgent first aid. Typically four hours.
+    harden: Settings, accounts and recovery rebuilt around your risks. Security keys supplied and configured.
+    verify: Changes tested and checked, and you are taught to use them. A private dated record of the work.
+  image_alts:
+    assess: A laptop, a phone and a one-page summary on a table
+    harden: Two hardware security keys
+    verify: A closed record folder with a dated label
+  record_date: ["15 Oct", "2026"]
+
+# Reusable blocks. A page uses one with `- type: <type>` + `ref: <name>`,
+# and may override individual fields (e.g. `line`, `note`, `actions`).
+blocks:
+
+  stages:
+    type: stages
+    id: how
+    statement: "{shared:method}"
+    heading: "{shared:stages.heading}"
+    items:
+      - key: assess
+        name: "{shared:stages.names.assess}"
+        line: "{shared:stages.lines.assess}"
+        image_alt: "{shared:stages.image_alts.assess}"
+      - key: harden
+        name: "{shared:stages.names.harden}"
+        line: "{shared:stages.lines.harden}"
+        image_alt: "{shared:stages.image_alts.harden}"
+      - key: verify
+        name: "{shared:stages.names.verify}"
+        line: "{shared:stages.lines.verify}"
+        image_alt: "{shared:stages.image_alts.verify}"
+    record_date: "{shared:stages.record_date}"
+    price_strip:
+      ref: price_strip
+    link:
+      label: "{shared:labels.how_it_works}"
+      href: /en/how-it-works/
+
+  price_strip:
+    type: price-strip
+    stage_names: false
+    bands:
+      - caption: Assess
+        stages: [assess]
+        items:
+          - label: "{shared:labels.first_step}"
+            price_key: assessment
+      - caption: Harden + Verify
+        stages: [harden, verify]
+        items:
+          - label: "{shared:offers.shield.short}"
+            price_key: personalShield
+          - label: "{shared:offers.two.short}"
+            price_key: shieldForTwo
+          - label: "{shared:offers.inner.name}"
+            price_key: innerCircle
+
+  price_summary:
+    type: price-summary
+    items:
+      - tag: "{shared:labels.start_here}"
+        name: "{shared:labels.first_step}"
+        price_key: assessment
+        note: "{shared:offers.assessment.credit_short}"
+      - name: "{shared:offers.shield.name}"
+        price_key: personalShield
+        note: "{shared:offers.shield.home_line}"
+    link:
+      label: "{shared:labels.all_tiers}"
+      href: /en/pricing/
+      kind: more
+
+  method:
+    type: method-statement
+    statement: "{shared:method}"
+    links:
+      - label: "{ui:buttons.profile}"
+        action: profile
+        kind: external
+
+  specimen:
+    type: specimen
+    heading: What you take home after the first visit.
+    document:
+      stamp: Confidential
+      title: Exposure summary
+      subtitle: "{shared:offers.assessment.name}"
+      date: "{shared:stages.record_date}"
+      entries:
+        - label: Your circumstances
+          redacted: true
+        - label: Reviewed
+          text: Devices, accounts, recovery routes
+        - label: Found and changed
+          items:
+            - Recovery email updated
+            - Old tablet signed out
+        - label: Remaining
+          text: Shared family album, kept by choice
+        - label: Ordered next steps
+          ordered: true
+          items:
+            - Move recovery to your own number
+            - Review location sharing
+            - Set up security keys
+    caption: Illustrative example. Your summary reflects your own circumstances.
+
+  offer_first_step:
+    type: offer
+    tag: "{shared:labels.start_here}"
+    name: "{shared:offers.assessment.name}"
+    price_key: assessment
+    credit: "{shared:offers.assessment.credit}"
+    body: "{shared:offers.assessment.body}"
+    link:
+      label: "{shared:labels.conditions}"
+      href: /en/conditions/
+      kind: more
+
+  contact:
+    type: contact
+    heading: Start with a private conversation.
+    body: Dr. Tabansky replies personally. The first conversation is free and commits you to nothing.
+    actions: [whatsapp, signal, callback]

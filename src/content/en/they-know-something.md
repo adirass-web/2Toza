@@ -1,0 +1,56 @@
+---
+page: they-know-something
+title: Someone knows something — Toza
+description: You don't have to prove how it happened before acting. Dr. Lior Tabansky examines your devices and accounts with you and gives urgent first aid.
+permalink: /en/they-know-something/index.html
+lang: en
+dir: ltr
+
+blocks:
+  - type: hero
+    heading: Someone seems to know something private.
+    lead: You don't have to prove how it happened before acting. Dr. Lior Tabansky examines your devices and accounts with you and gives urgent first aid.
+    byline: short
+    actions: [whatsapp, signal, callback]
+
+  - type: recognition
+    heading: Start with what can be checked.
+    lead: Exposure can run through a connected device or service, beyond the account you first suspect. Dr. Tabansky shows what each one reveals or allows, and what to change now.
+    items:
+      - Devices still signed in to your messages or email.
+      - Location settings that share where you are.
+      - An app or profile on your phone that you don't recognize.
+      - Public details and old online trails that reveal more together.
+
+  - type: text
+    heading: Urgent first aid on the spot.
+    body: With your approval, pressing problems are handled during the first step, including removing a malicious app or profile where that can be done safely.
+
+  - type: text
+    heading: Understand the effects before making isolated changes.
+    body: Changing a password may leave another session or recovery route open, and deleting an account can affect services you still need. You agree the sequence together before anything changes.
+
+  - type: stages
+    ref: stages
+    line: Assess what can be checked. Harden what you decide to close, even if the original concern stays unexplained. Verify it works, and learn to run it.
+
+  - type: text
+    heading: Urgent visits.
+    body: Arrival within four hours of acceptance and payment, when available. Surcharge applies.
+    links:
+      - label: Urgent terms
+        href: /en/conditions/#urgent
+        kind: more
+
+  - type: price-summary
+    ref: price_summary
+
+  - type: method-statement
+    ref: method
+
+  - type: contact
+    ref: contact
+    note:
+      label: Questions about proof and evidence
+      href: /en/faq/#e
+---
