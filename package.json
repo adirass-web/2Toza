@@ -1,0 +1,12 @@
+{
+  "name": "toza-radical",
+  "private": true,
+  "description": "Toza radical redesign: concept boards (orphan branch design/radical). Preview only, noindex.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-copy.mjs",
+    "export-copy": "node scripts/export-copy.mjs"
+  },
+  "devDependencies": { "htmlparser2": "7.2.0" },
+  "engines": { "node": ">=22" }
+}
