@@ -1,5 +1,5 @@
 {#- FAQ group: Flowbite flush accordion look on native <details>/<summary> (keyboard-usable without JS). The first group opens the page grid with the group navigation; the last one closes it. -#}
-{% from "blocks/_macros.njk" import h2, lnk, btn, links %}
+{% from "blocks/_macros.njk" import h2, lnk, btn, links with context %}
 {% set prev = blocks[loop.index0 - 1] %}{% set next = blocks[loop.index0 + 1] %}
 {% if not prev or prev.type != 'faq-group' %}
 <div class="mx-auto grid w-full max-w-wrap gap-8 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-28">

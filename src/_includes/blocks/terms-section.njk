@@ -1,5 +1,5 @@
 {#- Numbered terms: Flowbite table (prices) and ruled rows (terms). The first section opens the page grid with the Flowbite sidebar-style contents list (hidden when printed); the last one closes it. Numbers are CSS counters (see custom.css). -#}
-{% from "blocks/_macros.njk" import price, lnk %}
+{% from "blocks/_macros.njk" import price, lnk with context %}
 {% set prev = blocks[loop.index0 - 1] %}{% set next = blocks[loop.index0 + 1] %}
 {% if not prev or prev.type != 'terms-section' %}
 <div class="terms-doc mx-auto grid w-full max-w-wrap gap-10 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-24 print:block print:px-0">

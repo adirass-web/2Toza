@@ -76,7 +76,7 @@ The FAQ question and answer headings are anchors: the link opens that exact ques
 | N20 | Question "Can you remove spyware or a malicious app?": last sentence of the answer ([open](https://toza-v2.pages.dev/en/faq/#b5)) | Removing it does not prove who installed it or how. | new | |
 | N21 | Question "What does the 60-day question line cover?": first sentence of the answer ([open](https://toza-v2.pages.dev/en/faq/#c5)) | For 60 days from completion of the tier's work, you can send questions by WhatsApp or Signal and receive an answer within one working day. | needs review — Default (a). | |
 | N22 | Question "How does referral work commercially?": second sentence of the answer ([open](https://toza-v2.pages.dev/en/faq/#f4)) | Amounts and terms are in a one-page agreement. | needs review — Default (c). | |
-| N23 | Link at the end of "Prices and timing" ([open](https://toza-v2.pages.dev/en/faq/#g)) | All terms: Conditions | changed since draft — Earlier draft had an arrow after the words. The arrow does not show on the site at present. | |
+| N23 | Link at the end of "Prices and timing" ([open](https://toza-v2.pages.dev/en/faq/#g)) | All terms: Conditions → | new — The arrow after the words is now shown (it was missing; fixed 18 Oct). | |
 
 ## Conditions
 
