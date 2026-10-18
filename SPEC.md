@@ -95,3 +95,15 @@ All five must also avoid:
 
 ## 10. Open
 - None.
+
+## 11. v0.4 additions (18 Oct, 13:28–13:48)
+| # | Decision |
+|---|---|
+| D21 | Scope cut to three directions: 2 Plates, 3 Still life, 4 Access map. 1 Dossier and 5 Conversation dropped. |
+| D22 | Design engine: `leonxlnx/taste-skill` (tasteskill v2, @f624f37), core skill rather than its redesign skill (that one forbids rewriting from scratch). Directions dealt by its `draw.mjs`, quiet tone. Mapping: 2 → *The quiet instrument* (finance), 3 → *The split stage* (health), 4 → *The product performs* (finance). |
+| D23 | Motion follows PFD R3 (one quiet motion at most), overriding the skill's motion floor. The inspector's `still-page` FAIL is accepted. |
+| D24 | Real photographs now, from free stock (Unsplash License), credited; they replace the marked placeholders of D13. |
+| D25 | Every typeface must set both Hebrew and English in one family: Bona Nova (2), Noto Serif Hebrew (3), IBM Plex Sans Hebrew (4). These replace the dealt EB Garamond, Literata and General Sans. |
+| D26 | The dark palette dealt to direction 4 is redrawn (PFD R2: dark reads as threat). Result: *Putty and black*, with teal accent. |
+| D27 | The skill's house rule applies: headlines at most two lines at every width. The frozen H1 is sized to fit. |
+| D28 | Idea sentences, as proposed 13:44: 2 restraint as *tozasu*; 3 an ordinary moment kept in view; 4 her own words, closed link by link. |

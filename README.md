@@ -8,6 +8,7 @@ Preview: https://design-radical.toza-v2.pages.dev (noindex).
 - `copy/source/` — frozen content files from `adirass-web/2toza` main @ `b3efb35`. Do not edit.
 - `copy/strings.json` — resolved copy of every page, exported from a build of that commit.
 - `site/` — the boards (static HTML/CSS) and the comparison page.
+- `review/` — inspector screenshots and the taste-skill direction sheets.
 
 Commands: `npm ci` · `npm run check` (copy parity: every visible board string must exist in the frozen copy).
 Re-export copy only on an owner decision: build 2toza at the new commit, then `npm run export-copy -- <path>/_site <commit>`.

@@ -15,7 +15,7 @@ export function collect(html) {
       return;
     }
     if (!n.children) return;
-    if (n.type === "tag" && SKIP.has(n.name)) {
+    if (n.type === "style" || n.type === "script" || SKIP.has(n.name)) {
       // aria/title text inside SVG still counts
       return;
     }
@@ -36,7 +36,7 @@ export function collect(html) {
 
 function textOf(n) {
   if (n.type === "text") return n.data;
-  if (!n.children || (n.type === "tag" && SKIP.has(n.name))) return "";
+  if (!n.children || n.type === "style" || n.type === "script" || SKIP.has(n.name)) return "";
   // keep a space between block children so words do not fuse
   return n.children.map(textOf).join(" ");
 }

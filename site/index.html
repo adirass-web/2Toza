@@ -4,21 +4,74 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Toza — five directions (concept boards)</title>
+<title>Toza — three directions</title>
 <style>
-  body{font:16px/1.5 system-ui,sans-serif;margin:0;padding:3rem 1rem;max-width:44rem;margin-inline:auto;color:#222;background:#fafafa}
-  h1{font-weight:500;font-size:1.6rem} li{margin-block:.4rem} .muted{color:#666}
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-hebrew-latin-400-normal.woff2) format("woff2");font-weight:400}
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-hebrew-latin-500-normal.woff2) format("woff2");font-weight:500}
+:root{--bg:#f4f4f2;--ink:#151515;--muted:#555}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Plex",system-ui,sans-serif}
+a{color:inherit}
+header{padding:4rem clamp(1rem,4vw,3rem) 2rem;max-inline-size:62rem}
+h1{font-weight:500;font-size:clamp(2rem,1.4rem + 2.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1rem}
+header p{margin:0;max-inline-size:60ch;color:var(--muted)}
+.boards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,2rem);padding:2rem clamp(1rem,4vw,3rem) 4rem}
+.board a.shot{display:block;aspect-ratio:16/10;overflow:hidden;background:#ddd}
+.board a.shot img{inline-size:100%;block-size:100%;object-fit:cover;object-position:top}
+.board h2{font-weight:500;font-size:1.5rem;margin:1.25rem 0 .25rem;letter-spacing:-.01em}
+.board .open{display:inline-block;padding-block:.6rem;font-weight:500}
+.board dl{margin:.5rem 0 0;display:grid;grid-template-columns:7.5rem 1fr;gap:.35rem 1rem;font-size:15px}
+.board dt{color:var(--muted)}.board dd{margin:0}
+.board .idea{margin:1rem 0 0;font-size:16px}
+section.notes{padding:0 clamp(1rem,4vw,3rem) 5rem;max-inline-size:62rem;font-size:15px;color:var(--muted)}
+section.notes h3{color:var(--ink);font-weight:500;font-size:1.125rem;margin:2.5rem 0 .5rem}
+section.notes li{margin-block:.3rem}
+@media (max-width:900px){.boards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<h1>Toza — five design directions</h1>
-<p class="muted">Concept boards for review by Dr. Lior Tabansky. Preview only. Copy is unchanged from the approved site (2toza main @ b3efb35).</p>
-<ol>
-  <li>Dossier — in progress</li>
-  <li>Plates — in progress</li>
-  <li>Still life — in progress</li>
-  <li>Access map — in progress</li>
-  <li>Conversation — in progress</li>
-</ol>
+<header>
+  <h1>Toza: three directions</h1>
+  <p>Concept boards for Dr. Lior Tabansky. Each shows the same content: the home page's first screen and the situations, at desktop and phone width, with its own wordmark. The words are unchanged from the approved site; only the design differs. Open each board on a phone too.</p>
+</header>
+<main class="boards">
+  <article class="board">
+    <a class="shot" href="b2-quiet/"><img src="shots/b2-desktop.jpg" alt="Board 2, first screen" loading="lazy"></a>
+    <h2>2 · The quiet instrument</h2>
+    <a class="open" href="b2-quiet/">Open board 2</a>
+    <dl><dt>Feeling</dt><dd>A private letter: almost nothing on the page, all of it exact</dd><dt>Type</dt><dd>Bona Nova (Latin and Hebrew)</dd><dt>Colour</dt><dd>White, near-black, one mint field</dd><dt>Wordmark</dt><dd>Italic <i>toza</i> with 閉ざす as a colophon</dd></dl>
+    <p class="idea"><b>Idea.</b> <i>Tozasu</i>, to close shut, becomes the page's restraint: a page that shows almost nothing, the way a closed door shows nothing.</p>
+  </article>
+  <article class="board">
+    <a class="shot" href="b3-split/"><img src="shots/b3-desktop.jpg" alt="Board 3, first screen" loading="lazy"></a>
+    <h2>3 · The split stage</h2>
+    <a class="open" href="b3-split/">Open board 3</a>
+    <dl><dt>Feeling</dt><dd>A calm afternoon kept in view while you read</dd><dt>Type</dt><dd>Noto Serif Hebrew (Latin and Hebrew)</dd><dt>Colour</dt><dd>Olive on bone; the close inverts to olive</dd><dt>Wordmark</dt><dd>A woven garment label</dd></dl>
+    <p class="idea"><b>Idea.</b> An ordinary moment, a woman at a table with her phone, stays fixed beside the text. The reader recognises her own life before reading about the risk.</p>
+  </article>
+  <article class="board">
+    <a class="shot" href="b4-map/"><img src="shots/b4-desktop.jpg" alt="Board 4, first screen" loading="lazy"></a>
+    <h2>4 · Access map</h2>
+    <a class="open" href="b4-map/">Open board 4</a>
+    <dl><dt>Feeling</dt><dd>Precise, calm, something you can touch</dd><dt>Type</dt><dd>IBM Plex Sans Hebrew (Latin and Hebrew)</dd><dt>Colour</dt><dd>Putty, black, one teal</dd><dt>Wordmark</dt><dd>門, a gate, with its two doors shut</dd></dl>
+    <p class="idea"><b>Idea.</b> Her own words from the opening line (phone, computer, accounts, conversations, finances, plans) appear still connected out of the frame. She taps each one to close it.</p>
+  </article>
+</main>
+<section class="notes">
+  <h3>What is the same on all three</h3>
+  <ul>
+    <li>Every word comes from the approved site (2toza main @ b3efb35). A check fails the build if a single new word appears; wordmark notes and photo credits are the only exceptions.</li>
+    <li>WhatsApp, Signal and Call me back open the private channel on the first tap.</li>
+    <li>Each typeface sets Hebrew and English, so the Hebrew site keeps the same look.</li>
+    <li>Motion is held to one quiet moment at most, so the page behaves as discreetly as it speaks.</li>
+  </ul>
+  <h3>Photographs (placeholders for review, Unsplash License)</h3>
+  <ul>
+    <li>Board 2: woman crossing a sunlit street, by Frankie Cordoba (unsplash.com/photos/meo7TDFX9lI); woman at her kitchen table, by Centre for Ageing Better (unsplash.com/photos/DEhuMIS7x2M); small crops from the photographs below.</li>
+    <li>Board 3: woman at a café table, by Valentin (unsplash.com/photos/dVUSUGotack); hand holding a phone, by Shawn Rain (unsplash.com/photos/SOgkO6PJ8TY).</li>
+    <li>Board 4: woman walking a city street, by István Szitás (unsplash.com/photos/koKXhEvnGig).</li>
+    <li>Also cropped on board 2: hands, phone and coffee, by Maliha Mannan (unsplash.com/photos/8gn_WhKv8Ns).</li>
+  </ul>
+</section>
 </body>
 </html>
