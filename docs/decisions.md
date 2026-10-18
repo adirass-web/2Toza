@@ -47,5 +47,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-041 | 2026-10-16 | Contact buttons read "WhatsApp" and "Signal" (no "Message on"), in blocks and floating buttons. Owner request. |
 | V-042 | 2026-10-18 | Floating contact buttons are hidden on the FAQ page (they covered its group links on phones). Per-page content setting `float_contact: false`. |
 | V-043 | 2026-10-18 | Visual regression: approved screenshot baselines in tests/visual/baseline; `npm run check:visual` fails on unapproved change; approval = committing updated baselines. Local/agent run; not in CI because of cross-OS font rendering. |
+| V-044 | 2026-10-18 | Floating buttons keep their timing; an ivory ring makes them visible on dark sections. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

@@ -14,7 +14,7 @@
 <aside class="float-contact print:hidden" data-float>
   <div class="pointer-events-auto inline-flex flex-col gap-float-gap">
     {% for f in floats %}
-    <a href="{{ f.href }}" target="_blank" rel="noopener" aria-label="{{ f.label }}" title="{{ f.label }}" data-track="{{ f.key }}-float" class="box-border inline-flex size-float items-center justify-center rounded-full border border-accent-on-dark bg-action text-on-action shadow-float hover:bg-action-hover focus-visible:outline-accent-on-dark focus-visible:-outline-offset-6">{{ glyph(f.key) }}</a>
+    <a href="{{ f.href }}" target="_blank" rel="noopener" aria-label="{{ f.label }}" title="{{ f.label }}" data-track="{{ f.key }}-float" class="box-border inline-flex size-float items-center justify-center rounded-full border-2 border-paper bg-action text-on-action shadow-float hover:bg-action-hover focus-visible:outline-accent-on-dark focus-visible:-outline-offset-6">{{ glyph(f.key) }}</a>
     {% endfor %}
   </div>
 </aside>
