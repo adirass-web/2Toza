@@ -20,6 +20,6 @@
 {{ content | safe }}
 </main>
 {% include "footer.njk" %}
-{% include "float-contact.njk" %}
+{% if not hideFloat %}{% include "float-contact.njk" %}{% endif %}
 </body>
 </html>

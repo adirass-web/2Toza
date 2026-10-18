@@ -51,6 +51,9 @@
       ],
       "required": true
     },
+    "float_contact": {
+      "kind": "bool"
+    },
     "labels": {
       "kind": "labels",
       "max": 20

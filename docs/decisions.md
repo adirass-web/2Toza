@@ -45,5 +45,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-039 | 2026-10-16 | Owner picked Flowbite 4 (free core) as the fixed component library. daisyUI branch kept, not merged. |
 | V-040 | 2026-10-16 | Owner approved deletion of the switched-off old page templates, old includes, legacy CSS and superseded scripts. All 11 pages render from content. |
 | V-041 | 2026-10-16 | Contact buttons read "WhatsApp" and "Signal" (no "Message on"), in blocks and floating buttons. Owner request. |
+| V-042 | 2026-10-18 | Floating contact buttons are hidden on the FAQ page (they covered its group links on phones). Per-page content setting `float_contact: false`. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

@@ -18,6 +18,7 @@
     description: (data) => data.pg.description,
     locale: (data) => data.pg.lang,
     blocks: (data) => data.pg.blocks,
+    hideFloat: (data) => data.pg.float_contact === false,
   },
   eleventyExcludeFromCollections: true,
 }

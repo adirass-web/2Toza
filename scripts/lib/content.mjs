@@ -260,6 +260,7 @@ export function buildPages(src, pages, { err = throwing } = {}) {
       lang: d.lang,
       dir: d.dir,
     };
+    if (d.float_contact === false) page.float_contact = false;
     if (d.labels) page.labels = field(model.page.labels, d.labels, `${where}:labels`, {});
     page.blocks = (d.blocks || []).map((b, i) => {
       const w = `${where}:blocks[${i}]${b?.type ? "(" + b.type + ")" : ""}`;

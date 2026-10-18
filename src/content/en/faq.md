@@ -6,6 +6,8 @@ permalink: /en/faq/index.html
 lang: en
 dir: ltr
 
+float_contact: false
+
 blocks:
   - type: hero
     heading: Questions, answered plainly.
