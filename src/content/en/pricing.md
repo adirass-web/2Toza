@@ -6,6 +6,9 @@ permalink: /en/pricing/index.html
 lang: en
 dir: ltr
 
+# Pages v2 (strategy/PAGES-pricing-howitworks-outline.md, owner-approved): first step as one row, one
+# comparison table, larger households, Annual Care, payment, Conditions. New and moved lines:
+# strategy/copy/PAGES-V2-COPY.md.
 blocks:
   - type: hero
     heading: "{shared:pricing.heading}"
@@ -13,46 +16,53 @@ blocks:
     byline: none
     actions: [whatsapp, signal, callback]
 
-  - type: price-strip
-    ref: price_strip
-    label: Three stages and their prices.
-    stage_names: true
+  - type: offer
+    id: first-step
+    tag: "{shared:labels.first_step}"
+    name: "{shared:offers.assessment.name}"
+    price_key: assessment
+    body: "{shared:offers.assessment.body}"
+    credit: "{shared:offers.assessment.credit}"
 
-  - type: tiers
-    detail: full
-    heading: "{ui:ui.compareServices}"
-    heading_visible: false
-    statement: "{shared:pricing.method}"
-    first_step:
-      ref: offer_first_step
-    tiers:
+  - type: comparison
+    id: tiers
+    heading: Then the protection that fits your household.
+    heading_visible: true
+    columns:
       - name: "{shared:offers.shield.name}"
         price_key: personalShield
-        for: "{shared:offers.shield.for}"
-        items:
-          - "{shared:offers.shield.items.0}"
-          - "{shared:offers.shield.items.1}"
-          - "{shared:offers.shield.items.2}"
       - name: "{shared:offers.two.name}"
         price_key: shieldForTwo
-        for: "{shared:offers.two.for}"
-        items:
-          - "{shared:offers.two.items.0}"
-          - "{shared:offers.two.items.1}"
-          - "{shared:offers.two.items.2}"
       - name: "{shared:offers.inner.name}"
         price_key: innerCircle
-        for: "{shared:offers.inner.for}"
-        items:
-          - "{shared:offers.inner.items.0}"
-          - "{shared:offers.inner.items.1}"
-          - "{shared:offers.inner.items.2}"
-    notes:
-      - "{shared:offers.under_all}"
-      - "{shared:offers.larger}"
-      - "{shared:offers.care}"
+    rows:
+      - label: Who it covers
+        cells: [One person, You and one other person, "{shared:common.household_four}"]
+      - label: "Everyday devices (up to {factword:devicesPerPerson} per person)"
+        cells: ["{Factword:devicesPerPerson}", "{Factword:devicesPerPerson*2}", "{Factword:devicesPerPerson*4}"]
+      - label: Home network and router
+        cells: [Included, Included, Included]
+      - label: Security keys, supplied, configured and tested
+        cells: ["{Factword:securityKeys.personalShield}", "{Factword:securityKeys.shieldForTwo}", "{Factword:securityKeys.innerCircle}"]
+      - label: Follow-up visit
+        cells: [After about four weeks, After about four weeks, After about four weeks]
+      - label: Questions answered by WhatsApp or Signal
+        cells: ["{fact:questionLineDays} days", "{fact:questionLineDays} days", "{fact:questionLineDays} days"]
+      - label: Review visit at twelve months
+        cells: ["", "", Included]
+
+  - type: details
+    id: more
+    heading: Larger households, Annual Care and payment
+    items:
+      - label: Beyond Inner Circle
+        text: "{shared:offers.larger}"
+      - label: Annual Care
+        text: "{shared:common.care_includes} {shared:common.care_prices}"
+      - label: How payment works
+        text: "{shared:common.written_offer} {shared:common.paid_after}"
     link:
-      label: "{shared:labels.conditions}"
+      label: "All terms: Conditions"
       href: /en/conditions/
       kind: more
 

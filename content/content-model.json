@@ -398,6 +398,46 @@
         "max": 25,
         "must_contain": "{amount}"
       }
+    },
+    "detail": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 30
+      },
+      "text": {
+        "kind": "text",
+        "required": true,
+        "max": 410
+      }
+    },
+    "comparison_column": {
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 30
+      },
+      "price_key": {
+        "kind": "price_key",
+        "required": true
+      }
+    },
+    "comparison_row": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 60
+      },
+      "cells": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 40
+        },
+        "required": true,
+        "min_items": 2,
+        "max_items": 4
+      }
     }
   },
   "blocks": {
@@ -561,6 +601,14 @@
           "of": {
             "kind": "object",
             "type": "link"
+          },
+          "max_items": 3
+        },
+        "points": {
+          "kind": "list",
+          "of": {
+            "kind": "text",
+            "max": 160
           },
           "max_items": 3
         }
@@ -795,6 +843,14 @@
           "kind": "text",
           "required": true,
           "max": 90
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "text",
+            "max": 100
+          },
+          "max_items": 4
         }
       }
     },
@@ -857,6 +913,66 @@
         "notes": {
           "kind": "md",
           "max": 160
+        }
+      }
+    },
+    "details": {
+      "summary": "A titled set of short labelled facts: a label and one or two sentences each, with an optional link (how-it-works: the first visit; pricing: larger households, Annual Care, payment).",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "heading_visible": {
+          "kind": "bool"
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "detail"
+          },
+          "required": true,
+          "min_items": 1,
+          "max_items": 6
+        },
+        "link": {
+          "kind": "object",
+          "type": "link"
+        }
+      }
+    },
+    "comparison": {
+      "summary": "Protection tiers side by side: one column per tier with its name and price, and the same rows for each. An empty cell means the row is not included in that tier.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "heading_visible": {
+          "kind": "bool"
+        },
+        "columns": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "comparison_column"
+          },
+          "required": true,
+          "min_items": 2,
+          "max_items": 4
+        },
+        "rows": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "comparison_row"
+          },
+          "required": true,
+          "min_items": 1,
+          "max_items": 10
         }
       }
     },

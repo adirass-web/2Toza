@@ -1,0 +1,18 @@
+{#- Labelled facts as a Flowbite description list. Visible heading: heading in the left columns, the list beside it (how-it-works,
+    the first visit). Hidden heading: the list spans the page (pricing, larger households / Annual Care / payment). A heavy ink rule
+    opens the list; each fact gets a brass serif label and the text in large type. -#}
+{% from "blocks/_macros.njk" import section, h2, lnk with context %}
+{% call section(block, '', 'grid gap-8 lg:grid-cols-12 lg:gap-16', '', '' if block.heading_visible else 'pt-0 pb-section lg:pb-section-wide') %}
+  {% if block.heading_visible %}<div class="lg:col-span-4">{{ h2(block.heading) }}</div>{% else %}<h2 class="sr-only">{{ block.heading }}</h2>{% endif %}
+  <div class="{{ 'lg:col-span-8' if block.heading_visible else 'lg:col-span-12' }}">
+    <dl class="divide-y divide-default border-t-2 border-brand">
+      {% for item in block.items %}
+      <div class="grid gap-2 py-5 sm:grid-cols-12 sm:gap-8 lg:py-7">
+        <dt class="font-serif text-xl leading-snug text-accent sm:col-span-4 {{ 'lg:col-span-3' if not block.heading_visible }}">{{ item.label }}</dt>
+        <dd class="max-w-3xl text-lg leading-relaxed text-heading sm:col-span-8 lg:text-xl {{ 'lg:col-span-9' if not block.heading_visible }}">{{ item.text }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+    {% if block.link %}<p class="mt-6">{{ lnk(block.link) }}</p>{% endif %}
+  </div>
+{% endcall %}

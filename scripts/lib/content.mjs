@@ -245,6 +245,8 @@ export function buildPages(src, pages, { err = throwing } = {}) {
       if (b.promise) o.promise = R.resolve("{shared:promise}", where);
       else delete o.promise;
     }
+    if (b.type === "comparison" && Array.isArray(b.columns) && Array.isArray(b.rows))
+      b.rows.forEach((r, i) => { if (Array.isArray(r?.cells) && r.cells.length !== b.columns.length) err(`${where}.rows[${i}].cells`, `${r.cells.length} cells for ${b.columns.length} columns`); });
     if (b.type === "price-strip") {
       if (b.stage_names) o.stage_names = ["assess", "harden", "verify"].map((key) => ({ key, name: R.resolve(`{shared:stages.names.${key}}`, where) }));
       else delete o.stage_names;

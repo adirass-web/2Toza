@@ -1,7 +1,20 @@
+{#- Method statement. Without `points`: the quiet statement on paper (About, attorneys). With `points` (how-it-works): a solid ink block,
+    the heading as a small brass label, the statement set large, and the proof points in a row under heavy brass rules. -#}
 {% from "blocks/_macros.njk" import section, h2, links with context %}
+{% if block.points %}
+{% call section(block, 'dark', '') %}
+  {% if block.heading %}<h2 class="font-sans text-lg font-semibold text-accent-on-dark">{{ block.heading }}</h2>{% endif %}
+  <p class="mt-5 max-w-5xl font-serif text-3xl leading-h2 font-normal tracking-h2 text-pretty text-paper sm:text-4xl lg:mt-8 lg:text-6xl">{{ block.statement }}</p>
+  <ul role="list" class="mt-10 grid gap-8 md:grid-cols-3 lg:mt-16 lg:gap-12">
+    {% for p in block.points %}<li class="border-t-2 border-accent-on-dark pt-5 text-lg text-on-dark-text lg:pt-6 lg:text-xl">{{ p }}</li>{% endfor %}
+  </ul>
+  {{ links(block.links, 'dark', 'mt-8') }}
+{% endcall %}
+{% else %}
 {% call section(block, '', 'max-w-4xl') %}
   {% if block.heading %}{{ h2(block.heading, 'mb-6 text-heading lg:mb-8') }}{% endif %}
   <p class="font-serif text-2xl leading-snug text-heading lg:text-3xl">{{ block.statement }}</p>
   {% if block.body %}<div class="mt-4 space-y-4">{{ block.body.html | safe }}</div>{% endif %}
   {{ links(block.links, '', 'mt-6') }}
 {% endcall %}
+{% endif %}

@@ -154,6 +154,9 @@ The method/credential statement, with optional framing heading, explanation and 
 | `statement` | text | yes | 160 | 116 |
 | `body` | md |  | 260 | 200 |
 | `links` | list of `link` |  |  |  |
+| `points` | list of text (≤ 3) |  | 160 | 121 |
+
+`points` (how-it-works, Pages v2): short proof points of how the method works, shown under the statement. A block with points is the method section of its page.
 
 #### `stages`
 The three-stage method (Assess, Harden, Verify) as a summary, with the path to prices. `statement` is the method line shown first in the dark section (optional; the shared block carries it). `variant: compact` is the tighter layout with smaller drawings (situation pages); `full` is the default (Home).
@@ -234,6 +237,29 @@ An illustrative deliverable (the exposure summary) shown as a document, with its
 | `heading` | text | yes | 60 | 41 |
 | `document` | `document` | yes |  |  |
 | `caption` | text | yes | 90 | 67 |
+| `items` | list of text (≤ 4) |  | 100 | 76 |
+
+`items` (how-it-works, Pages v2): what the client keeps, listed beside the document.
+
+#### `details`
+A titled set of short labelled facts: a label and one or two sentences each, with an optional link (Pages v2: how-it-works "The first visit"; pricing larger households, Annual Care and payment). `heading_visible: true` shows the heading; absent or false keeps it for assistive technology only (as in `tiers`).
+
+| Field | Kind | Req. | Max | Now |
+|---|---|---|---|---|
+| `heading` | text | yes | 60 | 42 |
+| `heading_visible` | bool |  |  |  |
+| `items` | list of `detail` (1–6) | yes |  |  |
+| `link` | `link` |  |  |  |
+
+#### `comparison`
+Protection tiers side by side (pricing, Pages v2): one column per tier with its name and price, and the same rows for every tier. Each row has exactly one cell per column (the check fails otherwise); an empty cell (`""`) means the row is not included in that tier and is rendered as a dash with the UI string `ui.notIncluded` for screen readers.
+
+| Field | Kind | Req. | Max | Now |
+|---|---|---|---|---|
+| `heading` | text | yes | 60 | 45 |
+| `heading_visible` | bool |  |  |  |
+| `columns` | list of `comparison_column` (2–4) | yes |  |  |
+| `rows` | list of `comparison_row` (1–10) | yes |  |  |
 
 #### `faq-group`
 A titled group of questions and answers; answers are Markdown.
@@ -332,6 +358,24 @@ The invitation to make contact: heading, reassurance, channel actions, optional 
 | `for` | text | yes | 120 | 91 |
 | `items` | list of text |  | 110 | 79 |
 
+#### `detail`
+| Field | Kind | Req. | Max | Now |
+|---|---|---|---|---|
+| `label` | text | yes | 30 | 19 |
+| `text` | text | yes | 410 | 308 |
+
+#### `comparison_column`
+| Field | Kind | Req. | Max | Now |
+|---|---|---|---|---|
+| `name` | text | yes | 30 | 23 |
+| `price_key` | price_key | yes |  |  |
+
+#### `comparison_row`
+| Field | Kind | Req. | Max | Now |
+|---|---|---|---|---|
+| `label` | text | yes | 60 | 46 |
+| `cells` | list of text (2–4, one per column; `""` = not included) | yes | 40 | 25 |
+
 #### `document`
 | Field | Kind | Req. | Max | Now |
 |---|---|---|---|---|
@@ -393,9 +437,9 @@ The invitation to make contact: heading, reassurance, channel actions, optional 
 | Page | Blocks in order |
 |---|---|
 | home | hero · situation-doors · stages* · method-statement* · specimen* · price-summary* · contact* |
-| how-it-works | hero · steps · offer · tiers (summary) · contact* |
+| how-it-works | hero · method-statement (+ points) · details · specimen* (+ heading, items) · text · price-summary (one item) · contact* |
 | about | hero · letter · text · method-statement · contact* |
-| pricing | hero · price-strip* · tiers (full, first_step = offer_first_step*) · contact* |
+| pricing | hero · offer (page row) · comparison · details · contact* |
 | faq | hero · faq-group ×7 · contact* |
 | conditions | hero · terms-section ×9 · contact |
 | separation-divorce, business-dispute, inheritance-conflict | hero · recognition · text · stages* (+ line, compact; carries the method line) · text · price-summary* · contact* (+ note) |

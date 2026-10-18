@@ -35,7 +35,7 @@ blocks:
           for: You and one other person
           price_key: shieldForTwo
         - label: Inner Circle
-          for: A household of up to four
+          for: "{shared:common.household_four}"
           price_key: innerCircle
         - label: Larger households, several residences or household staff
           for: One fixed price, set after the first step
@@ -132,7 +132,7 @@ blocks:
         - A replacement security key if one is lost or broken
         - First available appointments
         - Coordination with your lawyer or family office, if you authorize it
-      - "{price:annualCareOne} a year for one person, {price:annualCareTwo} for two, {price:annualCareHousehold} for a household of up to four. Paid yearly in advance."
+      - "{shared:common.care_prices} Paid yearly in advance."
       - "The term starts the day the {fact:questionLineDays}-day question line ends."
       - "For a household of up to four, Annual Care covers up to two new or replaced devices and up to two replacement keys. For Inner Circle, the first Care term moves the check visit to about month six; the twelve-month review stays."
       - "Further keys and any replacement router are charged at cost. Added devices are scoped separately."

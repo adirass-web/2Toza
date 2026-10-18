@@ -1,8 +1,13 @@
-{#- The specimen document: a Flowbite card (raised paper, token shadow) with a bordered-badge stamp. -#}
+{#- The specimen document: a Flowbite card (raised paper, token shadow) with a bordered-badge stamp.
+    With `items` (how-it-works, "What you keep"): a solid recessed-paper block, and the kept items under the heading in large serif type,
+    each on a heavy brass rule. Without items (Home) the block is unchanged. -#}
 {% from "blocks/_macros.njk" import section, h2 with context %}
 {% set doc = block.document %}
-{% call section(block, '', 'grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-16', '', 'pt-0 pb-section lg:pb-section-wide') %}
-  <div class="lg:col-span-5">{{ h2(block.heading) }}</div>
+{% call section(block, 'sunken' if block.items else '', 'grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-16', '', '' if block.items else 'pt-0 pb-section lg:pb-section-wide') %}
+  <div class="lg:col-span-5">
+    {{ h2(block.heading) }}
+    {% if block.items %}<ul role="list" class="mt-8 space-y-6 lg:mt-10">{% for i in block.items %}<li class="border-s-2 border-accent ps-5 font-serif text-2xl leading-snug text-heading lg:text-3xl">{{ i }}</li>{% endfor %}</ul>{% endif %}
+  </div>
   <figure class="lg:col-span-6 lg:col-start-7">
     <div class="rounded-base border border-default bg-surface-raised p-5 text-base leading-snug text-body shadow-doc sm:p-8">
       <div class="flex items-center justify-between gap-4 border-b-2 border-brand pb-3">

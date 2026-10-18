@@ -36,7 +36,7 @@ blocks:
       - id: a4
         question: What happens before I pay?
         answer: |-
-          If the service fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms. You accept it explicitly and pay; then the visit is scheduled. No paid work starts before acceptance and receipt of payment. Preparation instructions are sent directly.
+          {shared:common.written_offer} You accept it explicitly and pay; then the visit is scheduled. {shared:common.paid_after} Preparation instructions are sent directly.
       - id: a5
         question: Do I need to know what's wrong before I get in touch?
         answer: |-
@@ -50,11 +50,11 @@ blocks:
       - id: b1
         question: "What do I get for {price:assessment}?"
         answer: |-
-          A senior check-up of your digital life: half a day in person. Toza listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you. Where urgent exposure can be addressed safely within the agreed scope, the changes are made with your approval. You keep a written exposure summary with ordered next steps. The {price:assessment} counts in full toward a tier that begins within {fact:credit.windowDays} days.
+          A senior check-up of your digital life: half a day in person. {shared:common.first_visit} Where urgent exposure can be addressed safely within the agreed scope, the changes are made with your approval. You keep a written exposure summary with ordered next steps. The {price:assessment} counts in full toward a tier that begins within {fact:credit.windowDays} days.
       - id: b2
         question: What does it cover, and how long does it take?
         answer: |-
-          {fact:assessmentScope|capfirst}. Toza reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. Allow half a day; it typically takes four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified.
+          {fact:assessmentScope|capfirst}. Toza reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. {shared:common.half_day} The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified.
       - id: b3
         question: What do I receive if I don't continue?
         answer: |-
@@ -102,7 +102,7 @@ blocks:
       - id: d1
         question: Do I give you my passwords or remote access?
         answer: |-
-          You control your passwords, recovery codes and authentication throughout. Do not send them in advance. You may need to sign in on your own devices during the work. Toza does not keep your credentials for ongoing use or remotely control your devices.
+          {shared:common.your_credentials} Do not send them in advance. {shared:common.sign_in} Toza does not keep your credentials for ongoing use or remotely control your devices.
       - id: d2
         question: Will you see my messages or photos?
         answer: |-
@@ -203,7 +203,7 @@ blocks:
       - id: g4
         question: "What happens after the {fact:questionLineDays} days?"
         answer: |-
-          Past clients can continue with Annual Care: the question line on the same terms for twelve months, a check visit, setup of a new or replaced phone or computer, a replacement security key and an update to the dated record. It costs {price:annualCareOne} a year for one person, {price:annualCareTwo} for two and {price:annualCareHousehold} for a household of up to four. Join within {factword:annualCare.joinWindowMonths} months of the question line ending.
+          {shared:common.care_includes} It costs {price:annualCareOne} a year for one person, {price:annualCareTwo} for two and {price:annualCareHousehold} for a household of up to four. Join within {factword:annualCare.joinWindowMonths} months of the question line ending.
     link:
       label: "All terms: Conditions"
       href: /en/conditions/

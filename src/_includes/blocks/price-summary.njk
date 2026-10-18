@@ -1,5 +1,16 @@
-{#- Flowbite pricing card, one per anchor price. -#}
+{#- Flowbite pricing card, one per anchor price. A single item (how-it-works) is one price line instead: name, price, condition and
+    the link in a row between heavy ink rules, directly under the section before it. -#}
 {% from "blocks/_macros.njk" import section, price, badge, lnk with context %}
+{% if block.items.length == 1 %}{% set item = block.items[0] %}
+{% call section(block, '', '', t.ui.pricesLabel, 'pt-0 pb-section lg:pb-section-wide') %}
+  <div class="grid gap-x-10 gap-y-3 border-y-2 border-brand py-6 lg:grid-cols-12 lg:items-baseline lg:py-8">
+    <h3 class="font-serif text-2xl font-normal text-heading lg:col-span-2">{{ item.name }}</h3>
+    <p class="text-heading lg:col-span-3">{{ price(item, 'text-5xl lg:text-6xl') }}</p>
+    <p class="text-lg lg:col-span-5 lg:text-xl">{{ item.note }}</p>
+    {% if block.link %}<p class="lg:col-span-2 lg:text-end">{{ lnk(block.link) }}</p>{% endif %}
+  </div>
+{% endcall %}
+{% else %}
 {% call section(block, 'sunken', '', t.ui.pricesLabel) %}
   <ul class="grid gap-6 md:grid-cols-2 lg:gap-8">
     {% for item in block.items %}
@@ -13,3 +24,4 @@
   </ul>
   {% if block.link %}<p class="mt-8 lg:mt-10">{{ lnk(block.link) }}</p>{% endif %}
 {% endcall %}
+{% endif %}

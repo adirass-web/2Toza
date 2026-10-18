@@ -1,4 +1,6 @@
-{#- The first step as a Flowbite card with a badge. Nested in tiers (no heading): the card alone. As a page block (heading): in its own section. -#}
+{#- The first step. Nested in tiers (no heading): the Flowbite card alone. As a page block with a heading: the card in its own section.
+    As a page block without a heading (pricing): one full-width row on a solid ink band, the name as the section's h2, tag, price,
+    credit and description side by side from lg. -#}
 {% from "blocks/_macros.njk" import section, h2, price, badge, lnk, features with context %}
 {% macro card(o) %}
 <article class="grid gap-6 rounded-base border border-default border-t-2 border-t-accent bg-neutral-secondary-soft p-6 lg:grid-cols-12 lg:gap-16 lg:p-10">
@@ -20,6 +22,19 @@
   {{ h2(block.heading, 'mb-8 text-heading') }}
   {{ card(block) }}
 {% endcall %}
-{% else %}
+{% elif nested %}
 {{ card(block) }}
+{% else %}
+{% call section(block, 'dark', 'grid gap-5 lg:grid-cols-12 lg:items-end lg:gap-x-10', '', 'py-10 lg:py-14') %}
+  <div class="lg:col-span-4">
+    {% if block.tag %}<p class="text-lg font-semibold text-accent-on-dark">{{ block.tag }}</p>{% endif %}
+    <h2 class="mt-2 font-serif text-3xl leading-h2 font-normal text-paper lg:text-4xl">{{ block.name }}</h2>
+  </div>
+  <p class="text-paper lg:col-span-3">{{ price(block, 'text-6xl lg:text-7xl') }}</p>
+  <div class="lg:col-span-5">
+    {% if block.credit %}<p class="font-serif text-xl leading-snug text-paper lg:text-2xl">{{ block.credit }}</p>{% endif %}
+    {% if block.body %}<p class="mt-3 text-lg text-on-dark-text">{{ block.body }}</p>{% endif %}
+    {% if block.link %}<p class="mt-4">{{ lnk(block.link, 'dark') }}</p>{% endif %}
+  </div>
+{% endcall %}
 {% endif %}

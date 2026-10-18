@@ -1,0 +1,51 @@
+{#- Tiers side by side. From md: a Flowbite table (Tables > default), header row on recessed paper with each tier's name and price,
+    the same rows for every tier (th scope="row" label, one td per tier). Below md: one Flowbite card per tier with the same row labels
+    as a description list, so phones never scroll sideways. Exactly one of the two is displayed. An empty cell (not included) shows a
+    dash for sight and t.ui.notIncluded for assistive technology. -#}
+{% from "blocks/_macros.njk" import section, price with context %}
+{% macro cellv(v) %}{% if v %}{{ v }}{% else %}<span aria-hidden="true">{{ t.ui.dash }}</span><span class="sr-only">{{ t.ui.notIncluded }}</span>{% endif %}{% endmacro %}
+{% set hid = (block.id or 'comparison') + '-h' %}
+{% call section(block, '', '') %}
+  <h2 id="{{ hid }}" class="{{ 'font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading' if block.heading_visible else 'sr-only' }}">{{ block.heading }}</h2>
+  <div class="relative mt-8 hidden overflow-hidden rounded-base border border-default bg-neutral-primary-soft shadow-xs md:block lg:mt-12">
+    <table class="w-full table-fixed text-start text-base text-body" aria-labelledby="{{ hid }}">
+      <thead class="border-b-2 border-brand bg-neutral-secondary-soft">
+        <tr>
+          <td class="w-1/4 px-6 py-6"></td>
+          {% for c in block.columns %}
+          <th scope="col" class="px-6 pt-6 pb-7 text-start align-bottom font-normal lg:pt-8">
+            <span class="block font-serif text-xl leading-snug text-heading lg:text-2xl">{{ c.name }}</span>
+            <span class="mt-3 block lg:mt-4">{{ price(c, 'text-4xl text-heading lg:text-5xl') }}</span>
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in block.rows %}
+        <tr class="border-b border-default bg-neutral-primary last:border-b-0">
+          <th scope="row" class="px-6 py-4 text-start align-top font-normal text-body-subtle">{{ r.label }}</th>
+          {% for cell in r.cells %}<td class="px-6 py-4 align-top text-lg text-heading">{{ cellv(cell) }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <ul role="list" class="mt-8 space-y-6 md:hidden">
+    {% for c in block.columns %}{% set ci = loop.index0 %}
+    <li class="overflow-hidden rounded-base border border-default bg-neutral-primary shadow-xs">
+      <div class="border-b-2 border-brand bg-neutral-secondary-soft px-5 pt-5 pb-6">
+        <h3 class="font-serif text-2xl leading-snug font-normal text-heading">{{ c.name }}</h3>
+        <p class="mt-3">{{ price(c, 'text-5xl text-heading') }}</p>
+      </div>
+      <dl class="divide-y divide-default px-5">
+        {% for r in block.rows %}
+        <div class="grid grid-cols-5 gap-4 py-3">
+          <dt class="col-span-3 text-base text-body-subtle">{{ r.label }}</dt>
+          <dd class="col-span-2 text-end text-heading">{{ cellv(r.cells[ci]) }}</dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </li>
+    {% endfor %}
+  </ul>
+{% endcall %}

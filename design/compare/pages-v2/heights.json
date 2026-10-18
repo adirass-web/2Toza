@@ -1,0 +1,360 @@
+{
+ "how-it-works-d": {
+  "before": {
+   "total": 3874,
+   "header": 73,
+   "footer": 129,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 703,
+     "pt": 80,
+     "pb": 80,
+     "text": "Talk through your concerns. Then"
+    },
+    {
+     "n": "scroll-mt-24.py-section",
+     "h": 1432,
+     "pt": 72,
+     "pb": 72,
+     "text": "Three stages, one method."
+    },
+    {
+     "n": "scroll-mt-24.py-section",
+     "h": 676,
+     "pt": 72,
+     "pb": 72,
+     "text": "A senior check-up of your digita"
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 599,
+     "pt": 0,
+     "pb": 72,
+     "text": "Then the protection that fits yo"
+    },
+    {
+     "n": "contact",
+     "h": 263,
+     "pt": 48,
+     "pb": 48,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  },
+  "after": {
+   "total": 3741,
+   "header": 73,
+   "footer": 129,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 703,
+     "pt": 80,
+     "pb": 80,
+     "text": "Talk through your concerns. Then"
+    },
+    {
+     "n": "method",
+     "h": 647,
+     "pt": 72,
+     "pb": 72,
+     "text": "The method."
+    },
+    {
+     "n": "first-visit",
+     "h": 633,
+     "pt": 72,
+     "pb": 72,
+     "text": "The first visit."
+    },
+    {
+     "n": "keep",
+     "h": 777,
+     "pt": 72,
+     "pb": 72,
+     "text": "What you keep."
+    },
+    {
+     "n": "after",
+     "h": 316,
+     "pt": 72,
+     "pb": 72,
+     "text": "After the work."
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 200,
+     "pt": 0,
+     "pb": 72,
+     "text": ""
+    },
+    {
+     "n": "contact",
+     "h": 263,
+     "pt": 48,
+     "pb": 48,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  }
+ },
+ "how-it-works-m": {
+  "before": {
+   "total": 4669,
+   "header": 61,
+   "footer": 153,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 594,
+     "pt": 32,
+     "pb": 40,
+     "text": "Talk through your concerns. Then"
+    },
+    {
+     "n": "scroll-mt-24.py-section",
+     "h": 1845,
+     "pt": 32,
+     "pb": 32,
+     "text": "Three stages, one method."
+    },
+    {
+     "n": "scroll-mt-24.py-section",
+     "h": 927,
+     "pt": 32,
+     "pb": 32,
+     "text": "A senior check-up of your digita"
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 710,
+     "pt": 0,
+     "pb": 32,
+     "text": "Then the protection that fits yo"
+    },
+    {
+     "n": "contact",
+     "h": 347,
+     "pt": 32,
+     "pb": 32,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  },
+  "after": {
+   "total": 4126,
+   "header": 61,
+   "footer": 153,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 594,
+     "pt": 32,
+     "pb": 40,
+     "text": "Talk through your concerns. Then"
+    },
+    {
+     "n": "method",
+     "h": 680,
+     "pt": 32,
+     "pb": 32,
+     "text": "The method."
+    },
+    {
+     "n": "first-visit",
+     "h": 671,
+     "pt": 32,
+     "pb": 32,
+     "text": "The first visit."
+    },
+    {
+     "n": "keep",
+     "h": 978,
+     "pt": 32,
+     "pb": 32,
+     "text": "What you keep."
+    },
+    {
+     "n": "after",
+     "h": 358,
+     "pt": 32,
+     "pb": 32,
+     "text": "After the work."
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 285,
+     "pt": 0,
+     "pb": 32,
+     "text": ""
+    },
+    {
+     "n": "contact",
+     "h": 347,
+     "pt": 32,
+     "pb": 32,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  }
+ },
+ "pricing-d": {
+  "before": {
+   "total": 2591,
+   "header": 73,
+   "footer": 129,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 464,
+     "pt": 80,
+     "pb": 80,
+     "text": "Fees"
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 152,
+     "pt": 0,
+     "pb": 56,
+     "text": "Three stages and their prices."
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 1511,
+     "pt": 0,
+     "pb": 72,
+     "text": "Compare services"
+    },
+    {
+     "n": "contact",
+     "h": 263,
+     "pt": 48,
+     "pb": 48,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  },
+  "after": {
+   "total": 2713,
+   "header": 73,
+   "footer": 129,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 464,
+     "pt": 80,
+     "pb": 80,
+     "text": "Fees"
+    },
+    {
+     "n": "first-step",
+     "h": 274,
+     "pt": 56,
+     "pb": 56,
+     "text": "Private Exposure Assessment"
+    },
+    {
+     "n": "tiers",
+     "h": 921,
+     "pt": 72,
+     "pb": 72,
+     "text": "Then the protection that fits yo"
+    },
+    {
+     "n": "more",
+     "h": 590,
+     "pt": 0,
+     "pb": 72,
+     "text": "Larger households, Annual Care a"
+    },
+    {
+     "n": "contact",
+     "h": 263,
+     "pt": 48,
+     "pb": 48,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  }
+ },
+ "pricing-m": {
+  "before": {
+   "total": 3707,
+   "header": 61,
+   "footer": 153,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 394,
+     "pt": 32,
+     "pb": 40,
+     "text": "Fees"
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 212,
+     "pt": 0,
+     "pb": 40,
+     "text": "Three stages and their prices."
+    },
+    {
+     "n": "scroll-mt-24.pt-0",
+     "h": 2540,
+     "pt": 0,
+     "pb": 32,
+     "text": "Compare services"
+    },
+    {
+     "n": "contact",
+     "h": 347,
+     "pt": 32,
+     "pb": 32,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  },
+  "after": {
+   "total": 4313,
+   "header": 61,
+   "footer": 153,
+   "blocks": [
+    {
+     "n": "hero",
+     "h": 394,
+     "pt": 32,
+     "pb": 40,
+     "text": "Fees"
+    },
+    {
+     "n": "first-step",
+     "h": 462,
+     "pt": 40,
+     "pb": 40,
+     "text": "Private Exposure Assessment"
+    },
+    {
+     "n": "tiers",
+     "h": 2142,
+     "pt": 32,
+     "pb": 32,
+     "text": "Then the protection that fits yo"
+    },
+    {
+     "n": "more",
+     "h": 755,
+     "pt": 0,
+     "pb": 32,
+     "text": "Larger households, Annual Care a"
+    },
+    {
+     "n": "contact",
+     "h": 347,
+     "pt": 32,
+     "pb": 32,
+     "text": "Start with a private conversatio"
+    }
+   ]
+  }
+ }
+}

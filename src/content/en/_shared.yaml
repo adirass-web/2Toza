@@ -48,6 +48,17 @@ common:
   essential_migration: Essential migration covers identity, recovery routes and critical-service access where needed.
   availability: Availability is confirmed before you pay.
   urgent_arrival: For an accepted urgent booking, arrival is within four hours of both Toza's acceptance and receipt of payment.
+  # Pages v2 (18 Oct 2026): sentences reused verbatim on How it works / Pricing, moved here from FAQ, Conditions and the stages lines (V-036).
+  first_visit: Toza listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you.
+  half_day: Allow half a day; it typically takes four hours.
+  your_credentials: You control your passwords, recovery codes and authentication throughout.
+  sign_in: You may need to sign in on your own devices during the work.
+  tested: Changes tested and checked, and you are taught to use them.
+  care_includes: "Past clients can continue with Annual Care: the question line on the same terms for twelve months, a check visit, setup of a new or replaced phone or computer, a replacement security key and an update to the dated record."
+  care_prices: "{price:annualCareOne} a year for one person, {price:annualCareTwo} for two, {price:annualCareHousehold} for a household of up to four."
+  written_offer: If the service fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms.
+  paid_after: No paid work starts before acceptance and receipt of payment.
+  household_four: A household of up to four
 
 labels:
   start_here: Start here
@@ -107,7 +118,7 @@ stages:
   lines:
     assess: "{shared:stages.headings.assess} Typically four hours."
     harden: Settings, accounts and recovery rebuilt around your risks. Security keys supplied and configured.
-    verify: Changes tested and checked, and you are taught to use them. A private dated record of the work.
+    verify: "{shared:common.tested} A private dated record of the work."
   image_alts:
     assess: A laptop, a phone and a one-page summary on a table
     harden: Two hardware security keys

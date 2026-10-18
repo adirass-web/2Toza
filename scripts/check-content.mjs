@@ -211,6 +211,9 @@ function checkBlock(block, where, expectType, col, count = "nested") {
   for (const [f, spec] of Object.entries(def.fields)) checkField(spec, block[f], `${where}.${f}`, `${type}.${f}`, col);
   collectPrice(block, col, where);
   implicitStrings(block, col, where);
+  // comparison: every row has one cell per column (an empty cell = not included in that tier).
+  if (type === "comparison" && Array.isArray(block.columns) && Array.isArray(block.rows))
+    block.rows.forEach((r, i) => { if (Array.isArray(r?.cells) && r.cells.length !== block.columns.length) err(`${where}.rows[${i}].cells`, `${r.cells.length} cells for ${block.columns.length} columns`); });
 }
 
 const pageCollections = new Map();

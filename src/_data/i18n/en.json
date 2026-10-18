@@ -19,7 +19,9 @@
     "faqGroups": "Question groups",
     "faqExpand": "Expand all answers",
     "faqCollapse": "Collapse all answers",
-    "print": "Print this page"
+    "print": "Print this page",
+    "notIncluded": "Not included",
+    "dash": "—"
   },
   "nav": {
     "situations": "Situations",

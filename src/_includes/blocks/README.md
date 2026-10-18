@@ -129,6 +129,7 @@ The method/credential statement.
 | `statement` | text | required | The method line |
 | `body` | md | optional | Explanation |
 | `links` | link[] | optional | Proof links; the profile link (`kind: external`) appears on About only (V-045) |
+| `points` | text[] | optional | Up to 3 proof points (how-it-works). With points the block is the page's method section: a solid ink band, `heading` as a small brass label, the statement set large, the points in a row under heavy brass rules. Without points it stays the quiet statement on paper (About, attorneys) |
 
 Example: home.
 
@@ -152,6 +153,8 @@ The two anchor prices with one condition line each, and the path to all tiers. H
 | `items[].price_key`, `price`, `price_value` | | required | See Prices |
 | `items[].note` | text | required | One condition line |
 | `link` | link | optional | Usually `kind: more` |
+
+With a single item (how-it-works) the block is one price line instead of cards: name, price, condition and link in a row between heavy ink rules, directly under the section before it (no top padding).
 
 Example: home.
 
@@ -239,6 +242,7 @@ An illustrative deliverable (the exposure summary) shown as a document, with its
 | `entries[].ordered` | bool | optional | |
 | `entries[].redacted` | bool | optional | Show a redaction bar instead of text (the entry has no text) |
 | `caption` | text | required | The caveat |
+| `items` | text[] | optional | What the client keeps (how-it-works, up to 4). With items the block sits on recessed paper and lists them under the heading in large serif type; without items (Home) it is unchanged |
 
 Example: home.
 
@@ -563,7 +567,7 @@ Example: pricing (abridged).
 
 ## offer
 
-The first step as a purchasable offer. Appears nested in `tiers.first_step` (pricing) and as a page block (how-it-works, where it has a `heading`).
+The first step as a purchasable offer. Three renderings: nested in `tiers.first_step` (the including template sets `nested = true`): the card alone; a page block with a `heading`: the card in its own section; a page block without a heading (pricing, Pages v2): one full-width row on a solid ink band with the `name` as the section's h2.
 
 | Field | Type | | Notes |
 |---|---|---|---|
@@ -598,6 +602,48 @@ Example: pricing, `tiers.first_step`.
 ```
 
 ---
+
+## details
+
+A titled set of short labelled facts (how-it-works: the first visit; pricing: larger households, Annual Care, payment). A Flowbite description list opened by a heavy ink rule; labels in brass serif, text in large type.
+
+| Field | Type | | Notes |
+|---|---|---|---|
+| `heading` | text | required | h2 |
+| `heading_visible` | bool | optional | true: heading shown in the left columns, list beside it. False or absent: heading visually hidden, list spans the page and the section has no top padding |
+| `items` | `{ label, text }[]` | required | 1 to 6; `label` → `dt`, `text` → `dd` (plain text) |
+| `link` | link | optional | Below the list |
+
+## comparison
+
+Protection tiers side by side (pricing). From md a Flowbite table (`th scope="col"` per tier with name and price, `th scope="row"` per row label, table labelled by the h2); below md one Flowbite card per tier with the same row labels as a description list, so phones never scroll sideways. Exactly one of the two is displayed.
+
+| Field | Type | | Notes |
+|---|---|---|---|
+| `heading` | text | required | h2, id `<id>-h` |
+| `heading_visible` | bool | optional | As in `details` |
+| `columns` | `{ name, price_key, price, price_value }[]` | required | 2 to 4 tiers, in reading order |
+| `rows` | `{ label, cells[] }[]` | required | `cells` has one string per column. `""` = not included in that tier: shown as `t.ui.dash` (aria-hidden) plus `t.ui.notIncluded` (screen readers) |
+
+Example: pricing (abridged).
+
+```jsonc
+{
+  "type": "comparison",
+  "id": "tiers",
+  "heading": "Then the protection that fits your household.",
+  "heading_visible": true,
+  "columns": [
+    { "name": "Personal Shield", "price_key": "personalShield", "price": "₪32,000", "price_value": 32000 },
+    // … 2 more
+  ],
+  "rows": [
+    { "label": "Who it covers", "cells": ["One person", "You and one other person", "A household of up to four"] },
+    // … 5 more
+    { "label": "Review visit at twelve months", "cells": ["", "", "Included"] }
+  ]
+}
+```
 
 ## steps
 
