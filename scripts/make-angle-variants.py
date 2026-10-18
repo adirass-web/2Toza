@@ -90,6 +90,50 @@ V = {
  .t-sep{margin-block-start:10rem}.t-bus{margin-block-start:13rem}.t-inh{margin-block-start:6rem}.t-som{margin-block-start:0}
  body{overflow-x:hidden}
 }"""),
+ "f": ("Asymmetric shards and bleed", """
+/* F (D45): no two edges parallel, every shape different, all cuts leaning one way (a gust), shapes bleed off both
+   viewport edges and across the section boundary. Text stays level on plain ground. */
+html,body{overflow-x:clip}
+.hero-photo{clip-path:polygon(0 0,100% 0,100% 61%,66% 89%,29% 74%,0 96%)}
+h1{margin-block-start:1.25rem}
+@media (min-width:901px){
+ .doors{display:grid;grid-template-columns:repeat(24,minmax(0,1fr));align-items:start;margin-inline:-6vw;
+        overflow:visible;padding-block:7rem 3rem;column-gap:0}
+ .doors::before{content:"";grid-column:4/25;grid-row:2/4;background:var(--surface);position:relative;z-index:0;
+        align-self:stretch;margin-block:9vw 0;clip-path:polygon(0 21%,57% 0,100% 7%,100% 100%,11% 83%)}
+ .mosaic{display:contents}
+ .cell-head{position:relative;inset:auto;grid-column:8/16;grid-row:1;inline-size:auto;z-index:2}
+ .tile{position:relative;z-index:1;inline-size:auto!important;margin:0}
+ .tile + .tile{margin-inline-start:0}
+ .tile .ph{block-size:var(--h);clip-path:var(--clip)}
+ .tile .cap{padding:1rem 0 0;max-inline-size:21rem;position:relative;z-index:3}
+ .t-inh{grid-column:2/7;grid-row:1;--h:24vw;margin-block-start:calc(var(--step-head) * 1.5);
+        --clip:polygon(4% 14%,77% 0,100% 71%,58% 100%,0 91%)}
+ .t-inh .cap{padding-inline-start:12%}
+ .t-som{grid-column:17/25;grid-row:1/3;--h:47vw;margin-block-start:-3.5rem;z-index:2;
+        --clip:polygon(31% 0,100% 4%,100% 100%,0 87%,9% 36%)}
+ .t-som .cap{padding-inline-start:9%;max-inline-size:calc(100% - 6vw - var(--margin))}
+ .t-sep{grid-column:1/12;grid-row:2;--h:37vw;margin-block-start:2vw;
+        --clip:polygon(0 7%,90% 0,100% 57%,73% 100%,5% 86%)}
+ .t-sep .cap{padding-inline-start:calc(6vw + var(--margin))}
+ .t-bus{grid-column:9/15;grid-row:1;--h:21vw;margin-block-start:calc(var(--step-head) * 2.3 + 2.5rem);margin-inline-start:1.5vw!important;z-index:2;
+        --clip:polygon(19% 0,100% 12%,91% 100%,0 81%)}
+ .t-bus .cap{padding-inline-start:8%}
+ .cell-mint{grid-column:13/25;grid-row:2/4;align-self:end;position:relative;z-index:5;inline-size:auto;margin:0 0 -6.5rem;
+        padding:3rem calc(6vw + 4rem) 3.4rem 5.5rem;clip-path:polygon(7% 9%,100% 0,94% 79%,61% 100%,0 88%)}
+ .sheet{padding-block-start:10rem}
+}
+@media (max-width:900px){
+ .tile .ph{clip-path:var(--clipm)}
+ .t-sep{--clipm:polygon(0 9%,88% 0,100% 63%,70% 100%,3% 87%)}
+ .t-bus{--clipm:polygon(16% 0,100% 10%,92% 100%,0 83%)}
+ .t-inh{--clipm:polygon(5% 12%,80% 0,100% 74%,55% 100%,0 90%)}
+ .t-som{--clipm:polygon(30% 0,100% 5%,96% 100%,0 86%,8% 38%)}
+ .t-sep .ph{margin-inline-start:calc(var(--margin) * -1)}
+ .t-som .ph{margin-inline-end:calc(var(--margin) * -1)}
+ .cell-mint{clip-path:polygon(5% 10%,100% 0,95% 80%,60% 100%,0 88%)}
+}
+@media (max-width:760px){.hero-photo{clip-path:polygon(0 0,100% 0,100% 66%,62% 90%,27% 77%,0 97%)}}"""),
 }
 
 for key, (name, css) in V.items():
