@@ -116,6 +116,11 @@
   --spacing-float: var(--float-size);  /* Floating contact button size (size-float). */
   --spacing-float-gap: var(--float-gap);  /* Gap between the floating contact buttons (gap-float-gap). */
   --spacing-float-edge: var(--float-edge);  /* Distance of the floating contact group from the viewport side (px-float-edge). */
+  --spacing-node: var(--diagram-node);  /* Stage diagrams: node diameter (size-node). */
+  --spacing-rail: var(--diagram-rail);  /* Stage diagrams: width of the rail column beside vertical diagrams (ps-rail, w-rail). */
+  --spacing-area: var(--diagram-area);  /* Stage ledger (Option C): width of the area column from lg (grid template). */
+  --spacing-track: var(--diagram-track);  /* Stage ledger (Option C): width of one stage column from lg (grid template). */
+  --spacing-track-wide: var(--diagram-track-wide);  /* Stage ledger (Option C): width of one stage column from xl (grid template). */
   --float-side: right;  /* Physical side of the viewport the group sits on: right or left. The one deliberate exception to logical properties: the owner wants the buttons in the same screen corner in LTR and RTL. Change this one value to move them. */
   --float-size: 3.25rem;  /* Button diameter (52px, above the 44px target minimum). */
   --float-gap: 0.5rem;  /* Gap between the two buttons. */
@@ -123,6 +128,11 @@
   --float-offset: 1.25rem;  /* Distance above the bottom edge, added to the iOS safe-area inset. */
   --float-z: 30;  /* Stacking order: above page content, below the sticky header (z-40). */
   --float-fade: 150ms;  /* Fade in and out. Not applied under prefers-reduced-motion. */
+  --diagram-node: 0.875rem;  /* Node diameter (14px): large enough to read as a mark beside 18px text, small enough to stay a mark, not an icon. */
+  --diagram-rail: 2.5rem;  /* Rail column beside vertical diagrams: node plus the gap to the text. */
+  --diagram-area: 10rem;  /* State ledger: area column from lg. */
+  --diagram-track: 7.5rem;  /* State ledger: one stage column from lg (1024px). */
+  --diagram-track-wide: 9rem;  /* State ledger: one stage column from xl (1280px). */
   --focus-width: 3px;  /* Focus outline width (:focus-visible). */
   --focus-offset: 3px;  /* Focus outline offset. */
   --focus-color: var(--color-brass);  /* Focus outline on light surfaces. */

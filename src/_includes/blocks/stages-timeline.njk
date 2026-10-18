@@ -1,0 +1,54 @@
+{#- Option A (review): the method as a dated course. Ink section.
+    Phone: a vertical rail on the inline-start side, one node per item, the line running from node to node.
+    From md: a horizontal rail across five columns; the columns share rows (CSS subgrid), so markers, names, lines,
+    "You keep" rules and prices sit on common baselines. Filled nodes are the three stages; ring nodes are what follows
+    the engagement, and their segments are dashed. The bracket under two columns prices the span it names.
+    Every shape is aria-hidden; the structure is the ordered list and its headings. -#}
+{% from "blocks/_macros.njk" import section, price with context %}
+{% set stageKeys = ['assess', 'harden', 'verify'] %}
+{% set colStart = ['md:col-start-1', 'md:col-start-2', 'md:col-start-3', 'md:col-start-4', 'md:col-start-5'] %}
+{% set colSpan = ['', 'md:col-span-1', 'md:col-span-2', 'md:col-span-3', 'md:col-span-4', 'md:col-span-5'] %}
+{% set mdCols = ['', '', '', 'md:grid-cols-3', 'md:grid-cols-4', 'md:grid-cols-5', 'md:grid-cols-6'] %}
+{% set count = block.items.length %}
+{% call section(block, 'dark', '') %}
+  <div class="max-w-3xl">
+    <h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-paper">{{ block.heading }}</h2>
+    {% if block.lead %}<p class="mt-3 text-lg text-on-dark-text">{{ block.lead }}</p>{% endif %}
+  </div>
+  <ol role="list" class="mt-10 md:mt-16 md:grid {{ mdCols[count] }} md:grid-rows-[repeat(6,auto)]">
+    {% for n in block.items %}
+    {% set isStage = n.key in stageKeys %}
+    {% set nextIsStage = (not loop.last) and (block.items[loop.index].key in stageKeys) %}
+    <li class="relative ps-rail {{ '' if loop.last else 'pb-10' }} md:row-span-6 md:grid md:grid-rows-subgrid md:ps-0 md:pb-0">
+      {#- phone rail: the segment to the next node, then the node over it -#}
+      {% if not loop.last %}<span aria-hidden="true" class="absolute inset-s-[calc(var(--spacing-node)/2_-_0.5px)] top-4 -bottom-4 border-s {{ '' if nextIsStage else 'border-dashed' }} border-on-dark-border-strong md:hidden"></span>{% endif %}
+      <span aria-hidden="true" class="absolute inset-s-0 top-[calc((2rem_-_var(--spacing-node))/2)] size-node rounded-full md:hidden {{ 'bg-accent-on-dark' if isStage else 'border-2 border-accent-on-dark bg-dark' }}"></span>
+      {#- md rail: node, then the segment to the next column; the last one ends in an arrow (the course continues) -#}
+      <div aria-hidden="true" class="hidden h-8 items-center md:flex">
+        <span class="size-node shrink-0 rounded-full {{ 'bg-accent-on-dark' if isStage else 'border-2 border-accent-on-dark' }}"></span>
+        <span class="h-0 flex-1 border-t {{ '' if nextIsStage else 'border-dashed' }} border-on-dark-border-strong"></span>
+        {% if loop.last %}<span class="me-1 size-2.5 shrink-0 -ms-2.5 rotate-45 border-t border-e border-on-dark-border-strong rtl:-rotate-45"></span>{% endif %}
+      </div>
+      <p class="font-serif text-lg leading-8 text-accent-on-dark lining-nums md:mt-5 md:pe-8 md:leading-snug">{{ n.marker }}</p>
+      <h3 class="mt-1 font-serif text-3xl leading-tight font-normal text-paper md:pe-8">{{ n.name }}</h3>
+      <p class="mt-2 text-base text-on-dark-text md:mt-3 md:pe-8">{{ n.line }}</p>
+      <div class="md:pe-8">{% if n.keep %}
+        <div class="mt-4 border-t border-on-dark-rule pt-3 md:mt-6">
+          {% if block.keep_label %}<p class="text-sm text-on-dark-text-muted">{{ block.keep_label }}</p>{% endif %}
+          <p class="mt-0.5 text-base text-paper">{{ n.keep }}</p>
+        </div>
+      {% endif %}</div>
+      <div class="md:pe-8">{% if n.price %}
+        <p class="mt-4 flex flex-wrap items-baseline gap-x-2 md:mt-5">{% if n.price_label %}<span class="text-sm text-on-dark-text-muted">{{ n.price_label }}</span> {% endif %}{{ price(n, 'text-xl whitespace-nowrap text-accent-on-dark') }}</p>
+      {% endif %}</div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% if block.bracket %}
+  <div class="mt-10 md:mt-8 md:grid {{ mdCols[count] }}">
+    {%- for n in block.items %}{% if n.key == block.bracket.from %}{% set fi = loop.index0 %}{% for m in block.items %}{% if m.key == block.bracket.to %}
+    <p class="border-s-3 border-accent-on-dark ps-4 text-lg text-paper md:me-8 md:border-s-0 md:ps-0 md:text-center md:before:mb-3 md:before:block md:before:h-3 md:before:border md:before:border-t-0 md:before:border-accent-on-dark {{ colStart[fi] }} {{ colSpan[loop.index0 - fi + 1] }}">{{ block.bracket.label }}</p>
+    {%- endif %}{% endfor %}{% endif %}{% endfor %}
+  </div>
+  {% endif %}
+{% endcall %}

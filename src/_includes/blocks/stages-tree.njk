@@ -1,0 +1,73 @@
+{#- Option B (review): the method as a decision path. Paper section; from lg the heading column sits beside the chart.
+    One ink trunk runs down the inline-start side. Every row (node + text) draws its own trunk segment into the next row,
+    so the line is continuous across nested lists without measuring anything. Shapes, all aria-hidden:
+      filled disc  a step on the path        diamond  the decision
+      ring off the trunk, with a connector and an end bar  the branch that stops
+      ring on the trunk  the optional yearly plan          chevrons on the trunk  direction of travel
+    The structure is semantic: an ordered list of steps; the decision holds an unordered list of its two branches; the
+    continuing branch holds the tier choice (a list) and the ordered list of the stages that follow. -#}
+{% from "blocks/_macros.njk" import section, price with context %}
+{% set trunkX = 'inset-s-[calc(var(--spacing-node)/2_-_0.5px)]' %}
+{% set nodeY = 'top-[calc((2rem_-_var(--spacing-node))/2)]' %}
+{% macro seg(last) %}{% if not last %}<span aria-hidden="true" class="absolute {{ trunkX }} top-4 -bottom-4 w-px bg-dark"></span>{% endif %}{% endmacro %}
+{% macro arrow() %}<span aria-hidden="true" class="absolute inset-s-[calc(var(--spacing-node)/2_-_0.25rem)] -top-2.5 size-2 rotate-45 border-r border-b border-dark"></span>{% endmacro %}
+{% macro node(shape) %}<span aria-hidden="true" class="absolute inset-s-0 {{ nodeY }} size-node {% if shape == 'disc' %}rounded-full bg-dark{% elif shape == 'ring' %}rounded-full border-2 border-dark bg-neutral-primary{% elif shape == 'diamond' %}scale-90 rotate-45 border-2 border-dark bg-neutral-primary{% endif %}"></span>{% endmacro %}
+{% macro row(n, shape, tag, last, first) %}
+<div class="relative ps-rail {{ '' if last else 'pb-9' }}">
+  {{ seg(last) }}{% if not first %}{{ arrow() }}{% endif %}{{ node(shape) }}
+  <{{ tag }} class="font-serif text-2xl leading-8 font-normal text-heading">{{ n.name }}</{{ tag }}>
+  {% if n.price %}<p class="mt-1">{{ price(n, ('text-3xl' if first else 'text-2xl') + ' text-accent') }}</p>{% endif %}
+  {% if n.line %}<p class="mt-1.5 max-w-xl text-body">{{ n.line }}</p>{% endif %}
+</div>
+{% endmacro %}
+{% call section(block, '', 'lg:grid lg:grid-cols-12 lg:gap-x-12') %}
+  <div class="lg:col-span-5">
+    <div class="lg:sticky lg:top-28">
+      <h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading">{{ block.heading }}</h2>
+      {% if block.lead %}<p class="mt-3 max-w-md text-lg text-body">{{ block.lead }}</p>{% endif %}
+    </div>
+  </div>
+  <ol role="list" class="mt-10 lg:col-span-7 lg:mt-2">
+    <li>{{ row(block.start, 'disc', 'h3', false, true) }}</li>
+    <li>{{ row(block.result, 'disc', 'h3', false, false) }}</li>
+    <li>
+      {{ row({ name: block.decision }, 'diamond', 'h3', false, false) }}
+      <ul role="list">
+        <li>
+          {#- the stop branch: the trunk passes by; a connector leaves it, ends in a ring, and the heading ends in a bar -#}
+          <div class="relative ps-[calc(var(--spacing-rail)*2)] pb-9">
+            {{ seg(false) }}
+            <span aria-hidden="true" class="absolute {{ trunkX }} top-4 h-px w-rail bg-dark"></span>
+            <span aria-hidden="true" class="absolute inset-s-rail {{ nodeY }} size-node rounded-full border-2 border-dark bg-neutral-primary"></span>
+            <h4 class="flex items-center gap-3 font-serif text-2xl leading-8 font-normal text-heading">{{ block.stop.name }}<span aria-hidden="true" class="flex items-center"><span class="h-px w-10 bg-dark"></span><span class="h-4 w-0.5 bg-dark"></span></span></h4>
+            {% if block.stop.line %}<p class="mt-1.5 max-w-md text-body">{{ block.stop.line }}</p>{% endif %}
+          </div>
+        </li>
+        <li>
+          <div class="relative ps-rail pb-9">
+            {{ seg(false) }}{{ arrow() }}{{ node('disc') }}
+            <h4 class="font-serif text-2xl leading-8 font-normal text-heading">{{ block.go.name }}</h4>
+            {% if block.go.line %}<p class="mt-1.5 max-w-xl text-body">{{ block.go.line }}</p>{% endif %}
+            {% if block.choices_label %}<p class="mt-6 text-base text-body-subtle">{{ block.choices_label }}</p>{% endif %}
+            {#- the choice: a bracket over the tiers it groups -#}
+            <div aria-hidden="true" class="mt-2 h-2.5 border border-b-0 border-accent"></div>
+            <ul role="list" class="grid grid-cols-2 gap-x-5 gap-y-6 pt-4 sm:grid-cols-4">
+              {% for c in block.choices %}
+              <li>
+                <p class="text-base leading-snug font-semibold text-heading">{{ c.name }}</p>
+                <p class="mt-1 whitespace-nowrap">{{ price(c, 'text-xl text-accent') }}</p>
+                <p class="mt-1 text-sm text-body-subtle">{{ c.for }}</p>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <ol role="list">
+            {% for n in block.then %}
+            <li>{{ row(n, 'ring' if loop.last else 'disc', 'h4', loop.last, false) }}</li>
+            {% endfor %}
+          </ol>
+        </li>
+      </ul>
+    </li>
+  </ol>
+{% endcall %}

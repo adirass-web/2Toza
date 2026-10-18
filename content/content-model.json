@@ -398,6 +398,140 @@
         "max": 25,
         "must_contain": "{amount}"
       }
+    },
+    "timeline_node": {
+      "key": {
+        "kind": "id",
+        "required": true
+      },
+      "marker": {
+        "kind": "text",
+        "required": true,
+        "max": 50
+      },
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 20
+      },
+      "line": {
+        "kind": "text",
+        "required": true,
+        "max": 140
+      },
+      "keep": {
+        "kind": "text",
+        "max": 110
+      },
+      "price_label": {
+        "kind": "text",
+        "max": 20
+      },
+      "price_key": {
+        "kind": "price_key"
+      },
+      "price_format": {
+        "kind": "text",
+        "max": 30,
+        "must_contain": "{amount}"
+      }
+    },
+    "bracket": {
+      "from": {
+        "kind": "id",
+        "required": true
+      },
+      "to": {
+        "kind": "id",
+        "required": true
+      },
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 110
+      }
+    },
+    "flow_node": {
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 40
+      },
+      "line": {
+        "kind": "text",
+        "max": 140
+      },
+      "price_key": {
+        "kind": "price_key"
+      },
+      "price_format": {
+        "kind": "text",
+        "max": 30,
+        "must_contain": "{amount}"
+      }
+    },
+    "choice": {
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 30
+      },
+      "for": {
+        "kind": "text",
+        "required": true,
+        "max": 40
+      },
+      "price_key": {
+        "kind": "price_key",
+        "required": true
+      },
+      "price_format": {
+        "kind": "text",
+        "max": 30,
+        "must_contain": "{amount}"
+      }
+    },
+    "track_stage": {
+      "key": {
+        "kind": "stage_key",
+        "required": true
+      },
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 16
+      },
+      "line": {
+        "kind": "text",
+        "required": true,
+        "max": 60
+      }
+    },
+    "track_row": {
+      "area": {
+        "kind": "text",
+        "required": true,
+        "max": 24
+      },
+      "before": {
+        "kind": "text",
+        "required": true,
+        "max": 90
+      },
+      "after": {
+        "kind": "text",
+        "required": true,
+        "max": 90
+      },
+      "stages": {
+        "kind": "list",
+        "of": {
+          "kind": "stage_key"
+        },
+        "required": true,
+        "min_items": 1,
+        "max_items": 3
+      }
     }
   },
   "blocks": {
@@ -881,6 +1015,187 @@
         "note": {
           "kind": "object",
           "type": "link"
+        }
+      }
+    },
+    "review-intro": {
+      "summary": "Review scaffolding (design review pages only, never on a live page): the page heading and how to read the options.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "line": {
+          "kind": "text",
+          "max": 240
+        }
+      }
+    },
+    "review-note": {
+      "summary": "Review scaffolding (design review pages only): the label and one-line description of the option that follows.",
+      "fields": {
+        "label": {
+          "kind": "text",
+          "required": true,
+          "max": 20
+        },
+        "line": {
+          "kind": "text",
+          "required": true,
+          "max": 160
+        }
+      }
+    },
+    "stages-timeline": {
+      "summary": "Design option (review): the method as a dated course, a rail of nodes from the first visit to Annual Care, with what the client keeps at each node and an optional bracket that prices a span of nodes.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "lead": {
+          "kind": "text",
+          "max": 200
+        },
+        "keep_label": {
+          "kind": "text",
+          "max": 20
+        },
+        "items": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "timeline_node"
+          },
+          "required": true,
+          "min_items": 3,
+          "max_items": 6
+        },
+        "bracket": {
+          "kind": "object",
+          "type": "bracket"
+        }
+      }
+    },
+    "stages-tree": {
+      "summary": "Design option (review): the method as a decision path. First step, the exposure summary, then a branch: stop and keep the summary, or continue within the credit window to a tier, then the remaining stages.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "lead": {
+          "kind": "text",
+          "max": 200
+        },
+        "start": {
+          "kind": "object",
+          "type": "flow_node",
+          "required": true
+        },
+        "result": {
+          "kind": "object",
+          "type": "flow_node",
+          "required": true
+        },
+        "decision": {
+          "kind": "text",
+          "required": true,
+          "max": 40
+        },
+        "stop": {
+          "kind": "object",
+          "type": "flow_node",
+          "required": true
+        },
+        "go": {
+          "kind": "object",
+          "type": "flow_node",
+          "required": true
+        },
+        "choices_label": {
+          "kind": "text",
+          "max": 60
+        },
+        "choices": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "choice"
+          },
+          "required": true,
+          "min_items": 2,
+          "max_items": 4
+        },
+        "then": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "flow_node"
+          },
+          "required": true,
+          "min_items": 1,
+          "max_items": 4
+        }
+      }
+    },
+    "stages-track": {
+      "summary": "Design option (review): the method as state changes. Parts of the client's digital life, each from before to after, with marks for the stages that work on it.",
+      "fields": {
+        "heading": {
+          "kind": "text",
+          "required": true,
+          "max": 60
+        },
+        "lead": {
+          "kind": "text",
+          "max": 200
+        },
+        "stages": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "track_stage"
+          },
+          "required": true,
+          "min_items": 3,
+          "max_items": 3
+        },
+        "before_label": {
+          "kind": "text",
+          "required": true,
+          "max": 20
+        },
+        "after_label": {
+          "kind": "text",
+          "required": true,
+          "max": 20
+        },
+        "marks_label": {
+          "kind": "text",
+          "required": true,
+          "max": 30
+        },
+        "marks_key": {
+          "kind": "text",
+          "max": 90
+        },
+        "rows": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "track_row"
+          },
+          "required": true,
+          "min_items": 2,
+          "max_items": 6
+        },
+        "coda": {
+          "kind": "text",
+          "max": 200
         }
       }
     }

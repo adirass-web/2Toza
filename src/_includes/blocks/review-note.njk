@@ -1,0 +1,7 @@
+{#- Review scaffolding (design review pages only): a dashed band naming the option that follows. Dashed on purpose, so it never reads as part of the design under review. -#}
+<div{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 border-y border-dashed border-default-strong bg-neutral-primary">
+  <div class="mx-auto flex w-full max-w-wrap flex-col gap-x-6 gap-y-1 px-gutter py-4 sm:flex-row sm:items-baseline sm:px-gutter-wide">
+    <p class="shrink-0 text-base font-semibold text-heading">{{ block.label }}</p>
+    <p class="text-base text-body-subtle">{{ block.line }}</p>
+  </div>
+</div>

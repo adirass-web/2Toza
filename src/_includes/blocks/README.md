@@ -679,3 +679,14 @@ Add the page key to `src/_data/system.json` `renderFromContent` and, while a han
     node scripts/check-content.mjs --prefix=/_ref --only=pricing
 
 The check extracts the visible text and attributes of the rendered page and compares them with the content files sentence by sentence, both directions.
+
+---
+
+## Review-only blocks (design review pages, never on a live page)
+
+Used by `src/content/en/stages-options.md` (`/en/stages-options/`, noindex, not in navigation). Fields are in `content/content-model.json`; copy for approval in `strategy/copy/STAGES-OPTIONS-COPY.md`.
+
+- **review-intro**: `heading` (the page h1), `line`. **review-note**: `label`, `line`; a dashed band naming the option below it (`id` is its anchor).
+- **stages-timeline** (Option A): `heading`, `lead`, `keep_label`, `items[]` of `{ key, marker, name, line, keep?, price_label?, price_key?, price?, price_value? }` (keys `assess|harden|verify` draw filled nodes, any other key a ring on a dashed segment), `bracket { from, to, label }` naming two item keys.
+- **stages-tree** (Option B): `heading`, `lead`, `start`, `result`, `stop`, `go` (each `{ name, line?, price_key?, price?, price_value? }`), `decision` (text), `choices_label`, `choices[]` of `{ name, for, price_key, price, price_value }`, `then[]` of the same node shape (the last draws a ring).
+- **stages-track** (Option C): `heading`, `lead`, `stages[]` (exactly 3, `{ key, name, line }`), `before_label`, `after_label`, `marks_label` (screen-reader label), `marks_key`, `rows[]` of `{ area, before, after, stages: stage key[] }`, `coda`.
