@@ -11,7 +11,9 @@
     "check:content": "npm run build && node scripts/check-content.mjs",
     "pages:deploy": "wrangler pages deploy",
     "build:css": "node scripts/build-tokens.mjs && tailwindcss -i styles/main.css -o assets/css/main.css --minify",
-    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js"
+    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js",
+    "check:visual": "npm run build && node scripts/visual.mjs",
+    "visual:approve": "npm run build && node scripts/visual.mjs --update"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
@@ -24,6 +26,8 @@
     "htmlparser2": "7.2.0",
     "js-yaml": "4.3.2",
     "markdown-it": "14.3.2",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
     "simple-icons": "^16.35.0",
     "tailwindcss": "^4.3.3",
     "wrangler": "4.150.0"
