@@ -107,3 +107,13 @@ All five must also avoid:
 | D26 | The dark palette dealt to direction 4 is redrawn (PFD R2: dark reads as threat). Result: *Putty and black*, with teal accent. |
 | D27 | The skill's house rule applies: headlines at most two lines at every width. The frozen H1 is sized to fit. |
 | D28 | Idea sentences, as proposed 13:44: 2 restraint as *tozasu*; 3 an ordinary moment kept in view; 4 her own words, closed link by link. |
+
+## 12. Review round 1 (18 Oct, 14:16)
+| # | Decision |
+|---|---|
+| D29 | Board 4 (Access map) rejected. |
+| D30 | Board 2 (The quiet instrument) preferred over board 3 (The split stage). Board 2 is developed further. |
+| D31 | **Wordmark approved:** italic lowercase *toza* in Bona Nova, with 閉ざす set vertically beside it like a colophon. |
+| D32 | Photos rejected. The owner supplies the photographs. |
+| D33 | Situations become a media gallery, tighter but bigger, not a stacked list. |
+| O3 | Open: full-bleed photography (the quiet-instrument sheet forbids anything full width before the footer). |
