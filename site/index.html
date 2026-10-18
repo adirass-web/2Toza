@@ -4,73 +4,63 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Toza — three directions</title>
+<title>Toza — design review</title>
 <style>
-@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-hebrew-latin-400-normal.woff2) format("woff2");font-weight:400}
-@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-hebrew-latin-500-normal.woff2) format("woff2");font-weight:500}
-:root{--bg:#f4f4f2;--ink:#151515;--muted:#555}
+@font-face{font-family:"Bona Nova";src:url(fonts/bona-nova-latin-400-normal.woff2) format("woff2");font-weight:400}
+@font-face{font-family:"Bona Nova";src:url(fonts/bona-nova-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}
+:root{--bg:#fff;--ink:#232323;--muted:#5f5f5f}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Plex",system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.5 "Bona Nova",Georgia,serif}
 a{color:inherit}
-header{padding:4rem clamp(1rem,4vw,3rem) 2rem;max-inline-size:62rem}
-h1{font-weight:500;font-size:clamp(2rem,1.4rem + 2.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1rem}
-header p{margin:0;max-inline-size:60ch;color:var(--muted)}
-.boards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,2rem);padding:2rem clamp(1rem,4vw,3rem) 4rem}
-.board a.shot{display:block;aspect-ratio:16/10;overflow:hidden;background:#ddd}
-.board a.shot img{inline-size:100%;block-size:100%;object-fit:cover;object-position:top}
-.board h2{font-weight:500;font-size:1.5rem;margin:1.25rem 0 .25rem;letter-spacing:-.01em}
-.board .open{display:inline-block;padding-block:.6rem;font-weight:500}
-.board dl{margin:.5rem 0 0;display:grid;grid-template-columns:7.5rem 1fr;gap:.35rem 1rem;font-size:15px}
-.board dt{color:var(--muted)}.board dd{margin:0}
-.board .idea{margin:1rem 0 0;font-size:16px}
-section.notes{padding:0 clamp(1rem,4vw,3rem) 5rem;max-inline-size:62rem;font-size:15px;color:var(--muted)}
-section.notes h3{color:var(--ink);font-weight:500;font-size:1.125rem;margin:2.5rem 0 .5rem}
-section.notes li{margin-block:.3rem}
-@media (max-width:900px){.boards{grid-template-columns:1fr}}
+.wrap{padding:4rem clamp(1.25rem,4vw,3rem) 5rem;max-inline-size:84rem}
+h1{font-weight:400;font-style:italic;font-size:clamp(2.25rem,1.4rem + 3vw,3.75rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1rem}
+.lead{max-inline-size:56ch;color:var(--muted);margin:0 0 3rem}
+.board{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2.5rem;align-items:start;margin-block-end:5rem}
+.board img{inline-size:100%;display:block}
+.board h2{font-weight:400;font-style:italic;font-size:2rem;margin:0 0 .75rem}
+.board p{margin:0 0 1rem}
+.palettes{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:2rem}
+.pal a{text-decoration:none;display:block}
+.pal img{inline-size:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block}
+.pal h3{font-weight:400;font-size:1.25rem;margin:1rem 0 .25rem}
+.pal p{margin:0 0 .75rem;font-size:1rem;color:var(--muted);font-style:italic}
+.sw{display:flex;gap:4px}.sw span{flex:1;block-size:2rem}
+.hex{display:flex;gap:4px;font-size:.75rem;color:var(--muted);margin-block-start:.3rem}.hex span{flex:1}
+@media (max-width:800px){.board{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header>
-  <h1>Toza: three directions</h1>
-  <p>Concept boards for Dr. Lior Tabansky. Each shows the same content: the home page's first screen and the situations, at desktop and phone width, with its own wordmark. The words are unchanged from the approved site; only the design differs. Open each board on a phone too.</p>
-</header>
-<main class="boards">
-  <article class="board">
-    <a class="shot" href="b2-quiet/"><img src="shots/b2-desktop.jpg" alt="Board 2, first screen" loading="lazy"></a>
-    <h2>2 · The quiet instrument <small style="font-weight:400;font-size:.9rem;color:#2f6b4f">chosen, version 2</small></h2>
-    <a class="open" href="b2-quiet/">Open board 2</a>
-    <dl><dt>Feeling</dt><dd>A private letter: almost nothing on the page, all of it exact</dd><dt>Type</dt><dd>Bona Nova (Latin and Hebrew)</dd><dt>Colour</dt><dd>White, near-black, one mint field</dd><dt>Wordmark</dt><dd>Italic <i>toza</i> with 閉ざす as a colophon (approved)</dd></dl>
-    <p class="idea"><b>Idea.</b> <i>Tozasu</i>, to close shut, becomes the page's restraint: a page that shows almost nothing, the way a closed door shows nothing.</p>
-  </article>
-  <article class="board">
-    <a class="shot" href="b3-split/"><img src="shots/b3-desktop.jpg" alt="Board 3, first screen" loading="lazy"></a>
-    <h2>3 · The split stage <small style="font-weight:400;font-size:.9rem;color:#777">not chosen</small></h2>
-    <a class="open" href="b3-split/">Open board 3</a>
-    <dl><dt>Feeling</dt><dd>A calm afternoon kept in view while you read</dd><dt>Type</dt><dd>Noto Serif Hebrew (Latin and Hebrew)</dd><dt>Colour</dt><dd>Olive on bone; the close inverts to olive</dd><dt>Wordmark</dt><dd>A woven garment label</dd></dl>
-    <p class="idea"><b>Idea.</b> An ordinary moment, a woman at a table with her phone, stays fixed beside the text. The reader recognises her own life before reading about the risk.</p>
-  </article>
-  <article class="board">
-    <a class="shot" href="b4-map/"><img src="shots/b4-desktop.jpg" alt="Board 4, first screen" loading="lazy"></a>
-    <h2>4 · Access map <small style="font-weight:400;font-size:.9rem;color:#777">not chosen</small></h2>
-    <a class="open" href="b4-map/">Open board 4</a>
-    <dl><dt>Feeling</dt><dd>Precise, calm, something you can touch</dd><dt>Type</dt><dd>IBM Plex Sans Hebrew (Latin and Hebrew)</dd><dt>Colour</dt><dd>Putty, black, one teal</dd><dt>Wordmark</dt><dd>門, a gate, with its two doors shut</dd></dl>
-    <p class="idea"><b>Idea.</b> Her own words from the opening line (phone, computer, accounts, conversations, finances, plans) appear still connected out of the frame. She taps each one to close it.</p>
-  </article>
-</main>
-<section class="notes">
-  <h3>What is the same on all three</h3>
-  <ul>
-    <li>Every word comes from the approved site (2toza main @ b3efb35). A check fails the build if a single new word appears; wordmark notes and photo credits are the only exceptions.</li>
-    <li>WhatsApp, Signal and Call me back open the private channel on the first tap.</li>
-    <li>Each typeface sets Hebrew and English, so the Hebrew site keeps the same look.</li>
-    <li>Motion is held to one quiet moment at most, so the page behaves as discreetly as it speaks.</li>
-  </ul>
-  <h3>Photographs (placeholders for review, Unsplash License)</h3>
-  <ul>
-    <li>Board 2 (version 2): hand placing a phone on a desk, by Vitaly Gariev (unsplash.com/photos/1ArQy9xVoSQ); stairwell, by Ana Curcan (unsplash.com/photos/Zi-Z7OpDFO8). Situations: two hangers, by Jason Lo; one lit window, by Mohammadreza Charkhgard; period parlour, Boston Public Library (public domain). Full list: assets/photos/CREDITS.md.</li>
-    <li>Board 3: woman at a café table, by Valentin (unsplash.com/photos/dVUSUGotack); hand holding a phone, by Shawn Rain (unsplash.com/photos/SOgkO6PJ8TY).</li>
-    <li>Board 4: woman walking a city street, by István Szitás (unsplash.com/photos/koKXhEvnGig).</li>
-      </ul>
-</section>
+<div class="wrap">
+  <h1>Toza: board 2, the quiet instrument</h1>
+  <p class="lead">Concept board for Dr. Lior Tabansky. Copy unchanged from the approved site (2toza main @ b3efb35). Approved so far: the direction, the wordmark, full-bleed hero, the four situation photos, one diagonal angle.</p>
+  <section class="board">
+    <a href="b2-quiet/"><img src="shots/b2-desktop.jpg" alt="Board 2, first screen"></a>
+    <div>
+      <h2>Current board</h2>
+      <p><a href="b2-quiet/">Open board 2</a> (greys and mint).</p>
+      <p>Photographs, Unsplash License: V. Gariev (hero); J. Lo, M. Charkhgard, Boston Public Library, A. Curcan (situations). Full list in assets/photos/CREDITS.md.</p>
+    </div>
+  </section>
+
+  <h2 style="font-weight:400;font-style:italic;font-size:2rem;margin:0 0 .5rem">Five palettes</h2>
+  <p class="lead">Same board, five colour systems. Each passes WCAG AA for text. Click a palette to open the board in it.</p>
+  <div class="palettes">
+    <article class="pal"><a href="b2-quiet/?p=p1"><img src="palettes/p1.jpg" alt=""><h3>1 · Washi and sumi</h3><p>Paper and ink, with deep moss for the one field. Calm, crafted, Japanese restraint.</p>
+      <div class="sw"><span style="background:#F3F1EC;outline:1px solid #ddd"></span><span style="background:#E7E4DD"></span><span style="background:#1C1B19"></span><span style="background:#5D5953"></span><span style="background:#4A5530"></span></div>
+      <div class="hex"><span>#F3F1EC</span><span>#E7E4DD</span><span>#1C1B19</span><span>#5D5953</span><span>#4A5530</span></div></a></article>
+    <article class="pal"><a href="b2-quiet/?p=p2"><img src="palettes/p2.jpg" alt=""><h3>2 · Iron and ash</h3><p>Cool ash ground, iron blue-black ink and field. Precise, discreet, the colder of the five.</p>
+      <div class="sw"><span style="background:#EDEFEE;outline:1px solid #ddd"></span><span style="background:#DFE3E2"></span><span style="background:#152120"></span><span style="background:#53605E"></span><span style="background:#1F3634"></span></div>
+      <div class="hex"><span>#EDEFEE</span><span>#DFE3E2</span><span>#152120</span><span>#53605E</span><span>#1F3634</span></div></a></article>
+    <article class="pal"><a href="b2-quiet/?p=p3"><img src="palettes/p3.jpg" alt=""><h3>3 · Stone and kakishibu</h3><p>Warm stone with persimmon-tannin brown, the colour of the stairwell and the lit window.</p>
+      <div class="sw"><span style="background:#ECE9E3;outline:1px solid #ddd"></span><span style="background:#DFDAD1"></span><span style="background:#231C17"></span><span style="background:#5E554D"></span><span style="background:#6F4428"></span></div>
+      <div class="hex"><span>#ECE9E3</span><span>#DFDAD1</span><span>#231C17</span><span>#5E554D</span><span>#6F4428</span></div></a></article>
+    <article class="pal"><a href="b2-quiet/?p=p4"><img src="palettes/p4.jpg" alt=""><h3>4 · Night window</h3><p>The one dark option: night blue-black with the lamp-light of the lit window as its only accent.</p>
+      <div class="sw"><span style="background:#12161B"></span><span style="background:#1C222A"></span><span style="background:#ECE8E1;outline:1px solid #ddd"></span><span style="background:#A4A8AE"></span><span style="background:#E3A35A"></span></div>
+      <div class="hex"><span>#12161B</span><span>#1C222A</span><span>#ECE8E1</span><span>#A4A8AE</span><span>#E3A35A</span></div></a></article>
+    <article class="pal"><a href="b2-quiet/?p=p5"><img src="palettes/p5.jpg" alt=""><h3>5 · Porcelain and oxblood</h3><p>Near-white porcelain and one deep oxblood field. The most formal: private bank, fine leather.</p>
+      <div class="sw"><span style="background:#F6F6F4;outline:1px solid #ddd"></span><span style="background:#EBEBE7"></span><span style="background:#1F1F1E"></span><span style="background:#5B5B58"></span><span style="background:#6B2724"></span></div>
+      <div class="hex"><span>#F6F6F4</span><span>#EBEBE7</span><span>#1F1F1E</span><span>#5B5B58</span><span>#6B2724</span></div></a></article>
+  </div>
+</div>
 </body>
 </html>

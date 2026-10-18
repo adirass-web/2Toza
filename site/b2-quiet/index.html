@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Toza — Private, in-person digital security</title>
+<script>try{var p=new URLSearchParams(location.search).get("p");if(/^p[1-5]$/.test(p))document.documentElement.dataset.palette=p}catch(e){}</script>
 <link rel="preload" href="../fonts/bona-nova-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/bona-nova-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -24,6 +25,14 @@
   --step-head:clamp(2.5rem,1.4rem + 3.4vw,4.25rem);
   --radius:2px; --ease:cubic-bezier(.2,.7,.2,1);
 }
+/* Five candidate palettes (review round 3). Open with ?p=p1 … ?p=p5; no parameter = the current greys and mint. */
+html[data-palette="p1"]{--bg:#F3F1EC;--surface:#E7E4DD;--ink:#1C1B19;--muted:#5D5953;--accent:#4A5530;--accent-ink:#F3F1EC}
+html[data-palette="p2"]{--bg:#EDEFEE;--surface:#DFE3E2;--ink:#152120;--muted:#53605E;--accent:#1F3634;--accent-ink:#EDEFEE}
+html[data-palette="p3"]{--bg:#ECE9E3;--surface:#DFDAD1;--ink:#231C17;--muted:#5E554D;--accent:#6F4428;--accent-ink:#F4EFE8}
+html[data-palette="p4"]{--bg:#12161B;--surface:#1C222A;--ink:#ECE8E1;--muted:#A4A8AE;--accent:#E3A35A;--accent-ink:#16120D}
+html[data-palette="p5"]{--bg:#F6F6F4;--surface:#EBEBE7;--ink:#1F1F1E;--muted:#5B5B58;--accent:#6B2724;--accent-ink:#F6F6F4}
+html[data-palette="p4"] h1{margin-block-start:1.5rem} /* light ink cannot sit on the light photo */
+html[data-palette="p4"] .btn:hover{background:#fff}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-body)/1.5 "Bona Nova",Georgia,serif;font-kerning:normal}
 a{color:inherit}

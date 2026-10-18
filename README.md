@@ -7,7 +7,7 @@ Preview: https://design-radical.toza-v2.pages.dev (noindex).
 - `DECISIONS.md` — log and handoff.
 - `copy/source/` — frozen content files from `adirass-web/2toza` main @ `b3efb35`. Do not edit.
 - `copy/strings.json` — resolved copy of every page, exported from a build of that commit.
-- `site/` — the boards (static HTML/CSS) and the comparison page.
+- `site/` — board 2 (static HTML/CSS), palette previews and the review page.
 - `review/` — inspector screenshots and the taste-skill direction sheets.
 
 Commands: `npm ci` · `npm run check` (copy parity: every visible board string must exist in the frozen copy).
