@@ -116,4 +116,12 @@ All five must also avoid:
 | D31 | **Wordmark approved:** italic lowercase *toza* in Bona Nova, with 閉ざす set vertically beside it like a colophon. |
 | D32 | Photos rejected. The owner supplies the photographs. |
 | D33 | Situations become a media gallery, tighter but bigger, not a stacked list. |
-| O3 | Open: full-bleed photography (the quiet-instrument sheet forbids anything full width before the footer). |
+| O3 | Resolved by D34 (full-bleed hero) and D37 (gallery edge to edge, within the width).
+
+## 13. Review round 2 (18 Oct, 15:01–15:27)
+| # | Decision |
+|---|---|
+| D34 | Hero layout H2 approved: a full-bleed photo across the top, with the text on white below. The Gariev photo (a hand placing a phone on a desk) stays as the hero for now. |
+| D35 | Owner photo directions: real daily ambience, not staged; no faces or model beauty needed. Crops, recolours and modifications are allowed. Originals are kept in `assets/photos/` with `CREDITS.md`; on the page, attribution is one small line. |
+| D36 | Situation photos are atmospheric and emotion-triggering, shown in their own colours: 1B two hangers, 2B one lit window, 3A period parlour, 4D stairwell. |
+| D37 | A horizontal strip that runs past the right edge is rejected. All four situations must fit the width. Desktop: four in a row; phone: 2×2. |

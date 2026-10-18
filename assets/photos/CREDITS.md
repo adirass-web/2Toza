@@ -13,3 +13,11 @@ Owner-selected photo directions, 18 Oct 2026. All are under the Unsplash License
 | curcan-staircase.jpg | Ana Curcan (@annaacurcan) | https://unsplash.com/photos/Zi-Z7OpDFO8 |
 
 On the site, credit appears as one small line at the foot of the page, e.g. "Photographs: V. Gariev, A. Curcan / Unsplash".
+
+## Situation tiles (owner-confirmed 18 Oct 2026, shown in their own colours)
+| File | Situation | Photographer | Source |
+|---|---|---|---|
+| lo-two-hangers.jpg | Separation or divorce | Jason Lo (@yuansheng_photography) | https://unsplash.com/photos/s7cpfENnfKE |
+| charkhgard-one-lit-window.jpg | Business or founder dispute | Mohammadreza Charkhgard (@mrcharkhgard) | https://unsplash.com/photos/homR2FUTUjE |
+| bpl-period-parlour.jpg | Inheritance conflict | Boston Public Library (@bostonpubliclibrary), public domain | https://unsplash.com/photos/uQjXKAFgwco |
+| curcan-staircase.jpg | Someone knows something | Ana Curcan (@annaacurcan) | https://unsplash.com/photos/Zi-Z7OpDFO8 |
