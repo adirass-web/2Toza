@@ -125,3 +125,4 @@ All five must also avoid:
 | D35 | Owner photo directions: real daily ambience, not staged; no faces or model beauty needed. Crops, recolours and modifications are allowed. Originals are kept in `assets/photos/` with `CREDITS.md`; on the page, attribution is one small line. |
 | D36 | Situation photos are atmospheric and emotion-triggering, shown in their own colours: 1B two hangers, 2B one lit window, 3A period parlour, 4D stairwell. |
 | D37 | A horizontal strip that runs past the right edge is rejected. All four situations must fit the width. Desktop: four in a row; phone: 2×2. |
+| D38 | Geometry G3 (editorial mosaic) chosen, 15:32. The hero headline crosses the photo's lower edge. Situations form one interlocking grid with the heading and the mint line: desktop 4×2; phone 2 columns, with separation full width. |

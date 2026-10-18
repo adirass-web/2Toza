@@ -9,7 +9,7 @@
 <link rel="preload" href="../fonts/bona-nova-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Board 2, version 2 — The quiet instrument, with the system broken once on purpose: a full-bleed hero photograph
-   and a full-bleed gallery strip (owner decisions D33, H2, 18 Oct). Wordmark approved (D31). */
+   and the situations as an editorial mosaic (G3, D38). Wordmark approved (D31). */
 @font-face{font-family:"Bona Nova";src:url(../fonts/bona-nova-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+2215}
 @font-face{font-family:"Bona Nova";src:url(../fonts/bona-nova-hebrew-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
 @font-face{font-family:"Bona Nova";src:url(../fonts/bona-nova-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
@@ -42,9 +42,9 @@ img{display:block;max-inline-size:100%;block-size:auto}
 .links .msg{font-style:italic}
 
 /* hero: one photograph edge to edge, the words on white beneath it */
-.hero-photo{inline-size:100%;block-size:clamp(18rem,50svh,34rem);object-fit:cover;object-position:60% 55%;background:var(--surface)}
-.hero-text{display:grid;grid-template-columns:var(--line) minmax(0,32rem) minmax(0,1fr);column-gap:0;row-gap:1.75rem;padding-block:clamp(2rem,5svh,3.25rem) 5rem;padding-inline-end:var(--margin)}
-h1{grid-column:2 / 4;margin:0;font-weight:400;font-style:italic;font-size:var(--step-head);line-height:1.04;letter-spacing:-.022em;text-wrap:balance}
+.hero-photo{inline-size:100%;block-size:clamp(20rem,58svh,38rem);object-fit:cover;object-position:60% 55%;background:var(--surface)}
+.hero-text{display:grid;grid-template-columns:var(--line) minmax(0,32rem) minmax(0,1fr);column-gap:0;row-gap:1.75rem;padding-block:0 5rem;padding-inline-end:var(--margin)}
+h1{grid-column:2 / 4;margin:calc(var(--step-head) * -1.04) 0 0;position:relative;font-weight:400;font-style:italic;font-size:var(--step-head);line-height:1.04;letter-spacing:-.022em;text-wrap:balance}
 .side{display:contents}
 .lead{grid-column:2;grid-row:2}
 .side .more{grid-column:3;grid-row:2;padding-block-start:.35rem;padding-inline-start:clamp(1.5rem,4vw,4rem)}
@@ -56,21 +56,29 @@ h1{grid-column:2 / 4;margin:0;font-weight:400;font-style:italic;font-size:var(--
 .textlink:hover{text-decoration-thickness:2px}
 .promise{margin:1.75rem 0 0;font-size:var(--step-small);color:var(--muted)}
 
-/* situations: four tall photographs side by side, edge to edge, all within the width (D37) */
-.doors{padding-block:5rem 7rem}
-h2{margin:0 0 2rem;padding-inline-start:var(--line);font-weight:400;font-style:italic;font-size:var(--step-head);line-height:1.04;letter-spacing:-.022em}
-.strip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
-.strip a{display:block;text-decoration:none}
-.strip .ph{aspect-ratio:3/4;overflow:hidden;background:var(--surface)}
-.strip .ph img{inline-size:100%;block-size:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.strip a:hover .ph img{transform:scale(1.02)}
-.strip .t{display:block;margin-block-start:1rem;padding-inline:clamp(.75rem,1.4vw,1.25rem);font-size:var(--step-title);line-height:1.15;letter-spacing:-.01em}
-.strip .l{display:block;margin-block-start:.4rem;padding-inline:clamp(.75rem,1.4vw,1.25rem);font-style:italic;color:var(--muted)}
-.strip a:hover .t{text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:1px}
-.aside{margin:4rem 0 0 var(--line);inline-size:min(34rem,calc(100vw - var(--line) - var(--margin)));background:var(--accent);color:var(--accent-ink);padding:2.25rem 2rem 2.5rem;font-size:var(--step-title);line-height:1.3}
+/* situations: an editorial mosaic (G3). Heading, photographs and the mint line interlock in one grid. */
+.doors{padding-block:6rem 0}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:calc((100vw - 18px) / 4 * 4 / 3);gap:6px;list-style:none;margin:0;padding:0}
+.mosaic > *{min-inline-size:0;min-block-size:0}
+.cell-head{grid-column:1 / 3;grid-row:1;display:flex;align-items:flex-end;padding:0 var(--margin) 2.5rem var(--margin)}
+h2{margin:0;font-weight:400;font-style:italic;font-size:var(--step-head);line-height:1.04;letter-spacing:-.022em}
+.tile{display:flex;flex-direction:column;text-decoration:none;background:var(--bg)}
+.tile .ph{flex:1;overflow:hidden;background:var(--surface)}
+.tile .ph img{inline-size:100%;block-size:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.tile:hover .ph img{transform:scale(1.02)}
+.tile .cap{padding:1rem clamp(.75rem,1.4vw,1.25rem) 1.25rem}
+.tile .t{display:block;font-size:var(--step-title);line-height:1.15;letter-spacing:-.01em}
+.tile .l{display:block;margin-block-start:.35rem;font-style:italic;color:var(--muted)}
+.tile:hover .t{text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:1px}
+.t-sep{grid-column:1 / 3;grid-row:2}
+.t-bus{grid-column:3;grid-row:1}
+.t-inh{grid-column:4;grid-row:1}
+.t-som{grid-column:3;grid-row:2}
+.cell-mint{grid-column:4;grid-row:2;background:var(--accent);color:var(--accent-ink);display:flex;align-items:flex-end;padding:2rem clamp(1.25rem,2vw,2rem) 2.25rem}
+.cell-mint p{margin:0;font-size:clamp(1.0625rem,.9rem + .5vw,1.375rem);line-height:1.3}
 
 /* wordmark sheet (approved, D31) and credits: production notes, exempt from the copy check */
-.sheet{background:var(--surface);padding:6rem var(--margin) 6rem var(--line)}
+.sheet{background:var(--surface);margin-block-start:6px;padding:6rem var(--margin) 6rem var(--line)}
 .sheet .row{display:flex;flex-wrap:wrap;gap:4rem;align-items:flex-end}
 .sheet .big .latin{font-size:5.5rem}.sheet .big .kanji{font-size:1.4rem}
 .sheet .rev{background:var(--ink);color:var(--bg);padding:1.5rem 1.75rem}.sheet .rev .kanji{color:#bdbdbd}
@@ -83,6 +91,16 @@ h2{margin:0 0 2rem;padding-inline-start:var(--line);font-weight:400;font-style:i
   .hero-text{grid-template-columns:var(--line) minmax(0,1fr) var(--line)}
   .lead,.side .more{grid-column:2;grid-row:auto}
   .side .more{padding-inline-start:0}
+  .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto}
+  .cell-head{grid-column:1 / -1;grid-row:auto;padding:0 var(--margin) 2rem}
+  .t-sep{grid-column:1 / -1;grid-row:auto}
+  .t-bus,.t-inh,.t-som,.cell-mint{grid-column:auto;grid-row:auto}
+  .tile .ph{flex:none;aspect-ratio:3/4}
+  .t-sep .ph{aspect-ratio:3/2}
+  .tile .t{font-size:1.1875rem}
+  .tile .l{font-size:1rem}
+  .cell-mint{padding:1.5rem 1.25rem}
+  .cell-mint p{font-size:1.1875rem}
 }
 @media (max-width:760px){
   :root{--line:1.5rem}
@@ -93,12 +111,8 @@ h2{margin:0 0 2rem;padding-inline-start:var(--line);font-weight:400;font-style:i
   h1{font-size:calc((100vw - 3rem) / 11.6)}
   .lead{font-size:1.0625rem}
   .hero-text{row-gap:1.25rem}
-  .doors{padding-block:3.5rem 5rem}
-  h2{font-size:calc((100vw - 3rem) / 11.6);padding-inline-end:1.5rem}
-  .strip{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2rem}
-  .strip .t{font-size:1.1875rem;margin-block-start:.75rem}
-  .strip .l{font-size:1rem}
-  .aside{inline-size:calc(100vw - 3rem)}
+  .doors{padding-block:3.5rem 0}
+  h2{font-size:calc((100vw - 3rem) / 11.6);max-inline-size:none}
   .sheet .big .latin{font-size:3.5rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -134,14 +148,14 @@ h2{margin:0 0 2rem;padding-inline-start:var(--line);font-weight:400;font-style:i
   </section>
 
   <section class="doors" id="situations" aria-labelledby="h-sit">
-    <h2 id="h-sit">Where this usually begins.</h2>
-    <ul class="strip">
-      <li><a href="#"><div class="ph"><img src="../img/s1-separation.jpg" width="900" height="1200" alt="" loading="lazy"></div><span class="t">Separation or divorce</span><span class="l">What still connects your digital lives.</span></a></li>
-      <li><a href="#"><div class="ph"><img src="../img/s2-business.jpg" width="900" height="1200" alt="" loading="lazy"></div><span class="t">Business or founder dispute</span><span class="l">Where personal and business access still meet.</span></a></li>
-      <li><a href="#"><div class="ph"><img src="../img/s3-inheritance.jpg" width="900" height="1200" alt="" loading="lazy"></div><span class="t">Inheritance conflict</span><span class="l">Family arrangements that outlived the trust.</span></a></li>
-      <li><a href="#"><div class="ph"><img src="../img/s4-someone.jpg" width="900" height="1200" alt="" loading="lazy"></div><span class="t">Someone knows something</span><span class="l">Private information has surfaced. Start with what can be checked.</span></a></li>
-    </ul>
-    <p class="aside">Or before anything happens. You don't need a known incident to begin.</p>
+    <div class="mosaic">
+      <div class="cell-head"><h2 id="h-sit">Where this usually begins.</h2></div>
+      <a class="tile t-bus" href="#"><div class="ph"><img src="../img/s2-business.jpg" width="900" height="1200" alt="" loading="lazy"></div><div class="cap"><span class="t">Business or founder dispute</span><span class="l">Where personal and business access still meet.</span></div></a>
+      <a class="tile t-inh" href="#"><div class="ph"><img src="../img/s3-inheritance.jpg" width="900" height="1200" alt="" loading="lazy"></div><div class="cap"><span class="t">Inheritance conflict</span><span class="l">Family arrangements that outlived the trust.</span></div></a>
+      <a class="tile t-sep" href="#"><div class="ph"><img src="../img/s1-separation-wide.jpg" width="1500" height="1000" alt="" loading="lazy"></div><div class="cap"><span class="t">Separation or divorce</span><span class="l">What still connects your digital lives.</span></div></a>
+      <a class="tile t-som" href="#"><div class="ph"><img src="../img/s4-someone.jpg" width="900" height="1200" alt="" loading="lazy"></div><div class="cap"><span class="t">Someone knows something</span><span class="l">Private information has surfaced. Start with what can be checked.</span></div></a>
+      <div class="cell-mint"><p>Or before anything happens. You don't need a known incident to begin.</p></div>
+    </div>
   </section>
 </main>
 
