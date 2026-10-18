@@ -34,10 +34,10 @@ blocks:
 
   - type: stages
     ref: stages
-
-  - type: method-statement
-    ref: method
-    heading: One method, from first look to final check.
+    statement_link:
+      label: "Why Toza?"
+      href: /en/about/
+      kind: more
 
   - type: specimen
     ref: specimen
