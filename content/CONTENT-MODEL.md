@@ -71,12 +71,12 @@ Page files: `home`, `how-it-works`, `about`, `pricing`, `faq`, `conditions`, `se
 
 Pages already reference shared strings with `{shared:path}` and shared blocks with `ref:`. A sentence of six or more words used on two or more pages lives once in `_shared.yaml: common` and each page writes `{shared:common.key}` in its place, alone or inside a longer field ("Private information has surfaced. {shared:common.start_checked}"). A field that starts with a token must be quoted in YAML. The check fails if such a sentence is typed on two pages, or on a page and in `_shared.yaml`.
 
-The renderer adds a little copy implied by a field: `byline: full|short` adds the person's name and tagline from `_shared.yaml: person`; `stage_names: true` adds the three stage names; a step's position number ("1 · Assess") is generated.
+The renderer adds a little copy implied by a field: `byline: full|short` adds the person's name and tagline from `_shared.yaml: person` (About only, V-045); hero `promise: true` adds Toza's promise line from `_shared.yaml: promise`; `stage_names: true` adds the three stage names; a step's position number ("1 · Assess") is generated.
 
 ## 5. Shared copy vs UI chrome — the rule
 
 - **UI chrome → `i18n/<lang>.json`** (`ui`, `nav`, `footer`, `buttons`): words that *operate the interface* and would be translated as interface — navigation and footer link labels, action-button labels, skip link, aria/landmark labels, "opens in a new tab", expand/collapse toggles, print, arrows. Content refers to them with `{ui:…}` or `actions`.
-- **Shared editorial copy → `_shared.yaml`**: words that *say something about Toza*, shown on more than one page — the person byline, the method statement, offer names, descriptions, inclusions and credit lines, price labels ("Start here", "All protection tiers"), the three stages, the exposure-summary specimen, the contact block. This includes the method line, contact text and price-block labels; nav and footer are chrome and stay in i18n.
+- **Shared editorial copy → `_shared.yaml`**: words that *say something about Toza*, shown on more than one page — Toza's promise line, the person byline (About only), the method statement, offer names, descriptions, inclusions and credit lines, price labels ("Start here", "All protection tiers"), the three stages, the exposure-summary specimen, the contact block. This includes the method line, contact text and price-block labels; nav and footer are chrome and stay in i18n.
 - **Page copy → page file**: everything else, even if a similar sentence exists elsewhere.
 
 Sentences used on more than one page: `_shared.yaml: common` (§4.2).
@@ -96,7 +96,7 @@ Common block fields: `type` (required), `ref` (shared block), `id` (anchor slug;
 ### 6.1 Block types
 
 #### `hero`
-Page opening: the promise (h1), one supporting sentence, who does the work, the first actions.
+Page opening: the promise (h1), one supporting sentence, the first actions and Toza's promise line. V-045: every page but About uses `byline: none` and renders a typography-only hero (no portrait, no name); About keeps `byline: full` with the founder's portrait.
 
 | Field | Kind | Req. | Max | Now |
 |---|---|---|---|---|
@@ -104,6 +104,7 @@ Page opening: the promise (h1), one supporting sentence, who does the work, the 
 | `lead` | text |  | 270 | 202 |
 | `byline` | full \| short \| none | yes |  |  |
 | `actions` | list of action | yes |  |  |
+| `promise` | bool |  |  |  |
 | `note` | text |  | 40 | 28 |
 | `print` | bool |  |  |  |
 

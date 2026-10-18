@@ -1,8 +1,13 @@
+{#- Hero. Two variants (V-045):
+    * typographic (no byline): every page but About. Full-width headline at the hero measure (max-w-hero), a brass hairline,
+      the lead, the actions and, with `promise`, Toza's promise line as a quiet line under them. No portrait, no name.
+    * portrait (byline present): About only. Headline and lead beside the founder's portrait, name and tagline. -#}
 {% from "blocks/_macros.njk" import actions with context %}
 {% set by = block.byline %}
-<section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-6 pb-10 lg:pt-20 {{ 'lg:pb-28' if by else 'lg:pb-16' }}">
+{% if by %}
+<section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-6 pb-10 lg:pt-20 lg:pb-28">
   <div class="mx-auto grid w-full max-w-wrap gap-x-16 print:block gap-y-6 px-gutter sm:px-gutter-wide lg:grid-cols-12">
-    <div class="max-lg:contents {{ 'lg:col-span-7' if by else 'lg:col-span-8' }}">
+    <div class="max-lg:contents lg:col-span-7">
       <div class="max-lg:order-1">
         {% if block.print %}<img class="mb-4 hidden h-10 w-auto print:block" src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154">{% endif %}
         <h1 class="font-serif text-hero-sm leading-display font-normal tracking-display text-balance text-heading sm:text-hero-md lg:text-hero-lg">{{ block.heading }}</h1>
@@ -14,7 +19,6 @@
         {% if block.print %}<button type="button" data-print class="print:hidden mt-4 box-border inline-flex min-h-12 items-center justify-center rounded-base border border-brand bg-neutral-primary px-5 py-3 text-base leading-6 font-medium text-fg-brand hover:bg-brand hover:text-on-action">{{ t.ui.print }}</button>{% endif %}
       </div>
     </div>
-    {% if by %}
     <figure class="flex items-center gap-4 max-lg:order-2 lg:block {{ 'lg:col-span-5 lg:col-start-8' if by.variant == 'full' else 'lg:col-span-4 lg:col-start-9' }}">
       <div class="relative isolate size-24 shrink-0 lg:size-auto lg:w-full {{ 'lg:aspect-4/5' if by.variant == 'full' else 'lg:aspect-square' }} lg:before:absolute lg:before:inset-s-4 lg:before:-inset-e-4 lg:before:inset-bs-4 lg:before:-inset-be-4 lg:before:-z-10 lg:before:border lg:before:border-accent">
         <img class="size-full object-cover object-center" src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" alt="{{ t.ui.portraitAlt }}" fetchpriority="high">
@@ -24,6 +28,19 @@
         <p class="text-sm leading-snug text-body-subtle lg:text-base">{{ by.tagline }}</p>
       </figcaption>
     </figure>
-    {% endif %}
   </div>
 </section>
+{% else %}
+<section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-8 pb-10 lg:pt-20 lg:pb-20">
+  <div class="mx-auto w-full max-w-wrap px-gutter sm:px-gutter-wide">
+    {% if block.print %}<img class="mb-4 hidden h-10 w-auto print:block" src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154">{% endif %}
+    <h1 class="max-w-hero font-serif text-hero-sm leading-display font-normal tracking-display text-pretty text-heading sm:text-hero-md lg:text-hero-lg">{{ block.heading }}</h1>
+    <span class="mt-6 block h-px w-16 bg-accent lg:mt-10 lg:w-24 print:hidden" aria-hidden="true"></span>
+    {% if block.lead %}<p class="mt-6 max-w-xl text-lg text-body lg:mt-8 lg:text-xl">{{ block.lead }}</p>{% endif %}
+    {% if block.actions.length %}{{ actions(block.actions, '', 'mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap lg:mt-10', 'col-span-2 sm:col-auto') }}{% endif %}
+    {% if block.promise %}<p class="mt-5 max-w-xl text-sm leading-snug text-body-subtle lg:text-base">{{ block.promise }}</p>{% endif %}
+    {% if block.note %}<p class="mt-4 text-base text-body-subtle">{{ block.note }}</p>{% endif %}
+    {% if block.print %}<button type="button" data-print class="print:hidden mt-4 box-border inline-flex min-h-12 items-center justify-center rounded-base border border-brand bg-neutral-primary px-5 py-3 text-base leading-6 font-medium text-fg-brand hover:bg-brand hover:text-on-action">{{ t.ui.print }}</button>{% endif %}
+  </div>
+</section>
+{% endif %}

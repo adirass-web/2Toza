@@ -153,7 +153,8 @@ export function readPages(src, err = throwing) {
 //   action      -> { key, label, href, external, aria? }       (contact.json + i18n buttons)
 //   price_key   -> sibling fields price (display string, price_format applied) and price_value
 //   link        -> { label, href, kind, external, aria? }      (action resolved to href)
-//   hero.byline -> { variant, name, tagline } (absent for "none")
+//   hero.byline -> { variant, name, tagline } (absent for "none"; About only, V-045)
+//   hero.promise -> string, Toza's promise line from _shared.yaml `promise` (absent unless true)
 //   price-strip.stage_names -> [{ key, name }] (absent when false)
 export function buildPages(src, pages, { err = throwing } = {}) {
   const { model, contact, i18n, facts } = src;
@@ -241,6 +242,8 @@ export function buildPages(src, pages, { err = throwing } = {}) {
           tagline: R.resolve(b.byline === "full" ? "{shared:person.tagline}" : "{shared:person.tagline_short}", where),
         };
       } else delete o.byline;
+      if (b.promise) o.promise = R.resolve("{shared:promise}", where);
+      else delete o.promise;
     }
     if (b.type === "price-strip") {
       if (b.stage_names) o.stage_names = ["assess", "harden", "verify"].map((key) => ({ key, name: R.resolve(`{shared:stages.names.${key}}`, where) }));

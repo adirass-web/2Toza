@@ -2,9 +2,10 @@
 #
 # Rule (see content/CONTENT-MODEL.md §5):
 #   * Page file (src/content/en/<page>.md) — copy that appears on one page only.
-#   * This file — editorial copy that appears on more than one page: the person
-#     byline, the method statement, offer names and descriptions, price labels,
-#     the three stages, the exposure-summary specimen and the contact block.
+#   * This file — editorial copy that appears on more than one page: Toza's
+#     promise line, the method statement, offer names and descriptions, price
+#     labels, the three stages, the exposure-summary specimen and the contact
+#     block. The person byline (`person`) is used on About only (V-045).
 #   * src/_data/i18n/en.json `ui`, `nav`, `footer`, `buttons` — UI chrome: words
 #     that operate the interface (navigation, footer links, action buttons,
 #     accessibility-only labels, toggles, glyphs). Not duplicated here.
@@ -20,22 +21,26 @@
 # them as {shared:common.<key>}. check:content fails on a sentence of 6+ words
 # that is typed on two pages instead.
 
+# Toza's promise: shown under the hero actions (hero `promise: true`) and as the
+# tagline of the About byline. It is Toza's, not the founder's (V-045).
+promise: In person · With you present · You control your credentials
+
+# The founder byline: About only (V-045). Toza speaks by name everywhere else.
 person:
   name: Dr. Lior Tabansky
-  tagline: In person · With you present · You control your credentials
+  tagline: "{shared:promise}"
   tagline_short: In person · You control your credentials
 
 method: Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
 
 common:
-  same_expert: The same expert, from first look to final check.
   some_of_it: Some of it you still need.
   start_checked: Start with what can be checked.
   sequence: You agree the sequence together before anything changes.
   verify_and_learn: Verify it works, and learn to run it.
   attorney_summary: With your authorization, you receive an attorney-friendly summary of the work and what remains, and timing can be coordinated with counsel.
-  coordinates: If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.
-  engagement_in_person: Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials.
+  coordinates: If you authorize it, Toza coordinates with your lawyer or family office.
+  engagement_in_person: Toza carries out every engagement in person, at your home or office, with you present and in control of your credentials.
   price_fixed: Each price is fixed and agreed in writing before work begins.
   one_first_step: One first step, then the protection that fits your household.
   first_conversation: The first conversation is free and commits you to nothing.
@@ -51,12 +56,11 @@ labels:
   conditions: Conditions
   all_tiers: All protection tiers
   how_it_works: How it works
-  about: About Dr. Tabansky
 
 offers:
   assessment:
     name: Private Exposure Assessment
-    body: "A senior check-up of your digital life: half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue."
+    body: "A senior check-up of your digital life: half a day in person, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue."
     credit: "Counts in full toward your protection if you continue within {fact:credit.windowDays} days."
     credit_short: "Counts in full toward your protection within {fact:credit.windowDays} days."
   shield:
@@ -176,10 +180,6 @@ blocks:
   method:
     type: method-statement
     statement: "{shared:method}"
-    links:
-      - label: "{ui:buttons.profile}"
-        action: profile
-        kind: external
 
   specimen:
     type: specimen
@@ -223,5 +223,5 @@ blocks:
   contact:
     type: contact
     heading: Start with a private conversation.
-    body: "Dr. Tabansky replies personally. {shared:common.first_conversation}"
+    body: "Your message receives a personal reply. {shared:common.first_conversation}"
     actions: [whatsapp, signal, callback]

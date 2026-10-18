@@ -109,6 +109,7 @@
   --tracking-h2: -0.01em;  /* Section heading letter spacing (tracking-h2). */
   --tracking-numeral: -0.02em;  /* Prices letter spacing (tracking-numeral). */
   --container-wrap: var(--layout-max-width);  /* Content width as a Tailwind container size (max-w-wrap). */
+  --container-hero: 20ch;  /* Measure of the typographic hero headline (max-w-hero), about 18-22 characters per line at hero size (V-045). */
   --spacing-gutter: var(--layout-gutter);  /* Side gutter below sm (px-gutter). */
   --spacing-gutter-wide: var(--layout-gutter-wide);  /* Side gutter from sm (sm:px-gutter-wide). */
   --spacing-section: var(--layout-section-padding);  /* Section vertical padding below lg (py-section). */

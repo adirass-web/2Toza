@@ -1,6 +1,6 @@
 ---
 page: home
-title: Toza — Dr. Lior Tabansky
+title: Toza — Private, in-person digital security
 description: Private, in-person digital security for people whose private information could be used against them.
 permalink: /en/index.html
 lang: en
@@ -9,8 +9,9 @@ dir: ltr
 blocks:
   - type: hero
     heading: Before private information becomes leverage.
-    lead: Private conversations, finances and plans can become leverage over you. Dr. Lior Tabansky assesses and hardens your phone, computer and accounts with you, in person.
-    byline: full
+    lead: Private conversations, finances and plans can become leverage over you. Toza assesses and hardens your phone, computer and accounts with you, in person.
+    byline: none
+    promise: true
     actions: [whatsapp, signal, callback]
 
   - type: situation-doors
@@ -33,16 +34,10 @@ blocks:
 
   - type: stages
     ref: stages
-
-  - type: method-statement
-    ref: method
-    heading: "{shared:common.same_expert}"
-    links:
-      - label: "{ui:buttons.profile}"
-        action: profile
-        kind: external
-      - label: "{shared:labels.about}"
-        href: /en/about/
+    statement_link:
+      label: "Why Toza?"
+      href: /en/about/
+      kind: more
 
   - type: specimen
     ref: specimen

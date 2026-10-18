@@ -15,7 +15,7 @@ blocks:
 
   - type: price-strip
     ref: price_strip
-    label: "{shared:stages.heading}"
+    label: Three stages and their prices.
     stage_names: true
 
   - type: tiers
