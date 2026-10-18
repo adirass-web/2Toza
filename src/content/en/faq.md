@@ -1,7 +1,7 @@
 ---
 page: faq
 title: FAQ — Toza
-description: "Plain answers about the first step, protection tiers, privacy, Annual Care and what Toza does not do, before you contact Dr. Lior Tabansky."
+description: "Plain answers about the first step, protection tiers, privacy, Annual Care and what Toza does not do, before you contact Toza."
 permalink: /en/faq/index.html
 lang: en
 dir: ltr
@@ -12,7 +12,8 @@ blocks:
   - type: hero
     heading: Questions, answered plainly.
     lead: You do not need to know the technical terms or be certain that something is wrong.
-    byline: short
+    byline: none
+    promise: true
     actions: [whatsapp, signal, callback]
 
   - type: faq-group
@@ -23,7 +24,7 @@ blocks:
       - id: a1
         question: What should I send in the first message?
         answer: |-
-          A short, neutral message through WhatsApp or Signal, such as: "I'd like a private conversation. Please let me know the next step." Dr. Tabansky replies personally as soon as possible. Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message. Keep identifying case details out of it as well.
+          A short, neutral message through WhatsApp or Signal, such as: "I'd like a private conversation. Please let me know the next step." You receive a personal reply as soon as possible. Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message. Keep identifying case details out of it as well.
       - id: a2
         question: Can someone notice my contact with Toza?
         answer: |-
@@ -49,11 +50,11 @@ blocks:
       - id: b1
         question: "What do I get for {price:assessment}?"
         answer: |-
-          A senior check-up of your digital life: half a day in person with Dr. Tabansky. He listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you. Where urgent exposure can be addressed safely within the agreed scope, he makes the changes with your approval. You keep a written exposure summary with ordered next steps. The {price:assessment} counts in full toward a tier that begins within {fact:credit.windowDays} days.
+          A senior check-up of your digital life: half a day in person. Toza listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you. Where urgent exposure can be addressed safely within the agreed scope, the changes are made with your approval. You keep a written exposure summary with ordered next steps. The {price:assessment} counts in full toward a tier that begins within {fact:credit.windowDays} days.
       - id: b2
         question: What does it cover, and how long does it take?
         answer: |-
-          {fact:assessmentScope|capfirst}. Dr. Tabansky reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. Allow half a day; it typically takes four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified.
+          {fact:assessmentScope|capfirst}. Toza reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. Allow half a day; it typically takes four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified.
       - id: b3
         question: What do I receive if I don't continue?
         answer: |-
@@ -61,11 +62,11 @@ blocks:
       - id: b4
         question: What if you find something serious outside my concern?
         answer: |-
-          Dr. Tabansky explains it and obtains your approval before addressing it. If the proposed work expands the scope or price, that is agreed with you first. Finding an urgent problem does not authorize unagreed work or charges.
+          Toza explains it and obtains your approval before addressing it. If the proposed work expands the scope or price, that is agreed with you first. Finding an urgent problem does not authorize unagreed work or charges.
       - id: b5
         question: Can you remove spyware or a malicious app?
         answer: |-
-          Where it can be done safely within the agreed scope, yes. Urgent first aid during the first step can include removing a malicious app or profile, with your approval. Dr. Tabansky explains each material change before acting. Removing it does not prove who installed it or how.
+          Where it can be done safely within the agreed scope, yes. Urgent first aid during the first step can include removing a malicious app or profile, with your approval. Toza explains each material change before acting. Removing it does not prove who installed it or how.
 
   - type: faq-group
     id: c
@@ -75,7 +76,7 @@ blocks:
       - id: c1
         question: What does Personal Shield include?
         answer: |-
-          Personal Shield costs {price:personalShield} for one person, with the first step included. Dr. Tabansky hardens your phone, computer, accounts and home network around your risks, in person. It includes {factword:securityKeys.personalShield} security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for {fact:questionLineDays} days.
+          Personal Shield costs {price:personalShield} for one person, with the first step included. Toza hardens your phone, computer, accounts and home network around your risks, in person. It includes {factword:securityKeys.personalShield} security keys supplied, configured and tested, new core accounts and essential migration where needed, personal teaching, testing of material changes, a private dated record, a follow-up visit after about four weeks, and questions answered by WhatsApp or Signal for {fact:questionLineDays} days.
       - id: c2
         question: What do Personal Shield for Two and Inner Circle include?
         answer: |-
@@ -101,11 +102,11 @@ blocks:
       - id: d1
         question: Do I give you my passwords or remote access?
         answer: |-
-          You control your passwords, recovery codes and authentication throughout. Do not send them in advance. You may need to sign in on your own devices while we work. Toza does not keep your credentials for ongoing use or remotely control your devices.
+          You control your passwords, recovery codes and authentication throughout. Do not send them in advance. You may need to sign in on your own devices during the work. Toza does not keep your credentials for ongoing use or remotely control your devices.
       - id: d2
         question: Will you see my messages or photos?
         answer: |-
-          Some information may be visible on your own screen where it is necessary for the agreed work, with you present. We explain the relevant access and agree what needs to be reviewed. The service is not a general inspection of your private content.
+          Some information may be visible on your own screen where it is necessary for the agreed work, with you present. Toza explains the relevant access and agrees with you what needs to be reviewed. The service is not a general inspection of your private content.
       - id: d3
         question: Do you keep records or use the cloud?
         answer: |-
@@ -123,15 +124,15 @@ blocks:
       - id: e1
         question: Can you prove who accessed my account, investigate someone or collect evidence?
         answer: |-
-          No. We examine your own authorized digital environment and reduce the exposure identified within the agreed scope. We do not investigate another person, attribute past activity, reconstruct events forensically, collect court evidence or give legal advice. Finding a current access path does not prove who used it or how information reached someone else. Changing access cannot recall copies already held elsewhere.
+          No. Toza examines your own authorized digital environment and reduces the exposure identified within the agreed scope. It does not investigate another person, attribute past activity, reconstruct events forensically, collect court evidence or give legal advice. Finding a current access path does not prove who used it or how information reached someone else. Changing access cannot recall copies already held elsewhere.
       - id: e2
         question: Will the other side notice the changes?
         answer: |-
-          Some changes are visible. Ending a signed-in session, for example, signs that device out, and some changes create notifications for other users. We explain material changes and agree their timing and sequence with you before acting. We do not promise that changes will go unnoticed.
+          Some changes are visible. Ending a signed-in session, for example, signs that device out, and some changes create notifications for other users. Toza explains material changes and agrees their timing and sequence with you before acting. It does not promise that changes will go unnoticed.
       - id: e3
         question: Will this escalate my dispute? Is it legal?
         answer: |-
-          Dr. Tabansky works only within your own authorized digital environment, on access you are authorized to manage. Changing recovery details or ending shared access can interrupt access or create notifications, so the effects are explained before you approve them. With your permission, timing can be coordinated with your attorney. Legal strategy stays with your attorney; Toza does not give legal advice.
+          Toza works only within your own authorized digital environment, on access you are authorized to manage. Changing recovery details or ending shared access can interrupt access or create notifications, so the effects are explained before you approve them. With your permission, timing can be coordinated with your attorney. Legal strategy stays with your attorney; Toza does not give legal advice.
       - id: e4
         question: Can you work on company systems or a relative's account?
         answer: |-
@@ -194,7 +195,7 @@ blocks:
       - id: g2
         question: What if the first step shows I need more than a tier includes?
         answer: |-
-          Dr. Tabansky proposes the next tier, with its full allowance, before any work begins. Larger households, several residences or household staff receive one fixed price in writing after the first step, from {price:largerFrom}. There are no per-device or per-hour charges.
+          Toza proposes the next tier, with its full allowance, before any work begins. Larger households, several residences or household staff receive one fixed price in writing after the first step, from {price:largerFrom}. There are no per-device or per-hour charges.
       - id: g3
         question: Can you come urgently, and what does it cost?
         answer: |-

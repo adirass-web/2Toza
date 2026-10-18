@@ -24,7 +24,7 @@ blocks:
     signature: Dr. Lior Tabansky
 
   - type: text
-    heading: "{shared:common.same_expert}"
+    heading: The same expert, from first look to final check.
     body: When you engage Toza, you work with me personally from understanding the situation to making and verifying the agreed changes. I apply my judgment to your private circumstances and personally carry out the agreed technical work.
 
   - type: method-statement

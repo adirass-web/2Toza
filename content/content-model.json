@@ -402,7 +402,7 @@
   },
   "blocks": {
     "hero": {
-      "summary": "Page opening: the promise (h1), one supporting sentence, who does the work, the first actions.",
+      "summary": "Page opening: the promise (h1), one supporting sentence, the first actions and Toza's promise line. The founder byline (portrait, name) is used on About only (V-045).",
       "fields": {
         "heading": {
           "kind": "text",
@@ -429,6 +429,9 @@
           },
           "required": true,
           "max_items": 3
+        },
+        "promise": {
+          "kind": "bool"
         },
         "note": {
           "kind": "text",

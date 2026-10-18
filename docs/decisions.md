@@ -48,5 +48,6 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-042 | 2026-10-18 | Floating contact buttons are hidden on the FAQ page (they covered its group links on phones). Per-page content setting `float_contact: false`. |
 | V-043 | 2026-10-18 | Visual regression: approved screenshot baselines in tests/visual/baseline; `npm run check:visual` fails on unapproved change; approval = committing updated baselines. Local/agent run; not in CI because of cross-OS font rendering. |
 | V-044 | 2026-10-18 | Floating buttons keep their timing; an ivory ring makes them visible on dark sections. |
+| V-045 | 2026-10-18 | Toza speaks by name; the founder is named and pictured only on About (plus the legal provider line in Conditions). Heroes are typography-only. Supersedes COPY-BRIEF 'founder named in every first screen' and the portrait in W1/W3. Owner instruction: "My name appears too often. I said TOZA and one page one mention about why ME." Toza is "it", never "he" or "we". The "Professional profile" link lives on About only. Changes: strategy/copy/VOICE-CHANGES.md. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.

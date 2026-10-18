@@ -14,7 +14,7 @@ All decisions are approved (docs/decisions.md through V-032). Write exact, final
 ## Binding rules
 - **R-2:** boundaries ("what Toza does not do") and warnings ("don't send details", "not invisible on your device") live **only in the FAQ** (group E and A). Never in heroes, bodies, CTAs, footers or Conditions.
 - **No:** VAT labels (one plain sentence "All prices include VAT." is allowed on Conditions only), travel scope, World Bank credential line, press, testimonials, scarcity, discounts, time-limited offers.
-- **Yes:** method line verbatim where it fits: "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors."; "Professional profile ↗" → cyberdrtabansky.com; founder named in every first screen.
+- **Yes:** method line verbatim where it fits: "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors."; "Professional profile ↗" → cyberdrtabansky.com (About only since V-045); ~~founder named in every first screen~~ (superseded by V-045: Toza speaks by name; the founder is named and pictured only on About).
 - **Device scope** (V-031/W8): "one main phone and one computer, iPad or second phone, on the same main account (Apple or Android)".
 - **First step** counts in full toward a tier started within 30 days; after day 30 the tier is charged at full price; moving up a tier = that tier's price less the ₪4,000 already paid, within the same 30 days.
 - **Question line:** 60 days, WhatsApp or Signal, answered within one working day, questions and guidance only (not new work, not emergencies). After 60 days: Annual Care.

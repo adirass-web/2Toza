@@ -1,7 +1,7 @@
 ---
 page: separation-divorce
 title: Separation and divorce — Toza
-description: Accounts set up for a shared life can outlast it. Dr. Lior Tabansky finds, with you and in person, what still connects you.
+description: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
 permalink: /en/separation-divorce/index.html
 lang: en
 dir: ltr
@@ -9,13 +9,14 @@ dir: ltr
 blocks:
   - type: hero
     heading: Trust can end before access does.
-    lead: Accounts set up for a shared life can outlast it. Dr. Lior Tabansky finds, with you and in person, what still connects you.
-    byline: short
+    lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
+    byline: none
+    promise: true
     actions: [whatsapp, signal, callback]
 
   - type: recognition
     heading: Choose which access you keep.
-    lead: "{shared:common.some_of_it} Dr. Tabansky shows you what each connection allows, so you can tell access you want to keep from access you want to end."
+    lead: "{shared:common.some_of_it} Toza shows you what each connection allows, so you can tell access you want to keep from access you want to end."
     items:
       - A family cloud that still shares photos and documents.
       - A recovery number or email that belongs to your spouse.
@@ -29,10 +30,6 @@ blocks:
   - type: stages
     ref: stages
     variant: compact
-    statement_link:
-      label: "{ui:buttons.profile}"
-      action: profile
-      kind: external
     line: Assess what still connects you. Harden a setup for the life you are moving into. {shared:common.verify_and_learn}
 
   - type: text

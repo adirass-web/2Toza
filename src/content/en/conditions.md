@@ -11,7 +11,7 @@ labels:
 blocks:
   - type: hero
     heading: Prices and conditions.
-    lead: "{shared:common.engagement_in_person} {shared:common.price_fixed}"
+    lead: "Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. {shared:common.price_fixed}"
     byline: none
     actions: []
     note: Terms as of 16 October 2026.
@@ -89,8 +89,8 @@ blocks:
     nav_label: When a household needs more
     heading: When a household needs more
     items:
-      - "If the first step shows more than a tier includes, such as more people or devices, a second home, staff or company devices, Dr. Tabansky proposes the next tier, with its full allowance, before any work begins."
-      - "Beyond Inner Circle, he sets one fixed price in writing."
+      - "If the first step shows more than a tier includes, such as more people or devices, a second home, staff or company devices, Toza proposes the next tier, with its full allowance, before any work begins."
+      - "Beyond Inner Circle, Toza sets one fixed price in writing."
       - "Each tier has one fixed price for everything within its allowance."
       - "Agreed additions are separate, and any added scope or price is agreed in writing before that work begins."
 
@@ -136,7 +136,7 @@ blocks:
       - "The term starts the day the {fact:questionLineDays}-day question line ends."
       - "For a household of up to four, Annual Care covers up to two new or replaced devices and up to two replacement keys. For Inner Circle, the first Care term moves the check visit to about month six; the twelve-month review stays."
       - "Further keys and any replacement router are charged at cost. Added devices are scoped separately."
-      - "Joining: within {factword:annualCare.joinWindowMonths} months of the question line ending. After that, we start again with a first step ({price:assessment}), which counts in full toward Annual Care within {fact:credit.windowDays} days."
+      - "Joining: within {factword:annualCare.joinWindowMonths} months of the question line ending. After that, you start again with a first step ({price:assessment}), which counts in full toward Annual Care within {fact:credit.windowDays} days."
       - "Renewal: at the published price at the time. The invoice is sent 30 days before the term ends, and the line stays open for 14 days while it is settled."
       - "Scoped and priced separately: new people; a new or second home; company devices or staff; devices beyond the original allowance; any incident, such as a suspected compromise; urgent visits, on the [urgent terms](#urgent) below."
 

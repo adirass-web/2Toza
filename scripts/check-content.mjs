@@ -191,6 +191,8 @@ function implicitStrings(block, col, where) {
     col.strings.push({ kind: "text", text: resolve("{shared:person.name}", where), where: where + ".byline" });
     col.strings.push({ kind: "text", text: resolve(block.byline === "full" ? "{shared:person.tagline}" : "{shared:person.tagline_short}", where), where: where + ".byline" });
   }
+  if (block.type === "hero" && block.promise)
+    col.strings.push({ kind: "text", text: resolve("{shared:promise}", where), where: where + ".promise" });
   if (block.type === "price-strip" && block.stage_names)
     for (const k of ["assess", "harden", "verify"]) col.strings.push({ kind: "text", text: resolve(`{shared:stages.names.${k}}`, where), where: where + ".stage_names" });
 }

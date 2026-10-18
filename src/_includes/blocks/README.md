@@ -33,12 +33,13 @@ Page opening. The only block with an `h1`.
 |---|---|---|---|
 | `heading` | text | required | The promise (h1) |
 | `lead` | text | optional | One supporting sentence |
-| `byline` | `{ variant, name, tagline }` | optional | Present when content says `full` or `short`; absent for `none`. `variant` is `full` or `short` (the tagline text already differs) |
-| `actions` | action[] | required | 1 to 3, hero labels |
+| `byline` | `{ variant, name, tagline }` | optional | Present when content says `full` or `short`; absent for `none`. `variant` is `full` or `short` (the tagline text already differs). About only (V-045) |
+| `actions` | action[] | required | 0 to 3, hero labels |
+| `promise` | text | optional | Toza's promise line ("In person · With you present · You control your credentials"), present when content sets `promise: true`. Shown as a quiet line under the actions |
 | `note` | text | optional | Small line under the actions |
 | `print` | bool | optional | true: show a print button (`t.ui.print`) |
 
-Variants: `byline.variant` (full, short, none) changes how much of the person's introduction is shown.
+Variants (V-045): without `byline` the hero is typography only: full-width headline at the hero measure (`max-w-hero`), a brass hairline, lead, actions and the optional promise line. With `byline` (About only) the headline sits beside the founder's portrait, name and tagline.
 
 Example: home.
 
@@ -46,12 +47,8 @@ Example: home.
 {
   "type": "hero",
   "heading": "Before private information becomes leverage.",
-  "lead": "Private conversations, finances and plans can become leverage over you. Dr. Lior Tabansky assesses and hardens your phone, computer and accounts with you, in person.",
-  "byline": {
-    "variant": "full",
-    "name": "Dr. Lior Tabansky",
-    "tagline": "In person · With you present · You control your credentials"
-  },
+  "lead": "Private conversations, finances and plans can become leverage over you. Toza assesses and hardens your phone, computer and accounts with you, in person.",
+  "promise": "In person · With you present · You control your credentials",
   "actions": [
     {
       "key": "whatsapp",
@@ -92,7 +89,7 @@ Example: separation-divorce (with `note`).
 {
   "type": "contact",
   "heading": "Start with a private conversation.",
-  "body": "Dr. Tabansky replies personally. The first conversation is free and commits you to nothing.",
+  "body": "Your message receives a personal reply. The first conversation is free and commits you to nothing.",
   "actions": [
     {
       "key": "whatsapp",
@@ -131,30 +128,15 @@ The method/credential statement.
 | `heading` | text | optional | Framing heading; without it the block has no heading |
 | `statement` | text | required | The method line |
 | `body` | md | optional | Explanation |
-| `links` | link[] | optional | Proof links; the profile link is `kind: external` |
+| `links` | link[] | optional | Proof links; the profile link (`kind: external`) appears on About only (V-045) |
 
 Example: home.
 
 ```jsonc
 {
   "type": "method-statement",
-  "heading": "The same expert, from first look to final check.",
-  "statement": "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
-  "links": [
-    {
-      "label": "Professional profile",
-      "kind": "external",
-      "href": "https://cyberdrtabansky.com",
-      "external": true,
-      "aria": "(opens in a new tab)"
-    },
-    {
-      "label": "About Dr. Tabansky",
-      "kind": "plain",
-      "href": "/en/about/",
-      "external": false
-    }
-  ]
+  "heading": "One method, from first look to final check.",
+  "statement": "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors."
 }
 ```
 
@@ -300,7 +282,7 @@ The three-stage method as a summary, with the path to prices.
 |---|---|---|---|
 | `variant` | `full` \| `compact` | optional | `full` (default, Home): large drawings. `compact` (situation pages): same copy and elements, small drawings, three stages in a tight row |
 | `statement` | text | optional | The method line; leads the dark section, set large above the heading (the shared `stages` block carries it, so the situation pages no longer need a separate `method-statement` block) |
-| `statement_link` | link | optional | Proof link row directly under the statement (situation pages: the profile link, `action: profile`, `kind: external`) |
+| `statement_link` | link | optional | Proof link row directly under the statement. Unused since V-045 (the profile link lives on About only) |
 | `heading` | text | required | |
 | `line` | text | optional | Page-specific sentence under the heading (situation pages) |
 | `items` | stage[] | required | Exactly 3, in order assess, harden, verify |
@@ -388,7 +370,7 @@ Example: separation-divorce.
 {
   "type": "recognition",
   "heading": "Choose which access you keep.",
-  "lead": "Some of it you still need. Dr. Tabansky shows you what each connection allows, so you can tell access you want to keep from access you want to end.",
+  "lead": "Some of it you still need. Toza shows you what each connection allows, so you can tell access you want to keep from access you want to end.",
   "items": [
     "A family cloud that still shares photos and documents.",
     "A recovery number or email that belongs to your spouse.",
@@ -442,7 +424,7 @@ Example: pricing.
 ```jsonc
 {
   "type": "price-strip",
-  "label": "Three stages, one person.",
+  "label": "Three stages and their prices.",
   "stage_names": [
     {
       "key": "assess",
@@ -530,13 +512,13 @@ Example: pricing (abridged).
   "detail": "full",
   "heading": "Compare services",
   "heading_visible": false,
-  "statement": "Every engagement is carried out by Dr. Lior Tabansky in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
+  "statement": "Toza carries out every engagement in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
   "first_step": {
     "type": "offer",
     "tag": "Start here",
     "name": "Private Exposure Assessment",
     "price_key": "assessment",
-    "body": "A senior check-up of your digital life: half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue.",
+    "body": "A senior check-up of your digital life: half a day in person, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue.",
     "credit": "Counts in full toward your protection if you continue within 30 days.",
     "link": {
       "label": "Conditions",
@@ -564,9 +546,9 @@ Example: pricing (abridged).
   ],
   "notes": [
     {
-      "md": "The first step is included. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.",
-      "text": "The first step is included. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.",
-      "html": "<p>The first step is included. If you authorize it, Dr. Tabansky coordinates with your lawyer or family office.</p>\n"
+      "md": "The first step is included. If you authorize it, Toza coordinates with your lawyer or family office.",
+      "text": "The first step is included. If you authorize it, Toza coordinates with your lawyer or family office.",
+      "html": "<p>The first step is included. If you authorize it, Toza coordinates with your lawyer or family office.</p>\n"
     },
     // … 2 more
   ],
@@ -602,7 +584,7 @@ Example: pricing, `tiers.first_step`.
   "tag": "Start here",
   "name": "Private Exposure Assessment",
   "price_key": "assessment",
-  "body": "A senior check-up of your digital life: half a day in person with Dr. Tabansky, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue.",
+  "body": "A senior check-up of your digital life: half a day in person, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue.",
   "credit": "Counts in full toward your protection if you continue within 30 days.",
   "link": {
     "label": "Conditions",

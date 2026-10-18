@@ -1,7 +1,7 @@
 ---
 page: business-dispute
 title: Business or founder dispute — Toza
-description: A personal email may still recover a business account. Dr. Lior Tabansky helps you find where personal and business access meet, in person.
+description: A personal email may still recover a business account. Toza helps you find where personal and business access meet, in person.
 permalink: /en/business-dispute/index.html
 lang: en
 dir: ltr
@@ -9,13 +9,14 @@ dir: ltr
 blocks:
   - type: hero
     heading: When interests diverge, ordinary access becomes leverage.
-    lead: A personal email may still recover a business account. Dr. Lior Tabansky helps you find where personal and business access meet, and separate them deliberately.
-    byline: short
+    lead: A personal email may still recover a business account. Toza helps you find where personal and business access meet, and separate them deliberately.
+    byline: none
+    promise: true
     actions: [whatsapp, signal, callback]
 
   - type: recognition
     heading: See where personal and business access still meet.
-    lead: "{shared:common.some_of_it} Dr. Tabansky shows you what each connection allows and what depends on it, so you can separate access deliberately."
+    lead: "{shared:common.some_of_it} Toza shows you what each connection allows and what depends on it, so you can separate access deliberately."
     items:
       - A personal email that can still recover a business account.
       - One phone that signs in to both private and work services.
@@ -29,10 +30,6 @@ blocks:
   - type: stages
     ref: stages
     variant: compact
-    statement_link:
-      label: "{ui:buttons.profile}"
-      action: profile
-      kind: external
     line: Assess where personal and business access meet. Harden what is yours to change. {shared:common.verify_and_learn}
 
   - type: text
