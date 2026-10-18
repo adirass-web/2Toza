@@ -26,13 +26,15 @@
   --radius:2px; --ease:cubic-bezier(.2,.7,.2,1);
 }
 /* Five candidate palettes (review round 3). Open with ?p=p1 … ?p=p5; no parameter = the current greys and mint. */
-html[data-palette="p1"]{--bg:#F3F1EC;--surface:#E7E4DD;--ink:#1C1B19;--muted:#5D5953;--accent:#4A5530;--accent-ink:#F3F1EC}
-html[data-palette="p2"]{--bg:#EDEFEE;--surface:#DFE3E2;--ink:#152120;--muted:#53605E;--accent:#1F3634;--accent-ink:#EDEFEE}
-html[data-palette="p3"]{--bg:#ECE9E3;--surface:#DFDAD1;--ink:#231C17;--muted:#5E554D;--accent:#6F4428;--accent-ink:#F4EFE8}
-html[data-palette="p4"]{--bg:#12161B;--surface:#1C222A;--ink:#ECE8E1;--muted:#A4A8AE;--accent:#E3A35A;--accent-ink:#16120D}
-html[data-palette="p5"]{--bg:#F6F6F4;--surface:#EBEBE7;--ink:#1F1F1E;--muted:#5B5B58;--accent:#6B2724;--accent-ink:#F6F6F4}
-html[data-palette="p4"] h1{margin-block-start:1.5rem} /* light ink cannot sit on the light photo */
-html[data-palette="p4"] .btn:hover{background:#fff}
+html[data-palette="p1"]{--bg:#123F33;--surface:#0D3328;--ink:#F1EBDD;--muted:#BFC8BC;--s-bg:#F1EBDD;--s-ink:#123F33;--s-muted:#4C6158;--accent:#D7AE4E;--accent-ink:#123F33}
+html[data-palette="p2"]{--bg:#1B2A9C;--surface:#15217F;--ink:#FFFFFF;--muted:#C9CEF2;--s-bg:#EEECE7;--s-ink:#1B2A9C;--s-muted:#4A5296;--accent:#1B2A9C;--accent-ink:#FFFFFF}
+html[data-palette="p3"]{--bg:#E3A82B;--surface:#D69B1F;--ink:#17140F;--muted:#4A3A17;--s-bg:#17140F;--s-ink:#E3A82B;--s-muted:#C9B48A;--accent:#E3A82B;--accent-ink:#17140F}
+html[data-palette="p4"]{--bg:#4E1719;--surface:#421214;--ink:#F1E3D6;--muted:#D2B5A6;--s-bg:#F1E3D6;--s-ink:#4E1719;--s-muted:#7A4A44;--accent:#4E1719;--accent-ink:#F1E3D6}
+html[data-palette="p5"]{--bg:#C6DBE8;--surface:#B4CEDE;--ink:#13233D;--muted:#34496A;--s-bg:#13233D;--s-ink:#C6DBE8;--s-muted:#9FB4C8;--accent:#C6DBE8;--accent-ink:#13233D}
+html[data-palette="p1"] h1,html[data-palette="p2"] h1,html[data-palette="p4"] h1{margin-block-start:1.5rem} /* light ink cannot sit on the light photo */
+html[data-palette] .doors{background:var(--s-bg);color:var(--s-ink)}
+html[data-palette] .doors .tile{color:var(--s-ink)}
+html[data-palette] .doors .tile .l{color:var(--s-muted)}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-body)/1.5 "Bona Nova",Georgia,serif;font-kerning:normal}
 a{color:inherit}
