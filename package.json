@@ -2,11 +2,11 @@
   "name": "toza-v2",
   "version": "0.1.0",
   "private": true,
-  "description": "Toza v2 — competing rebuild (preview only, noindex).",
+  "description": "Toza v2 \u2014 competing rebuild (preview only, noindex).",
   "scripts": {
     "build": "npm run build:css && npm run build:js && eleventy",
     "start": "npm run build:css && npm run build:js && eleventy --serve",
-    "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs && node scripts/check-lint.mjs && node scripts/check-links.mjs",
+    "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs && node scripts/check-contrast.mjs && node scripts/check-lint.mjs && node scripts/check-links.mjs",
     "check:upstream": "node scripts/check-upstream.mjs",
     "check:content": "npm run build && node scripts/check-content.mjs",
     "pages:deploy": "wrangler pages deploy",
@@ -16,7 +16,8 @@
     "visual:approve": "npm run build && node scripts/visual.mjs --update",
     "check:a11y": "node scripts/check-a11y.mjs",
     "check:perf": "node scripts/check-perf.mjs",
-    "check:anchors": "node scripts/check-anchors.mjs"
+    "check:anchors": "node scripts/check-anchors.mjs",
+    "check:contrast": "node scripts/check-contrast.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

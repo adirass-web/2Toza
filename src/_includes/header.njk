@@ -5,10 +5,10 @@
   { href: "/en/pricing/", label: t.nav.pricing },
   { href: "/en/faq/", label: t.nav.faq }
 ] %}
-<header class="print:hidden sticky top-0 z-40 border-b border-default bg-neutral-primary/95 backdrop-blur">
+<header class="print:hidden font-sans sticky top-0 z-40 border-b border-default bg-neutral-primary/95 backdrop-blur">
   <nav aria-label="{{ t.ui.mainNav }}" class="mx-auto flex w-full max-w-wrap flex-wrap items-center justify-between px-gutter py-2 sm:px-gutter-wide md:flex-nowrap lg:py-3">
     <a href="/en/" class="flex shrink-0 items-center" aria-label="{{ t.ui.homeLabel }}">
-      <img src="/assets/brand/toza-logo-ink.svg" alt="" width="421" height="154" class="h-11 w-auto lg:h-12">
+      <span class="block h-9 text-heading lg:h-10">{% include "wordmark.njk" %}</span>
     </a>
     <div class="inline-flex items-center gap-2 md:order-2 md:gap-0">
       <a href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener" class="box-border inline-flex min-h-11 items-center rounded-base border border-transparent bg-brand px-4 py-2 text-base font-medium leading-6 text-on-action shadow-xs hover:bg-brand-strong sm:px-5">{{ t.nav.message }}</a>
