@@ -15,7 +15,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -25,3 +25,16 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run check:a11y
+      - run: npm run check:perf
+      # Anchors: every id that a page on main links to must still exist (deep links keep working).
+      - if: github.ref != 'refs/heads/main'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          path: base
+      - if: github.ref != 'refs/heads/main'
+        run: cd base && npm ci && npm run build
+      - if: github.ref != 'refs/heads/main'
+        run: node scripts/check-anchors.mjs base/_site _site --fail-linked
