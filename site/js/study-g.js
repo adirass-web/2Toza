@@ -35,6 +35,18 @@
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
   addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.classList.contains("open")) setMenu(false); });
 
+  /* theme toggle (D95): icon only, remembered per browser, default light */
+  const tbtn = document.querySelector("[data-theme-toggle]");
+  const root = document.documentElement;
+  const isDark = () => root.getAttribute("data-theme") === "dark";
+  const syncTheme = () => tbtn && tbtn.setAttribute("aria-pressed", String(isDark()));
+  syncTheme();
+  if (tbtn) tbtn.addEventListener("click", () => {
+    if (isDark()) root.removeAttribute("data-theme"); else root.setAttribute("data-theme", "dark");
+    try { localStorage.setItem("tz-theme", isDark() ? "dark" : "light"); } catch (e) {}
+    syncTheme(); window.dispatchEvent(new Event("tz-theme"));
+  });
+
   /* header over the Primes photo (D81) */
   const top = document.querySelector(".top");
   const primes = document.querySelector(".hero-primes");
@@ -171,22 +183,26 @@
   /* A4: ambient dots in one close cell, paused off screen (D87) */
   const cv = document.querySelector(".dots canvas");
   if (cv) {
+    let dotC = "#CFCAC1", dotN = "#B5AFA4", glow = ".20";
+    const readTheme = () => { const cs = getComputedStyle(document.documentElement); dotC = cs.getPropertyValue("--dot").trim() || dotC; dotN = cs.getPropertyValue("--dot-near").trim() || dotN; glow = isDark() ? ".16" : ".20"; };
+    readTheme();
     const ctx = cv.getContext("2d"); let run = false, t0 = performance.now(), raf = 0;
     const draw = (now) => {
       const dpr = Math.min(2, devicePixelRatio || 1), w = cv.clientWidth, h = cv.clientHeight;
       if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
       const t = (now - t0) / 1000, gx = w * (0.55 + 0.25 * Math.sin(t * 0.11)), gy = h * (0.45 + 0.25 * Math.cos(t * 0.083)), R = Math.max(w, h) * 0.45;
-      const g = ctx.createRadialGradient(gx, gy, 0, gx, gy, R); g.addColorStop(0, "rgba(161,255,203,.20)"); g.addColorStop(1, "rgba(161,255,203,0)");
+      const g = ctx.createRadialGradient(gx, gy, 0, gx, gy, R); g.addColorStop(0, `rgba(161,255,203,${glow})`); g.addColorStop(1, "rgba(161,255,203,0)");
       ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
       const step = 14;
       for (let y = step / 2; y < h; y += step) for (let x = step / 2 + ((y / step) % 2) * step / 2; x < w; x += step) {
         const d = Math.hypot(x - gx, y - gy) / R; const r = 0.9 + 1.1 * clamp(1 - d);
-        ctx.fillStyle = d < 1 ? "#B5AFA4" : "#CFCAC1"; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fill();
+        ctx.fillStyle = d < 1 ? dotN : dotC; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fill();
       }
       if (run) raf = requestAnimationFrame(draw);
     };
     new IntersectionObserver(([e]) => { run = e.isIntersecting; cancelAnimationFrame(raf); if (run) raf = requestAnimationFrame(draw); }).observe(cv);
     draw(performance.now());
+    addEventListener("tz-theme", () => { readTheme(); draw(performance.now()); });
   }
 })();

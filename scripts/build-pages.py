@@ -5,12 +5,20 @@ import json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 C = json.loads((ROOT / "copy/source/data/contact.json").read_text())
-WA, SG, CB = C["whatsapp"]["url"], C["signal"]["url"], C["callback"]["url"]
+WA, SG = C["whatsapp"]["url"], C["signal"]["url"]
+
+import re as _re
+def _glyph(name):
+    d = _re.search(r' d="([^"]+)"', (ROOT / "assets/logos" / f"{name}.svg").read_text()).group(1)
+    return f'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="{d}"/></svg>'
+GLYPH = {"WhatsApp": _glyph("whatsapp"), "Signal": _glyph("signal")}
+
+def logo(label, url, cls="logo-btn"):
+    # D95: the private channels are their logos, round, monochrome; accessible name = frozen string
+    return f'<a class="{cls}" href="{url}" aria-label="{label}">{GLYPH[label]}</a>'
 
 def ctas(cls=""):
-    return (f'<div class="ctas {cls}"><a class="btn" href="{WA}">WhatsApp</a>'
-            f'<a class="btn ghost" href="{SG}">Signal</a>'
-            f'<a class="btn ghost" href="{CB}">Call me back</a></div>')
+    return f'<div class="ctas {cls}">{logo("WhatsApp", WA)}{logo("Signal", SG)}</div>'
 
 H1_LINES = ["Before private information", "becomes leverage."]
 def h1():
@@ -86,7 +94,7 @@ def fees():
 def close():
     return f'''<section class="close" id="contact" aria-labelledby="close-h">
   <div class="panel"><h2 id="close-h">Start with a private conversation.</h2><p>Your message receives a personal reply. The first conversation is free and commits you to nothing.</p>
-    <div class="ctas"><a class="btn light" href="{WA}">WhatsApp</a><a class="btn ghost" href="{SG}">Signal</a><a class="btn ghost" href="{CB}">Call me back</a></div></div>
+    {ctas()}</div>
   <div class="hand"><img src="../img/close-hand.jpg" alt="" loading="lazy" width="900" height="893"></div>
   <div class="dots" aria-hidden="true"><canvas></canvas></div>
 </section>'''
@@ -100,6 +108,7 @@ def page(kind):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>{title}</title>
+<script>try{{var t=localStorage.getItem("tz-theme");if(t==="dark")document.documentElement.setAttribute("data-theme","dark")}}catch(e){{}}</script>
 <link rel="preload" href="../fonts/bona-nova-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/bona-nova-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/study-g.css">
@@ -110,7 +119,7 @@ def page(kind):
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <a class="wordmark" href="#top" aria-label="Toza, home" data-copy-exempt><span class="latin">toza</span><span class="kanji" aria-hidden="true">閉ざす</span></a>
-  <nav aria-label="Main"><a class="ch" href="{WA}">WhatsApp</a><a class="ch" href="{SG}">Signal</a><a class="ch" href="{CB}">Call me back</a><button class="menu-btn" type="button" data-menu aria-expanded="false">Menu</button></nav>
+  <nav aria-label="Main">{logo("WhatsApp", WA, "ch logo-btn")}{logo("Signal", SG, "ch logo-btn")}<button class="theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark" data-copy-exempt><span aria-hidden="true"></span></button><button class="menu-btn" type="button" data-menu aria-expanded="false">Menu</button></nav>
 </header>
 <div class="menu" role="dialog" aria-label="Menu"><button class="close" type="button" data-menu>Menu</button>
   <ul><li><a href="#situations">Situations</a></li><li><a href="#">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#">FAQ</a></li></ul></div>
@@ -123,10 +132,10 @@ def page(kind):
 </main>
 <footer class="foot" aria-label="Footer">
   <ul><li><a href="#pricing">Pricing</a></li><li><a href="#">FAQ</a></li><li><a href="#">For attorneys</a></li><li><a href="#">Conditions</a></li><li><a href="#">About</a></li></ul>
-  <p class="credits" data-copy-exempt>Photographs: T. Govedarovic, J. Lo, M. Charkhgard, Boston Public Library, A. Curcan, V. Gariev / Unsplash. Study G demo, light version (noindex).</p>
+  <p class="credits" data-copy-exempt>Photographs: T. Govedarovic, J. Lo, M. Charkhgard, Boston Public Library, A. Curcan, V. Gariev / Unsplash. Study G demo (noindex). WhatsApp and Signal marks: Simple Icons, CC0; trademarks of their owners.</p>
   <span class="giant" aria-hidden="true" data-copy-exempt>toza</span>
 </footer>
-<nav class="bar" aria-label="Message"><a href="{WA}">WhatsApp</a><a href="{SG}">Signal</a><a href="{CB}">Call me back</a></nav>
+<nav class="bar" aria-label="Message">{logo("WhatsApp", WA)}{logo("Signal", SG)}</nav>
 </body>
 </html>
 '''
