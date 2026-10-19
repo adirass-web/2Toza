@@ -76,7 +76,7 @@ def fees():
     tiers = "".join(f'''<article class="tier {c} reveal" data-d="{i*90}"><h3>{n}</h3><p class="price">{p}</p><p class="for">{f}</p><ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>''' for i, (c, n, p, f, items) in enumerate(TIERS))
     return f'''<section class="fees" id="pricing" aria-labelledby="fees-h">
   <div class="row">
-    <div class="fees-intro"><span class="label sq">Pricing</span><h2 id="fees-h">Fees</h2><p>One first step, then the protection that fits your household. Each price is fixed and agreed in writing before work begins.</p></div>
+    <div class="fees-intro"><h2 id="fees-h">Fees</h2><p>One first step, then the protection that fits your household. Each price is fixed and agreed in writing before work begins.</p></div>
     <div class="start on-mint reveal"><span class="label sq">Start here</span><p class="name">Private Exposure Assessment</p><p class="price">₪4,000</p><p>Counts in full toward your protection if you continue within 30 days.</p><p>A senior check-up of your digital life: half a day in person, urgent first aid on the spot, and a written exposure summary you keep whether or not you continue.</p></div>
     {tiers}
     <div class="notes"><p>The first step is included. If you authorize it, Toza coordinates with your lawyer or family office.</p><p>Larger households, several residences or household staff: one fixed price, set out after the first step, from ₪90,000.</p><p>After the 60 days: Annual Care for past clients, from ₪12,000 a year. <a href="#pricing">All protection tiers →</a></p></div>
@@ -113,7 +113,7 @@ def page(kind):
   <nav aria-label="Main"><a class="ch" href="{WA}">WhatsApp</a><a class="ch" href="{SG}">Signal</a><a class="ch" href="{CB}">Call me back</a><button class="menu-btn" type="button" data-menu aria-expanded="false">Menu</button></nav>
 </header>
 <div class="menu" role="dialog" aria-label="Menu"><button class="close" type="button" data-menu>Menu</button>
-  <ul><li><a href="#situations">Situations</a></li><li><a href="#pricing">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">FAQ</a></li></ul></div>
+  <ul><li><a href="#situations">Situations</a></li><li><a href="#">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#">FAQ</a></li></ul></div>
 <main id="main">
 {hero(kind)}
 {situations()}
@@ -122,11 +122,11 @@ def page(kind):
 {close()}
 </main>
 <footer class="foot" aria-label="Footer">
-  <ul><li><a href="#pricing">Pricing</a></li><li><a href="#contact">FAQ</a></li><li><a href="#contact">For attorneys</a></li><li><a href="#contact">Conditions</a></li><li><a href="#contact">About</a></li></ul>
+  <ul><li><a href="#pricing">Pricing</a></li><li><a href="#">FAQ</a></li><li><a href="#">For attorneys</a></li><li><a href="#">Conditions</a></li><li><a href="#">About</a></li></ul>
   <p class="credits" data-copy-exempt>Photographs: T. Govedarovic, J. Lo, M. Charkhgard, Boston Public Library, A. Curcan, V. Gariev / Unsplash. Study G demo, light version (noindex).</p>
   <span class="giant" aria-hidden="true" data-copy-exempt>toza</span>
 </footer>
-<nav class="bar" aria-label="Footer"><a href="{WA}">WhatsApp</a><a href="{SG}">Signal</a><a href="{CB}">Call me back</a></nav>
+<nav class="bar" aria-label="Message"><a href="{WA}">WhatsApp</a><a href="{SG}">Signal</a><a href="{CB}">Call me back</a></nav>
 </body>
 </html>
 '''

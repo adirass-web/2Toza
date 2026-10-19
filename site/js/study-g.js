@@ -25,17 +25,21 @@
 
   /* menu (no motion) */
   const menu = document.querySelector(".menu");
-  document.querySelectorAll("[data-menu]").forEach((b) => b.addEventListener("click", () => {
-    const open = !menu.classList.contains("open");
+  const btn = document.querySelector(".menu-btn");
+  const setMenu = (open) => {
     menu.classList.toggle("open", open);
-    document.querySelectorAll("[data-menu]").forEach((x) => x.setAttribute("aria-expanded", String(open)));
-  }));
+    btn.setAttribute("aria-expanded", String(open));
+    if (open) { const f = menu.querySelector("a"); f && f.focus(); } else btn.focus();
+  };
+  document.querySelectorAll("[data-menu]").forEach((b) => b.addEventListener("click", () => setMenu(!menu.classList.contains("open"))));
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.classList.contains("open")) setMenu(false); });
 
   /* header over the Primes photo (D81) */
   const top = document.querySelector(".top");
   const primes = document.querySelector(".hero-primes");
   if (primes) {
-    const set = () => top.classList.toggle("over", primes.getBoundingClientRect().bottom > top.offsetHeight + 1);
+    const set = () => top.classList.toggle("over", scrollY < 8);
     addEventListener("scroll", set, { passive: true }); addEventListener("resize", set); set();
   }
 
@@ -140,6 +144,7 @@
       frame.style.opacity = (1 - clamp((p - 0.82) / 0.06)).toFixed(3);
       const k = w.indexOf(Math.max(...w));
       ticks.forEach((t, i) => t.classList.toggle("on", i <= Math.min(k, 3)));
+      ticks[0].parentNode.style.opacity = (1 - w[4]).toFixed(3);
     };
     onProgress(stage, render);
   }
