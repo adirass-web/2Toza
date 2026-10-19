@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Toza — Study G review</title>
+<style>
+  @font-face{font-family:"Bona Nova";src:url(fonts/bona-nova-latin-400-normal.woff2) format("woff2")}
+  @font-face{font-family:"Bona Nova";src:url(fonts/bona-nova-latin-400-italic.woff2) format("woff2");font-style:italic}
+  body{margin:0;font-family:"Bona Nova",Georgia,serif;background:#F3F1EC;color:#232323}
+  header{padding:24px 20px 12px;display:flex;flex-wrap:wrap;gap:8px 32px;align-items:baseline}
+  h1{font-style:italic;font-weight:400;font-size:1.75rem;margin:0}
+  p{margin:0;color:#5C5A56;max-width:70ch}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 20px 20px}
+  figure{margin:0;background:#fff;border:1px solid #CFCAC1}
+  figcaption{display:flex;justify-content:space-between;padding:10px 14px;font-size:.95rem;border-bottom:1px solid #CFCAC1}
+  .frame{position:relative;width:100%;aspect-ratio:1440/900;overflow:hidden}
+  .frame iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
+  a{color:inherit}
+  @media (max-width:900px){.pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>Study G — light version, two heroes side by side</h1>
+<p>Each frame is the full page at 1440×900, scaled; scroll inside a frame to see the situations scene, fees and close. Open a page on its own for real size and for the phone layout. Decisions D77–D91.</p></header>
+<div class="pair">
+  <figure><figcaption><span>A · Primes-style: text over the full-screen photo</span><a href="primes/">open ↗</a></figcaption><div class="frame"><iframe src="primes/" title="Primes-style hero" loading="eager"></iframe></div></figure>
+  <figure><figcaption><span>B · H2: photo band, text on white below</span><a href="h2/">open ↗</a></figcaption><div class="frame"><iframe src="h2/" title="H2 hero" loading="eager"></iframe></div></figure>
+</div>
+<script>
+  const fit=()=>document.querySelectorAll('.frame').forEach(f=>{f.querySelector('iframe').style.transform=`scale(${f.clientWidth/1440})`});
+  addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
