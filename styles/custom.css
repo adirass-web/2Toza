@@ -39,3 +39,8 @@
   html { scroll-padding-bottom: calc(var(--spacing-bar) + env(safe-area-inset-bottom)); }
   @media (min-width: 48rem) { html { scroll-padding-bottom: 0; } }
 }
+
+@layer base {
+  /* Frank Ruhl Libre has no italic or bold-italic file; the browser must not fake one (D99). No Tailwind utility sets font-synthesis. */
+  html { font-synthesis: none; }
+}
