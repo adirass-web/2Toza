@@ -4,16 +4,16 @@
   --font-body: "Frank Ruhl Libre", "Times New Roman", Georgia, serif;  /* Body copy: the serif (D104). Flowbite reads --font-body. */
   --font-serif: "Frank Ruhl Libre", "Times New Roman", Georgia, serif;  /* Headlines, situation lines, tier names, all paragraphs (D105). No italic exists; none is synthesised. Self-hosted Frank Ruhl Libre (latin + hebrew subsets). */
   --color-paper: #ffffff;  /* Ground. Page background. */
-  --color-paper-deep: #f3f1ec;  /* Stone. Alternating sections, start card, bars. */
+  --color-paper-deep: #e0e0e0;  /* Cool grey (Aspen ground). Alternating sections, start card, bars. */
   --color-ink: #232323;  /* Ink. Headings, primary action, inverse sections. In the dark theme it becomes the light text colour. */
   --color-ink-soft: #3b3b3b;  /* Ink, one step lighter. Primary action hover. */
   --color-text: #232323;  /* Body text. Also the semantic text colour. */
-  --color-muted: #5c5a56;  /* Secondary text. 6.9:1 on paper (light). */
+  --color-muted: #595959;  /* Secondary text. 7.0:1 on paper (light). */
   --color-mint: #a1ffcb;  /* Mint. Fill and small marks only (D84): never text, never a link colour. */
   --color-on-mint: #232323;  /* Text on mint, both themes. 13.2:1. */
-  --color-sand: #e4dfd6;  /* Sand. Second recessed tone (tier boxes). */
-  --color-node: #8c8880;  /* Frame-line nodes (decorative, not text). */
-  --color-rule: #cfcac1;  /* Hairlines and borders on paper. */
+  --color-sand: #d9d9d9;  /* Cool grey (Aspen box). Second recessed tone (tier boxes). */
+  --color-node: #8a8f93;  /* Frame-line nodes (decorative, not text). */
+  --color-rule: #c4c7c9;  /* Hairlines and borders on paper. */
   --color-doc-paper: #ffffff;  /* Specimen document paper. */
   --color-shadow-edge: rgb(0 0 0 / .04);  /* Specimen document: 1px lower edge. */
   --color-shadow-ambient: rgb(35 35 35 / .35);  /* Specimen document: soft ambient shadow (ink at 35%). */
