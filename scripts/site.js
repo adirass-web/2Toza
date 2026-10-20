@@ -1,7 +1,7 @@
 // Site script (esbuild bundles it into assets/js/site.js, npm run build:js). Small jobs, no copy:
 // Flowbite's navbar collapse; the print button (data-print); the FAQ expand-all toggle (data-faq-toggle);
-// collapsible panels on phones (FAQ groups, Conditions sections); opening what a #hash points at; the floating
-// contact group. Everything works without it except the mobile menu, the print button and the toggle, which
+// collapsible panels on phones (FAQ groups, Conditions sections); opening what a #hash points at; the theme
+// toggle. Everything works without it except the mobile menu, the print button and the toggle, which
 // stay hidden or inert.
 import { initCollapses } from "flowbite/lib/esm/components/collapse/index.js";
 
@@ -66,13 +66,24 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => a.addEventListener("cli
   if (panel) panel.open = true;
 }));
 
-// Floating contact group: shown once the hero has scrolled away, hidden while the contact block or footer is on screen.
-const float = document.querySelector("[data-float]");
-if (float && "IntersectionObserver" in window) {
-  const on = new Set();
-  const io = new IntersectionObserver((es) => {
-    es.forEach((e) => on[e.isIntersecting ? "add" : "delete"](e.target));
-    float.toggleAttribute("data-shown", !on.size);
+// Theme toggle (D95): icon button, default light, remembered per browser (localStorage "tz-theme"). The head script applies the
+// stored choice before first paint; this wires the button. Hidden in the markup, so without script it does not show.
+const themeBtn = document.querySelector("[data-theme-toggle]");
+if (themeBtn) {
+  const root = document.documentElement;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const sync = () => {
+    const dark = root.getAttribute("data-theme") === "dark";
+    themeBtn.setAttribute("aria-pressed", String(dark));
+    if (meta) meta.content = getComputedStyle(root).getPropertyValue("--color-paper").trim();
+  };
+  themeBtn.hidden = false;
+  themeBtn.addEventListener("click", () => {
+    const dark = root.getAttribute("data-theme") === "dark";
+    if (dark) root.removeAttribute("data-theme"); else root.setAttribute("data-theme", "dark");
+    try { localStorage.setItem("tz-theme", dark ? "light" : "dark"); } catch (e) {}
+    sync();
+    window.dispatchEvent(new Event("tz-theme"));
   });
-  document.querySelectorAll("[data-hero],[data-contact],footer").forEach((el) => io.observe(el));
+  sync();
 }

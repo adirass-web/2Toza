@@ -12,7 +12,7 @@ blocks:
     lead: Help with an account, years ago, may still connect someone to your correspondence. Toza works through it with you, in person.
     byline: none
     promise: true
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: recognition
     heading: Access shared in good faith can still matter.

@@ -224,4 +224,4 @@ blocks:
     type: contact
     heading: Start with a private conversation.
     body: "Your message receives a personal reply. {shared:common.first_conversation}"
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]

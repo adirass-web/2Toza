@@ -34,19 +34,8 @@
   }
 }
 
-@layer components {
-  /* Floating contact group (WhatsApp, Signal). Fixed to a PHYSICAL corner on purpose: the owner wants the same screen corner in LTR and RTL, so this is the one deliberate exception to the logical-properties rule. direction:ltr plus text-align:var(--float-side) (tokens: float.side, "right" or "left") is the single place to change the side. Utilities cannot express the safe-area inset, the token z-index or a physical text-align from a variable. */
-  .float-contact { position: fixed; inset-inline: 0; bottom: calc(var(--float-offset) + env(safe-area-inset-bottom)); z-index: var(--float-z); padding-inline: var(--spacing-float-edge); direction: ltr; text-align: var(--float-side); pointer-events: none; }
-  /* Progressive enhancement: without script the group stays visible; with the js class (set in the head) it is hidden until scripts/site.js sets data-shown. visibility:hidden keeps hidden links out of the tab order, which no opacity utility does. */
-  .js .float-contact:not([data-shown]) { opacity: 0; visibility: hidden; }
-  /* 150 ms fade (token float.fade), visibility switched after the fade-out; no transition at all under reduced motion. */
-  @media (prefers-reduced-motion: no-preference) {
-    .float-contact { transition: opacity var(--float-fade), visibility 0s; }
-    .js .float-contact:not([data-shown]) { transition: opacity var(--float-fade), visibility 0s linear var(--float-fade); }
-  }
-}
-
 @layer base {
-  /* Keyboard focus and in-page jumps must not end up under the floating group (WCAG 2.2 2.4.11): reserve its height (two buttons, gap, offset, safe area) plus one gap at the bottom of the scrollport. Not expressible as a utility because of env(). */
-  html { scroll-padding-bottom: calc(2 * var(--float-size) + 2 * var(--float-gap) + var(--float-offset) + env(safe-area-inset-bottom)); }
+  /* Phone message bar (fixed, below md): keyboard focus and in-page jumps must not end up under it (WCAG 2.2 2.4.11). Reserve its height plus the iOS safe area at the bottom of the scrollport; env() has no utility. */
+  html { scroll-padding-bottom: calc(var(--spacing-bar) + env(safe-area-inset-bottom)); }
+  @media (min-width: 48rem) { html { scroll-padding-bottom: 0; } }
 }

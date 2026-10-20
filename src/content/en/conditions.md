@@ -161,7 +161,7 @@ blocks:
 
   - type: contact
     heading: Questions about these terms?
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
     note:
       label: "Privacy, boundaries and other questions: FAQ"
       href: /en/faq/
