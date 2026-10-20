@@ -891,7 +891,8 @@
   "common_block_fields": {
     "type": "Block type (required)",
     "ref": "Name of a block in src/content/en/_shared.yaml `blocks:`; local fields override it",
-    "id": "Optional anchor slug (required for faq-group and terms-section)"
+    "id": "Optional anchor slug (required for faq-group and terms-section)",
+  "layout": "Optional: `box` renders the block in the colour-box grid (build/g); absent = the current layout"
   },
   "required_ids": [
     "faq-group",

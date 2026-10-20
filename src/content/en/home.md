@@ -8,6 +8,7 @@ dir: ltr
 
 blocks:
   - type: hero
+    layout: box
     heading: Before private information becomes leverage.
     lead: Private conversations, finances and plans can become leverage over you. Toza assesses and hardens your phone, computer and accounts with you, in person.
     byline: none
@@ -15,6 +16,7 @@ blocks:
     actions: [whatsapp, signal]
 
   - type: situation-doors
+    layout: box
     id: situations
     heading: Where this usually begins.
     items:
@@ -33,6 +35,7 @@ blocks:
     aside: Or before anything happens. You don't need a known incident to begin.
 
   - type: stages
+    layout: box
     ref: stages
     statement_link:
       label: "Why Toza?"
@@ -40,11 +43,14 @@ blocks:
       kind: more
 
   - type: specimen
+    layout: box
     ref: specimen
 
   - type: price-summary
+    layout: box
     ref: price_summary
 
   - type: contact
+    layout: box
     ref: contact
 ---

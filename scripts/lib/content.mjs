@@ -230,6 +230,7 @@ export function buildPages(src, pages, { err = throwing } = {}) {
     if (!def) { err(where, `unknown block type "${b.type}"`); return b; }
     const o = { type: b.type };
     if (b.id !== undefined) o.id = b.id;
+    if (b.layout !== undefined) { if (b.layout !== "box") err(where, `unknown layout "${b.layout}"`); else o.layout = b.layout; }
     const variant = b.type === "hero" ? "hero" : "full";
     fields(def.fields, b, where, { ...ctx, variant }, o);
     withPrice(o, b, where);

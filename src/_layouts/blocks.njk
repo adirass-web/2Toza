@@ -4,5 +4,5 @@ layout: base.njk
 {#- Generic renderer: one include per block, src/_includes/blocks/<type>.njk. `blocks` is the resolved
     block list of the page (see src/_includes/blocks/README.md). A type without a template fails the build. -#}
 {% for block in blocks %}
-{% include "blocks/" + block.type + ".njk" %}
+{% if block.layout == "box" %}{% include "blocks/box/" + block.type + ".njk" %}{% else %}{% include "blocks/" + block.type + ".njk" %}{% endif %}
 {% endfor %}

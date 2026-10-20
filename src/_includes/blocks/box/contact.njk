@@ -1,0 +1,20 @@
+{#- Box layout, close: ink panel (50%) with the heading and the two logo buttons on mint, the hand photograph (25%), a dotted grey box (25%, static dots). -#}
+{% from "logos.njk" import logoBtn %}
+{% from "blocks/_macros.njk" import lnk with context %}
+<section data-contact{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 pb-cell print:hidden">
+  <div class="grid grid-cols-2 gap-cell px-edge md:grid-cols-4">
+    <div class="col-span-2 flex min-h-96 flex-col justify-end gap-5 bg-mint p-6 text-on-mint lg:min-h-[34rem] lg:p-10">
+      <h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance">{{ block.heading }}</h2>
+      {% if block.body %}<p class="max-w-md text-lg">{{ block.body }}</p>{% endif %}
+      <div class="flex gap-3">{% for a in block.actions %}{{ logoBtn(a.key, a.label, a.href, "", "mint") }}{% endfor %}</div>
+      {% if block.note %}<p>{{ lnk(block.note) }}</p>{% endif %}
+    </div>
+    <div class="min-h-56 overflow-hidden bg-sand">
+      <picture>
+        <source type="image/avif" srcset="/assets/img/home/hand-600.avif 600w, /assets/img/home/hand-900.avif 900w" sizes="(min-width: 768px) 25vw, 50vw">
+        <img src="/assets/img/home/hand-600.jpg" srcset="/assets/img/home/hand-600.jpg 600w, /assets/img/home/hand-900.jpg 900w" sizes="(min-width: 768px) 25vw, 50vw" alt="" width="900" height="893" loading="lazy" class="size-full object-cover">
+      </picture>
+    </div>
+    <div class="dot-field min-h-56" aria-hidden="true"></div>
+  </div>
+</section>

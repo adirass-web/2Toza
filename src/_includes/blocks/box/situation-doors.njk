@@ -1,0 +1,23 @@
+{#- Box layout, situations: four photo boxes (25% each at md and up, 2 x 2 on phones), title and line under each, the closing line on a mint box.
+    Static layout; the pinned growing-image scene is added by the motion chunk. Photos follow the door order (decorative, alt empty). -#}
+{% from "blocks/_macros.njk" import h2 with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-12 lg:py-20">
+  <div class="px-edge">
+    {{ h2(block.heading, 'mb-8 text-heading lg:mb-12') }}
+    <ul class="grid grid-cols-2 gap-x-cell gap-y-10 md:grid-cols-4">
+      {% for door in block.items %}
+      <li><a href="{{ door.href }}" class="group block">
+        <div class="aspect-3/5 overflow-hidden bg-sand">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/home/sit-{{ loop.index }}-600.avif 600w, /assets/img/home/sit-{{ loop.index }}-900.avif 900w" sizes="(min-width: 768px) 25vw, 50vw">
+            <img src="/assets/img/home/sit-{{ loop.index }}-600.jpg" srcset="/assets/img/home/sit-{{ loop.index }}-600.jpg 600w, /assets/img/home/sit-{{ loop.index }}-900.jpg 900w" sizes="(min-width: 768px) 25vw, 50vw" alt="" width="900" height="1500" loading="lazy" class="size-full object-cover">
+          </picture>
+        </div>
+        <h3 class="mt-4 font-serif text-xl leading-tight text-heading underline decoration-transparent decoration-1 underline-offset-4 group-hover:decoration-heading lg:text-2xl">{{ door.title }}</h3>
+        <p class="mt-1 text-body-subtle">{{ door.line }}</p>
+      </a></li>
+      {% endfor %}
+      {% if block.aside %}<li class="col-span-2 mt-2 flex items-end bg-mint p-6 font-serif text-xl leading-snug text-on-mint lg:p-8 lg:text-2xl">{{ block.aside }}</li>{% endif %}
+    </ul>
+  </div>
+</section>
