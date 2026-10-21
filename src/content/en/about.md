@@ -11,7 +11,7 @@ blocks:
     heading: Why I created Toza.
     lead: People who give important decisions considerable care still entrust much of their digital privacy to vendor defaults. I created Toza to give that part of your life the expert attention it deserves.
     byline: full
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: letter
     heading: A personal note.

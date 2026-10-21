@@ -8,6 +8,8 @@
     "mainNav": "Main",
     "menuNav": "Menu",
     "menuButton": "Menu",
+    "themeToggle": "Dark theme",
+    "messageBar": "Message",
     "footerNav": "Footer",
     "newTab": "(opens in a new tab)",
     "portraitAlt": "Dr. Lior Tabansky",
@@ -41,7 +43,6 @@
     "whatsapp": "WhatsApp",
     "signal": "Signal",
     "signalShort": "Signal",
-    "callback": "Call me back",
     "referral": "Discuss a referral",
     "profile": "Professional profile"
   },

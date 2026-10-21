@@ -1,3 +1,4 @@
+{% from "logos.njk" import logoBtn %}
 {#- Flowbite "Navbar with CTA button" (data-collapse-toggle, Flowbite JS collapse). Links and labels come from i18n. -#}
 {% set navItems = [
   { href: "/en/#situations", label: t.nav.situations },
@@ -10,8 +11,12 @@
     <a href="/en/" class="flex shrink-0 items-center" aria-label="{{ t.ui.homeLabel }}">
       <span class="block h-9 text-heading lg:h-10">{% include "wordmark.njk" %}</span>
     </a>
-    <div class="inline-flex items-center gap-2 md:order-2 md:gap-0">
-      <a href="{{ contact.whatsapp.url }}" target="_blank" rel="noopener" class="box-border inline-flex min-h-11 items-center rounded-base border border-transparent bg-brand px-4 py-2 text-base font-medium leading-6 text-on-action shadow-xs hover:bg-brand-strong sm:px-5">{{ t.nav.message }}</a>
+    <div class="inline-flex items-center gap-1 md:order-2 md:gap-3">
+      {{ logoBtn("whatsapp", t.buttons.whatsapp, contact.whatsapp.url, "max-md:hidden") }}
+      {{ logoBtn("signal", t.buttons.signal, contact.signal.url, "max-md:hidden") }}
+      <button type="button" data-theme-toggle hidden aria-pressed="false" aria-label="{{ t.ui.themeToggle }}" class="inline-flex size-11 items-center justify-center text-heading">
+        <span aria-hidden="true" class="size-[1.125rem] rounded-full border-[1.5px] border-current bg-linear-to-r from-current from-50% to-transparent to-50%"></span>
+      </button>
       <button data-collapse-toggle="navbar-main" type="button" class="inline-flex size-11 items-center justify-center rounded-base text-body hover:bg-neutral-secondary-soft hover:text-heading md:hidden" aria-controls="navbar-main" aria-expanded="false">
         <span class="sr-only">{{ t.ui.menuButton }}</span>
         <svg class="size-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>

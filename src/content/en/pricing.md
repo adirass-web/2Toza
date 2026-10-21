@@ -11,7 +11,7 @@ blocks:
     heading: "{shared:pricing.heading}"
     lead: "{shared:pricing.lead}"
     byline: none
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: price-strip
     ref: price_strip

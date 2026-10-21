@@ -1,4 +1,5 @@
-{#- Flowbite "Footer with logo". Links and labels come from i18n. -#}
+{% from "logos.njk" import logoBtn %}
+{#- Footer (Study G): link list, giant outlined wordmark (decorative, cropped at the bottom edge). Links and labels come from i18n. Photo and icon credits live on About (owner decision, P2). -#}
 {% set footItems = [
   { href: "/en/pricing/", label: t.footer.pricing },
   { href: "/en/faq/", label: t.footer.faq },
@@ -6,15 +7,21 @@
   { href: "/en/conditions/", label: t.footer.conditions },
   { href: "/en/about/", label: t.footer.about }
 ] %}
-<footer class="print:hidden font-sans border-t border-default bg-neutral-primary-soft">
-  <div class="mx-auto flex w-full max-w-wrap flex-col gap-2 px-gutter py-3 sm:px-gutter-wide md:flex-row md:items-center md:justify-between md:gap-6 md:py-8 lg:py-10">
-    <a href="/en/" class="flex items-center" aria-label="{{ t.ui.homeLabel }}"><span class="block h-8 text-heading md:h-10">{% include "wordmark.njk" %}</span></a>
+<footer class="print:hidden relative overflow-hidden border-t border-default bg-neutral-primary-soft font-sans max-md:pb-bar">
+  <div class="mx-auto w-full max-w-wrap px-gutter pt-8 sm:px-gutter-wide">
     <nav aria-label="{{ t.ui.footerNav }}">
-      <ul class="flex flex-wrap gap-x-6 gap-y-0 md:gap-x-7 md:gap-y-1 font-medium text-body">
+      <ul class="flex flex-wrap gap-x-7 gap-y-1 text-body">
         {% for item in footItems %}
-        <li><a href="{{ item.href }}" class="inline-flex min-h-11 items-center underline decoration-transparent decoration-1 underline-offset-8 hover:decoration-accent">{{ item.label }}</a></li>
+        <li><a href="{{ item.href }}" class="inline-flex min-h-11 items-center underline decoration-rule decoration-1 underline-offset-8 hover:decoration-heading">{{ item.label }}</a></li>
         {% endfor %}
       </ul>
     </nav>
+    <div class="mx-auto my-12 w-full max-w-[50rem] text-heading" aria-hidden="true" data-copy-exempt>
+      {% set wmCls = "block h-auto w-full" %}{% include "wordmark.njk" %}{% set wmCls = "" %}
+    </div>
   </div>
 </footer>
+<nav class="print:hidden fixed inset-x-0 bottom-0 z-40 flex h-bar items-center justify-center gap-5 border-t border-default bg-neutral-primary pb-[env(safe-area-inset-bottom)] md:hidden" aria-label="{{ t.ui.messageBar }}">
+  {{ logoBtn("whatsapp", t.buttons.whatsapp, contact.whatsapp.url, "") }}
+  {{ logoBtn("signal", t.buttons.signal, contact.signal.url, "") }}
+</nav>

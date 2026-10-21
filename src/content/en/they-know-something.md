@@ -12,7 +12,7 @@ blocks:
     lead: You don't have to prove how it happened before acting. Toza examines your devices and accounts with you and gives urgent first aid.
     byline: none
     promise: true
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: recognition
     heading: "{shared:common.start_checked}"

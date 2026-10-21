@@ -12,7 +12,7 @@ blocks:
     lead: You do not have to work out what is wrong before you meet. Toza assesses your devices and accounts with you, hardens them around your risks and tests the changes.
     byline: none
     promise: true
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: steps
     heading: Three stages, one method.

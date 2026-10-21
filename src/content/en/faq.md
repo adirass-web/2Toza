@@ -6,7 +6,6 @@ permalink: /en/faq/index.html
 lang: en
 dir: ltr
 
-float_contact: false
 
 blocks:
   - type: hero
@@ -14,7 +13,7 @@ blocks:
     lead: You do not need to know the technical terms or be certain that something is wrong.
     byline: none
     promise: true
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: faq-group
     id: a

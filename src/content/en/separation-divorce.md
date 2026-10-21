@@ -12,7 +12,7 @@ blocks:
     lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
     byline: none
     promise: true
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: recognition
     heading: Choose which access you keep.

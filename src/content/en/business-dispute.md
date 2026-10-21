@@ -12,7 +12,7 @@ blocks:
     lead: A personal email may still recover a business account. Toza helps you find where personal and business access meet, and separate them deliberately.
     byline: none
     promise: true
-    actions: [whatsapp, signal, callback]
+    actions: [whatsapp, signal]
 
   - type: recognition
     heading: See where personal and business access still meet.

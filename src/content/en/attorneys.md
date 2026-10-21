@@ -12,7 +12,7 @@ blocks:
     lead: Toza works with your client in person, on their own devices and accounts. Your client decides what you are told.
     byline: none
     promise: true
-    actions: [referral, signal, callback]
+    actions: [referral, signal]
 
   - type: text
     heading: What Toza does for your client.
@@ -76,7 +76,7 @@ blocks:
 
   - type: contact
     ref: contact
-    actions: [referral, signal, callback]
+    actions: [referral, signal]
     note:
       label: Questions from attorneys
       href: /en/faq/#f
