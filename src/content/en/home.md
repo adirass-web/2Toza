@@ -46,9 +46,44 @@ blocks:
     layout: box
     ref: specimen
 
-  - type: price-summary
+  - type: tiers
     layout: box
-    ref: price_summary
+    detail: full
+    heading: "{shared:pricing.heading}"
+    heading_visible: true
+    statement: "{shared:pricing.lead}"
+    first_step:
+      ref: offer_first_step
+    tiers:
+      - name: "{shared:offers.shield.name}"
+        price_key: personalShield
+        for: "{shared:offers.shield.for}"
+        items:
+          - "{shared:offers.shield.items.0}"
+          - "{shared:offers.shield.items.1}"
+          - "{shared:offers.shield.items.2}"
+      - name: "{shared:offers.two.name}"
+        price_key: shieldForTwo
+        for: "{shared:offers.two.for}"
+        items:
+          - "{shared:offers.two.items.0}"
+          - "{shared:offers.two.items.1}"
+          - "{shared:offers.two.items.2}"
+      - name: "{shared:offers.inner.name}"
+        price_key: innerCircle
+        for: "{shared:offers.inner.for}"
+        items:
+          - "{shared:offers.inner.items.0}"
+          - "{shared:offers.inner.items.1}"
+          - "{shared:offers.inner.items.2}"
+    notes:
+      - "{shared:offers.under_all}"
+      - "{shared:offers.larger}"
+      - "{shared:offers.care}"
+    link:
+      label: "{shared:labels.all_tiers}"
+      href: /en/pricing/
+      kind: more
 
   - type: contact
     layout: box

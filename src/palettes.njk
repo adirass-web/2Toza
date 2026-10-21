@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Toza palette options (preview)
+description: Three grey palettes for the colour-box grid, for owner review. Not part of the site.
+permalink: /palettes/index.html
+---
+{#- Temporary review page (build/g P3): the same Home boxes under three palettes. Each section overrides the raw colour tokens it uses (bg-paper, bg-paper-deep, bg-sand, border-rule, text-muted) from the pa-/pb-/pc- preview tokens. Light theme only. Removed when the owner picks one. -#}
+{% set chips = { pa: '<span class="inline-block size-10 border border-ink/20 bg-pa-ground" title="ground"></span><span class="inline-block size-10 border border-ink/20 bg-pa-box" title="box"></span><span class="inline-block size-10 border border-ink/20 bg-pa-box2" title="box2"></span><span class="inline-block size-10 border border-ink/20 bg-pa-rule" title="rule"></span><span class="inline-block size-10 border border-ink/20 bg-pa-node" title="node"></span><span class="inline-block size-10 border border-ink/20 bg-pa-muted" title="muted"></span>', pb: '<span class="inline-block size-10 border border-ink/20 bg-pb-ground" title="ground"></span><span class="inline-block size-10 border border-ink/20 bg-pb-box" title="box"></span><span class="inline-block size-10 border border-ink/20 bg-pb-box2" title="box2"></span><span class="inline-block size-10 border border-ink/20 bg-pb-rule" title="rule"></span><span class="inline-block size-10 border border-ink/20 bg-pb-node" title="node"></span><span class="inline-block size-10 border border-ink/20 bg-pb-muted" title="muted"></span>', pc: '<span class="inline-block size-10 border border-ink/20 bg-pc-ground" title="ground"></span><span class="inline-block size-10 border border-ink/20 bg-pc-box" title="box"></span><span class="inline-block size-10 border border-ink/20 bg-pc-box2" title="box2"></span><span class="inline-block size-10 border border-ink/20 bg-pc-rule" title="rule"></span><span class="inline-block size-10 border border-ink/20 bg-pc-node" title="node"></span><span class="inline-block size-10 border border-ink/20 bg-pc-muted" title="muted"></span>' } %}
+{% set variants = [
+  { k: "pa", name: "A · Aspen neutral grey", note: "White ground, boxes light neutral greys. What the PRs show now." },
+  { k: "pb", name: "B · Cool blue-grey", note: "White ground, boxes a cool grey in the family of the dark theme." },
+  { k: "pc", name: "C · Grey ground, white boxes", note: "Light grey ground as on the Aspen page itself; boxes white and a mid grey." }
+] %}
+<div class="px-edge py-10"><h1 class="font-serif text-4xl text-heading">Palette options</h1><p class="mt-2 max-w-2xl text-body-subtle">Same layout, three palettes. Mint and ink are identical in all three. Light theme only; the dark theme is unchanged. Scroll through, then say A, B or C (or mix: for example B boxes on a C ground).</p></div>
+{% for v in variants %}
+<section class="mb-16 pb-10 text-on-mint" style="--color-paper:var(--color-{{ v.k }}-ground);--color-paper-deep:var(--color-{{ v.k }}-box);--color-sand:var(--color-{{ v.k }}-box2);--color-rule:var(--color-{{ v.k }}-rule);--color-node:var(--color-{{ v.k }}-node);--color-muted:var(--color-{{ v.k }}-muted)" aria-label="{{ v.name }}">
+  <div class="bg-paper text-on-mint">
+    <div class="px-edge pt-8 pb-6"><h2 class="font-sans text-xl font-semibold">{{ v.name }}</h2><p class="font-sans" style="color:var(--color-muted)">{{ v.note }}</p><p class="mt-3 flex gap-1" aria-hidden="true">{{ chips[v.k] | safe }}</p></div>
+    <div class="px-edge pb-cell">
+      <ul class="grid grid-cols-2 gap-x-cell gap-y-6 md:grid-cols-4">
+        {% for i in [1,2,3,4] %}<li><div class="aspect-3/5 bg-sand"><img src="/assets/img/home/sit-{{ i }}-600.jpg" alt="" width="600" height="1000" loading="lazy" class="size-full object-cover"></div><p class="mt-3 font-serif text-xl">Situation {{ i }}</p><p style="color:var(--color-muted)">A line of text in the muted colour.</p></li>{% endfor %}
+        <li class="col-span-2 flex items-end bg-mint p-6 font-serif text-xl text-on-mint">Or before anything happens. You don't need a known incident to begin.</li>
+      </ul>
+    </div>
+    <div class="grid grid-cols-1 gap-cell px-edge py-cell md:grid-cols-4">
+      <div class="bg-mint p-6 text-on-mint md:col-span-2 md:col-start-2"><p class="font-sans text-xs font-semibold tracking-wide uppercase">Start here</p><p class="mt-2 font-serif text-2xl">Private Exposure Assessment</p><p class="mt-2 font-sans text-5xl">₪4,000</p></div>
+      <div class="p-6 md:row-start-2 md:col-start-2" style="background:var(--color-paper-deep)"><p class="font-serif text-2xl">Personal Shield</p><p class="mt-2 font-sans text-5xl">₪32,000</p><p class="mt-3" style="color:var(--color-muted)">For one person.</p><ul class="mt-4 font-sans" style="border-top:1px solid var(--color-rule)"><li class="py-2" style="border-bottom:1px solid var(--color-rule)">Two security keys</li></ul></div>
+      <div class="p-6 md:row-start-2" style="background:var(--color-sand)"><p class="font-serif text-2xl">Personal Shield for Two</p><p class="mt-2 font-sans text-5xl">₪45,000</p><p class="mt-3" style="color:var(--color-muted)">For you and one other person.</p><ul class="mt-4 font-sans" style="border-top:1px solid var(--color-rule)"><li class="py-2" style="border-bottom:1px solid var(--color-rule)">Four security keys</li></ul></div>
+      <div class="p-6 md:row-start-2" style="background:var(--color-paper-deep)"><p class="font-serif text-2xl">Inner Circle</p><p class="mt-2 font-sans text-5xl">₪70,000</p><p class="mt-3" style="color:var(--color-muted)">For a household of up to four.</p><ul class="mt-4 font-sans" style="border-top:1px solid var(--color-rule)"><li class="py-2" style="border-bottom:1px solid var(--color-rule)">Eight security keys</li></ul></div>
+    </div>
+    <div class="grid grid-cols-2 gap-cell px-edge pb-cell md:grid-cols-4">
+      <div class="col-span-2 bg-mint p-6 pt-24 text-on-mint"><p class="font-serif text-3xl">Start with a private conversation.</p></div>
+      <div class="bg-sand min-h-40"></div>
+      <div class="dot-field min-h-40" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+{% endfor %}

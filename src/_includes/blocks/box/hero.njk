@@ -1,6 +1,5 @@
-{#- Box layout, hero with a photograph (D92, D98): full-screen photo, text over a scrim, headline bottom-left, lead + the two logo buttons bottom-right (D97).
+{#- Box layout, hero with a photograph (D92, D98): full-screen photo, text over a scrim, headline bottom-left, lead bottom-right. No contact buttons here: the sticky header carries them (owner, 21 Oct).
     Photo: assets/img/home (scripts/tools/make-home-images.py). Decorative, so alt is empty; the headline carries the meaning. -#}
-{% from "logos.njk" import logoBtn %}
 <section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="relative isolate flex min-h-[calc(100svh-4.25rem-var(--spacing-bar))] items-end overflow-hidden bg-scrim text-on-photo md:min-h-[calc(100svh-4.25rem)]">
   <picture class="contents">
     <source media="(max-width: 767px)" type="image/avif" srcset="/assets/img/home/hero-phone-780.avif">
@@ -13,7 +12,6 @@
     <h1 class="col-span-4 font-serif text-hero-sm leading-display font-normal tracking-display text-balance sm:text-hero-md md:col-span-8 lg:text-hero-lg">{{ block.heading }}</h1>
     <div class="col-span-4 grid gap-5 md:col-span-4 md:col-start-9 md:self-end">
       {% if block.lead %}<p class="text-lg text-on-photo lg:text-xl">{{ block.lead }}</p>{% endif %}
-      <div class="flex gap-3">{% for a in block.actions %}{{ logoBtn(a.key, a.label, a.href, "", "photo") }}{% endfor %}</div>
       {% if block.promise %}<p class="font-sans text-sm leading-snug text-on-photo/80 lg:text-base">{{ block.promise }}</p>{% endif %}
     </div>
   </div>

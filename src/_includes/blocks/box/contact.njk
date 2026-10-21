@@ -7,7 +7,7 @@
       <h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance">{{ block.heading }}</h2>
       {% if block.body %}<p class="max-w-md text-lg">{{ block.body }}</p>{% endif %}
       <div class="flex gap-3">{% for a in block.actions %}{{ logoBtn(a.key, a.label, a.href, "", "mint") }}{% endfor %}</div>
-      {% if block.note %}<p>{{ lnk(block.note) }}</p>{% endif %}
+      {% if block.note %}<p>{{ lnk(block.note, "mint") }}</p>{% endif %}
     </div>
     <div class="min-h-56 overflow-hidden bg-sand">
       <picture>

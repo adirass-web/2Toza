@@ -10,6 +10,24 @@
   --color-text: #232323;  /* Body text. Also the semantic text colour. */
   --color-muted: #595959;  /* Secondary text. 7.0:1 on paper (light). */
   --color-mint: #a1ffcb;  /* Mint. Fill and small marks only (D84): never text, never a link colour. */
+  --color-pa-ground: #ffffff;  /* Palette preview A: Aspen neutral grey: page ground. Temporary (owner picks one; the rest are removed). */
+  --color-pa-box: #e0e0e0;  /* Palette preview A: Aspen neutral grey: box. Temporary (owner picks one; the rest are removed). */
+  --color-pa-box2: #d9d9d9;  /* Palette preview A: Aspen neutral grey: second box tone. Temporary (owner picks one; the rest are removed). */
+  --color-pa-rule: #c4c7c9;  /* Palette preview A: Aspen neutral grey: hairline. Temporary (owner picks one; the rest are removed). */
+  --color-pa-node: #8a8f93;  /* Palette preview A: Aspen neutral grey: node. Temporary (owner picks one; the rest are removed). */
+  --color-pa-muted: #595959;  /* Palette preview A: Aspen neutral grey: secondary text. Temporary (owner picks one; the rest are removed). */
+  --color-pb-ground: #ffffff;  /* Palette preview B: cool blue-grey, family of the dark theme: page ground. Temporary (owner picks one; the rest are removed). */
+  --color-pb-box: #e6eaed;  /* Palette preview B: cool blue-grey, family of the dark theme: box. Temporary (owner picks one; the rest are removed). */
+  --color-pb-box2: #d8dfe4;  /* Palette preview B: cool blue-grey, family of the dark theme: second box tone. Temporary (owner picks one; the rest are removed). */
+  --color-pb-rule: #c3ccd2;  /* Palette preview B: cool blue-grey, family of the dark theme: hairline. Temporary (owner picks one; the rest are removed). */
+  --color-pb-node: #8794a0;  /* Palette preview B: cool blue-grey, family of the dark theme: node. Temporary (owner picks one; the rest are removed). */
+  --color-pb-muted: #4d5963;  /* Palette preview B: cool blue-grey, family of the dark theme: secondary text. Temporary (owner picks one; the rest are removed). */
+  --color-pc-ground: #e0e0e0;  /* Palette preview C: grey ground, white boxes (Aspen page itself): page ground. Temporary (owner picks one; the rest are removed). */
+  --color-pc-box: #ffffff;  /* Palette preview C: grey ground, white boxes (Aspen page itself): box. Temporary (owner picks one; the rest are removed). */
+  --color-pc-box2: #d0d0d0;  /* Palette preview C: grey ground, white boxes (Aspen page itself): second box tone. Temporary (owner picks one; the rest are removed). */
+  --color-pc-rule: #b9b9b9;  /* Palette preview C: grey ground, white boxes (Aspen page itself): hairline. Temporary (owner picks one; the rest are removed). */
+  --color-pc-node: #7d7d7d;  /* Palette preview C: grey ground, white boxes (Aspen page itself): node. Temporary (owner picks one; the rest are removed). */
+  --color-pc-muted: #4f4f4f;  /* Palette preview C: grey ground, white boxes (Aspen page itself): secondary text. Temporary (owner picks one; the rest are removed). */
   --color-scrim: #0e1012;  /* Photo scrim: the dark ground, in both themes (gradients under text over photographs). */
   --color-on-photo: #ffffff;  /* Text and buttons over photographs and scrims: white, in both themes. */
   --color-on-mint: #232323;  /* Text on mint, both themes. 13.2:1. */
