@@ -154,25 +154,3 @@
   --color-accent-on-dark: #0e1012;
   color-scheme: dark;
 }
-
-/* Dark theme: the values of tokens that declare one (com.toza.css.dark). Set data-theme="dark" on <html>. */
-:root[data-theme="dark"] {
-  --color-paper: #0e1012;
-  --color-paper-deep: #171a1d;
-  --color-ink: #eef0f2;
-  --color-ink-soft: #ffffff;
-  --color-text: #eef0f2;
-  --color-muted: #9aa3a9;
-  --color-sand: #20252a;
-  --color-node: #5a636a;
-  --color-rule: #2c3237;
-  --color-doc-paper: #20252a;
-  --color-shadow-ambient: rgb(0 0 0 / .5);
-  --color-on-dark-border-strong: rgb(14 16 18 / .55);
-  --color-on-dark-text: rgb(14 16 18 / .88);
-  --color-on-dark-text-muted: rgb(14 16 18 / .75);
-  --color-on-dark-rule: rgb(14 16 18 / .2);
-  --color-action-inverse-hover: #20252a;
-  --color-accent-on-dark: #0e1012;
-  color-scheme: dark;
-}
