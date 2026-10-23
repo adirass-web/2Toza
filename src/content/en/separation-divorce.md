@@ -8,6 +8,7 @@ dir: ltr
 
 blocks:
   - type: hero
+    layout: box
     heading: Trust can end before access does.
     lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
     byline: none
@@ -15,6 +16,7 @@ blocks:
     actions: [whatsapp, signal]
 
   - type: recognition
+    layout: box
     heading: Choose which access you keep.
     lead: "{shared:common.some_of_it} Toza shows you what each connection allows, so you can tell access you want to keep from access you want to end."
     items:
@@ -24,22 +26,27 @@ blocks:
       - Location sharing set up years ago.
 
   - type: text
+    layout: box
     heading: Change things in the right order.
     body: A password change can leave another route open, and changing a family service can cut access you rely on. {shared:common.sequence}
 
   - type: stages
+    layout: box
     ref: stages
     variant: compact
     line: Assess what still connects you. Harden a setup for the life you are moving into. {shared:common.verify_and_learn}
 
   - type: text
+    layout: box
     heading: Your attorney can be involved.
     body: "{shared:common.attorney_summary}"
 
   - type: price-summary
+    layout: box
     ref: price_summary
 
   - type: contact
+    layout: box
     ref: contact
     note:
       label: Questions about separation and privacy

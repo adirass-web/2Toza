@@ -21,6 +21,12 @@ Data comes from `siteContent.<lang>.pages.<page>.blocks` (global data `src/_data
 
 Page front matter is resolved too: `title`, `description`, `permalink`, `lang`, `dir`, optional `labels` (page-local chrome strings, e.g. Conditions `toc`).
 
+## Box layout contract
+
+An optional page-block `layout: box` selects `src/_includes/blocks/box/<type>.njk`; the supported type list is the `layouts.box` allowlist in `content/content-model.json`. It changes presentation only. It does not add content fields or change how references, Markdown, prices, images, links, or item order are resolved. Pages without the flag continue to use the regular `<type>.njk` renderer.
+
+For the four situation pages, the hero renderer maps the page keys `separation-divorce`, `business-dispute`, `inheritance-conflict`, and `they-know-something` to the existing decorative `sit-1` through `sit-4` image sets in that order. This mapping is a finite template choice, not a content field. The compact `stages` variant uses `blocks/box/compact-stage.njk`; the existing full and non-box stage renderers remain in place, and a nested `price_strip` still uses the shared `price-strip.njk` renderer. Recognition, prose, price-summary, and stage content remain the resolved block data described above.
+
 Examples below are real resolved data (16 Oct 2026), abridged where marked.
 
 ---

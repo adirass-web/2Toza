@@ -6,8 +6,8 @@ The cloud paths below are historical reservations, not claims of availability on
 
 | Task / issue | Branch | Worktree | Port | Writer / state | Base | PR |
 |---|---|---|---|---|---|---|
-| [P4 Home motion](https://github.com/adirass-web/2Toza/issues/7) | `build/g-p4-home-motion` | isolated coordinator-host checkout | 4104 | Sol coordinates scoped Luna corrections; owner visual approval pending | `a0021ab` | [#21 draft](https://github.com/adirass-web/2Toza/pull/21) |
-| [P5 Situation pages](https://github.com/adirass-web/2Toza/issues/8) | `build/g-p5-situations` | `/workspace/toza-worktrees/p05-situations` | 4105 | Luna page worker, reserved | `3dd5abb` | pending |
+| [P4 Home motion](https://github.com/adirass-web/2Toza/issues/7) | `build/g-p4-home-motion` | isolated coordinator-host checkout | 4104 | Owner visually approved; merged18e1941, post-merge checks in progress | `a0021ab` | [#21 merged](https://github.com/adirass-web/2Toza/pull/21) |
+| [P5 Situation pages](https://github.com/adirass-web/2Toza/issues/8) | `codex/p5-situations` | reused isolated coordinator-host checkout | 4105 | SOL coordinating scoped LUNA app/verification/review; preview pending | `18e1941` | pending |
 | [P6 How it works](https://github.com/adirass-web/2Toza/issues/9) | `build/g-p6-how-it-works` | `/workspace/toza-worktrees/p06-how-it-works` | 4106 | Unassigned, reserved | `3dd5abb` | pending |
 | [P7 Pricing](https://github.com/adirass-web/2Toza/issues/10) | `build/g-p7-pricing` | `/workspace/toza-worktrees/p07-pricing` | 4107 | Unassigned, reserved | `3dd5abb` | pending |
 | [P8 Attorneys and About](https://github.com/adirass-web/2Toza/issues/11) | `build/g-p8-attorneys-about` | `/workspace/toza-worktrees/p08-attorneys-about` | 4108 | Unassigned, reserved | `3dd5abb` | pending |

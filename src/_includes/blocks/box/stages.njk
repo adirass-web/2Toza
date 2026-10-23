@@ -1,4 +1,7 @@
-{#- Box layout, method line: the statement on its own (owner, 20 Oct: the stage drawings leave Home; the stages live on How it works). Text from column 3 on a 12-column grid (D86). -#}
+{% if block.variant == 'compact' %}
+{% include "blocks/box/compact-stage.njk" %}
+{% else %}
+{#- Existing non-compact box rendering retained for pages that use the variant. -#}
 {% from "blocks/_macros.njk" import lnk with context %}
 <section{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-16 lg:py-28">
   <div class="grid grid-cols-4 gap-x-cell px-edge md:grid-cols-12">
@@ -8,3 +11,4 @@
     </div>
   </div>
 </section>
+{% endif %}

@@ -8,6 +8,7 @@ dir: ltr
 
 blocks:
   - type: hero
+    layout: box
     heading: When interests diverge, ordinary access becomes leverage.
     lead: A personal email may still recover a business account. Toza helps you find where personal and business access meet, and separate them deliberately.
     byline: none
@@ -15,6 +16,7 @@ blocks:
     actions: [whatsapp, signal]
 
   - type: recognition
+    layout: box
     heading: See where personal and business access still meet.
     lead: "{shared:common.some_of_it} Toza shows you what each connection allows and what depends on it, so you can separate access deliberately."
     items:
@@ -24,22 +26,27 @@ blocks:
       - A work service that still holds private documents or plans.
 
   - type: text
+    layout: box
     heading: Understand what a change will affect before you approve it.
     body: A password change can leave a recovery address or shared session in place, and removing an account can interrupt services you still use. {shared:common.sequence}
 
   - type: stages
+    layout: box
     ref: stages
     variant: compact
     line: Assess where personal and business access meet. Harden what is yours to change. {shared:common.verify_and_learn}
 
   - type: text
+    layout: box
     heading: Your attorney or adviser can be involved.
     body: "{shared:common.attorney_summary}"
 
   - type: price-summary
+    layout: box
     ref: price_summary
 
   - type: contact
+    layout: box
     ref: contact
     note:
       label: Questions about business disputes

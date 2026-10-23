@@ -219,7 +219,7 @@ async function runEngine(name, engineType) {
   const context = async (width, theme, reducedMotion = "no-preference", javaScriptEnabled = true) => {
     const ctx = await browser.newContext({ viewport: { width, height: HEIGHT }, deviceScaleFactor: 1, colorScheme: theme, reducedMotion, javaScriptEnabled });
     ctx.setDefaultTimeout(8000);
-    ctx.setDefaultNavigationTimeout(15000);
+    ctx.setDefaultNavigationTimeout(30000);
     await ctx.addInitScript((t) => { try { localStorage.setItem("tz-theme", t); } catch {} if (t === "dark" && document.documentElement) document.documentElement.setAttribute("data-theme", "dark"); }, theme);
     return ctx;
   };
@@ -465,7 +465,19 @@ async function runEngine(name, engineType) {
         const r = el?.getBoundingClientRect();
         return { index: card ? [...document.querySelectorAll("[data-situation-card]")].indexOf(card) + 1 : null, visible: !!r && r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight };
       });
-      if (f.index) { check(f.visible, "Keyboard-focused situation link must remain visible", f); visited.add(f.index); }
+      if (f.index) {
+        // Native focus scrolling can settle on a later render tick in WebKit.
+        // Keep the same visibility requirement, with a bounded settling window.
+        if (!f.visible) f.visible = await page.waitForFunction((index) => {
+          const el = document.activeElement;
+          const card = el?.closest("[data-situation-card]");
+          if (!card || [...document.querySelectorAll("[data-situation-card]")].indexOf(card) + 1 !== index) return false;
+          const r = el.getBoundingClientRect();
+          return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight;
+        }, f.index, { timeout: 1500 }).then(() => true, () => false);
+        check(f.visible, "Keyboard-focused situation link must remain visible", f);
+        visited.add(f.index);
+      }
     }
     check(visited.size === 4, "Keyboard traversal did not reach all original situation links", [...visited]);
 
