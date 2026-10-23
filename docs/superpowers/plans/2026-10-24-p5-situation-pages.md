@@ -29,3 +29,5 @@
 ## Known exceptions
 
 Firefox remains a separate diagnostic lane. Manual screen-reader acceptance, unapproved legacy visual baselines and final photo-credit/resolution confirmation remain release checks; automated accessibility is not manual screen-reader acceptance. No production or DNS actions are in this phase.
+
+**Accepted checkpoint — 24 October 2026:** Owner visually approved preview475252e6 (source060f106). PR22 merged10ae3ed; post-merge CI40030892510 fully passed. P5 is accepted; P6 activated under its own plan and approval gate.

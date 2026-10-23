@@ -27,6 +27,8 @@ An optional page-block `layout: box` selects `src/_includes/blocks/box/<type>.nj
 
 For the four situation pages, the hero renderer maps the page keys `separation-divorce`, `business-dispute`, `inheritance-conflict`, and `they-know-something` to the existing decorative `sit-1` through `sit-4` image sets in that order. This mapping is a finite template choice, not a content field. The compact `stages` variant uses `blocks/box/compact-stage.njk`; the existing full and non-box stage renderers remain in place, and a nested `price_strip` still uses the shared `price-strip.njk` renderer. Recognition, prose, price-summary, and stage content remain the resolved block data described above.
 
+On How it works, `hero` dispatches to a photo-free typographic opening, `steps` renders the ordered Assess → Harden → Verify rows with a native sticky stage card on desktop, and `offer` places the existing assessment content in a mint box. The step rows stack in reading order on phones and have natural height so each sticky card stays bounded by its own row. The page's `tiers` and `contact` blocks reuse their existing box renderers.
+
 Examples below are real resolved data (16 Oct 2026), abridged where marked.
 
 ---
@@ -607,7 +609,7 @@ Example: pricing, `tiers.first_step`.
 
 ## steps
 
-The three stages in detail (how-it-works). Dark section, one hairline row per stage with the shared drawing.
+The three stages in detail (how-it-works). Ordered rows keep the shared drawing, stage heading, explanation and “You keep” result together; the How it works box layout uses a native sticky stage card on desktop and a static stack on phones.
 
 | Field | Type | | Notes |
 |---|---|---|---|

@@ -1,0 +1,13 @@
+{#- How it works opening: typographic, no photo. Existing action metadata stays visible as plain links; global contact stays in the header and closing block. -#}
+{% from "blocks/_macros.njk" import actions with context %}
+<section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="pt-8 pb-10 lg:pt-20 lg:pb-16">
+  <div class="grid grid-cols-4 gap-x-cell gap-y-6 px-edge md:grid-cols-12">
+    <h1 class="col-span-4 font-serif text-hero-sm leading-display font-normal tracking-display text-pretty text-heading sm:text-hero-md md:col-span-8 lg:text-hero-lg">{{ block.heading }}</h1>
+    <div class="col-span-4 md:col-span-4 md:col-start-9 md:self-end">
+      <span class="mb-5 block h-px w-16 bg-accent lg:mb-7 lg:w-24" aria-hidden="true"></span>
+      {% if block.lead %}<p class="text-lg text-body lg:text-xl">{{ block.lead }}</p>{% endif %}
+      {% if block.promise %}<p class="mt-4 text-lg leading-snug text-body-subtle">{{ block.promise }}</p>{% endif %}
+      {% if block.actions.length %}<p class="mt-5 flex flex-wrap gap-x-6 gap-y-2">{% for action in block.actions %}<a href="{{ action.href }}" target="_blank" rel="noopener" class="py-1 text-base font-medium text-heading underline underline-offset-4">{{ action.label }}</a>{% endfor %}</p>{% endif %}
+    </div>
+  </div>
+</section>

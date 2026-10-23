@@ -1,0 +1,16 @@
+{#- How it works assessment offer: existing assessment facts and copy in a half-width mint box. -#}
+{% from "blocks/_macros.njk" import price, lnk, features with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="py-8 lg:py-12">
+  <div class="grid grid-cols-4 gap-cell px-edge md:grid-cols-12">
+    <h2 class="col-span-4 font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading md:col-span-3">{{ block.heading }}</h2>
+    <article class="col-span-4 flex flex-col gap-4 bg-mint p-6 text-on-mint md:col-span-6 md:col-start-4 lg:p-8">
+      {% if block.tag %}<p class="font-sans text-xs font-semibold tracking-wide uppercase">{{ block.tag }}</p>{% endif %}
+      <h3 class="font-serif text-2xl leading-tight lg:text-3xl">{{ block.name }}</h3>
+      <p>{{ price(block, 'text-5xl lg:text-7xl') }}</p>
+      {% if block.body %}<p class="text-lg leading-snug">{{ block.body }}</p>{% endif %}
+      {{ features(block.items, 'text-lg') }}
+      {% if block.credit %}<p class="text-lg leading-snug">{{ block.credit }}</p>{% endif %}
+      {% if block.link %}<p>{{ lnk(block.link, 'mint') }}</p>{% endif %}
+    </article>
+  </div>
+</section>

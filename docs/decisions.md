@@ -131,3 +131,5 @@ The following entries port the current approved choices in section 2 of [HANDOFF
 
 | V-077 | 2026-10-24 | Owner visually approved the corrected P4 preview209a7fc2 and explicitly authorized P4 merge, post-merge CI check, then P5 implementation and tested preview. P4 PR21 merged18e1941; P5 still requires its own visual approval before merge. |
 | V-078 | 2026-10-24 | Use the faster workflow: SOL coordinates scoped LUNA experts; finish implementation/review before push; one focused local pass, one CI cycle and one bounded public preview check; repeat only for actual findings/changes. No redundant unchanged-status polling or repeated full suites. |
+
+| V-079 | 2026-10-24 | Owner approved P5 preview475252e6 and authorized PR22 merge, post-merge CI, then P6 using the faster SOL/scoped-LUNA workflow. P5 merged10ae3ed and post-merge CI40030892510 passed. P6 requires a separate tested preview and explicit owner visual approval before merge. |

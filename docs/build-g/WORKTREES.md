@@ -2,13 +2,13 @@
 
 Coordinator: primary agent; planning and review: GPT-6.1 Sol; at most two GPT-6 Luna writers.
 
-The cloud paths below are historical reservations, not claims of availability on another host. P4 is now active in an isolated coordinator-host checkout outside a synced directory, based on accepted integration commit `a0021abada45f21c67d49b8d4f777ee3b8443425`. Other reservations remain historical until activation. The coordinator owns shared Git maintenance, staging and publication; scoped workers edit only their assigned files.
+The cloud paths below are historical reservations, not claims of availability on another host. P6 is active in the reused isolated coordinator-host checkout outside a synced directory, based on accepted P5 merge `10ae3ed80912dd01d8b133a893c0790cb9eb4254`. Other reservations remain historical until activation. The coordinator owns shared Git maintenance, staging and publication; scoped workers edit only their assigned files.
 
 | Task / issue | Branch | Worktree | Port | Writer / state | Base | PR |
 |---|---|---|---|---|---|---|
-| [P4 Home motion](https://github.com/adirass-web/2Toza/issues/7) | `build/g-p4-home-motion` | isolated coordinator-host checkout | 4104 | Owner visually approved; merged18e1941, post-merge checks in progress | `a0021ab` | [#21 merged](https://github.com/adirass-web/2Toza/pull/21) |
-| [P5 Situation pages](https://github.com/adirass-web/2Toza/issues/8) | `codex/p5-situations` | reused isolated coordinator-host checkout | 4105 | SOL coordinating scoped LUNA app/verification/review; preview pending | `18e1941` | pending |
-| [P6 How it works](https://github.com/adirass-web/2Toza/issues/9) | `build/g-p6-how-it-works` | `/workspace/toza-worktrees/p06-how-it-works` | 4106 | Unassigned, reserved | `3dd5abb` | pending |
+| [P4 Home motion](https://github.com/adirass-web/2Toza/issues/7) | `build/g-p4-home-motion` | isolated coordinator-host checkout | 4104 | Owner approved/merged18e1941; historical post-merge exception recorded in CURRENT | `a0021ab` | [#21 merged](https://github.com/adirass-web/2Toza/pull/21) |
+| [P5 Situation pages](https://github.com/adirass-web/2Toza/issues/8) | `codex/p5-situations` | reused isolated coordinator-host checkout | 4105 | Owner approved; merged10ae3ed; post-merge CI green | `18e1941` | [#22 merged](https://github.com/adirass-web/2Toza/pull/22) |
+| [P6 How it works](https://github.com/adirass-web/2Toza/issues/9) | `codex/p6-how-it-works` | reused isolated coordinator-host checkout | 4106 | SOL coordinates scoped LUNA app/verification/review; preview pending | `10ae3ed` | pending |
 | [P7 Pricing](https://github.com/adirass-web/2Toza/issues/10) | `build/g-p7-pricing` | `/workspace/toza-worktrees/p07-pricing` | 4107 | Unassigned, reserved | `3dd5abb` | pending |
 | [P8 Attorneys and About](https://github.com/adirass-web/2Toza/issues/11) | `build/g-p8-attorneys-about` | `/workspace/toza-worktrees/p08-attorneys-about` | 4108 | Unassigned, reserved | `3dd5abb` | pending |
 | [P9 FAQ and Conditions](https://github.com/adirass-web/2Toza/issues/12) | `build/g-p9-faq-conditions` | `/workspace/toza-worktrees/p09-faq-conditions` | 4109 | Unassigned, reserved | `3dd5abb` | pending |
