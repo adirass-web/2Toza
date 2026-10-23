@@ -137,6 +137,7 @@ jobs:
             echo "- Site SHA-256: \`$site_sha256\`"
             echo "- Preview branch: \`$preview_branch\`"
           } >> "$GITHUB_STEP_SUMMARY"
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ${{ steps.provenance.outputs.artifact_name }}
@@ -278,3 +279,41 @@ jobs:
             echo "- Site SHA-256: \`$SITE_SHA256\`"
             echo "- Preview project/branch: \`$CF_PROJECT_NAME\` / \`$PREVIEW_BRANCH\`"
           } >> "$GITHUB_STEP_SUMMARY"
+
+  cross_browser:
+    name: Home motion (${{ matrix.browser }})
+    runs-on: ubuntu-24.04
+    container: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [firefox, webkit]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      - run: npm ci
+      - run: npm run build
+      - name: Check Home motion in ${{ matrix.browser }}
+        env:
+          HOME_MOTION_BROWSERS: ${{ matrix.browser }}
+          HOME_MOTION_ARTIFACT_DIR: ${{ runner.temp }}/toza-home-motion-${{ matrix.browser }}
+        run: |
+          mkdir -p "$HOME_MOTION_ARTIFACT_DIR"
+          git rev-parse HEAD > "$HOME_MOTION_ARTIFACT_DIR/source-sha.txt"
+          npm run check:home-motion
+      - name: Retain ${{ matrix.browser }} motion evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: toza-home-motion-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/toza-home-motion-${{ matrix.browser }}
+          if-no-files-found: warn
+          retention-days: 7
