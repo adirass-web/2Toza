@@ -1,0 +1,10 @@
+{#- Home's method statement without the stage content reserved for How it works. -#}
+{% from "blocks/_macros.njk" import links with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-16 lg:py-28">
+  <div class="grid grid-cols-4 gap-x-cell px-edge md:grid-cols-12">
+    <div class="col-span-4 md:col-span-8 md:col-start-3">
+      <p class="font-serif text-3xl leading-tight text-balance text-heading lg:text-5xl">{{ block.statement }}</p>
+      {{ links(block.links, '', 'mt-6') }}
+    </div>
+  </div>
+</section>

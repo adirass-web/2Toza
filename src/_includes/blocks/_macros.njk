@@ -28,7 +28,7 @@
 
 {#- Flowbite link (Typography > Links) with the brass underline. kind more: arrow; external: glyph and the new-tab hint. -#}
 {% macro lnk(l, tone) %}
-<a href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %} class="-my-2 inline-block py-2 font-medium underline decoration-1 underline-offset-4 hover:decoration-2 {% if tone == 'dark' %}text-paper decoration-accent-on-dark{% else %}text-fg-brand decoration-accent{% endif %}">{{ l.label }}{% if l.kind == 'more' %} <span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrow }}</span>{% elif l.kind == 'external' %} <span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrowExternal }}</span><span class="sr-only"> {{ l.aria }}</span>{% endif %}</a>
+<a href="{{ l.href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %} class="-my-2 inline-block py-2 font-medium underline decoration-1 underline-offset-4 hover:decoration-2 {% if tone == 'dark' %}text-paper decoration-accent-on-dark{% elif tone == 'mint' %}text-on-mint decoration-on-mint{% else %}text-fg-brand decoration-accent{% endif %}">{{ l.label }}{% if l.kind == 'more' %} <span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrow }}</span>{% elif l.kind == 'external' %} <span class="inline-block rtl:-scale-x-100" aria-hidden="true">{{ t.ui.arrowExternal }}</span><span class="sr-only"> {{ l.aria }}</span>{% endif %}</a>
 {% endmacro %}
 
 {% macro links(list, tone, cls) %}{% if list and list.length %}

@@ -11,7 +11,7 @@ import pixelmatch from "pixelmatch";
 import { PNG } from "pngjs";
 
 const require = createRequire(import.meta.url);
-const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "/opt/npm-tools/node_modules/playwright");
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "playwright");
 const UPDATE = process.argv.includes("--update");
 const MAX_PCT = 0.05;       // failure budget: % of pixels differing
 const THRESHOLD = 0.1;      // pixelmatch colour tolerance (anti-aliasing)
