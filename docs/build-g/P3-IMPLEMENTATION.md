@@ -4,7 +4,7 @@
 
 The original handoff is preserved unchanged in `HANDOFF-toza-current.md`. This chunk carries the static P3 Home implementation onto the P2 integration base, retaining the previous P3 history without a force push. Other page layouts remain for P5–P9.
 
-Implementation corrections: opaque sticky header; stacked phone situation/close boxes; ink close panel with mint contact controls; actual method-statement content instead of a hidden three-stage declaration; no unused hero actions; the existing `#how` anchor retained. The content model now explicitly validates supported box layouts, while non-photo heroes still require action declarations. Content parity and its mutation regression test run in CI. The visual runner resolves the lockfile-installed Playwright by default.
+Implementation corrections: the handoff's exact grey ground/box tokens (#E0E0E0 / #D9D9D9); opaque sticky header; stacked phone situation/close boxes; ink close panel with mint contact controls; actual method-statement content instead of a hidden three-stage declaration; no unused hero actions; the existing `#how` anchor retained. The content model now explicitly validates supported box layouts, while non-photo heroes still require action declarations. Content parity and its mutation regression test run in CI. The visual runner resolves the lockfile-installed Playwright by default.
 
 The chosen skills are installed under `.agents/skills/`, with upstream commits and licences recorded there. No automatic hooks were installed. Impeccable context loading succeeded and its mechanical detector returned no findings for the changed shared shell and Home templates. Its generic design suggestions do not change the approved spec.
 
