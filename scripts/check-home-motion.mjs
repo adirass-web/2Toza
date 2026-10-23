@@ -10,12 +10,23 @@ const WIDTHS = [390, 768, 1024, 1440, 1920];
 const HEIGHT = 900;
 const DEST = resolve(process.env.HOME_MOTION_ARTIFACT_DIR || join(tmpdir(), "toza-home-motion"));
 const ENGINES = (process.env.HOME_MOTION_BROWSERS || "chromium").split(",").map((x) => x.trim()).filter(Boolean);
+const REPORT_PATH = join(DEST, "home-motion-report.json");
+const OPERATION_TIMEOUT = 30000;
 mkdirSync(DEST, { recursive: true });
 const { chromium, firefox, webkit } = loadPlaywright();
 const engines = { chromium, firefox, webkit };
 const server = await serve();
 const report = { createdAt: new Date().toISOString(), base: server.base, artifacts: DEST, results: [], skippedEngines: [], errors: [] };
 report.notRunEngines = ["chromium", "firefox", "webkit"].filter((name) => !ENGINES.includes(name)).map((engine) => ({ engine, reason: "Not selected in HOME_MOTION_BROWSERS." }));
+const writeReport = () => writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2) + "\n");
+const checkpoint = (state, phase) => {
+  state.phase = phase;
+  state.updatedAt = new Date().toISOString();
+  report.updatedAt = state.updatedAt;
+  writeReport();
+  console.log(`[${state.engine}] ${phase}`);
+};
+writeReport();
 const check = (condition, message, detail) => {
   if (!condition) throw new Error(detail ? `${message}: ${JSON.stringify(detail)}` : message);
 };
@@ -40,25 +51,31 @@ async function readHome(page) {
 }
 
 async function runEngine(name, engineType) {
+  const state = { engine: name, status: "running", phase: "launch", cases: [], screenshots: [] };
+  report.results.push(state);
+  checkpoint(state, "launch");
   let browser;
-  try { browser = await engineType.launch(); }
+  try { browser = await engineType.launch({ timeout: OPERATION_TIMEOUT }); }
   catch (e) {
-    const skipped = { engine: name, status: "unavailable", reason: String(e.message || e) };
-    report.results.push(skipped);
-    report.skippedEngines.push(skipped);
+    state.status = "unavailable";
+    state.reason = String(e.message || e);
+    report.skippedEngines.push(state);
+    checkpoint(state, "browser unavailable");
     return;
   }
-  const state = { engine: name, status: "passed", cases: [], screenshots: [] };
   const observe = (page, errors) => {
     page.on("console", (msg) => { if (msg.type() === "error") errors.push(`console: ${msg.text()}`); });
     page.on("pageerror", (e) => errors.push(`pageerror: ${e.message}`));
   };
   const context = async (width, theme, reducedMotion = "no-preference", javaScriptEnabled = true) => {
     const ctx = await browser.newContext({ viewport: { width, height: HEIGHT }, deviceScaleFactor: 1, colorScheme: theme, reducedMotion, javaScriptEnabled });
+    ctx.setDefaultTimeout(OPERATION_TIMEOUT);
+    ctx.setDefaultNavigationTimeout(OPERATION_TIMEOUT);
     await ctx.addInitScript((t) => { try { localStorage.setItem("tz-theme", t); } catch {} if (t === "dark" && document.documentElement) document.documentElement.setAttribute("data-theme", "dark"); }, theme);
     return ctx;
   };
   try {
+    checkpoint(state, "fallback");
     // No-JS and enhanced pages must expose identical authored text and links.
     const fallbackCtx = await context(1440, "light", "no-preference", false);
     const fallback = await fallbackCtx.newPage();
@@ -75,6 +92,7 @@ async function runEngine(name, engineType) {
     check(!fallbackErrors.length, "No-JS page reported browser errors", fallbackErrors);
     await fallbackCtx.close();
 
+    checkpoint(state, "enhanced");
     const standardCtx = await context(1440, "light");
     const page = await standardCtx.newPage();
     const pageErrors = [];
@@ -108,6 +126,7 @@ async function runEngine(name, engineType) {
 
     // Desktop holds: sample the linked card order and require each distinct
     // authored scene image to become the visible hold at its own card position.
+    checkpoint(state, "holds");
     await page.setViewportSize({ width: 1440, height: HEIGHT });
     const holdChecks = { samples: [] };
     const cards = page.locator("[data-situation-card]");
@@ -155,6 +174,7 @@ async function runEngine(name, engineType) {
 
     // Keyboard traversal must keep the four original linked cards focusable and
     // rendered in the viewport after focus moves to each one.
+    checkpoint(state, "keyboard");
     await page.evaluate(() => scrollTo(0, 0));
     const focusResults = [];
     for (let i = 0; i < 4; i++) {
@@ -185,6 +205,7 @@ async function runEngine(name, engineType) {
 
     // Resize checks: no horizontal overflow, scene remains native stacked on
     // phones, and the enhancement does not duplicate authored scene nodes.
+    checkpoint(state, "resize");
     const originalCounts = await page.evaluate(() => [document.querySelectorAll("[data-situation-card]").length, document.querySelectorAll("[data-situation-hold]").length]);
     const mobileFallbackCtx = await context(390, "light", "no-preference", false);
     const mobileFallback = await mobileFallbackCtx.newPage();
@@ -217,6 +238,7 @@ async function runEngine(name, engineType) {
 
     // Reduced motion at load and live preference changes must remove readiness,
     // restore it when motion is re-enabled, and leave one copy of each node.
+    checkpoint(state, "reduced/lifecycle");
     const reducedCtx = await context(1024, "light", "reduce");
     const reduced = await reducedCtx.newPage();
     const reducedErrors = [];
@@ -243,17 +265,18 @@ async function runEngine(name, engineType) {
     check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "Print must tear down the motion runway");
     check(await reduced.locator("[data-situation-source]").first().isVisible(), "Print must restore original situation photos");
     await reduced.evaluate(() => dispatchEvent(new Event("afterprint")));
-    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"));
+    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
     await reduced.evaluate(() => dispatchEvent(new PageTransitionEvent("pagehide", { persisted: true })));
     check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "History navigation must dispose motion");
     await reduced.evaluate(() => dispatchEvent(new PageTransitionEvent("pageshow", { persisted: true })));
-    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"));
+    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
     check(await reduced.locator("[data-situation-stage]").count() === 1, "History restoration must not duplicate the stage");
     check(!reducedErrors.length, "Reduced-motion lifecycle emitted browser errors", reducedErrors);
     await reducedCtx.close();
     state.cases.push({ kind: "reduced-motion", status: "passed", nodeCount: beforeToggle });
     state.cases.push({ kind: "print-and-history-lifecycle", status: "passed" });
 
+    checkpoint(state, "initialization failure");
     const unsupportedCtx = await context(1440, "light");
     await unsupportedCtx.addInitScript(() => { window.IntersectionObserver = undefined; });
     const unsupported = await unsupportedCtx.newPage();
@@ -270,6 +293,7 @@ async function runEngine(name, engineType) {
 
     // Non-baseline full-page screenshots: every required viewport and theme.
     for (const theme of ["light", "dark"]) for (const width of WIDTHS) {
+      checkpoint(state, `screenshot ${theme} ${width}px`);
       const ctx = await context(width, theme);
       const shotPage = await ctx.newPage();
       const errors = [];
@@ -311,11 +335,23 @@ async function runEngine(name, engineType) {
     state.cases.push({ kind: "keyboard", status: "passed", visited: [...visited].sort() });
   } catch (e) {
     state.status = "failed";
+    state.failedAtPhase = state.phase;
     state.error = e.stack || String(e);
     report.errors.push({ engine: name, message: e.message || String(e) });
+    checkpoint(state, "failed");
   } finally {
-    await browser.close();
-    report.results.push(state);
+    checkpoint(state, "browser close");
+    try { await browser.close(); }
+    catch (e) {
+      state.status = "failed";
+      state.closeError = e.stack || String(e);
+      report.errors.push({ engine: name, message: `Browser close failed: ${e.message || String(e)}` });
+    }
+    if (state.status === "running") state.status = "passed";
+    state.phase = "complete";
+    state.updatedAt = new Date().toISOString();
+    report.updatedAt = state.updatedAt;
+    writeReport();
   }
 }
 
@@ -327,9 +363,8 @@ for (const name of ENGINES) {
   await runEngine(name, engines[name]);
 }
 server.close();
-const reportPath = join(DEST, "home-motion-report.json");
-writeFileSync(reportPath, JSON.stringify(report, null, 2) + "\n");
-console.log(`Home motion report: ${reportPath}`);
+writeReport();
+console.log(`Home motion report: ${REPORT_PATH}`);
 console.log(JSON.stringify(report.results.map(({ engine, status, error, reason }) => ({ engine, status, error, reason })), null, 2));
 if (report.skippedEngines.length) console.log(`Skipped engines: ${report.skippedEngines.map((x) => `${x.engine}: ${x.reason}`).join("; ")}`);
 if (report.notRunEngines.length) console.log(`Not run: ${report.notRunEngines.map((x) => `${x.engine} (${x.reason})`).join("; ")}`);
