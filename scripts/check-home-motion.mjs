@@ -350,11 +350,12 @@ async function runEngine(name, engineType) {
         let sample;
         do {
           sample = await inspectMethodScrim(methodPage);
-          if (sample.visibleHoldOpacity >= 0.98 && sample.methodWordCount > 0 && sample.minimumMethodWordOpacity >= 0.98) break;
+          if (sample.visibleHoldOpacity >= 0.98 && sample.methodWordCount > 0 && sample.minimumMethodWordOpacity >= 0.999) break;
           await methodPage.waitForTimeout(50);
         } while (Date.now() - settledAt < 2500);
         check(sample.hasMethod && sample.hasScrimHook && sample.methodText.length > 0, `Method scrim hook missing in ${theme} ${width}px`, sample);
         check(sample.methodRect?.width > 0 && sample.methodRect.top < HEIGHT && sample.methodRect.bottom > 0, `Method statement must remain visible in ${theme} ${width}px`, sample);
+        check(sample.methodWordCount > 0 && sample.minimumMethodWordOpacity >= 0.999, `Method statement words must finish revealing in ${theme} ${width}px`, sample);
         check(sample.intersection.area > 0 && sample.visibleHoldOpacity >= 0.98 && sample.stageImageLoaded, `Original photo stage must visibly overlap method text in ${theme} ${width}px`, sample);
         check(sample.methodForegroundIsWhite && sample.linkForegroundIsWhite, `Method statement and Why Toza link must be white in ${theme} ${width}px`, sample);
         check(sample.textContrastAgainstWorstCaseWhitePhoto >= 4.5 && sample.linkContrastAgainstWorstCaseWhitePhoto >= 4.5, `Method text and link need 4.5:1 contrast over a white photo in ${theme} ${width}px`, sample);
@@ -365,7 +366,7 @@ async function runEngine(name, engineType) {
         check(!!scrim && glyphs.length > 0 && glyphs.every((r) => r.left >= scrim.left - 2 && r.right <= scrim.right + 2 && r.top >= scrim.top - 2 && r.bottom <= scrim.bottom + 2), `Opaque scrim core must cover every method and link text glyph in ${theme} ${width}px`, sample);
         const filename = `method-${theme}-${width}-${direction}.png`;
         const path = join(DEST, filename);
-        await methodPage.screenshot({ path, fullPage: false, animations: "disabled" });
+        await methodPage.screenshot({ path, fullPage: false });
         methodChecks.push({ theme, width, direction, screenshot: path, observation: sample });
       }
       check(!errors.length, `Browser errors in method overlap ${theme} ${width}px`, errors);
