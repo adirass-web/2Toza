@@ -3,25 +3,50 @@ name: Verify
 on:
   pull_request:
   push:
-    branches-ignore: [upstream-baseline]
+    # Chunk branches are checked by their PR run. Keep direct checks only for
+    # the integration and release branches.
+    branches: [main, build/g]
 
 permissions:
   contents: read
 
 concurrency:
-  group: verify-${{ github.ref }}
+  # PR updates share one group even though GitHub gives each PR a synthetic ref.
+  group: verify-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    permissions:
+      contents: read
+    outputs:
+      artifact_name: ${{ steps.provenance.outputs.artifact_name }}
+      preview_branch: ${{ steps.provenance.outputs.preview_branch }}
+      built_sha: ${{ steps.provenance.outputs.built_sha }}
+      source_head_sha: ${{ steps.provenance.outputs.source_head_sha }}
+      source_base_sha: ${{ steps.provenance.outputs.source_base_sha }}
+      source_branch: ${{ steps.provenance.outputs.source_branch }}
+      source_event: ${{ steps.provenance.outputs.source_event }}
+      site_sha256: ${{ steps.provenance.outputs.site_sha256 }}
+      run_attempt: ${{ steps.provenance.outputs.run_attempt }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # github.sha is the immutable event merge ref for PRs and exact push SHA otherwise.
+          ref: ${{ github.sha }}
+          persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        if: github.event_name == 'push'
         with:
           node-version-file: .nvmrc
           cache: npm
+      # Do not write a reusable npm cache from untrusted PR code.
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        if: github.event_name == 'pull_request'
+        with:
+          node-version-file: .nvmrc
       - run: npm ci
       - run: npm run build
       - run: npm run check
@@ -36,7 +61,205 @@ jobs:
         with:
           ref: main
           path: base
+          persist-credentials: false
       - if: github.ref != 'refs/heads/main'
         run: cd base && npm ci && npm run build
       - if: github.ref != 'refs/heads/main'
         run: node scripts/check-anchors.mjs base/_site _site --fail-linked
+
+      # Package the exact site that passed Verify. The deploy job consumes this
+      # immutable run artifact and never rebuilds or runs application scripts.
+      - name: Create preview artifact and provenance
+        id: provenance
+        env:
+          SOURCE_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          SOURCE_BASE_SHA: ${{ github.event.pull_request.base.sha || '' }}
+          SOURCE_BRANCH: ${{ github.head_ref || github.ref_name }}
+          SOURCE_EVENT: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number || '' }}
+        run: |
+          set -euo pipefail
+          bundle="$RUNNER_TEMP/toza-preview-artifact"
+          mkdir -p "$bundle"
+          tar -czf "$bundle/site.tar.gz" -C _site .
+          site_sha256="$(sha256sum "$bundle/site.tar.gz" | cut -d ' ' -f 1)"
+          built_sha="$(git rev-parse HEAD)"
+          artifact_name="toza-site-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+          if [ -n "$PR_NUMBER" ]; then
+            preview_branch="p-${PR_NUMBER}"
+          else
+            slug="$(printf '%s' "$SOURCE_BRANCH" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//' | cut -c1-14)"
+            [ -n "$slug" ] || slug=ref
+            suffix="$(printf '%s' "$SOURCE_BRANCH" | sha256sum | cut -c1-10)"
+            preview_branch="b-${slug}-${suffix}"
+          fi
+
+          jq -n \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg branch "$SOURCE_BRANCH" \
+            --arg built_sha "$built_sha" \
+            --arg source_head_sha "$SOURCE_HEAD_SHA" \
+            --arg source_base_sha "$SOURCE_BASE_SHA" \
+            --arg event "$SOURCE_EVENT" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg run_attempt "$GITHUB_RUN_ATTEMPT" \
+            --arg artifact_name "$artifact_name" \
+            --arg preview_branch "$preview_branch" \
+            --arg site_sha256 "$site_sha256" \
+            '{schema_version:1, repository:$repository, source_branch:$branch, built_sha:$built_sha, source_head_sha:$source_head_sha, source_base_sha:$source_base_sha, event:$event, run_id:$run_id, run_attempt:$run_attempt, artifact_name:$artifact_name, preview_branch:$preview_branch, site_sha256:$site_sha256}' \
+            > "$bundle/provenance.json"
+
+          echo "artifact_name=$artifact_name" >> "$GITHUB_OUTPUT"
+          echo "preview_branch=$preview_branch" >> "$GITHUB_OUTPUT"
+          echo "built_sha=$built_sha" >> "$GITHUB_OUTPUT"
+          echo "source_head_sha=$SOURCE_HEAD_SHA" >> "$GITHUB_OUTPUT"
+          echo "source_base_sha=$SOURCE_BASE_SHA" >> "$GITHUB_OUTPUT"
+          echo "source_branch=$SOURCE_BRANCH" >> "$GITHUB_OUTPUT"
+          echo "source_event=$SOURCE_EVENT" >> "$GITHUB_OUTPUT"
+          echo "site_sha256=$site_sha256" >> "$GITHUB_OUTPUT"
+          echo "run_attempt=$GITHUB_RUN_ATTEMPT" >> "$GITHUB_OUTPUT"
+          {
+            echo '### Verified preview artifact'
+            echo
+            echo "- Repository: \`$GITHUB_REPOSITORY\`"
+            echo "- Source branch: \`$SOURCE_BRANCH\` ($SOURCE_EVENT)"
+            echo "- Built SHA: \`$built_sha\`"
+            echo "- Source head SHA: \`$SOURCE_HEAD_SHA\`"
+            echo "- Source base SHA: \`$SOURCE_BASE_SHA\`"
+            echo "- Verify run: \`$GITHUB_RUN_ID\`"
+            echo "- Run attempt: \`$GITHUB_RUN_ATTEMPT\`"
+            echo "- Artifact: \`$artifact_name\`"
+            echo "- Site SHA-256: \`$site_sha256\`"
+            echo "- Preview branch: \`$preview_branch\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ${{ steps.provenance.outputs.artifact_name }}
+          path: ${{ runner.temp }}/toza-preview-artifact
+          if-no-files-found: error
+          retention-days: 1
+
+  deploy_preview:
+    needs: verify
+    # Fork PRs still receive the complete Verify result, but never get secrets.
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      actions: read
+      contents: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Download artifact from this successful Verify run
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: ${{ needs.verify.outputs.artifact_name }}
+          path: ${{ runner.temp }}/toza-verified-preview
+      - name: Verify artifact provenance and integrity
+        env:
+          ARTIFACT_DIR: ${{ runner.temp }}/toza-verified-preview
+          EXPECTED_ARTIFACT: ${{ needs.verify.outputs.artifact_name }}
+          EXPECTED_BRANCH: ${{ needs.verify.outputs.preview_branch }}
+          EXPECTED_BUILT_SHA: ${{ needs.verify.outputs.built_sha }}
+          EXPECTED_HEAD_SHA: ${{ needs.verify.outputs.source_head_sha }}
+          EXPECTED_BASE_SHA: ${{ needs.verify.outputs.source_base_sha }}
+          EXPECTED_SOURCE_BRANCH: ${{ needs.verify.outputs.source_branch }}
+          EXPECTED_EVENT: ${{ needs.verify.outputs.source_event }}
+          EXPECTED_SITE_SHA256: ${{ needs.verify.outputs.site_sha256 }}
+          EXPECTED_PRODUCER_ATTEMPT: ${{ needs.verify.outputs.run_attempt }}
+        run: |
+          set -euo pipefail
+          manifest="$ARTIFACT_DIR/provenance.json"
+          test -s "$manifest"
+          jq -e \
+            --arg repo "$GITHUB_REPOSITORY" \
+            --arg artifact "$EXPECTED_ARTIFACT" \
+            --arg branch "$EXPECTED_BRANCH" \
+            --arg built "$EXPECTED_BUILT_SHA" \
+            --arg head "$EXPECTED_HEAD_SHA" \
+            --arg base "$EXPECTED_BASE_SHA" \
+            --arg source_branch "$EXPECTED_SOURCE_BRANCH" \
+            --arg event "$EXPECTED_EVENT" \
+            --arg run "$GITHUB_RUN_ID" \
+            --arg run_attempt "$EXPECTED_PRODUCER_ATTEMPT" \
+            --arg sha "$EXPECTED_SITE_SHA256" \
+            '.repository == $repo and .artifact_name == $artifact and .preview_branch == $branch and .built_sha == $built and .source_head_sha == $head and .source_base_sha == $base and .source_branch == $source_branch and .event == $event and .run_id == $run and .run_attempt == $run_attempt and .site_sha256 == $sha' \
+            "$manifest" >/dev/null
+          actual_sha="$(sha256sum "$ARTIFACT_DIR/site.tar.gz" | cut -d ' ' -f 1)"
+          test "$actual_sha" = "$EXPECTED_SITE_SHA256"
+          mkdir -p "$ARTIFACT_DIR/public"
+          tar -xzf "$ARTIFACT_DIR/site.tar.gz" -C "$ARTIFACT_DIR/public"
+      - name: Require deployment secrets
+        id: secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "Cloudflare secrets are not configured; preview deployment was skipped after artifact verification."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            {
+              echo '### Preview deployment skipped'
+              echo
+              echo 'The verified artifact is available, but the Cloudflare deployment secrets are not configured.'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          ACC="$(printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | tr 'A-F' 'a-f')"
+          if ! [[ "$ACC" =~ ^[0-9a-f]{32}$ ]]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID must be a 32-character hexadecimal Cloudflare account ID."
+            exit 1
+          fi
+          if [[ "$CLOUDFLARE_API_TOKEN" =~ [[:space:]] ]]; then
+            echo "::error::CLOUDFLARE_API_TOKEN contains whitespace."
+            exit 1
+          fi
+          echo "account_id=$ACC" >> "$GITHUB_OUTPUT"
+      - name: Verify existing Pages preview project
+        if: steps.secrets.outputs.skip != 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ steps.secrets.outputs.account_id }}
+          CF_PROJECT_NAME: toza-v2
+        run: |
+          set -euo pipefail
+          API="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}"
+          curl -fsS "$API" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" >/dev/null
+      - name: Set up Node for pinned Wrangler
+        if: steps.secrets.outputs.skip != 'true'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+      - name: Deploy verified artifact to toza-v2 preview
+        if: steps.secrets.outputs.skip != 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ steps.secrets.outputs.account_id }}
+          CF_PROJECT_NAME: toza-v2
+          PREVIEW_BRANCH: ${{ needs.verify.outputs.preview_branch }}
+          BUILT_SHA: ${{ needs.verify.outputs.built_sha }}
+          VERIFIED_ARTIFACT: ${{ needs.verify.outputs.artifact_name }}
+          SOURCE_HEAD_SHA: ${{ needs.verify.outputs.source_head_sha }}
+          SOURCE_BASE_SHA: ${{ needs.verify.outputs.source_base_sha }}
+          SOURCE_BRANCH: ${{ needs.verify.outputs.source_branch }}
+          SOURCE_EVENT: ${{ needs.verify.outputs.source_event }}
+          SITE_SHA256: ${{ needs.verify.outputs.site_sha256 }}
+          PRODUCER_ATTEMPT: ${{ needs.verify.outputs.run_attempt }}
+          DEPLOY_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          set -euo pipefail
+          npx --yes --package=wrangler@4.150.0 -- wrangler pages deploy "$RUNNER_TEMP/toza-verified-preview/public" \
+            --project-name "$CF_PROJECT_NAME" --branch "$PREVIEW_BRANCH" --commit-hash "$BUILT_SHA"
+          {
+            echo '### Preview deployment provenance'
+            echo
+            echo "- Repository: \`$GITHUB_REPOSITORY\`"
+            echo "- Source branch/event: \`$SOURCE_BRANCH\` / \`$SOURCE_EVENT\`"
+            echo "- Built SHA: \`$BUILT_SHA\`"
+            echo "- PR/source head SHA: \`$SOURCE_HEAD_SHA\`"
+            echo "- PR base SHA: \`$SOURCE_BASE_SHA\`"
+            echo "- Verify run/producer attempt/artifact: \`$GITHUB_RUN_ID\` / \`$PRODUCER_ATTEMPT\` / \`$VERIFIED_ARTIFACT\`"
+            echo "- Deployment attempt: \`$DEPLOY_ATTEMPT\`"
+            echo "- Site SHA-256: \`$SITE_SHA256\`"
+            echo "- Preview project/branch: \`$CF_PROJECT_NAME\` / \`$PREVIEW_BRANCH\`"
+          } >> "$GITHUB_STEP_SUMMARY"
