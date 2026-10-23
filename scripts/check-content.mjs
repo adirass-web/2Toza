@@ -314,7 +314,7 @@ for (const file of builtPages) {
 }
 for (const [permalink, e] of pageCollections) {
   if (ONLY && !ONLY.includes(e.page.data.page)) continue;
-  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1) === permalink)) err(e.page.file, `no built page at ${permalink}`);
+  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/") === permalink)) err(e.page.file, `no built page at ${permalink}`);
 }
 
 // ---------- drift guard: i18n editorial strings must exist in _shared.yaml ----------

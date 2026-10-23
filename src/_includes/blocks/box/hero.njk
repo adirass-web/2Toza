@@ -1,18 +1,19 @@
 {#- Box layout, hero with a photograph (D92, D98): full-screen photo, text over a scrim, headline bottom-left, lead bottom-right. No contact buttons here: the sticky header carries them (owner, 21 Oct).
     Photo: assets/img/home (scripts/tools/make-home-images.py). Decorative, so alt is empty; the headline carries the meaning. -#}
-<section data-hero{% if block.id %} id="{{ block.id }}"{% endif %} class="relative isolate flex min-h-[calc(100svh-4.25rem-var(--spacing-bar))] items-end overflow-hidden bg-scrim text-on-photo md:min-h-[calc(100svh-4.25rem)]">
+<section data-hero{% if pg.page == "home" %} data-home-motion{% endif %}{% if block.id %} id="{{ block.id }}"{% endif %} class="relative isolate flex min-h-[calc(100svh-4.25rem-var(--spacing-bar))] items-end overflow-hidden bg-scrim text-on-photo md:min-h-[calc(100svh-4.25rem)]">
   <picture class="contents">
     <source media="(max-width: 767px)" type="image/avif" srcset="/assets/img/home/hero-phone-780.avif">
     <source media="(max-width: 767px)" srcset="/assets/img/home/hero-phone-780.jpg">
     <source type="image/avif" srcset="/assets/img/home/hero-1620.avif">
-    <img src="/assets/img/home/hero-1620.jpg" alt="" width="1620" height="1080" fetchpriority="high" class="absolute inset-0 -z-20 size-full object-cover object-[50%_35%]">
+    <img src="/assets/img/home/hero-1620.jpg" alt="" width="1620" height="1080" fetchpriority="high"{% if pg.page == "home" %} data-home-hero-photo{% endif %} class="absolute inset-0 -z-20 size-full object-cover object-[50%_35%]">
   </picture>
   <div class="absolute inset-0 -z-10 bg-linear-to-t from-scrim/70 via-scrim/50 via-30% to-transparent to-65%" aria-hidden="true"></div>
   <div class="grid w-full grid-cols-4 gap-x-cell gap-y-6 px-edge pb-8 md:grid-cols-12 lg:pb-14">
-    <h1 class="col-span-4 font-serif text-hero-sm leading-display font-normal tracking-display text-balance sm:text-hero-md md:col-span-8 lg:text-hero-lg">{{ block.heading }}</h1>
+    <h1{% if pg.page == "home" %} data-home-hero-title{% endif %} class="col-span-4 font-serif text-hero-sm leading-display font-normal tracking-display text-balance sm:text-hero-md md:col-span-8 lg:text-hero-lg">{{ block.heading }}{% if pg.page == "home" %}<span data-home-underline aria-hidden="true"></span>{% endif %}</h1>
     <div class="col-span-4 grid gap-5 md:col-span-4 md:col-start-9 md:self-end">
       {% if block.lead %}<p class="text-lg text-on-photo lg:text-xl">{{ block.lead }}</p>{% endif %}
       {% if block.promise %}<p class="font-sans text-sm leading-snug text-on-photo/80 lg:text-base">{{ block.promise }}</p>{% endif %}
     </div>
   </div>
+  {% if pg.page == "home" %}<div data-home-frame aria-hidden="true"></div>{% endif %}
 </section>

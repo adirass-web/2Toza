@@ -15,6 +15,7 @@
     "check:visual": "npm run build && node scripts/visual.mjs",
     "visual:approve": "npm run build && node scripts/visual.mjs --update",
     "check:a11y": "node scripts/check-a11y.mjs",
+    "check:home-motion": "node scripts/check-home-motion.mjs",
     "check:perf": "node scripts/check-perf.mjs",
     "check:anchors": "node scripts/check-anchors.mjs",
     "check:contrast": "node scripts/check-contrast.mjs"
@@ -39,5 +40,8 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "dependencies": {
+    "motion": "14.6.0"
   }
 }

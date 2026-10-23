@@ -5,7 +5,7 @@ import { readdirSync, readFileSync, statSync, existsSync } from "node:fs";
 import { join, posix } from "node:path";
 const dir = process.argv[2] || "_site";
 const files = (d) => readdirSync(d).flatMap((n) => { const p = join(d, n); return statSync(p).isDirectory() ? files(p) : p.endsWith(".html") ? [p] : []; });
-const route = (f) => "/" + f.slice(dir.length + 1).replace(/index\.html$/, "");
+const route = (f) => "/" + f.slice(dir.length + 1).replace(/\\/g, "/").replace(/index\.html$/, "");
 const html = new Map(files(dir).map((f) => [route(f), readFileSync(f, "utf8")]));
 const ids = new Map([...html].map(([r, h]) => [r, new Set([...h.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]))]));
 let bad = 0, n = 0;
