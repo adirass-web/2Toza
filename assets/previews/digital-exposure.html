@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>TOZA digital exposure SVG preview</title>
+<style>
+:root{color-scheme:light;--paper:#f5f1e8;--ink:#263631;--line:#c5c8bd}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.5 Arial,Helvetica,sans-serif}main{max-width:1420px;margin:auto;padding:32px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase}h1{font:38px/1.15 Georgia,serif;margin:8px 0 14px}.controls{display:flex;gap:8px;flex-wrap:wrap}button{font:inherit;background:transparent;color:inherit;border:1px solid #929b8d;border-radius:3px;padding:8px 14px;cursor:pointer}button[aria-pressed=true]{color:var(--paper);background:var(--ink)}button:focus-visible,a:focus-visible{outline:3px solid #263631;outline-offset:4px}.viewport{overflow:auto;overscroll-behavior-inline:contain}object{display:block;width:100%;aspect-ratio:1600/1160;border:0}#detail{min-height:3em;max-width:760px;margin:8px 0 0}.foot{font-size:13px;color:#657066}.zoom-hint{display:none}a{color:inherit}@media(max-width:640px){main{padding:20px 14px}h1{font-size:29px}button{padding:8px 11px}.viewport{margin:0 -14px}.viewport object{min-width:800px}.zoom-hint{display:block}.controls{gap:6px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+<main>
+<header><div><div class="eyebrow">TOZA · Illustration preview</div><h1>How digital traces connect</h1></div><button id="replay" type="button" disabled>Replay sequence</button></header>
+<nav class="controls" aria-label="Explore connections">
+<button type="button" data-question="all" aria-pressed="true">All connections</button>
+<button type="button" data-question="who" aria-pressed="false">Who</button>
+<button type="button" data-question="what" aria-pressed="false">What</button>
+<button type="button" data-question="where" aria-pressed="false">Where</button>
+<button type="button" data-question="when" aria-pressed="false">When</button>
+<button type="button" data-question="why" aria-pressed="false">Why?</button>
+</nav>
+<p id="detail" aria-live="polite">Separate traces can combine to reveal relationships, activity, places, timing, or possible intentions.</p>
+<p class="foot zoom-hint">Swipe across the illustration to inspect the labels. Use the buttons above to explore a connection.</p>
+<div class="viewport" tabindex="0" role="region" aria-label="Digital exposure diagram"><object id="diagram" type="image/svg+xml" data="../img/toza-digital-exposure-five-ws.svg" aria-label="Phone, information layers and five questions"><a href="../img/toza-digital-exposure-five-ws.svg">Open the static SVG diagram</a></object></div>
+<p class="foot">Illustrative connections, not proof of particular circumstances. Dashed paths to “Why?” indicate possible inferences. <a href="../img/toza-digital-exposure-five-ws.svg">Open static SVG</a></p>
+</main>
+<script>
+(()=>{'use strict';
+const object=document.querySelector('#diagram'),replay=document.querySelector('#replay'),buttons=[...document.querySelectorAll('[data-question]')],detail=document.querySelector('#detail');
+const motion=matchMedia('(prefers-reduced-motion: reduce)');let root,animations=[],observer,ready=false;
+const descriptions={all:'Separate traces can combine to reveal relationships, activity, places, timing, or possible intentions.',who:'Relationships, photographs and identity details may connect people and profiles.',what:'Messages, documents and payments can reveal activities or preparations.',where:'Location records, photographs and Bluetooth connections may provide clues about places. A pairing alone does not establish a visit.',when:'Calendar entries and message timing can suggest routines or the sequence of events.',why:'Browsing, appointments and payments may suggest intentions. These are inferences, not established facts.'};
+function stop(){animations.forEach(a=>a.cancel());animations=[];}
+function select(question){if(!root)return;stop();const active=new Set();root.querySelectorAll('.route').forEach(p=>{const match=question==='all'||p.dataset.question===question;p.classList.toggle('is-active',question!=='all'&&match);p.classList.toggle('is-dim',!match);if(match)active.add(p.dataset.source)});root.querySelectorAll('.category').forEach(g=>{g.classList.toggle('is-dim',question!=='all'&&!active.has(g.dataset.category));g.classList.toggle('is-selected',question!=='all'&&active.has(g.dataset.category))});root.querySelectorAll('.question').forEach(g=>g.classList.toggle('is-dim',question!=='all'&&g.dataset.question!==question));buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.question===question)));detail.textContent=descriptions[question];}
+function play(){if(!ready)return;select('all');if(motion.matches)return;const layers=[...root.querySelectorAll('.layer-motion')];layers.forEach((g,i)=>{animations.push(g.animate([{transform:`translateY(${g.dataset.collapse}px)`,opacity:0},{transform:'translateY(0px)',opacity:1}],{duration:1400,delay:i*140,easing:'cubic-bezier(.22,.7,.2,1)',fill:'backwards'}))});root.querySelectorAll('.route').forEach((p,i)=>{const length=p.getTotalLength();animations.push(p.animate([{strokeDasharray:`${length} ${length}`,strokeDashoffset:length,opacity:0},{strokeDasharray:`${length} ${length}`,strokeDashoffset:0,opacity:.65}],{duration:1100,delay:1900+i*45,easing:'ease-out',fill:'backwards'}))});animations.push(root.querySelector('#questions').animate([{opacity:0},{opacity:1}],{duration:700,delay:2250,fill:'backwards'}));}
+buttons.forEach(b=>b.addEventListener('click',()=>select(b.dataset.question)));replay.addEventListener('click',play);motion.addEventListener('change',()=>{if(motion.matches)select('all')});
+function init(){if(ready)return;const doc=object.contentDocument;if(!doc?.documentElement||doc.documentElement.localName!=='svg')return;root=doc.documentElement;ready=true;replay.disabled=false;observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){play();observer.disconnect()}},{threshold:.2});observer.observe(object)}
+object.addEventListener('load',init);init();
+})();
+</script>
+</html>
