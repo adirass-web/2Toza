@@ -34,3 +34,107 @@
 
 /* Toza layer on top of Flowbite: the few rules the library cannot express (see custom.css). */
 @import "./custom.css";
+
+/* Home-only motion enhancement; without its successful JS setup the P3 layout stays visible. */
+:root { --home-header-height: 4.25rem; }
+html.home-motion-ready [data-home-frame] {
+  position: absolute;
+  z-index: 1;
+  inset-block: 1rem;
+  inset-inline: 1rem;
+  border: 1px solid var(--color-paper);
+  clip-path: inset(0 100% 0 0);
+  pointer-events: none;
+}
+html.home-motion-ready [data-home-hero-title] { position: relative; padding-block-end: 0.12em; }
+html.home-motion-ready [data-home-underline] {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  inline-size: min(65%, 32rem);
+  block-size: 2px;
+  background: var(--color-mint);
+  clip-path: inset(0 100% 0 0);
+  pointer-events: none;
+}
+html.home-motion-ready [data-situation-stage] {
+  position: sticky;
+  z-index: 0;
+  inset-block-start: var(--home-header-height);
+  inline-size: calc(100% + 2 * var(--spacing-edge));
+  margin-inline: calc(-1 * var(--spacing-edge));
+  block-size: calc(100svh - var(--home-header-height));
+  margin-block-end: calc(-100svh + var(--home-header-height));
+  overflow: hidden;
+  clip-path: inset(0 75% 0 0);
+  pointer-events: none;
+}
+html.home-motion-ready [data-situation-stage] img {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+  inline-size: auto;
+  block-size: 100%;
+  max-inline-size: none;
+  object-fit: cover;
+  transform-origin: center center;
+  opacity: 0;
+  transform: scale(1.01);
+  transition: opacity 180ms linear;
+}
+html.home-motion-ready [data-situation-stage] img:first-child { opacity: 1; }
+html.home-motion-ready [data-situation-list] {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0;
+}
+html.home-motion-ready [data-situation-card] {
+  display: flex;
+  min-block-size: 100svh;
+  grid-column: 1 / -1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-block-end: 2rem;
+}
+html.home-motion-ready [data-situation-list] > li:not([data-situation-card]) { grid-column: 1 / -1; min-block-size: 0; }
+html.home-motion-ready [data-situation-card] a {
+  inline-size: 50%;
+  padding: 1.5rem;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+html.home-motion-ready [data-situation-source] { display: none; }
+html.home-motion-ready [data-home-method] [data-home-word] {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+}
+html.home-motion-ready [data-home-tier] { opacity: 0; transform: translateY(12px); }
+html.home-motion-ready [data-home-dots] {
+  position: relative;
+  overflow: hidden;
+  background-image: none;
+}
+html.home-motion-ready [data-home-dot-layer] {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--color-node) 1.3px, transparent 1.8px);
+  background-size: 14px 14px;
+  background-position: 7px 7px;
+  will-change: transform;
+}
+@media (min-width: 48rem) {
+  html.home-motion-ready [data-home-frame] { inset-block: 1.25rem; inset-inline: 1.25rem; }
+}
+@media print, (prefers-reduced-motion: reduce) {
+  html.home-motion-ready [data-home-method] [data-home-word], html.home-motion-ready [data-home-tier] { opacity: 1; transform: none; }
+}
+@media print {
+  html.home-motion-ready [data-situation-stage] { display: none; }
+  html.home-motion-ready [data-situation-list] { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 2.5rem; }
+  html.home-motion-ready [data-situation-card] { display: block; min-block-size: 0; padding-block-end: 0; }
+  html.home-motion-ready [data-situation-card] a { inline-size: auto; padding: 0; background: transparent; }
+  html.home-motion-ready [data-situation-source] { display: block; }
+}

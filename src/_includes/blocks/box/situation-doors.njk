@@ -1,13 +1,14 @@
 {#- Box layout, situations: four photo boxes (25% each at md and up, plain stack on phones), title and line under each, the closing line on a mint box.
     Static layout; the pinned growing-image scene is added by the motion chunk. Photos follow the door order (decorative, alt empty). -#}
 {% from "blocks/_macros.njk" import h2 with context %}
-<section{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-12 lg:py-20">
+<section{% if block.id == "situations" %} data-situation-scene{% endif %}{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-12 lg:py-20">
   <div class="px-edge">
     {{ h2(block.heading, 'mb-8 text-heading lg:mb-12') }}
-    <ul class="grid grid-cols-1 gap-x-cell gap-y-10 md:grid-cols-4">
+    {% if block.id == "situations" %}<div data-situation-stage hidden aria-hidden="true" class="situation-stage">{% for i in [1, 2, 3, 4] %}<img data-situation-hold="{{ i }}" src="/assets/img/home/sit-{{ i }}-900.jpg" alt="" width="900" height="1500" loading="lazy">{% endfor %}</div>{% endif %}
+    <ul{% if block.id == "situations" %} data-situation-list{% endif %} class="grid grid-cols-1 gap-x-cell gap-y-10 md:grid-cols-4">
       {% for door in block.items %}
-      <li><a href="{{ door.href }}" class="group block">
-        <div class="aspect-3/5 overflow-hidden bg-sand">
+      <li{% if block.id == "situations" %} data-situation-card{% endif %}><a href="{{ door.href }}" class="group block">
+        <div{% if block.id == "situations" %} data-situation-source{% endif %} class="aspect-3/5 overflow-hidden bg-sand">
           <picture>
             <source type="image/avif" srcset="/assets/img/home/sit-{{ loop.index }}-600.avif 600w, /assets/img/home/sit-{{ loop.index }}-900.avif 900w" sizes="(min-width: 768px) 25vw, 100vw">
             <img src="/assets/img/home/sit-{{ loop.index }}-600.jpg" srcset="/assets/img/home/sit-{{ loop.index }}-600.jpg 600w, /assets/img/home/sit-{{ loop.index }}-900.jpg 900w" sizes="(min-width: 768px) 25vw, 100vw" alt="" width="900" height="1500" loading="lazy" class="size-full object-cover">

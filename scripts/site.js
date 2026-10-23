@@ -4,8 +4,10 @@
 // toggle. Everything works without it except the mobile menu, the print button and the toggle, which
 // stay hidden or inert.
 import { initCollapses } from "flowbite/lib/esm/components/collapse/index.js";
+import { initHomeMotion } from "./home-motion.js";
 
 initCollapses();
+initHomeMotion();
 
 document.querySelectorAll("[data-print]").forEach((b) => b.addEventListener("click", () => window.print()));
 

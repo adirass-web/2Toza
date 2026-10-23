@@ -2,6 +2,8 @@
 
 Updated 23 October 2026. This page records the active project state and where each claim comes from. It does not amend the approved design or copy.
 
+**P4 execution checkpoint:** the owner approved six delivery-review changes and authorized continued Home motion implementation with Sol coordinating scoped Luna experts. P4 is active on `build/g-p4-home-motion`, based on accepted `build/g` commit `a0021ab`. See [the execution contract](build-g/P4-MOTION-PLAN.md). One tested noindex preview will be presented for owner visual approval before merge. Browser/manual gaps remain outstanding until completed or explicitly waived; no production change is included. Earlier dated cloud observations below are historical context.
+
 **Windows client checkpoint:** Cloudflare skills and OAuth are installed/authenticated; read-only queries confirmed `toza-v2` and `toza-site`. Additive PR/`verify` ruleset `25749095` is active for `build/g` and `main`, preserving ruleset `25623993`. The known Windows project checkouts were inventoried; 34 changed/untracked historical files and 10 shared local-only commits were preserved outside the original repositories, with no historical work imported. See [the client checkpoint](build-g/CLIENT-PREREQUISITES.md#windows-client-checkpoint--23-october-2026) for evidence limits and the remaining release requirements. Earlier cloud-runtime observations below remain applicable only to that runtime.
 
 ## Active project and delivery state

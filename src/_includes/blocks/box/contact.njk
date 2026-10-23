@@ -15,6 +15,6 @@
         <img src="/assets/img/home/hand-600.jpg" srcset="/assets/img/home/hand-600.jpg 600w, /assets/img/home/hand-900.jpg 900w" sizes="(min-width: 768px) 25vw, 100vw" alt="" width="900" height="893" loading="lazy" class="size-full object-cover">
       </picture>
     </div>
-    <div class="dot-field min-h-56" aria-hidden="true"></div>
+    <div{% if pg.page == "home" %} data-home-dots{% endif %} class="dot-field min-h-56" aria-hidden="true">{% if pg.page == "home" %}<span data-home-dot-layer></span>{% endif %}</div>
   </div>
 </section>

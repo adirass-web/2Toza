@@ -211,14 +211,43 @@ async function runEngine(name, engineType) {
     const beforeToggle = await reduced.locator("[data-situation-card], [data-situation-hold], [data-situation-stage]").count();
     await reduced.emulateMedia({ reducedMotion: "reduce" });
     await reduced.waitForFunction(() => !document.documentElement.classList.contains("home-motion-ready"), { timeout: 8000 });
+    check(await reduced.locator("[data-situation-stage]").evaluate(el => getComputedStyle(el).display === "none"), "Live reduced motion must hide the decorative stage");
+    await pause(100);
+    const driftCleanup = await reduced.locator("[data-home-hero-photo]").evaluate(el => ({ transform: getComputedStyle(el).transform, inline: el.getAttribute("style"), animations: el.getAnimations().map(a => ({ state: a.playState, time: a.currentTime })) }));
+    check(driftCleanup.transform === "none", "Live reduced motion must remove hero drift", driftCleanup);
     await reduced.emulateMedia({ reducedMotion: "no-preference" });
     await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
     await pause(250);
     const afterToggle = await reduced.locator("[data-situation-card], [data-situation-hold], [data-situation-stage]").count();
     check(beforeToggle === afterToggle, "Live reduced-motion toggling duplicated or removed DOM nodes", { beforeToggle, afterToggle });
+    await reduced.evaluate(() => dispatchEvent(new Event("beforeprint")));
+    check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "Print must tear down the motion runway");
+    check(await reduced.locator("[data-situation-source]").first().isVisible(), "Print must restore original situation photos");
+    await reduced.evaluate(() => dispatchEvent(new Event("afterprint")));
+    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"));
+    await reduced.evaluate(() => dispatchEvent(new PageTransitionEvent("pagehide", { persisted: true })));
+    check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "History navigation must dispose motion");
+    await reduced.evaluate(() => dispatchEvent(new PageTransitionEvent("pageshow", { persisted: true })));
+    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"));
+    check(await reduced.locator("[data-situation-stage]").count() === 1, "History restoration must not duplicate the stage");
     check(!reducedErrors.length, "Reduced-motion lifecycle emitted browser errors", reducedErrors);
     await reducedCtx.close();
     state.cases.push({ kind: "reduced-motion", status: "passed", nodeCount: beforeToggle });
+    state.cases.push({ kind: "print-and-history-lifecycle", status: "passed" });
+
+    const unsupportedCtx = await context(1440, "light");
+    await unsupportedCtx.addInitScript(() => { window.IntersectionObserver = undefined; });
+    const unsupported = await unsupportedCtx.newPage();
+    const unsupportedErrors = [];
+    observe(unsupported, unsupportedErrors);
+    await unsupported.goto(`${server.base}/en/`, { waitUntil: "load" });
+    await pause(250);
+    check(!(await unsupported.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "Missing animation APIs must restore static Home");
+    check(await unsupported.locator("[data-situation-source]").first().isVisible(), "Initialization failure must preserve original photos");
+    check((await readHome(unsupported)).mainText === fallbackContent.mainText, "Initialization failure must preserve all content");
+    check(!unsupportedErrors.length, "Initialization failure must remain contained", unsupportedErrors);
+    await unsupportedCtx.close();
+    state.cases.push({ kind: "initialization-failure-fallback", status: "passed" });
 
     // Non-baseline full-page screenshots: every required viewport and theme.
     for (const theme of ["light", "dark"]) for (const width of WIDTHS) {

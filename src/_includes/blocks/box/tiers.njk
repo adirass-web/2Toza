@@ -19,7 +19,7 @@
     </div>
     {% endif %}
     {% for tier in block.tiers %}
-    <div class="flex flex-col gap-4 p-6 text-heading md:row-start-2 lg:p-8 {{ ['md:col-start-2', 'md:col-start-3', 'md:col-start-4'][loop.index0] }} {{ 'bg-sand' if loop.index == 2 else 'bg-paper-deep' }}">
+    <div{% if pg.page == "home" %} data-home-tier{% endif %} class="flex flex-col gap-4 p-6 text-heading md:row-start-2 lg:p-8 {{ ['md:col-start-2', 'md:col-start-3', 'md:col-start-4'][loop.index0] }} {{ 'bg-sand' if loop.index == 2 else 'bg-paper-deep' }}">
       <h3 class="font-serif text-2xl leading-tight md:min-h-[2.5em] lg:text-3xl">{{ tier.name }}</h3>
       <p>{{ price(tier, 'text-5xl lg:text-6xl') }}</p>
       <p class="text-lg text-body">{{ tier.for }}</p>

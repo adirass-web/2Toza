@@ -2,11 +2,11 @@
 
 Coordinator: primary agent; planning and review: GPT-6.1 Sol; at most two GPT-6 Luna writers.
 
-All entries are on the current cloud host. These paths do not imply availability in another chat or on Windows. Task branches start from the recorded accepted integration commit; the coordinator owns shared Git maintenance. Workers may commit only in their owned worktree.
+The cloud paths below are historical reservations, not claims of availability on another host. P4 is now active in an isolated coordinator-host checkout outside a synced directory, based on accepted integration commit `a0021abada45f21c67d49b8d4f777ee3b8443425`. Other reservations remain historical until activation. The coordinator owns shared Git maintenance, staging and publication; scoped workers edit only their assigned files.
 
 | Task / issue | Branch | Worktree | Port | Writer / state | Base | PR |
 |---|---|---|---|---|---|---|
-| [P4 Home motion](https://github.com/adirass-web/2Toza/issues/7) | `build/g-p4-home-motion` | `/workspace/toza-worktrees/p04-motion` | 4104 | Luna implementation worker, reserved | `3dd5abb` | pending |
+| [P4 Home motion](https://github.com/adirass-web/2Toza/issues/7) | `build/g-p4-home-motion` | isolated coordinator-host checkout | 4104 | Sol coordinates; scoped Luna implementation/QA; owner preview approval pending | `a0021ab` | pending |
 | [P5 Situation pages](https://github.com/adirass-web/2Toza/issues/8) | `build/g-p5-situations` | `/workspace/toza-worktrees/p05-situations` | 4105 | Luna page worker, reserved | `3dd5abb` | pending |
 | [P6 How it works](https://github.com/adirass-web/2Toza/issues/9) | `build/g-p6-how-it-works` | `/workspace/toza-worktrees/p06-how-it-works` | 4106 | Unassigned, reserved | `3dd5abb` | pending |
 | [P7 Pricing](https://github.com/adirass-web/2Toza/issues/10) | `build/g-p7-pricing` | `/workspace/toza-worktrees/p07-pricing` | 4107 | Unassigned, reserved | `3dd5abb` | pending |

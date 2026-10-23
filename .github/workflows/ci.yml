@@ -54,6 +54,10 @@ jobs:
       - run: node --test scripts/check-content.test.mjs
       - run: npx playwright install --with-deps chromium
       - run: npm run check:a11y
+      - name: Check Home motion behavior
+        run: npm run check:home-motion
+        env:
+          HOME_MOTION_ARTIFACT_DIR: ${{ runner.temp }}/toza-home-motion
       - run: npm run check:perf
       # Anchors: every id that a page on main links to must still exist (deep links keep working).
       - if: github.ref != 'refs/heads/main'
@@ -139,6 +143,17 @@ jobs:
           path: ${{ runner.temp }}/toza-preview-artifact
           if-no-files-found: error
           retention-days: 1
+
+      - name: Retain Home motion evidence and candidate provenance
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: toza-home-motion-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/toza-home-motion
+            ${{ runner.temp }}/toza-preview-artifact/provenance.json
+          if-no-files-found: warn
+          retention-days: 7
 
   deploy_preview:
     needs: verify
