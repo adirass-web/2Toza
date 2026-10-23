@@ -35,6 +35,11 @@
 /* Toza layer on top of Flowbite: the few rules the library cannot express (see custom.css). */
 @import "./custom.css";
 
+/* Keep contact-logo focus rings visible against the ink panel in both themes. */
+[data-contact] [data-tone="dark"] a[data-track$="-logo"]:focus-visible {
+  outline-color: var(--color-on-photo);
+}
+
 /* Home-only motion enhancement; without its successful JS setup the P3 layout stays visible. */
 :root { --home-header-height: 4.25rem; }
 html.home-motion-ready [data-home-frame] {
@@ -110,6 +115,34 @@ html.home-motion-ready [data-home-method] [data-home-word] {
   display: inline-block;
   opacity: 0;
   transform: translateY(8px);
+}
+@media (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
+  html.home-motion-ready [data-home-method-scrim] {
+    position: relative;
+    isolation: isolate;
+  }
+  html.home-motion-ready [data-home-method-scrim]::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -1.5rem;
+    background: color-mix(in srgb, var(--color-scrim) 84%, transparent);
+    mask-image:
+      linear-gradient(to right, transparent, var(--color-scrim) 1.5rem calc(100% - 1.5rem), transparent),
+      linear-gradient(to bottom, transparent, var(--color-scrim) 1.5rem calc(100% - 1.5rem), transparent);
+    mask-composite: intersect;
+    pointer-events: none;
+  }
+  html.home-motion-ready [data-home-method-scrim] > p,
+  html.home-motion-ready [data-home-method-scrim] > ul a {
+    color: var(--color-on-photo);
+  }
+  html.home-motion-ready [data-home-method-scrim] > ul a {
+    text-decoration-color: var(--color-on-photo);
+  }
+  html.home-motion-ready [data-home-method-scrim] > ul a:focus-visible {
+    outline-color: var(--color-on-photo);
+  }
 }
 html.home-motion-ready [data-home-tier] { opacity: 0; transform: translateY(12px); }
 html.home-motion-ready [data-home-dots] {

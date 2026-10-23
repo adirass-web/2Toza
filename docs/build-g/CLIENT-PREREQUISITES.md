@@ -26,7 +26,7 @@ Owner-authorized GitHub CLI access applied additive ruleset **25749095**, named 
 
 Existing active ruleset **25623993** was read before the change and retained: default-branch deletion and non-fast-forward protection, linear history, and CodeQL high/error checks. `build/g` now reports `protected: true`. The earlier integration-only denial below remains historical evidence, not the current settings state.
 
-The production environments query still returns an empty list. A protected production environment, production credential binding, WebKit/manual screen-reader acceptance and owner-run release remain outstanding release prerequisites.
+The last production-environments query returned an empty list; recheck at P10. A protected production environment, production credential binding and owner-run release remain prerequisites. P4 Home WebKit checks passed for candidate `c39767b` in run `40019640686`; this does not close sitewide WebKit or manual screen-reader acceptance. Firefox is owner-deferred for P4 only.
 
 ## Original cloud-runtime findings (historical context)
 

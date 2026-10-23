@@ -1,4 +1,4 @@
-{#- Box layout, close: ink panel (50%) with the heading and the two logo buttons on mint, the hand photograph (25%), a dotted grey box (25%, static dots). -#}
+{#- Box layout, close: ink panel (50%) with the heading and plain channel logos, the hand photograph (25%), a dotted grey box (25%, static dots). -#}
 {% from "logos.njk" import logoBtn %}
 {% from "blocks/_macros.njk" import lnk with context %}
 <section data-contact{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 pb-cell print:hidden">
@@ -6,7 +6,7 @@
     <div data-tone="dark" class="flex min-h-96 flex-col justify-end gap-5 bg-scrim p-6 text-on-photo md:col-span-2 lg:min-h-[34rem] lg:p-10">
       <h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance">{{ block.heading }}</h2>
       {% if block.body %}<p class="max-w-md text-lg">{{ block.body }}</p>{% endif %}
-      <div class="flex gap-3 self-start bg-mint p-3">{% for a in block.actions %}{{ logoBtn(a.key, a.label, a.href, "", "mint") }}{% endfor %}</div>
+      <div class="flex gap-3 self-start">{% for a in block.actions %}{{ logoBtn(a.key, a.label, a.href, "", "mint") }}{% endfor %}</div>
       {% if block.note %}<p>{{ lnk(block.note, "dark") }}</p>{% endif %}
     </div>
     <div class="min-h-56 overflow-hidden bg-sand">

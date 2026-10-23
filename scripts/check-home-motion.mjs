@@ -39,6 +39,169 @@ async function readHome(page) {
   });
 }
 
+async function inspectMethodScrim(page) {
+  return page.evaluate(() => {
+    const method = document.querySelector("[data-home-method]");
+    const scrim = document.querySelector("[data-home-method-scrim]");
+    const stage = document.querySelector("[data-situation-stage]");
+    const rect = (el) => {
+      const r = el?.getBoundingClientRect();
+      return r ? { top: r.top, right: r.right, bottom: r.bottom, left: r.left, width: r.width, height: r.height } : null;
+    };
+    const textRects = (el) => {
+      if (!el) return [];
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      return [...range.getClientRects()].map((r) => ({ top: r.top, right: r.right, bottom: r.bottom, left: r.left, width: r.width, height: r.height }));
+    };
+    const intersection = (a, b) => {
+      if (!a || !b) return { width: 0, height: 0, area: 0 };
+      const width = Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left));
+      const height = Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+      return { width, height, area: width * height };
+    };
+    const parseColors = (value) => {
+      const out = [];
+      for (const match of (value || "").matchAll(/rgba?\(([^)]+)\)/gi)) {
+        const parts = match[1].replace(/\s*\/\s*/, " ").split(/[\s,]+/).filter(Boolean);
+        if (parts.length < 3) continue;
+        const channels = parts.slice(0, 3).map((part) => Number.parseFloat(part));
+        const alpha = parts.length >= 4 ? Number.parseFloat(parts[3]) : 1;
+        if (channels.every(Number.isFinite) && Number.isFinite(alpha)) out.push({ channels, alpha: Math.min(1, Math.max(0, alpha)) });
+      }
+      for (const match of (value || "").matchAll(/color\(\s*srgb\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)(?:\s*\/\s*([\d.]+))?\s*\)/gi)) {
+        const channels = match.slice(1, 4).map((part) => Number.parseFloat(part) * 255);
+        const alpha = match[4] === undefined ? 1 : Number.parseFloat(match[4]);
+        if (channels.every(Number.isFinite) && Number.isFinite(alpha)) out.push({ channels, alpha: Math.min(1, Math.max(0, alpha)) });
+      }
+      return out;
+    };
+    const luminance = (rgb) => rgb.map((channel) => {
+      const s = Math.max(0, Math.min(255, channel)) / 255;
+      return s <= 0.04045 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+    }).reduce((sum, channel, i) => sum + channel * [0.2126, 0.7152, 0.0722][i], 0);
+    const contrast = (a, b) => (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+    const foreground = (el) => {
+      const c = parseColors(getComputedStyle(el).color)[0];
+      return c ? { rgb: c.channels, luminance: luminance(c.channels) } : null;
+    };
+    const methodStyle = method ? getComputedStyle(method) : null;
+    const link = method?.closest("section")?.querySelector('a[href="/en/about/"]');
+    const pseudo = scrim ? ["::before", "::after"].map((name) => {
+      const style = getComputedStyle(scrim, name);
+      const colors = [...parseColors(style.backgroundColor), ...parseColors(style.backgroundImage)];
+      const layers = colors.map((c) => {
+        const alpha = c.alpha * Number.parseFloat(style.opacity || "1");
+        const overWhite = c.channels.map((channel) => channel * alpha + 255 * (1 - alpha));
+        return { source: c, alpha, overWhite, luminanceOnWhite: luminance(overWhite) };
+      });
+      return { name, content: style.content, opacity: style.opacity, backgroundColor: style.backgroundColor, backgroundImage: style.backgroundImage, maskImage: style.maskImage, maskComposite: style.maskComposite, inset: style.inset, layers };
+    }) : [];
+    const allLayers = pseudo.flatMap((x) => x.layers);
+    const darkest = allLayers.filter((x) => x.alpha > 0.5).sort((a, b) => a.luminanceOnWhite - b.luminanceOnWhite)[0] || null;
+    const stageStyle = stage ? getComputedStyle(stage) : null;
+    const sceneHolds = [...(stage?.querySelectorAll("img[data-situation-hold]") || [])];
+    const sceneOpacity = sceneHolds.map((img) => Number.parseFloat(getComputedStyle(img).opacity || "0"));
+    const words = [...(method?.querySelectorAll("[data-home-word]") || [])];
+    const wordOpacities = words.map((word) => Number.parseFloat(getComputedStyle(word).opacity || "0"));
+    const methodFg = method ? foreground(method) : null;
+    const linkFg = link ? foreground(link) : null;
+    return {
+      hasMethod: !!method,
+      hasScrimHook: !!scrim,
+      methodText: (method?.innerText || "").replace(/\s+/g, " ").trim(),
+      methodRect: rect(method),
+      scrimRect: rect(scrim),
+      linkRect: rect(link),
+      methodGlyphRects: textRects(method),
+      linkGlyphRects: textRects(link),
+      stageRect: rect(stage),
+      intersection: intersection(rect(method), rect(stage)),
+      stageOpacity: stageStyle ? Number.parseFloat(stageStyle.opacity || "1") : 0,
+      stageDisplay: stageStyle?.display || null,
+      visibleHoldIndex: sceneOpacity.indexOf(Math.max(0, ...sceneOpacity)) + 1,
+      visibleHoldOpacity: Math.max(0, ...sceneOpacity),
+      stageImageLoaded: sceneHolds.some((img) => img.complete && img.naturalWidth > 0),
+      methodWordCount: words.length,
+      minimumMethodWordOpacity: wordOpacities.length ? Math.min(...wordOpacities) : null,
+      foreground: methodStyle?.color || null,
+      linkForeground: link ? getComputedStyle(link).color : null,
+      methodForegroundIsWhite: !!methodFg && methodFg.rgb.every((c) => c >= 250),
+      linkForegroundIsWhite: !!linkFg && linkFg.rgb.every((c) => c >= 250),
+      coreScrimSample: darkest,
+      textContrastAgainstWorstCaseWhitePhoto: methodFg && darkest ? contrast(methodFg.luminance, darkest.luminanceOnWhite) : null,
+      linkContrastAgainstWorstCaseWhitePhoto: linkFg && darkest ? contrast(linkFg.luminance, darkest.luminanceOnWhite) : null,
+      pseudo,
+    };
+  });
+}
+
+async function inspectStaticMethod(page) {
+  return page.evaluate(() => {
+    const el = document.querySelector("[data-home-method]");
+    const scrim = document.querySelector("[data-home-method-scrim]");
+    const style = el ? getComputedStyle(el) : null;
+    const pseudos = scrim ? ["::before", "::after"].map((name) => {
+      const pseudo = getComputedStyle(scrim, name);
+      return { content: pseudo.content, backgroundColor: pseudo.backgroundColor, backgroundImage: pseudo.backgroundImage, opacity: pseudo.opacity };
+    }) : [];
+    return { exists: !!el, color: style?.color || null, pseudos };
+  });
+}
+
+async function waitForFonts(page) {
+  await page.waitForFunction(() => document.fonts.status === "loaded", { timeout: 8000 });
+}
+
+function assertStaticMethod(state, label) {
+  check(state.exists, `${label}: authored method statement missing`);
+  const channels = state.color?.match(/rgba?\(([^)]+)\)/i)?.[1]?.replace(/\s*\/\s*/, " ").split(/[\s,]+/).filter(Boolean).slice(0, 3).map(Number) || [];
+  check(channels.length === 3 && channels.some((channel) => channel < 245), `${label}: static method text must keep its original dark foreground`, state);
+  const painted = state.pseudos.some((p) => p.content !== "none" && p.content !== "normal" && p.opacity !== "0" && (p.backgroundImage !== "none" || !/rgba?\([^)]*,\s*0\s*\)/i.test(p.backgroundColor)));
+  check(!painted, `${label}: static method must not paint a scrim`, state);
+}
+
+async function inspectLogoSet(page) {
+  return page.evaluate(() => [...document.querySelectorAll('[data-track$="-logo"]')].map((el) => {
+    const style = getComputedStyle(el), r = el.getBoundingClientRect();
+    const parentColor = (node) => node ? getComputedStyle(node).backgroundColor : null;
+    const contact = el.closest("[data-contact]");
+    const actionRow = contact ? el.closest(".flex") : null;
+    const region = el.closest("header") ? "header" : contact ? "contact" : el.closest("nav.fixed") ? "closing-bar" : "other";
+    const bgNode = region === "header" ? el.closest("header") : region === "closing-bar" ? el.closest("nav.fixed") : contact?.querySelector('[data-tone="dark"]');
+    const rgb = (value) => {
+      const body = value?.match(/rgba?\(([^)]+)\)/i)?.[1];
+      if (!body) return null;
+      const parts = body.replace(/\s*\/\s*/, " ").split(/[\s,]+/).filter(Boolean).map(Number);
+      return parts.length >= 3 ? { channels: parts.slice(0, 3), alpha: parts.length >= 4 ? parts[3] : 1 } : null;
+    };
+    const luminance = (channels) => channels.map((channel) => {
+      const c = channel / 255;
+      return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+    }).reduce((sum, c, i) => sum + c * [0.2126, 0.7152, 0.0722][i], 0);
+    const fg = rgb(style.color), bg = rgb(parentColor(bgNode));
+    const fgL = fg && luminance(fg.channels), bgL = bg && luminance(bg.channels);
+    return {
+      track: el.getAttribute("data-track"),
+      href: el.getAttribute("href"),
+      ariaLabel: el.getAttribute("aria-label"),
+      title: el.getAttribute("title"),
+      target: el.getAttribute("target"),
+      rel: el.getAttribute("rel"),
+      region,
+      visible: style.display !== "none" && style.visibility !== "hidden" && Number.parseFloat(style.opacity || "1") > 0 && r.width > 0 && r.height > 0,
+      width: r.width,
+      height: r.height,
+      backgroundColor: style.backgroundColor,
+      backgroundAlpha: rgb(style.backgroundColor)?.alpha ?? null,
+      borderWidths: [style.borderTopWidth, style.borderRightWidth, style.borderBottomWidth, style.borderLeftWidth].map((x) => Number.parseFloat(x)),
+      actionRowBackground: parentColor(actionRow),
+      actionRowBackgroundAlpha: rgb(parentColor(actionRow))?.alpha ?? null,
+      foregroundContrastInContext: fgL !== null && bgL !== null ? (Math.max(fgL, bgL) + 0.05) / (Math.min(fgL, bgL) + 0.05) : null,
+    };
+  }));
+}
+
 async function runEngine(name, engineType) {
   let browser;
   try { browser = await engineType.launch(); }
@@ -55,6 +218,8 @@ async function runEngine(name, engineType) {
   };
   const context = async (width, theme, reducedMotion = "no-preference", javaScriptEnabled = true) => {
     const ctx = await browser.newContext({ viewport: { width, height: HEIGHT }, deviceScaleFactor: 1, colorScheme: theme, reducedMotion, javaScriptEnabled });
+    ctx.setDefaultTimeout(8000);
+    ctx.setDefaultNavigationTimeout(15000);
     await ctx.addInitScript((t) => { try { localStorage.setItem("tz-theme", t); } catch {} if (t === "dark" && document.documentElement) document.documentElement.setAttribute("data-theme", "dark"); }, theme);
     return ctx;
   };
@@ -66,12 +231,13 @@ async function runEngine(name, engineType) {
     observe(fallback, fallbackErrors);
     await fallback.goto(`${server.base}/en/`, { waitUntil: "load" });
     await fallback.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; });
-    await fallback.evaluate(() => document.fonts.ready);
+    await waitForFonts(fallback);
     const fallbackContent = await readHome(fallback);
     check(fallbackContent.doors.length === 4, "No-JS Home must retain all four situation links", fallbackContent.doors);
     check(fallbackContent.contact.length > 0, "No-JS Home must retain contact controls");
     check(await fallback.locator("[data-home-motion]").count() === 1, "Home motion hook missing from static Home");
     check(!(await fallback.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "No-JS fallback must not claim enhancement readiness");
+    assertStaticMethod(await inspectStaticMethod(fallback), "No-JS fallback");
     check(!fallbackErrors.length, "No-JS page reported browser errors", fallbackErrors);
     await fallbackCtx.close();
 
@@ -153,6 +319,125 @@ async function runEngine(name, engineType) {
     check(JSON.stringify(holdChecks.sourceOrder) === JSON.stringify([1, 2, 3, 4]) && JSON.stringify(holdChecks.cardSourceOrder) === JSON.stringify([1, 2, 3, 4]), "Decorative holds must use the four existing situation photos in their original order, ending on the stairwell", holdChecks);
     state.cases.push({ kind: "desktop-holds", status: "passed", observations: holdChecks });
 
+    // The method statement remains over the live photo stage. Verify the
+    // overlap in both scroll directions, at both desktop breakpoints and in
+    // both themes. The measured scrim color is composited over worst-case white.
+    const methodChecks = [];
+    for (const theme of ["light", "dark"]) for (const width of [768, 1024, 1440, 1920]) {
+      const methodCtx = await context(width, theme);
+      const methodPage = await methodCtx.newPage();
+      const errors = [];
+      observe(methodPage, errors);
+      await methodPage.goto(`${server.base}/en/`, { waitUntil: "load" });
+      await methodPage.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; });
+      await methodPage.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
+      await waitForFonts(methodPage);
+      const bounds = await methodPage.evaluate(() => {
+        const section = document.querySelector("[data-home-method]")?.closest("section");
+        if (!section) return null;
+        const r = section.getBoundingClientRect();
+        const max = document.documentElement.scrollHeight - innerHeight;
+        const y = Math.max(0, Math.min(max, Math.round(scrollY + r.top + r.height * 0.5 - innerHeight * 0.5)));
+        return { y, max };
+      });
+      check(!!bounds, "Method section missing from enhanced Home");
+      for (const direction of ["forward", "backward"]) {
+        const start = direction === "forward" ? 0 : bounds.max;
+        await methodPage.evaluate((y) => scrollTo(0, y), start);
+        await pause(180);
+        await methodPage.evaluate((y) => scrollTo(0, y), bounds.y);
+        const settledAt = Date.now();
+        let sample;
+        do {
+          sample = await inspectMethodScrim(methodPage);
+          if (sample.visibleHoldOpacity >= 0.98 && sample.methodWordCount > 0 && sample.minimumMethodWordOpacity >= 0.98) break;
+          await methodPage.waitForTimeout(50);
+        } while (Date.now() - settledAt < 2500);
+        check(sample.hasMethod && sample.hasScrimHook && sample.methodText.length > 0, `Method scrim hook missing in ${theme} ${width}px`, sample);
+        check(sample.methodRect?.width > 0 && sample.methodRect.top < HEIGHT && sample.methodRect.bottom > 0, `Method statement must remain visible in ${theme} ${width}px`, sample);
+        check(sample.intersection.area > 0 && sample.visibleHoldOpacity >= 0.98 && sample.stageImageLoaded, `Original photo stage must visibly overlap method text in ${theme} ${width}px`, sample);
+        check(sample.methodForegroundIsWhite && sample.linkForegroundIsWhite, `Method statement and Why Toza link must be white in ${theme} ${width}px`, sample);
+        check(sample.textContrastAgainstWorstCaseWhitePhoto >= 4.5 && sample.linkContrastAgainstWorstCaseWhitePhoto >= 4.5, `Method text and link need 4.5:1 contrast over a white photo in ${theme} ${width}px`, sample);
+        const scrim = sample.scrimRect;
+        const glyphs = [...sample.methodGlyphRects, ...sample.linkGlyphRects];
+        const mask = sample.pseudo.find((p) => p.content !== "none" && p.maskImage !== "none");
+        check(!!mask && /intersect/.test(mask.maskComposite) && /linear-gradient/.test(mask.maskImage) && /-\d+px/.test(mask.inset), `Scrim mask must keep an opaque core and feather outside it in ${theme} ${width}px`, sample);
+        check(!!scrim && glyphs.length > 0 && glyphs.every((r) => r.left >= scrim.left - 2 && r.right <= scrim.right + 2 && r.top >= scrim.top - 2 && r.bottom <= scrim.bottom + 2), `Opaque scrim core must cover every method and link text glyph in ${theme} ${width}px`, sample);
+        const filename = `method-${theme}-${width}-${direction}.png`;
+        const path = join(DEST, filename);
+        await methodPage.screenshot({ path, fullPage: false, animations: "disabled" });
+        methodChecks.push({ theme, width, direction, screenshot: path, observation: sample });
+      }
+      check(!errors.length, `Browser errors in method overlap ${theme} ${width}px`, errors);
+      await methodCtx.close();
+    }
+    state.cases.push({ kind: "method-photo-overlap-and-scrim", status: "passed", observations: methodChecks });
+
+    // Shared logo links keep their original destination and name, remain plain
+    // transparent 48px targets, and retain a visible keyboard focus outline.
+    const logoChecks = [];
+    const hrefByTrack = new Map();
+    for (const theme of ["light", "dark"]) for (const width of [390, 1440]) {
+      const logoCtx = await context(width, theme);
+      const logoPage = await logoCtx.newPage();
+      await logoPage.goto(`${server.base}/en/`, { waitUntil: "load" });
+      await logoPage.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; });
+      await waitForFonts(logoPage);
+      const logos = await inspectLogoSet(logoPage);
+      check(logos.length === 6, `Expected six shared contact logo links in ${theme} ${width}px`, logos);
+      const visible = logos.filter((x) => x.visible);
+      const counts = Object.fromEntries(["header", "contact", "closing-bar"].map((region) => [region, visible.filter((x) => x.region === region).length]));
+      const expected = width < 768 ? { header: 0, contact: 2, "closing-bar": 2 } : { header: 2, contact: 2, "closing-bar": 0 };
+      check(JSON.stringify(counts) === JSON.stringify(expected), `Visible logo locations changed in ${theme} ${width}px`, { counts, expected, logos });
+      for (const logo of logos) {
+        check(!!logo.href && !!logo.ariaLabel && logo.ariaLabel === logo.title, `Logo link needs a stable destination and accessible name in ${theme} ${width}px`, logo);
+        check(logo.target === "_blank" && /(?:^|\s)noopener(?:\s|$)/.test(logo.rel || ""), `Logo link must preserve its external-link behavior in ${theme} ${width}px`, logo);
+        if (logo.visible) check(logo.width >= 48 && logo.height >= 48, `Logo hit target must be at least 48 by 48 in ${theme} ${width}px`, logo);
+        check(logo.backgroundAlpha === 0 && logo.borderWidths.every((n) => n === 0), `Logo itself must stay transparent and borderless in ${theme} ${width}px`, logo);
+        if (logo.region === "contact") check(logo.actionRowBackgroundAlpha === 0, `Closing contact logo wrapper must stay transparent in ${theme} ${width}px`, logo);
+        check(logo.foregroundContrastInContext >= 3, `Logo foreground needs 3:1 contrast in its ${logo.region} context in ${theme} ${width}px`, logo);
+        const previous = hrefByTrack.get(logo.track);
+        if (previous) check(previous.href === logo.href && previous.name === logo.ariaLabel, `Logo destination or name changed across breakpoints/themes for ${logo.track}`, { previous, logo });
+        else hrefByTrack.set(logo.track, { href: logo.href, name: logo.ariaLabel });
+      }
+      const focusVisited = new Map();
+      await logoPage.evaluate(() => scrollTo(0, 0));
+      await logoPage.keyboard.press("Home");
+      for (let i = 0; i < 140 && focusVisited.size < visible.length; i++) {
+        await logoPage.keyboard.press("Tab");
+        const focus = await logoPage.evaluate(() => {
+          const el = document.activeElement;
+          if (!el?.matches('[data-track$="-logo"]')) return null;
+          const s = getComputedStyle(el), r = el.getBoundingClientRect();
+          const parse = (v) => { const m = v?.match(/rgba?\(([^)]+)\)/i)?.[1]; if (!m) return null; const p = m.replace(/\s*\/\s*/, " ").split(/[\s,]+/).filter(Boolean).map(Number); return p.length >= 3 ? { rgb: p.slice(0, 3), alpha: p.length >= 4 ? p[3] : 1 } : null; };
+          const contact = el.closest("[data-contact]");
+          const region = el.closest("header") ? "header" : contact ? "contact" : el.closest("nav.fixed") ? "closing-bar" : "other";
+          const bgNode = el.closest("header") || (contact ? contact.querySelector('[data-tone="dark"]') : el.closest("nav.fixed"));
+          const fg = parse(s.outlineColor), bg = parse(bgNode ? getComputedStyle(bgNode).backgroundColor : "");
+          const lum = (rgb) => rgb.map((v) => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }).reduce((sum, v, i) => sum + v * [0.2126, 0.7152, 0.0722][i], 0);
+          const fl = fg && lum(fg.rgb), bl = bg && lum(bg.rgb);
+          return { track: el.getAttribute("data-track"), region, visible: r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight, focusVisible: el.matches(":focus-visible"), outlineStyle: s.outlineStyle, outlineWidth: Number.parseFloat(s.outlineWidth), outlineContrast: fl !== null && bl !== null ? (Math.max(fl, bl) + 0.05) / (Math.min(fl, bl) + 0.05) : null };
+        });
+        if (focus?.visible) focusVisited.set(`${focus.region}:${focus.track}`, focus);
+      }
+      check(focusVisited.size === visible.length, `Keyboard traversal did not reach all visible logo links in ${theme} ${width}px`, [...focusVisited.values()]);
+      for (const focus of focusVisited.values()) check(focus.focusVisible && focus.outlineStyle !== "none" && focus.outlineWidth >= 1 && focus.outlineContrast >= 3, `Keyboard focus outline must remain visible in ${theme} ${width}px`, focus);
+      const headerPath = join(DEST, `logos-header-${theme}-${width}.png`);
+      await logoPage.evaluate(() => scrollTo(0, 0));
+      await pause(100);
+      await logoPage.screenshot({ path: headerPath, fullPage: false, animations: "disabled" });
+      let closingPath = null;
+      if (width < 768) {
+        await logoPage.evaluate(() => scrollTo(0, document.documentElement.scrollHeight));
+        await pause(120);
+        closingPath = join(DEST, `logos-closing-${theme}-${width}.png`);
+        await logoPage.screenshot({ path: closingPath, fullPage: false, animations: "disabled" });
+      }
+      logoChecks.push({ theme, width, counts, visible: visible.map((x) => x.track), focus: [...focusVisited.values()], headerScreenshot: headerPath, closingScreenshot: closingPath });
+      await logoCtx.close();
+    }
+    state.cases.push({ kind: "shared-logo-hit-targets-and-focus", status: "passed", observations: logoChecks });
+
     // Keyboard traversal must keep the four original linked cards focusable and
     // rendered in the viewport after focus moves to each one.
     await page.evaluate(() => scrollTo(0, 0));
@@ -189,8 +474,8 @@ async function runEngine(name, engineType) {
     const mobileFallbackCtx = await context(390, "light", "no-preference", false);
     const mobileFallback = await mobileFallbackCtx.newPage();
     await mobileFallback.goto(`${server.base}/en/`, { waitUntil: "load" });
-    await mobileFallback.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; document.fonts.ready; });
-    await mobileFallback.evaluate(() => document.fonts.ready);
+    await mobileFallback.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; });
+    await waitForFonts(mobileFallback);
     const mobileBaseline = await mobileFallback.evaluate(() => ({ scene: document.querySelector("[data-situation-scene]").getBoundingClientRect().height, page: document.documentElement.scrollHeight }));
     await mobileFallbackCtx.close();
     for (const width of WIDTHS) {
@@ -207,6 +492,7 @@ async function runEngine(name, engineType) {
       if (width < 768) check(metrics.stagePosition !== "sticky", "Mobile situation stage must not pin", metrics);
       if (width >= 768) check(metrics.stagePosition === "sticky", "Desktop situation stage must use native sticky positioning", metrics);
       if (width < 768) {
+        assertStaticMethod(await inspectStaticMethod(page), `Phone-width ${width}px`);
         const mobileDelta = { scene: metrics.sceneHeight - mobileBaseline.scene, page: await page.evaluate(() => document.documentElement.scrollHeight) - mobileBaseline.page };
         check(Math.abs(mobileDelta.scene) <= 2 && Math.abs(mobileDelta.page) <= 4, "Mobile enhancement must not add a scroll runway", { metrics, mobileBaseline, mobileDelta });
       }
@@ -224,6 +510,7 @@ async function runEngine(name, engineType) {
     await reduced.goto(`${server.base}/en/`, { waitUntil: "load" });
     await pause(350);
     check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "Reduced-motion-at-load must remain static");
+    assertStaticMethod(await inspectStaticMethod(reduced), "Reduced motion");
     check(await reduced.locator("[data-situation-card]").count() === 4, "Reduced motion must preserve four original situation cards");
     await reduced.emulateMedia({ reducedMotion: "no-preference" });
     await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
@@ -243,11 +530,11 @@ async function runEngine(name, engineType) {
     check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "Print must tear down the motion runway");
     check(await reduced.locator("[data-situation-source]").first().isVisible(), "Print must restore original situation photos");
     await reduced.evaluate(() => dispatchEvent(new Event("afterprint")));
-    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"));
+    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
     await reduced.evaluate(() => dispatchEvent(new PageTransitionEvent("pagehide", { persisted: true })));
     check(!(await reduced.locator("html").getAttribute("class") || "").includes("home-motion-ready"), "History navigation must dispose motion");
     await reduced.evaluate(() => dispatchEvent(new PageTransitionEvent("pageshow", { persisted: true })));
-    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"));
+    await reduced.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
     check(await reduced.locator("[data-situation-stage]").count() === 1, "History restoration must not duplicate the stage");
     check(!reducedErrors.length, "Reduced-motion lifecycle emitted browser errors", reducedErrors);
     await reducedCtx.close();
@@ -278,7 +565,7 @@ async function runEngine(name, engineType) {
       await shotPage.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; });
       if (width >= 768) await shotPage.waitForFunction(() => document.documentElement.classList.contains("home-motion-ready"), { timeout: 12000 });
       else await pause(250);
-      await shotPage.evaluate(() => document.fonts.ready);
+      await waitForFonts(shotPage);
       await pause(250);
       const metrics = await shotPage.evaluate(() => ({ scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
       check(metrics.scrollWidth <= metrics.clientWidth + 1, `Horizontal overflow in ${theme} ${width}px screenshot`, metrics);

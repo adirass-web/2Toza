@@ -1,5 +1,7 @@
 # Plan — independent review + copy-safe content system (v1, for approval)
 
+**Historical proposal:** the current content/block system is already implemented, and current design, model routing, phase order and release approvals supersede conflicting suggestions below. Use `docs/CURRENT.md` and the approved roadmap in `docs/superpowers/plans/2026-10-23-2toza-roadmap-improvements.md`; this document does not authorize a new redesign, CMS or early merge to main.
+
 16 Oct 2026 · Repo `adirass-web/2Toza` · Nothing executed yet.
 
 ## Why a new method

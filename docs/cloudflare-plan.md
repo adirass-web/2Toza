@@ -1,5 +1,7 @@
 # Cloudflare plan (free tier)
 
+**Historical plan:** the analytics, contact-click logging and callback instructions below are superseded by the current no-tracking specification and latest owner decisions. Do not activate them. Current release planning is in `docs/superpowers/plans/2026-10-23-2toza-roadmap-improvements.md`; preview and release indexing policies must be validated separately before P10 cut-over.
+
 Project: Cloudflare Pages `toza-v2`, in Dr. Tabansky's account. No Access (V-012).
 
 ## Turn on, in order

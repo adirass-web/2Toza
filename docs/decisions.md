@@ -119,3 +119,12 @@ The following entries port the current approved choices in section 2 of [HANDOFF
 | V-070 | 2026-10-23 | Chunk order is P3 grid and static Home → P4 Home motion → P5 situation template and four pages → P6 How it works → P7 Pricing → P8 Attorneys and About → P9 FAQ and Conditions → P10 English release readiness → P11 Hebrew/RTL just after English launch. Other pages adopt the grid page by page. |
 | V-071 | 2026-10-23 | Use one PR per chunk into `build/g`, with CI green and the existing owner review/approval for each chunk. Merge `build/g` to `main` only at the release gate. Keep `main` and VIP untouched until then. No file deletions without owner authorization. Rollback is reverting one squashed PR; VIP stays live until cut-over. |
 | V-072 | 2026-10-23 | Existing gates are in `docs/build-g/GATES.md`; visual regression and manual checks are not in CI. P10's DNS/Cloudflare cut-over runbook is for the owner to execute. The owner's current full-execution authorization governs implementation; do not restart discovery or require a fresh P4 approval interview. |
+
+### Latest owner review
+
+| ID | Date | Decision |
+|---|---|---|
+| V-073 | 2026-10-23 | Photo overlap in P4 is explicitly permitted and must remain. Use the approved localized dark scrim with light text for method readability; do not clip or remove the overlapping photograph. |
+| V-074 | 2026-10-23 | Remove the additional circles around WhatsApp/Signal and the mint backing around the closing icon row. Keep original symbols, contact destinations, accessible names, visible focus and existing 48 px click targets. Supersedes the visible round-button treatment in V-058 and the historical handoff. |
+| V-075 | 2026-10-23 | The owner approved the revised roadmap in `docs/superpowers/plans/2026-10-23-2toza-roadmap-improvements.md`: scoped execution contracts, shared-component handoffs, candidate-specific acceptance, separate preview/release indexing policies at P10 and explicit P11 RTL checks. Continue P4 with Sol coordinating scoped Luna experts and bring a tested preview before merge. |
+| V-076 | 2026-10-23 | Firefox is deferred from P4 acceptance and diagnosed separately; it is not counted as passed. P4 Home Chromium/WebKit coverage does not imply sitewide browser or manual screen-reader acceptance. |
