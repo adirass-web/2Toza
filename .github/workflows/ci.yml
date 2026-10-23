@@ -307,7 +307,7 @@ jobs:
           HOME_MOTION_ARTIFACT_DIR: ${{ runner.temp }}/toza-home-motion-${{ matrix.browser }}
         run: |
           mkdir -p "$HOME_MOTION_ARTIFACT_DIR"
-          git rev-parse HEAD > "$HOME_MOTION_ARTIFACT_DIR/source-sha.txt"
+          printf '%s\n' "$GITHUB_SHA" > "$HOME_MOTION_ARTIFACT_DIR/source-sha.txt"
           npm run check:home-motion
       - name: Retain ${{ matrix.browser }} motion evidence
         if: always()
