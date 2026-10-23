@@ -1,0 +1,17 @@
+{#- Box layout, price anchors: each item is a 25% card on desktop and the ordinary stacked width on phones. -#}
+{% from "blocks/_macros.njk" import price, lnk with context %}
+<section class="scroll-mt-24 py-8 lg:py-12" aria-label="{{ t.ui.pricesLabel }}">
+  <div class="grid grid-cols-4 gap-cell px-edge md:grid-cols-12">
+    <ul class="col-span-4 grid grid-cols-4 gap-cell md:col-span-12 md:grid-cols-12">
+      {% for item in block.items %}
+      <li class="col-span-4 flex flex-col gap-3 p-6 {{ 'bg-mint text-on-mint' if loop.first else 'bg-paper-deep text-heading' }} md:col-span-3 lg:p-8">
+        {% if item.tag %}<p class="font-sans text-xs font-semibold tracking-wide uppercase">{{ item.tag }}</p>{% endif %}
+        <h2 class="font-serif text-xl leading-tight lg:text-2xl">{{ item.name }}</h2>
+        <p>{{ price(item, 'text-4xl lg:text-5xl') }}</p>
+        <p class="font-serif leading-snug lg:text-lg">{{ item.note }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if block.link %}<p class="col-span-4 md:col-span-3 md:col-start-2">{{ lnk(block.link) }}</p>{% endif %}
+  </div>
+</section>

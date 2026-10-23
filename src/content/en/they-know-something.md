@@ -8,6 +8,7 @@ dir: ltr
 
 blocks:
   - type: hero
+    layout: box
     heading: Someone seems to know something private.
     lead: You don't have to prove how it happened before acting. Toza examines your devices and accounts with you and gives urgent first aid.
     byline: none
@@ -15,6 +16,7 @@ blocks:
     actions: [whatsapp, signal]
 
   - type: recognition
+    layout: box
     heading: "{shared:common.start_checked}"
     lead: Exposure can run through a connected device or service, beyond the account you first suspect. Toza shows what each one reveals or allows, and what to change now.
     items:
@@ -24,19 +26,23 @@ blocks:
       - Public details and old online trails that reveal more together.
 
   - type: text
+    layout: box
     heading: Urgent first aid on the spot.
     body: With your approval, pressing problems are handled during the first step, including removing a malicious app or profile where that can be done safely.
 
   - type: text
+    layout: box
     heading: Understand the effects before making isolated changes.
     body: Changing a password may leave another session or recovery route open, and deleting an account can affect services you still need. {shared:common.sequence}
 
   - type: stages
+    layout: box
     ref: stages
     variant: compact
     line: Assess what can be checked. Harden what you decide to close, even if the original concern stays unexplained. {shared:common.verify_and_learn}
 
   - type: text
+    layout: box
     heading: Urgent visits.
     body: Arrival within four hours of acceptance and payment, when available. Surcharge applies.
     links:
@@ -45,9 +51,11 @@ blocks:
         kind: more
 
   - type: price-summary
+    layout: box
     ref: price_summary
 
   - type: contact
+    layout: box
     ref: contact
     note:
       label: Questions about proof and evidence

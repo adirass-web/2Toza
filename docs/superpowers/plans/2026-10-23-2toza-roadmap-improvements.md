@@ -25,6 +25,20 @@
 - Keep previews public and noindex. Firefox is deferred from P4 by the owner, not passed; its diagnosis is a separate lane.
 - Preserve existing CI budgets: LCP ≤ 2.5 s with 20% CI tolerance, CLS ≤ 0.05, JS ≤ 60 KB gzip, page ≤ 1.2 MB. Reuse existing SHA/hash provenance and seven-day evidence retention.
 
+## Faster execution workflow — owner instruction, 24 October 2026
+
+Apply this sequence to the next change. Preserve required repository checks and the existing visual approval gate.
+
+1. **SOL coordinates scope and integration.** Confirm the requested result, affected files and acceptance checks once. Assign scoped LUNA experts only where their work adds distinct value; give each an explicit file or review responsibility. SOL owns integration, Git and publication. Do not duplicate exploration or reopen settled design decisions.
+2. **Finish implementation and review before pushing.** Use one scoped implementation pass and one independent review appropriate to the change. Resolve findings and finish screenshot/capture adjustments locally. Experts must explicitly report that their edits are complete before SOL freezes the candidate.
+3. **Run one focused local verification pass.** Reuse existing checks for affected behavior, relevant responsive/theme/fallback states and representative rendered views. Run required checks; avoid duplicating the full CI suite locally without a specific reason. After a real failure or code change, rerun only affected local checks plus required gates. Do not repeat passing checks merely for reassurance.
+4. **Push the reviewed candidate once and run one CI cycle.** Keep one immutable source identity for the candidate. Do not push intermediate review or screenshot-timing changes after CI starts. A genuine defect can require a corrected candidate and another CI cycle; record the reason rather than treating the first run as final evidence.
+5. **Check the public preview once.** Consume the verified artifact without rebuilding, confirm source/build identity and hash, then run one bounded live check covering the requested change and essential contact/navigation/fallback behavior. Reuse CI evidence instead of running two overlapping live suites. Complete representative visual inspection in this same pass.
+6. **Handle waits and failures without expanding scope.** Observe CI at job transitions or spaced intervals; do not repeatedly query unchanged status. Bound browser/font waits. Diagnose a failure before retrying; allow a justified bounded retry for a transient failure and record it. Keep Firefox in its separate diagnostic lane and surface unresolved exceptions without restarting completed work.
+7. **Present one approval package, then wait.** Provide the immutable preview, concise changes, test outcome, exact candidate/evidence and material open checks. Keep the PR draft and unmerged until the owner explicitly approves the visual result. A green check, approved plan or elapsed time is not visual approval. Do not merge or start the next phase while that approval is pending.
+
+**Documentation-only updates:** edit and verify the plan directly; do not launch implementation experts, browser suites, rebuilds or preview deployment for prose alone. Include the record in the next appropriate publication without replacing a preview awaiting review solely to publish plan wording.
+
 ## Review Focus
 
 1. **Approved overlap versus unreadability:** photo overlap remains, while the complete method statement is legible through wrapping, scroll and theme changes. Owned by Task 2.
@@ -35,9 +49,9 @@
 
 ## Current state and scope of this review
 
-- Remote P4 PR #21 remains draft/unmerged at `c39767bdc41c4c0a646dbc952565ae1fb15db652`, based on accepted integration `a0021ab`.
-- Its existing immutable preview is https://21aa5059.toza-v2.pages.dev/en/ . CI Verify, Home WebKit and deployment passed; this is the previously published candidate, not a preview of today's unpublished icon corrections.
-- The mistaken containment change and tests forbidding photo overlap were removed. The approved localized scrim and plain-icon corrections are implemented locally; their corrected preview and final candidate checks are pending.
+- Owner visually approved P4 source `7443c341053dd2da2c9193f6a5bf008a4b169bf2`; PR #21 was squash-merged to `build/g` at `18e1941be773b05b4643e417b8637f98e89148e9` on 24 October 2026. P5 is active under its phase plan; its visual approval remains pending.
+- The tested immutable preview is https://209a7fc2.toza-v2.pages.dev/en/ . CI run `40024358635` passed Verify, Home WebKit and deployment. Actual tested merge checkout: `5b2202f8208ca6b0036cc10ecae9c3848cef5437`. The archive independently matches SHA256 `b5c0bb3c0cfcc3ee033c500e526a8bf38b7f9fb9c654df5b5c92d5aeda0669eb`.
+- The approved localized scrim and plain-icon corrections are deployed, with photo overlap retained. Local and live Chromium checks passed 16 method states and the scoped icon/focus checks; CI Chromium/WebKit passed. No merge or new preview is authorized by this workflow documentation update.
 - P4 Home WebKit coverage is not sitewide WebKit approval. Manual screen-reader validation remains open. The 35 legacy snapshot mismatches remain unresolved; no baselines were regenerated.
 - Future phases have an approved sequence and partial design requirements, not complete executable specifications. Older pricing-research phase numbers are not website delivery phase numbers.
 - Two independent Luna reviews covered design/product acceptance and engineering/release dependencies; Sol checked their findings against the current sources.
@@ -81,8 +95,9 @@
 - [x] Add a readability regression for the selected contract. Inspect the statement over the overlapping photo in both themes at 390/768/1024/1440/1920, including forward/backward scroll and reduced motion. Propose a minimum 4.5:1 text/background target; use an opaque surface or conservative compositing proof plus rendered checks, not axe alone.
 - [ ] Verify the regression fails for the current unreadable text-on-photo state, then implement only the approved foreground treatment.
 - [x] Keep the authorized plain-icon changes; verify transparent borderless surrounds, unchanged symbols/names/hrefs, 48 px targets, visible keyboard focus and appropriate foreground colors in each shell context.
-- [ ] Re-run focused Chromium/WebKit checks and required CI on the final candidate; inspect representative photos, method and contact states manually. Do not assert that the stage must never overlap the method.
-- [ ] Present the immutable preview, exact source/built SHA, retained evidence and remaining manual gaps. Await owner visual approval before merge.
+- [x] Re-run focused Chromium/WebKit checks and required CI on the final candidate; inspect representative photos, method and contact states manually. Do not assert that the stage must never overlap the method.
+- [x] Present the immutable preview, exact source/built SHA, retained evidence and remaining manual gaps.
+- [x] Owner explicitly approved the P4 preview and merge; P4 merged and P5 activated. P5 still requires its own visual approval.
 
 ## Task 3: Establish the P5 shared-component handoff
 
@@ -153,3 +168,5 @@ No exact future component APIs or translated strings are invented. Those belong 
 **D2 — approved:** roadmap/process amendments, keeping Sol coordination and scoped Luna implementation/review. This is not approval to merge P4 or release production.
 
 **Still open for later gates:** manual screen-reader evidence, legacy baseline approval, production domain/indexing confirmation, release credentials/environment recheck, and approved Hebrew content.
+
+**D3 — 24 October 2026:** Owner visually approved P4, authorized its merge and post-merge CI check, and activated P5 under the faster workflow. P5 must stop at a tested preview pending its own visual approval.

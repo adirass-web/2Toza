@@ -16,6 +16,7 @@
     "visual:approve": "npm run build && node scripts/visual.mjs --update",
     "check:a11y": "node scripts/check-a11y.mjs",
     "check:home-motion": "node scripts/check-home-motion.mjs",
+    "check:situations": "node scripts/check-situations.mjs",
     "check:perf": "node scripts/check-perf.mjs",
     "check:anchors": "node scripts/check-anchors.mjs",
     "check:contrast": "node scripts/check-contrast.mjs"

@@ -1,0 +1,30 @@
+{#- Box layout, compact stages: original drawings, alt text, stage sequence, prices and links in a three-card row. -#}
+{% from "blocks/_macros.njk" import lnk with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} data-tone="dark" class="scroll-mt-24 bg-dark py-8 text-paper lg:py-12">
+  <div class="grid grid-cols-4 gap-cell px-edge md:grid-cols-12">
+    <div class="col-span-4 bg-dark p-6 md:col-span-6 lg:p-8">
+      {% if block.statement %}<p class="font-serif text-2xl leading-snug text-balance lg:text-3xl">{{ block.statement }}</p>{% endif %}
+      {% if block.statement_link %}<p class="mt-4">{{ lnk(block.statement_link, 'dark') }}</p>{% endif %}
+      <h2 class="mt-5 font-serif text-xl font-normal text-accent-on-dark lg:text-2xl">{{ block.heading }}</h2>
+      {% if block.line %}<p class="mt-2 font-serif leading-snug text-on-dark-text lg:text-lg">{{ block.line }}</p>{% endif %}
+    </div>
+    <ol class="col-span-4 grid grid-cols-4 gap-cell md:col-span-12 md:grid-cols-12">
+      {% for stage in block.items %}
+      <li class="col-span-4 flex items-center gap-4 bg-dark p-4 md:col-span-3 md:block md:p-5 lg:p-6">
+        <div class="relative w-20 shrink-0 md:mb-4 md:w-full" dir="ltr">
+          {% set alt = stage.image_alt %}{% include "drawing-" + stage.key + ".njk" %}
+          {% if stage.key == 'verify' and block.record_date %}<p class="absolute inset-e-0 inset-bs-1/6 w-1/3 text-end font-serif text-sm leading-tight text-accent-on-dark" aria-hidden="true">{{ block.record_date }}</p>{% endif %}
+        </div>
+        <div>
+          <h3 class="font-serif text-xl text-paper lg:text-2xl">{{ stage.name }}</h3>
+          <p class="mt-1 text-lg leading-snug text-on-dark-text">{{ stage.line }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% if block.price_strip %}
+    <div class="col-span-4 bg-dark p-5 md:col-span-12 lg:p-6">{% set outer = block %}{% set block = outer.price_strip %}{% set stripTone = 'dark' %}{% include "blocks/price-strip.njk" %}{% set stripTone = '' %}{% set block = outer %}</div>
+    {% endif %}
+    {% if block.link %}<p class="col-span-4 md:col-span-3">{{ lnk(block.link, 'dark') }}</p>{% endif %}
+  </div>
+</section>

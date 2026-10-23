@@ -1,0 +1,14 @@
+{#- Box layout, recognition: the framing copy and signals each occupy one half of the desktop grid. On phones they stack. -#}
+{% from "blocks/_macros.njk" import h2, links with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-8 lg:py-12">
+  <div class="grid grid-cols-4 gap-cell px-edge md:grid-cols-12">
+    <div class="col-span-4 bg-paper-deep p-6 text-heading md:col-span-6 lg:p-8">
+      {{ h2(block.heading) }}
+      {% if block.lead %}<p class="mt-4 max-w-xl font-serif text-lg leading-snug lg:text-xl">{{ block.lead }}</p>{% endif %}
+      {{ links(block.links, '', 'mt-5') }}
+    </div>
+    <ul class="col-span-4 grid gap-4 bg-sand p-6 font-serif text-lg leading-snug text-heading sm:grid-cols-2 md:col-span-6 lg:gap-6 lg:p-8 lg:text-xl">
+      {% for item in block.items %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>

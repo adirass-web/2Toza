@@ -18,6 +18,12 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
+      options: --user pwuser
+    defaults:
+      run:
+        shell: bash
     timeout-minutes: 20
     permissions:
       contents: read
@@ -52,12 +58,15 @@ jobs:
       - run: npm run check
       - run: node scripts/check-content.mjs
       - run: node --test scripts/check-content.test.mjs
-      - run: npx playwright install --with-deps chromium
       - run: npm run check:a11y
       - name: Check Home motion behavior
         run: npm run check:home-motion
         env:
           HOME_MOTION_ARTIFACT_DIR: ${{ runner.temp }}/toza-home-motion
+      - name: Check situation page behavior
+        run: npm run check:situations
+        env:
+          SITUATION_ARTIFACT_DIR: ${{ runner.temp }}/toza-situations
       - run: npm run check:perf
       # Anchors: every id that a page on main links to must still exist (deep links keep working).
       - if: github.ref != 'refs/heads/main'
@@ -87,7 +96,7 @@ jobs:
           mkdir -p "$bundle"
           tar -czf "$bundle/site.tar.gz" -C _site .
           site_sha256="$(sha256sum "$bundle/site.tar.gz" | cut -d ' ' -f 1)"
-          built_sha="$(git rev-parse HEAD)"
+          built_sha="$(git -c safe.directory="$GITHUB_WORKSPACE" rev-parse HEAD)"
           artifact_name="toza-site-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
 
           if [ -n "$PR_NUMBER" ]; then
@@ -99,20 +108,16 @@ jobs:
             preview_branch="b-${slug}-${suffix}"
           fi
 
-          jq -n \
-            --arg repository "$GITHUB_REPOSITORY" \
-            --arg branch "$SOURCE_BRANCH" \
-            --arg built_sha "$built_sha" \
-            --arg source_head_sha "$SOURCE_HEAD_SHA" \
-            --arg source_base_sha "$SOURCE_BASE_SHA" \
-            --arg event "$SOURCE_EVENT" \
-            --arg run_id "$GITHUB_RUN_ID" \
-            --arg run_attempt "$GITHUB_RUN_ATTEMPT" \
-            --arg artifact_name "$artifact_name" \
-            --arg preview_branch "$preview_branch" \
-            --arg site_sha256 "$site_sha256" \
-            '{schema_version:1, repository:$repository, source_branch:$branch, built_sha:$built_sha, source_head_sha:$source_head_sha, source_base_sha:$source_base_sha, event:$event, run_id:$run_id, run_attempt:$run_attempt, artifact_name:$artifact_name, preview_branch:$preview_branch, site_sha256:$site_sha256}' \
-            > "$bundle/provenance.json"
+          BUILT_SHA="$built_sha" ARTIFACT_NAME="$artifact_name" PREVIEW_BRANCH="$preview_branch" SITE_SHA256="$site_sha256" \
+            node <<'NODE' > "$bundle/provenance.json"
+          const e = process.env;
+          console.log(JSON.stringify({
+            schema_version: 1, repository: e.GITHUB_REPOSITORY, source_branch: e.SOURCE_BRANCH,
+            built_sha: e.BUILT_SHA, source_head_sha: e.SOURCE_HEAD_SHA, source_base_sha: e.SOURCE_BASE_SHA,
+            event: e.SOURCE_EVENT, run_id: e.GITHUB_RUN_ID, run_attempt: e.GITHUB_RUN_ATTEMPT,
+            artifact_name: e.ARTIFACT_NAME, preview_branch: e.PREVIEW_BRANCH, site_sha256: e.SITE_SHA256
+          }, null, 2));
+          NODE
 
           echo "artifact_name=$artifact_name" >> "$GITHUB_OUTPUT"
           echo "preview_branch=$preview_branch" >> "$GITHUB_OUTPUT"
@@ -153,6 +158,15 @@ jobs:
           path: |
             ${{ runner.temp }}/toza-home-motion
             ${{ runner.temp }}/toza-preview-artifact/provenance.json
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Retain situation page evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: toza-situations-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/toza-situations
           if-no-files-found: warn
           retention-days: 7
 
@@ -313,11 +327,28 @@ jobs:
           mkdir -p "$HOME_MOTION_ARTIFACT_DIR"
           printf '%s\n' "$GITHUB_SHA" > "$HOME_MOTION_ARTIFACT_DIR/source-sha.txt"
           npm run check:home-motion
+      - name: Check situation pages in ${{ matrix.browser }}
+        timeout-minutes: 5
+        env:
+          SITUATION_BROWSERS: ${{ matrix.browser }}
+          SITUATION_ARTIFACT_DIR: ${{ runner.temp }}/toza-situations-${{ matrix.browser }}
+        run: |
+          mkdir -p "$SITUATION_ARTIFACT_DIR"
+          printf '%s\n' "$GITHUB_SHA" > "$SITUATION_ARTIFACT_DIR/source-sha.txt"
+          npm run check:situations
       - name: Retain ${{ matrix.browser }} motion evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: toza-home-motion-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/toza-home-motion-${{ matrix.browser }}
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Retain ${{ matrix.browser }} situation evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: toza-situations-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/toza-situations-${{ matrix.browser }}
           if-no-files-found: warn
           retention-days: 7
