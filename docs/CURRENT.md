@@ -9,7 +9,7 @@ Updated 23 October 2026. This page records the active project state and where ea
 - **Accepted integration base:** `build/g` at `3dd5abb` (P3 and the approved illustration asset are integrated). P4–P9 remain separate chunks and merge in that order. Each chunk has one PR into `build/g`; `main` and production stay untouched before the P10 release gate. Hebrew follows the English launch in P11.
 - **PR state:** PR #4 (P3) is merged at `6c25fc2`; illustration PR #6 is merged at `3dd5abb`. The illustration blob was confirmed identical to the approved asset. This state is based on the coordinator's repository/PR check; refresh it before relying on it for a later release.
 - **Acceptance still open:** P3 visual baselines have not been approved; WebKit and manual screen-reader validation remain unverified. These gaps do not change the fixed P3 design or block planning the next chunk, but remain part of the applicable review/release evidence.
-- **Cloud environment:** Codex home is read-only; MCP resources were empty; Cloudflare setup is incomplete. Do not report a connected Cloudflare environment. The intended split is `toza-v2` for noindex previews and `toza-site` for production; production remains reserved for the owner-run P10 cut-over.
+- **Cloud environment:** Codex home is read-only; `codex mcp list --json` returned no configured servers; Cloudflare setup is incomplete. Do not report a connected Cloudflare environment. The intended split is `toza-v2` for noindex previews and `toza-site` for production; production remains reserved for the owner-run P10 cut-over.
 - **Parallel work:** isolated cloud chats do not share a local worktree. Each task must publish a uniquely named branch for the coordinator to fetch. Worktree reservations, exact paths, ports and accepted bases are tracked in [WORKTREES.md](build-g/WORKTREES.md). Client-side setup requirements are tracked in [CLIENT-PREREQUISITES.md](build-g/CLIENT-PREREQUISITES.md).
 - **Repository settings:** the active ruleset `25623993` applies to the default branch and enforces no deletion, no non-fast-forward updates, linear history and CodeQL severity checks. An additive PR/Verify ruleset request for `build/g` was denied with GitHub 403 (`Resource not accessible by integration`); this was an integration permission limitation, not an automatic review rejection. The original ruleset was not changed. The proposed additive configuration is recorded in [proposed-pr-verification-ruleset.json](build-g/proposed-pr-verification-ruleset.json) for an owner with settings access to apply or revise.
 
@@ -25,20 +25,25 @@ For the current implementation, use these sources in order:
 
 The Windows machine's uncommitted files and any additional local-only chat artifacts have not been inventoried. Their availability and reconciliation remain pending; this ledger does not claim that all chats or local files have been reconciled. Cloudflare's actual account/project configuration also remains unverified from the read-only setup context.
 
-## Known chat and project source classification
+## Known source classification
 
-This classification is based on the known project/chat names and the current handoff; it does not infer unseen chat contents.
+[Source records and identifiers](build-g/SOURCES.md) retain provenance and the limits of discovery. Status applies to specific material, not every instruction ever issued in a chat.
 
-| Source | Classification | Current use |
+| Source/material | Status | Treatment |
 |---|---|---|
-| **Design, copyedit TOZA** | Current coordination project | Active execution home for the approved replacement. |
-| **Restructure Toza website for leads** | Historical/reference | Earlier lead-generation and site-structure context; use only where consistent with the current handoff. |
-| **Continue Toza editorial revision** | Historical/reference | Earlier copy-editing lineage; approved current copy remains in repository content and the fixed handoff. |
-| **Toza website rebrand/content reconciliation** | Historical/reference | Prior rebrand and content reconciliation context; the current handoff controls implementation decisions. |
-| **Continue Cloudflare Cleanup** | Operations reference | Cloudflare troubleshooting/setup history; actual account and project configuration remains unverified and setup incomplete. |
-| **Toza — artisan brand visuals** | Visual reference | Earlier brand-visual reference; it does not supersede the fixed specification. |
+| Approved current handoff and latest owner instructions | **current** | Fixed specification; no design/copy discovery reopened. |
+| P3 PR #4, illustration PR #5 forward-ported through #6 | **incorporated** | Accepted implementation and byte-identical asset; usage unchanged. |
+| “Restructure Toza website for leads” — VIP commercial baseline | **superseded** | Preserve history; do not import earlier prices or terms. |
+| “Continue Toza editorial revision” — analytics implementation | **superseded** | Current no-tracking requirement controls. Search Console completion is **unresolved**. |
+| “Toza website rebrand/content reconciliation” — complete English review | **draft** | Preserve unapproved copy; local-only artifact inventory is **unresolved**. |
+| “Continue Cloudflare Cleanup” — VIP pricing/design instructions | **superseded** | Historical operational context only; client connection remains **unresolved**. |
+| “Toza — artisan brand visuals” — earlier logo options | **superseded** | Current approved outlined wordmark controls; unique Windows assets remain **unresolved**. |
+| Fixed handoff section 2 decisions | **incorporated** | Ported into V-052–V-072 without changing the source. |
+| Windows uncommitted files/local-only commits | **unresolved** | Inventory and preserve before declaring consolidation complete. |
 
-These labels identify source roles, not verified completeness. The Windows machine's uncommitted files and local-only chat artifacts remain pending inventory.
+## Verified results
+
+P3 exact-head PR verification and preview deployment passed. Existing evidence in [P3-IMPLEMENTATION.md](build-g/P3-IMPLEMENTATION.md) records accessibility, performance and responsive/browser results with their limitations. A fresh detached checkout at `3dd5abb` passed build, facts, noindex, tokens, contrast, lint, 198 internal links, 100% content parity across 11 content pages, and the content-validation regression test. Simultaneous worktree servers and distinct mutable outputs passed the [isolation check](build-g/evidence/worktree-isolation.json). These checks do not close the outstanding visual, WebKit, screen-reader or external-client prerequisites.
 
 ## Fixed sequence and boundaries
 
