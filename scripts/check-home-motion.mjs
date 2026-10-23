@@ -109,30 +109,49 @@ async function runEngine(name, engineType) {
     // Desktop holds: sample the linked card order and require each distinct
     // authored scene image to become the visible hold at its own card position.
     await page.setViewportSize({ width: 1440, height: HEIGHT });
-    const holdChecks = await page.evaluate(async () => {
-      const scene = document.querySelector("[data-situation-scene]");
-      const stage = scene?.querySelector("[data-situation-stage]");
-      const cards = [...(scene?.querySelectorAll("[data-situation-card]") || [])];
-      const imgs = [...(scene?.querySelectorAll("[data-situation-hold]") || [])];
-      if (!scene || !stage || cards.length !== 4 || imgs.length !== 4) return { error: "missing scene elements" };
-      const samples = [];
-      for (let i = 0; i < cards.length; i++) {
-        const r = cards[i].getBoundingClientRect();
+    const holdChecks = { samples: [] };
+    const cards = page.locator("[data-situation-card]");
+    const holdCount = await page.locator("[data-situation-hold]").count();
+    check(await cards.count() === 4 && holdCount === 4, "Expected four situation cards and four image holds");
+    for (let i = 0; i < 4; i++) {
+      await cards.nth(i).evaluate((card) => {
+        const r = card.getBoundingClientRect();
         const y = Math.max(0, Math.round(scrollY + r.top + r.height * 0.52 - innerHeight * 0.5));
         scrollTo(0, y);
-        await new Promise((resolve) => setTimeout(resolve, 260));
-        const values = imgs.map((img) => Number.parseFloat(getComputedStyle(img).opacity || "0"));
-        const winner = values.indexOf(Math.max(...values));
-        samples.push({ atCard: i + 1, activeHold: winner + 1, opacity: values, clipPath: getComputedStyle(stage).clipPath, sticky: getComputedStyle(stage).position === "sticky" });
-      }
-      scrollTo(0, 0);
-      const photoNumber = (src) => Number(src.match(/sit-(\d+)-/)?.[1] || 0);
-      return { samples, sourceOrder: imgs.map((img) => photoNumber(img.currentSrc || img.src)), cardSourceOrder: cards.map((card) => photoNumber(card.querySelector("img")?.currentSrc || card.querySelector("img")?.src)) };
-    });
-    check(Array.isArray(holdChecks.samples) && holdChecks.samples.every((x, i) => x.activeHold === i + 1), "Situation image holds must follow the four cards in order", holdChecks);
+      });
+      const started = Date.now();
+      let sample;
+      do {
+        sample = await page.evaluate((expectedIndex) => {
+          const scene = document.querySelector("[data-situation-scene]");
+          const stage = scene?.querySelector("[data-situation-stage]");
+          const imgs = [...(scene?.querySelectorAll("[data-situation-hold]") || [])];
+          const opacity = imgs.map((img) => Number.parseFloat(getComputedStyle(img).opacity || "0"));
+          return {
+            atCard: expectedIndex + 1,
+            activeHold: opacity.indexOf(Math.max(...opacity)) + 1,
+            opacity,
+            expectedOpacity: opacity[expectedIndex] ?? 0,
+            clipPath: stage ? getComputedStyle(stage).clipPath : null,
+            sticky: stage ? getComputedStyle(stage).position === "sticky" : false,
+            scrollY,
+          };
+        }, i);
+        if (sample.activeHold === i + 1 && sample.expectedOpacity >= 0.98) break;
+        await page.waitForTimeout(50);
+      } while (Date.now() - started < 2500);
+      sample.waitMs = Date.now() - started;
+      sample.settled = sample.activeHold === i + 1 && sample.expectedOpacity >= 0.98;
+      holdChecks.samples.push(sample);
+    }
+    await page.evaluate(() => scrollTo(0, 0));
+    holdChecks.sourceOrder = await page.locator("[data-situation-hold]").evaluateAll((imgs) => imgs.map((img) => Number((img.currentSrc || img.src).match(/sit-(\d+)-/)?.[1] || 0)));
+    holdChecks.cardSourceOrder = await cards.evaluateAll((items) => items.map((card) => Number((card.querySelector("img")?.currentSrc || card.querySelector("img")?.src || "").match(/sit-(\d+)-/)?.[1] || 0)));
+    check(holdChecks.samples.every((x, i) => x.activeHold === i + 1 && x.settled), "Situation image holds must become nearly opaque in the four-card order", holdChecks);
     check(holdChecks.samples.every((x) => x.sticky), "Desktop situation stage must remain sticky during its holds", holdChecks.samples);
     check(holdChecks.samples[0].clipPath !== holdChecks.samples[3].clipPath, "Situation crop should widen over the sequence", holdChecks.samples.map((x) => x.clipPath));
     check(JSON.stringify(holdChecks.sourceOrder) === JSON.stringify([1, 2, 3, 4]) && JSON.stringify(holdChecks.cardSourceOrder) === JSON.stringify([1, 2, 3, 4]), "Decorative holds must use the four existing situation photos in their original order, ending on the stairwell", holdChecks);
+    state.cases.push({ kind: "desktop-holds", status: "passed", observations: holdChecks });
 
     // Keyboard traversal must keep the four original linked cards focusable and
     // rendered in the viewport after focus moves to each one.
@@ -289,7 +308,6 @@ async function runEngine(name, engineType) {
       await ctx.close();
     }
     state.cases.push({ kind: "fallback-content", status: "passed", doors: fallbackContent.doors.length, contactControls: fallbackContent.contact.length });
-    state.cases.push({ kind: "desktop-holds", status: "passed", observations: holdChecks });
     state.cases.push({ kind: "keyboard", status: "passed", visited: [...visited].sort() });
   } catch (e) {
     state.status = "failed";
