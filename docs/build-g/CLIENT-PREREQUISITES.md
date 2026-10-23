@@ -31,6 +31,10 @@ Existing ruleset `25623993` was read and left unchanged: default branch deletion
 
 [Proposed additive ruleset](proposed-pr-verification-ruleset.json) requires PRs and successful `verify` for `build/g` and `main`, with no bypass. An account with repository rules administration must add it through GitHub settings or the API. Preserve all existing and unknown rules. The proposed zero review-count minimum adds no new approval gate; owner approval per chunk remains the existing process. Read back the active rules before claiming enforcement.
 
+## Protected production environment — release prerequisite
+
+A read-only GitHub environments query returned an empty list during this execution. A protected production environment and production credential binding have therefore not been established here. Before P10, configure a production environment restricted to the release branch with owner approval, enter credentials securely there, and reference that environment from the future serialized production workflow. Do not treat repository-level preview secrets as proof of protected production setup.
+
 ## Release boundaries
 
 Preview: `toza-v2`. Future production: existing `toza-site`, exclusively 2Toza code, preserving domains. No production deployment or DNS change is authorized by infrastructure implementation; the owner executes cut-over. Retire the superseded VIP production workflow at cut-over so it cannot overwrite the endpoint. Record its exact repository/workflow and disable it before production deployment. Do not migrate historical analytics: current specification requires no tracking.

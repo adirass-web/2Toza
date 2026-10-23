@@ -39,7 +39,7 @@
   ],
   "preview_identities": {
     "ops/verified-previews": "p-16",
-    "ops/current-reconciliation": "p-<PR number>"
+    "ops/current-reconciliation": "p-17"
   },
   "note": "Local outputs and ports were verified concurrently. New CI uses p-<PR number> for PR aliases and b-<normalized-ref>-<10-character SHA256 of original ref> for trusted pushes; remote deployment evidence is recorded separately."
 }

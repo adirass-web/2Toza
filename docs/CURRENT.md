@@ -15,7 +15,7 @@ Updated 23 October 2026. This page records the active project state and where ea
 
 ## Active tasks and preview
 
-Sol plans/reviews; the two Luna infrastructure tasks are complete. P4 [#7](https://github.com/adirass-web/2Toza/issues/7) is the next implementation task; P5 [#8](https://github.com/adirass-web/2Toza/issues/8) is reserved for disjoint drafting after the shared interface contract. P6–P9 remain reserved; merge in order. Exact ownership and paths are in WORKTREES. Reconciliation tasks [#13](https://github.com/adirass-web/2Toza/issues/13) and [#15](https://github.com/adirass-web/2Toza/issues/15) link their integration PR.
+Sol plans/reviews; the two Luna infrastructure tasks are complete. P4 [#7](https://github.com/adirass-web/2Toza/issues/7) is the next implementation task; P5 [#8](https://github.com/adirass-web/2Toza/issues/8) is reserved for disjoint drafting after the shared interface contract. P6–P9 remain reserved; merge in order. Exact ownership and paths are in WORKTREES. Reconciliation PR [#17](https://github.com/adirass-web/2Toza/pull/17) records this work. Reconciliation tasks [#13](https://github.com/adirass-web/2Toza/issues/13) and [#15](https://github.com/adirass-web/2Toza/issues/15) link their integration PR.
 
 CI PR16 verification and artifact deployment passed; [immutable preview](https://df554d55.toza-v2.pages.dev), [movable p-16 alias](https://p-16.toza-v2.pages.dev). Actual checkout `965de3e9`, PR head `6c2f1c5`, base `3dd5abb`, site digest and GitHub artifact digest are retained in [deployment evidence](build-g/evidence/verified-preview-pr16.json). This is deployment evidence; browser-level acceptance has the limits recorded below.
 
