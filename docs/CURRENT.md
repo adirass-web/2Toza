@@ -2,6 +2,8 @@
 
 Updated 23 October 2026. This page records the active project state and where each claim comes from. It does not amend the approved design or copy.
 
+**Windows client checkpoint:** Cloudflare skills and OAuth are installed/authenticated; read-only queries confirmed `toza-v2` and `toza-site`. Additive PR/`verify` ruleset `25749095` is active for `build/g` and `main`, preserving ruleset `25623993`. The known Windows project checkouts were inventoried; 34 changed/untracked historical files and 10 shared local-only commits were preserved outside the original repositories, with no historical work imported. See [the client checkpoint](build-g/CLIENT-PREREQUISITES.md#windows-client-checkpoint--23-october-2026) for evidence limits and the remaining release requirements. Earlier cloud-runtime observations below remain applicable only to that runtime.
+
 ## Active project and delivery state
 
 - **Active project:** `2Toza`, coordinated in the project **Design, copyedit TOZA**. Older VIP work is project history, not an active implementation lane. The replacement site remains separate from the live VIP site until the English release cut-over.
@@ -11,7 +13,7 @@ Updated 23 October 2026. This page records the active project state and where ea
 - **Acceptance still open:** P3 visual baselines have not been approved; WebKit and manual screen-reader validation remain unverified. These gaps do not change the fixed P3 design or block planning the next chunk, but remain part of the applicable review/release evidence.
 - **Cloud environment:** Codex home is read-only; `codex mcp list --json` returned no configured servers; Cloudflare setup is incomplete. Do not report a connected Cloudflare environment. The intended split is `toza-v2` for noindex previews and `toza-site` for production; production remains reserved for the owner-run P10 cut-over.
 - **Parallel work:** isolated cloud chats do not share a local worktree. Each task must publish a uniquely named branch for the coordinator to fetch. Worktree reservations, exact paths, ports and accepted bases are tracked in [WORKTREES.md](build-g/WORKTREES.md). Client-side setup requirements are tracked in [CLIENT-PREREQUISITES.md](build-g/CLIENT-PREREQUISITES.md).
-- **Repository settings:** the active ruleset `25623993` applies to the default branch and enforces no deletion, no non-fast-forward updates, linear history and CodeQL severity checks. An additive PR/Verify ruleset request for `build/g` was denied with GitHub 403 (`Resource not accessible by integration`); this was an integration permission limitation, not an automatic review rejection. The original ruleset was not changed. The proposed additive configuration is recorded in [proposed-pr-verification-ruleset.json](build-g/proposed-pr-verification-ruleset.json) for an owner with settings access to apply or revise.
+- **Repository settings:** active ruleset `25623993` still applies to the default branch and enforces no deletion, no non-fast-forward updates, linear history and CodeQL severity checks. The client subsequently applied additive ruleset `25749095`, requiring PRs and successful `verify` checks on both `build/g` and `main`; read-back confirms `build/g` is protected. The earlier integration-only request was denied with GitHub 403; owner-authorized CLI access resolved that prerequisite. [The proposed configuration](build-g/proposed-pr-verification-ruleset.json) remains the source for the additive rule.
 
 ## Active tasks and preview
 
@@ -29,7 +31,7 @@ For the current implementation, use these sources in order:
 4. This ledger and [decisions.md](decisions.md) for dated status and decision history. Earlier chats and VIP records explain history; they do not supersede the current handoff.
 5. Earlier project documents, plans and chats where the current handoff explicitly records them as superseded or where newer owner instructions conflict.
 
-The Windows machine's uncommitted files and any additional local-only chat artifacts have not been inventoried. Their availability and reconciliation remain pending; this ledger does not claim that all chats or local files have been reconciled. Cloudflare's actual account/project configuration also remains unverified from the read-only setup context.
+The known Windows project Git checkouts have now been inventoried and their unique Git work preserved locally, as detailed in the client checkpoint. This does not claim exhaustive discovery of every local-only chat artifact or approval to import historical material. Cloudflare account/Pages access was verified on the Windows client; it remains unverified from the earlier read-only cloud setup context.
 
 ## Known source classification
 
@@ -45,7 +47,7 @@ The Windows machine's uncommitted files and any additional local-only chat artif
 | “Continue Cloudflare Cleanup” — VIP pricing/design instructions | **superseded** | Historical operational context only; client connection remains **unresolved**. |
 | “Toza — artisan brand visuals” — earlier logo options | **superseded** | Current approved outlined wordmark controls; unique Windows assets remain **unresolved**. |
 | Fixed handoff section 2 decisions | **incorporated** | Ported into V-052–V-072 without changing the source. |
-| Windows uncommitted files/local-only commits | **unresolved** | Inventory and preserve before declaring consolidation complete. |
+| Known Windows project uncommitted files/local-only commits | **incorporated** (inventory only) | Inventoried and preserved locally; historical material is not approved for import. Other local-only chat artifacts remain unresolved. |
 
 ## Verified results
 

@@ -1,6 +1,38 @@
 # Client prerequisites and remaining boundaries
 
-## Cloudflare skills and MCP — not installed
+## Windows client checkpoint — 23 October 2026
+
+The current repository is **adirass-web/2Toza**. The older **Business site** project and VIP repositories are historical references. The client work described here does not change the accepted design, copy, preview destination or owner-run production cut-over.
+
+### Cloudflare skills and OAuth — verified on the Windows client
+
+- Installed all 19 skills currently supplied by `cloudflare/skills` for Codex using `npx -y skills add cloudflare/skills --skill '*' --yes --global --agent codex`. Existing Cloudflare skills and the skills lockfile were backed up before installation. The optional beta `cf` binary was not installed; repository-pinned Wrangler remains the deployment tool.
+- Preserved the existing enabled MCP entry **cloudflare-api** at `https://mcp.cloudflare.com/mcp`; no duplicate server entry was added.
+- The installed `codex-cli 0.145.0` failed after owner consent with `Authorization server response missing required issuer`. A temporary official `@openai/codex@0.164.0` invocation completed OAuth using the same server name and URL. The installed CLI was not replaced, issuer validation was not disabled, and no credentials were put in this repository.
+- The fixed CLI reported OAuth authentication. A scoped Luna verification then completed only `GET /accounts` and `GET /accounts/{account_id}/pages/projects`. Both **toza-v2** and **toza-site** are accessible, with production branch `main` and domains `toza-v2.pages.dev` and `toza-site.pages.dev`, respectively. These reads do not establish custom-domain bindings or authorize deployment.
+- Refresh the desktop agent before expecting the newly installed skills or MCP tools in its current tool inventory. This client authentication does not establish Cloudflare access for isolated cloud tasks; keep account administration on the client until separately verified there.
+
+### Windows Git inventory and preservation — completed for the known project checkouts
+
+- The configured **Design, copyedit TOZA** folder is an empty Git repository on unborn `master`: no commits, remotes, tracked files, modifications or untracked files.
+- The older Business site project contains three linked VIP checkouts. Their exact paths, branch names and unpublished commit IDs are retained only in the local inventory. None is the active 2Toza checkout.
+- The shared historical Git repository has **10 distinct commits** not reachable from its cached remote refs, across four existing named local branches. They were preserved in a verified incremental Git bundle outside the original Git directory. The three worktree reports repeat the same shared refs; this is not 30 distinct commits. The bundle requires six existing prerequisite commits, which remain in the untouched original repository.
+- Preserved **34 modified or untracked files** from `VIP-copy-preview`, checking every copy against its source with SHA-256. The other two working trees are clean. Backup files and the detailed inventory remain local to the client task and are not published in this repository.
+- These comparisons use cached remote refs; no historical remote was fetched. Original worktrees, branches, files and remotes were left unchanged. No historical copy, prices, analytics or implementation was imported into 2Toza. Historical material still requires provenance/spec review before any future import.
+
+### GitHub PR and verification gates — active
+
+Owner-authorized GitHub CLI access applied additive ruleset **25749095**, named **PR and verification gates — integration and release**. Read-back confirms it is active for `refs/heads/build/g` and `refs/heads/main`, requiring pull requests, resolved review threads, squash merging, and successful `verify` with the branch up to date. The rule has no bypass actors. The approving-review minimum remains zero, as proposed.
+
+Existing active ruleset **25623993** was read before the change and retained: default-branch deletion and non-fast-forward protection, linear history, and CodeQL high/error checks. `build/g` now reports `protected: true`. The earlier integration-only denial below remains historical evidence, not the current settings state.
+
+The production environments query still returns an empty list. A protected production environment, production credential binding, WebKit/manual screen-reader acceptance and owner-run release remain outstanding release prerequisites.
+
+## Original cloud-runtime findings (historical context)
+
+The following records describe the earlier cloud setup. The Windows checkpoint above supersedes their client inventory, installation and repository-settings status; it does not claim to alter the cloud runtime's read-only configuration.
+
+### Cloudflare skills and MCP — original cloud prerequisite
 
 Official source: https://developers.cloudflare.com/agent-setup/prompt.md (previously fetched in this task; a later refresh returned HTTP 403).
 Selected scope: skills + MCP; no optional beta `cf` CLI. Keep repository-pinned Wrangler.
