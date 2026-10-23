@@ -52,3 +52,70 @@ Rules: R-1 the approved copy is the fact base, no fact-checking or risk assessme
 | V-046 | 2026-10-18 | Owner approved the Toza voice pass and its new wording. Home links to About as "Why Toza?" (under the method line); the repeated method block on Home is removed; the Conditions provider sentence stays as is. Stages options A/B/C rejected ("below mediocre"); redesign pending. |
 
 Open owner decisions are listed at the end of `strategy/2a-message-architecture.md` and in the project handoff.
+
+## Current delivery decisions
+
+The entries above are historical decisions from the earlier VIP/v2 work. Apply them only where they remain consistent with the current approved replacement specification. For current source precedence, project state, and unresolved inventory, see [CURRENT.md](CURRENT.md). The approved fixed specification remains in [HANDOFF-toza-current.md](build-g/HANDOFF-toza-current.md); this note does not alter it.
+
+| ID | Date | Decision |
+|---|---|---|
+| V-047 | 2026-10-23 | `2Toza`, coordinated in **Design, copyedit TOZA**, is the sole active project. VIP is historical. Keep the replacement separate from the live site until the owner-run English release cut-over. |
+| V-048 | 2026-10-23 | The current handoff is the fixed implementation specification. Later owner instructions supersede it; historical chats and older project documents do not override it. Preserve the handoff unchanged. |
+| V-049 | 2026-10-23 | Execute P4 through P9 in the documented order, with one PR per chunk into `build/g`. Keep `main` and production untouched until P10; Hebrew/RTL follows English launch in P11. |
+| V-050 | 2026-10-23 | Use `toza-v2` for noindex previews and reserve `toza-site` for production cut-over. Cloudflare setup is incomplete and actual account configuration is unverified. |
+| V-051 | 2026-10-23 | Separate cloud chats use unique task branches and send commits to the primary integrator; they do not share a local worktree. The coordinator's worktree and port registry is [WORKTREES.md](build-g/WORKTREES.md). |
+
+## Current fixed specification
+
+The following entries port the current approved choices in section 2 of [HANDOFF-toza-current.md](build-g/HANDOFF-toza-current.md). They record that specification without changing or reopening it. Apply them with the current delivery decisions above.
+
+### Look and layout
+
+| ID | Date | Decision |
+|---|---|---|
+| V-052 | 2026-10-23 | Use the Aspen colour-box grid: 12 columns, 10 px gap, 20 px margin; boxes snap to 25% or 50%, with deliberate empty cells showing the ground. Sticky boxes use native `position: sticky`. Radius 0, no borders or shadows. Phones use 4 columns, a plain stack and no sticky boxes. |
+| V-053 | 2026-10-23 | Light tokens: ground `#E0E0E0`, boxes `#D9D9D9`, white, ink `#232323`, hairline `#C4C7C9`, node `#8A8F93`, muted `#595959`, mint `#A1FFCB`. Dark tokens: ground `#0E1012`, stone `#171A1D`, sand `#20252A`, text `#EEF0F2`, muted `#9AA3A9`, hairline `#2C3237`, node `#5A636A`; mint is unchanged. Mint is fill only; use ink text on mint, never mint text or links. Cool-grey palette A is fixed; warm stone/sand was rejected. |
+| V-054 | 2026-10-23 | Every page has an icon-only theme toggle using `data-theme` on `<html>` and `localStorage["tz-theme"]`; default light, no-flash inline script, hidden without JavaScript. |
+| V-055 | 2026-10-23 | Use Frank Ruhl Libre for headlines, situation lines, tier names and all paragraphs; Assistant for prices, tier item lists, labels, navigation, buttons and footer. Fonts support Latin and Hebrew and are self-hosted. No italics or synthesized italics; voice comes from size and weight. Body text is at least 17 px. Labels are uppercase, `.75rem`, `.12em` tracking and muted. Prices use lining and tabular figures and remain static. |
+| V-056 | 2026-10-23 | The wordmark is *toza* in Bona Nova italic with 閉ざす vertically, as an outlined SVG. The footer uses the same lockup at header-logo size. |
+| V-057 | 2026-10-23 | Use logical CSS properties for RTL readiness. No color literals outside tokens, no `!important` except reduced-motion, no tracking, and no paid licences. Copy comes only from content files; list new content keys in the PR. |
+
+### Shell
+
+| ID | Date | Decision |
+|---|---|---|
+| V-058 | 2026-10-23 | The header is sticky and solid on all pages. WhatsApp and Signal use round monochrome Simple Icons (CC0), with targets at least 44 px and accessible names “WhatsApp” and “Signal”. They appear in the header from 768 px and in a bottom bar below 768 px. |
+| V-059 | 2026-10-23 | There is no floating contact group or “Call me back” anywhere. Attorneys retain “Discuss a referral” as a text button. Flowbite collapse is for the mobile navbar only; FAQ and Conditions use native `<details>`. Photo and icon credits go in the About colophon; `docs/build-g/CREDITS.md` is the interim record. |
+
+### Home
+
+| ID | Date | Decision |
+|---|---|---|
+| V-060 | 2026-10-23 | Home order is photo hero → situations → method line → specimen → fees → close → footer. The full-screen hero overlays text on the photo, with H1 bottom-left and lead bottom-right; no hero contact buttons. |
+| V-061 | 2026-10-23 | Home has four photo situation boxes. “Or before anything happens. You don't need a known incident to begin.” sits on a mint box. They are static in P3; the pinned scene is P4 motion. |
+| V-062 | 2026-10-23 | The method statement starts in column 3 and links “Why Toza?” to About. Stage drawings appear on How it works only, not Home. Keep the specimen block. |
+| V-063 | 2026-10-23 | Home fees show “Start here” assessment as a 50% mint box and all three tiers as boxes with one shared top edge; none is recommended. Prices come only from `facts.json`. The close is a 50% ink panel, 25% hand-photo box and 25% dotted grey box. |
+| V-064 | 2026-10-23 | Reuse the Study G Unsplash set: Govedarovic hero with blurred screen; J. Lo hangers; M. Charkhgard window; Boston Public Library parlour; A. Curcan stairwell; V. Gariev hand. Credits appear on About. The hero source image is 1620 px and soft on large screens. |
+
+### Other pages
+
+| ID | Date | Decision |
+|---|---|---|
+| V-065 | 2026-10-23 | Home and the four situation pages have photo heroes; other pages are typographic. About has no portrait, uses a typographic layout plus one situation photo, and names Dr. Tabansky on About only. |
+| V-066 | 2026-10-23 | How it works contains the three stages as sticky boxes, each with “You keep”. |
+
+### Motion
+
+| ID | Date | Decision |
+|---|---|---|
+| V-067 | 2026-10-23 | P4 motion includes hero photo drift; a once-drawn mint headline underline and frame lines; pinned situations with four holds and a grid-growing image box to full bleed, ending on the stairwell; method-line word reveal; ambient dots in one close box; and tier fade-up. |
+| V-068 | 2026-10-23 | Excluded motion includes a 3D mark, odometer, count-up, stacked full-screen images, “(1).” numbering, carousels, intro loader and endless marquee. |
+| V-069 | 2026-10-23 | Motion must have a reduced-motion fallback and leave the page complete without JavaScript. It must not delay or hide channel buttons. Use only transform, opacity and clip-path. Motion engine is the `motion` npm package via esbuild; native sticky handles pinning. |
+
+### Process and release
+
+| ID | Date | Decision |
+|---|---|---|
+| V-070 | 2026-10-23 | Chunk order is P3 grid and static Home → P4 Home motion → P5 situation template and four pages → P6 How it works → P7 Pricing → P8 Attorneys and About → P9 FAQ and Conditions → P10 English release readiness → P11 Hebrew/RTL just after English launch. Other pages adopt the grid page by page. |
+| V-071 | 2026-10-23 | Use one PR per chunk into `build/g`, with CI green and the existing owner review/approval for each chunk. Merge `build/g` to `main` only at the release gate. Keep `main` and VIP untouched until then. No file deletions without owner authorization. Rollback is reverting one squashed PR; VIP stays live until cut-over. |
+| V-072 | 2026-10-23 | Existing gates are in `docs/build-g/GATES.md`; visual regression and manual checks are not in CI. P10's DNS/Cloudflare cut-over runbook is for the owner to execute. The owner's current full-execution authorization governs implementation; do not restart discovery or require a fresh P4 approval interview. |
