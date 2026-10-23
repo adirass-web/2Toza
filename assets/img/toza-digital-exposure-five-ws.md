@@ -23,9 +23,9 @@ Labels remain real SVG text. Icons and phone are vector paths and shapes. The vi
 
 ## Behavior
 
-The static SVG always shows the full illustration. The preview progressively enhances it after loading: layers separate once when the illustration enters view, routes draw, then question labels appear. Selecting a question cancels the reveal and highlights only its source categories. Replay is explicit; there is no continuous loop. Reduced-motion preference shows the final state immediately and disables animation. Narrow screens contain horizontal scrolling within the illustration region to keep detail readable.
+The static SVG always shows the full illustration. The preview progressively enhances it after loading: layers separate once when the illustration enters view, routes draw, then question labels appear. Selecting a question cancels the reveal and highlights only its source categories. Replay is explicit; there is no continuous loop. Reduced-motion preference shows the final state immediately and disables automatic animation. Explicitly selecting Replay runs the sequence on request. Narrow screens contain horizontal scrolling within the illustration region to keep detail readable.
 
-To animate or recolor individual SVG groups in a production page, inline the trusted SVG markup or use a same-origin object as this preview does. An ordinary img element displays the static asset but does not expose its internal elements to page scripts. Prefix the IDs if multiple inline instances are used on one page.
+The previews fetch trusted same-origin SVG assets and inline the parsed SVG elements. This works with the site’s X-Frame-Options: DENY policy, which blocks embedded object documents. An ordinary img element displays the static asset but does not expose its internal elements to page scripts. The comparison preview prefixes SVG IDs to keep its multiple inline instances unique.
 
 ## Meaning
 
@@ -34,3 +34,7 @@ Connections are illustrative relationships, not claims that every app collects e
 ## Validation
 
 Browser checks covered all five question filters, replay, cancellation after the selection transition, final settled state, reduced motion, mobile page overflow, JavaScript-disabled SVG rendering, all seventeen text labels within the viewBox, and no page errors. The diagram contains four layers, twelve categories, and fourteen routes.
+
+## Additional directions
+
+The comparison at `../previews/digital-exposure-variants.html` now shows directions 02 (Constellation), 03 (Woven traces), and 04 (Orbital map). Directions 01 and 05 were rejected and removed from the comparison; their draft SVG files remain archived. Each remaining SVG has twelve categories and sixteen routes. Browser verification includes inline playback with the deployed DENY/nosniff headers and manual playback under both motion preferences.
