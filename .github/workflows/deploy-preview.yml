@@ -1,65 +1,18 @@
-name: Deploy preview (toza-v2)
+name: Deploy preview (retired)
 
-# Deploys ONLY to the Cloudflare Pages project "toza-v2" (noindex). Branch previews: <branch>.toza-v2.pages.dev
-# Never deploys to the production project of the approved site.
+# Preview deployment moved into the Verify workflow's dependent deploy_preview
+# job. That job downloads the artifact from the successful Verify run and
+# records its repository, ref, SHA, run attempt, and artifact hash. This file is
+# retained to avoid deleting a handoff-tracked workflow; it has no deploy path.
 on:
-  push:
-    branches: [main, 'design/**']
-  pull_request:
+  workflow_call:
 
 permissions:
   contents: read
 
-concurrency:
-  group: preview-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: true
-
 jobs:
-  deploy:
-    # Same-repo branches only; secrets are not exposed to forks.
-    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+  retired:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    env:
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CF_PROJECT_NAME: toza-v2
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - run: npm run check
-      - name: Require deployment secrets
-        run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "Cloudflare secrets not set; skipping deploy (build and checks still ran)."
-            echo "SKIP=1" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          ACC="$(printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | tr 'A-F' 'a-f')"
-          if ! [[ "$ACC" =~ ^[0-9a-f]{32}$ ]]; then
-            echo "::error::CLOUDFLARE_ACCOUNT_ID is ${#CLOUDFLARE_ACCOUNT_ID} characters; a Cloudflare account ID is exactly 32 hex characters (0-9, a-f). Check you copied the Account ID (not the Zone ID, a URL or the account name), with no spaces or line breaks."
-            exit 1
-          fi
-          echo "CLOUDFLARE_ACCOUNT_ID=$ACC" >> "$GITHUB_ENV"
-          if [[ "$CLOUDFLARE_API_TOKEN" =~ [[:space:]] ]]; then
-            echo "::error::CLOUDFLARE_API_TOKEN contains whitespace. Re-create the token and paste it without spaces or line breaks."
-            exit 1
-          fi
-      - name: Ensure Pages project exists
-        if: env.SKIP != '1'
-        run: |
-          set -euo pipefail
-          API="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}"
-          if ! curl -fsS "$API" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" >/dev/null; then
-            curl -fsS -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
-              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" -H "Content-Type: application/json" \
-              --data "{\"name\":\"${CF_PROJECT_NAME}\",\"production_branch\":\"main\"}" >/dev/null
-          fi
-      - name: Deploy
-        if: env.SKIP != '1'
-        run: npm run pages:deploy -- _site --project-name "$CF_PROJECT_NAME" --branch "${{ github.head_ref || github.ref_name }}" --commit-hash "$GITHUB_SHA"
+      - name: Explain the retired workflow
+        run: echo "Preview deployment is handled by the Verify workflow's validated-artifact job."
