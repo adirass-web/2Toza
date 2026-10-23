@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "repository": "adirass-web/2Toza",
+  "source_branch": "ops/verified-previews",
+  "built_sha": "965de3e9a05948fa29eac488803cfc487f439650",
+  "source_head_sha": "6c2f1c54695b0c871d20d9945be64704e6672559",
+  "source_base_sha": "3dd5abb535d144e37fa6dda0752686ec8dc2c767",
+  "event": "pull_request",
+  "run_id": "40005721122",
+  "run_attempt": "1",
+  "artifact_name": "toza-site-40005721122-1",
+  "preview_branch": "p-16",
+  "site_sha256": "72672d00e90f74370171bb20b3e8ff7d86380ffda9637c74e0763b75b7461111",
+  "workflow_run_url": "https://github.com/adirass-web/2Toza/actions/runs/40005721122",
+  "artifact_wrapper_digest": "sha256:dcdd9d2c188a60c492abd7f7108a0ddf39a68fd5c0054d9dded152bbe3a6bca1",
+  "deployment_urls": [
+    "https://df554d55.toza-v2.pages.dev",
+    "https://p-16.toza-v2.pages.dev"
+  ],
+  "verify": "passed",
+  "deploy_preview": "passed",
+  "duplicate_feature_push_runs": 0,
+  "independent_artifact_digest_check": "passed"
+}
