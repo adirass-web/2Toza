@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-labelledby="v4-title v4-desc">
+  <title id="v4-title">04 Orbital map</title>
+  <desc id="v4-desc">A low phone is surrounded by three elliptical information orbits, like a technical astrolabe. Twelve digital categories connect to who, what, where, when and why. Connections are illustrative; why indicates inferred intentions.</desc>
+  <style>:root{--ink:#263631;--muted:#737e74;--line:#b1b7ab;--paper:#f5f1e8}svg{background:var(--paper)}path,line,rect,circle,ellipse,polyline,polygon{vector-effect:non-scaling-stroke}text{fill:var(--ink);font-family:Arial,Helvetica,sans-serif}.icon{fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.category-label{font-size:17px}.question-label{font:42px Georgia,'Times New Roman',serif}.plane{fill:none;stroke:var(--line);stroke-width:1}.phone{fill:var(--paper);stroke:var(--ink);stroke-width:1.7;stroke-linejoin:round}.detail{fill:none;stroke:var(--muted);stroke-width:.9}.route{fill:none;stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;stroke-linecap:round;opacity:.6}.route[data-question=why]{stroke-dasharray:5 6}.dot{fill:var(--ink)}.leader{fill:none;stroke:var(--line);stroke-width:.8}.is-dim{opacity:.12}.is-active{opacity:1;stroke:var(--ink);stroke-width:1.8}.is-selected .icon{stroke-width:2.4}.category,.question,.route{transition:opacity .25s ease}@media(prefers-reduced-motion:reduce){.category,.question,.route{transition:none}}</style>
+  <g id="orbits" class="motion-layer" data-collapse-x="0" data-collapse-y="30">
+    <ellipse class="plane" cx="700" cy="450" rx="530" ry="290" transform="rotate(-12 700 450)"/>
+    <ellipse class="plane" cx="700" cy="450" rx="425" ry="220" transform="rotate(-12 700 450)"/>
+    <ellipse class="plane" cx="700" cy="450" rx="320" ry="145" transform="rotate(-12 700 450)"/>
+  </g>
+  <g id="phone" transform="translate(550 410) rotate(-7) scale(0.88)">
+    <path class="phone" d="M0 20Q0 5 22 0L420 88Q444 92 432 108L322 181Q313 187 293 183L-100 96Q-119 92-108 78Z"/>
+    <path class="phone" d="M-111 83v15q0 9 14 12l389 87q20 5 31-2l109-73v-17M-100 96l393 87q20 5 29-2l109-73"/>
+    <path class="detail" d="M15 19 416 108 310 176-96 86Z"/>
+    <path class="detail" d="m-65 110 30 7v6l-30-7m48 4 42 9v6l-42-9M295 185v14"/>
+  </g>
+  <g id="connections">
+    <path id="connection-who-relationships" class="route" data-question="who" data-source="relationships" d="M398 342Q700 250 100 108"/>
+    <path id="connection-who-photos" class="route" data-question="who" data-source="photos" d="M989 244Q700 250 100 108"/>
+    <path id="connection-who-identity" class="route" data-question="who" data-source="identity" d="M784 578Q700 250 100 108"/>
+    <path id="connection-who-shared-access" class="route" data-question="who" data-source="shared-access" d="M397 540Q700 250 100 108"/>
+    <path id="connection-what-messages" class="route" data-question="what" data-source="messages" d="M192 457Q700 250 1220 103"/>
+    <path id="connection-what-documents" class="route" data-question="what" data-source="documents" d="M1003 360Q700 250 1220 103"/>
+    <path id="connection-what-payments" class="route" data-question="what" data-source="payments" d="M821 146Q700 250 1220 103"/>
+    <path id="connection-what-health" class="route" data-question="what" data-source="health" d="M616 322Q700 250 1220 103"/>
+    <path id="connection-where-location" class="route" data-question="where" data-source="location" d="M1208 443Q700 690 90 738"/>
+    <path id="connection-where-photos" class="route" data-question="where" data-source="photos" d="M989 244Q700 690 90 738"/>
+    <path id="connection-where-bluetooth" class="route" data-question="where" data-source="bluetooth" d="M411 656Q700 690 90 738"/>
+    <path id="connection-when-calendar" class="route" data-question="when" data-source="calendar" d="M1002 558Q700 690 1250 678"/>
+    <path id="connection-when-messages" class="route" data-question="when" data-source="messages" d="M192 457Q700 690 1250 678"/>
+    <path id="connection-why-browsing" class="route" data-question="why" data-source="browsing" d="M579 754Q1040 690 830 848"/>
+    <path id="connection-why-calendar" class="route" data-question="why" data-source="calendar" d="M1002 558Q1040 690 830 848"/>
+    <path id="connection-why-payments" class="route" data-question="why" data-source="payments" d="M821 146Q1040 690 830 848"/>
+  </g>
+  <g id="orbital-categories">
+    <g id="category-messages" class="category" data-category="messages">
+      <g class="icon" transform="translate(192 457) scale(0.66)">
+        <path d="M-25-19h50v32H-9l-13 12V13h-3zM-15-8h30M-15 0h30M-15 8H3"/>
+      </g>
+      <text class="category-label" x="192" y="494" text-anchor="middle">Messages</text>
+    </g>
+    <g id="category-relationships" class="category" data-category="relationships">
+      <g class="icon" transform="translate(398 342) scale(0.66)">
+        <path d="M0 25C-44-3-25-38-2-15L0-12l2-3C25-38 44-3 0 25Z"/>
+      </g>
+      <text class="category-label" x="398" y="379" text-anchor="middle">Relationships</text>
+    </g>
+    <g id="category-health" class="category" data-category="health">
+      <g class="icon" transform="translate(616 322) scale(0.66)">
+        <path d="M-31 0h17l7-19L3 23l9-31 6 8h15"/>
+      </g>
+      <text class="category-label" x="616" y="359" text-anchor="middle">Health</text>
+    </g>
+    <g id="category-payments" class="category" data-category="payments">
+      <g class="icon" transform="translate(821 146) scale(0.66)">
+        <rect x="-28" y="-18" width="56" height="36" rx="5"/>
+        <path d="M-28-7h56M-18 8h14"/>
+      </g>
+      <text class="category-label" x="821" y="183" text-anchor="middle">Payments</text>
+    </g>
+    <g id="category-photos" class="category" data-category="photos">
+      <g class="icon" transform="translate(989 244) scale(0.66)">
+        <rect x="-26" y="-22" width="52" height="44" rx="4"/>
+        <circle cx="12" cy="-10" r="4"/>
+        <path d="m-25 16 16-18 13 14 7-8 15 16"/>
+      </g>
+      <text class="category-label" x="989" y="281" text-anchor="middle">Photos</text>
+    </g>
+    <g id="category-documents" class="category" data-category="documents">
+      <g class="icon" transform="translate(1003 360) scale(0.66)">
+        <path d="M-18-27H8l14 14v40h-40zM8-27v14h14M-8-1h20M-8 8h20M-8 17H6"/>
+      </g>
+      <text class="category-label" x="1003" y="397" text-anchor="middle">Documents</text>
+    </g>
+    <g id="category-location" class="category" data-category="location">
+      <g class="icon" transform="translate(1208 443) scale(0.66)">
+        <path d="M0 30C-10 15-23 1-23-12a23 23 0 0 1 46 0C23 1 10 15 0 30Z"/>
+        <circle cy="-12" r="8"/>
+      </g>
+      <text class="category-label" x="1208" y="480" text-anchor="middle">Location</text>
+    </g>
+    <g id="category-calendar" class="category" data-category="calendar">
+      <g class="icon" transform="translate(1002 558) scale(0.66)">
+        <rect x="-27" y="-21" width="54" height="46" rx="4"/>
+        <path d="M-16-29v16M16-29v16M-27-6h54"/>
+        <circle cx="-14" cy="5" r="2"/>
+        <circle cy="5" r="2"/>
+        <circle cx="14" cy="5" r="2"/>
+        <circle cx="-14" cy="17" r="2"/>
+        <circle cy="17" r="2"/>
+        <circle cx="14" cy="17" r="2"/>
+      </g>
+      <text class="category-label" x="1002" y="595" text-anchor="middle">Calendar</text>
+    </g>
+    <g id="category-identity" class="category" data-category="identity">
+      <g class="icon" transform="translate(784 578) scale(0.66)">
+        <rect x="-31" y="-22" width="62" height="44" rx="5"/>
+        <circle cx="-13" cy="-6" r="7"/>
+        <path d="M-25 15c0-16 24-16 24 0M5-9h17M5 0h17M5 9h11"/>
+      </g>
+      <text class="category-label" x="784" y="615" text-anchor="middle">Identity</text>
+    </g>
+    <g id="category-browsing" class="category" data-category="browsing">
+      <g class="icon" transform="translate(579 754) scale(0.66)">
+        <circle r="27"/>
+        <ellipse rx="12" ry="27"/>
+        <path d="M-27 0h54M-23-13h46M-23 13h46M0-27v54"/>
+      </g>
+      <text class="category-label" x="579" y="791" text-anchor="middle">Browsing</text>
+    </g>
+    <g id="category-bluetooth" class="category" data-category="bluetooth">
+      <g class="icon" transform="translate(411 656) scale(0.66)">
+        <path d="M-15-17 15 13 0 28v-56l15 15-30 30"/>
+      </g>
+      <text class="category-label" x="411" y="693" text-anchor="middle">Bluetooth</text>
+    </g>
+    <g id="category-shared-access" class="category" data-category="shared-access">
+      <g class="icon" transform="translate(397 540) scale(0.66)">
+        <circle cx="-21" r="8"/>
+        <circle cx="21" cy="-22" r="8"/>
+        <circle cx="21" cy="22" r="8"/>
+        <path d="m-14-4 28-14M-14 4l28 14"/>
+      </g>
+      <text class="category-label" x="397" y="577" text-anchor="middle">Shared access</text>
+    </g>
+  </g>
+  <g id="questions">
+    <g id="question-who" class="question" data-question="who">
+      <text class="question-label" x="100" y="120" text-anchor="start">Who</text>
+    </g>
+    <g id="question-what" class="question" data-question="what">
+      <text class="question-label" x="1220" y="115" text-anchor="end">What</text>
+    </g>
+    <g id="question-where" class="question" data-question="where">
+      <text class="question-label" x="90" y="750" text-anchor="start">Where</text>
+    </g>
+    <g id="question-when" class="question" data-question="when">
+      <text class="question-label" x="1250" y="690" text-anchor="end">When</text>
+    </g>
+    <g id="question-why" class="question" data-question="why">
+      <text class="question-label" x="830" y="860" text-anchor="start">Why?</text>
+    </g>
+  </g>
+</svg>
