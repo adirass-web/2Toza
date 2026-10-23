@@ -204,11 +204,17 @@ function checkBlock(block, where, expectType, col, count = "nested") {
   if (!def) { err(where, `unknown block type "${block.type}"`); return; }
   if (expectType && type !== expectType) err(where, `expected ${expectType}, got ${type}`);
   if (count) { const k = count === "nested" ? `${type} (nested)` : type; blockCounts.set(k, (blockCounts.get(k) || 0) + 1); }
-  const { type: _t, id, ref: _r, ...rest } = block;
+  const { type: _t, id, ref: _r, layout, ...rest } = block;
+  if (layout !== undefined && !model.layouts?.[layout]?.includes(type))
+    err(where, `unsupported layout "${layout}" for ${type}`);
   if (id !== undefined) checkField({ kind: "id" }, id, `${where}.id`, `${type}.id`, col);
   if (model.required_ids.includes(type) && !id) err(where, `${type} needs an id (anchor)`);
   for (const f of Object.keys(rest)) if (!def.fields[f]) err(`${where}.${f}`, `field not in model for ${type}`);
-  for (const [f, spec] of Object.entries(def.fields)) checkField(spec, block[f], `${where}.${f}`, `${type}.${f}`, col);
+  for (const [f, spec] of Object.entries(def.fields)) {
+    // Photo heroes use the shell's contact controls, without redundant hero actions.
+    const fieldSpec = type === "hero" && layout === "box" && f === "actions" ? { ...spec, required: false } : spec;
+    checkField(fieldSpec, block[f], `${where}.${f}`, `${type}.${f}`, col);
+  }
   collectPrice(block, col, where);
   implicitStrings(block, col, where);
 }

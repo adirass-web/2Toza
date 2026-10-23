@@ -10,6 +10,8 @@
   --color-text: #232323;  /* Body text. Also the semantic text colour. */
   --color-muted: #595959;  /* Secondary text. 7.0:1 on paper (light). */
   --color-mint: #a1ffcb;  /* Mint. Fill and small marks only (D84): never text, never a link colour. */
+  --color-scrim: #0e1012;  /* Photo scrim: the dark ground, in both themes (gradients under text over photographs). */
+  --color-on-photo: #ffffff;  /* Text and buttons over photographs and scrims: white, in both themes. */
   --color-on-mint: #232323;  /* Text on mint, both themes. 13.2:1. */
   --color-sand: #d9d9d9;  /* Cool grey (Aspen box). Second recessed tone (tier boxes). */
   --color-node: #8a8f93;  /* Frame-line nodes (decorative, not text). */
@@ -125,6 +127,8 @@
   --spacing-gutter-wide: var(--layout-gutter-wide);  /* Side gutter from sm (sm:px-gutter-wide). */
   --spacing-section: var(--layout-section-padding);  /* Section vertical padding below lg (py-section). */
   --spacing-bar: var(--layout-bar);  /* Phone message bar height (h-bar, pb-bar). */
+  --spacing-edge: var(--layout-margin);  /* Outer page margin of the full-bleed box grid, 20px (px-edge). */
+  --spacing-cell: var(--layout-gap);  /* Box-grid gap, 10px (gap-cell). */
   --spacing-section-wide: var(--layout-section-padding-wide);  /* Section vertical padding from lg (lg:py-section-wide). */
   --focus-width: 3px;  /* Focus outline width (:focus-visible). */
   --focus-offset: 3px;  /* Focus outline offset. */

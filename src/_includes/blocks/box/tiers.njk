@@ -1,0 +1,31 @@
+{#- Box layout, fees (Study G D82): a quiet label + statement in the sticky first column; the first step as a 50% mint box; the three tiers as grey boxes on one shared top edge
+    (grey, sand, grey; nothing marked recommended); notes under the tiers; the link. Empty cells stay empty. Phone: plain stack. Figures from facts.json. -#}
+{% from "blocks/_macros.njk" import price, lnk, features with context %}
+{% set fs = block.first_step %}
+<section id="pricing" class="scroll-mt-24 pb-12 lg:pb-20">
+  <div class="grid grid-cols-1 gap-cell px-edge md:grid-cols-4">
+    <div class="grid content-start gap-4 pb-4 md:sticky md:top-24 md:col-start-1 md:row-span-3 md:row-start-1 md:self-start md:pe-6">
+      <h2 class="flex items-center gap-2 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading"><span class="block size-1.5 shrink-0 bg-mint" aria-hidden="true"></span>{{ block.heading }}</h2>
+      {% if block.statement %}<p class="text-body-subtle">{{ block.statement }}</p>{% endif %}
+    </div>
+    {% if fs %}
+    <div class="flex flex-col gap-4 bg-mint p-6 text-on-mint md:col-span-2 md:col-start-2 md:row-start-1 lg:p-8">
+      {% if fs.tag %}<p class="font-sans text-xs font-semibold tracking-wide uppercase">{{ fs.tag }}</p>{% endif %}
+      <h3 class="font-serif text-2xl leading-tight lg:text-3xl">{{ fs.name }}</h3>
+      <p>{{ price(fs, 'text-5xl lg:text-7xl') }}</p>
+      <p class="text-lg">{{ fs.credit }}</p>
+      {% if fs.body %}<p class="max-w-xl">{{ fs.body }}</p>{% endif %}
+      {% if fs.link %}<p>{{ lnk(fs.link, "mint") }}</p>{% endif %}
+    </div>
+    {% endif %}
+    {% for tier in block.tiers %}
+    <div class="flex flex-col gap-4 p-6 text-heading md:row-start-2 lg:p-8 {{ ['md:col-start-2', 'md:col-start-3', 'md:col-start-4'][loop.index0] }} {{ 'bg-sand' if loop.index == 2 else 'bg-paper-deep' }}">
+      <h3 class="font-serif text-2xl leading-tight md:min-h-[2.5em] lg:text-3xl">{{ tier.name }}</h3>
+      <p>{{ price(tier, 'text-5xl lg:text-6xl') }}</p>
+      <p class="text-lg text-body">{{ tier.for }}</p>
+      {{ features(tier.items, 'mt-2') }}
+    </div>
+    {% endfor %}
+    {% if block.notes %}<div class="space-y-3 pt-4 text-body-subtle md:col-span-3 md:col-start-2 md:row-start-3">{% for note in block.notes %}{{ note.html | safe }}{% endfor %}{% if block.link %}<p>{{ lnk(block.link) }}</p>{% endif %}</div>{% endif %}
+  </div>
+</section>

@@ -44,3 +44,8 @@
   /* Frank Ruhl Libre has no italic or bold-italic file; the browser must not fake one (D99). No Tailwind utility sets font-synthesis. */
   html { font-synthesis: none; }
 }
+
+@layer components {
+  /* Dotted grey box (Aspen, A4): a static dot field on the cool grey. A radial-gradient grid has no Tailwind utility; the drift is added by the motion chunk. */
+  .dot-field { background-color: var(--color-paper-deep); background-image: radial-gradient(circle, var(--color-node) 1.3px, transparent 1.8px); background-size: 14px 14px; background-position: 7px 7px; }
+}

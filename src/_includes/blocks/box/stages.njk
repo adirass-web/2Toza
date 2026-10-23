@@ -1,0 +1,10 @@
+{#- Box layout, method line: the statement on its own (owner, 20 Oct: the stage drawings leave Home; the stages live on How it works). Text from column 3 on a 12-column grid (D86). -#}
+{% from "blocks/_macros.njk" import lnk with context %}
+<section{% if block.id %} id="{{ block.id }}"{% endif %} class="scroll-mt-24 py-16 lg:py-28">
+  <div class="grid grid-cols-4 gap-x-cell px-edge md:grid-cols-12">
+    <div class="col-span-4 md:col-span-8 md:col-start-3">
+      <p class="font-serif text-3xl leading-tight text-balance text-heading lg:text-5xl">{{ block.statement }}</p>
+      {% if block.statement_link %}<p class="mt-6">{{ lnk(block.statement_link) }}</p>{% endif %}
+    </div>
+  </div>
+</section>

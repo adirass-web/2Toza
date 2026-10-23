@@ -230,6 +230,10 @@ export function buildPages(src, pages, { err = throwing } = {}) {
     if (!def) { err(where, `unknown block type "${b.type}"`); return b; }
     const o = { type: b.type };
     if (b.id !== undefined) o.id = b.id;
+    if (b.layout !== undefined) {
+      if (!model.layouts?.[b.layout]?.includes(b.type)) err(where, `unsupported layout "${b.layout}" for ${b.type}`);
+      else o.layout = b.layout;
+    }
     const variant = b.type === "hero" ? "hero" : "full";
     fields(def.fields, b, where, { ...ctx, variant }, o);
     withPrice(o, b, where);
