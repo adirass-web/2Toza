@@ -292,7 +292,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: [firefox, webkit]
+        # Owner deferred Firefox to separate diagnosis; it is not a P4 pass.
+        browser: [webkit]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -304,6 +305,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Check Home motion in ${{ matrix.browser }}
+        timeout-minutes: 5
         env:
           HOME_MOTION_BROWSERS: ${{ matrix.browser }}
           HOME_MOTION_ARTIFACT_DIR: ${{ runner.temp }}/toza-home-motion-${{ matrix.browser }}
