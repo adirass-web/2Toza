@@ -8,6 +8,7 @@ dir: ltr
 
 blocks:
   - type: hero
+    layout: box
     heading: Talk through your concerns. Then make the changes together.
     lead: You do not have to work out what is wrong before you meet. Toza assesses your devices and accounts with you, hardens them around your risks and tests the changes.
     byline: none
@@ -15,6 +16,7 @@ blocks:
     actions: [whatsapp, signal]
 
   - type: steps
+    layout: box
     heading: Three stages, one method.
     lead: Each stage has its own result.
     keep_label: You keep
@@ -41,6 +43,7 @@ blocks:
     record_date: "{shared:stages.record_date}"
 
   - type: offer
+    layout: box
     tag: "{shared:labels.start_here}"
     heading: A senior check-up of your digital life.
     name: "{shared:offers.assessment.name}"
@@ -56,6 +59,7 @@ blocks:
       kind: more
 
   - type: tiers
+    layout: box
     detail: summary
     heading: Then the protection that fits your household.
     tiers:
@@ -78,5 +82,6 @@ blocks:
       kind: more
 
   - type: contact
+    layout: box
     ref: contact
 ---

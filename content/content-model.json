@@ -895,7 +895,7 @@
   "layout": "Optional: `box` renders the block in the colour-box grid (build/g); absent = the current layout"
   },
   "layouts": {
-    "box": ["hero", "situation-doors", "recognition", "text", "stages", "method-statement", "price-summary", "specimen", "tiers", "contact"]
+    "box": ["hero", "steps", "offer", "situation-doors", "recognition", "text", "stages", "method-statement", "price-summary", "specimen", "tiers", "contact"]
   },
   "required_ids": [
     "faq-group",

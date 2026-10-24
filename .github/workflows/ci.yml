@@ -67,6 +67,11 @@ jobs:
         run: npm run check:situations
         env:
           SITUATION_ARTIFACT_DIR: ${{ runner.temp }}/toza-situations
+      - name: Check How it works process behavior in Chromium
+        run: npm run check:process
+        env:
+          PROCESS_BROWSERS: chromium
+          PROCESS_ARTIFACT_DIR: ${{ runner.temp }}/toza-process
       - run: npm run check:perf
       # Anchors: every id that a page on main links to must still exist (deep links keep working).
       - if: github.ref != 'refs/heads/main'
@@ -167,6 +172,15 @@ jobs:
         with:
           name: toza-situations-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/toza-situations
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Retain process page evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: toza-process-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/toza-process
           if-no-files-found: warn
           retention-days: 7
 
@@ -336,6 +350,15 @@ jobs:
           mkdir -p "$SITUATION_ARTIFACT_DIR"
           printf '%s\n' "$GITHUB_SHA" > "$SITUATION_ARTIFACT_DIR/source-sha.txt"
           npm run check:situations
+      - name: Check How it works process behavior in ${{ matrix.browser }}
+        timeout-minutes: 5
+        env:
+          PROCESS_BROWSERS: ${{ matrix.browser }}
+          PROCESS_ARTIFACT_DIR: ${{ runner.temp }}/toza-process-${{ matrix.browser }}
+        run: |
+          mkdir -p "$PROCESS_ARTIFACT_DIR"
+          printf '%s\n' "$GITHUB_SHA" > "$PROCESS_ARTIFACT_DIR/source-sha.txt"
+          npm run check:process
       - name: Retain ${{ matrix.browser }} motion evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -350,5 +373,13 @@ jobs:
         with:
           name: toza-situations-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/toza-situations-${{ matrix.browser }}
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Retain ${{ matrix.browser }} process evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: toza-process-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/toza-process-${{ matrix.browser }}
           if-no-files-found: warn
           retention-days: 7
