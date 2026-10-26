@@ -11,7 +11,7 @@
 // Usage: node scripts/check-content.mjs [--lengths] [--verbose] [--prefix=/_ref --only=page,page]
 // Run after `npm run build` (npm run check:content does both).
 import { readFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
+import { join, relative, sep } from "node:path";
 import { walk } from "./util.mjs";
 import { loadSources, createResolver, readPages, mdUnits, plainLength, norm, NUMWORDS, formatPrice, get } from "./lib/content.mjs";
 import { squash, hasWords, sentences, extract, boundedIncludes } from "./lib/parity.mjs";
@@ -261,7 +261,7 @@ let totals = { htmlUnits: 0, htmlExact: 0, htmlFragment: 0, htmlMissing: 0, cont
 const report = [];
 
 for (const file of builtPages) {
-  const permalink = "/" + file.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/");
+  const permalink = "/" + relative(join(SITE, PREFIX), file).split(sep).join("/");
   const entry = pageCollections.get(permalink);
   if (!entry) { err(file, `built page has no content file (permalink ${permalink})`); continue; }
   const html = extract(readFileSync(file, "utf8"));
@@ -308,7 +308,7 @@ for (const file of builtPages) {
 }
 for (const [permalink, e] of pageCollections) {
   if (ONLY && !ONLY.includes(e.page.data.page)) continue;
-  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1) === permalink)) err(e.page.file, `no built page at ${permalink}`);
+  if (!builtPages.some((f) => "/" + relative(join(SITE, PREFIX), f).split(sep).join("/") === permalink)) err(e.page.file, `no built page at ${permalink}`);
 }
 
 // ---------- drift guard: i18n editorial strings must exist in _shared.yaml ----------

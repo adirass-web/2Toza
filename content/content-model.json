@@ -238,6 +238,65 @@
         "max_items": 6
       }
     },
+    "matrix_row": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "max": 48
+      },
+      "cells": {
+        "kind": "list",
+        "of": {
+          "kind": "text",
+          "max": 48
+        },
+        "required": true,
+        "min_items": 3,
+        "max_items": 3
+      }
+    },
+    "brand_service": {
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 24
+      },
+      "icon": {
+        "kind": "enum",
+        "required": true,
+        "values": [
+          "whatsapp",
+          "messenger",
+          "outlook",
+          "gmail",
+          "googlechrome",
+          "safari",
+          "instagram",
+          "facebook",
+          "googlephotos",
+          "icloud",
+          "waze",
+          "googlemaps"
+        ]
+      }
+    },
+    "icon_source": {
+      "name": {
+        "kind": "text",
+        "required": true,
+        "max": 24
+      },
+      "link": {
+        "kind": "object",
+        "type": "link",
+        "required": true
+      },
+      "license": {
+        "kind": "text",
+        "required": true,
+        "max": 20
+      }
+    },
     "document": {
       "stamp": {
         "kind": "text",
@@ -736,7 +795,8 @@
           "kind": "enum",
           "values": [
             "full",
-            "summary"
+            "summary",
+            "matrix"
           ]
         },
         "heading": {
@@ -746,6 +806,22 @@
         },
         "heading_visible": {
           "kind": "bool"
+        },
+        "first_step_aria": {
+          "kind": "text",
+          "max": 48
+        },
+        "table_aria": {
+          "kind": "text",
+          "max": 90
+        },
+        "table_caption": {
+          "kind": "text",
+          "max": 90
+        },
+        "included_label": {
+          "kind": "text",
+          "max": 24
         },
         "statement": {
           "kind": "text",
@@ -764,6 +840,63 @@
           "required": true,
           "min_items": 1,
           "max_items": 4
+        },
+        "matrix_rows": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "matrix_row"
+          },
+          "min_items": 1,
+          "max_items": 6
+        },
+        "shared_heading": {
+          "kind": "text",
+          "max": 48
+        },
+        "shared_items": {
+          "kind": "list",
+          "of": {
+            "kind": "text",
+            "max": 84
+          },
+          "max_items": 12
+        },
+        "services_heading": {
+          "kind": "text",
+          "max": 48
+        },
+        "services_note": {
+          "kind": "text",
+          "max": 70
+        },
+        "services": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "brand_service"
+          },
+          "max_items": 20
+        },
+        "icons_credit_label": {
+          "kind": "text",
+          "max": 32
+        },
+        "marks_note": {
+          "kind": "text",
+          "max": 80
+        },
+        "icon_sources": {
+          "kind": "list",
+          "of": {
+            "kind": "object",
+            "type": "icon_source"
+          },
+          "max_items": 3
+        },
+        "more_label": {
+          "kind": "text",
+          "max": 48
         },
         "notes": {
           "kind": "list",
