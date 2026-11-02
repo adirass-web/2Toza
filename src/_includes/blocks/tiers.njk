@@ -3,6 +3,69 @@
 {% call section(block, '', '', '', 'pt-0 pb-section lg:pb-section-wide') %}
   <h2{% if not block.heading_visible %} class="sr-only"{% else %} class="mb-6 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading"{% endif %}>{{ block.heading }}</h2>
   {% if block.statement %}<p class="max-w-3xl font-serif text-xl leading-snug text-heading lg:text-2xl">{{ block.statement }}</p>{% endif %}
+  {% if block.detail == 'matrix' %}
+  {% if block.first_step %}
+  <article class="mb-5 grid items-center gap-3 rounded-base border border-default border-s-4 border-s-accent bg-neutral-secondary-soft p-4 sm:grid-cols-[1fr_auto] sm:px-6" aria-label="{{ block.first_step_aria }}">
+    <div>
+      {% if block.first_step.tag %}<p class="text-sm font-medium uppercase tracking-wide text-fg-brand">{{ block.first_step.tag }}</p>{% endif %}
+      <h3 class="mt-1 font-serif text-2xl font-normal text-heading">{{ block.first_step.name }}</h3>
+      {% if block.first_step.body %}<p class="mt-1 text-body-subtle">{{ block.first_step.body }}</p>{% endif %}
+      {% if block.first_step.credit %}<p class="mt-1 text-sm text-body-subtle">{{ block.first_step.credit }}</p>{% endif %}
+    </div>
+    <p class="text-heading sm:text-right">{{ price(block.first_step, 'text-4xl sm:text-5xl') }}</p>
+  </article>
+  {% endif %}
+  <div class="max-h-[50vh] overflow-auto overscroll-contain rounded-base border border-default" role="region" aria-label="{{ block.table_aria }}" tabindex="0">
+    <table class="w-full min-w-[44rem] border-collapse text-left">
+      <caption class="sr-only">{{ block.table_caption }}</caption>
+      <thead class="sticky top-0 z-10 bg-dark text-paper shadow-sm">
+        <tr>
+          <th scope="col" class="w-[27%] border-b border-on-dark-border-strong p-3 align-bottom text-sm font-medium sm:p-4">{{ block.included_label }}</th>
+          {% for tier in block.tiers %}
+          <th scope="col" class="border-b border-s border-on-dark-border-strong p-3 align-bottom sm:p-4">
+            <span class="block font-serif text-lg font-normal sm:text-xl">{{ tier.name }}</span>
+            <span class="mt-1 block text-sm text-on-dark-text-muted">{{ tier.for }}</span>
+            <span class="mt-2 block">{{ price(tier, 'text-2xl text-paper sm:text-3xl') }}</span>
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-default">
+        {% for row in block.matrix_rows %}
+        <tr class="odd:bg-neutral-primary even:bg-neutral-primary-soft">
+          <th scope="row" class="p-3 text-sm font-medium text-heading sm:p-4">{{ row.label }}</th>
+          {% for cell in row.cells %}<td class="border-s border-default p-3 text-center text-sm sm:p-4">{{ cell }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if block.shared_items %}
+  <section class="mt-5 rounded-base border border-default bg-neutral-primary p-4 sm:p-5" aria-labelledby="shared-inclusions-heading">
+    <h3 id="shared-inclusions-heading" class="font-serif text-xl font-normal text-heading">{{ block.shared_heading }}</h3>
+    <ul class="mt-3 grid grid-cols-1 gap-x-5 sm:grid-cols-2 lg:grid-cols-3" role="list">
+      {% for item in block.shared_items %}<li class="border-t border-default py-2 text-sm">{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  {% if block.services %}
+  <section class="mt-5 rounded-base border border-default bg-neutral-secondary-soft p-4 sm:p-5" aria-labelledby="services-heading">
+    <h3 id="services-heading" class="font-serif text-xl font-normal text-heading">{{ block.services_heading }}</h3>
+    {% if block.services_note %}<p class="mt-1 text-sm text-body-subtle">{{ block.services_note }}</p>{% endif %}
+    <ul class="mt-4 grid grid-cols-3 gap-x-2 gap-y-4 sm:grid-cols-4 lg:grid-cols-6" role="list">
+      {% for service in block.services %}<li class="flex min-w-0 items-center gap-2 text-sm"><img src="/assets/img/pricing-icons/{{ service.icon }}.svg" alt="" width="22" height="22" loading="lazy" class="h-[22px] w-[22px] shrink-0 opacity-80 grayscale"><span class="truncate">{{ service.name }}</span></li>{% endfor %}
+    </ul>
+    {% if block.icon_sources %}<p class="mt-3 text-xs text-body-subtle">{{ block.icons_credit_label }} {% for source in block.icon_sources %}{% if not loop.first %}; {% endif %}{{ lnk(source.link) }}{% endfor %}. {{ block.marks_note }}</p>{% endif %}
+  </section>
+  {% endif %}
+  {% if block.notes %}
+  <details class="mt-5 rounded-base border border-default bg-neutral-primary p-4 sm:p-5">
+    <summary class="cursor-pointer font-medium text-heading">{{ block.more_label or 'Other pricing and conditions' }}</summary>
+    <div class="mt-3 max-w-3xl space-y-3 text-sm text-body-subtle">{% for note in block.notes %}{{ note.html | safe }}{% endfor %}</div>
+    {% if block.link %}<p class="mt-4">{{ lnk(block.link) }}</p>{% endif %}
+  </details>
+  {% endif %}
+  {% else %}
   {% if block.first_step %}<div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.first_step %}{% include "blocks/offer.njk" %}{% set block = outer %}</div>{% endif %}
   {% if block.detail == 'summary' %}
   <ul class="mt-8 border-b border-default lg:mt-0">
@@ -24,4 +87,5 @@
   {% endif %}
   {% if block.notes %}<div class="mt-8 max-w-3xl space-y-3 text-body-subtle">{% for note in block.notes %}{{ note.html | safe }}{% endfor %}</div>{% endif %}
   {% if block.link %}<p class="mt-4">{{ lnk(block.link) }}</p>{% endif %}
+  {% endif %}
 {% endcall %}
