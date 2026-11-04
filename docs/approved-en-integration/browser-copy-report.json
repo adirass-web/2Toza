@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-11-04T16:10:59.115Z",
+  "pages": [
+    {
+      "route": "exposure",
+      "width": 320,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true
+      },
+      "axe": null,
+      "errors": []
+    },
+    {
+      "route": "exposure",
+      "width": 390,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true,
+        "skipFirst": true
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "errors": []
+    },
+    {
+      "route": "exposure",
+      "width": 1440,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true
+      },
+      "axe": null,
+      "errors": []
+    },
+    {
+      "route": "how-it-works",
+      "width": 320,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true
+      },
+      "axe": null,
+      "errors": []
+    },
+    {
+      "route": "how-it-works",
+      "width": 390,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true,
+        "skipFirst": true
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "errors": []
+    },
+    {
+      "route": "how-it-works",
+      "width": 1440,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true
+      },
+      "axe": null,
+      "errors": []
+    },
+    {
+      "route": "about",
+      "width": 320,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true
+      },
+      "axe": null,
+      "errors": []
+    },
+    {
+      "route": "about",
+      "width": 390,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true,
+        "skipFirst": true
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "errors": []
+    },
+    {
+      "route": "about",
+      "width": 1440,
+      "checks": {
+        "fullExactLockedCopy": true,
+        "oneH1": true,
+        "english": true,
+        "noOverflow": true,
+        "noMetadataLeak": true,
+        "noBrowserErrors": true
+      },
+      "axe": null,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "links": [
+    {
+      "link": "/en/",
+      "status": 200
+    },
+    {
+      "link": "/en/#situations",
+      "status": 200
+    },
+    {
+      "link": "/en/how-it-works/",
+      "status": 200
+    },
+    {
+      "link": "/en/pricing/",
+      "status": 200
+    },
+    {
+      "link": "/en/faq/",
+      "status": 200
+    },
+    {
+      "link": "/en/conditions/",
+      "status": 200
+    },
+    {
+      "link": "/en/about/",
+      "status": 200
+    },
+    {
+      "link": "/en/exposure/",
+      "status": 200
+    }
+  ],
+  "prices": [
+    {
+      "width": 320,
+      "exactCopy": true,
+      "order": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "exactCopy": true,
+      "order": true,
+      "noOverflow": true
+    },
+    {
+      "width": 768,
+      "exactCopy": true,
+      "order": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "exactCopy": true,
+      "order": true,
+      "noOverflow": true
+    }
+  ],
+  "status": "passed"
+}

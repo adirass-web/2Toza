@@ -1,0 +1,31 @@
+.en-continuation{color:var(--color-ink)}
+.en-situations-intro{padding:10px var(--page-gutter) 28px}
+.en-situations-intro-inner{max-width:880px;margin-inline:auto}
+.en-situations-intro h2{margin:0 0 18px;font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:400;line-height:1.02;letter-spacing:-.02em}
+.en-situations-intro p{max-width:70ch;margin:0;font-size:clamp(1.1rem,1.4vw,1.35rem);line-height:1.5}
+.en-situation-sequence{overflow:hidden}
+.en-situation-scene{position:relative;height:92vh;min-height:780px;max-height:1040px;margin:0 0 34px}
+.en-situation-image{position:absolute;top:0;width:65%;height:92%;margin:0;overflow:hidden;background:#d8d5cc}
+.en-situation-image img{display:block;width:100%;height:100%;object-fit:cover}
+.en-situation-scene--separation .en-situation-image{top:0;right:0;width:65%;height:92%}
+.en-situation-scene--business .en-situation-image{top:5%;left:0;width:72%;height:94%}
+.en-situation-scene--inheritance .en-situation-image{top:3%;right:0;width:62%;height:91%}
+.en-situation-title-panel{position:absolute;z-index:2;max-width:440px;padding:26px 30px 30px;background:var(--color-paper)}
+.en-situation-title-panel h3{margin:8px 0 0;font-family:var(--font-serif);font-size:clamp(2.5rem,5.5vw,5.5rem);font-weight:400;line-height:.98;letter-spacing:-.025em}
+.en-situation-scene--separation .en-situation-title-panel{top:25%;left:clamp(22px,10vw,150px);width:37%}
+.en-situation-scene--business .en-situation-title-panel{top:31%;right:clamp(22px,8vw,120px);width:36%}
+.en-situation-scene--business .en-situation-title-panel h3{font-size:clamp(2.3rem,5.2vw,5rem)}
+.en-situation-scene--inheritance .en-situation-title-panel{top:27%;left:clamp(22px,9vw,130px);width:37%}
+.en-conversation{padding:30px var(--page-gutter) clamp(56px,9vw,120px)}
+.en-conversation-inner{max-width:880px;margin-inline:auto}
+.en-conversation-benefit{max-width:70ch;margin:0;font-size:clamp(1.25rem,1.8vw,1.6rem);line-height:1.45}
+.en-conversation-expert{margin:24px 0 0;font-size:1.15rem;line-height:1.5}
+.en-conversation h2{margin:42px 0 18px;font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;line-height:1.02;letter-spacing:-.02em}
+.en-conversation-copy{max-width:70ch;margin:0;font-size:clamp(1.05rem,1.35vw,1.2rem);line-height:1.55}
+.en-conversation-links{margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px 24px;font:16px/1.4 var(--font-sans)}
+.en-conversation-links a{min-height:44px;display:inline-flex;align-items:center;color:inherit;text-underline-offset:5px}
+.en-continuation a:focus-visible{outline:3px solid var(--color-ink);outline-offset:4px}
+@media(min-width:701px) and (max-width:1000px){.en-situation-scene{min-height:680px;height:83vh}.en-situation-title-panel{padding:21px}.en-situation-scene--separation .en-situation-title-panel{width:39%}.en-situation-scene--business .en-situation-title-panel{width:38%}.en-situation-scene--inheritance .en-situation-title-panel{width:39%}}
+@media(max-width:700px){.en-situations-intro{padding:12px 20px 22px}.en-situations-intro h2{font-size:2.1rem}.en-situation-scene{height:auto;min-height:0;margin:0 0 44px;padding-block-end:28px}.en-situation-image{position:relative;top:auto!important;left:auto!important;right:auto!important;display:block;width:94%!important;height:auto!important;aspect-ratio:1.14/1}.en-situation-scene--separation .en-situation-image,.en-situation-scene--inheritance .en-situation-image{margin-left:auto}.en-situation-scene--business .en-situation-image{width:91%!important;aspect-ratio:1.08/1;margin-right:auto}.en-situation-title-panel{position:relative;top:auto!important;left:auto!important;right:auto!important;width:min(82%,390px)!important;max-width:none;margin-top:-38px;padding:18px 20px 20px}.en-situation-scene--separation .en-situation-title-panel,.en-situation-scene--inheritance .en-situation-title-panel{margin-left:7%}.en-situation-scene--business .en-situation-title-panel{margin-right:7%;margin-left:auto;text-align:left}.en-situation-title-panel h3{font-size:clamp(2.8rem,13vw,4rem)}.en-situation-scene--business .en-situation-title-panel h3{font-size:clamp(2.5rem,12vw,3.7rem)}.en-situation-scene--inheritance{margin-bottom:26px}.en-conversation{padding:20px 20px 64px}.en-conversation-benefit{font-size:1.2rem}.en-conversation-expert{margin-block-start:20px}.en-conversation h2{margin-block:34px 16px;font-size:clamp(2.15rem,10vw,3rem)}}
+.en-situation-title-panel h3 a{color:inherit;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.12em}
+.en-situation-description{max-width:40ch;margin-block-start:16px;font:17px/1.5 var(--font-sans)}

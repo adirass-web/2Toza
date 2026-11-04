@@ -1,6 +1,9 @@
 @import "tailwindcss" source("../src");
 /* The old hand-built page templates no longer render (permalink: false); keep their classes out of the generated CSS. */
 @source not "../src/en";
+/* Approved EN templates have their own isolated stylesheet. */
+@source not "../src/_includes/approved-en";
+@source not "../src/_data/approvedEN.js";
 @import "flowbite/src/themes/default";
 /* Design tokens: generated from tokens/tokens.json (scripts/build-tokens.mjs). Do not add @theme here. */
 @import "./tokens.css";

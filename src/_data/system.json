@@ -1,1 +1,13 @@
-{"renderFromContent": ["home","separation-divorce","pricing","business-dispute","inheritance-conflict","they-know-something","attorneys","how-it-works","about","faq","conditions"], "permalinkPrefix": ""}
+{
+  "renderFromContent": [
+    "separation-divorce",
+    "pricing",
+    "business-dispute",
+    "inheritance-conflict",
+    "they-know-something",
+    "attorneys",
+    "faq",
+    "conditions"
+  ],
+  "permalinkPrefix": ""
+}

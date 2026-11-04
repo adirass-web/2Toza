@@ -1,0 +1,25 @@
+{
+  "approval": "08c2ddbe owner-approved English preview",
+  "pages": [
+    {
+      "permalink": "/en/index.html",
+      "source": "locked-home.md",
+      "mode": "approved-excerpts"
+    },
+    {
+      "permalink": "/en/exposure/index.html",
+      "source": "locked-exposure.md",
+      "mode": "full"
+    },
+    {
+      "permalink": "/en/how-it-works/index.html",
+      "source": "locked-approach.md",
+      "mode": "full"
+    },
+    {
+      "permalink": "/en/about/index.html",
+      "source": "locked-expert.md",
+      "mode": "full"
+    }
+  ]
+}

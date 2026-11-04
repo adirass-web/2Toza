@@ -1,0 +1,473 @@
+{
+  "results": [
+    {
+      "name": "/en/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/css/en-continuation.css",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/css/en-prices.css",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/photos/hero-wide.png",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/exposure/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/photos/sit-1-900.jpg",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/separation-divorce/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/photos/sit-2-900.jpg",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/business-dispute/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/photos/sit-3-900.jpg",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/inheritance-conflict/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/about/",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /approved-en-assets/css/locked-supporting.css",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /approved-en-assets/css/locked-supporting.css",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/conditions/",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /en/about/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /approved-en-assets/css/locked-supporting.css",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/exposure/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "situation lead separation-divorce",
+      "pass": true
+    },
+    {
+      "name": "situation route separation-divorce",
+      "pass": true
+    },
+    {
+      "name": "situation lead business-dispute",
+      "pass": true
+    },
+    {
+      "name": "situation route business-dispute",
+      "pass": true
+    },
+    {
+      "name": "situation lead inheritance-conflict",
+      "pass": true
+    },
+    {
+      "name": "situation route inheritance-conflict",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/brand/toza-logo-ink.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/brand/toza-logo-reverse.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/brand/toza-mark-ink.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/brand/toza-mark-reverse.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/brand/toza-wordmark-ink.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/brand/toza-wordmark-reverse.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/assistant-hebrew-400-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/assistant-hebrew-600-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/assistant-latin-400-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/assistant-latin-600-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/frank-ruhl-libre-hebrew-400-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/frank-ruhl-libre-hebrew-500-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/frank-ruhl-libre-latin-400-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/fonts/frank-ruhl-libre-latin-500-normal.woff2",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/dr-tabansky-portrait-square-640.webp",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/exposure-variants/01-open-fan.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/exposure-variants/02-constellation.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/exposure-variants/03-woven-traces.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/exposure-variants/04-orbital-map.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/exposure-variants/05-unfolded-atlas.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/toza-digital-exposure-five-ws.md",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/toza-digital-exposure-five-ws.png",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/toza-digital-exposure-five-ws.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/img/toza-orbital-sequence.svg",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/js/site.js",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/js/toza-orbital-sequence.js",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/previews/digital-exposure-variants.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/previews/digital-exposure.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/assets/previews/orbital-sequence.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/attorneys/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/business-dispute/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/conditions/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/faq/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/inheritance-conflict/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/pricing/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/separation-divorce/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/en/they-know-something/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/index.html",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/robots.txt",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/_headers",
+      "pass": true
+    },
+    {
+      "name": "protected output _site/_redirects",
+      "pass": true
+    },
+    {
+      "name": "no HE route added",
+      "pass": true
+    }
+  ],
+  "errors": []
+}
