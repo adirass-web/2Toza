@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="masthead">
+    <a href="/en/" class="brand" aria-label="{{ t.home }}">
+      <img src="/approved-en-assets/wordmark.svg" alt="Toza">
+      <span class="brand-descriptor">{{ t.descriptor }}</span>
+    </a>
+  </div>
+  <nav class="primary-nav" aria-label="{{ t.navLabel }}">
+    <ul>{% for item in t.nav %}<li><a href="{% if item.href == '#situations' %}/en/#situations{% else %}{{ item.href }}{% endif %}">{{ item.label }}</a></li>{% endfor %}</ul>
+  </nav>
+</header>

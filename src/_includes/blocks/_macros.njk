@@ -22,7 +22,7 @@
 {#- The lead action is primary, the rest outline. first: extra classes for the lead button. -#}
 {% macro actions(list, tone, wrapper, first) %}
 <div class="{{ wrapper }}">
-  {% for a in list %}{{ btn(a, 'primary' if loop.first else 'outline', tone, first if loop.first else '') }}{% endfor %}
+  {% for a in list %}{% if a.key != 'whatsapp' and a.key != 'signal' %}{{ btn(a, 'primary' if loop.first else 'outline', tone, first if loop.first else '') }}{% endif %}{% endfor %}
 </div>
 {% endmacro %}
 

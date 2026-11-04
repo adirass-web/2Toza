@@ -29,11 +29,19 @@
       "pass": true
     },
     {
+      "name": "/en/index.html target /approved-en-assets/css/contact-icons.css",
+      "pass": true
+    },
+    {
       "name": "/en/index.html target /en/",
       "pass": true
     },
     {
       "name": "/en/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /en/",
       "pass": true
     },
     {
@@ -93,6 +101,14 @@
       "pass": true
     },
     {
+      "name": "/en/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/index.html target /approved-en-assets/icons/signal.svg",
+      "pass": true
+    },
+    {
       "name": "/en/exposure/index.html exists",
       "pass": true
     },
@@ -114,6 +130,10 @@
     },
     {
       "name": "/en/exposure/index.html target /approved-en-assets/css/locked-supporting.css",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /approved-en-assets/css/contact-icons.css",
       "pass": true
     },
     {
@@ -149,6 +169,14 @@
       "pass": true
     },
     {
+      "name": "/en/exposure/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/exposure/index.html target /approved-en-assets/icons/signal.svg",
+      "pass": true
+    },
+    {
       "name": "/en/how-it-works/index.html exists",
       "pass": true
     },
@@ -170,6 +198,10 @@
     },
     {
       "name": "/en/how-it-works/index.html target /approved-en-assets/css/locked-supporting.css",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /approved-en-assets/css/contact-icons.css",
       "pass": true
     },
     {
@@ -213,6 +245,14 @@
       "pass": true
     },
     {
+      "name": "/en/how-it-works/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/how-it-works/index.html target /approved-en-assets/icons/signal.svg",
+      "pass": true
+    },
+    {
       "name": "/en/about/index.html exists",
       "pass": true
     },
@@ -234,6 +274,10 @@
     },
     {
       "name": "/en/about/index.html target /approved-en-assets/css/locked-supporting.css",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /approved-en-assets/css/contact-icons.css",
       "pass": true
     },
     {
@@ -270,6 +314,242 @@
     },
     {
       "name": "/en/about/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/about/index.html target /approved-en-assets/icons/signal.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/css/contact-icons.css",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/css/situation-pages.css",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/photos/sit-1-900.jpg",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/separation-divorce/index.html target /approved-en-assets/icons/signal.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/css/contact-icons.css",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/css/situation-pages.css",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/photos/sit-2-900.jpg",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/business-dispute/index.html target /approved-en-assets/icons/signal.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html exists",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html approved copy parity",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html noindex",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html no unavailable HE switch",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/css/main.css",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/css/contact-icons.css",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/css/situation-pages.css",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/wordmark.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/photos/sit-3-900.jpg",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/how-it-works/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/pricing/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /en/faq/",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/icons/whatsapp.svg",
+      "pass": true
+    },
+    {
+      "name": "/en/inheritance-conflict/index.html target /approved-en-assets/icons/signal.svg",
       "pass": true
     },
     {
@@ -318,10 +598,6 @@
     },
     {
       "name": "protected output _site/assets/brand/toza-wordmark-reverse.svg",
-      "pass": true
-    },
-    {
-      "name": "protected output _site/assets/css/main.css",
       "pass": true
     },
     {
@@ -417,39 +693,27 @@
       "pass": true
     },
     {
-      "name": "protected output _site/en/attorneys/index.html",
+      "name": "protected prose _site/en/attorneys/index.html",
       "pass": true
     },
     {
-      "name": "protected output _site/en/business-dispute/index.html",
+      "name": "protected prose _site/en/conditions/index.html",
       "pass": true
     },
     {
-      "name": "protected output _site/en/conditions/index.html",
+      "name": "protected prose _site/en/faq/index.html",
       "pass": true
     },
     {
-      "name": "protected output _site/en/faq/index.html",
+      "name": "protected prose _site/en/pricing/index.html",
       "pass": true
     },
     {
-      "name": "protected output _site/en/inheritance-conflict/index.html",
+      "name": "protected prose _site/en/they-know-something/index.html",
       "pass": true
     },
     {
-      "name": "protected output _site/en/pricing/index.html",
-      "pass": true
-    },
-    {
-      "name": "protected output _site/en/separation-divorce/index.html",
-      "pass": true
-    },
-    {
-      "name": "protected output _site/en/they-know-something/index.html",
-      "pass": true
-    },
-    {
-      "name": "protected output _site/index.html",
+      "name": "protected prose _site/index.html",
       "pass": true
     },
     {
