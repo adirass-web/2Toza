@@ -1,0 +1,17 @@
+.locked-site-header .masthead{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.locked-site-header .brand{min-width:0}
+.locked-site-header .primary-nav{border-top:1px solid var(--color-rule)}
+.locked-page{max-width:1240px;margin-inline:auto;padding:clamp(44px,7vw,104px) var(--page-gutter) clamp(76px,10vw,144px)}
+.locked-copy{max-width:72ch;margin-inline:auto;color:var(--color-text);font-family:var(--font-serif);font-size:clamp(19px,1.55vw,22px);line-height:1.58}
+.locked-copy h1{max-width:19ch;margin:0 0 clamp(28px,4vw,54px);font-size:clamp(42px,6.4vw,86px);font-weight:400;line-height:1.02;letter-spacing:-.025em;text-wrap:balance}
+.locked-copy h2{max-width:27ch;margin:clamp(48px,7vw,88px) 0 18px;font-size:clamp(29px,3.2vw,43px);font-weight:400;line-height:1.12;letter-spacing:-.015em}
+.locked-copy p{max-width:72ch;margin:0 0 1.15em}
+.locked-copy ul,.locked-copy ol{margin:0 0 1.3em;padding-inline-start:1.35em}
+.locked-copy li{padding-inline-start:.25em;margin-block:.45em}
+.locked-copy a{color:inherit;text-underline-offset:5px;text-decoration-thickness:1px}
+.locked-copy a:focus-visible,.locked-site-header a:focus-visible{outline:3px solid var(--color-ink);outline-offset:3px}
+.locked-footer{max-width:1240px;margin-inline:auto;padding:26px var(--page-gutter) 38px;border-top:1px solid var(--color-rule);color:var(--color-muted);font:14px/1.4 var(--font-sans)}
+@media(min-width:851px){.locked-site-header{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,auto) max-content;align-items:center;column-gap:clamp(10px,1.2vw,18px);padding-inline:var(--page-gutter)}.locked-site-header .masthead{display:contents}.locked-site-header .brand{grid-column:1;grid-row:1}.locked-site-header>.primary-nav{grid-column:2;grid-row:1;min-width:0;border-top:0}.locked-site-header .header-contact{grid-column:3;grid-row:1;justify-content:flex-end;flex-wrap:nowrap}.locked-site-header>.primary-nav ul{min-height:96px;flex-wrap:nowrap;gap:4px clamp(4px,.7vw,12px);padding-inline:0}.locked-site-header>.primary-nav a{padding-inline:4px}}
+@media(max-width:850px){.locked-page{padding-block:46px 80px}.locked-copy h2{margin-top:48px}}
+@media(max-width:520px){.locked-copy{font-size:19px;line-height:1.55}.locked-copy h1{font-size:clamp(37px,10vw,52px)}}
+@media print{.locked-site-header,.locked-footer{display:none}.locked-page{max-width:none;padding:0}.locked-copy{max-width:none;color:#000}}

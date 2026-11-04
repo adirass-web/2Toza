@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ locale.lang }}" dir="{{ locale.dir }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{{ t.description }}"><title>{{ t.title }}</title>
+<link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/en-continuation.css"><link rel="stylesheet" href="/approved-en-assets/css/en-prices.css">
+</head>
+<body>
+<a class="skip-link" href="#main">{{ t.skip }}</a>
+<header class="site-header">
+  <div class="masthead">
+    <a href="/en/" class="brand" aria-label="{{ t.home }}">
+      <img src="/approved-en-assets/wordmark.svg" alt="Toza">
+      <span class="brand-descriptor">{{ t.descriptor }}</span>
+    </a>
+    <div class="header-actions">
+      <nav class="header-contact" aria-label="{{ t.invitation }}">
+        <a href="{{ contact.whatsapp.url }}">WhatsApp</a>
+        <a href="{{ contact.signal.url }}">Signal</a>
+      </nav>
+    </div>
+  </div>
+  <nav class="primary-nav" aria-label="{{ t.navLabel }}">
+    <ul>{% for item in t.nav %}<li><a href="{{ item.href }}">{{ item.label }}</a></li>{% endfor %}</ul>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <figure class="hero-image">
+      <img class="hero-photo" src="/approved-en-assets/photos/hero-wide.png" alt="{{ t.heroAlt }}" fetchpriority="high">
+      <figcaption class="hero-title"><h1 id="hero-title">{{ t.hero }}</h1></figcaption>
+    </figure>
+    <div class="hero-explanation">
+      <p class="copy">{{ t.explanation }}</p>
+      <p class="service-line">{{ t.service }}</p>
+      <p class="invitation">{{ t.invitation }}</p>
+      <p class="conversation-links"><a href="{{ contact.whatsapp.url }}">WhatsApp</a><a href="{{ contact.signal.url }}">Signal</a></p>
+    </div>
+  </section>
+  {% include "approved-en/en-situations-cta.njk" %}{% include "approved-en/en-prices.njk" %}
+</main>
+<footer class="mx-auto max-w-7xl px-5 py-8 font-sans text-sm text-[#62645e]">{{ t.footer }}</footer>
+</body>
+</html>

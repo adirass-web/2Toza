@@ -6,3 +6,6 @@ _site/
 assets/css/main.css
 tests/visual/diff/
 tests/visual/current/
+
+# Rebuilt by npm run build:approved-en
+approved-en-assets/css/main.css

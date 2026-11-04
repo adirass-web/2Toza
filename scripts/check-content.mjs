@@ -26,6 +26,9 @@ const SITE = "_site";
 // Default: the real site, every page.
 const PREFIX = argValue("prefix") || "";
 const ONLY = argValue("only") ? argValue("only").split(",") : null;
+// These routes use owner-approved Markdown/components and are checked by check-approved-en.mjs.
+const approvedManifest = "content/approved-en/routes.json";
+const delegatedRoutes = new Set(existsSync(approvedManifest) ? JSON.parse(readFileSync(approvedManifest, "utf8")).pages.map(p => p.permalink) : []);
 
 const src = loadSources({ lang: LANG });
 const { model, facts, contact, i18n, shared } = src;
@@ -262,6 +265,7 @@ const report = [];
 
 for (const file of builtPages) {
   const permalink = "/" + file.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/");
+  if (delegatedRoutes.has(permalink)) continue;
   const entry = pageCollections.get(permalink);
   if (!entry) { err(file, `built page has no content file (permalink ${permalink})`); continue; }
   const html = extract(readFileSync(file, "utf8"));
@@ -307,8 +311,9 @@ for (const file of builtPages) {
   report.push({ page: entry.page.data.page, blocks: entry.page.data.blocks.length, missingHtml: missingHtml.length, missingContent: missingContent.length });
 }
 for (const [permalink, e] of pageCollections) {
+  if (delegatedRoutes.has(permalink)) continue;
   if (ONLY && !ONLY.includes(e.page.data.page)) continue;
-  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1) === permalink)) err(e.page.file, `no built page at ${permalink}`);
+  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/") === permalink)) err(e.page.file, `no built page at ${permalink}`);
 }
 
 // ---------- drift guard: i18n editorial strings must exist in _shared.yaml ----------

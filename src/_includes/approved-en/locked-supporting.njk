@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>{{ lockedPage.title }} — Toza</title>
+  <link rel="stylesheet" href="/approved-en-assets/css/main.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/locked-supporting.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header locked-site-header">
+  <div class="masthead">
+    <a href="/en/" class="brand" aria-label="Toza home">
+      <img src="/approved-en-assets/wordmark.svg" alt="Toza">
+      <span class="brand-descriptor">Tailored digital protection for private clients</span>
+    </a>
+    <nav class="header-contact" aria-label="Private conversation">
+      <a href="https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.">WhatsApp</a>
+      <a href="https://signal.me/#p/+972533366276">Signal</a>
+    </nav>
+  </div>
+  <nav class="primary-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="/en/#situations">Situations</a></li>
+      <li><a href="/en/how-it-works/">How it works</a></li>
+      <li><a href="/en/pricing/">Pricing</a></li>
+      <li><a href="/en/faq/">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main" class="locked-page">
+  <article class="locked-copy">{{ lockedPage.html | safe }}</article>
+</main>
+<footer class="locked-footer">Toza · Local design preview</footer>
+</body>
+</html>
