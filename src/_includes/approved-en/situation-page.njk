@@ -1,0 +1,71 @@
+{% from "blocks/_macros.njk" import section, h2, lnk, price with context %}
+{% set hero = scenario.blocks[0] %}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="{{ scenario.description }}">
+  <title>{{ scenario.title }}</title>
+  <link rel="stylesheet" href="/approved-en-assets/css/main.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/situation-pages.css">
+</head>
+<body class="has-fixed-contacts">
+<a class="skip-link" href="#main">{{ i18n.en.ui.skip }}</a>
+{% include "approved-en/header.njk" %}
+<main id="main" class="situation-page situation-page--{{ scenario.page }}">
+  <section class="situation-hero" aria-labelledby="scenario-title">
+    <div class="situation-hero-image-wrap" aria-hidden="true">
+      <img class="situation-hero-image" src="/approved-en-assets/photos/{{ scenarioPhoto }}" alt="" fetchpriority="high">
+      <span class="situation-hero-scrim"></span>
+    </div>
+    <div class="situation-hero-title-wrap"><h1 id="scenario-title">{{ hero.heading }}</h1></div>
+  </section>
+  <section class="situation-hero-copy" aria-label="{{ scenario.title }}">
+    <div class="situation-reading-width">
+      <p class="situation-hero-lead">{{ hero.lead }}</p>
+      {% for action in hero.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
+      {% if hero.promise %}<p class="situation-promise">{{ hero.promise }}</p>{% endif %}
+    </div>
+  </section>
+  {% for block in scenario.blocks %}
+    {% if block.type == 'recognition' %}
+      {% include "blocks/recognition.njk" %}
+    {% elif block.type == 'text' %}
+      {% include "blocks/text.njk" %}
+    {% elif block.type == 'stages' %}
+      {% include "blocks/stages.njk" %}
+    {% elif block.type == 'price-summary' %}
+      {% call section(block, 'sunken', '', i18n.en.ui.pricesLabel) %}
+        <ul class="situation-price-list">
+          {% for item in block.items %}
+          <li class="situation-price-item">
+            <div class="situation-price-heading">
+              {% if item.tag %}<p class="situation-price-tag">{{ item.tag }}</p>{% endif %}
+              <h2>{{ item.name }}</h2>
+            </div>
+            <p class="situation-price-value">{{ price(item, 'text-4xl sm:text-5xl') }}</p>
+            <p class="situation-price-note">{{ item.note }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% if block.link %}<p class="situation-price-link">{{ lnk(block.link, '') }}</p>{% endif %}
+      {% endcall %}
+    {% elif block.type == 'contact' %}
+      <section class="situation-contact" data-tone="dark" aria-labelledby="situation-contact-title">
+        <div class="situation-reading-width">
+          <h2 id="situation-contact-title">{{ block.heading }}</h2>
+          {% if block.body %}<p class="situation-contact-body">{{ block.body }}</p>{% endif %}
+          {% for action in block.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
+          {% if block.note %}<p class="situation-contact-note">{{ lnk(block.note, 'dark') }}</p>{% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</main>
+<footer class="mx-auto max-w-7xl px-5 py-8 font-sans text-sm text-[#62645e]">{{ t.footer }}</footer>
+{% include "approved-en/contact-icons.njk" %}
+</body>
+</html>

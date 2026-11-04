@@ -20,6 +20,21 @@
       "permalink": "/en/about/index.html",
       "source": "locked-expert.md",
       "mode": "full"
+    },
+    {
+      "permalink": "/en/separation-divorce/index.html",
+      "source": "src/content/en/separation-divorce.md",
+      "mode": "scenario-existing"
+    },
+    {
+      "permalink": "/en/business-dispute/index.html",
+      "source": "src/content/en/business-dispute.md",
+      "mode": "scenario-existing"
+    },
+    {
+      "permalink": "/en/inheritance-conflict/index.html",
+      "source": "src/content/en/inheritance-conflict.md",
+      "mode": "scenario-existing"
     }
   ]
 }

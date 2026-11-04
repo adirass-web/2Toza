@@ -1,5 +1,6 @@
 @import "tailwindcss" source(none);
 @source "../src/_includes/approved-en";
+@source "../src/_includes/blocks";
 @import "flowbite/src/themes/default.css";
 @import "./approved-en-tokens.css";
 @plugin "flowbite/plugin" { charts: false; forms: false; datatables: false; wysiwyg: false; tooltips: false; }

@@ -19,7 +19,10 @@
     "faqGroups": "Question groups",
     "faqExpand": "Expand all answers",
     "faqCollapse": "Collapse all answers",
-    "print": "Print this page"
+    "print": "Print this page",
+    "fixedContactsLabel": "Start a private conversation",
+    "whatsappContactLabel": "WhatsApp — start a private conversation",
+    "signalContactLabel": "Signal — start a private conversation"
   },
   "nav": {
     "situations": "Situations",

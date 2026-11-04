@@ -1,0 +1,24 @@
+body.has-fixed-contacts{padding-block-end:calc(60px + env(safe-area-inset-bottom,0px))}
+.fixed-contact-icons{position:fixed;z-index:60;inset-inline-end:max(16px,env(safe-area-inset-right,0px));inset-block-end:max(16px,env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:8px}
+:dir(rtl) .fixed-contact-icons{inset-inline-end:max(16px,env(safe-area-inset-left,0px))}
+.fixed-contact-icons a{inline-size:44px;block-size:44px;display:grid;place-items:center;color:var(--color-ink);background:transparent;border:0;text-decoration:none}
+.fixed-contact-icons img{inline-size:28px;block-size:28px;display:block;filter:drop-shadow(0 0 1.5px var(--color-paper)) drop-shadow(0 1px 2px rgba(0,0,0,.75))}
+.fixed-contact-icons a:focus-visible{outline:3px solid var(--color-ink);outline-offset:3px;border-radius:2px}
+.fixed-contact-icons a:focus-visible img{filter:none}
+@media(min-width:701px){.fixed-contact-icons{gap:10px}}
+body.has-fixed-contacts{padding-block-end:calc(120px + env(safe-area-inset-bottom,0px))}
+.fixed-contact-icons{flex-direction:column}
+.fixed-contact-icons a:focus-visible{outline:3px solid var(--color-ink);outline-offset:3px;box-shadow:0 0 0 6px var(--color-paper)}
+.fixed-contact-icons a:focus-visible img{filter:drop-shadow(0 0 1.5px var(--color-paper))}
+@media(max-width:1000px){
+  .has-fixed-contacts .hero-explanation,.has-fixed-contacts .en-situations-intro,.has-fixed-contacts .en-conversation,.has-fixed-contacts .en-prices,.has-fixed-contacts .locked-page{padding-inline-end:72px}
+  .has-fixed-contacts main>section>.max-w-wrap{padding-inline-end:72px}
+  .has-fixed-contacts .situation-reading-width{width:auto;margin-inline-start:20px;margin-inline-end:72px}
+  .has-fixed-contacts .situation-hero h1{padding-inline-end:52px}
+}
+@media(max-width:700px){
+  .has-fixed-contacts .en-situation-title-panel{padding-inline-end:24px}
+  .has-fixed-contacts .en-situation-scene--business .en-situation-title-panel{margin-inline-end:calc(7% + 24px)}
+}
+@media(max-width:1000px){.has-fixed-contacts .terms-doc{padding-inline-end:72px}}
+@media(max-width:639px){.has-fixed-contacts .terms-doc tbody tr{grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto}.has-fixed-contacts .terms-doc tbody th{width:auto}}
