@@ -6,3 +6,4 @@ _site/
 assets/css/main.css
 tests/visual/diff/
 tests/visual/current/
+signal/assets/img/

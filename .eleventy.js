@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/content/");
   eleventyConfig.addWatchTarget("content/content-model.json");
   eleventyConfig.addPassthroughCopy("assets");
+  // Signal design-system preview: static pages + assets, served under /signal/
+  eleventyConfig.addPassthroughCopy("signal");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_headers");
