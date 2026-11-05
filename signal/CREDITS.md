@@ -1,17 +1,17 @@
 # Credits & Licenses
 
-## Photography (Unsplash License — free for commercial use, no attribution required; credit given voluntarily)
+## Photography — Toza repo approved set (owner-supplied, branch `ops/preserve-approved-illustration`)
 
-| Asset | Use | Photographer / Source |
+| Asset | Use | Source |
 |---|---|---|
-| `hero-woman-phone-*.avif` | Hero | Tamara Govedarovic — unsplash.com |
-| `sit-separation-*.avif` | Situation: Separation or divorce | Unsplash — unsplash.com/photos/yqOoaRtkTtA |
-| `sit-business-*.avif` | Situation: Business dispute | Unsplash — unsplash.com/photos/iPheGw7_UaI |
-| `sit-inheritance-*.avif` | Situation: Inheritance conflict | Unsplash — old-stairs collection |
-| `sit-watching-*.avif` | Situation: Someone knows something | Unsplash — unsplash.com/photos/AtamQ6rkeB4 |
+| `hero-woman-phone-*.avif` | Hero | Repo `assets/img/home/hero-phone-780.jpg` |
+| `sit-separation-*.avif` | Situation: Separation or divorce | Repo `assets/img/home/sit-1-900.jpg` |
+| `sit-business-*.avif` | Situation: Business dispute | Repo `assets/img/home/sit-4-900.jpg` |
+| `sit-inheritance-*.avif` | Situation: Inheritance conflict | Repo `assets/img/home/sit-3-900.jpg` |
+| `sit-watching-*.avif` | Situation: Someone knows something | Repo `assets/img/home/sit-2-900.jpg` |
 
 All photos receive the Signal grade (desaturation + cool shift) so the set reads as one family.
-Replace before launch if the owner prefers commissioned photography; the pipeline (crop → grade → AVIF single-size) stays identical.
+The pipeline (crop → grade → AVIF single-size) stays identical if the owner swaps in new photography.
 
 ## Brand glyphs
 
