@@ -8,7 +8,7 @@
 | `sit-separation-*.avif` | Situation: Separation or divorce | Repo `assets/img/home/sit-1-900.jpg` |
 | `sit-business-*.avif` | Situation: Business dispute | Repo `assets/img/home/sit-4-900.jpg` |
 | `sit-inheritance-*.avif` | Situation: Inheritance conflict | Repo `assets/img/home/sit-3-900.jpg` |
-| `sit-watching-*.avif` | Situation: Someone knows something | Repo `assets/img/home/sit-2-900.jpg` |
+| `sit-watching-800.avif` | Situation: Someone knows something (lead, 4:5) | Repo `assets/img/home/sit-2-900.jpg` |
 
 All photos receive the Signal grade (desaturation + cool shift) so the set reads as one family.
 The pipeline (crop → grade → AVIF single-size) stays identical if the owner swaps in new photography.
