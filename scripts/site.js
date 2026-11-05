@@ -9,47 +9,82 @@ initCollapses();
 
 document.querySelectorAll("[data-print]").forEach((b) => b.addEventListener("click", () => window.print()));
 
-// Collapsible panels (FAQ groups, Conditions sections): every panel is <details open> in the markup, so the
-// page is complete without script. On phones (<768px) all but the panel a #hash points at (else the first) are
-// collapsed; from md up they stay open. Printing opens them all, then restores them.
-const narrow = matchMedia("(max-width: 767.98px)");
+// FAQ and Conditions panels are native disclosures. Their markup sets the no-script defaults; URLs and print
+// progressively open the panels needed for the current task.
 const panels = Array.from(document.querySelectorAll("details[data-collapsible]"));
+const compactFaq = document.querySelector(".reference-reading-page--faq");
 const panelFor = (el) => el && (el.closest("[data-collapsible]") || (el.tagName === "SECTION" ? el.querySelector("[data-collapsible]") : null));
 const hashEl = () => location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
-const settle = () => {
-  const keep = panelFor(hashEl()) || panels[0];
-  panels.forEach((p) => { p.open = !narrow.matches || p === keep; });
-};
-if (panels.length) {
-  settle();
-  narrow.addEventListener("change", settle);
-  panels.forEach((p) => p.addEventListener("toggle", () => { if (!p.open && !narrow.matches) p.open = true; }));
-  let was;
-  addEventListener("beforeprint", () => { was = panels.map((p) => p.open); panels.forEach((p) => { p.open = true; }); });
-  addEventListener("afterprint", () => { if (was) panels.forEach((p, i) => { p.open = was[i]; }); });
+if (compactFaq) {
+  let panelsBeforePrint;
+  let itemsBeforePrint;
+  addEventListener("beforeprint", () => {
+    panelsBeforePrint = panels.map((p) => p.open);
+    itemsBeforePrint = items().map((item) => item.open);
+    panels.forEach((p) => { p.open = true; });
+    items().forEach((item) => { item.open = true; });
+  });
+  addEventListener("afterprint", () => {
+    if (panelsBeforePrint) panels.forEach((p, i) => { p.open = panelsBeforePrint[i]; });
+    if (itemsBeforePrint) items().forEach((item, i) => { item.open = itemsBeforePrint[i]; });
+  });
+} else {
+  const narrow = matchMedia("(max-width: 767.98px)");
+  const settle = () => {
+    const keep = panelFor(hashEl()) || panels[0];
+    panels.forEach((p) => { p.open = !narrow.matches || p === keep; });
+  };
+  if (panels.length) {
+    settle();
+    narrow.addEventListener("change", settle);
+    panels.forEach((p) => p.addEventListener("toggle", () => { if (!p.open && !narrow.matches) p.open = true; }));
+    let was;
+    addEventListener("beforeprint", () => { was = panels.map((p) => p.open); panels.forEach((p) => { p.open = true; }); });
+    addEventListener("afterprint", () => { if (was) panels.forEach((p, i) => { p.open = was[i]; }); });
+  }
 }
 
-// FAQ: questions are <details> too (closed by default). Expand all opens every panel and question; collapse all closes the questions.
-const items = () => Array.from(document.querySelectorAll("details:not([data-collapsible])"));
+// FAQ: all questions start closed; secondary topic groups also start closed. Expand all opens every group and
+// question. Collapse all restores the compact view while keeping the seven primary questions visible.
+const items = () => Array.from(document.querySelectorAll(".reference-reading-page--faq main details[id]"));
 const toggle = document.querySelector("[data-faq-toggle]");
-if (toggle) {
+if (toggle && compactFaq) {
   const sync = () => {
-    const every = items().every((d) => d.open);
+    const every = [...panels, ...items()].every((d) => d.open);
     toggle.textContent = every ? toggle.dataset.open : toggle.dataset.closed;
     toggle.setAttribute("aria-pressed", String(every));
   };
   toggle.hidden = false;
   toggle.addEventListener("click", () => {
-    const every = items().every((d) => d.open);
-    if (!every) panels.forEach((p) => { p.open = true; });
+    const every = [...panels, ...items()].every((d) => d.open);
+    const secondary = panels.filter((p) => p.hasAttribute("data-secondary"));
+    secondary.forEach((p) => { p.open = !every; });
     items().forEach((d) => { d.open = !every; });
     sync();
   });
   items().forEach((d) => d.addEventListener("toggle", sync));
+  panels.forEach((d) => d.addEventListener("toggle", sync));
+  sync();
+} else if (toggle) {
+  // Preserve the legacy FAQ control outside the approved English reading page.
+  const legacyItems = Array.from(document.querySelectorAll("details:not([data-collapsible])"));
+  const sync = () => {
+    const every = legacyItems.every((d) => d.open);
+    toggle.textContent = every ? toggle.dataset.open : toggle.dataset.closed;
+    toggle.setAttribute("aria-pressed", String(every));
+  };
+  toggle.hidden = false;
+  toggle.addEventListener("click", () => {
+    const every = legacyItems.every((d) => d.open);
+    if (!every) panels.forEach((p) => { p.open = true; });
+    legacyItems.forEach((d) => { d.open = !every; });
+    sync();
+  });
+  legacyItems.forEach((d) => d.addEventListener("toggle", sync));
   sync();
 }
 
-// A #hash opens what it points at: a question (and its panel) or a whole panel, then scrolls to it.
+// A #hash opens what it points at: a question (and its group) or a whole group, then scrolls to it.
 const openTarget = () => {
   const el = hashEl();
   if (!el) return;

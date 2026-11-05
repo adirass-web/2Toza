@@ -1,0 +1,8 @@
+{
+  "approval": "2026-11-05 owner approved revised FAQ copy, compact public FAQ and unnumbered full public Conditions; preview only",
+  "protectedOverrides": {
+    "_site/assets/js/site.js": {
+      "sha256": "6b0507299044ffab04aa054d0dc9ace1a3cb35b5d212bd27a53641116e522860"
+    }
+  }
+}
