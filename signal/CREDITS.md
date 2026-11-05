@@ -4,14 +4,14 @@
 
 | Asset | Use | Photographer / Source |
 |---|---|---|
-| `hero-woman-phone-*.webp` | Hero | Tamara Govedarovic — unsplash.com |
-| `sit-separation-*.webp` | Situation: Separation or divorce | Unsplash — unsplash.com/photos/yqOoaRtkTtA |
-| `sit-business-*.webp` | Situation: Business dispute | Unsplash — unsplash.com/photos/iPheGw7_UaI |
-| `sit-inheritance-*.webp` | Situation: Inheritance conflict | Unsplash — old-stairs collection |
-| `sit-watching-*.webp` | Situation: Someone knows something | Unsplash — unsplash.com/photos/AtamQ6rkeB4 |
+| `hero-woman-phone-*.avif` | Hero | Tamara Govedarovic — unsplash.com |
+| `sit-separation-*.avif` | Situation: Separation or divorce | Unsplash — unsplash.com/photos/yqOoaRtkTtA |
+| `sit-business-*.avif` | Situation: Business dispute | Unsplash — unsplash.com/photos/iPheGw7_UaI |
+| `sit-inheritance-*.avif` | Situation: Inheritance conflict | Unsplash — old-stairs collection |
+| `sit-watching-*.avif` | Situation: Someone knows something | Unsplash — unsplash.com/photos/AtamQ6rkeB4 |
 
 All photos receive the Signal grade (desaturation + cool shift) so the set reads as one family.
-Replace before launch if the owner prefers commissioned photography; the pipeline (crop → grade → WebP srcset) stays identical.
+Replace before launch if the owner prefers commissioned photography; the pipeline (crop → grade → AVIF single-size) stays identical.
 
 ## Brand glyphs
 
