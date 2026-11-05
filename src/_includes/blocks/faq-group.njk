@@ -4,21 +4,31 @@
 {% if not prev or prev.type != 'faq-group' %}
 <div class="mx-auto grid w-full max-w-wrap gap-8 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-28">
   <nav class="lg:sticky lg:top-26 lg:col-span-3 lg:self-start" aria-label="{{ t.ui.faqGroups }}">
-    <ul class="flex flex-wrap gap-x-5 gap-y-1 lg:grid lg:gap-0 lg:border-s lg:border-default">
+    <details class="faq-mobile-toc">
+      <summary>{{ t.ui.browseTopics }}<span aria-hidden="true"></span></summary>
+      <ul class="grid gap-1 py-2">
+        {% for g in blocks %}{% if g.type == 'faq-group' %}<li><a href="#{{ g.id }}">{{ g.nav_label }}</a></li>{% endif %}{% endfor %}
+      </ul>
+    </details>
+    <ul class="faq-desktop-toc flex flex-wrap gap-x-5 gap-y-1 lg:grid lg:gap-0 lg:border-s lg:border-default">
       {% for g in blocks %}{% if g.type == 'faq-group' %}
       <li><a href="#{{ g.id }}" class="inline-flex min-h-11 items-center text-heading underline decoration-transparent decoration-1 underline-offset-4 hover:decoration-accent lg:-ms-px lg:border-s lg:border-transparent lg:ps-4 lg:no-underline lg:hover:border-accent">{{ g.nav_label }}</a></li>
       {% endif %}{% endfor %}
     </ul>
-    <button type="button" data-faq-toggle data-open="{{ t.ui.faqCollapse }}" data-closed="{{ t.ui.faqExpand }}" class="mt-3 -mb-3 min-h-11 font-medium text-fg-brand underline decoration-accent decoration-1 underline-offset-4 hover:decoration-2 lg:ms-4" hidden>{{ t.ui.faqExpand }}</button>
+    <button type="button" data-faq-toggle data-open="{{ t.ui.faqCollapse }}" data-closed="{{ t.ui.faqExpand }}" class="mt-2 -mb-2 min-h-11 font-medium text-fg-brand underline decoration-accent decoration-1 underline-offset-4 hover:decoration-2 lg:ms-4" hidden>{{ t.ui.faqExpand }}</button>
   </nav>
-  <div class="grid gap-6 md:gap-14 lg:col-span-9 lg:gap-20">
+  <div class="faq-groups grid gap-6 md:gap-14 lg:col-span-9 lg:gap-20">
 {% endif %}
-    <section id="{{ block.id }}" aria-labelledby="{{ block.id }}-h" class="scroll-mt-24">
-      <details open data-collapsible class="group/panel">
-      <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 max-md:border-t max-md:border-accent max-md:py-3 md:pointer-events-none">
+    <section id="{{ block.id }}" aria-labelledby="{{ block.id }}-h" class="scroll-mt-24{% if block.secondary %} faq-secondary{% endif %}">
+      {% if block.primary %}
+      <h2 id="{{ block.id }}-h" class="mb-6 font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading">{{ block.heading }}</h2>
+      {% else %}
+      <details{% if not block.secondary %} open{% endif %} data-collapsible{% if block.secondary %} data-secondary{% endif %} class="group/panel">
+      <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 max-md:border-t max-md:border-accent max-md:py-3{% if not block.secondary %} md:pointer-events-none{% endif %}">
         <h2 id="{{ block.id }}-h" class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading">{{ block.heading }}</h2>
         <svg class="size-5 shrink-0 rotate-180 text-accent group-open/panel:rotate-0 md:hidden motion-safe:transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
       </summary>
+      {% endif %}
       <div class="mt-6 border-b border-default">
         {% for q in block.items %}
         <details class="group scroll-mt-24 border-t border-default" id="{{ q.id }}">
@@ -42,7 +52,7 @@
         {% endfor %}
       </div>
       {% if block.link %}<p class="mt-8">{{ lnk(block.link) }}</p>{% endif %}
-      </details>
+      {% if not block.primary %}</details>{% endif %}
     </section>
 {% if not next or next.type != 'faq-group' %}
   </div>

@@ -17,6 +17,7 @@
     "arrowExternal": "↗",
     "pricesLabel": "Prices",
     "faqGroups": "Question groups",
+    "browseTopics": "Browse topics",
     "faqExpand": "Expand all answers",
     "faqCollapse": "Collapse all answers",
     "print": "Print this page",
@@ -46,7 +47,8 @@
     "signalShort": "Signal",
     "callback": "Call me back",
     "referral": "Discuss a referral",
-    "profile": "Professional profile"
+    "profile": "Professional profile",
+    "callbackReference": "Request a call back on WhatsApp"
   },
   "person": {
     "name": "Dr. Lior Tabansky",

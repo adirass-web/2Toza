@@ -4,6 +4,12 @@
 {% if not prev or prev.type != 'terms-section' %}
 <div class="terms-doc mx-auto grid w-full max-w-wrap gap-10 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-24 print:block print:px-0">
   <aside class="hidden self-start lg:sticky lg:top-26 lg:col-span-3 lg:block print:hidden" aria-label="{{ pg.labels.toc }}">
+    <details class="terms-mobile-toc">
+      <summary>{{ pg.labels.toc }}<span aria-hidden="true"></span></summary>
+      <ul class="grid gap-1 py-2">
+        {% for s in blocks %}{% if s.type == 'terms-section' %}<li><a href="#{{ s.id }}">{{ s.nav_label }}</a></li>{% endif %}{% endfor %}
+      </ul>
+    </details>
     <ol class="terms-toc grid">
       {% for s in blocks %}{% if s.type == 'terms-section' %}
       <li><a href="#{{ s.id }}" class="flex min-h-9 items-center gap-2 text-heading underline decoration-transparent decoration-1 underline-offset-4 hover:decoration-accent">{{ s.nav_label }}</a></li>

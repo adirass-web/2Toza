@@ -17,26 +17,56 @@ blocks:
     actions: [whatsapp, signal, callback]
 
   - type: faq-group
-    id: a
-    nav_label: Before you get in touch
-    heading: Before you get in touch.
+    id: primary
+    nav_label: Quick answers
+    heading: Quick answers.
+    primary: true
     items:
       - id: a1
         question: What should I send in the first message?
         answer: |-
-          A short, neutral message through WhatsApp or Signal, such as: "I'd like a private conversation. Please let me know the next step." You receive a personal reply as soon as possible. Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message. Keep identifying case details out of it as well.
+          Send a short, neutral WhatsApp or Signal message: "I'd like a private conversation." Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, detailed allegations or identifying case details. Contact may be visible on your device or account. You receive a personal reply as soon as possible.
+
+      - id: a3
+        question: Is the first conversation the paid service?
+        answer: |-
+          No. The conversation is free and does not commit you to purchase. Toza discusses fit, urgency and next steps. It includes no device inspection, mapping, diagnosis or technical work. [No diagnosis needed](#a5).
+
+      - id: b1
+        question: "What do I get for {price:assessment}?"
+        answer: |-
+          An in-person Private Exposure Assessment, a written exposure summary and ordered next steps. Allow half a day; four hours is typical. Approved urgent first aid may be included where safe and within the agreed scope. [Scope](#b2) · [{fact:credit.windowDays}-day credit](/en/conditions/#thirty-day).
+
+      - id: b3
+        question: What do I receive if I don't continue?
+        answer: |-
+          You keep a written exposure summary: what was reviewed, any urgent exposure found, what changed, what remains and recommended next steps. There is no automatic continuation to a protection tier.
+
+      - id: d1
+        question: Do I give you my passwords or remote access?
+        answer: |-
+          Do not send passwords or recovery codes in advance. You control them and authentication throughout, and sign in on your devices when needed. Toza does not keep credentials for ongoing use or remotely control your devices. [On-screen visibility](#d2).
+
+      - id: a4
+        question: What happens before I pay?
+        answer: |-
+          If the service fits, you receive a written offer: work, inclusions, exclusions, price, agreed additions and payment terms. The visit is scheduled and paid work starts only after explicit acceptance and receipt of payment. Toza sends preparation instructions directly. [Payment](/en/conditions/#payment).
+
+      - id: b4
+        question: What if you find something serious outside my concern?
+        answer: |-
+          Toza explains the issue and obtains your approval before addressing it. Any increase in scope or price must be agreed first. An urgent finding does not authorize unagreed work or charges. [First-aid limits](#b5).
+
+  - type: faq-group
+    id: a
+    nav_label: Before you get in touch
+    heading: Before you get in touch.
+    secondary: true
+    items:
       - id: a2
         question: Can someone notice my contact with Toza?
         answer: |-
           Contact through WhatsApp or Signal is not guaranteed to be invisible on your device or account. Keep the first message short and neutral.
-      - id: a3
-        question: Is the first conversation the paid service?
-        answer: |-
-          No. The first conversation checks whether Toza fits your situation, whether anything appears urgent and what the next step should be. It is free and includes no device inspection, mapping, diagnosis or technical work. Contacting Toza does not commit you to a purchase.
-      - id: a4
-        question: What happens before I pay?
-        answer: |-
-          If the service fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms. You accept it explicitly and pay; then the visit is scheduled. No paid work starts before acceptance and receipt of payment. Preparation instructions are sent directly.
       - id: a5
         question: Do I need to know what's wrong before I get in touch?
         answer: |-
@@ -46,23 +76,12 @@ blocks:
     id: b
     nav_label: The first step
     heading: "The first step ({price:assessment})."
+    secondary: true
     items:
-      - id: b1
-        question: "What do I get for {price:assessment}?"
-        answer: |-
-          A senior check-up of your digital life: half a day in person. Toza listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you. Where urgent exposure can be addressed safely within the agreed scope, the changes are made with your approval. You keep a written exposure summary with ordered next steps. The {price:assessment} counts in full toward a tier that begins within {fact:credit.windowDays} days.
       - id: b2
         question: What does it cover, and how long does it take?
         answer: |-
-          {fact:assessmentScope|capfirst}. Toza reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. Allow half a day; it typically takes four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified.
-      - id: b3
-        question: What do I receive if I don't continue?
-        answer: |-
-          A written exposure summary: what was reviewed, what urgent exposure was found, what was changed, what remains and the recommended next steps. You keep it whether or not you continue. There is no automatic continuation to a protection tier.
-      - id: b4
-        question: What if you find something serious outside my concern?
-        answer: |-
-          Toza explains it and obtains your approval before addressing it. If the proposed work expands the scope or price, that is agreed with you first. Finding an urgent problem does not authorize unagreed work or charges.
+          {fact:assessmentScope|capfirst}. Toza reviews the relevant identities, accounts, apps, permissions, signed-in devices, recovery routes and shared services. Allow half a day; it typically takes four hours. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. The review stays within your authorized environment and is not a promise to find accounts or devices that have not been identified. Toza listens to your concerns, inspects the relevant devices, accounts and access, and explains what the findings mean for you.
       - id: b5
         question: Can you remove spyware or a malicious app?
         answer: |-
@@ -72,6 +91,7 @@ blocks:
     id: c
     nav_label: Protection tiers
     heading: Protection tiers.
+    secondary: true
     items:
       - id: c1
         question: What does Personal Shield include?
@@ -98,11 +118,8 @@ blocks:
     id: d
     nav_label: Privacy and control
     heading: Privacy and control.
+    secondary: true
     items:
-      - id: d1
-        question: Do I give you my passwords or remote access?
-        answer: |-
-          You control your passwords, recovery codes and authentication throughout. Do not send them in advance. You may need to sign in on your own devices during the work. Toza does not keep your credentials for ongoing use or remotely control your devices.
       - id: d2
         question: Will you see my messages or photos?
         answer: |-
@@ -120,6 +137,7 @@ blocks:
     id: e
     nav_label: What Toza does not do
     heading: What Toza does not do.
+    secondary: true
     items:
       - id: e1
         question: Can you prove who accessed my account, investigate someone or collect evidence?
@@ -164,6 +182,7 @@ blocks:
     id: f
     nav_label: For attorneys
     heading: For attorneys.
+    secondary: true
     items:
       - id: f1
         question: Does a referral authorize access to my client's information?
@@ -187,6 +206,7 @@ blocks:
     id: g
     nav_label: Prices and timing
     heading: Prices and timing.
+    secondary: true
     items:
       - id: g1
         question: "How does the {price:assessment} first step count toward a tier?"

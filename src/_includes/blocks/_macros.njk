@@ -16,7 +16,7 @@
 
 {#- Flowbite button (default = primary, outline = secondary). -#}
 {% macro btn(a, kind, tone, extra) %}
-<a href="{{ a.href }}"{% if a.external %} target="_blank" rel="noopener"{% endif %} class="box-border inline-flex min-h-12 items-center justify-center rounded-base border px-5 py-3 text-base leading-6 font-medium {% if tone == 'dark' %}{% if kind == 'primary' %}border-transparent bg-action-inverse text-on-action-inverse hover:bg-action-inverse-hover{% else %}border-on-dark-border-strong bg-transparent text-paper hover:bg-paper hover:text-ink{% endif %}{% elif kind == 'primary' %}border-transparent bg-brand text-on-action shadow-xs hover:bg-brand-strong{% else %}border-brand bg-neutral-primary text-fg-brand hover:bg-brand hover:text-on-action{% endif %} {{ extra }}">{{ a.label }}</a>
+<a href="{{ a.href }}"{% if a.external %} target="_blank" rel="noopener"{% endif %} class="box-border inline-flex min-h-12 items-center justify-center rounded-base border px-5 py-3 text-base leading-6 font-medium {% if tone == 'dark' %}{% if kind == 'primary' %}border-transparent bg-action-inverse text-on-action-inverse hover:bg-action-inverse-hover{% else %}border-on-dark-border-strong bg-transparent text-paper hover:bg-paper hover:text-ink{% endif %}{% elif kind == 'primary' %}border-transparent bg-brand text-on-action shadow-xs hover:bg-brand-strong{% else %}border-brand bg-neutral-primary text-fg-brand hover:bg-brand hover:text-on-action{% endif %} {{ extra }}">{% if a.key == 'callback' and (pg.page == 'faq' or pg.page == 'conditions') and t.lang == 'en' %}{{ t.buttons.callbackReference }}{% else %}{{ a.label }}{% endif %}</a>
 {% endmacro %}
 
 {#- The lead action is primary, the rest outline. first: extra classes for the lead button. -#}

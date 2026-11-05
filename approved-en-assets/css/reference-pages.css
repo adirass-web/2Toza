@@ -1,0 +1,377 @@
+/* EN FAQ and Conditions: editorial reading surfaces within the existing grey/ink identity. */
+.reference-reading-page {
+  background-color: #e0e0e0 !important;
+  color: #232323 !important;
+}
+.reference-reading-page header {
+  background: #e0e0e0 !important;
+  color: #232323 !important;
+  border-color: #c4c7c9 !important;
+}
+.reference-reading-page :is(h1, h2, h3, .text-heading, .text-body, .text-body-subtle, .text-fg-brand, .text-fg-brand-strong),
+.reference-reading-page a,
+.reference-reading-page a:hover { color: #232323 !important; }
+.reference-reading-page footer { background: #e0e0e0 !important; color: #232323 !important; }
+.reference-reading-page [data-tone="dark"] {
+  background-color: #232323 !important;
+  color: #e0e0e0 !important;
+}
+.reference-reading-page [data-tone="dark"] :is(h1, h2, h3, a, .text-heading, .text-body, .text-body-subtle, .text-paper, .text-on-dark-text, .text-fg-brand, .text-fg-brand-strong) {
+  color: #e0e0e0 !important;
+}
+.reference-reading-page [data-tone="dark"] .border-on-dark-border-strong { border-color: #c4c7c9 !important; }
+
+/* Keep the approved four-link navigation visible as a second row on phones and one row on desktop. */
+.reference-reading-page header > nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  row-gap: .15rem;
+}
+.reference-reading-page header > nav > a { grid-column: 1; grid-row: 1; }
+.reference-reading-page header > nav > div:has([data-collapse-toggle]) { display: none; }
+.reference-reading-page #navbar-main {
+  display: flex !important;
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  align-items: center;
+}
+.reference-reading-page #navbar-main ul {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: .1rem clamp(.35rem, 2vw, 1.25rem);
+  margin: 0;
+  border: 0;
+  background: transparent;
+  padding: 0 0 .3rem;
+  font-weight: 400;
+}
+.reference-reading-page #navbar-main a {
+  min-height: 2.75rem;
+  border-radius: 0;
+  padding-inline: .35rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: .35em;
+}
+.reference-reading-page #navbar-main a:hover,
+.reference-reading-page #navbar-main a[aria-current="page"] { background: transparent; text-decoration-color: #777; }
+
+@media (min-width: 768px) {
+  .reference-reading-page header > nav {
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: clamp(2rem, 5vw, 5rem);
+  }
+  .reference-reading-page #navbar-main {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+  }
+  .reference-reading-page #navbar-main ul {
+    width: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: clamp(1rem, 2.4vw, 2.5rem);
+    padding: 0;
+  }
+}
+
+/* A quiet, spacious opening shared by both reading pages. */
+.reference-reading-page main > section[data-hero] {
+  padding-block: clamp(3.5rem, 8vw, 7.5rem) clamp(3rem, 6vw, 5.5rem);
+}
+.reference-reading-page main > section[data-hero] > div {
+  max-width: 80rem;
+}
+.reference-reading-page main > section[data-hero] h1 {
+  max-width: 16ch;
+  font-size: clamp(3rem, 6.5vw, 6rem);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.reference-reading-page main > section[data-hero] > div > span[aria-hidden="true"] {
+  width: clamp(4rem, 8vw, 7rem);
+  margin-block-start: clamp(1.5rem, 3vw, 2.5rem);
+  background: #858781;
+}
+.reference-reading-page main > section[data-hero] p {
+  max-width: 68ch;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .reference-reading-page main > section[data-hero] { padding-block: 1.25rem 1.5rem; }
+  .reference-reading-page main > section[data-hero] h1 { font-size: clamp(2.25rem, 7.5vw, 2.5rem); }
+  .reference-reading-page main > section[data-hero] > div > span[aria-hidden="true"] { margin-block-start: 1rem; }
+  .reference-reading-page main > section[data-hero] p { margin-block-start: 1rem; }
+  .reference-reading-page main > section[data-hero] .grid.grid-cols-2 { display: flex; flex-wrap: wrap; margin-block-start: 1rem; }
+  .reference-reading-page main > section[data-hero] .grid.grid-cols-2 > * { width: auto; max-width: 100%; flex: 0 1 auto; }
+  .reference-reading-page main > section[data-hero] p + p { margin-block-start: .75rem; }
+}
+
+/* FAQ: persistent group navigation with question-first rhythm and calm answer measure. */
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 80rem;
+  padding-block-end: clamp(4rem, 8vw, 8rem);
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav {
+  position: static;
+  border-block-end: 1px solid #b9bbb9;
+  padding-block-end: 1rem;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav ul {
+  gap: .2rem clamp(.8rem, 2vw, 1.75rem);
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav a {
+  min-height: 2.75rem;
+  text-decoration-color: #a9aaa7;
+  text-underline-offset: .3em;
+}
+.reference-reading-page--faq .faq-mobile-toc,
+.reference-reading-page--conditions .terms-mobile-toc { display: block; }
+.reference-reading-page--faq .faq-desktop-toc,
+.reference-reading-page--conditions .terms-toc { display: none; }
+.reference-reading-page--faq .faq-mobile-toc > summary,
+.reference-reading-page--conditions .terms-mobile-toc > summary {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-block: 1px solid #b9bbb9;
+  cursor: pointer;
+  font-weight: 500;
+}
+.reference-reading-page--faq .faq-mobile-toc > ul {
+  display: grid;
+  width: auto;
+  flex-flow: column nowrap;
+  gap: .1rem;
+}
+.reference-reading-page--faq .faq-mobile-toc > summary span,
+.reference-reading-page--conditions .terms-mobile-toc > summary span {
+  width: .55rem;
+  height: .55rem;
+  flex: 0 0 auto;
+  transform: rotate(45deg) translateY(-.12rem);
+  border-inline-end: 1.5px solid currentColor;
+  border-block-end: 1.5px solid currentColor;
+}
+.reference-reading-page--faq .faq-mobile-toc[open] > summary span,
+.reference-reading-page--conditions .terms-mobile-toc[open] > summary span { transform: rotate(225deg) translateY(-.12rem); }
+.reference-reading-page--faq .faq-mobile-toc a,
+.reference-reading-page--conditions .terms-mobile-toc a {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-color: #a9aaa7;
+  text-underline-offset: .3em;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > div {
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap section[id] {
+  scroll-margin-block-start: 7rem;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap section[id] > details > summary {
+  min-height: 0;
+  align-items: start;
+  padding-block: .25rem 1.25rem;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap section[id] > details > summary h2 {
+  max-width: 22ch;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.14;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap section[id] > details > div {
+  border-block-end-color: #b9bbb9;
+}
+.reference-reading-page--faq main details[id] {
+  border-block-start-color: #b9bbb9;
+}
+.reference-reading-page--faq main details[id] > summary {
+  min-height: 4rem;
+  box-sizing: border-box;
+  padding-block: .7rem;
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  line-height: 1.35;
+}
+.reference-reading-page--faq main details[id] > div {
+  max-width: 70ch;
+  padding-block-end: 1.5rem;
+  line-height: 1.65;
+}
+/* The seven primary questions are a plain, always-visible list; secondary groups remain native disclosures. */
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > div > section#primary > h2 {
+  max-width: 22ch;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.14;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > div > section#primary > div {
+  border-block-end: 1px solid #b9bbb9;
+}
+@media (min-width: 1024px) {
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap {
+    grid-template-columns: minmax(12rem, 3fr) minmax(0, 9fr);
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav { grid-column: 1; }
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > div { grid-column: 2; }
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav {
+    position: sticky;
+    inset-block-start: 7rem;
+    align-self: start;
+    border-block-end: 0;
+    border-inline-start: 1px solid #b9bbb9;
+    padding-block-end: 0;
+  }
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav ul {
+    display: grid;
+    gap: .15rem;
+  }
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav a {
+    min-height: 3rem;
+    padding-inline-start: 1rem;
+    text-decoration-color: transparent;
+  }
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > nav a:hover { text-decoration-color: #858781; }
+  .reference-reading-page--faq .faq-mobile-toc,
+  .reference-reading-page--conditions .terms-mobile-toc { display: none; }
+  .reference-reading-page--faq .faq-desktop-toc,
+  .reference-reading-page--conditions .terms-toc { display: grid; }
+}
+@media (max-width: 1000px) {
+  .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap { padding-inline-end: 72px; }
+}
+@media print {
+  .reference-reading-page--faq .faq-mobile-toc,
+  .reference-reading-page--conditions .terms-mobile-toc { display: none !important; }
+  .reference-reading-page--faq details:not([open]) > :not(summary) { display: block !important; }
+  .reference-reading-page--faq details > summary svg { display: none; }
+}
+
+/* Conditions: readable numbered prose, a contents rail, and a table that becomes stacked rows on phones. */
+.reference-reading-page--conditions .terms-doc {
+  max-width: 80rem;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block-end: clamp(4rem, 8vw, 8rem);
+}
+.reference-reading-page--conditions .terms-doc > aside {
+  display: block;
+  position: static;
+  align-self: start;
+}
+.reference-reading-page--conditions .terms-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem clamp(.75rem, 2vw, 1.5rem);
+  border-block-end: 1px solid #b9bbb9;
+  padding-block-end: 1rem;
+}
+.reference-reading-page--conditions .terms-toc a {
+  min-height: 2.75rem;
+  text-decoration-color: #a9aaa7;
+  text-underline-offset: .3em;
+}
+.reference-reading-page--conditions .terms-section {
+  margin-block-start: clamp(2.75rem, 5vw, 4.5rem);
+  scroll-margin-block-start: 7rem;
+}
+.reference-reading-page--conditions .terms-section:first-child { margin-block-start: 0; }
+.reference-reading-page--conditions .terms-section > details > summary {
+  align-items: start;
+  border-block-start: 1px solid #aeb0ae;
+  padding-block: 1rem 1.25rem;
+}
+.reference-reading-page--conditions .terms-h { gap: .8rem; line-height: 1.18; }
+.reference-reading-page--conditions .terms-h::before,
+.reference-reading-page--conditions .terms-item::before,
+.reference-reading-page--conditions .terms-toc a::before { content: none; }
+.reference-reading-page--conditions .terms-list { list-style: none; }
+.reference-reading-page--conditions .terms-list .terms-item { padding-inline-start: 0; }
+.reference-reading-page--conditions .terms-section .md-flow,
+.reference-reading-page--conditions .terms-item .md-flow { max-width: 70ch; line-height: 1.65; }
+.reference-reading-page--conditions .terms-section table { table-layout: fixed; }
+.reference-reading-page--conditions .terms-section table th,
+.reference-reading-page--conditions .terms-section table td { overflow-wrap: anywhere; }
+.reference-reading-page--conditions .terms-section table td:last-child { font-variant-numeric: tabular-nums; }
+@media (min-width: 1024px) {
+  .reference-reading-page--conditions .terms-doc {
+    grid-template-columns: minmax(12rem, 3fr) minmax(0, 9fr);
+    align-items: start;
+  }
+  .reference-reading-page--conditions .terms-doc > aside { grid-column: 1; }
+  .reference-reading-page--conditions .terms-doc > div { grid-column: 2; }
+  .reference-reading-page--conditions .terms-doc > aside {
+    position: sticky;
+    inset-block-start: 7rem;
+  }
+  .reference-reading-page--conditions .terms-toc {
+    display: grid;
+    gap: .15rem;
+    border-block-end: 0;
+    border-inline-start: 1px solid #b9bbb9;
+    padding-block-end: 0;
+  }
+  .reference-reading-page--conditions .terms-toc a { padding-inline-start: 1rem; text-decoration-color: transparent; }
+  .reference-reading-page--conditions .terms-toc a:hover { text-decoration-color: #858781; }
+}
+@media (max-width: 639px) {
+  .reference-reading-page--conditions .terms-doc { padding-inline-end: 72px; }
+  .reference-reading-page--conditions .terms-section table,
+  .reference-reading-page--conditions .terms-section tbody { display: block; width: 100%; }
+  .reference-reading-page--conditions .terms-section tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: .2rem;
+    padding-block: .85rem;
+  }
+  .reference-reading-page--conditions .terms-section tbody th,
+  .reference-reading-page--conditions .terms-section tbody td {
+    grid-column: 1;
+    grid-row: auto;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    text-align: start;
+    white-space: normal;
+  }
+  .reference-reading-page--conditions .terms-section tbody th { font-size: 1rem; }
+  .reference-reading-page--conditions .terms-section tbody td:last-child {
+    margin-block-start: .15rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+/* Compact reference rhythm: primary rows lead, secondary topics remain clear disclosure rows. */
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap > .faq-groups { gap: 0; }
+.reference-reading-page--faq #primary { margin-block-end: 1.5rem; }
+.reference-reading-page--faq main .faq-secondary { margin: 0; }
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap .faq-secondary > details > summary {
+ min-height: 4.5rem; box-sizing: border-box; padding-block: 1rem; align-items: center; border-block-start: 1px solid #b9bbb9;
+}
+.reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap .faq-secondary > details > summary h2 { margin: 0; max-width: none; font-size: 1.5rem; line-height: 1.25; }
+.reference-reading-page--faq .faq-secondary > details > summary > svg { display: block; }
+@media (min-width: 768px) {
+ .reference-reading-page--faq main > section[data-hero] { padding-block: 1.5rem 2rem; }
+ .reference-reading-page--faq main > section[data-hero] h1 { font-size: 3.5rem; max-width: 24ch; }
+}
+@media (max-width: 767px) {
+ .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap { row-gap: 1rem; }
+ .reference-reading-page--faq #primary > h2 { margin-block-end: 1rem; }
+ .reference-reading-page--faq main > .mx-auto.grid.w-full.max-w-wrap .faq-secondary > details > summary h2 { font-size: 1.35rem; }
+ .reference-reading-page [data-contact] .grid.grid-cols-2 { display: flex; flex-wrap: wrap; }
+ .reference-reading-page [data-contact] .grid.grid-cols-2 > * { width: auto; max-width: 100%; flex: 0 1 auto; }
+}
+
+.reference-reading-page--faq .faq-secondary > details > summary h2 { font-size: 1.5rem !important; line-height: 1.25 !important; }
+.reference-reading-page a.inline-flex:hover, .reference-reading-page a.inline-flex:focus-visible { background-color: #232323 !important; color: #e0e0e0 !important; }
+@media (max-width: 767px) { .reference-reading-page--faq .faq-secondary > details > summary h2 { font-size: 1.35rem !important; } }
+
+@media (max-width: 1023px) { .reference-reading-page--conditions .terms-doc > aside > .terms-toc { display: none; } }
