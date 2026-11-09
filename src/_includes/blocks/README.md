@@ -487,11 +487,11 @@ Example: pricing.
 
 ## tiers
 
-Protection tiers with prices.
+Protection tiers with prices. The `matrix` variant keeps the nested first-step offer above a compact, scrollable comparison; all three prices remain in sticky column headers.
 
 | Field | Type | | Notes |
 |---|---|---|---|
-| `detail` | `full` \| `summary` | optional | `full` (pricing): every tier lists its inclusions. `summary` (how-it-works): one line each; `items` are usually absent |
+| `detail` | `full` \| `summary` \| `matrix` | optional | `full`: tier cards; `summary`: one line each; `matrix`: separate Assessment plus three Shield price columns and comparison rows |
 | `heading` | text | required | Always present, may be visually hidden |
 | `heading_visible` | bool | optional | false or absent: hide the heading visually, keep it for assistive technology |
 | `statement` | text | optional | |
@@ -503,6 +503,11 @@ Protection tiers with prices.
 | `tiers[].items` | text[] | optional | Up to 6 inclusions |
 | `notes` | md[] | optional | One md object per note |
 | `link` | link | optional | |
+| `matrix_rows` | matrix_row[] | optional | Exactly three cells per row; used by `detail: matrix` |
+| `shared_heading`, `shared_items` | text, text[] | optional | Work included in every tier, outside the comparison rows |
+| `services_heading`, `services_note`, `services` | text, text, brand_service[] | optional | Locally served, labelled app examples |
+| `icon_sources`, `icons_credit_label`, `marks_note` | icon_source[], text, text | optional | Visible source and license credits for icons |
+| `more_label` | text | optional | Summary for collapsed pricing conditions in matrix mode |
 
 Example: pricing (abridged).
 

@@ -129,7 +129,7 @@ export function createResolver(src, { err = throwing, usedShared = new Set() } =
 
 // ---------- page files ----------
 export function parsePage(file, raw, err = throwing) {
-  const m = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!m) { err(file, "missing YAML front matter"); return null; }
   let data;
   try { data = yaml.load(m[1]); } catch (e) { err(file, "YAML: " + e.message); return null; }

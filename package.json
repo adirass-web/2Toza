@@ -4,7 +4,7 @@
   "private": true,
   "description": "Toza v2 — competing rebuild (preview only, noindex).",
   "scripts": {
-    "build": "npm run build:css && npm run build:js && eleventy",
+    "build": "npm run build:css && npm run build:js && node scripts/build-pricing-icons.mjs && eleventy",
     "start": "npm run build:css && npm run build:js && eleventy --serve",
     "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs",
     "check:upstream": "node scripts/check-upstream.mjs",
