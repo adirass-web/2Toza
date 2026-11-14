@@ -1,8 +1,28 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
+import { parseDocument, DomUtils } from 'htmlparser2';
 const dir = process.env.SITE_ENV === 'production' ? '_site-production' : '_site';
 const read = path => readFileSync(`${dir}/${path}`, 'utf8');
+
+test('accessibility statement and footer links are available', () => {
+  assert.ok(existsSync(`${dir}/en/accessibility/index.html`), 'accessibility page missing');
+  const page = read('en/accessibility/index.html');
+  const dom = parseDocument(page);
+  const article = DomUtils.findOne(node => node.name === 'article', dom.children, true);
+  const paragraphs = DomUtils.findAll(node => node.name === 'p', article.children).map(node => DomUtils.textContent(node).replace(/\s+/g, ' ').trim());
+  assert.deepEqual(paragraphs, [
+    "Toza aims to make this website usable by people with disabilities. The website includes text alternatives for informative images, keyboard navigation and a link to skip to the main content. You can enlarge the text using your browser's zoom controls.",
+    'If you encounter an accessibility problem or need information in another format, please contact Toza through WhatsApp or Signal. Please identify the page and describe the difficulty so we can understand your request. Please do not include sensitive personal information in your first message.',
+    'Toza provides its service at locations selected by clients. Please contact Toza to discuss accessibility requirements for your appointment.',
+  ]);
+  assert.match(page, /href="https:\/\/wa\.me\/972533366276"/);
+  assert.match(page, /href="https:\/\/signal\.me\/#p\/\+972533366276"/);
+  for (const route of ['en/index.html', 'en/about/index.html', 'en/pricing/index.html', 'en/accessibility/index.html']) {
+    const footer = read(route).match(/<footer[\s\S]*?<\/footer>/i)?.[0] || '';
+    assert.match(footer, /href="\/en\/accessibility\/"/, `${route}: missing accessibility footer link`);
+  }
+});
 
 test('about displays selected portrait before the biography', () => {
   const html = read('en/about/index.html');

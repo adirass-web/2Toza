@@ -1,6 +1,6 @@
-# Draft accessibility statement — for owner review
+# Accessibility statement — owner-approved wording
 
-This draft is not yet published. Verify its statements against the completed site and actual service before publication. It is not a determination of legal compliance.
+The owner approved the proposed English wording and its addition to the site. Verify its statements against the completed site and actual service before publication. It is not a determination of legal compliance.
 
 ## Proposed English text
 
@@ -17,7 +17,7 @@ Toza provides its service at locations selected by clients. Please contact Toza 
 - Confirm each stated accommodation on all published pages, including keyboard behavior and useful image alternatives. The automated axe run alone is not a conformance assessment.
 - Manual screen-reader validation and a full Israeli Standard 5568 assessment remain outstanding; do not claim a completed assessment or AA conformance until verified.
 - The owner states that no accessibility coordinator has been appointed. The Commission's FAQ describes publishing details of a coordinator appointed under law. Whether appointment or further service-arrangements disclosures apply to this business must be established; do not invent a coordinator or exemption.
-- Confirm contact details, service-arrangement wording and any known limitations with the owner before publishing.
+- Confirm any known limitations with the owner before publishing.
 - Add the confirmed publication/update date when approved.
 
 Sources: [Israeli Commission accessibility-statement guidance](https://www.gov.il/he/departments/guides/declaration_website_accessibility); [Commission website accessibility FAQ](https://www.gov.il/he/Departments/faq/website_accessibility_faq).

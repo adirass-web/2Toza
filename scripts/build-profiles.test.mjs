@@ -11,7 +11,7 @@ test('build profiles isolate indexing and canonical metadata', () => {
   assert.match(read('_site/en/index.html'), /name="robots"[^>]*noindex/);
   assert.match(read('_site/_headers'), /X-Robots-Tag:\s*noindex/i);
   result = run({ SITE_ENV: 'production', SITE_URL: 'https://toza-site.pages.dev' }); assert.equal(result.status, 0, result.stderr);
-  const files = htmlFiles('_site-production/en'); assert.equal(files.length, 12);
+  const files = htmlFiles('_site-production/en'); assert.equal(files.length, 13);
   for (const file of files) {
     const html = read(file); const route = '/' + file.replace(/^_site-production\//, '').replace(/index\.html$/, '');
     assert.doesNotMatch(html, /name="robots"[^>]*noindex/i, file);
@@ -20,7 +20,7 @@ test('build profiles isolate indexing and canonical metadata', () => {
   }
   assert.doesNotMatch(read('_site-production/_headers'), /X-Robots-Tag:\s*noindex/i);
   assert.doesNotMatch(read('_site-production/robots.txt'), /Disallow:\s*\//);
-  assert.equal((read('_site-production/sitemap.xml').match(/<loc>/g) || []).length, 12);
+  assert.equal((read('_site-production/sitemap.xml').match(/<loc>/g) || []).length, 13);
   assert.equal(existsSync('_site-production/assets/previews'), false);
   assert.match(read('_site/en/index.html'), /name="robots"[^>]*noindex/);
 });

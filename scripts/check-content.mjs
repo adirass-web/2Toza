@@ -29,6 +29,8 @@ const ONLY = argValue("only") ? argValue("only").split(",") : null;
 // These routes use owner-approved Markdown/components and are checked by check-approved-en.mjs.
 const approvedManifest = "content/approved-en/routes.json";
 const delegatedRoutes = new Set(existsSync(approvedManifest) ? JSON.parse(readFileSync(approvedManifest, "utf8")).pages.map(p => p.permalink) : []);
+// The owner-approved statement is a standalone template, verified by launch-pages.test.mjs.
+delegatedRoutes.add('/en/accessibility/index.html');
 
 const src = loadSources({ lang: LANG });
 const { model, facts, contact, i18n, shared } = src;
