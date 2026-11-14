@@ -48,3 +48,11 @@
 - Axe all English pages at 390/1440, zero serious/critical; review lesser findings. Keyboard, no-JS, reduced motion; widths 320/390/768/1024/1440; Chromium, Firefox and WebKit smoke tests for navigation, contact, FAQ and Conditions.
 - Target LCP <=2.5s (CI <=3s), CLS <=0.05, JS <=60KB gzip, initial transfer <=1.2MB.
 - Conduct whole-branch review; document actual evidence, unperformed tests and remaining external prerequisites. Owner confirms copy, phone contact, preview and recorded accessibility-statement question before cutover.
+
+## Owner decisions, 14 November
+
+- Place the selected graphite portrait above the About biography; retain its approved copy.
+- Redirect old pages without an exact equivalent to the closest relevant English page. Compare legacy deep links and anchors through mapped redirects, documenting unavoidable gaps.
+- Fix performance before launch. Necessary minor accessibility and responsive visual fixes are authorized; ask before changing approved prose or commercial facts.
+- Publish the verified noindex preview when checks pass. Owner retains production cutover.
+- For the accessibility statement, research official Israeli requirements. Existing WhatsApp and Signal number is the accessibility contact; service is at client-selected locations; no accessibility coordinator has been appointed. Draft accurate wording for owner review, without claiming unverified conformance.
