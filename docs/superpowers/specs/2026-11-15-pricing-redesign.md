@@ -30,7 +30,7 @@ Each column has a native disclosure labeled "Full inclusions". Keep the current 
 
 ### Private Exposure Assessment · ₪4,000
 
-Half a day in person to assess your exposure, address urgent issues and set priorities. You keep a written exposure summary whether or not you continue.
+Half a day in person to establish your personal threat model, assess exposure, address urgent issues and set priorities. You keep a written exposure summary whether or not you continue.
 
 ### How the credit works
 
