@@ -4,8 +4,9 @@ import { readText, walk, fail, siteDir } from './util.mjs';
 const dir = siteDir(), production = process.env.SITE_ENV === 'production';
 const pages = walk(dir);
 for (const file of pages) {
+  const is404 = file === join(dir, '404.html');
   const blocked = /<meta\s+name="robots"[^>]*noindex/i.test(readText(file));
-  if (production ? blocked : !blocked) fail(`${file}: incorrect robots meta for ${production ? 'production' : 'preview'}`);
+  if (production && !is404 ? blocked : !blocked) fail(`${file}: incorrect robots meta for ${production ? 'production' : 'preview'}`);
 }
 const headers = readText(join(dir, '_headers'));
 const robots = readText(join(dir, 'robots.txt'));

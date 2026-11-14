@@ -90,8 +90,9 @@ const openTarget = () => {
   if (!el) return;
   const panel = panelFor(el);
   if (panel) panel.open = true;
-  if (el.tagName === "DETAILS") el.open = true;
-  if (panel || el.tagName === "DETAILS") el.scrollIntoView();
+  const detail = el.closest("details");
+  if (detail) detail.open = true;
+  if (panel || detail) el.scrollIntoView();
 };
 openTarget();
 addEventListener("hashchange", openTarget);

@@ -12,10 +12,20 @@
 <body class="has-fixed-contacts">
 <a class="skip-link" href="#main">Skip to content</a>
 {% include "approved-en/header.njk" %}
-<main id="main" class="locked-page">
-  <article class="locked-copy">{{ lockedPage.html | safe }}</article>
+<main id="main" class="locked-page"><span id="main-content"></span>
+  {% if lockedPage == approvedEN.lockedPages.expert %}<div class="expert-portrait"><img src="/assets/img/portraits/dr-tabansky-graphite-polished-640.webp" width="640" height="640" alt="Graphite portrait of Dr. Lior Tabansky"></div>{% endif %}
+  {% set displayHtml = lockedPage.html %}
+  {% if lockedPage == approvedEN.lockedPages.approach %}
+    {% set displayHtml = displayHtml | replace('<h2>First, your personal threat model.</h2>', '<h2 id="your-paid-assessment-inspection-diagnosis-and-urgent-first-aid">First, your personal threat model.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>Then, separately agreed protection.</h2>', '<h2 id="have-the-agreed-setup-hardened-around-your-life">Then, separately agreed protection.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>Agree the work before it starts.</h2>', '<h2 id="decide-whether-toza-fits-before-you-buy">Agree the work before it starts.</h2>') %}
+  {% elif lockedPage == approvedEN.lockedPages.expert %}
+    {% set displayHtml = displayHtml | replace('<h2>How that judgment becomes practical work.</h2>', '<h2 id="methods">How that judgment becomes practical work.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>Start a private conversation.</h2>', '<h2 id="assessment">Start a private conversation.</h2>') %}
+  {% endif %}
+  <article class="locked-copy">{{ displayHtml | safe }}</article>
 </main>
-<footer class="locked-footer">Toza · Local design preview</footer>
+{% include "approved-en/footer.njk" %}
 {% include "approved-en/contact-icons.njk" %}
 </body>
 </html>

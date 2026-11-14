@@ -7,7 +7,7 @@
 <body class="has-fixed-contacts">
 <a class="skip-link" href="#main">{{ t.skip }}</a>
 {% include "approved-en/header.njk" %}
-<main id="main">
+<main id="main"><span id="main-content"></span>
   <section class="hero" aria-labelledby="hero-title">
     <figure class="hero-image">
       <img class="hero-photo" src="/approved-en-assets/photos/hero-wide-1536.webp" srcset="/approved-en-assets/photos/hero-wide-900.webp 900w, /approved-en-assets/photos/hero-wide-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="{{ t.heroAlt }}" fetchpriority="high">
@@ -21,7 +21,7 @@
   </section>
   {% include "approved-en/en-situations-cta.njk" %}{% include "approved-en/en-prices.njk" %}
 </main>
-<footer class="mx-auto max-w-7xl px-5 py-8 font-sans text-sm text-[#62645e]">{{ t.footer }}</footer>
+{% include "approved-en/footer.njk" %}
 {% include "approved-en/contact-icons.njk" %}
 </body>
 </html>

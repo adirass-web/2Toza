@@ -15,3 +15,5 @@
 @media(max-width:850px){.locked-page{padding-block:46px 80px}.locked-copy h2{margin-top:48px}}
 @media(max-width:520px){.locked-copy{font-size:19px;line-height:1.55}.locked-copy h1{font-size:clamp(37px,10vw,52px)}}
 @media print{.locked-site-header,.locked-footer{display:none}.locked-page{max-width:none;padding:0}.locked-copy{max-width:none;color:#000}}
+
+.expert-portrait{max-width:72ch;margin:0 auto 36px}.expert-portrait img{display:block;width:min(100%,320px);height:auto}

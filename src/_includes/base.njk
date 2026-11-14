@@ -17,7 +17,7 @@
 <body class="has-fixed-contacts print:bg-print-paper print:text-print-ink bg-neutral-primary font-sans text-lg leading-relaxed text-body{% if pg.page == 'faq' or pg.page == 'conditions' %} reference-reading-page reference-reading-page--{{ pg.page }}{% endif %}">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-neutral-primary focus:p-3">{{ t.ui.skip }}</a>
 {% include "header.njk" %}
-<main id="main">
+<main id="main"><span id="main-content"></span>
 {{ content | safe }}
 </main>
 {% include "footer.njk" %}

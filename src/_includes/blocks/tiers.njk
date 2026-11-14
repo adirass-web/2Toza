@@ -1,7 +1,7 @@
 {#- Flowbite pricing cards (detail full); ruled price rows when detail is summary (how-it-works, Direction A tier rows). From lg the cards share four grid rows (subgrid), so the prices sit on one baseline. -#}
 {% from "blocks/_macros.njk" import section, price, lnk, features with context %}
 {% call section(block, '', '', '', 'pt-0 pb-section lg:pb-section-wide') %}
-  <h2{% if not block.heading_visible %} class="sr-only"{% else %} class="mb-6 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading"{% endif %}>{{ block.heading }}</h2>
+  <h2{% if pg.page == 'pricing' %} id="full-specification"{% endif %}{% if not block.heading_visible %} class="sr-only"{% else %} class="mb-6 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading"{% endif %}>{{ block.heading }}</h2>
   {% if block.statement %}<p class="max-w-3xl font-serif text-xl leading-snug text-heading lg:text-2xl">{{ block.statement }}</p>{% endif %}
   {% if block.first_step %}<div class="mt-8 lg:mt-12">{% set outer = block %}{% set block = outer.first_step %}{% include "blocks/offer.njk" %}{% set block = outer %}</div>{% endif %}
   {% if block.detail == 'summary' %}

@@ -25,6 +25,7 @@
       {% else %}
       <details{% if not block.secondary %} open{% endif %} data-collapsible{% if block.secondary %} data-secondary{% endif %} class="group/panel">
       <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 max-md:border-t max-md:border-accent max-md:py-3{% if not block.secondary %} md:pointer-events-none{% endif %}">
+        {% if block.id == 'd' %}<span class="legacy-anchor" id="privacy"></span>{% elif block.id == 'e' %}<span class="legacy-anchor" id="boundaries"></span>{% elif block.id == 'a' %}<span class="legacy-anchor" id="getting-started"></span>{% elif block.id == 'g' %}<span class="legacy-anchor" id="prices-credit-and-urgent-visits"></span>{% elif block.id == 'c' %}<span class="legacy-anchor" id="hardening-and-teaching-for-you-or-your-close-circle"></span>{% elif block.id == 'b' %}<span class="legacy-anchor" id="what-you-gain-from-the-first-paid-visit"></span>{% endif %}
         <h2 id="{{ block.id }}-h" class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance text-heading">{{ block.heading }}</h2>
         <svg class="size-5 shrink-0 rotate-180 text-accent group-open/panel:rotate-0 md:hidden motion-safe:transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
       </summary>
@@ -33,6 +34,7 @@
         {% for q in block.items %}
         <details class="group scroll-mt-24 border-t border-default" id="{{ q.id }}">
           <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-4 font-serif text-xl leading-snug text-heading hover:text-fg-brand-strong lg:text-2xl">
+            {% if q.id == 'a1' %}<span class="legacy-anchor" id="what-should-i-send-in-the-first-message"></span>{% elif q.id == 'a2' %}<span class="legacy-anchor" id="can-someone-notice-my-contact-with-toza-or-the-changes-we-make"></span>{% elif q.id == 'e6' %}<span class="legacy-anchor" id="how-toza-differs"></span>{% endif %}
             <span class="underline decoration-transparent decoration-1 underline-offset-4 group-hover:decoration-accent">{{ q.question }}</span>
             <svg class="size-5 shrink-0 rotate-180 text-accent motion-safe:transition-transform group-open:rotate-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
           </summary>

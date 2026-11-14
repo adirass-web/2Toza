@@ -15,7 +15,7 @@
 <body class="has-fixed-contacts">
 <a class="skip-link" href="#main">{{ i18n.en.ui.skip }}</a>
 {% include "approved-en/header.njk" %}
-<main id="main" class="situation-page situation-page--{{ scenario.page }}">
+<main id="main" class="situation-page situation-page--{{ scenario.page }}"><span id="main-content"></span>
   <section class="situation-hero" aria-labelledby="scenario-title">
     <div class="situation-hero-image-wrap" aria-hidden="true">
       <img class="situation-hero-image" src="/approved-en-assets/photos/{{ scenarioPhoto }}" alt="" fetchpriority="high">
@@ -44,7 +44,7 @@
           <li class="situation-price-item">
             <div class="situation-price-heading">
               {% if item.tag %}<p class="situation-price-tag">{{ item.tag }}</p>{% endif %}
-              <h2>{{ item.name }}</h2>
+              <h2{% if scenario.page == 'separation-divorce' and loop.first %} id="have-your-own-devices-and-access-examined-with-urgent-first-aid"{% endif %}>{{ item.name }}</h2>
             </div>
             <p class="situation-price-value">{{ price(item, 'text-4xl sm:text-5xl') }}</p>
             <p class="situation-price-note">{{ item.note }}</p>
@@ -65,7 +65,7 @@
     {% endif %}
   {% endfor %}
 </main>
-<footer class="mx-auto max-w-7xl px-5 py-8 font-sans text-sm text-[#62645e]">{{ t.footer }}</footer>
+{% include "approved-en/footer.njk" %}
 {% include "approved-en/contact-icons.njk" %}
 </body>
 </html>

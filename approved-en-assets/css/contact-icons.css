@@ -22,3 +22,9 @@ body.has-fixed-contacts{padding-block-end:calc(120px + env(safe-area-inset-botto
 }
 @media(max-width:1000px){.has-fixed-contacts .terms-doc{padding-inline-end:72px}}
 @media(max-width:639px){.has-fixed-contacts .terms-doc tbody tr{grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto}.has-fixed-contacts .terms-doc tbody th{width:auto}}
+
+.approved-footer{max-width:1240px;margin-inline:auto;padding:26px var(--page-gutter,20px) 38px;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;font:14px/1.5 sans-serif}
+.approved-footer ul{display:flex;flex-wrap:wrap;gap:8px 20px;list-style:none;margin:0;padding:0}
+.approved-footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.approved-footer a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.faq-groups summary{position:relative}.faq-groups .legacy-anchor{position:absolute;inset-block-start:0;inset-inline-start:0}
