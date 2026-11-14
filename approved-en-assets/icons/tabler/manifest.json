@@ -1,0 +1,100 @@
+{
+  "package": "@tabler/icons",
+  "version": "3.52.0",
+  "source": "https://github.com/tabler/tabler-icons",
+  "license": "MIT",
+  "icons": [
+    {
+      "name": "brand-chrome",
+      "source": "package/icons/outline/brand-chrome.svg"
+    },
+    {
+      "name": "brand-safari",
+      "source": "package/icons/outline/brand-safari.svg"
+    },
+    {
+      "name": "brand-gmail",
+      "source": "package/icons/outline/brand-gmail.svg"
+    },
+    {
+      "name": "brand-whatsapp",
+      "source": "package/icons/outline/brand-whatsapp.svg"
+    },
+    {
+      "name": "brand-instagram",
+      "source": "package/icons/outline/brand-instagram.svg"
+    },
+    {
+      "name": "brand-facebook",
+      "source": "package/icons/outline/brand-facebook.svg"
+    },
+    {
+      "name": "brand-tinder",
+      "source": "package/icons/outline/brand-tinder.svg"
+    },
+    {
+      "name": "brand-linkedin",
+      "source": "package/icons/outline/brand-linkedin.svg"
+    },
+    {
+      "name": "brand-signal",
+      "source": "package/icons/outline/brand-signal.svg"
+    },
+    {
+      "name": "device-mobile",
+      "source": "package/icons/outline/device-mobile.svg"
+    },
+    {
+      "name": "device-laptop",
+      "source": "package/icons/outline/device-laptop.svg"
+    },
+    {
+      "name": "user-circle",
+      "source": "package/icons/outline/user-circle.svg"
+    },
+    {
+      "name": "router",
+      "source": "package/icons/outline/router.svg"
+    },
+    {
+      "name": "key",
+      "source": "package/icons/outline/key.svg"
+    },
+    {
+      "name": "calendar",
+      "source": "package/icons/outline/calendar.svg"
+    },
+    {
+      "name": "chevron-down",
+      "source": "package/icons/outline/chevron-down.svg"
+    },
+    {
+      "name": "mail",
+      "source": "package/icons/outline/mail.svg"
+    },
+    {
+      "name": "message-circle",
+      "source": "package/icons/outline/message-circle.svg"
+    },
+    {
+      "name": "users",
+      "source": "package/icons/outline/users.svg"
+    },
+    {
+      "name": "lock",
+      "source": "package/icons/outline/lock.svg"
+    },
+    {
+      "name": "menu-2",
+      "source": "package/icons/outline/menu-2.svg"
+    },
+    {
+      "name": "chevron-up",
+      "source": "package/icons/outline/chevron-up.svg"
+    },
+    {
+      "name": "arrow-right",
+      "source": "package/icons/outline/arrow-right.svg"
+    }
+  ]
+}

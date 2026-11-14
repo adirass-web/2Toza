@@ -1,6 +1,6 @@
 .en-continuation{color:var(--color-ink)}
 .en-situations-intro{padding:10px var(--page-gutter) 28px}
-.en-situations-intro-inner{max-width:880px;margin-inline:auto}
+.en-situations-intro-inner{max-width:var(--layout-reading,880px);margin-inline:auto}
 .en-situations-intro h2{margin:0 0 18px;font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:400;line-height:1.02;letter-spacing:-.02em}
 .en-situations-intro p{max-width:70ch;margin:0;font-size:clamp(1.1rem,1.4vw,1.35rem);line-height:1.5}
 .en-situation-sequence{overflow:hidden}
@@ -17,7 +17,7 @@
 .en-situation-scene--business .en-situation-title-panel h3{font-size:clamp(2.3rem,5.2vw,5rem)}
 .en-situation-scene--inheritance .en-situation-title-panel{top:27%;left:clamp(22px,9vw,130px);width:37%}
 .en-conversation{padding:30px var(--page-gutter) clamp(56px,9vw,120px)}
-.en-conversation-inner{max-width:880px;margin-inline:auto}
+.en-conversation-inner{max-width:var(--layout-reading,880px);margin-inline:auto}
 .en-conversation-benefit{max-width:70ch;margin:0;font-size:clamp(1.25rem,1.8vw,1.6rem);line-height:1.45}
 .en-conversation-expert{margin:24px 0 0;font-size:1.15rem;line-height:1.5}
 .en-conversation h2{margin:42px 0 18px;font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;line-height:1.02;letter-spacing:-.02em}
