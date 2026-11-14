@@ -11,7 +11,7 @@
     "check:content": "npm run build && node scripts/check-content.mjs && npm run check:approved-en",
     "pages:deploy": "wrangler pages deploy",
     "build:css": "node scripts/build-tokens.mjs && tailwindcss -i styles/main.css -o assets/css/main.css --minify",
-    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js",
+    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js && esbuild scripts/restrained-motion.js --bundle --minify --format=iife --outfile=assets/js/restrained-motion.js",
     "check:visual": "npm run build && node scripts/visual.mjs",
     "visual:approve": "npm run build && node scripts/visual.mjs --update",
     "build:approved-en": "node scripts/build-approved-en.mjs",
@@ -27,7 +27,8 @@
     "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs",
     "test:pricing": "node --test scripts/pricing.test.mjs",
     "check:pricing-print": "node scripts/check-pricing-print.mjs",
-    "test:pricing-inclusions": "node --test scripts/pricing-inclusions.test.mjs"
+    "test:pricing-inclusions": "node --test scripts/pricing-inclusions.test.mjs",
+    "check:motion": "node scripts/check-restrained-motion.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
@@ -49,5 +50,8 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "dependencies": {
+    "motion": "14.6.0"
   }
 }

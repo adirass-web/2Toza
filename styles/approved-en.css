@@ -8,7 +8,7 @@
 @font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:400 500;font-display:swap;src:url("../fonts/frank-ruhl-libre-hebrew-400-normal.woff2") format("woff2");unicode-range:U+0590-05FF,U+20AA}
 @font-face{font-family:Assistant;font-style:normal;font-weight:400 600;font-display:swap;src:url("../fonts/assistant-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
 @font-face{font-family:Assistant;font-style:normal;font-weight:400 600;font-display:swap;src:url("../fonts/assistant-hebrew-400-normal.woff2") format("woff2");unicode-range:U+0590-05FF,U+20AA}
-:root{--color-on-photo:var(--color-white);--page-gutter:clamp(22px,5vw,78px);--layout-reading:880px;--layout-wide:1280px;--focus-width:3px;--focus-offset:4px}
+:root{--color-on-photo:var(--color-white);--motion-feedback:150ms;--motion-ease:cubic-bezier(.2,0,0,1);--page-gutter:clamp(22px,5vw,78px);--layout-reading:880px;--layout-wide:1280px;--focus-width:3px;--focus-offset:4px}
 *{box-sizing:border-box}html{background:var(--color-paper);color:var(--color-ink)}body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-serif);font-size:20px;line-height:1.4}
 [dir=rtl]{text-align:right}.copy{font-size:clamp(1.1rem,1.4vw,1.35rem);line-height:1.55}
 /* Header and hero continuation from the approved wide study. */
@@ -51,3 +51,5 @@
 @media(max-width:380px){.masthead{padding-inline:19px}.brand img{width:68px}.header-actions{gap:0}.header-contact{gap:0;font-size:12px}.header-contact a{padding-inline:4px}.language-switch{padding-inline:5px}.primary-nav{font-size:13px}.primary-nav ul{padding-inline:19px}.primary-nav a,.nav-pending{padding-inline:6px}.hero-title h1{font-size:31px}}
 
 @media(max-width:700px){body{font-size:19px}}
+
+@media(prefers-reduced-motion:no-preference){.primary-nav a{transition:text-decoration-color var(--motion-feedback) var(--motion-ease)}.pricing-page summary>.scope-icon{transition:transform var(--motion-feedback) var(--motion-ease)}}

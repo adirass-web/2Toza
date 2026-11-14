@@ -13,3 +13,6 @@ approved-en-assets/css/main.css
 
 # Generated verification reports
 .artifacts/
+
+# Rebuilt by npm run build:js
+assets/js/restrained-motion.js
