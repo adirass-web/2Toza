@@ -30,7 +30,7 @@ jobs:
           node-version-file: .nvmrc
       - run: npm ci
       - run: npm run test:profiles
-      - run: npm run test:links && npm run test:anchors && npm run test:launch-pages && npm run test:production-checks
+      - run: npm run test:links && npm run test:anchors && npm run test:launch-pages && npm run test:production-checks && node --test scripts/release-policy.test.mjs
       - run: npm run check && node scripts/check-content.mjs && npm run check:links
       - name: Validate production artifact
         env:
