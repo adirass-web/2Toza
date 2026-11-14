@@ -2,8 +2,9 @@
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { parseDocument, DomUtils } from 'htmlparser2';
+import { siteDir } from './util.mjs';
 
-const dir = process.argv[2] || '_site';
+const dir = process.argv[2] || siteDir();
 const files = d => readdirSync(d).flatMap(n => { const p = join(d, n); return statSync(p).isDirectory() ? files(p) : p.endsWith('.html') ? [p] : []; });
 const routes = new Map(files(dir).map(file => {
   const path = '/' + relative(dir, file).split(sep).join('/').replace(/index\.html$/, '');

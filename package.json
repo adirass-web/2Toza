@@ -21,7 +21,8 @@
     "check:a11y": "node scripts/check-a11y.mjs",
     "check:perf": "node scripts/check-perf.mjs",
     "test:links": "node --test scripts/check-links.test.mjs",
-    "test:profiles": "node --test scripts/build-profiles.test.mjs"
+    "test:profiles": "node --test scripts/build-profiles.test.mjs",
+    "test:production-checks": "node --test scripts/production-checks.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

@@ -12,7 +12,7 @@
 // Run after `npm run build` (npm run check:content does both).
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { walk } from "./util.mjs";
+import { walk, siteDir } from "./util.mjs";
 import { loadSources, createResolver, readPages, mdUnits, plainLength, norm, NUMWORDS, formatPrice, get } from "./lib/content.mjs";
 import { squash, hasWords, sentences, extract, boundedIncludes } from "./lib/parity.mjs";
 
@@ -20,7 +20,7 @@ const ARGS = new Set(process.argv.slice(2));
 const argValue = (name) => process.argv.slice(2).find((a) => a.startsWith("--" + name + "="))?.slice(name.length + 3);
 const LANG = "en";
 const CONTENT_DIR = `src/content/${LANG}`;
-const SITE = "_site";
+const SITE = siteDir();
 // Optional: check pages rendered from content under another permalink prefix, e.g.
 //   node scripts/check-content.mjs --prefix=/_ref --only=pricing
 // Default: the real site, every page.

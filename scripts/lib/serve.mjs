@@ -1,13 +1,14 @@
 // Shared helpers for browser gates: a static server for _site and the Playwright loader.
 // Playwright comes from node_modules (CI) or PLAYWRIGHT_MODULE (agent sandbox).
 import { createServer } from "node:http";
+import { siteDir } from "../util.mjs";
 import { readFileSync, existsSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
 import { createRequire } from "node:module";
 
 const TYPES = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml", ".webp": "image/webp", ".avif": "image/avif", ".jpg": "image/jpeg", ".png": "image/png", ".woff2": "font/woff2", ".json": "application/json" };
 
-export async function serve(dir = "_site") {
+export async function serve(dir = siteDir()) {
   const server = createServer((req, res) => {
     let f = join(dir, decodeURIComponent(req.url.split("?")[0]));
     if (existsSync(f) && statSync(f).isDirectory()) f = join(f, "index.html");
@@ -25,7 +26,7 @@ export function loadPlaywright() {
 }
 
 // Every page of the built site, as URL paths ("/en/", "/en/faq/", ...).
-export function pagePaths(dir = "_site") {
+export function pagePaths(dir = siteDir()) {
   const out = [];
   const walk = (d) => { for (const n of readdirSyncSafe(d)) { const p = join(d, n); if (statSync(p).isDirectory()) walk(p); else if (n.endsWith(".html") && !p.slice(dir.length + 1).replace(/\\/g, "/").startsWith("assets/previews/")) out.push("/" + p.slice(dir.length + 1).replace(/\\/g, "/").replace(/index\.html$/, "")); } };
   walk(dir);
