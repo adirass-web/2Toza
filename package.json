@@ -25,7 +25,8 @@
     "test:production-checks": "node --test scripts/production-checks.test.mjs",
     "test:launch-pages": "node --test scripts/launch-pages.test.mjs scripts/pricing.test.mjs",
     "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs",
-    "test:pricing": "node --test scripts/pricing.test.mjs"
+    "test:pricing": "node --test scripts/pricing.test.mjs",
+    "check:pricing-print": "node scripts/check-pricing-print.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
