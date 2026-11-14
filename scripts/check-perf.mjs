@@ -7,7 +7,7 @@ import { serve, loadPlaywright, pagePaths } from "./lib/serve.mjs";
 const B = { lcp: 2500, cls: 0.05, jsKb: 60, kb: 1200 };
 const { chromium } = loadPlaywright();
 const srv = await serve();
-const browser = await chromium.launch();
+const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined });
 let bad = 0;
 console.log("page".padEnd(34), "LCP ms".padStart(7), "CLS".padStart(6), "KB".padStart(6), "JS gz".padStart(6));
 for (const path of pagePaths()) {

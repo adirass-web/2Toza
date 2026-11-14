@@ -7,7 +7,7 @@ import { serve, loadPlaywright, pagePaths, themes } from "./lib/serve.mjs";
 const axeSrc = readFileSync("node_modules/axe-core/axe.min.js", "utf8");
 const { chromium } = loadPlaywright();
 const srv = await serve();
-const browser = await chromium.launch();
+const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined });
 let hard = 0, soft = 0, runs = 0;
 for (const theme of themes()) for (const w of [390, 1440]) {
   const ctx = await browser.newContext({ viewport: { width: w, height: w === 390 ? 844 : 900 }, reducedMotion: "reduce" });
