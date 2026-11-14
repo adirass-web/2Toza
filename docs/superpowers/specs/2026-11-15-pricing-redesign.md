@@ -1,6 +1,6 @@
 # Pricing redesign: proposed layout and copy
 
-Status: owner approved the layout and visible copy. Owner then requested clearer expanded inclusions, Lucide icons, restrained motion and a minimal coherent CSS system. The additions below are proposed for review before publication.
+Status: owner approved the layout and visible copy. Owner then requested clearer expanded inclusions, Lucide icons, restrained motion and a minimal coherent CSS system. Owner approved the revised inclusions and scoped CSS cleanup, plus restrained Motion patterns. Category-only visible wording and maximum available icons from the confirmed examples are required.
 
 ## Intent and chosen approach
 
@@ -65,33 +65,46 @@ The first conversation is free and commits you to nothing. Contact Toza through 
 
 Protection for one person, shaped around your risks.
 
-- **Devices and accounts:** Your phone, computer and relevant accounts, covering up to three everyday devices within the agreed scope.
-- **Home network:** Included in your protection work.
-- **Security keys:** Two keys, configured and tested.
-- **Follow-up:** A visit after about four weeks.
-- **Questions:** Answers through WhatsApp or Signal for 60 days.
+- Up to three everyday devices, with your relevant accounts and recovery routes.
+- One home network and router.
+- Two security keys, supplied, configured and tested.
+- A follow-up visit after about four weeks.
+- A private dated record of your work.
+- 60 days of questions and guidance about the completed work.
 
 ### Personal Shield for Two — Full inclusions
 
 Protection for you and one other person.
 
-- **Devices and accounts:** Each person's phone, computer and accounts.
-- **Home network:** Included in your protection work.
-- **Security keys:** Four keys.
-- **Follow-up:** A follow-up visit.
-- **Questions:** Answers through WhatsApp or Signal for 60 days.
+- Up to six everyday devices, shared within the tier, with each person's relevant accounts and recovery routes.
+- One home network and router.
+- Four security keys, supplied, configured and tested.
+- A follow-up visit after about four weeks.
+- A private dated record for each person.
+- 60 days of questions and guidance about the completed work.
 
 ### Inner Circle — Full inclusions
 
 Protection for a household of up to four, with each person's information kept private.
 
-- **Devices and accounts:** Each person's phones, computers and accounts.
-- **Home network:** Included in your protection work.
-- **Security keys:** Eight keys.
-- **Follow-up:** A follow-up visit and a review visit at twelve months.
-- **Questions:** Answers through WhatsApp or Signal for 60 days.
+- Up to twelve everyday devices, shared within the tier, with each person's relevant accounts and recovery routes.
+- One home network and router.
+- Eight security keys, supplied, configured and tested.
+- A follow-up visit after about four weeks, plus a review visit at twelve months.
+- A private dated record for each person.
+- 60 days of questions and guidance about the completed work.
 
-Shared note, visible outside disclosures: If you authorize it, Toza coordinates with your lawyer or family office. Assessment credit terms remain visible; do not imply unconditional inclusion or additional charges.
+### Shared scope and support — shown once below the comparison
+
+Every option includes essential migration of identities, recovery routes and critical-service access where needed. Historical archives and bulk data migration are scoped separately.
+
+Home-network work covers accessible settings and authorized administration; it is recorded separately. Replacement hardware, further connected devices and additional locations are quoted separately.
+
+The 60-day question line starts when the protection work is complete. Toza answers through WhatsApp or Signal within one working day. New work is agreed and priced separately; urgent needs follow the urgent-visit terms.
+
+If you authorize it, Toza coordinates with your lawyer or family office. Full scope and terms: Conditions.
+
+Assessment credit terms remain visible. Device allowances, key counts and time periods must come from existing facts; do not imply unlimited support or unconditional assessment credit.
 
 ## Icons, motion and CSS — proposed implementation direction
 
@@ -100,3 +113,13 @@ Shared note, visible outside disclosures: If you authorize it, Toza coordinates 
 - Calm one-time reveals for situations and tiers; opacity and a small vertical translation only. Nothing waits for animation to become readable or clickable. No animated prices, automatic carousels, pinned scenes or continuous effects. Reduced motion and no-JS stay static and complete.
 - Suggest only feedback elsewhere: link underline/focus and disclosure chevron. Keep hero and long reading pages static for MVP.
 - Consolidate shared palette, font, spacing, rules and focus/motion tokens. Avoid layering contradictory selectors; remove superseded Pricing-specific styles from its output. Maintain separate build boundaries while legacy pages remain. Measure generated CSS and JS before/after, list dependencies and imported icons; stay inside performance budgets.
+
+
+## Final owner choices
+
+- Expanded inclusions above are approved for preview publication.
+- Visible service copy uses categories, not specific application names: Browsers; Email; Messaging; Social and dating; Password managers. Other widely used apps remain within the agreed device/account scope; protections depend on service capabilities.
+- Use as many icons as possible from confirmed examples Chrome, Safari, Gmail, Outlook, WhatsApp, Instagram, Facebook, Tinder, LinkedIn, 1Password. Use available existing Simple Icons assets, monochrome, not custom-drawn brand marks. Installed set supplies eight; Outlook and LinkedIn are absent and must not be fabricated. Each icon needs an accessible name; category text remains visible.
+- Lucide generic device/account/network/key/follow-up icons complement brand examples. Import only selected static licensed SVGs; no icon runtime or CDN.
+- Scope of CSS consolidation: shared Home, Pricing and Situations elements first. No unrelated migration of other pages.
+- Motion: existing free Motion patterns for one-time Home situation and Pricing tier reveals plus small hover/focus/disclosure feedback. All essential content visible without JS; reduced motion static; no animated prices or custom scrolling. Other suggested motion remains limited to feedback, leaving long reading pages and hero static.
