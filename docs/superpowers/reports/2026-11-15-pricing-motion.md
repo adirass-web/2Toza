@@ -27,3 +27,9 @@ RED: `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/check-r
 Isolated motion entry:9655 bytes minified /3868 gzip. Existing site entry unchanged7411 bytes /2249 gzip. Approved main CSS48958→49252 bytes; gzip10178→10328. Only Home/Pricing request the new entry; no framework code imported into Home. Runtime motion dependency is pinned14.6.0 (the project's existing version on build/g).
 
 Firefox/WebKit and manual screen-reader acceptance remain unverified. No preview publication or production change was performed by this task.
+
+## Final-review cleanup
+
+Removed the later duplicated coordination sentence and Conditions link from Larger households/care, retaining the scope/support version with the specific allowances link. Regression test first failed with two occurrences and now requires exactly one of each. The exact Pricing fixture changed only by removing those duplicate sentences.
+
+Pricing tests were previously run transitively by `test:launch-pages`; CI now invokes `test:pricing` and `test:pricing-inclusions` explicitly for preview and production, while `test:launch-pages` is narrowed to its named suite, preventing duplicate runs. Both profiles' Pricing tests (3), inclusion tests (2) and approved checks (300 preview/295 production) pass; profile builds (3 tests) and diff whitespace check pass.

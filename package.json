@@ -23,7 +23,7 @@
     "test:links": "node --test scripts/check-links.test.mjs",
     "test:profiles": "node --test scripts/build-profiles.test.mjs",
     "test:production-checks": "node --test scripts/production-checks.test.mjs",
-    "test:launch-pages": "node --test scripts/launch-pages.test.mjs scripts/pricing.test.mjs scripts/pricing-inclusions.test.mjs",
+    "test:launch-pages": "node --test scripts/launch-pages.test.mjs",
     "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs",
     "test:pricing": "node --test scripts/pricing.test.mjs",
     "check:pricing-print": "node scripts/check-pricing-print.mjs",

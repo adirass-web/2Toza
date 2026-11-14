@@ -19,3 +19,7 @@ test('all options keep complete approved inclusions in native disclosures',()=>{
  for(const price of ['32000','45000','70000','4000']) assert.match(html,new RegExp(`value="${price}"`));
  for(const id of ['main-content','contact','full-specification','credit','assessment','personal-shield','personal-shield-for-two','inner-circle'])assert.match(html,new RegExp(`id="${id}"`));
 });
+test('coordination and Conditions scope are explained once',()=>{
+ assert.equal(text.split('If you authorize it, Toza coordinates with your lawyer or family office.').length-1,1);
+ assert.equal(text.split('Full scope and terms: Conditions.').length-1,1);
+});
