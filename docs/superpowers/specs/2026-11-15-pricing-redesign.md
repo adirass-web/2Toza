@@ -1,6 +1,6 @@
 # Pricing redesign: proposed layout and copy
 
-Status: awaiting owner approval. No product implementation or publication authorized by this draft alone.
+Status: owner approved the layout and visible copy. Owner then requested clearer expanded inclusions, Lucide icons, restrained motion and a minimal coherent CSS system. The additions below are proposed for review before publication.
 
 ## Intent and chosen approach
 
@@ -24,7 +24,7 @@ Choose protection for one person, two people or your household. Every price is f
 
 The qualifying assessment fee is included in these prices. The credit terms are below.
 
-Each column has a native disclosure labeled "Full inclusions". Keep the current approved tier scope and inclusions verbatim inside each disclosure, including the home network, configured keys, follow-up timing and message channels. This is the concise comparison; the current content remains available in full. Shared engagement/method text remains available in a separate "How the work is delivered" disclosure, unchanged.
+Each column has a native disclosure labeled "Full inclusions". Use the revised expanded inclusions below, preserving the approved tier scope, home network, configured keys, follow-up timing and message channels. This is the concise comparison; the current content remains available in full. Shared engagement/method text remains available in a separate "How the work is delivered" disclosure, unchanged.
 
 ## Start with an assessment
 
@@ -57,3 +57,46 @@ The first conversation is free and commits you to nothing. Contact Toza through 
 - Native disclosures work without JavaScript; all essential prices, audiences and credit conditions stay visible when closed. Print includes all details.
 - Preserve legacy IDs, opening any containing disclosure for a linked fragment. Keep preview/production indexing and sitemap behavior.
 - Verify copy and facts, price arithmetic/credit wording, expanded details, legacy fragments, keyboard and no-JS operation, responsive 320/390/768/1024/1440, Chromium axe, links and performance. Review before publishing the changed preview.
+
+
+## Revised expanded inclusions — proposed copy
+
+### Personal Shield — Full inclusions
+
+Protection for one person, shaped around your risks.
+
+- **Devices and accounts:** Your phone, computer and relevant accounts, covering up to three everyday devices within the agreed scope.
+- **Home network:** Included in your protection work.
+- **Security keys:** Two keys, configured and tested.
+- **Follow-up:** A visit after about four weeks.
+- **Questions:** Answers through WhatsApp or Signal for 60 days.
+
+### Personal Shield for Two — Full inclusions
+
+Protection for you and one other person.
+
+- **Devices and accounts:** Each person's phone, computer and accounts.
+- **Home network:** Included in your protection work.
+- **Security keys:** Four keys.
+- **Follow-up:** A follow-up visit.
+- **Questions:** Answers through WhatsApp or Signal for 60 days.
+
+### Inner Circle — Full inclusions
+
+Protection for a household of up to four, with each person's information kept private.
+
+- **Devices and accounts:** Each person's phones, computers and accounts.
+- **Home network:** Included in your protection work.
+- **Security keys:** Eight keys.
+- **Follow-up:** A follow-up visit and a review visit at twelve months.
+- **Questions:** Answers through WhatsApp or Signal for 60 days.
+
+Shared note, visible outside disclosures: If you authorize it, Toza coordinates with your lawyer or family office. Assessment credit terms remain visible; do not imply unconditional inclusion or additional charges.
+
+## Icons, motion and CSS — proposed implementation direction
+
+- Use Lucide's official free line icons as static SVGs, beside labels, not a browser-loaded icon library. Preserve license/attribution. Keep existing WhatsApp and Signal brand glyphs. Generic Devices/Accounts/Network/Keys/Follow-up icons do not imply named app compatibility.
+- Reuse Home components and native details/summary; use existing project Motion patterns only if chosen by owner. No new UI framework, animation engine, custom scrolling system or icon drawings.
+- Calm one-time reveals for situations and tiers; opacity and a small vertical translation only. Nothing waits for animation to become readable or clickable. No animated prices, automatic carousels, pinned scenes or continuous effects. Reduced motion and no-JS stay static and complete.
+- Suggest only feedback elsewhere: link underline/focus and disclosure chevron. Keep hero and long reading pages static for MVP.
+- Consolidate shared palette, font, spacing, rules and focus/motion tokens. Avoid layering contradictory selectors; remove superseded Pricing-specific styles from its output. Maintain separate build boundaries while legacy pages remain. Measure generated CSS and JS before/after, list dependencies and imported icons; stay inside performance budgets.
