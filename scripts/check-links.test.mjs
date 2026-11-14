@@ -21,3 +21,6 @@ test('resolves relative paths from directory and html URLs including assets and 
 test('reports missing assets and missing anchors', () => {
   site({ 'index.html': '<a href="/missing.png">x</a><a href="/en/#nope">x</a>', 'en/index.html': '<h1 id="yes">Hi</h1>' }, root => { const result = run(root); assert.equal(result.status, 1); assert.match(result.stderr, /missing\.png/); assert.match(result.stderr, /nope/); });
 });
+test('checks fragments in explicit index.html URLs', () => {
+  site({ 'index.html': '<a href="/en/index.html#missing">broken</a>', 'en/index.html': '<h1 id="present">Hi</h1>' }, root => { const result = run(root); assert.equal(result.status, 1); assert.match(result.stderr, /missing/); });
+});

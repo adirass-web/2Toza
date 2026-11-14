@@ -20,7 +20,8 @@ for (const [route, dom] of routes) {
     count++;
     let pathname;
     try { pathname = decodeURIComponent(target.pathname); } catch { console.error(`FAIL ${route}: invalid encoding ${value}`); bad++; continue; }
-    const key = routes.has(pathname) ? pathname : routes.has(pathname.replace(/\/?$/, '/')) ? pathname.replace(/\/?$/, '/') : null;
+    const indexAlias = pathname.endsWith('/index.html') ? pathname.slice(0, -'index.html'.length) : pathname;
+    const key = routes.has(indexAlias) ? indexAlias : routes.has(indexAlias.replace(/\/?$/, '/')) ? indexAlias.replace(/\/?$/, '/') : null;
     const file = join(dir, pathname);
     if (!key && !(existsSync(file) && statSync(file).isFile())) { console.error(`FAIL ${route}: ${value} -> no such page or asset`); bad++; continue; }
     if (target.hash && key) {
