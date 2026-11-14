@@ -2,8 +2,8 @@
   "approval": "2026-11-05 owner approved revised FAQ copy, compact public FAQ and unnumbered full public Conditions; preview only",
   "protectedOverrides": {
     "_site/assets/js/site.js": {
-      "sha256": "ff323ce7a1da1e450573d913161ebd635a72b9182ef24c02cc5bd453fab8ae14",
-      "reason": "Open legacy FAQ alias targets in their details panels"
+      "sha256": "3b2469735c9cf71e78178494a2eb29c3404d4270c727e0039ce403a67cb21636",
+      "reason": "Preserve legacy FAQ alias behavior and open/restore native Pricing disclosures for print"
     },
     "_site/_redirects": {
       "sha256": "f6cef9bb2ac7cd212f453a9d9d74ad8a3f67f11f39c3e75cd487c4717e760489",

@@ -1,0 +1,39 @@
+{% set t = approvedEN.copy.en %}
+{% set contact = approvedEN.contact %}
+{% set legacy = siteContent.en.pages.pricing %}
+{% set tiers = legacy.blocks[2].tiers %}
+{% set audiences = ['One person', 'Two people', 'A household of up to four'] %}
+{% set ids = ['personal-shield', 'personal-shield-for-two', 'inner-circle'] %}
+{% from "blocks/_macros.njk" import price with context %}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="Compare Toza protection prices, inclusions, assessment and credit terms."><title>Pricing — Toza</title>
+<link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css"><link rel="stylesheet" href="/approved-en-assets/css/pricing.css">
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body class="has-fixed-contacts">
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "approved-en/header.njk" %}
+<main id="main" class="pricing-page"><span id="main-content"></span>
+<header class="pricing-intro"><h1>Pricing</h1><p>Choose protection for one person, two people or your household. Every price is fixed and agreed in writing before work begins. Prices include VAT.</p></header>
+<section id="protection" aria-labelledby="protection-title"><h2 id="protection-title">Protection for your household</h2><span id="full-specification"></span>
+<div class="pricing-comparison">
+{% for tier in tiers %}
+<article class="pricing-option" aria-labelledby="{{ ids[loop.index0] }}">
+<h3 id="{{ ids[loop.index0] }}">{{ tier.name }}</h3><p class="pricing-value">{{ price(tier) }}</p><p class="pricing-audience">{{ audiences[loop.index0] }}</p>
+<dl class="pricing-summary"><div><dt>Devices and accounts</dt><dd>{% if loop.first %}Your phone, computer and accounts{% elif loop.index == 2 %}Each person's phone, computer and accounts{% else %}Everyone's phones, computers and accounts, each kept private{% endif %}</dd></div><div><dt>Security keys</dt><dd>{% if loop.first %}{{ facts.securityKeys.personalShield }}{% elif loop.index == 2 %}{{ facts.securityKeys.shieldForTwo }}{% else %}{{ facts.securityKeys.innerCircle }}{% endif %}</dd></div><div><dt>Follow-up</dt><dd>Follow-up visit and {{ facts.questionLineDays }} days of answered questions{% if loop.last %}, plus a review visit at twelve months{% endif %}</dd></div></dl>
+<details class="pricing-inclusions" id="{{ ids[loop.index0] }}-inclusions"><summary>Full inclusions<span class="pricing-disclosure-name"> — {{ tier.name }}</span></summary><p>{{ tier.for }}</p><ul>{% for item in tier.items %}<li>{{ item }}</li>{% endfor %}</ul></details>
+</article>
+{% endfor %}
+</div><p class="pricing-credit-note">The qualifying assessment fee is included in these prices. <a href="#credit">The credit terms are below.</a></p>
+<details class="pricing-method"><summary>How the work is delivered</summary><p>{{ legacy.blocks[2].statement }}</p></details>
+</section>
+<section id="assessment" class="pricing-assessment" aria-labelledby="assessment-title"><h2>Start with an assessment</h2><h3 id="assessment-title">Private Exposure Assessment · <data value="{{ facts.prices.assessment }}">{{ facts.prices.assessment | ils }}</data></h3><p>Half a day in person to establish your personal threat model, assess exposure, address urgent issues and set priorities. You keep a written exposure summary whether or not you continue.</p><div id="credit"><h3>How the credit works</h3><p>The {{ facts.prices.assessment | ils }} assessment fee counts in full toward protection whose work begins within {{ facts.credit.windowDays }} days of assessment completion. The assessment and protection are separate decisions.</p></div></section>
+<section class="pricing-care" aria-labelledby="care-title"><h2 id="care-title">Larger households and ongoing care</h2><p>Larger households, several residences or household staff: a fixed price agreed after the assessment, from {{ facts.prices.largerFrom | ils }}.</p><p>After the {{ facts.questionLineDays }} days, past clients can choose Annual Care, from {{ facts.prices.annualCareFrom | ils }} a year.</p><p>If you authorize it, Toza coordinates with your lawyer or family office.</p><p><a href="/en/conditions/">Full scope and terms: Conditions.</a></p></section>
+<section id="contact" class="pricing-conversation" aria-labelledby="conversation-title"><h2 id="conversation-title">Start a private conversation</h2><p>The first conversation is free and commits you to nothing. Contact Toza through <a href="{{ contact.whatsapp.url }}">WhatsApp</a> or <a href="{{ contact.signal.url }}">Signal</a>.</p></section>
+</main>
+{% include "approved-en/footer.njk" %}
+{% include "approved-en/contact-icons.njk" %}
+</body></html>

@@ -35,6 +35,11 @@
       "permalink": "/en/inheritance-conflict/index.html",
       "source": "src/content/en/inheritance-conflict.md",
       "mode": "scenario-existing"
+    },
+    {
+      "permalink": "/en/pricing/index.html",
+      "source": "docs/superpowers/specs/2026-11-15-pricing-redesign.md",
+      "mode": "pricing-redesign"
     }
   ]
 }

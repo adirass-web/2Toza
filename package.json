@@ -2,7 +2,7 @@
   "name": "toza-v2",
   "version": "0.1.0",
   "private": true,
-  "description": "Toza v2 — competing rebuild (preview only, noindex).",
+  "description": "Toza v2 \u2014 competing rebuild (preview only, noindex).",
   "scripts": {
     "build": "node scripts/prepare-build.mjs && npm run build:css && npm run build:approved-en && npm run build:js && eleventy && node scripts/finalize-build.mjs",
     "start": "npm run build:css && npm run build:js && eleventy --serve",
@@ -23,8 +23,9 @@
     "test:links": "node --test scripts/check-links.test.mjs",
     "test:profiles": "node --test scripts/build-profiles.test.mjs",
     "test:production-checks": "node --test scripts/production-checks.test.mjs",
-    "test:launch-pages": "node --test scripts/launch-pages.test.mjs",
-    "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs"
+    "test:launch-pages": "node --test scripts/launch-pages.test.mjs scripts/pricing.test.mjs",
+    "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs",
+    "test:pricing": "node --test scripts/pricing.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

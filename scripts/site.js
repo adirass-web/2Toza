@@ -112,3 +112,9 @@ if (float && "IntersectionObserver" in window) {
   });
   document.querySelectorAll("[data-hero],[data-contact],footer").forEach((el) => io.observe(el));
 }
+
+// Pricing disclosures share the native print behavior used by the reference pages.
+const pricingDetails = Array.from(document.querySelectorAll('.pricing-page details'));
+let pricingBeforePrint;
+addEventListener('beforeprint', () => { pricingBeforePrint = pricingDetails.map(d => d.open); pricingDetails.forEach(d => { d.open = true; }); });
+addEventListener('afterprint', () => { if (pricingBeforePrint) pricingDetails.forEach((d, i) => { d.open = pricingBeforePrint[i]; }); });
