@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_headers");
   return {
-    dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
+    dir: { input: "src", output: process.env.SITE_ENV === "production" ? "_site-production" : "_site", includes: "_includes", data: "_data" },
     templateFormats: ["njk"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: false,
