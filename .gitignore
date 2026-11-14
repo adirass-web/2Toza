@@ -9,3 +9,6 @@ tests/visual/current/
 
 # Rebuilt by npm run build:approved-en
 approved-en-assets/css/main.css
+
+# Generated verification reports
+.artifacts/

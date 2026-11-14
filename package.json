@@ -15,7 +15,12 @@
     "check:visual": "npm run build && node scripts/visual.mjs",
     "visual:approve": "npm run build && node scripts/visual.mjs --update",
     "build:approved-en": "node scripts/build-approved-en.mjs",
-    "check:approved-en": "node scripts/check-approved-en.mjs"
+    "check:approved-en": "node scripts/check-approved-en.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:anchors": "node scripts/check-anchors.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "check:perf": "node scripts/check-perf.mjs",
+    "test:links": "node --test scripts/check-links.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
@@ -29,6 +34,7 @@
     "js-yaml": "4.3.2",
     "markdown-it": "14.3.2",
     "pixelmatch": "^7.2.0",
+    "playwright": "^1.65.1",
     "pngjs": "^7.0.0",
     "simple-icons": "^16.35.0",
     "tailwindcss": "^4.3.3",
