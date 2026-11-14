@@ -23,7 +23,8 @@
     "test:links": "node --test scripts/check-links.test.mjs",
     "test:profiles": "node --test scripts/build-profiles.test.mjs",
     "test:production-checks": "node --test scripts/production-checks.test.mjs",
-    "test:launch-pages": "node --test scripts/launch-pages.test.mjs"
+    "test:launch-pages": "node --test scripts/launch-pages.test.mjs",
+    "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

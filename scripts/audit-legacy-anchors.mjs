@@ -24,3 +24,4 @@ for(const file of files(oldDir)) {
  }
 }
 console.log(JSON.stringify({legacy:oldDir, candidate:newDir, passed:[...passed].sort(), missing:[...missing].sort(), unmapped:[...unmapped].sort()},null,2));
+if (missing.size || unmapped.size) process.exitCode = 1;
