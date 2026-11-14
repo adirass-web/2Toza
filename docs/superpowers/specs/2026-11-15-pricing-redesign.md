@@ -123,3 +123,9 @@ Assessment credit terms remain visible. Device allowances, key counts and time p
 - Lucide generic device/account/network/key/follow-up icons complement brand examples. Import only selected static licensed SVGs; no icon runtime or CDN.
 - Scope of CSS consolidation: shared Home, Pricing and Situations elements first. No unrelated migration of other pages.
 - Motion: existing free Motion patterns for one-time Home situation and Pricing tier reveals plus small hover/focus/disclosure feedback. All essential content visible without JS; reduced motion static; no animated prices or custom scrolling. Other suggested motion remains limited to feedback, leaving long reading pages and hero static.
+
+## Superseding icon decision: one family
+
+Owner requested a free set with maximum practical app coverage and all other icons in the same family. Inspection compared Tabler 3.52.0 (378 distinct outline brand designs plus matching UI icons), Remix 4.9.1 (150 outline brand designs), and Simple Icons (largest brand-only catalogue but no generic UI family). Select Tabler for unified outline styling and coverage. This supersedes Lucide/Simple Icons plans.
+
+Use selected official SVGs only, vendored with MIT license and version/source manifest; no installed browser icon runtime, sprite of the full library, webfont or CDN. Include brand-chrome, brand-safari, brand-gmail, brand-whatsapp, brand-instagram, brand-facebook, brand-tinder, brand-linkedin; brand-signal for shared contact. Outlook and 1Password have no exact symbol; do not mislabel Office or a generic key as their logos. Use matching Tabler device, accounts, network, security-key, calendar and disclosure symbols. Keep accessible brand names on app marks while visible copy uses category names. Wordmark and editorial illustrations are not UI icons and remain intact.
