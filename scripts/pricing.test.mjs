@@ -23,7 +23,7 @@ test('coordination and Conditions scope are explained once',()=>{
  assert.equal(text.split('If you authorize it, Toza coordinates with your lawyer or family office.').length-1,1);
  assert.equal(text.split('Full scope and terms: Conditions.').length-1,1);
 });
-test('bento comparison highlights Personal Shield without hiding other tiers',()=>{
+test('card grid highlights Personal Shield without hiding other tiers',()=>{
  const cards=DomUtils.findAll(n=>n.name==='article'&&n.attribs?.class?.split(/\s+/).includes('pricing-option'),main.children);
  assert.equal(cards.length,3);
  const featured=cards.filter(n=>n.attribs.class.split(/\s+/).includes('pricing-option--featured'));

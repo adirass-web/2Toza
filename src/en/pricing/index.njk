@@ -1,3 +1,4 @@
+{% from "approved-en/grid.njk" import grid %}
 {% set t = approvedEN.copy.en %}
 {% set contact = approvedEN.contact %}
 {% set legacy = siteContent.en.pages.pricing %}
@@ -11,7 +12,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="Compare Toza protection prices, inclusions, assessment and credit terms."><title>Pricing — Toza</title>
-<link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css"><link rel="stylesheet" href="/approved-en-assets/css/pricing.css">
+<link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css"><link rel="stylesheet" href="/approved-en-assets/css/pricing.css"><link rel="stylesheet" href="/approved-en-assets/css/content-grid.css">
 <script src="/assets/js/site.js" defer></script>
 <script src="/assets/js/restrained-motion.js" defer></script>
 </head>
@@ -21,7 +22,7 @@
 <main id="main" class="pricing-page"><span id="main-content"></span>
 <header class="pricing-intro"><h1>Pricing</h1><p>Choose protection for one person, two people or your household. Every price is fixed and agreed in writing before work begins. Prices include VAT.</p></header>
 <section id="protection" aria-labelledby="protection-title"><h2 id="protection-title">Protection for your household</h2><span id="full-specification"></span>
-<div class="pricing-comparison">
+{% call grid("cards", "pricing-comparison") %}
 {% for tier in tiers %}
 <article class="pricing-option{% if loop.first %} pricing-option--featured{% endif %}" aria-labelledby="{{ ids[loop.index0] }}">
 <h3 id="{{ ids[loop.index0] }}">{{ tier.name }}</h3><p class="pricing-value">{{ price(tier) }}</p><p class="pricing-audience">{{ audiences[loop.index0] }}</p>
@@ -37,7 +38,7 @@
 <li>{{ icon("user-circle") }}A private dated record {% if loop.first %}of your work{% else %}for each person{% endif %}.</li><li>{{ icon("message-circle") }}{{ facts.questionLineDays }} days of questions and guidance about the completed work.</li></ul></details>
 </article>
 {% endfor %}
-</div><p class="pricing-credit-note">The qualifying assessment fee is included in these prices. <a href="#credit">The credit terms are below.</a></p>
+{% endcall %}<p class="pricing-credit-note">The qualifying assessment fee is included in these prices. <a href="#credit">The credit terms are below.</a></p>
 <details class="pricing-method"><summary>{{ icon("chevron-down") }}How the work is delivered</summary><p>{{ legacy.blocks[2].statement }}</p></details>
 </section>
 <section class="pricing-scope" aria-labelledby="scope-title"><h2 id="scope-title">Scope and support</h2>

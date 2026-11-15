@@ -1,0 +1,9 @@
+Preline UI — https://github.com/htmlstreamofficial/preline
+Copyright (c) 2026 Preline Labs Ltd.
+
+Toza independently adapts the free Pricing Card Grid and Simple Feature Section with Single Image layouts:
+https://preline.co/blocks/marketing/pricing-cards/
+https://preline.co/blocks/marketing/feature-sections/
+
+Toza content, styling and layouts are modifications, not the original Preline examples.
+See adjacent preline.txt for the retained MIT and Preline UI Fair Use license terms.
