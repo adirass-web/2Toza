@@ -12,6 +12,7 @@
 // Run after `npm run build` (npm run check:content does both).
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
+import { createRequire } from "node:module";
 import { walk, siteDir } from "./util.mjs";
 import { loadSources, createResolver, readPages, mdUnits, plainLength, norm, NUMWORDS, formatPrice, get } from "./lib/content.mjs";
 import { squash, hasWords, sentences, extract, boundedIncludes } from "./lib/parity.mjs";
@@ -248,7 +249,8 @@ function flattenStrings(obj, acc = []) {
   else if (obj && typeof obj === "object") Object.values(obj).forEach((v) => flattenStrings(v, acc));
   return acc;
 }
-const uiStrings = UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns]));
+const approvedChrome = createRequire(import.meta.url)("../src/_data/approvedEN.js").copy.en;
+const uiStrings = [...UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns])), approvedChrome.descriptor, approvedChrome.home, approvedChrome.navLabel, approvedChrome.footerNavLabel];
 
 function unitsOf(col) {
   const full = [], runs = [];

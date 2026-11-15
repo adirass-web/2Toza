@@ -53,3 +53,6 @@
 @media(max-width:700px){body{font-size:19px}}
 
 @media(prefers-reduced-motion:no-preference){.primary-nav a{transition:text-decoration-color var(--motion-feedback) var(--motion-ease)}.pricing-page summary>.scope-icon{transition:transform var(--motion-feedback) var(--motion-ease)}}
+
+/* Legacy content pages retain the same print shell behavior as before. */
+@media print{.legacy-content-page .site-header,.legacy-content-page .approved-footer{display:none}}

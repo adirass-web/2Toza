@@ -1,83 +1,15 @@
 /* EN FAQ and Conditions: editorial reading surfaces within the existing grey/ink identity. */
-.reference-reading-page {
-  background-color: #e0e0e0 !important;
-  color: #232323 !important;
-}
-.reference-reading-page header {
-  background: #e0e0e0 !important;
-  color: #232323 !important;
-  border-color: #c4c7c9 !important;
-}
-.reference-reading-page :is(h1, h2, h3, .text-heading, .text-body, .text-body-subtle, .text-fg-brand, .text-fg-brand-strong),
-.reference-reading-page a,
-.reference-reading-page a:hover { color: #232323 !important; }
-.reference-reading-page footer { background: #e0e0e0 !important; color: #232323 !important; }
+.reference-reading-page main :is(h1, h2, h3, .text-heading, .text-body, .text-body-subtle, .text-fg-brand, .text-fg-brand-strong),
+.reference-reading-page main a,
+.reference-reading-page main a:hover { color: var(--color-ink) !important; }
 .reference-reading-page [data-tone="dark"] {
-  background-color: #232323 !important;
-  color: #e0e0e0 !important;
+  background-color: var(--color-ink) !important;
+  color: var(--color-paper) !important;
 }
 .reference-reading-page [data-tone="dark"] :is(h1, h2, h3, a, .text-heading, .text-body, .text-body-subtle, .text-paper, .text-on-dark-text, .text-fg-brand, .text-fg-brand-strong) {
-  color: #e0e0e0 !important;
+  color: var(--color-paper) !important;
 }
-.reference-reading-page [data-tone="dark"] .border-on-dark-border-strong { border-color: #c4c7c9 !important; }
-
-/* Keep the approved four-link navigation visible as a second row on phones and one row on desktop. */
-.reference-reading-page header > nav {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  align-items: center;
-  row-gap: .15rem;
-}
-.reference-reading-page header > nav > a { grid-column: 1; grid-row: 1; }
-.reference-reading-page header > nav > div:has([data-collapse-toggle]) { display: none; }
-.reference-reading-page #navbar-main {
-  display: flex !important;
-  grid-column: 1;
-  grid-row: 2;
-  width: 100%;
-  align-items: center;
-}
-.reference-reading-page #navbar-main ul {
-  display: flex;
-  width: 100%;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  gap: .1rem clamp(.35rem, 2vw, 1.25rem);
-  margin: 0;
-  border: 0;
-  background: transparent;
-  padding: 0 0 .3rem;
-  font-weight: 400;
-}
-.reference-reading-page #navbar-main a {
-  min-height: 2.75rem;
-  border-radius: 0;
-  padding-inline: .35rem;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: .35em;
-}
-.reference-reading-page #navbar-main a:hover,
-.reference-reading-page #navbar-main a[aria-current="page"] { background: transparent; text-decoration-color: #777; }
-
-@media (min-width: 768px) {
-  .reference-reading-page header > nav {
-    grid-template-columns: max-content minmax(0, 1fr);
-    column-gap: clamp(2rem, 5vw, 5rem);
-  }
-  .reference-reading-page #navbar-main {
-    grid-column: 2;
-    grid-row: 1;
-    justify-content: flex-end;
-  }
-  .reference-reading-page #navbar-main ul {
-    width: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    gap: clamp(1rem, 2.4vw, 2.5rem);
-    padding: 0;
-  }
-}
+.reference-reading-page [data-tone="dark"] .border-on-dark-border-strong { border-color: var(--color-rule) !important; }
 
 /* A quiet, spacious opening shared by both reading pages. */
 .reference-reading-page main > section[data-hero] {
@@ -371,7 +303,7 @@
 }
 
 .reference-reading-page--faq .faq-secondary > details > summary h2 { font-size: 1.5rem !important; line-height: 1.25 !important; }
-.reference-reading-page a.inline-flex:hover, .reference-reading-page a.inline-flex:focus-visible { background-color: #232323 !important; color: #e0e0e0 !important; }
+.reference-reading-page a.inline-flex:hover, .reference-reading-page a.inline-flex:focus-visible { background-color: var(--color-ink) !important; color: var(--color-paper) !important; }
 @media (max-width: 767px) { .reference-reading-page--faq .faq-secondary > details > summary h2 { font-size: 1.35rem !important; } }
 
 @media (max-width: 1023px) { .reference-reading-page--conditions .terms-doc > aside > .terms-toc { display: none; } }

@@ -7,6 +7,7 @@ const copy={en:{
   "description": "Private digital protection for private clients.",
   "skip": "Skip to content",
   "navLabel": "Main navigation",
+  "footerNavLabel": "Footer navigation",
   "home": "Toza home",
   "nav": [
     {

@@ -5,7 +5,7 @@
   "description": "Toza v2 \u2014 competing rebuild (preview only, noindex).",
   "scripts": {
     "build": "node scripts/prepare-build.mjs && npm run build:css && npm run build:approved-en && npm run build:js && eleventy && node scripts/finalize-build.mjs",
-    "start": "npm run build:css && npm run build:js && eleventy --serve",
+    "start": "npm run build:css && npm run build:approved-en && npm run build:js && eleventy --serve",
     "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs && npm run check:approved-en",
     "check:upstream": "node scripts/check-upstream.mjs",
     "check:content": "npm run build && node scripts/check-content.mjs && npm run check:approved-en",
@@ -45,6 +45,7 @@
     "pixelmatch": "^7.2.0",
     "playwright": "^1.65.1",
     "pngjs": "^7.0.0",
+    "postcss": "^8.5.30",
     "simple-icons": "^16.35.0",
     "tailwindcss": "^4.3.3",
     "wrangler": "4.150.0"
