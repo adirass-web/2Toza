@@ -33,3 +33,22 @@ Run `npm run test:pricing` and `npm run test:pricing-inclusions` for Pricing cha
 Run `npm run check:a11y` and `npm run check:perf` against each build profile. Run `npm run check:motion`, `npm run check:pricing-contact` and `npm run check:pricing-print` for affected behavior. Run `node scripts/check-shared-shell-browser.mjs` for shell changes. These checks need Playwright Chromium; the Pricing print check also needs `pdftotext`. To use system Chromium, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to its path.
 
 Review keyboard focus, contact targets, responsive layouts, no-JavaScript content, reduced motion and print output. Automated axe checks do not replace manual screen-reader review. Use `docs/english-release-runbook.md` for release prerequisites and cutover.
+
+## Proposed photographic standard — checkpoint review, 15 November 2026
+
+Status: proposed, awaiting owner geometry approval. Existing Home, Situation and About compositions remain the authority. This section does not approve new assets or change published markup. Evidence, source measurements and slot decisions are in `docs/photography/selection.md`.
+
+Use one future native Nunjucks `figure` / `picture` / `img` element and one photographic CSS source. Keep existing wrappers. Do not introduce a browser runtime or template framework. Logos and SVG icons remain outside this element.
+
+| Variant | Container and crop | Relationship to text |
+|---|---|---|
+| `hero` | Existing full-width Home wrapper; 3:2, contain | Preserve existing title overlay and scrim |
+| `scene` | Existing offset Home wrappers; desktop geometry unchanged; phone 1.14:1, business 1.08:1; cover | Preserve existing title panels and bleed |
+| `situation-hero` | Full-width existing wrapper; existing responsive height; cover, centered | Preserve existing scrim and title |
+| `section` | Existing content width; proposed 3:2, cover | Contained, outside text; no overlay |
+| `card` | Featured Personal Shield tile, inside existing padding; proposed 3:2, cover | Below audience, above summary; outside disclosure |
+| `portrait` | Existing About wrapper; square, maximum 320px | Preserve identifiable portrait and adjacent biography |
+
+The future element requires a local fallback, intrinsic width/height, explicit alt (empty permitted), known variant, responsive sources, accurate `sizes` and loading priority. Default below-fold photographs to lazy loading; prioritize only the actual LCP image. Record focal positions in image data. Use mobile art direction only when approved crop evidence requires it. Keep essential prices, scope and contacts in HTML. Failed images must retain their reserved space. No new per-page ratios or viewport bleed without revising the contract.
+
+The proposed new card and section share 3:2 but have different container widths. The section is proposed after the assessment explanation on How it works, before “Then, separately agreed protection.” Neither its location nor this standard has owner approval yet. Photo discovery and integration remain pending the composition checkpoint.
