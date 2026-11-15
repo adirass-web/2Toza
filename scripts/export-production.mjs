@@ -28,7 +28,11 @@ export function exportProduction({ source = '_site-production', destination, sou
   for (const file of controls) if (!available.has(file)) throw new Error(`Missing production control file: ${file}`);
   if (/X-Robots-Tag:\s*noindex/i.test(read('_headers')) || /Disallow:\s*\//i.test(read('robots.txt'))) throw new Error('Production output must not be noindex');
   if (!available.has('index.html')) throw new Error('Missing root index.html');
-  function reference(value, from) {
+  // Only exact, single-hop local navigation redirects are supported here.
+  // Wildcards, external targets and rewrite rules are not missing-file exemptions.
+  const redirects = read('_redirects').split(/\r?\n/).map(line => line.trim().split(/\s+/))
+    .filter(([from, to, status]) => from?.startsWith('/') && !/[*:]/.test(from) && to?.startsWith('/') && !to.startsWith('//') && /^(301|302|303|307|308)!?$/.test(status || ''));
+  function reference(value, from, navigation = false) {
     if (!value || /^(?:#|data:|mailto:|tel:|javascript:)/i.test(value)) return;
     let url;
     try { url = new URL(value, `${origin}/${from}`); } catch { throw new Error(`Invalid URL ${value} in ${from}`); }
@@ -36,8 +40,10 @@ export function exportProduction({ source = '_site-production', destination, sou
     let name = decodeURIComponent(url.pathname).replace(/^\//, '');
     if (name.endsWith('/') || !name) name += 'index.html';
     if (!available.has(name) && available.has(name + '/index.html')) name += '/index.html';
-    // Redirect-only navigation destinations have no file; keep _redirects unchanged.
-    if (!available.has(name) && !path.posix.extname(name)) return;
+    if (!available.has(name) && navigation) {
+      const redirect = redirects.find(([route]) => route === url.pathname);
+      if (redirect) return reference(redirect[1], from);
+    }
     if (!available.has(name)) throw new Error(`Missing local reference: ${value} in ${from}`);
     add(name);
   }
@@ -49,7 +55,7 @@ export function exportProduction({ source = '_site-production', destination, sou
     if (/\.html$/i.test(file) && file !== '404.html' && /<meta\s+name=["']robots["'][^>]*noindex/i.test(text)) throw new Error(`Production page has noindex: ${file}`);
     if (/\.(html|svg)$/i.test(file)) {
       const parser = new Parser({ onopentag(tag, attrs) {
-        for (const attr of ['src', 'href', 'poster', 'xlink:href']) if (attrs[attr]) reference(attrs[attr], file);
+        for (const attr of ['src', 'href', 'poster', 'xlink:href']) if (attrs[attr]) reference(attrs[attr], file, attr === 'href' && ['a', 'area'].includes(tag));
         if (attrs.srcset) for (const item of attrs.srcset.split(',')) reference(item.trim().split(/\s+/)[0], file);
         if (tag === 'meta' && /^og:(image|url)$/.test(attrs.property || '')) reference(attrs.content, file);
       } }, { decodeEntities: true });

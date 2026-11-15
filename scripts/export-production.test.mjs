@@ -49,3 +49,27 @@ test('keeps Open Graph images, SVG references, imports and literal script assets
   const result = exportProduction(f);
   for (const asset of ['social.webp', 'icons.svg', 'a.webp', 'b.webp', 'script.webp']) assert.ok(result.files.some(file => file.path === `assets/${asset}`));
 });
+
+test('rejects missing extensionless runtime and navigation references', t => {
+  const f = fixture(t);
+  for (const markup of ['<img src="/missing-image">', '<a href="/missing-route">Missing</a>', '<link rel="stylesheet" href="/missing-style">', '<style>body {background:url(/missing-background)}</style>']) {
+    f.put('index.html', markup);
+    assert.throws(() => exportProduction(f), /Missing local reference/);
+    assert.ok(!existsSync(f.destination));
+  }
+});
+test('allows an exact declared navigation redirect only to an existing destination', t => {
+  const f = fixture(t);
+  f.put('index.html', '<a href="/old-route">Current page</a>');
+  f.put('_redirects', '/old-route /en/ 301');
+  assert.throws(() => exportProduction(f), /Missing local reference/);
+  f.put('en/index.html', '<h1>Destination</h1>');
+  const result = exportProduction(f);
+  assert.ok(result.files.some(file => file.path === 'en/index.html'));
+});
+test('does not exempt runtime dependencies just because a redirect exists', t => {
+  const f = fixture(t);
+  f.put('index.html', '<img src="/old-image">');
+  f.put('_redirects', '/old-image /assets/a.webp 301');
+  assert.throws(() => exportProduction(f), /Missing local reference/);
+});
