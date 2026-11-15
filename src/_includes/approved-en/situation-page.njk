@@ -1,3 +1,4 @@
+{% from "approved-en/photo.njk" import photo %}
 {% from "blocks/_macros.njk" import section, h2, lnk, price with context %}
 {% set hero = scenario.blocks[0] %}
 <!doctype html>
@@ -18,7 +19,7 @@
 <main id="main" class="situation-page situation-page--{{ scenario.page }}"><span id="main-content"></span>
   <section class="situation-hero" aria-labelledby="scenario-title">
     <div class="situation-hero-image-wrap" aria-hidden="true">
-      <img class="situation-hero-image" src="/approved-en-assets/photos/{{ scenarioPhoto }}" alt="" fetchpriority="high">
+      {{ photo({src: '/approved-en-assets/photos/' + scenarioPhoto, srcset: '/approved-en-assets/photos/' + scenarioPhoto + ' 900w', sizes: '100vw', width: 900, height: 1500, alt: '', variant: 'situation-hero', priority: 'high', className: 'situation-hero-image'}) }}
       <span class="situation-hero-scrim"></span>
     </div>
     <div class="situation-hero-title-wrap"><h1 id="scenario-title">{{ hero.heading }}</h1></div>

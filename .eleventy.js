@@ -1,4 +1,5 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("validatePhoto", require("./scripts/lib/photo.cjs").validatePhoto);
   eleventyConfig.addFilter("ils", (n) => "₪" + Number(n).toLocaleString("en-US"));
   eleventyConfig.addFilter("fill", (s, vars) => String(s).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m)));
   const words = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"];

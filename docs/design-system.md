@@ -52,3 +52,28 @@ Use one future native Nunjucks `figure` / `picture` / `img` element and one phot
 The future element requires a local fallback, intrinsic width/height, explicit alt (empty permitted), known variant, responsive sources, accurate `sizes` and loading priority. Default below-fold photographs to lazy loading; prioritize only the actual LCP image. Record focal positions in image data. Use mobile art direction only when approved crop evidence requires it. Keep essential prices, scope and contacts in HTML. Failed images must retain their reserved space. No new per-page ratios or viewport bleed without revising the contract.
 
 The proposed new card and section share 3:2 but have different container widths. The section is proposed after the assessment explanation on How it works, before “Then, separately agreed protection.” Neither its location nor this standard has owner approval yet. Photo discovery and integration remain pending the composition checkpoint.
+
+## Shared photographic element — existing placements
+
+`src/_includes/approved-en/photo.njk` now renders existing photographic images. Import its `photo` macro and pass one properties object. The macro emits a direct child `img`. Existing figures, scrims, captions, grids and CSS keep their approved geometry. Logos and icons use their existing markup.
+
+The `validatePhoto` Eleventy filter checks the properties during template rendering. Its implementation is `scripts/lib/photo.cjs`. A missing or invalid property stops the build.
+
+| Property | Contract |
+|---|---|
+| `src` | Existing local photographic file under `/approved-en-assets/photos/` or `/assets/img/portraits/` |
+| `srcset` | Existing local files with positive, unique width descriptors; one candidate is valid |
+| `sizes` | Explicit, nonempty source-size expression matching the existing container |
+| `width`, `height` | Positive integer intrinsic dimensions |
+| `alt` | Explicit string; use an empty string for an atmospheric image |
+| `variant` | `hero`, `scene`, `situation-hero`, `portrait`, `card` or `section` |
+| `priority` | `high` for the page's LCP photograph; `lazy` below the fold; `eager` for the existing portrait |
+| `className` | Optional existing image class |
+
+`high` maps to eager loading and high fetch priority. `eager` maps to eager loading and automatic fetch priority. `lazy` maps to lazy loading, automatic fetch priority and asynchronous decoding. The portrait keeps its existing eager behavior because it appears at the start of About. Home scenes stay lazy. Only Home and Situation hero photographs receive high fetch priority.
+
+Current Situation files are 900×1500 JPEGs; their source sets contain one candidate. The Home hero retains its existing 900/1536 WebP candidates and 1536×1024 dimensions. The portrait retains its 640×640 WebP. Existing CSS keeps all current centered focal positions. No derivatives or new photographic placements are added by this migration.
+
+The `card` and `section` names reserve contract variants. They do not approve a photograph or add layout rules. Their proposed placements remain subject to the approval record above. New geometry must use one photographic CSS source when those placements are implemented.
+
+Run `node --test scripts/photos.test.mjs` after building both profiles. The tests cover invalid contracts, local files, attribute escaping, direct child markup and both profiles' existing photographs.

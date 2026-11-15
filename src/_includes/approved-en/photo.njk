@@ -1,0 +1,5 @@
+{# Emit a direct child image: existing wrappers own the approved crop and geometry. #}
+{% macro photo(properties) -%}
+{%- set p = properties | validatePhoto -%}
+<img{% if p.className %} class="{{ p.className }}"{% endif %} data-photo-variant="{{ p.variant }}" src="{{ p.src }}" srcset="{{ p.srcset }}" sizes="{{ p.sizes }}" width="{{ p.width }}" height="{{ p.height }}" alt="{{ p.alt }}" loading="{{ p.loading }}" fetchpriority="{{ p.fetchpriority }}"{% if p.priority == 'lazy' %} decoding="async"{% endif %}>
+{%- endmacro %}

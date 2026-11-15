@@ -1,3 +1,4 @@
+{% from "approved-en/photo.njk" import photo %}
 <!doctype html>
 <html lang="{{ locale.lang }}" dir="{{ locale.dir }}">
 <head>
@@ -11,7 +12,7 @@
 <main id="main"><span id="main-content"></span>
   <section class="hero" aria-labelledby="hero-title">
     <figure class="hero-image">
-      <img class="hero-photo" src="/approved-en-assets/photos/hero-wide-1536.webp" srcset="/approved-en-assets/photos/hero-wide-900.webp 900w, /approved-en-assets/photos/hero-wide-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="{{ t.heroAlt }}" fetchpriority="high">
+      {{ photo({src: '/approved-en-assets/photos/hero-wide-1536.webp', srcset: '/approved-en-assets/photos/hero-wide-900.webp 900w, /approved-en-assets/photos/hero-wide-1536.webp 1536w', sizes: '100vw', width: 1536, height: 1024, alt: t.heroAlt, variant: 'hero', priority: 'high', className: 'hero-photo'}) }}
       <figcaption class="hero-title"><h1 id="hero-title">{{ t.hero }}</h1></figcaption>
     </figure>
     <div class="hero-explanation">

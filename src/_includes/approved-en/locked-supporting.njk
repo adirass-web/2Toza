@@ -1,3 +1,4 @@
+{% from "approved-en/photo.njk" import photo %}
 {% from "approved-en/grid.njk" import grid %}
 <!doctype html>
 <html lang="en" dir="ltr">
@@ -28,7 +29,7 @@
   {% set introParts = displayHtml.split('<h2>') %}
   <article class="expert-article">
     {% call grid("feature", "expert-intro") %}
-    <div class="expert-portrait"><img src="/assets/img/portraits/dr-tabansky-graphite-polished-640.webp" width="640" height="640" alt="Graphite portrait of Dr. Lior Tabansky"></div>
+    <div class="expert-portrait">{{ photo({src: '/assets/img/portraits/dr-tabansky-graphite-polished-640.webp', srcset: '/assets/img/portraits/dr-tabansky-graphite-polished-640.webp 640w', sizes: '(max-width: 414px) calc(100vw - 94px), 320px', width: 640, height: 640, alt: 'Graphite portrait of Dr. Lior Tabansky', variant: 'portrait', priority: 'eager'}) }}</div>
     <div class="locked-copy expert-intro-copy">{{ introParts[0] | safe }}</div>
     {% endcall %}
     <div class="locked-copy">{{ displayHtml | replace(introParts[0], '') | safe }}</div>
