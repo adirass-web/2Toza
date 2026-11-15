@@ -3,7 +3,7 @@ import { serve, loadPlaywright } from './lib/serve.mjs';
 const server = await serve();
 const browser = await loadPlaywright().chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||undefined});
 try {
- for (const width of [320, 390, 768, 1024, 1440]) {
+ for (const width of [320, 390, 768, 1024, 1101, 1200, 1440]) {
   const page = await browser.newPage({viewport:{width,height:800},reducedMotion:'reduce'});
   await page.goto(server.base+'/en/pricing/',{waitUntil:'load'});
   const result=await page.evaluate(async()=>{
@@ -28,5 +28,5 @@ try {
   await page.screenshot({path:`/tmp/pricing-contacts-${width}.png`});
   await page.close();
  }
- console.log('Contact controls: contrast, 44px targets and unobstructed pricing text pass at 320, 390, 768, 1024 and 1440px.');
+ console.log('Contact controls: contrast, 44px targets and unobstructed pricing text pass at 320, 390, 768, 1024, 1101, 1200 and 1440px.');
 } finally {await browser.close();server.close()}

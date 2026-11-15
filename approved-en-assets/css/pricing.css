@@ -14,4 +14,4 @@
 .pricing-scope>p+p{margin-block-start:14px}
 
 /* Reserve the fixed-contact rail so it never covers pricing text. */
-@media screen and (max-width:1100px){.pricing-page{padding-inline-end:max(72px,var(--page-gutter))}}
+@media screen and (max-width:1200px){.pricing-page{padding-inline-end:max(72px,var(--page-gutter))}}
