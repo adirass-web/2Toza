@@ -28,7 +28,8 @@
     "test:pricing": "node --test scripts/pricing.test.mjs",
     "check:pricing-print": "node scripts/check-pricing-print.mjs",
     "test:pricing-inclusions": "node --test scripts/pricing-inclusions.test.mjs",
-    "check:motion": "node scripts/check-restrained-motion.mjs"
+    "check:motion": "node scripts/check-restrained-motion.mjs",
+    "check:pricing-contact": "node scripts/check-pricing-contact.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
