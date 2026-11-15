@@ -16,7 +16,7 @@ Artifacts are ignored, under `.artifacts/photography/`:
 - `{pricing,how-it-works}-{320,390,1440}-proposed.png`: full-page geometry proposals, with existing copy and contact controls.
 - `{pricing,how-it-works}-{320,390,1440}-composition.png`: detail crops of the comparison or supporting article.
 - `review-{390,1440}.png`: side-by-side Home reference and both proposed slots.
-- `geometry.json`: browser-measured image dimensions, positions, crop styles, intrinsic attributes and proposed slots.
+- `geometry.json`: browser-measured image dimensions, positions, crop styles, intrinsic attributes and proposed slots. `loading` / `loadingAttribute` preserve the source policy before capture preparation; `captureLoading` records the eager override used only to decode complete references.
 - `performance-preview.txt`, `asset-sizes.json`: raw measurement evidence.
 
 These are layout compositions, not crop approval: no new photographs appear. Inspect full-page versions for page context. Compare proposed pages beside Home's current composition.

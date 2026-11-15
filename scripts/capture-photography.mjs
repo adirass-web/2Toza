@@ -10,10 +10,10 @@ for(const width of [320,390,1440]) {
  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
  const page=await context.newPage();
  for(const slug of ['', 'separation-divorce','business-dispute','inheritance-conflict','about','pricing','how-it-works']) {
-  const name=slug||'home'; await page.goto(srv.base+'/en/'+(slug?slug+'/':''),{waitUntil:'networkidle'}); await page.evaluate(async()=>{await document.fonts.ready;for(const i of document.querySelectorAll('main img')){i.loading='eager';await i.decode().catch(()=>{});}});
+  const name=slug||'home'; await page.goto(srv.base+'/en/'+(slug?slug+'/':''),{waitUntil:'networkidle'}); await page.evaluate(async()=>{await document.fonts.ready;window.__photoSourceLoading=new WeakMap();for(const i of document.querySelectorAll('main img')){window.__photoSourceLoading.set(i,{attribute:i.getAttribute('loading'),policy:i.loading});i.loading='eager';await i.decode().catch(()=>{});}});
   await page.screenshot({path:`${out}/${name}-${width}-current.png`,fullPage:true});
   if(name==='home') await page.locator('.hero-image').screenshot({path:`${out}/home-${width}-reference-detail.png`});
-  const images=await page.locator('main img').evaluateAll(imgs=>imgs.filter(i=>!i.src.endsWith('.svg')).map(i=>{const r=i.getBoundingClientRect(),c=getComputedStyle(i);return {src:i.getAttribute('src'),natural:[i.naturalWidth,i.naturalHeight],rendered:[r.width,r.height],x:r.x,y:r.y,objectFit:c.objectFit,objectPosition:c.objectPosition,loading:i.loading,priority:i.fetchPriority,widthAttribute:i.getAttribute('width'),heightAttribute:i.getAttribute('height'),alt:i.getAttribute('alt')};}));
+  const images=await page.locator('main img').evaluateAll(imgs=>imgs.filter(i=>!i.src.endsWith('.svg')).map(i=>{const r=i.getBoundingClientRect(),c=getComputedStyle(i);return {src:i.getAttribute('src'),natural:[i.naturalWidth,i.naturalHeight],rendered:[r.width,r.height],x:r.x,y:r.y,objectFit:c.objectFit,objectPosition:c.objectPosition,loading:window.__photoSourceLoading.get(i).policy,loadingAttribute:window.__photoSourceLoading.get(i).attribute,captureLoading:i.loading,priority:i.fetchPriority,widthAttribute:i.getAttribute('width'),heightAttribute:i.getAttribute('height'),alt:i.getAttribute('alt')};}));
   inventory.push({page:name,width,images});
   if(['pricing','how-it-works'].includes(slug)) {
    await page.evaluate(slug=>{
