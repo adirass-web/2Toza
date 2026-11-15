@@ -51,13 +51,13 @@ jobs:
           node scripts/audit-legacy-anchors.mjs legacy-baseline/_site _site-production
       - run: npx playwright install --with-deps chromium
       - run: sudo apt-get install -y poppler-utils
-      - run: npm run check:pricing-print && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs
+      - run: npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs
       - run: npm run check:a11y && npm run check:perf
       - name: Validate production in browser
         env:
           SITE_ENV: production
           SITE_URL: https://toza-site.pages.dev
-        run: npm run check:a11y && npm run check:perf && npm run check:pricing-print && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs
+        run: npm run check:a11y && npm run check:perf && npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs
       - name: Package exact verified builds
         id: package
         env:

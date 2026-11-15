@@ -183,6 +183,7 @@
 @media print {
   .reference-reading-page--faq .faq-mobile-toc,
   .reference-reading-page--conditions .terms-mobile-toc { display: none !important; }
+  .reference-reading-page--faq main details::details-content { content-visibility: visible !important; display: block !important; }
   .reference-reading-page--faq details:not([open]) > :not(summary) { display: block !important; }
   .reference-reading-page--faq details > summary svg { display: none; }
 }
