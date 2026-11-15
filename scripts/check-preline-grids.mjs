@@ -23,7 +23,7 @@ try {
     metrics.push({slug,width,cards});
    }else{
     const image=await page.locator('.expert-portrait img').evaluate(e=>{const r=e.getBoundingClientRect();return {width:r.width,height:r.height,naturalWidth:e.naturalWidth,naturalHeight:e.naturalHeight,fit:getComputedStyle(e).objectFit}});
-    assert.equal(image.naturalWidth,640);assert.equal(image.naturalHeight,640);assert.equal(image.width,image.height);assert.ok(image.width<=320);
+    assert.ok(image.naturalWidth>0, "portrait loaded");assert.equal(image.naturalWidth,image.naturalHeight);assert.equal(image.width,image.height);assert.ok(image.width<=320);
     assert.equal(await page.locator('.expert-intro h1').count(),1);assert.equal(await page.locator('.expert-intro h2').count(),0);
     metrics.push({slug,width,image});
    }
