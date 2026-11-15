@@ -1,3 +1,4 @@
 [mcp_servers.preline]
+enabled = false
 url = "https://mcp.preline.co"
 bearer_token_env_var = "PRELINE_MCP_TOKEN"

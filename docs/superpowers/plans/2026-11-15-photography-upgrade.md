@@ -2,11 +2,11 @@
 
 > **For agentic workers:** Use `superpowers:subagent-driven-development` for implementation and scoped review. Use `superpowers:verification-before-completion` at every completion checkpoint. Track progress with the checkboxes below.
 
-**Execution status (15 November 2026):** Preparation started from remote English MVP `59e11d1`; see `docs/photography/execution-checkpoint.md` and `docs/photography/selection.md`. Geometry remains proposed. The referenced brief is unavailable. Separate-chat statements below are historical handoff context, not current tool capability claims.
+**Execution status (15 November 2026, continuation):** The owner selected Preline, requested direct use without MCP, assessed HyperUI pricing as plan B, and authorized continuing the big plan. Preline-derived grids are implemented and verified through `6a64cc2`. The earlier geometry-only compositions describe the previous bento layout and must not be treated as the current slot contract. Existing images now move to a shared validated element while candidate discovery runs separately in a subagent. New photographs and crops will be presented as recommendations, not invented owner approvals. Production cutover remains owner-run. See `docs/photography/continuation-checkpoint.md`.
 
 **Goal:** Add a small, coherent photographic set that brings precision, practical protection and relief to Pricing and one supporting section.
 
-**Architecture:** Formalize the existing native image markup as one shared Nunjucks element with controlled layout variants. Keep Home/Situation geometry as the authority. A separate chat searches and selects two photographs against frozen slot specifications. Integrate only approved local derivatives. No new image service or browser dependency.
+**Architecture:** Formalize the existing native image markup as one shared Nunjucks element with controlled layout variants. Keep Home/Situation geometry as the authority. A separate image-research subagent discovers and evaluates two photographs against the current grid constraints; the owner reviews the concrete candidate/crop checkpoint. Integrate only approved local derivatives. No new image service or browser dependency.
 
 **Tech stack:** Eleventy/Nunjucks, existing CSS and Motion, local responsive image assets, Playwright/axe and existing CI.
 
@@ -37,7 +37,7 @@
 
 **Files:** `docs/design-system.md`; `docs/photography/selection.md`.
 
-**Decision proposed after Nimble research:** Reuse native `figure`/`picture`/`img` through one shared element. Free Flowbite/HyperUI snippets add no required capability. This recommendation is not recorded as owner approval.
+**Current decision:** Use the owner-selected Preline-derived static grid for layout and native `picture`/`img` through a shared validated element for media. HyperUI remains plan B. Preserve existing approved image geometry; refresh new slot compositions for the three-card Pricing layout.
 
 - [x] Inventory photographic placements across the English site, including Home, Situation pages and the About portrait.
 - [x] Record each slot's container, gutter, maximum width, desktop/mobile ratio, crop, bleed, text relationship and loading priority.
@@ -59,20 +59,20 @@
 
 **Checkpoint 1:** The record identifies two slots, their purpose and baseline metrics. No product files changed.
 
-## Task 2 — Image search and selection in a separate chat
+## Task 2 — Image search and selection in a separate workstream
 
 **Input:** `docs/photography/image-search-chat-handoff.md`, the approved standard and two frozen slot specifications from Checkpoint 0.
 
 **Outputs:** `docs/photography/selection.md`; contact sheets and compositions under `.artifacts/photography/`. No product changes.
 
-- [ ] Open a separate user chat with the handoff prompt. This session cannot create a chat because no creation tool is exposed.
+- [x] Dispatch a separate image-research subagent with the handoff context. No new sidebar chat is required or created.
 - [ ] Use Parallel Image Search for discovery and Nimble Search/Extract for source, license and template evidence.
 - [ ] Search for three candidates per approved slot, beginning with free Unsplash assets.
 - [ ] Record each candidate's photographer, source page, license URL/date, dimensions and relevant people/property restrictions.
 - [ ] Inspect downloaded images visually. Search titles, metadata and URLs alone do not establish visual suitability or permission.
 - [ ] Show six candidates beside the existing reference photography, including desktop/mobile crops within the frozen slot geometry.
 - [ ] Recommend a coherent pair with a short rationale and explicit rejection reasons for alternatives.
-- [ ] Obtain owner selection and crop approval in that chat. Record exact asset IDs, sources and decisions in the selection record.
+- [ ] Present owner selection and crop approval in this chat after concrete contact sheets/compositions are ready. Record exact asset IDs, sources and decisions in the selection record.
 - [ ] Return the approved pair, provenance and crops to the implementation chat for acceptance.
 
 **Checkpoint 2:** The implementation chat verifies a complete handoff. Missing approval, provenance, dimensions or crop evidence blocks asset integration. Candidates stay outside published paths.

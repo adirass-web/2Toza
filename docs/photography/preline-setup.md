@@ -2,6 +2,8 @@
 
 Current owner direction: use Preline without MCP; retain HyperUI as plan B. Direct public HTML integration supersedes the connection-dependent workflow below. No token or MCP connection is required for this implementation. See `../third-party/preline.md`.
 
+The project-scoped MCP entry is disabled (`enabled = false`) so a trusted checkout does not need to connect to Preline to work on this site. The earlier global registration is retained as optional tooling; it is not used by this workflow.
+
 Earlier setup direction: use Preline; retain HyperUI as plan B. This selects the component family, not the earlier proposed photo geometry.
 
 ## Configured
