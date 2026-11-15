@@ -1,11 +1,28 @@
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {siteDir} from './util.mjs';
 import { serve, loadPlaywright } from './lib/serve.mjs';
 const server = await serve();
+const pricingCss=readFileSync(`${siteDir()}/approved-en-assets/css/pricing.css`,'utf8');
+const fallback=pricingCss.match(/\.pricing-option:last-child\{[^}]*?background:(var\(--[^)]+\));background:color-mix\(/)?.[1];
+assert.ok(fallback,'Inner Circle must have a token-based background fallback before color-mix');
 const browser = await loadPlaywright().chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||undefined});
 try {
  for (const width of [320, 390, 768, 1024, 1101, 1200, 1440]) {
   const page = await browser.newPage({viewport:{width,height:800},reducedMotion:'reduce'});
   await page.goto(server.base+'/en/pricing/',{waitUntil:'load'});
+  if(width===320){
+   const ratio=await page.evaluate(fallback=>{
+    const card=document.querySelector('.pricing-option:last-child');
+    card.style.setProperty('background',fallback,'important');
+    const color=getComputedStyle(card.querySelector('.pricing-summary dt')).color;
+    const bg=getComputedStyle(card).backgroundColor;
+    const lum=s=>{const v=(s.match(/[\d.]+/g)||[]).slice(0,3).map(Number).map(n=>{n/=255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
+    const l=[lum(color),lum(bg)].sort((a,b)=>b-a);return (l[0]+.05)/(l[1]+.05);
+   },fallback);
+   assert.ok(ratio>=4.5,`Inner Circle fallback text contrast must be >=4.5: ${ratio}`);
+   await page.reload({waitUntil:'load'});
+  }
   const result=await page.evaluate(async()=>{
    const links=[...document.querySelectorAll('.fixed-contact-icons a')];
    const featured=document.querySelector('.pricing-option--featured');
