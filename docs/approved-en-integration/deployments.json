@@ -1,0 +1,14 @@
+[
+  {
+    "Id": "0098c46b-66d2-4207-87e8-da52555fdd5a",
+    "Environment": "Preview",
+    "Branch": "codex-app-en-integration-20261104",
+    "Deployment": "https://0098c46b.toza-v2.pages.dev"
+  },
+  {
+    "Id": "841bb44a-975c-4ac1-acaa-ddb80e774e67",
+    "Environment": "Production",
+    "Branch": "main",
+    "Deployment": "https://841bb44a.toza-v2.pages.dev"
+  }
+]

@@ -8,7 +8,7 @@
     <p class="mt-4 text-heading lg:mt-6">{{ price(o, 'text-6xl lg:text-7xl') }}</p>
   </div>
   <div class="lg:col-span-7 lg:self-end">
-    {% if o.credit %}<p class="font-serif text-xl leading-snug text-heading lg:text-2xl">{{ o.credit }}</p>{% endif %}
+    {% if o.credit %}<p{% if pg.page == 'pricing' %} id="credit"{% endif %} class="font-serif text-xl leading-snug text-heading lg:text-2xl">{{ o.credit }}</p>{% endif %}
     {% if o.body %}<p class="mt-4 text-lg">{{ o.body }}</p>{% endif %}
     {{ features(o.items, 'mt-4') }}
     {% if o.link %}<p class="mt-4">{{ lnk(o.link) }}</p>{% endif %}

@@ -1,0 +1,29 @@
+{% set t = approvedEN.copy.en %}
+{% set contact = approvedEN.contact %}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Accessibility information and contact details for Toza.">
+  <title>Accessibility — Toza</title>
+  <link rel="stylesheet" href="/approved-en-assets/css/main.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/locked-supporting.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
+</head>
+<body class="has-fixed-contacts">
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "approved-en/header.njk" %}
+<main id="main" class="locked-page">
+  <article class="locked-copy">
+    <h1>Accessibility</h1>
+    <p>Toza aims to make this website usable by people with disabilities. The website includes text alternatives for informative images, keyboard navigation and a link to skip to the main content. You can enlarge the text using your browser's zoom controls.</p>
+    <p>If you encounter an accessibility problem or need information in another format, please contact Toza through <a href="https://wa.me/972533366276">WhatsApp</a> or <a href="https://signal.me/#p/+972533366276">Signal</a>. Please identify the page and describe the difficulty so we can understand your request. Please do not include sensitive personal information in your first message.</p>
+    <p>Toza provides its service at locations selected by clients. Please contact Toza to discuss accessibility requirements for your appointment.</p>
+  </article>
+</main>
+{% include "approved-en/footer.njk" %}
+{% include "approved-en/contact-icons.njk" %}
+</body>
+</html>

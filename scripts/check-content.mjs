@@ -12,7 +12,8 @@
 // Run after `npm run build` (npm run check:content does both).
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { walk } from "./util.mjs";
+import { createRequire } from "node:module";
+import { walk, siteDir } from "./util.mjs";
 import { loadSources, createResolver, readPages, mdUnits, plainLength, norm, NUMWORDS, formatPrice, get } from "./lib/content.mjs";
 import { squash, hasWords, sentences, extract, boundedIncludes } from "./lib/parity.mjs";
 
@@ -20,12 +21,17 @@ const ARGS = new Set(process.argv.slice(2));
 const argValue = (name) => process.argv.slice(2).find((a) => a.startsWith("--" + name + "="))?.slice(name.length + 3);
 const LANG = "en";
 const CONTENT_DIR = `src/content/${LANG}`;
-const SITE = "_site";
+const SITE = siteDir();
 // Optional: check pages rendered from content under another permalink prefix, e.g.
 //   node scripts/check-content.mjs --prefix=/_ref --only=pricing
 // Default: the real site, every page.
 const PREFIX = argValue("prefix") || "";
 const ONLY = argValue("only") ? argValue("only").split(",") : null;
+// These routes use owner-approved Markdown/components and are checked by check-approved-en.mjs.
+const approvedManifest = "content/approved-en/routes.json";
+const delegatedRoutes = new Set(existsSync(approvedManifest) ? JSON.parse(readFileSync(approvedManifest, "utf8")).pages.map(p => p.permalink) : []);
+// The owner-approved statement is a standalone template, verified by launch-pages.test.mjs.
+delegatedRoutes.add('/en/accessibility/index.html');
 
 const src = loadSources({ lang: LANG });
 const { model, facts, contact, i18n, shared } = src;
@@ -243,7 +249,8 @@ function flattenStrings(obj, acc = []) {
   else if (obj && typeof obj === "object") Object.values(obj).forEach((v) => flattenStrings(v, acc));
   return acc;
 }
-const uiStrings = UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns]));
+const approvedChrome = createRequire(import.meta.url)("../src/_data/approvedEN.js").copy.en;
+const uiStrings = [...UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns])), approvedChrome.descriptor, approvedChrome.home, approvedChrome.navLabel, approvedChrome.footerNavLabel];
 
 function unitsOf(col) {
   const full = [], runs = [];
@@ -262,6 +269,7 @@ const report = [];
 
 for (const file of builtPages) {
   const permalink = "/" + file.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/");
+  if (delegatedRoutes.has(permalink)) continue;
   const entry = pageCollections.get(permalink);
   if (!entry) { err(file, `built page has no content file (permalink ${permalink})`); continue; }
   const html = extract(readFileSync(file, "utf8"));
@@ -307,8 +315,9 @@ for (const file of builtPages) {
   report.push({ page: entry.page.data.page, blocks: entry.page.data.blocks.length, missingHtml: missingHtml.length, missingContent: missingContent.length });
 }
 for (const [permalink, e] of pageCollections) {
+  if (delegatedRoutes.has(permalink)) continue;
   if (ONLY && !ONLY.includes(e.page.data.page)) continue;
-  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1) === permalink)) err(e.page.file, `no built page at ${permalink}`);
+  if (!builtPages.some((f) => "/" + f.slice(join(SITE, PREFIX).length + 1).replace(/\\/g, "/") === permalink)) err(e.page.file, `no built page at ${permalink}`);
 }
 
 // ---------- drift guard: i18n editorial strings must exist in _shared.yaml ----------

@@ -2,18 +2,34 @@
   "name": "toza-v2",
   "version": "0.1.0",
   "private": true,
-  "description": "Toza v2 — competing rebuild (preview only, noindex).",
+  "description": "Toza v2 \u2014 competing rebuild (preview only, noindex).",
   "scripts": {
-    "build": "npm run build:css && npm run build:js && eleventy",
-    "start": "npm run build:css && npm run build:js && eleventy --serve",
-    "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs",
+    "build": "node scripts/prepare-build.mjs && npm run build:css && npm run build:approved-en && npm run build:js && eleventy && node scripts/finalize-build.mjs",
+    "start": "npm run build:css && npm run build:approved-en && npm run build:js && eleventy --serve",
+    "check": "node scripts/check-facts.mjs && node scripts/check-noindex.mjs && node scripts/check-tokens.mjs && npm run check:approved-en",
     "check:upstream": "node scripts/check-upstream.mjs",
-    "check:content": "npm run build && node scripts/check-content.mjs",
+    "check:content": "npm run build && node scripts/check-content.mjs && npm run check:approved-en",
     "pages:deploy": "wrangler pages deploy",
     "build:css": "node scripts/build-tokens.mjs && tailwindcss -i styles/main.css -o assets/css/main.css --minify",
-    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js",
+    "build:js": "esbuild scripts/site.js --bundle --minify --format=iife --outfile=assets/js/site.js && esbuild scripts/restrained-motion.js --bundle --minify --format=iife --outfile=assets/js/restrained-motion.js",
     "check:visual": "npm run build && node scripts/visual.mjs",
-    "visual:approve": "npm run build && node scripts/visual.mjs --update"
+    "visual:approve": "npm run build && node scripts/visual.mjs --update",
+    "build:approved-en": "node scripts/build-approved-en.mjs",
+    "check:approved-en": "node scripts/check-approved-en.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:anchors": "node scripts/check-anchors.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "check:perf": "node scripts/check-perf.mjs",
+    "test:links": "node --test scripts/check-links.test.mjs",
+    "test:profiles": "node --test scripts/build-profiles.test.mjs",
+    "test:production-checks": "node --test scripts/production-checks.test.mjs",
+    "test:launch-pages": "node --test scripts/launch-pages.test.mjs",
+    "test:anchors": "node --test scripts/audit-legacy-anchors.test.mjs",
+    "test:pricing": "node --test scripts/pricing.test.mjs",
+    "check:pricing-print": "node scripts/check-pricing-print.mjs",
+    "test:pricing-inclusions": "node --test scripts/pricing-inclusions.test.mjs",
+    "check:motion": "node scripts/check-restrained-motion.mjs",
+    "check:pricing-contact": "node scripts/check-pricing-contact.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
@@ -27,12 +43,17 @@
     "js-yaml": "4.3.2",
     "markdown-it": "14.3.2",
     "pixelmatch": "^7.2.0",
+    "playwright": "^1.65.1",
     "pngjs": "^7.0.0",
+    "postcss": "^8.5.30",
     "simple-icons": "^16.35.0",
     "tailwindcss": "^4.3.3",
     "wrangler": "4.150.0"
   },
   "engines": {
     "node": ">=22"
+  },
+  "dependencies": {
+    "motion": "14.6.0"
   }
 }

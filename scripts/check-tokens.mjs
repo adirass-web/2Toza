@@ -9,7 +9,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { walk } from "./util.mjs";
-import { buildModel, generateCss, readTokens, TOKENS_CSS } from "./build-tokens.mjs";
+import { buildModel, generateCss, readTokens, TOKENS_CSS, APPROVED_TOKENS_CSS } from "./build-tokens.mjs";
 
 let failed = false;
 const fail = (m) => { console.error("FAIL: " + m); failed = true; };
@@ -20,18 +20,22 @@ try { tree = readTokens(); } catch (e) { fail(`tokens/tokens.json: ${e.message}`
 const { decls, errors } = buildModel(tree);
 for (const e of new Set(errors)) fail(`tokens/tokens.json: ${e}`);
 
-// 2) tokens.css is current
+// 2) Both consumers are generated from the same source.
 if (!errors.length) {
-  let current = null;
-  try { current = readFileSync(TOKENS_CSS, "utf8"); } catch {}
-  if (current === null) fail("styles/tokens.css is missing; run npm run build:css");
-  else if (current !== generateCss(tree)) fail("styles/tokens.css is stale vs tokens/tokens.json; run npm run build:css");
+  for (const file of [TOKENS_CSS, APPROVED_TOKENS_CSS]) {
+    let current = null;
+    try { current = readFileSync(file, "utf8"); } catch {}
+    if (current === null) fail(`${file} is missing; run npm run build:css`);
+    else if (current !== generateCss(tree)) fail(`${file} is stale vs tokens/tokens.json; run npm run build:css`);
+  }
 }
 
 // 3) main.css takes its theme from tokens.css
 const mainCss = readFileSync("styles/main.css", "utf8").replace(/\/\*[\s\S]*?\*\//g, "");
 if (/@theme\b/.test(mainCss)) fail("styles/main.css declares @theme; move the variables into tokens/tokens.json");
 if (!/@import\s+["']\.\/tokens\.css["']/.test(mainCss)) fail('styles/main.css must @import "./tokens.css"');
+const approvedCss = readFileSync("styles/approved-en.css", "utf8").replace(/\/\*[\s\S]*?\*\//g, "");
+if (!/@import\s+["']\.\/approved-en-tokens\.css["']/.test(approvedCss)) fail('styles/approved-en.css must @import "./approved-en-tokens.css"');
 
 // 4) colour literals outside tokens (warning only)
 const HEX = /(?<![&\w])#(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{4}|[0-9a-fA-F]{3})\b/g;
@@ -49,7 +53,7 @@ const files = [...walk("src", ".njk").sort().map((f) => [f, "njk"]), ["styles/ma
 const debt = files.map(([f, kind]) => [f.replace(/\\/g, "/"), countLiterals(strip[kind](readFileSync(f, "utf8")))]).filter(([, n]) => n > 0);
 const total = debt.reduce((s, [, n]) => s + n, 0);
 
-console.log(`tokens: ${decls.length} CSS variables from tokens/tokens.json${failed ? "" : ", styles/tokens.css up to date"}`);
+console.log(`tokens: ${decls.length} CSS variables from tokens/tokens.json${failed ? "" : ", both token stylesheets up to date"}`);
 console.log(`colour literals outside tokens (warn only): ${total} in ${debt.length} files`);
 for (const [f, n] of debt) console.log(`warn: ${f}: ${n}`);
 if (failed) process.exit(1);

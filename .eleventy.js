@@ -1,4 +1,5 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("validatePhoto", require("./scripts/lib/photo.cjs").validatePhoto);
   eleventyConfig.addFilter("ils", (n) => "₪" + Number(n).toLocaleString("en-US"));
   eleventyConfig.addFilter("fill", (s, vars) => String(s).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m)));
   const words = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"];
@@ -9,11 +10,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/content/");
   eleventyConfig.addWatchTarget("content/content-model.json");
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("approved-en-assets");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_headers");
   return {
-    dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
+    dir: { input: "src", output: process.env.SITE_ENV === "production" ? "_site-production" : "_site", includes: "_includes", data: "_data" },
     templateFormats: ["njk"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: false,

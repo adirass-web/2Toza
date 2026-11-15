@@ -17,9 +17,13 @@
     "arrowExternal": "↗",
     "pricesLabel": "Prices",
     "faqGroups": "Question groups",
+    "browseTopics": "Browse topics",
     "faqExpand": "Expand all answers",
     "faqCollapse": "Collapse all answers",
-    "print": "Print this page"
+    "print": "Print this page",
+    "fixedContactsLabel": "Start a private conversation",
+    "whatsappContactLabel": "WhatsApp — start a private conversation",
+    "signalContactLabel": "Signal — start a private conversation"
   },
   "nav": {
     "situations": "Situations",
@@ -34,6 +38,7 @@
     "attorneys": "For attorneys",
     "conditions": "Conditions",
     "about": "About",
+    "accessibility": "Accessibility",
     "privacy": "Privacy",
     "terms": "Terms"
   },
@@ -43,7 +48,8 @@
     "signalShort": "Signal",
     "callback": "Call me back",
     "referral": "Discuss a referral",
-    "profile": "Professional profile"
+    "profile": "Professional profile",
+    "callbackReference": "Request a call back on WhatsApp"
   },
   "person": {
     "name": "Dr. Lior Tabansky",

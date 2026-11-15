@@ -1,0 +1,110 @@
+name: Owner production release
+
+on:
+  workflow_dispatch:
+    inputs:
+      verify_run_id:
+        description: Successful Verify push run ID for main
+        required: true
+        type: string
+      commit_sha:
+        description: Exact full main commit SHA from the Verify run
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+  deployments: read
+
+concurrency:
+  group: toza-production-release
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    outputs:
+      artifact: ${{ steps.run.outputs.artifact }}
+      run_id: ${{ steps.run.outputs.run_id }}
+      sha: ${{ steps.run.outputs.sha }}
+    steps:
+      - name: Confirm production environment and Verify run
+        id: run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ inputs.verify_run_id }}
+          EXPECTED_SHA: ${{ inputs.commit_sha }}
+          DISPATCH_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          [[ "$RUN_ID" =~ ^[0-9]+$ ]] && [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$DISPATCH_SHA" = "$EXPECTED_SHA"
+          run="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$RUN_ID")"
+          workflow_id="$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml" --jq .id)"
+          jq -e --arg sha "$EXPECTED_SHA" --argjson workflow "$workflow_id" '.workflow_id == $workflow and .event == "push" and .head_branch == "main" and .head_sha == $sha and .status == "completed" and .conclusion == "success"' <<< "$run" >/dev/null
+          env_info="$(gh api "repos/$GITHUB_REPOSITORY/environments/production")"
+          jq -e '.protection_rules | any(.type == "required_reviewers" and (.reviewers | length > 0))' <<< "$env_info" >/dev/null
+          attempt="$(jq -r .run_attempt <<< "$run")"
+          [[ "$attempt" =~ ^[0-9]+$ ]]
+          echo "artifact=toza-verified-${RUN_ID}-${attempt}" >> "$GITHUB_OUTPUT"
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+          echo "sha=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: production
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.validate.outputs.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: ${{ needs.validate.outputs.artifact }}
+          path: ${{ runner.temp }}/release-bundle
+          run-id: ${{ needs.validate.outputs.run_id }}
+          github-token: ${{ github.token }}
+      - name: Verify production artifact provenance and digest
+        env:
+          ARTIFACT: ${{ needs.validate.outputs.artifact }}
+          BUILT_SHA: ${{ needs.validate.outputs.sha }}
+          VERIFY_RUN: ${{ needs.validate.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/release-bundle"
+          jq -e --arg repo "$GITHUB_REPOSITORY" --arg sha "$BUILT_SHA" --arg artifact "$ARTIFACT" --arg run "$VERIFY_RUN" '.repository == $repo and .built_sha == $sha and .source_head == $sha and .source_branch == "main" and .event == "push" and .artifact == $artifact and .run_id == $run' provenance.json >/dev/null
+          test "$(sha256sum production.tar.gz | cut -d ' ' -f 1)" = "$(jq -r .production_sha256 provenance.json)"
+          mkdir production
+          tar -xzf production.tar.gz -C production
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+      - name: Confirm owner approval, production-only secrets and current main
+        env:
+          GH_TOKEN: ${{ secrets.TOZA_PRODUCTION_AUDIT_TOKEN }}
+          PRODUCTION_OWNER: ${{ vars.TOZA_PRODUCTION_OWNER_LOGIN }}
+          EXPECTED_SHA: ${{ needs.validate.outputs.sha }}
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN" && test -n "$PRODUCTION_OWNER"
+          gh api "repos/$GITHUB_REPOSITORY/environments/production" > "$RUNNER_TEMP/environment.json"
+          gh api "repos/$GITHUB_REPOSITORY/environments/production/secrets?per_page=100" > "$RUNNER_TEMP/environment-secrets.json"
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/approvals" > "$RUNNER_TEMP/approvals.json"
+          gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" > "$RUNNER_TEMP/main-ref.json"
+          node scripts/release-policy.mjs "$RUNNER_TEMP/environment.json" "$RUNNER_TEMP/environment-secrets.json" "$RUNNER_TEMP/approvals.json" "$RUNNER_TEMP/main-ref.json"
+      - name: Require existing production project and deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.TOZA_PRODUCTION_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.TOZA_PRODUCTION_ACCOUNT_ID }}
+          BUILT_SHA: ${{ needs.validate.outputs.sha }}
+          GH_TOKEN: ${{ secrets.TOZA_PRODUCTION_AUDIT_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID"
+          curl -fsS "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/toza-site" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" >/dev/null
+          test "$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)" = "$BUILT_SHA"
+          npx --yes --package=wrangler@4.150.0 -- wrangler pages deploy "$RUNNER_TEMP/release-bundle/production" --project-name toza-site --branch main --commit-hash "$BUILT_SHA"

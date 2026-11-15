@@ -1,8 +1,19 @@
 node_modules/
 _site/
+_site-production/
 .wrangler/
 .DS_Store
 .tmp-proj/
 assets/css/main.css
 tests/visual/diff/
 tests/visual/current/
+
+# Rebuilt by npm run build:approved-en
+approved-en-assets/css/main.css
+approved-en-assets/css/shared-shell.css
+
+# Generated verification reports
+.artifacts/
+
+# Rebuilt by npm run build:js
+assets/js/restrained-motion.js

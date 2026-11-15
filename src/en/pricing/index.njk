@@ -1,0 +1,61 @@
+{% from "approved-en/grid.njk" import grid %}
+{% set t = approvedEN.copy.en %}
+{% set contact = approvedEN.contact %}
+{% set legacy = siteContent.en.pages.pricing %}
+{% set tiers = legacy.blocks[2].tiers %}
+{% set audiences = ['One person', 'Two people', 'A household of up to four'] %}
+{% set ids = ['personal-shield', 'personal-shield-for-two', 'inner-circle'] %}
+{% from "blocks/_macros.njk" import price with context %}
+{% from "approved-en/icon.njk" import icon %}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="Compare Toza protection prices, inclusions, assessment and credit terms."><title>Pricing — Toza</title>
+<link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css"><link rel="stylesheet" href="/approved-en-assets/css/pricing.css"><link rel="stylesheet" href="/approved-en-assets/css/content-grid.css">
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/restrained-motion.js" defer></script>
+</head>
+<body class="has-fixed-contacts">
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "approved-en/header.njk" %}
+<main id="main" class="pricing-page"><span id="main-content"></span>
+<header class="pricing-intro"><h1>Pricing</h1><p>Choose protection for one person, two people or your household. Every price is fixed and agreed in writing before work begins. Prices include VAT.</p></header>
+<section id="protection" aria-labelledby="protection-title"><h2 id="protection-title">Protection for your household</h2><span id="full-specification"></span>
+{% call grid("cards", "pricing-comparison") %}
+{% for tier in tiers %}
+<article class="pricing-option{% if loop.first %} pricing-option--featured{% endif %}" aria-labelledby="{{ ids[loop.index0] }}">
+<h3 id="{{ ids[loop.index0] }}">{{ tier.name }}</h3><p class="pricing-value">{{ price(tier) }}</p><p class="pricing-audience">{{ audiences[loop.index0] }}</p>
+{% if loop.first %}<div class="pricing-featured-art" aria-hidden="true">{{ icon("device-laptop") }}{{ icon("device-mobile") }}{{ icon("key") }}</div>{% endif %}
+<dl class="pricing-summary"><div><dt>{{ icon("device-mobile") }}Devices and accounts</dt><dd>{% if loop.first %}Your phone, computer and accounts{% elif loop.index == 2 %}Each person's phone, computer and accounts{% else %}Everyone's phones, computers and accounts, each kept private{% endif %}</dd></div><div><dt>{{ icon("key") }}Security keys</dt><dd>{% if loop.first %}{{ facts.securityKeys.personalShield }}{% elif loop.index == 2 %}{{ facts.securityKeys.shieldForTwo }}{% else %}{{ facts.securityKeys.innerCircle }}{% endif %}</dd></div><div><dt>{{ icon("calendar") }}Follow-up</dt><dd>Follow-up visit and {{ facts.questionLineDays }} days of answered questions{% if loop.last %}, plus a review visit at twelve months{% endif %}</dd></div></dl>
+{% set allowance = facts.devicesPerPerson * ([1,2,4][loop.index0]) %}
+{% set keys = [facts.securityKeys.personalShield,facts.securityKeys.shieldForTwo,facts.securityKeys.innerCircle][loop.index0] %}
+<details class="pricing-inclusions" id="{{ ids[loop.index0] }}-inclusions"><summary>{{ icon("chevron-down") }}Full inclusions<span class="pricing-disclosure-name"> — {{ tier.name }}</span></summary>
+<p>{% if loop.first %}Protection for one person, shaped around your risks.{% elif loop.index == 2 %}Protection for you and one other person.{% else %}Protection for a household of up to four, with each person's information kept private.{% endif %}</p>
+<ul><li>{{ icon("device-mobile") }}Up to {{ allowance | numword }} everyday devices{% if loop.first %}, with your relevant accounts and recovery routes.{% else %}, shared within the tier, with each person's relevant accounts and recovery routes.{% endif %}</li>
+<li>{{ icon("router") }}One home network and router.</li><li>{{ icon("key") }}{{ keys | numword | capfirst }} security keys, supplied, configured and tested.</li>
+<li>{{ icon("calendar") }}A follow-up visit after about four weeks{% if loop.last %}, plus a review visit at twelve months{% endif %}.</li>
+<li>{{ icon("user-circle") }}A private dated record {% if loop.first %}of your work{% else %}for each person{% endif %}.</li><li>{{ icon("message-circle") }}{{ facts.questionLineDays }} days of questions and guidance about the completed work.</li></ul></details>
+</article>
+{% endfor %}
+{% endcall %}<p class="pricing-credit-note">The qualifying assessment fee is included in these prices. <a href="#credit">The credit terms are below.</a></p>
+<details class="pricing-method"><summary>{{ icon("chevron-down") }}How the work is delivered</summary><p>{{ legacy.blocks[2].statement }}</p></details>
+</section>
+<section class="pricing-scope" aria-labelledby="scope-title"><h2 id="scope-title">Scope and support</h2>
+<div class="pricing-categories" aria-label="Browser and app categories">
+{% for category in [{label:'Browsers',icon:'device-laptop',brands:[{name:'Chrome',slug:'chrome'},{name:'Safari',slug:'safari'}]},{label:'Email',icon:'mail',brands:[{name:'Gmail',slug:'gmail'}]},{label:'Messaging',icon:'message-circle',brands:[{name:'WhatsApp',slug:'whatsapp'}]},{label:'Social and dating',icon:'users',brands:[{name:'Instagram',slug:'instagram'},{name:'Facebook',slug:'facebook'},{name:'Tinder',slug:'tinder'},{name:'LinkedIn',slug:'linkedin'}]},{label:'Password managers',icon:'lock',brands:[]}] %}
+<div class="pricing-category"><h3>{{ icon(category.icon) }}{{ category.label }}</h3><div class="pricing-brand-examples">{% for brand in category.brands %}<img src="/approved-en-assets/icons/tabler/brand-{{ brand.slug }}.svg" alt="{{ brand.name }}" width="24" height="24">{% endfor %}</div></div>
+{% endfor %}</div>
+<p>Browsers, email, messaging, social and dating apps, and password managers are reviewed within the agreed device and account scope. Available protections depend on the service.</p>
+<p>Every option includes essential migration of identities, recovery routes and critical-service access where needed. Historical archives and bulk data migration are scoped separately.</p>
+<p>Home-network work covers accessible settings and authorized administration; it is recorded separately. Replacement hardware, further connected devices and additional locations are quoted separately.</p>
+<p>The {{ facts.questionLineDays }}-day question line starts when the protection work is complete. Toza answers through WhatsApp or Signal within one working day. New work is agreed and priced separately; urgent needs follow the <a href="/en/conditions/#urgent">urgent-visit terms</a>.</p>
+<p>If you authorize it, Toza coordinates with your lawyer or family office. <a href="/en/conditions/#allowances">Full scope and terms: Conditions.</a></p>
+</section>
+<section id="assessment" class="pricing-assessment" aria-labelledby="assessment-title"><h2>Start with an assessment</h2><h3 id="assessment-title">Private Exposure Assessment · <data value="{{ facts.prices.assessment }}">{{ facts.prices.assessment | ils }}</data></h3><p>Half a day in person to establish your personal threat model, assess exposure, address urgent issues and set priorities. You keep a written exposure summary whether or not you continue.</p><div id="credit"><h3>How the credit works</h3><p>The {{ facts.prices.assessment | ils }} assessment fee counts in full toward protection whose work begins within {{ facts.credit.windowDays }} days of assessment completion. The assessment and protection are separate decisions.</p></div></section>
+<section class="pricing-care" aria-labelledby="care-title"><h2 id="care-title">Larger households and ongoing care</h2><p>Larger households, several residences or household staff: a fixed price agreed after the assessment, from {{ facts.prices.largerFrom | ils }}.</p><p>After the {{ facts.questionLineDays }} days, past clients can choose Annual Care, from {{ facts.prices.annualCareFrom | ils }} a year.</p></section>
+<section id="contact" class="pricing-conversation" aria-labelledby="conversation-title"><h2 id="conversation-title">Start a private conversation</h2><p>The first conversation is free and commits you to nothing. Contact Toza through <a href="{{ contact.whatsapp.url }}">WhatsApp</a> or <a href="{{ contact.signal.url }}">Signal</a>.</p></section>
+</main>
+{% include "approved-en/footer.njk" %}
+{% include "approved-en/contact-icons.njk" %}
+</body></html>

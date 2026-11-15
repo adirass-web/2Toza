@@ -1,0 +1,42 @@
+{% from "approved-en/photo.njk" import photo %}
+{% from "approved-en/grid.njk" import grid %}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <title>{{ lockedPage.title }} — Toza</title>
+  <link rel="stylesheet" href="/approved-en-assets/css/main.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/locked-supporting.css">
+  <link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
+  {% if lockedPage == approvedEN.lockedPages.expert %}<link rel="stylesheet" href="/approved-en-assets/css/content-grid.css">{% endif %}
+</head>
+<body class="has-fixed-contacts">
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "approved-en/header.njk" %}
+<main id="main" class="locked-page"><span id="main-content"></span>
+  {% set displayHtml = lockedPage.html %}
+  {% if lockedPage == approvedEN.lockedPages.approach %}
+    {% set displayHtml = displayHtml | replace('<h2>First, your personal threat model.</h2>', '<h2 id="your-paid-assessment-inspection-diagnosis-and-urgent-first-aid">First, your personal threat model.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>Then, separately agreed protection.</h2>', '<h2 id="have-the-agreed-setup-hardened-around-your-life">Then, separately agreed protection.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>Agree the work before it starts.</h2>', '<h2 id="decide-whether-toza-fits-before-you-buy">Agree the work before it starts.</h2>') %}
+  {% elif lockedPage == approvedEN.lockedPages.expert %}
+    {% set displayHtml = displayHtml | replace('<h2>How that judgment becomes practical work.</h2>', '<h2 id="methods">How that judgment becomes practical work.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>Start a private conversation.</h2>', '<h2 id="assessment">Start a private conversation.</h2>') %}
+  {% endif %}
+  {% if lockedPage == approvedEN.lockedPages.expert %}
+  {% set introParts = displayHtml.split('<h2>') %}
+  <article class="expert-article">
+    {% call grid("feature", "expert-intro") %}
+    <div class="expert-portrait">{{ photo({src: '/assets/img/portraits/dr-tabansky-graphite-polished-640.webp', srcset: '/assets/img/portraits/dr-tabansky-graphite-polished-640.webp 640w', sizes: '(max-width: 414px) calc(100vw - 94px), 320px', width: 640, height: 640, alt: 'Graphite portrait of Dr. Lior Tabansky', variant: 'portrait', priority: 'eager'}) }}</div>
+    <div class="locked-copy expert-intro-copy">{{ introParts[0] | safe }}</div>
+    {% endcall %}
+    <div class="locked-copy">{{ displayHtml | replace(introParts[0], '') | safe }}</div>
+  </article>
+  {% else %}<article class="locked-copy">{{ displayHtml | safe }}</article>{% endif %}
+</main>
+{% include "approved-en/footer.njk" %}
+{% include "approved-en/contact-icons.njk" %}
+</body>
+</html>

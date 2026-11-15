@@ -1,0 +1,146 @@
+{
+  "base": "https://6088309d.toza-v2.pages.dev",
+  "checkedAt": "2026-11-04T16:37:50.808Z",
+  "results": [
+    {
+      "route": "/en/",
+      "status": 200,
+      "sha256": "286d98840d04ab5a2d9c8444c36506a29fc86804733baa207c581f96ee0c7fc7",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/exposure/",
+      "status": 200,
+      "sha256": "ad6325324c1f07c5a773dead89a5b93da722092f7569b44f11b40ab2c9cd1a27",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/how-it-works/",
+      "status": 200,
+      "sha256": "213e9757c2520dfe4511ccc2464ff35af33fc707a05081e297ad9605f6000faf",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/about/",
+      "status": 200,
+      "sha256": "245862b8f7eef69e24c0157f5462893845ef0581a7273ec033f844b1ae4dd60e",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/pricing/",
+      "status": 200,
+      "sha256": "a75d73639793966b8b32fd190954f382803a9ed3240d2c8934c80b3e7d9f3cbe",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/faq/",
+      "status": 200,
+      "sha256": "24229e822e7a9693a872f8b0e354c28d69df7a7b0bd271fa7f326ca3b4af42ae",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/conditions/",
+      "status": 200,
+      "sha256": "116b1fe1433dc0d3d84073a2000a0d5a4c64a51a074a8732d4a9a69e924aa116",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/separation-divorce/",
+      "status": 200,
+      "sha256": "7bd4fe6eb9aee2aa38a6b71ca3183fce0f99450306f2f46f9a38a28e03340b5d",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/business-dispute/",
+      "status": 200,
+      "sha256": "e87919eddc7541f0d271e4cd2b635167adb762352cc055e7938287aa7163f3c2",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/en/inheritance-conflict/",
+      "status": 200,
+      "sha256": "0cf763dbb566ebb31995fb6c4746fb4d74b60126947bac678be3b577b2c26a9a",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/assets/css/main.css",
+      "status": 200,
+      "sha256": "7538dd6d7d5d3abc02832d129da2e35eac1a6499b93d34d710b07ba3bbed22d5",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/assets/js/site.js",
+      "status": 200,
+      "sha256": "057cf50d1f0400fbc218554bacf4f75b6271e491727bf918e4542e8872bc2baf",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/css/main.css",
+      "status": 200,
+      "sha256": "08cf117e49791bb66cdca5c3d395bf91249d0bb05d70703828a9eef44a6e651b",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/css/en-continuation.css",
+      "status": 200,
+      "sha256": "2c8861d5ddcc6d7b6dd0978ac3bed0cf1aac3053daa99088759fc9c60685b231",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/css/en-prices.css",
+      "status": 200,
+      "sha256": "dd0d622dd376c075c3599aed5179d156fd7fc739a92ee3098bd57f843dd01ce0",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/css/locked-supporting.css",
+      "status": 200,
+      "sha256": "91ce85a8afaa6451f085d74ebac0782a4af01a4d852f9c622a0753712cd10288",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/photos/hero-wide.png",
+      "status": 200,
+      "sha256": "0cccd0cb08b0b978aa980e5dfd263450a9c0476de3df899193b32330a6123665",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/photos/sit-1-900.jpg",
+      "status": 200,
+      "sha256": "5d9c51b8d9225ea07bb5498ad5c5ec8740eef78674ae5b765e30ac540e972878",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/photos/sit-2-900.jpg",
+      "status": 200,
+      "sha256": "6ef51ff910ebd3fb2e39acf8eab40950728af4afd1f8340b52bd3c77bb89d22c",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    },
+    {
+      "route": "/approved-en-assets/photos/sit-3-900.jpg",
+      "status": 200,
+      "sha256": "1489a1a078bb34a0910f3a7993bb49230b061feb1569643db4649a42e26a9751",
+      "matchesLocal": true,
+      "robots": "noindex, nofollow, noarchive, nosnippet"
+    }
+  ]
+}

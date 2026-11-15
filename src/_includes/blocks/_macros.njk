@@ -10,19 +10,19 @@
 </section>
 {% endmacro %}
 
-{% macro h2(text, cls) %}<h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance {{ cls or 'text-heading' }}">{{ text }}</h2>{% endmacro %}
+{% macro h2(text, cls) %}{% if text == 'What Toza does for your client.' %}<span id="hands-on-inspection-diagnosis-and-urgent-first-aid"></span>{% elif scenario.page == 'business-dispute' and text == 'Understand what a change will affect before you approve it.' %}<span id="put-the-technical-questions-in-experienced-hands"></span>{% elif scenario.page == 'inheritance-conflict' and text == 'Understand the connections before changing them.' %}<span id="work-through-your-own-access-with-expert-help"></span>{% elif scenario.page == 'separation-divorce' and text == 'Change things in the right order.' %}<span id="a-setup-for-the-life-you-are-moving-into"></span>{% elif text == 'When a referral may help.' %}<span id="when-a-referral-may-help"></span>{% elif text == 'See where personal and business access still meet.' %}<span id="see-where-personal-and-business-access-still-meet"></span>{% elif text == 'Access shared in good faith can still matter.' %}<span id="access-shared-in-good-faith-can-still-matter"></span>{% elif text == 'Start with what can be checked.' %}<span id="start-with-what-can-be-checked"></span>{% elif text == 'Urgent first aid on the spot.' %}<span id="have-someone-examine-the-access-and-address-urgent-problems"></span>{% endif %}<h2 class="font-serif text-h2 leading-h2 font-normal tracking-h2 text-balance {{ cls or 'text-heading' }}">{{ text }}</h2>{% endmacro %}
 
 {% macro price(b, cls) %}<data value="{{ b.price_value }}" class="font-serif leading-numeral font-normal tracking-numeral tabular-nums lining-nums {{ cls }}">{{ b.price }}</data>{% endmacro %}
 
 {#- Flowbite button (default = primary, outline = secondary). -#}
 {% macro btn(a, kind, tone, extra) %}
-<a href="{{ a.href }}"{% if a.external %} target="_blank" rel="noopener"{% endif %} class="box-border inline-flex min-h-12 items-center justify-center rounded-base border px-5 py-3 text-base leading-6 font-medium {% if tone == 'dark' %}{% if kind == 'primary' %}border-transparent bg-action-inverse text-on-action-inverse hover:bg-action-inverse-hover{% else %}border-on-dark-border-strong bg-transparent text-paper hover:bg-paper hover:text-ink{% endif %}{% elif kind == 'primary' %}border-transparent bg-brand text-on-action shadow-xs hover:bg-brand-strong{% else %}border-brand bg-neutral-primary text-fg-brand hover:bg-brand hover:text-on-action{% endif %} {{ extra }}">{{ a.label }}</a>
+<a href="{{ a.href }}"{% if a.external %} target="_blank" rel="noopener"{% endif %} class="box-border inline-flex min-h-12 items-center justify-center rounded-base border px-5 py-3 text-base leading-6 font-medium {% if tone == 'dark' %}{% if kind == 'primary' %}border-transparent bg-action-inverse text-on-action-inverse hover:bg-action-inverse-hover{% else %}border-on-dark-border-strong bg-transparent text-paper hover:bg-paper hover:text-ink{% endif %}{% elif kind == 'primary' %}border-transparent bg-brand text-on-action shadow-xs hover:bg-brand-strong{% else %}border-brand bg-neutral-primary text-fg-brand hover:bg-brand hover:text-on-action{% endif %} {{ extra }}">{% if a.key == 'callback' and (pg.page == 'faq' or pg.page == 'conditions') and t.lang == 'en' %}{{ t.buttons.callbackReference }}{% else %}{{ a.label }}{% endif %}</a>
 {% endmacro %}
 
 {#- The lead action is primary, the rest outline. first: extra classes for the lead button. -#}
 {% macro actions(list, tone, wrapper, first) %}
 <div class="{{ wrapper }}">
-  {% for a in list %}{{ btn(a, 'primary' if loop.first else 'outline', tone, first if loop.first else '') }}{% endfor %}
+  {% for a in list %}{% if a.key != 'whatsapp' and a.key != 'signal' %}{{ btn(a, 'primary' if loop.first else 'outline', tone, first if loop.first else '') }}{% endif %}{% endfor %}
 </div>
 {% endmacro %}
 

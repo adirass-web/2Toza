@@ -4,6 +4,12 @@
 {% if not prev or prev.type != 'terms-section' %}
 <div class="terms-doc mx-auto grid w-full max-w-wrap gap-10 px-gutter pb-14 sm:px-gutter-wide lg:grid-cols-12 lg:gap-16 lg:pb-24 print:block print:px-0">
   <aside class="hidden self-start lg:sticky lg:top-26 lg:col-span-3 lg:block print:hidden" aria-label="{{ pg.labels.toc }}">
+    <details class="terms-mobile-toc">
+      <summary>{{ pg.labels.toc }}<span aria-hidden="true"></span></summary>
+      <ul class="grid gap-1 py-2">
+        {% for s in blocks %}{% if s.type == 'terms-section' %}<li><a href="#{{ s.id }}">{{ s.nav_label }}</a></li>{% endif %}{% endfor %}
+      </ul>
+    </details>
     <ol class="terms-toc grid">
       {% for s in blocks %}{% if s.type == 'terms-section' %}
       <li><a href="#{{ s.id }}" class="flex min-h-9 items-center gap-2 text-heading underline decoration-transparent decoration-1 underline-offset-4 hover:decoration-accent">{{ s.nav_label }}</a></li>
@@ -16,7 +22,7 @@
       <details open data-collapsible class="group/panel">
       <summary class="flex cursor-pointer list-none items-start justify-between gap-4 border-t-2 border-accent pt-4 pb-5 md:pointer-events-none print:break-after-avoid print:pb-2">
         <h2 id="{{ block.id }}-h" class="terms-h flex gap-4 font-serif text-h2 leading-h2 font-normal tracking-h2 text-heading print:text-2xl">{{ block.heading }}</h2>
-        <svg class="mt-2 size-5 shrink-0 rotate-180 text-accent group-open/panel:rotate-0 md:hidden motion-safe:transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
+        <img class="mt-2 size-5 shrink-0 rotate-180 text-accent group-open/panel:rotate-0 md:hidden motion-safe:transition-transform" src="/approved-en-assets/icons/tabler/chevron-up.svg" width="24" height="24" alt="" aria-hidden="true">
       </summary>
       {% if block.intro %}<div class="md-flow mb-4 max-w-3xl space-y-4">{{ block.intro.html | safe }}</div>{% endif %}
       {% if block.price_table %}

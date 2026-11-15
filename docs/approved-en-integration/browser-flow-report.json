@@ -1,0 +1,721 @@
+{
+  "checkedAt": "2026-11-04T16:13:17.551Z",
+  "widths": [
+    {
+      "width": 320,
+      "checks": {
+        "exactIntro": true,
+        "exactBenefit": true,
+        "exactExpert": true,
+        "exactConversation": true,
+        "threeTitles": true,
+        "photoSources": true,
+        "alternatingPhysicalSides": true,
+        "noOverflow": true,
+        "allImagesLoaded": true,
+        "oneH1": true,
+        "directChannels": true,
+        "noBrowserErrors": true
+      },
+      "state": {
+        "text": "Situations\n\nYou can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.\n\nHow private information becomes exposed\n\nSeparation\nBusiness dispute\nInheritance conflict\n\nToza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.\n\nHow Toza works\n\nDr. Lior Tabansky works with you personally.\n\nStart a private conversation.\n\nDr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.\n\nWhatsApp\nSignal",
+        "intro": "You can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.",
+        "benefit": "Toza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.",
+        "expert": "Dr. Lior Tabansky works with you personally.",
+        "conversation": "Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.",
+        "scenes": [
+          {
+            "title": "Separation",
+            "img": {
+              "x": 19.203125,
+              "y": 1116.84375,
+              "width": 300.796875,
+              "height": 263.84375,
+              "right": 320,
+              "bottom": 1380.6875
+            },
+            "panel": {
+              "x": 22.390625,
+              "y": 1342.6875,
+              "width": 262.390625,
+              "height": 89.890625,
+              "right": 284.78125,
+              "bottom": 1432.578125
+            },
+            "src": "/approved-en-assets/photos/sit-1-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Business dispute",
+            "img": {
+              "x": 0,
+              "y": 1504.578125,
+              "width": 291.1875,
+              "height": 269.609375,
+              "right": 291.1875,
+              "bottom": 1774.1875
+            },
+            "panel": {
+              "x": 35.21875,
+              "y": 1736.1875,
+              "width": 262.390625,
+              "height": 124.375,
+              "right": 297.609375,
+              "bottom": 1860.5625
+            },
+            "src": "/approved-en-assets/photos/sit-2-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Inheritance conflict",
+            "img": {
+              "x": 19.203125,
+              "y": 1932.5625,
+              "width": 300.796875,
+              "height": 263.84375,
+              "right": 320,
+              "bottom": 2196.40625
+            },
+            "panel": {
+              "x": 22.390625,
+              "y": 2158.40625,
+              "width": 262.390625,
+              "height": 133.78125,
+              "right": 284.78125,
+              "bottom": 2292.1875
+            },
+            "src": "/approved-en-assets/photos/sit-3-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          }
+        ],
+        "overflow": [],
+        "links": [
+          {
+            "text": "How private information becomes exposed",
+            "href": "http://127.0.0.1:4180/en/exposure/"
+          },
+          {
+            "text": "How Toza works",
+            "href": "http://127.0.0.1:4180/en/how-it-works/"
+          },
+          {
+            "text": "Dr. Lior Tabansky",
+            "href": "http://127.0.0.1:4180/en/about/"
+          },
+          {
+            "text": "WhatsApp",
+            "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+          },
+          {
+            "text": "Signal",
+            "href": "https://signal.me/#p/+972533366276"
+          }
+        ],
+        "images": true,
+        "h1": 1
+      },
+      "errors": []
+    },
+    {
+      "width": 360,
+      "checks": {
+        "exactIntro": true,
+        "exactBenefit": true,
+        "exactExpert": true,
+        "exactConversation": true,
+        "threeTitles": true,
+        "photoSources": true,
+        "alternatingPhysicalSides": true,
+        "noOverflow": true,
+        "allImagesLoaded": true,
+        "oneH1": true,
+        "directChannels": true,
+        "noBrowserErrors": true
+      },
+      "state": {
+        "text": "Situations\n\nYou can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.\n\nHow private information becomes exposed\n\nSeparation\nBusiness dispute\nInheritance conflict\n\nToza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.\n\nHow Toza works\n\nDr. Lior Tabansky works with you personally.\n\nStart a private conversation.\n\nDr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.\n\nWhatsApp\nSignal",
+        "intro": "You can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.",
+        "benefit": "Toza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.",
+        "expert": "Dr. Lior Tabansky works with you personally.",
+        "conversation": "Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.",
+        "scenes": [
+          {
+            "title": "Separation",
+            "img": {
+              "x": 21.609375,
+              "y": 1088.734375,
+              "width": 338.390625,
+              "height": 296.828125,
+              "right": 360,
+              "bottom": 1385.5625
+            },
+            "panel": {
+              "x": 25.1875,
+              "y": 1347.5625,
+              "width": 295.1875,
+              "height": 91.859375,
+              "right": 320.375,
+              "bottom": 1439.421875
+            },
+            "src": "/approved-en-assets/photos/sit-1-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Business dispute",
+            "img": {
+              "x": 0,
+              "y": 1511.421875,
+              "width": 327.59375,
+              "height": 303.3125,
+              "right": 327.59375,
+              "bottom": 1814.734375
+            },
+            "panel": {
+              "x": 39.625,
+              "y": 1776.734375,
+              "width": 295.1875,
+              "height": 130.65625,
+              "right": 334.8125,
+              "bottom": 1907.390625
+            },
+            "src": "/approved-en-assets/photos/sit-2-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Inheritance conflict",
+            "img": {
+              "x": 21.609375,
+              "y": 1979.390625,
+              "width": 338.390625,
+              "height": 296.828125,
+              "right": 360,
+              "bottom": 2276.21875
+            },
+            "panel": {
+              "x": 25.1875,
+              "y": 2238.21875,
+              "width": 295.1875,
+              "height": 137.71875,
+              "right": 320.375,
+              "bottom": 2375.9375
+            },
+            "src": "/approved-en-assets/photos/sit-3-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          }
+        ],
+        "overflow": [],
+        "links": [
+          {
+            "text": "How private information becomes exposed",
+            "href": "http://127.0.0.1:4180/en/exposure/"
+          },
+          {
+            "text": "How Toza works",
+            "href": "http://127.0.0.1:4180/en/how-it-works/"
+          },
+          {
+            "text": "Dr. Lior Tabansky",
+            "href": "http://127.0.0.1:4180/en/about/"
+          },
+          {
+            "text": "WhatsApp",
+            "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+          },
+          {
+            "text": "Signal",
+            "href": "https://signal.me/#p/+972533366276"
+          }
+        ],
+        "images": true,
+        "h1": 1
+      },
+      "errors": []
+    },
+    {
+      "width": 390,
+      "checks": {
+        "exactIntro": true,
+        "exactBenefit": true,
+        "exactExpert": true,
+        "exactConversation": true,
+        "threeTitles": true,
+        "photoSources": true,
+        "alternatingPhysicalSides": true,
+        "noOverflow": true,
+        "allImagesLoaded": true,
+        "oneH1": true,
+        "directChannels": true,
+        "noBrowserErrors": true
+      },
+      "state": {
+        "text": "Situations\n\nYou can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.\n\nHow private information becomes exposed\n\nSeparation\nBusiness dispute\nInheritance conflict\n\nToza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.\n\nHow Toza works\n\nDr. Lior Tabansky works with you personally.\n\nStart a private conversation.\n\nDr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.\n\nWhatsApp\nSignal",
+        "intro": "You can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.",
+        "benefit": "Toza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.",
+        "expert": "Dr. Lior Tabansky works with you personally.",
+        "conversation": "Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.",
+        "scenes": [
+          {
+            "title": "Separation",
+            "img": {
+              "x": 23.40625,
+              "y": 1053.953125,
+              "width": 366.59375,
+              "height": 321.5625,
+              "right": 390,
+              "bottom": 1375.515625
+            },
+            "panel": {
+              "x": 27.296875,
+              "y": 1337.515625,
+              "width": 319.796875,
+              "height": 95.6875,
+              "right": 347.09375,
+              "bottom": 1433.203125
+            },
+            "src": "/approved-en-assets/photos/sit-1-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Business dispute",
+            "img": {
+              "x": 0,
+              "y": 1505.203125,
+              "width": 354.890625,
+              "height": 328.59375,
+              "right": 354.890625,
+              "bottom": 1833.796875
+            },
+            "panel": {
+              "x": 42.90625,
+              "y": 1795.796875,
+              "width": 319.796875,
+              "height": 137.71875,
+              "right": 362.703125,
+              "bottom": 1933.515625
+            },
+            "src": "/approved-en-assets/photos/sit-2-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Inheritance conflict",
+            "img": {
+              "x": 23.40625,
+              "y": 2005.515625,
+              "width": 366.59375,
+              "height": 321.5625,
+              "right": 390,
+              "bottom": 2327.078125
+            },
+            "panel": {
+              "x": 27.296875,
+              "y": 2289.078125,
+              "width": 319.796875,
+              "height": 145.375,
+              "right": 347.09375,
+              "bottom": 2434.453125
+            },
+            "src": "/approved-en-assets/photos/sit-3-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          }
+        ],
+        "overflow": [],
+        "links": [
+          {
+            "text": "How private information becomes exposed",
+            "href": "http://127.0.0.1:4180/en/exposure/"
+          },
+          {
+            "text": "How Toza works",
+            "href": "http://127.0.0.1:4180/en/how-it-works/"
+          },
+          {
+            "text": "Dr. Lior Tabansky",
+            "href": "http://127.0.0.1:4180/en/about/"
+          },
+          {
+            "text": "WhatsApp",
+            "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+          },
+          {
+            "text": "Signal",
+            "href": "https://signal.me/#p/+972533366276"
+          }
+        ],
+        "images": true,
+        "h1": 1
+      },
+      "errors": []
+    },
+    {
+      "width": 768,
+      "checks": {
+        "exactIntro": true,
+        "exactBenefit": true,
+        "exactExpert": true,
+        "exactConversation": true,
+        "threeTitles": true,
+        "photoSources": true,
+        "alternatingPhysicalSides": true,
+        "noOverflow": true,
+        "allImagesLoaded": true,
+        "oneH1": true,
+        "directChannels": true,
+        "noBrowserErrors": true
+      },
+      "state": {
+        "text": "Situations\n\nYou can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.\n\nHow private information becomes exposed\n\nSeparation\nBusiness dispute\nInheritance conflict\n\nToza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.\n\nHow Toza works\n\nDr. Lior Tabansky works with you personally.\n\nStart a private conversation.\n\nDr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.\n\nWhatsApp\nSignal",
+        "intro": "You can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.",
+        "benefit": "Toza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.",
+        "expert": "Dr. Lior Tabansky works with you personally.",
+        "conversation": "Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.",
+        "scenes": [
+          {
+            "title": "Separation",
+            "img": {
+              "x": 268.8125,
+              "y": 1159.453125,
+              "width": 499.1875,
+              "height": 687.234375,
+              "right": 768,
+              "bottom": 1846.6875
+            },
+            "panel": {
+              "x": 76.796875,
+              "y": 1346.203125,
+              "width": 299.515625,
+              "height": 91.375,
+              "right": 376.3125,
+              "bottom": 1437.578125
+            },
+            "src": "/approved-en-assets/photos/sit-1-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Business dispute",
+            "img": {
+              "x": 0,
+              "y": 1977.796875,
+              "width": 552.953125,
+              "height": 702.171875,
+              "right": 552.953125,
+              "bottom": 2679.96875
+            },
+            "panel": {
+              "x": 414.734375,
+              "y": 2172.015625,
+              "width": 291.828125,
+              "height": 128.25,
+              "right": 706.5625,
+              "bottom": 2300.265625
+            },
+            "src": "/approved-en-assets/photos/sit-2-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Inheritance conflict",
+            "img": {
+              "x": 291.84375,
+              "y": 2743.859375,
+              "width": 476.15625,
+              "height": 679.765625,
+              "right": 768,
+              "bottom": 3423.625
+            },
+            "panel": {
+              "x": 69.109375,
+              "y": 2923.140625,
+              "width": 299.515625,
+              "height": 132.75,
+              "right": 368.625,
+              "bottom": 3055.890625
+            },
+            "src": "/approved-en-assets/photos/sit-3-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          }
+        ],
+        "overflow": [],
+        "links": [
+          {
+            "text": "How private information becomes exposed",
+            "href": "http://127.0.0.1:4180/en/exposure/"
+          },
+          {
+            "text": "How Toza works",
+            "href": "http://127.0.0.1:4180/en/how-it-works/"
+          },
+          {
+            "text": "Dr. Lior Tabansky",
+            "href": "http://127.0.0.1:4180/en/about/"
+          },
+          {
+            "text": "WhatsApp",
+            "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+          },
+          {
+            "text": "Signal",
+            "href": "https://signal.me/#p/+972533366276"
+          }
+        ],
+        "images": true,
+        "h1": 1
+      },
+      "errors": []
+    },
+    {
+      "width": 960,
+      "checks": {
+        "exactIntro": true,
+        "exactBenefit": true,
+        "exactExpert": true,
+        "exactConversation": true,
+        "threeTitles": true,
+        "photoSources": true,
+        "alternatingPhysicalSides": true,
+        "noOverflow": true,
+        "allImagesLoaded": true,
+        "oneH1": true,
+        "directChannels": true,
+        "noBrowserErrors": true
+      },
+      "state": {
+        "text": "Situations\n\nYou can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.\n\nHow private information becomes exposed\n\nSeparation\nBusiness dispute\nInheritance conflict\n\nToza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.\n\nHow Toza works\n\nDr. Lior Tabansky works with you personally.\n\nStart a private conversation.\n\nDr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.\n\nWhatsApp\nSignal",
+        "intro": "You can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.",
+        "benefit": "Toza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.",
+        "expert": "Dr. Lior Tabansky works with you personally.",
+        "conversation": "Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.",
+        "scenes": [
+          {
+            "title": "Separation",
+            "img": {
+              "x": 336,
+              "y": 1267.234375,
+              "width": 624,
+              "height": 687.234375,
+              "right": 960,
+              "bottom": 1954.46875
+            },
+            "panel": {
+              "x": 96,
+              "y": 1453.984375,
+              "width": 374.390625,
+              "height": 101.734375,
+              "right": 470.390625,
+              "bottom": 1555.71875
+            },
+            "src": "/approved-en-assets/photos/sit-1-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Business dispute",
+            "img": {
+              "x": 0,
+              "y": 2085.578125,
+              "width": 691.1875,
+              "height": 702.171875,
+              "right": 691.1875,
+              "bottom": 2787.75
+            },
+            "panel": {
+              "x": 518.40625,
+              "y": 2279.796875,
+              "width": 364.796875,
+              "height": 147.84375,
+              "right": 883.203125,
+              "bottom": 2427.640625
+            },
+            "src": "/approved-en-assets/photos/sit-2-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Inheritance conflict",
+            "img": {
+              "x": 364.8125,
+              "y": 2851.640625,
+              "width": 595.1875,
+              "height": 679.765625,
+              "right": 960,
+              "bottom": 3531.40625
+            },
+            "panel": {
+              "x": 86.390625,
+              "y": 3030.921875,
+              "width": 374.390625,
+              "height": 153.46875,
+              "right": 460.78125,
+              "bottom": 3184.390625
+            },
+            "src": "/approved-en-assets/photos/sit-3-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          }
+        ],
+        "overflow": [],
+        "links": [
+          {
+            "text": "How private information becomes exposed",
+            "href": "http://127.0.0.1:4180/en/exposure/"
+          },
+          {
+            "text": "How Toza works",
+            "href": "http://127.0.0.1:4180/en/how-it-works/"
+          },
+          {
+            "text": "Dr. Lior Tabansky",
+            "href": "http://127.0.0.1:4180/en/about/"
+          },
+          {
+            "text": "WhatsApp",
+            "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+          },
+          {
+            "text": "Signal",
+            "href": "https://signal.me/#p/+972533366276"
+          }
+        ],
+        "images": true,
+        "h1": 1
+      },
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "checks": {
+        "exactIntro": true,
+        "exactBenefit": true,
+        "exactExpert": true,
+        "exactConversation": true,
+        "threeTitles": true,
+        "photoSources": true,
+        "alternatingPhysicalSides": true,
+        "noOverflow": true,
+        "allImagesLoaded": true,
+        "oneH1": true,
+        "directChannels": true,
+        "noBrowserErrors": true
+      },
+      "state": {
+        "text": "Situations\n\nYou can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.\n\nHow private information becomes exposed\n\nSeparation\nBusiness dispute\nInheritance conflict\n\nToza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.\n\nHow Toza works\n\nDr. Lior Tabansky works with you personally.\n\nStart a private conversation.\n\nDr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.\n\nWhatsApp\nSignal",
+        "intro": "You can choose tailored protection before a known incident. A separation, business dispute or inheritance conflict can make the need more immediate.",
+        "benefit": "Toza builds your protection around a personal threat model, hardens your devices and accounts, and teaches you the security practices fitted to your circumstances.",
+        "expert": "Dr. Lior Tabansky works with you personally.",
+        "conversation": "Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.",
+        "scenes": [
+          {
+            "title": "Separation",
+            "img": {
+              "x": 504,
+              "y": 1693.140625,
+              "width": 936,
+              "height": 761.75,
+              "right": 1440,
+              "bottom": 2454.890625
+            },
+            "panel": {
+              "x": 144,
+              "y": 1900.140625,
+              "width": 440,
+              "height": 141.609375,
+              "right": 584,
+              "bottom": 2041.75
+            },
+            "src": "/approved-en-assets/photos/sit-1-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Business dispute",
+            "img": {
+              "x": 0,
+              "y": 2596.53125,
+              "width": 1036.796875,
+              "height": 778.3125,
+              "right": 1036.796875,
+              "bottom": 3374.84375
+            },
+            "panel": {
+              "x": 884.8125,
+              "y": 2811.8125,
+              "width": 440,
+              "height": 210.75,
+              "right": 1324.8125,
+              "bottom": 3022.5625
+            },
+            "src": "/approved-en-assets/photos/sit-2-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          },
+          {
+            "title": "Inheritance conflict",
+            "img": {
+              "x": 547.203125,
+              "y": 3441.96875,
+              "width": 892.796875,
+              "height": 753.46875,
+              "right": 1440,
+              "bottom": 4195.4375
+            },
+            "panel": {
+              "x": 129.59375,
+              "y": 3640.6875,
+              "width": 440,
+              "height": 219.21875,
+              "right": 569.59375,
+              "bottom": 3859.90625
+            },
+            "src": "/approved-en-assets/photos/sit-3-900.jpg",
+            "loaded": true,
+            "transform": "none"
+          }
+        ],
+        "overflow": [],
+        "links": [
+          {
+            "text": "How private information becomes exposed",
+            "href": "http://127.0.0.1:4180/en/exposure/"
+          },
+          {
+            "text": "How Toza works",
+            "href": "http://127.0.0.1:4180/en/how-it-works/"
+          },
+          {
+            "text": "Dr. Lior Tabansky",
+            "href": "http://127.0.0.1:4180/en/about/"
+          },
+          {
+            "text": "WhatsApp",
+            "href": "https://wa.me/972533366276?text=I%27d%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step."
+          },
+          {
+            "text": "Signal",
+            "href": "https://signal.me/#p/+972533366276"
+          }
+        ],
+        "images": true,
+        "h1": 1
+      },
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "axe": {
+    "violations": [],
+    "incomplete": []
+  },
+  "noJs": true,
+  "skipFirst": true,
+  "status": "passed"
+}

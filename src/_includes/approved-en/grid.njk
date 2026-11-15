@@ -1,0 +1,2 @@
+{# Static Preline layout adaptation. Content stays in each owning template. #}
+{% macro grid(variant, className='') %}<div class="content-grid content-grid--{{ variant }}{% if className %} {{ className }}{% endif %}">{{ caller() }}</div>{% endmacro %}

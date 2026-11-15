@@ -1,6 +1,6 @@
 // 1) facts.json prices must appear in the approved baseline llms.txt.
 // 2) Every ₪ amount in built pages must be a price listed in facts.json.
-import { readJson, readText, walk, fail } from "./util.mjs";
+import { readJson, readText, walk, fail, siteDir } from "./util.mjs";
 
 const facts = readJson("src/_data/facts.json");
 const baseline = readText("reference/llms.baseline.txt");
@@ -27,7 +27,7 @@ if (!proposal && facts.prices.innerCircleFrom - facts.prices.assessment !== fact
 
 const allowed = new Set(Object.values(facts.prices));
 let pages = 0, amounts = 0;
-for (const file of walk("_site")) {
+for (const file of walk(siteDir())) {
   pages++;
   const text = readText(file);
   for (const m of text.matchAll(/₪\s?([\d,]+)/g)) {

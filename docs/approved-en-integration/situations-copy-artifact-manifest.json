@@ -1,0 +1,258 @@
+{
+  "preview": "https://6088309d.toza-v2.pages.dev",
+  "createdAt": "2026-11-04T16:39:06.359Z",
+  "entries": [
+    {
+      "path": "_site/_headers",
+      "sha256": "c388d771e43e7589dedd0057a01f0045baada431f49461759400446c3180a8d6"
+    },
+    {
+      "path": "_site/_redirects",
+      "sha256": "ff4b963c8e8b6dab55bdf5b681b0c5e9ace5010437c45a2ded94f1a6ba5708e8"
+    },
+    {
+      "path": "_site/approved-en-assets/css/en-continuation.css",
+      "sha256": "2c8861d5ddcc6d7b6dd0978ac3bed0cf1aac3053daa99088759fc9c60685b231"
+    },
+    {
+      "path": "_site/approved-en-assets/css/en-prices.css",
+      "sha256": "dd0d622dd376c075c3599aed5179d156fd7fc739a92ee3098bd57f843dd01ce0"
+    },
+    {
+      "path": "_site/approved-en-assets/css/locked-supporting.css",
+      "sha256": "91ce85a8afaa6451f085d74ebac0782a4af01a4d852f9c622a0753712cd10288"
+    },
+    {
+      "path": "_site/approved-en-assets/css/main.css",
+      "sha256": "08cf117e49791bb66cdca5c3d395bf91249d0bb05d70703828a9eef44a6e651b"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/assistant-hebrew-400-normal.woff2",
+      "sha256": "aaed3fc950d2d71a3815160b3ae98d09088019df7306f4d935e7fc83df35c67e"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/assistant-hebrew-600-normal.woff2",
+      "sha256": "1add33b7d28203b92411b810c783353fd1ce2611984295faa3bff9c4b29cfac6"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/assistant-latin-400-normal.woff2",
+      "sha256": "15905fd40bfde9d39d14a7faa8e48fb0d86198f432be318205fc82db68216009"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/assistant-latin-600-normal.woff2",
+      "sha256": "a332fddd3344052a1949c2a7a3515ba9b26db7a6a632662f4aaab43d354a486e"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/frank-ruhl-libre-hebrew-400-normal.woff2",
+      "sha256": "a285b14985fe4ea86dc9d7bbf6914f48b753cc95c87ee2da3d78e73a0086b7fe"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/frank-ruhl-libre-hebrew-500-normal.woff2",
+      "sha256": "4a453ca787a3817f86b9b89dfd9aba66b3180ec5fb900f125047d65832354530"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/frank-ruhl-libre-latin-400-normal.woff2",
+      "sha256": "74bc3279feebf65ab799afd27b269e15060bf7958601148f67426e80f0e2a492"
+    },
+    {
+      "path": "_site/approved-en-assets/fonts/frank-ruhl-libre-latin-500-normal.woff2",
+      "sha256": "4beaeeb42ab87bd5d008e833ba5f6d95a6eed587ba52e63851fa8ae8c24525e5"
+    },
+    {
+      "path": "_site/approved-en-assets/photos/hero-wide.png",
+      "sha256": "0cccd0cb08b0b978aa980e5dfd263450a9c0476de3df899193b32330a6123665"
+    },
+    {
+      "path": "_site/approved-en-assets/photos/sit-1-900.jpg",
+      "sha256": "5d9c51b8d9225ea07bb5498ad5c5ec8740eef78674ae5b765e30ac540e972878"
+    },
+    {
+      "path": "_site/approved-en-assets/photos/sit-2-900.jpg",
+      "sha256": "6ef51ff910ebd3fb2e39acf8eab40950728af4afd1f8340b52bd3c77bb89d22c"
+    },
+    {
+      "path": "_site/approved-en-assets/photos/sit-3-900.jpg",
+      "sha256": "1489a1a078bb34a0910f3a7993bb49230b061feb1569643db4649a42e26a9751"
+    },
+    {
+      "path": "_site/approved-en-assets/wordmark.svg",
+      "sha256": "9819ba0ac65f3ca68962496d9d5949ccf9f42f42f9a5c379caacd5cb514ee60b"
+    },
+    {
+      "path": "_site/assets/brand/toza-logo-ink.svg",
+      "sha256": "a4f9c634c02aab36dde51e8b191bf0f1acd8cc84a2f88ef3a013a158be04dd77"
+    },
+    {
+      "path": "_site/assets/brand/toza-logo-reverse.svg",
+      "sha256": "13a3e992741e75ab0533892cf476cd01685b96ab70e69849eaf8356e9333ac26"
+    },
+    {
+      "path": "_site/assets/brand/toza-mark-ink.svg",
+      "sha256": "c39347761512cff36f2f6de4126aeaacb44e5e4ab7baa7789a31641c3e65e570"
+    },
+    {
+      "path": "_site/assets/brand/toza-mark-reverse.svg",
+      "sha256": "a3c97d6f4074522d991a1aa7b8abff7b3106ae961ccc4af84c219e8d5a62b21d"
+    },
+    {
+      "path": "_site/assets/brand/toza-wordmark-ink.svg",
+      "sha256": "3ff2972a3a572cbcf027160f755097f3120492387219d343666920ec911b052f"
+    },
+    {
+      "path": "_site/assets/brand/toza-wordmark-reverse.svg",
+      "sha256": "e06ed4b13a338c456994e2a0713ad0e421e1ade5f52e7a95c54fac1431422553"
+    },
+    {
+      "path": "_site/assets/css/main.css",
+      "sha256": "7538dd6d7d5d3abc02832d129da2e35eac1a6499b93d34d710b07ba3bbed22d5"
+    },
+    {
+      "path": "_site/assets/fonts/assistant-hebrew-400-normal.woff2",
+      "sha256": "aaed3fc950d2d71a3815160b3ae98d09088019df7306f4d935e7fc83df35c67e"
+    },
+    {
+      "path": "_site/assets/fonts/assistant-hebrew-600-normal.woff2",
+      "sha256": "1add33b7d28203b92411b810c783353fd1ce2611984295faa3bff9c4b29cfac6"
+    },
+    {
+      "path": "_site/assets/fonts/assistant-latin-400-normal.woff2",
+      "sha256": "15905fd40bfde9d39d14a7faa8e48fb0d86198f432be318205fc82db68216009"
+    },
+    {
+      "path": "_site/assets/fonts/assistant-latin-600-normal.woff2",
+      "sha256": "a332fddd3344052a1949c2a7a3515ba9b26db7a6a632662f4aaab43d354a486e"
+    },
+    {
+      "path": "_site/assets/fonts/frank-ruhl-libre-hebrew-400-normal.woff2",
+      "sha256": "a285b14985fe4ea86dc9d7bbf6914f48b753cc95c87ee2da3d78e73a0086b7fe"
+    },
+    {
+      "path": "_site/assets/fonts/frank-ruhl-libre-hebrew-500-normal.woff2",
+      "sha256": "4a453ca787a3817f86b9b89dfd9aba66b3180ec5fb900f125047d65832354530"
+    },
+    {
+      "path": "_site/assets/fonts/frank-ruhl-libre-latin-400-normal.woff2",
+      "sha256": "74bc3279feebf65ab799afd27b269e15060bf7958601148f67426e80f0e2a492"
+    },
+    {
+      "path": "_site/assets/fonts/frank-ruhl-libre-latin-500-normal.woff2",
+      "sha256": "4beaeeb42ab87bd5d008e833ba5f6d95a6eed587ba52e63851fa8ae8c24525e5"
+    },
+    {
+      "path": "_site/assets/img/dr-tabansky-portrait-square-640.webp",
+      "sha256": "3ab9d5370c2a029009ddbcbcf650562ea4fe2f2427d38c4f9efb8b59d5a1fc47"
+    },
+    {
+      "path": "_site/assets/img/exposure-variants/01-open-fan.svg",
+      "sha256": "16ca2935767cc69c65823efb5ae39ae1e7f4caafdabf0ce91463b798c30983c1"
+    },
+    {
+      "path": "_site/assets/img/exposure-variants/02-constellation.svg",
+      "sha256": "9cf156b1f7d5c5b911729b8a09a3c24f6f02c36683d1794fc8317908d2ba6744"
+    },
+    {
+      "path": "_site/assets/img/exposure-variants/03-woven-traces.svg",
+      "sha256": "9c9e5473e134ac457412429f5aa576172d63e8772a3fb1b89065bc05393bb39c"
+    },
+    {
+      "path": "_site/assets/img/exposure-variants/04-orbital-map.svg",
+      "sha256": "0912484342d0e903508487940413c22732d21957eff60674eac4ae3b760eb7ba"
+    },
+    {
+      "path": "_site/assets/img/exposure-variants/05-unfolded-atlas.svg",
+      "sha256": "5b4212065670461149957d77a9e02d90bf46cec02c63665a4d9b562aaf90b612"
+    },
+    {
+      "path": "_site/assets/img/toza-digital-exposure-five-ws.md",
+      "sha256": "7403e651a79e005fcd13b264f67e662227379c60cf7e038a89f536417f0b0da9"
+    },
+    {
+      "path": "_site/assets/img/toza-digital-exposure-five-ws.png",
+      "sha256": "670bbb75ec63307ff452f2f4724ac9efd01eae15ff8f294991038a4a17403c48"
+    },
+    {
+      "path": "_site/assets/img/toza-digital-exposure-five-ws.svg",
+      "sha256": "ffbbe6299b2c7933174989123f07b372ba1cb5cf12d66059ca3836704bcecce6"
+    },
+    {
+      "path": "_site/assets/img/toza-orbital-sequence.svg",
+      "sha256": "cf23b3ab12da02f7b41f38d25d48402e8e39c3c0bfbf6e97467bea46537d0f2d"
+    },
+    {
+      "path": "_site/assets/js/site.js",
+      "sha256": "057cf50d1f0400fbc218554bacf4f75b6271e491727bf918e4542e8872bc2baf"
+    },
+    {
+      "path": "_site/assets/js/toza-orbital-sequence.js",
+      "sha256": "362c065e83be31b5a1af037d3a7aa6fa327037cd31e1be32bcf6add416fa24cd"
+    },
+    {
+      "path": "_site/assets/previews/digital-exposure-variants.html",
+      "sha256": "1fe06b3383ec0e99a64084bbe0cc5014db0f61eb1a9ecf7b71b40b6b98af7eec"
+    },
+    {
+      "path": "_site/assets/previews/digital-exposure.html",
+      "sha256": "b007fb38d8b4376e1293cf3c1f0cb9ba76ee0405374f303d4095d5d5293d4035"
+    },
+    {
+      "path": "_site/assets/previews/orbital-sequence.html",
+      "sha256": "11f5b501bbda5ce5cab0c91772e809ba2a2c6f38275a6ace7e12475b72d9245e"
+    },
+    {
+      "path": "_site/en/about/index.html",
+      "sha256": "245862b8f7eef69e24c0157f5462893845ef0581a7273ec033f844b1ae4dd60e"
+    },
+    {
+      "path": "_site/en/attorneys/index.html",
+      "sha256": "7c55e872bebabe00c17cc329b025efbb386375835e9f18ff2fc12c4e42e9f09a"
+    },
+    {
+      "path": "_site/en/business-dispute/index.html",
+      "sha256": "e87919eddc7541f0d271e4cd2b635167adb762352cc055e7938287aa7163f3c2"
+    },
+    {
+      "path": "_site/en/conditions/index.html",
+      "sha256": "116b1fe1433dc0d3d84073a2000a0d5a4c64a51a074a8732d4a9a69e924aa116"
+    },
+    {
+      "path": "_site/en/exposure/index.html",
+      "sha256": "ad6325324c1f07c5a773dead89a5b93da722092f7569b44f11b40ab2c9cd1a27"
+    },
+    {
+      "path": "_site/en/faq/index.html",
+      "sha256": "24229e822e7a9693a872f8b0e354c28d69df7a7b0bd271fa7f326ca3b4af42ae"
+    },
+    {
+      "path": "_site/en/how-it-works/index.html",
+      "sha256": "213e9757c2520dfe4511ccc2464ff35af33fc707a05081e297ad9605f6000faf"
+    },
+    {
+      "path": "_site/en/index.html",
+      "sha256": "286d98840d04ab5a2d9c8444c36506a29fc86804733baa207c581f96ee0c7fc7"
+    },
+    {
+      "path": "_site/en/inheritance-conflict/index.html",
+      "sha256": "0cf763dbb566ebb31995fb6c4746fb4d74b60126947bac678be3b577b2c26a9a"
+    },
+    {
+      "path": "_site/en/pricing/index.html",
+      "sha256": "a75d73639793966b8b32fd190954f382803a9ed3240d2c8934c80b3e7d9f3cbe"
+    },
+    {
+      "path": "_site/en/separation-divorce/index.html",
+      "sha256": "7bd4fe6eb9aee2aa38a6b71ca3183fce0f99450306f2f46f9a38a28e03340b5d"
+    },
+    {
+      "path": "_site/en/they-know-something/index.html",
+      "sha256": "2da2c6d857244ca7dfcc81774498bd490895f4baa70e4523cc591e3ce68ccdfd"
+    },
+    {
+      "path": "_site/index.html",
+      "sha256": "e108bd3f1f26e9c13c971603a869fbebd96c83af1ce667ae1178686fb4c0ef92"
+    },
+    {
+      "path": "_site/robots.txt",
+      "sha256": "2d00c853634b9344ff96fbe4637d6a10f8aa82d27e65911949f67c1564454b85"
+    }
+  ]
+}

@@ -823,6 +823,14 @@
         "link": {
           "kind": "object",
           "type": "link"
+        },
+        "primary": {
+          "kind": "bool",
+          "summary": "Primary questions stay visible without a topic disclosure."
+        },
+        "secondary": {
+          "kind": "bool",
+          "summary": "Secondary topics start closed at every viewport."
         }
       }
     },

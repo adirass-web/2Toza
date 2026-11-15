@@ -1,0 +1,20 @@
+{
+  "reason": "User requested missing copy below Home situations; reuse existing repository hero leads without rewriting dedicated pages",
+  "entries": [
+    {
+      "slug": "separation-divorce",
+      "title": "Separation",
+      "lead": "Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you."
+    },
+    {
+      "slug": "business-dispute",
+      "title": "Business dispute",
+      "lead": "A personal email may still recover a business account. Toza helps you find where personal and business access meet, and separate them deliberately."
+    },
+    {
+      "slug": "inheritance-conflict",
+      "title": "Inheritance conflict",
+      "lead": "Help with an account, years ago, may still connect someone to your correspondence. Toza works through it with you, in person."
+    }
+  ]
+}

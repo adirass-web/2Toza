@@ -1,0 +1,29 @@
+{% from "approved-en/photo.njk" import photo %}
+<!doctype html>
+<html lang="{{ locale.lang }}" dir="{{ locale.dir }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{{ t.description }}"><title>{{ t.title }}</title>
+<link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/en-continuation.css"><link rel="stylesheet" href="/approved-en-assets/css/en-prices.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
+<script src="/assets/js/restrained-motion.js" defer></script>
+</head>
+<body class="has-fixed-contacts">
+<a class="skip-link" href="#main">{{ t.skip }}</a>
+{% include "approved-en/header.njk" %}
+<main id="main"><span id="main-content"></span>
+  <section class="hero" aria-labelledby="hero-title">
+    <figure class="hero-image">
+      {{ photo({src: '/approved-en-assets/photos/hero-wide-1536.webp', srcset: '/approved-en-assets/photos/hero-wide-900.webp 900w, /approved-en-assets/photos/hero-wide-1536.webp 1536w', sizes: '100vw', width: 1536, height: 1024, alt: t.heroAlt, variant: 'hero', priority: 'high', className: 'hero-photo'}) }}
+      <figcaption class="hero-title"><h1 id="hero-title">{{ t.hero }}</h1></figcaption>
+    </figure>
+    <div class="hero-explanation">
+      <p class="copy">{{ t.explanation }}</p>
+      <p class="service-line">{{ t.service }}</p>
+      <p class="invitation">{{ t.invitation }}</p>
+    </div>
+  </section>
+  {% include "approved-en/en-situations-cta.njk" %}{% include "approved-en/en-prices.njk" %}
+</main>
+{% include "approved-en/footer.njk" %}
+{% include "approved-en/contact-icons.njk" %}
+</body>
+</html>

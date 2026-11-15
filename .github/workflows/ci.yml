@@ -9,19 +9,133 @@ permissions:
   contents: read
 
 concurrency:
-  group: verify-${{ github.ref }}
+  group: verify-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 30
+    outputs:
+      artifact: ${{ steps.package.outputs.artifact }}
+      preview_branch: ${{ steps.package.outputs.preview_branch }}
+      built_sha: ${{ steps.package.outputs.built_sha }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .nvmrc
-          cache: npm
       - run: npm ci
-      - run: npm run build
-      - run: npm run check
+      - run: node --test scripts/design-tokens.test.mjs
+      - run: npm run test:profiles
+      - name: Validate photo contracts and production export
+        run: node --test scripts/photos.test.mjs scripts/export-production.test.mjs
+      - run: npm run test:links && npm run test:anchors && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && npm run test:production-checks && node --test scripts/release-policy.test.mjs && node --test scripts/check-shared-shell.test.mjs && node --test scripts/reference-colors.test.mjs
+      - run: npm run check && node scripts/check-content.mjs && npm run check:links
+      - name: Validate production artifact
+        env:
+          SITE_ENV: production
+          SITE_URL: https://toza-site.pages.dev
+        run: npm run check && node scripts/check-content.mjs && npm run check:links && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && node --test scripts/check-shared-shell.test.mjs
+      - name: Checkout pinned legacy baseline
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: 63cda10fd0f51a3e11b69a6a295d30f4d741e481
+          path: legacy-baseline
+          persist-credentials: false
+      - name: Build legacy baseline and verify mapped anchors
+        run: |
+          (cd legacy-baseline && npm ci && npm run build)
+          node scripts/audit-legacy-anchors.mjs legacy-baseline/_site _site
+          node scripts/audit-legacy-anchors.mjs legacy-baseline/_site _site-production
+      - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get install -y poppler-utils
+      - run: npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
+      - run: npm run check:a11y && npm run check:perf
+      - name: Validate production in browser
+        env:
+          SITE_ENV: production
+          SITE_URL: https://toza-site.pages.dev
+        run: npm run check:a11y && npm run check:perf && npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
+      - name: Package exact verified builds
+        id: package
+        env:
+          SOURCE_BRANCH: ${{ github.head_ref || github.ref_name }}
+          SOURCE_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number || '' }}
+        run: |
+          set -euo pipefail
+          bundle="$RUNNER_TEMP/release-bundle"
+          mkdir -p "$bundle"
+          tar -C _site -czf "$bundle/preview.tar.gz" .
+          tar -C _site-production -czf "$bundle/production.tar.gz" .
+          preview_hash="$(sha256sum "$bundle/preview.tar.gz" | cut -d ' ' -f 1)"
+          production_hash="$(sha256sum "$bundle/production.tar.gz" | cut -d ' ' -f 1)"
+          built_sha="$(git rev-parse HEAD)"
+          artifact="toza-verified-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          if [ -n "$PR_NUMBER" ]; then
+            preview_branch="p-${PR_NUMBER}"
+          else
+            slug="$(printf '%s' "$SOURCE_BRANCH" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//' | cut -c1-14)"
+            [ -n "$slug" ] || slug=ref
+            suffix="$(printf '%s' "$SOURCE_BRANCH" | sha256sum | cut -c1-10)"
+            preview_branch="b-${slug}-${suffix}"
+          fi
+          jq -n --arg repository "$GITHUB_REPOSITORY" --arg built_sha "$built_sha" \
+            --arg source_head "$SOURCE_HEAD" --arg source_branch "$SOURCE_BRANCH" --arg event "$GITHUB_EVENT_NAME" \
+            --arg run_id "$GITHUB_RUN_ID" --arg run_attempt "$GITHUB_RUN_ATTEMPT" --arg artifact "$artifact" \
+            --arg preview_branch "$preview_branch" --arg preview_hash "$preview_hash" --arg production_hash "$production_hash" \
+            '{repository:$repository,built_sha:$built_sha,source_head:$source_head,source_branch:$source_branch,event:$event,run_id:$run_id,run_attempt:$run_attempt,artifact:$artifact,preview_branch:$preview_branch,preview_sha256:$preview_hash,production_sha256:$production_hash}' > "$bundle/provenance.json"
+          echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
+          echo "preview_branch=$preview_branch" >> "$GITHUB_OUTPUT"
+          echo "built_sha=$built_sha" >> "$GITHUB_OUTPUT"
+          { echo '### Verified release artifacts'; echo "- Commit: $built_sha"; echo "- Artifact: $artifact"; echo "- Preview SHA-256: $preview_hash"; echo "- Production SHA-256: $production_hash"; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ${{ steps.package.outputs.artifact }}
+          path: ${{ runner.temp }}/release-bundle
+          if-no-files-found: error
+          retention-days: 30
+
+  deploy_preview:
+    needs: verify
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: ${{ needs.verify.outputs.artifact }}
+          path: ${{ runner.temp }}/release-bundle
+      - name: Verify preview artifact
+        env:
+          ARTIFACT: ${{ needs.verify.outputs.artifact }}
+          BUILT_SHA: ${{ needs.verify.outputs.built_sha }}
+          PREVIEW_BRANCH: ${{ needs.verify.outputs.preview_branch }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/release-bundle"
+          jq -e --arg repo "$GITHUB_REPOSITORY" --arg sha "$BUILT_SHA" --arg artifact "$ARTIFACT" --arg branch "$PREVIEW_BRANCH" --arg run "$GITHUB_RUN_ID" '.repository == $repo and .built_sha == $sha and .artifact == $artifact and .preview_branch == $branch and .run_id == $run' provenance.json >/dev/null
+          test "$(sha256sum preview.tar.gz | cut -d ' ' -f 1)" = "$(jq -r .preview_sha256 provenance.json)"
+          mkdir preview
+          tar -xzf preview.tar.gz -C preview
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+      - name: Require existing preview project and deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PREVIEW_BRANCH: ${{ needs.verify.outputs.preview_branch }}
+          BUILT_SHA: ${{ needs.verify.outputs.built_sha }}
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID"
+          curl -fsS "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/toza-v2" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" >/dev/null
+          npx --yes --package=wrangler@4.150.0 -- wrangler pages deploy "$RUNNER_TEMP/release-bundle/preview" --project-name toza-v2 --branch "$PREVIEW_BRANCH" --commit-hash "$BUILT_SHA"
