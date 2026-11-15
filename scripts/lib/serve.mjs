@@ -9,10 +9,30 @@ import { createRequire } from "node:module";
 const TYPES = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml", ".webp": "image/webp", ".avif": "image/avif", ".jpg": "image/jpeg", ".png": "image/png", ".woff2": "font/woff2", ".json": "application/json" };
 
 export async function serve(dir = siteDir()) {
+  // Resolve only files discovered under the build root; never interpret a request
+  // path as a filesystem path, and do not follow symlinks out of the root.
+  const files = new Map();
+  const collect = (directory, urlPrefix = "") => {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const file = join(directory, entry.name);
+      const url = `${urlPrefix}/${entry.name}`;
+      if (entry.isDirectory()) collect(file, url);
+      else if (entry.isFile()) {
+        files.set(url, file);
+        if (entry.name === "index.html") {
+          files.set(`${urlPrefix}/`, file);
+          if (urlPrefix) files.set(urlPrefix, file);
+        }
+      }
+    }
+  };
+  collect(dir);
   const server = createServer((req, res) => {
-    let f = join(dir, decodeURIComponent(req.url.split("?")[0]));
-    if (existsSync(f) && statSync(f).isDirectory()) f = join(f, "index.html");
-    if (!existsSync(f)) { res.writeHead(404); res.end("not found"); return; }
+    let path;
+    try { path = decodeURIComponent(req.url.split("?")[0]); }
+    catch { res.writeHead(400); res.end("bad request"); return; }
+    const f = files.get(path);
+    if (!f) { res.writeHead(404); res.end("not found"); return; }
     res.writeHead(200, { "content-type": TYPES[extname(f)] || "application/octet-stream" });
     res.end(readFileSync(f));
   });

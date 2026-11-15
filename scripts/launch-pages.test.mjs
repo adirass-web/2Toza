@@ -46,7 +46,7 @@ test('legacy English and Hebrew routes have appropriate redirects', () => {
   const redirects = read('_redirects');
   for (const slug of ['attorneys', 'business-dispute', 'commercial-spying', 'faq', 'inheritance-clash', 'leaving-controlling-relationship', 'not-it-support', 'pricing', 'private-exposure-assessment', 'private-investigator', 'separation-divorce', 'they-know-something', 'what-happens-during-the-visit', 'why-us']) {
     for (const lang of ['en', 'he']) for (const suffix of ['', '.html']) {
-      assert.match(redirects, new RegExp(`^/${lang}/${slug.replace(/[-]/g, '\\-')}${suffix ? '\\.'+'html' : ''}\\s+/en/[^\\s]*\\s+${lang === 'he' ? '302' : '301'}\\s*$`, 'm'), `${lang}/${slug}${suffix}`);
+      assert.match(redirects, new RegExp(`^/${lang}/${slug}${suffix ? '\\.'+'html' : ''}\\s+/en/[^\\s]*\\s+${lang === 'he' ? '302' : '301'}\\s*$`, 'm'), `${lang}/${slug}${suffix}`);
     }
   }
   assert.match(redirects, /^\/he\/\s+\/en\/\s+302\s*$/m);

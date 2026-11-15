@@ -7,7 +7,7 @@ test('approved copy check catches corruption in production even with intact prev
   const file = '_site-production/en/exposure/index.html';
   const original = readFileSync(file, 'utf8');
   try {
-    const changed = original.replace('<main', '<main').replace(/(<article[^>]*>)/, '$1<p>Unapproved changed copy.</p>');
+    const changed = original.replace(/(<article[^>]*>)/, '$1<p>Unapproved changed copy.</p>');
     assert.notEqual(changed, original);
     writeFileSync(file, changed);
     const result = spawnSync(process.execPath, ['scripts/check-approved-en.mjs'], { env, encoding: 'utf8' });
