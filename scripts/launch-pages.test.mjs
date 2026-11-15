@@ -28,7 +28,8 @@ test('about displays selected portrait before the biography', () => {
   const html = read('en/about/index.html');
   const portrait = html.indexOf('dr-tabansky-graphite-polished-640.webp');
   assert.ok(portrait > 0, 'selected portrait is missing');
-  assert.ok(portrait < html.indexOf('<article'), 'portrait must precede biography');
+  const biography = html.indexOf('<h1>Why I created Toza.</h1>');
+  assert.ok(biography > 0 && portrait < biography, 'portrait must precede biography');
   assert.match(html, /alt="[^\"]*Tabansky[^\"]*"/);
 });
 
