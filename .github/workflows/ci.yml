@@ -29,6 +29,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - run: npm ci
+      - run: node --test scripts/design-tokens.test.mjs
       - run: npm run test:profiles
       - run: npm run test:links && npm run test:anchors && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && npm run test:production-checks && node --test scripts/release-policy.test.mjs
       - run: npm run check && node scripts/check-content.mjs && npm run check:links
