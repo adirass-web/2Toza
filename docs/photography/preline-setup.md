@@ -1,6 +1,8 @@
 # Preline setup — 15 November 2026
 
-Owner direction: use Preline; retain HyperUI as plan B. This selects the component family, not the earlier proposed photo geometry.
+Current owner direction: use Preline without MCP; retain HyperUI as plan B. Direct public HTML integration supersedes the connection-dependent workflow below. No token or MCP connection is required for this implementation. See `../third-party/preline.md`.
+
+Earlier setup direction: use Preline; retain HyperUI as plan B. This selects the component family, not the earlier proposed photo geometry.
 
 ## Configured
 
