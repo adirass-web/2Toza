@@ -23,8 +23,9 @@
 <section id="protection" aria-labelledby="protection-title"><h2 id="protection-title">Protection for your household</h2><span id="full-specification"></span>
 <div class="pricing-comparison">
 {% for tier in tiers %}
-<article class="pricing-option" aria-labelledby="{{ ids[loop.index0] }}">
+<article class="pricing-option{% if loop.first %} pricing-option--featured{% endif %}" aria-labelledby="{{ ids[loop.index0] }}">
 <h3 id="{{ ids[loop.index0] }}">{{ tier.name }}</h3><p class="pricing-value">{{ price(tier) }}</p><p class="pricing-audience">{{ audiences[loop.index0] }}</p>
+{% if loop.first %}<div class="pricing-featured-art" aria-hidden="true">{{ icon("device-laptop") }}{{ icon("device-mobile") }}{{ icon("key") }}</div>{% endif %}
 <dl class="pricing-summary"><div><dt>{{ icon("device-mobile") }}Devices and accounts</dt><dd>{% if loop.first %}Your phone, computer and accounts{% elif loop.index == 2 %}Each person's phone, computer and accounts{% else %}Everyone's phones, computers and accounts, each kept private{% endif %}</dd></div><div><dt>{{ icon("key") }}Security keys</dt><dd>{% if loop.first %}{{ facts.securityKeys.personalShield }}{% elif loop.index == 2 %}{{ facts.securityKeys.shieldForTwo }}{% else %}{{ facts.securityKeys.innerCircle }}{% endif %}</dd></div><div><dt>{{ icon("calendar") }}Follow-up</dt><dd>Follow-up visit and {{ facts.questionLineDays }} days of answered questions{% if loop.last %}, plus a review visit at twelve months{% endif %}</dd></div></dl>
 {% set allowance = facts.devicesPerPerson * ([1,2,4][loop.index0]) %}
 {% set keys = [facts.securityKeys.personalShield,facts.securityKeys.shieldForTwo,facts.securityKeys.innerCircle][loop.index0] %}
