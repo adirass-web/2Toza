@@ -44,4 +44,4 @@ The moving crowd is selected by the owner. Choose the exact situation and placem
 
 ## Not assigned
 
-The close-up face conflicts with the preference against sharp portraits; the clothes-rail still lacks people in action. The photo sources shown inline in chat are not currently available as local files. The crowd crop concept generated earlier is illustrative and must not replace the actual photograph.
+The close-up face conflicts with the preference against sharp portraits; the clothes-rail still lacks people in action. The six supplied originals are held in `media-review/photos/` outside the built site. The crowd crop concept generated earlier is illustrative and must not replace the actual photograph. Review source licensing and depicted rights before publication.
