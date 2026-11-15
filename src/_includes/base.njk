@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
   <script src="/assets/js/site.js" defer></script>
 </head>
-<body class="has-fixed-contacts legacy-content-page print:bg-print-paper print:text-print-ink bg-neutral-primary font-sans text-lg leading-relaxed text-body{% if pg.page == 'faq' or pg.page == 'conditions' %} reference-reading-page reference-reading-page--{{ pg.page }}{% endif %}">
+<body class="has-fixed-contacts legacy-content-page print:bg-print-paper print:text-print-ink bg-neutral-primary font-serif text-lg leading-relaxed text-body{% if pg.page == 'faq' or pg.page == 'conditions' %} reference-reading-page reference-reading-page--{{ pg.page }}{% endif %}">
 <a href="#main" class="skip-link">{{ t.ui.skip }}</a>
 {% set legacyTranslation = t %}{% set t = approvedEN.copy.en %}
 {% include "approved-en/header.njk" %}
