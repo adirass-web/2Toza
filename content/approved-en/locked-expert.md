@@ -24,7 +24,7 @@ I created Toza to bring my cybersecurity experience directly to discerning indiv
 
 ## Practical international experience {#experience}
 
-My work has included national cybersecurity strategy and cyber-resilience projects with the World Bank across 11 countries, working with colleagues and local teams. My work involves a deep understanding of threat landscapes and rapid technological change, with complete confidentiality. I solve problems by setting priorities and turning recommendations into work that fits the people and systems involved.
+My work has included national cybersecurity strategy and cyber-resilience projects with the World Bank across 11 countries, working with colleagues and local teams. It requires a deep understanding of threat landscapes and rapid technological change. At Toza, your situation and the information you share are handled confidentially. I solve problems by setting priorities and turning recommendations into work that fits the people and systems involved.
 
 At Toza, I apply that global experience and nuanced judgment to your private circumstances and personally carry out the agreed technical work. The expert who understands the situation is the expert making the changes with you.
 

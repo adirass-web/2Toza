@@ -8,7 +8,7 @@ authority: owner-reviewed-and-corrected
 
 # Private information can be exposed without a hack.
 
-Existing access, copies, shared information and data traces from everyday services reveal more than you intended. This is how others gain leverage over your money, reputation and decisions. We have seen this firsthand everywhere.
+Existing access, copies, shared information and data traces from everyday services reveal more than you intended. This is how others gain leverage over your money, reputation and decisions.
 
 ## Access that outlasts its purpose.
 

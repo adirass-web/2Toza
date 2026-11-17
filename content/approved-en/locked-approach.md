@@ -32,7 +32,7 @@ The work considers both access and what information reveals: which accounts and 
 
 ## Protection you can use day to day.
 
-The work addresses the fundamental access, sign-in, recovery and sharing arrangements to mitigate most of the risks and threat vectors. Testing and practical teaching help you use the changed setup in daily life.
+The work strengthens access, sign-in, recovery and sharing around the risks identified with you. Testing and practical teaching help you use the changed setup in daily life.
 
 Every protection tier includes a follow-up visit and a 60-day question line from completion of the protection work. Questions about the completed work are answered through WhatsApp or Signal within one working day. New work is agreed and priced separately.
 

@@ -24,3 +24,5 @@ body.has-fixed-contacts{padding-block-end:calc(120px + env(safe-area-inset-botto
 .approved-footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .approved-footer a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 .faq-groups summary{position:relative}.faq-groups .legacy-anchor{position:absolute;inset-block-start:0;inset-inline-start:0}
+
+.messaging-actions{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;font-weight:600}.messaging-actions a{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-decoration:underline;text-underline-offset:4px}.messaging-actions a:focus-visible,.first-message+a:focus-visible{outline:3px solid currentColor;outline-offset:4px}.messaging-expectation,.first-message{font-size:1rem;line-height:1.55;max-width:65ch}.hero-explanation .invitation{font-size:inherit;font-weight:600}.pricing-orientation{max-width:72ch;margin-block:24px 36px}.pricing-orientation p{margin-block:14px;line-height:1.55}

@@ -31,6 +31,8 @@ const copy={en:{
   "hero": "Are you sure your private information is still private?",
   "explanation": "Private conversations, financial information and unshared plans can become leverage over your money, reputation and decisions. Exposure includes what someone can reach, copies already held elsewhere and what separate details reveal together.",
   "service": "In person · With you present · One senior expert, start to finish",
+  "expert": "Dr. Lior Tabansky works with you in person to assess exposure and carry out agreed protection for your devices and accounts.",
+  "reassurance": "Dr. Tabansky answers personally. The first conversation is free and usually takes 10\u201320 minutes. You discuss urgency, fit and whether an assessment is appropriate.",
   "invitation": "Request a private conversation",
   "situationsTitle": "Situations",
   "situations": [
