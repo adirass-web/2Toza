@@ -29,7 +29,9 @@
     "check:pricing-print": "node scripts/check-pricing-print.mjs",
     "test:pricing-inclusions": "node --test scripts/pricing-inclusions.test.mjs",
     "check:motion": "node scripts/check-restrained-motion.mjs",
-    "check:pricing-contact": "node scripts/check-pricing-contact.mjs"
+    "check:pricing-contact": "node scripts/check-pricing-contact.mjs",
+    "test:copy-funnel": "node --test scripts/copy-funnel.test.mjs",
+    "check:copy-funnel-browser": "node scripts/check-copy-funnel-browser.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
