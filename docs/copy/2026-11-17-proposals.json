@@ -1,0 +1,100 @@
+[
+  {
+    "page": "home",
+    "old": "",
+    "new": "Dr. Lior Tabansky works with you in person to assess exposure and carry out agreed protection for your devices and accounts.",
+    "reason": "Explain the service and named expert before the situation sequence.",
+    "placement": "After the hero risk explanation; retain the headline and service line. Remove the later duplicate identity line when moved."
+  },
+  {
+    "page": "home",
+    "old": "Request a private conversation",
+    "new": "Request a private conversation",
+    "reason": "Turn the current plain-text invitation into an actionable contact section.",
+    "placement": "Hero action heading; below it use visible links: Message on WhatsApp · Message on Signal. Preserve existing contact destinations and fixed icons."
+  },
+  {
+    "page": "home",
+    "old": "",
+    "new": "Dr. Tabansky answers personally. The first conversation is free and usually takes 10–20 minutes. You discuss urgency, fit and whether an assessment is appropriate.",
+    "reason": "Make the next step concrete beside the first action.",
+    "placement": "Below hero messaging links; consolidate repeated reassurance in the lower conversation section."
+  },
+  {
+    "page": "shared-contact",
+    "old": "",
+    "new": "For your first message, “I’d like a private conversation” is enough. Keep sensitive details for the conversation. Contact may be visible on your device or account.",
+    "reason": "Surface existing first-message guidance without promising anonymity.",
+    "placement": "At the main contact section on Home, Pricing and situation pages; link Before you get in touch to the existing relevant FAQ answer. Do not repeat full warning at every CTA."
+  },
+  {
+    "page": "pricing",
+    "old": "",
+    "new": "Dr. Lior Tabansky carries out the work personally, in person. You remain present, control your credentials and approve material changes.",
+    "reason": "Give direct pricing visitors the service relationship that justifies the offer.",
+    "placement": "Below protection-first introduction, before comparison."
+  },
+  {
+    "page": "pricing",
+    "old": "",
+    "new": "Free private conversation → Private Exposure Assessment · ₪4,000 → Separately agreed protection",
+    "reason": "Explain the buying sequence while keeping protection pricing prominent.",
+    "placement": "Compact orientation above tier cards; link assessment and credit details."
+  },
+  {
+    "page": "pricing",
+    "old": "",
+    "new": "The assessment takes about half a day in person. You keep the written exposure summary whether or not you continue. Protection is a separate decision.",
+    "reason": "Clarify the standalone assessment outcome and separate commitment.",
+    "placement": "Beside compact sequence, before tier comparison."
+  },
+  {
+    "page": "pricing",
+    "old": "The qualifying assessment fee is included in these prices. The credit terms are below.",
+    "new": "If protection work begins within 30 days of assessment completion, the ₪4,000 assessment fee counts in full toward the protection price. For Personal Shield at ₪32,000, that leaves ₪28,000 to pay.",
+    "reason": "Make qualification and arithmetic explicit; preserve the work-begins trigger.",
+    "placement": "Credit note immediately after tier comparison, with link to full credit terms."
+  },
+  {
+    "page": "pricing",
+    "old": "",
+    "new": "The work includes testing, personal teaching and a private dated record.",
+    "reason": "Explain practical deliverables before equipment counts.",
+    "placement": "Short shared-outcome line above cards, after service relationship. Keep device and key allowances unchanged."
+  },
+  {
+    "page": "pricing",
+    "old": "Half a day in person to establish your personal threat model, assess exposure, address urgent issues and set priorities. You keep a written exposure summary whether or not you continue.",
+    "new": "Half a day in person to establish your personal threat model, assess exposure and set priorities. Approved urgent first aid may be included where safe and within the agreed scope. You keep a written exposure summary whether or not you continue.",
+    "reason": "Align urgent work language with existing safety, approval and scope limits.",
+    "placement": "Existing full assessment section."
+  },
+  {
+    "page": "how-it-works",
+    "old": "The work addresses the fundamental access, sign-in, recovery and sharing arrangements to mitigate most of the risks and threat vectors. Testing and practical teaching help you use the changed setup in daily life.",
+    "new": "The work strengthens access, sign-in, recovery and sharing around the risks identified with you. Testing and practical teaching help you use the changed setup in daily life.",
+    "reason": "Replace unsupported majority-risk coverage with the defined work.",
+    "placement": "Existing protection-method paragraph."
+  },
+  {
+    "page": "exposure",
+    "old": "Existing access, copies, shared information and data traces from everyday services reveal more than you intended. This is how others gain leverage over your money, reputation and decisions. We have seen this firsthand everywhere.",
+    "new": "Existing access, copies, shared information and data traces from everyday services reveal more than you intended. This is how others gain leverage over your money, reputation and decisions.",
+    "reason": "Remove sweeping experience claim while preserving the exposure argument.",
+    "placement": "Existing opening explanation."
+  },
+  {
+    "page": "about",
+    "old": "My work has included national cybersecurity strategy and cyber-resilience projects with the World Bank across 11 countries, working with colleagues and local teams. My work involves a deep understanding of threat landscapes and rapid technological change, with complete confidentiality. I solve problems by setting priorities and turning recommendations into work that fits the people and systems involved.",
+    "new": "My work has included national cybersecurity strategy and cyber-resilience projects with the World Bank across 11 countries, working with colleagues and local teams. It requires a deep understanding of threat landscapes and rapid technological change. At Toza, your situation and the information you share are handled confidentially. I solve problems by setting priorities and turning recommendations into work that fits the people and systems involved.",
+    "reason": "Bound confidentiality wording while preserving the careful professional-experience claim; verify handling commitment against actual practice.",
+    "placement": "Existing professional background paragraph."
+  },
+  {
+    "page": "pricing",
+    "old": "The first conversation is free and commits you to nothing. Contact Toza through WhatsApp or Signal.",
+    "new": "The first conversation is free and usually takes 10–20 minutes. Dr. Tabansky answers personally. You discuss urgency, fit and whether an assessment is appropriate. The conversation does not commit you to purchase.",
+    "reason": "Bring the same clear first-step explanation to the pricing action.",
+    "placement": "Existing final contact section; add visible links Message on WhatsApp · Message on Signal and shared first-message guidance."
+  }
+]
