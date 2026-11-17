@@ -33,13 +33,13 @@ jobs:
       - run: npm run test:profiles
       - name: Validate photo contracts and production export
         run: node --test scripts/photos.test.mjs scripts/export-production.test.mjs
-      - run: npm run test:links && npm run test:anchors && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && npm run test:production-checks && node --test scripts/release-policy.test.mjs && node --test scripts/check-shared-shell.test.mjs && node --test scripts/reference-colors.test.mjs
+      - run: npm run test:links && npm run test:anchors && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && npm run test:copy-funnel && npm run test:production-checks && node --test scripts/release-policy.test.mjs && node --test scripts/check-shared-shell.test.mjs && node --test scripts/reference-colors.test.mjs
       - run: npm run check && node scripts/check-content.mjs && npm run check:links
       - name: Validate production artifact
         env:
           SITE_ENV: production
           SITE_URL: https://toza-site.pages.dev
-        run: npm run check && node scripts/check-content.mjs && npm run check:links && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && node --test scripts/check-shared-shell.test.mjs
+        run: npm run check && node scripts/check-content.mjs && npm run check:links && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && npm run test:copy-funnel && node --test scripts/check-shared-shell.test.mjs
       - name: Checkout pinned legacy baseline
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -53,13 +53,13 @@ jobs:
           node scripts/audit-legacy-anchors.mjs legacy-baseline/_site _site-production
       - run: npx playwright install --with-deps chromium
       - run: sudo apt-get install -y poppler-utils
-      - run: npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
+      - run: npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && npm run check:copy-funnel-browser && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
       - run: npm run check:a11y && npm run check:perf
       - name: Validate production in browser
         env:
           SITE_ENV: production
           SITE_URL: https://toza-site.pages.dev
-        run: npm run check:a11y && npm run check:perf && npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
+        run: npm run check:a11y && npm run check:perf && npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && npm run check:copy-funnel-browser && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
       - name: Package exact verified builds
         id: package
         env:

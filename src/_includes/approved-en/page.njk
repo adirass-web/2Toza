@@ -17,8 +17,11 @@
     </figure>
     <div class="hero-explanation">
       <p class="copy">{{ t.explanation }}</p>
+      <p class="copy">{{ t.expert }}</p>
       <p class="service-line">{{ t.service }}</p>
-      <p class="invitation">{{ t.invitation }}</p>
+      <h2 class="invitation">{{ t.invitation }}</h2>
+      {% include "approved-en/messaging-actions.njk" %}
+      <p class="copy">{{ t.reassurance }}</p>
     </div>
   </section>
   {% include "approved-en/en-situations-cta.njk" %}{% include "approved-en/en-prices.njk" %}

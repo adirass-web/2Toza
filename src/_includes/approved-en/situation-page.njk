@@ -59,7 +59,8 @@
         <div class="situation-reading-width">
           <h2 id="situation-contact-title">{{ block.heading }}</h2>
           {% if block.body %}<p class="situation-contact-body">{{ block.body }}</p>{% endif %}
-          {% for action in block.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
+          {% include "approved-en/messaging-actions.njk" %}
+          {% include "approved-en/first-message.njk" %}
           {% if block.note %}<p class="situation-contact-note">{{ lnk(block.note, 'dark') }}</p>{% endif %}
         </div>
       </section>
