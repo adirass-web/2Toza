@@ -69,3 +69,14 @@ test('clearly matching legacy fragments remain available on their destinations',
     'en/attorneys/index.html':['main-content','contact','when-a-referral-may-help'],
   })) { const html = read(route); for (const id of ids) assert.ok(html.includes(`id="${id}"`),`${route} #${id}`); }
 });
+
+test('shared header retains its visible descriptor in the home link name and includes a favicon', () => {
+  for (const route of ['en/index.html', 'en/about/index.html', 'en/pricing/index.html', 'en/accessibility/index.html']) {
+    const html = read(route);
+    const brand = html.match(/<a\b[^>]*class="brand"[^>]*>[\s\S]*?<\/a>/)?.[0] || '';
+    assert.match(brand, /aria-label="Toza home — Tailored digital protection for private clients"/);
+    assert.match(brand, /<img\b[^>]*width="1843"[^>]*height="1020"/);
+    assert.match(html, /<link rel="icon" href="\/favicon\.ico"/);
+  }
+  assert.ok(readFileSync(`${dir}/favicon.ico`).length > 0);
+});

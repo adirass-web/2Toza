@@ -1,7 +1,7 @@
 {% from "approved-en/photo.njk" import photo %}
 <!doctype html>
 <html lang="{{ locale.lang }}" dir="{{ locale.dir }}">
-<head>
+<head>{% include "favicon.njk" %}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{{ t.description }}"><title>{{ t.title }}</title>
 <link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/en-continuation.css"><link rel="stylesheet" href="/approved-en-assets/css/en-prices.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
 <script src="/assets/js/restrained-motion.js" defer></script>

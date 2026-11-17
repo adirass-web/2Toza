@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/content/");
   eleventyConfig.addWatchTarget("content/content-model.json");
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("approved-en-assets");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("robots.txt");
