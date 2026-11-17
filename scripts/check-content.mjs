@@ -250,7 +250,7 @@ function flattenStrings(obj, acc = []) {
   return acc;
 }
 const approvedChrome = createRequire(import.meta.url)("../src/_data/approvedEN.js").copy.en;
-const uiStrings = [...UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns])), approvedChrome.descriptor, approvedChrome.home, approvedChrome.navLabel, approvedChrome.footerNavLabel];
+const uiStrings = [...UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns])), approvedChrome.descriptor, approvedChrome.home, `${approvedChrome.home} — ${approvedChrome.descriptor}`, approvedChrome.navLabel, approvedChrome.footerNavLabel];
 
 function unitsOf(col) {
   const full = [], runs = [];
