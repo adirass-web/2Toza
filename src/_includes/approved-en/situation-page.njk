@@ -40,6 +40,7 @@
     {% if block.type == 'recognition' %}
       {% include "blocks/recognition.njk" %}
     {% elif block.type == 'text' %}
+      {% if isSeparation and block.id == 'how' %}<span class="scroll-mt-24" id="a-setup-for-the-life-you-are-moving-into"></span>{% endif %}
       {% include "blocks/text.njk" %}
     {% elif block.type == 'stages' %}
       {% include "blocks/stages.njk" %}

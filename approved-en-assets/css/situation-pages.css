@@ -48,29 +48,29 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent, rgb(28 28 26 / .69) 34%, var(--opening-ink) 94%);
+  background: linear-gradient(180deg, rgb(28 28 26 / .16), rgb(28 28 26 / .76) 28%, var(--opening-ink) 92%);
 }
 
 .separation-opening-inner {
   width: min(100% - 2.5rem, 80rem);
   margin-inline: auto;
-  padding-block: clamp(5rem, 18vw, 7rem) 2.75rem;
+  padding-block: clamp(3.5rem, 10vw, 4.5rem) 2rem;
 }
 
 .separation-opening h1 {
-  max-width: 13ch;
-  font: 400 clamp(2.625rem, 7.6vw, 5.75rem)/1 var(--font-serif, Georgia, serif);
+  max-width: 16ch;
+  font: 400 clamp(2.5rem, 6.4vw, 4.65rem)/1 var(--font-serif, Georgia, serif);
   letter-spacing: -.035em;
   text-wrap: balance;
 }
 
 .separation-opening-lead {
-  margin-top: 1.25rem;
-  max-width: 32ch;
-  font: 400 clamp(1.2rem, 2vw, 1.5rem)/1.42 var(--font-serif, Georgia, serif);
+  margin-top: 1rem;
+  max-width: 42ch;
+  font: 400 clamp(1.125rem, 1.65vw, 1.35rem)/1.4 var(--font-serif, Georgia, serif);
 }
 
-.separation-opening-contact { margin-top: 1.5rem; }
+.separation-opening-contact { margin-top: 1rem; }
 .separation-invitation { font-weight: 600; }
 .separation-opening .messaging-actions { gap: .5rem; margin-block: .5rem; }
 .separation-opening .messaging-actions span { display: none; }
@@ -105,6 +105,16 @@
 }
 
 
+.situation-page--separation-divorce > section:not(.separation-opening) {
+  padding-block: clamp(1.75rem, 3.1vw, 3rem);
+}
+
+.situation-page--separation-divorce > section > .grid { row-gap: 1rem; }
+.situation-page--separation-divorce #shared-access h2 + p { margin-top: .75rem; }
+.situation-page--separation-divorce #shared-access li { padding-block: .625rem; }
+.situation-page--separation-divorce .situation-contact-body { margin-top: .75rem; }
+.situation-page--separation-divorce .situation-contact-note { margin-top: 1rem; }
+
 .situation-page--separation-divorce #have-your-own-devices-and-access-examined-with-urgent-first-aid {
   background: #e5dfd3;
   color: #232321;
@@ -125,7 +135,7 @@
     background: linear-gradient(90deg, var(--opening-ink), transparent 40%);
   }
 
-  .separation-opening-inner { padding-block: clamp(3rem, 6vw, 5.75rem); }
+  .separation-opening-inner { padding-block: clamp(2.75rem, 4.25vw, 4rem); }
   .separation-opening-copy { width: 49%; }
   .situation-page--separation-divorce #shared-access ul { grid-template-columns: 1fr 1fr; }
 }
