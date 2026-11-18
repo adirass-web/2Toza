@@ -23,10 +23,10 @@ A new source repository is not required to reduce production files. It would dup
 
 ```sh
 npm ci
-SITE_ENV=production SITE_URL=https://toza-site.pages.dev npm run build
-SITE_ENV=production SITE_URL=https://toza-site.pages.dev npm run check
-SITE_ENV=production SITE_URL=https://toza-site.pages.dev node scripts/check-content.mjs
-SITE_ENV=production SITE_URL=https://toza-site.pages.dev npm run check:links
+SITE_ENV=production SITE_URL=https://tozasecurity.com npm run build
+SITE_ENV=production SITE_URL=https://tozasecurity.com npm run check
+SITE_ENV=production SITE_URL=https://tozasecurity.com node scripts/check-content.mjs
+SITE_ENV=production SITE_URL=https://tozasecurity.com npm run check:links
 node --test scripts/export-production.test.mjs
 node scripts/export-production.mjs .artifacts/production-export
 node scripts/check-links.mjs .artifacts/production-export/site

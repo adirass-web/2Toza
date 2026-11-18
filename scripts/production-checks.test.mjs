@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-const env = { ...process.env, SITE_ENV: 'production', SITE_URL: 'https://toza-site.pages.dev' };
+const env = { ...process.env, SITE_ENV: 'production', SITE_URL: 'https://tozasecurity.com' };
 test('approved copy check catches corruption in production even with intact preview', () => {
   const file = '_site-production/en/exposure/index.html';
   const original = readFileSync(file, 'utf8');

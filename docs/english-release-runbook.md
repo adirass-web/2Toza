@@ -1,6 +1,6 @@
 # English MVP release runbook
 
-The owner executes production cutover. Preview: `toza-v2`; production: existing `toza-site`; canonical URL: https://toza-site.pages.dev. Do not use this runbook until the final approved site, accessibility statement, remaining manual accessibility checks, and owner acceptance are complete.
+The owner executes production cutover. Preview: `toza-v2`; production: existing `toza-site`; canonical URL: https://tozasecurity.com. Do not use this runbook until the final approved site, accessibility statement, remaining manual accessibility checks, and owner acceptance are complete.
 
 ## Prerequisites
 
