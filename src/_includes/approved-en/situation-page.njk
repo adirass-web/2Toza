@@ -1,7 +1,7 @@
 {% from "approved-en/photo.njk" import photo %}
 {% from "blocks/_macros.njk" import section, h2, lnk, price with context %}
 {% set hero = scenario.blocks[0] %}
-{% set earlyContact = scenario.page == "separation-divorce" %}
+{% set isSeparation = scenario.page == "separation-divorce" %}
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>{% include "favicon.njk" %}
@@ -18,6 +18,9 @@
 <a class="skip-link" href="#main">{{ i18n.en.ui.skip }}</a>
 {% include "approved-en/header.njk" %}
 <main id="main" class="situation-page situation-page--{{ scenario.page }}"><span id="main-content"></span>
+  {% if isSeparation %}
+    {% include "approved-en/separation-opening.njk" %}
+  {% else %}
   <section class="situation-hero" aria-labelledby="scenario-title">
     <div class="situation-hero-image-wrap" aria-hidden="true">
       {{ photo({src: '/approved-en-assets/photos/' + scenarioPhoto, srcset: '/approved-en-assets/photos/' + scenarioPhoto + ' 900w', sizes: '100vw', width: 900, height: 1500, alt: '', variant: 'situation-hero', priority: 'high', className: 'situation-hero-image'}) }}
@@ -28,18 +31,11 @@
   <section class="situation-hero-copy" aria-label="{{ scenario.title }}">
     <div class="situation-reading-width">
       <p class="situation-hero-lead">{{ hero.lead }}</p>
-      {% if earlyContact %}
-        <div class="situation-hero-contact">
-          <p class="situation-invitation">{{ hero.note }}</p>
-          {% include "approved-en/messaging-actions.njk" %}
-          <p class="situation-contact-guidance"><a href="/en/faq/#a2">Before you get in touch</a></p>
-        </div>
-      {% else %}
-        {% for action in hero.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
-      {% endif %}
+      {% for action in hero.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
       {% if hero.promise %}<p class="situation-promise">{{ hero.promise }}</p>{% endif %}
     </div>
   </section>
+  {% endif %}
   {% for block in scenario.blocks %}
     {% if block.type == 'recognition' %}
       {% include "blocks/recognition.njk" %}

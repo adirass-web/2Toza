@@ -1,0 +1,18 @@
+{% from "approved-en/photo.njk" import photo %}
+<section class="separation-opening" data-tone="dark" aria-labelledby="scenario-title">
+  {# Photo by Mike Chai, Pexels 842339. Source is in media-review/photos. #}
+  <div class="separation-opening-photo" aria-hidden="true">
+    {{ photo({src: '/approved-en-assets/photos/separation-crowd-1280.webp', srcset: '/approved-en-assets/photos/separation-crowd-640.webp 640w, /approved-en-assets/photos/separation-crowd-1280.webp 1280w', sizes: '(min-width: 56rem) 57vw, 100vw', width: 1280, height: 854, alt: '', variant: 'situation-hero', priority: 'high'}) }}
+  </div>
+  <div class="separation-opening-inner">
+    <div class="separation-opening-copy">
+      <h1 id="scenario-title">{{ hero.heading }}</h1>
+      <p class="separation-opening-lead">{{ hero.lead }}</p>
+      <div class="separation-opening-contact">
+        <p class="separation-invitation">{{ hero.note }}</p>
+        {% include "approved-en/messaging-actions.njk" %}
+        <p><a class="separation-contact-guidance" href="/en/faq/#a2">Before you get in touch</a></p>
+      </div>
+    </div>
+  </div>
+</section>

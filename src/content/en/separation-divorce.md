@@ -8,17 +8,17 @@ dir: ltr
 
 blocks:
   - type: hero
-    heading: Digital privacy during separation
-    lead: A shared cloud account or an old tablet can stay connected after you separate. Dr. Lior Tabansky works with you in person to see what still connects you and what you want to change.
+    heading: After you separate, what stays shared?
+    lead: You open the family album and pause. Who can still see the photos? Dr. Lior Tabansky works through questions like that with you, in person.
     card_lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
     byline: none
-    promise: true
     actions: [whatsapp, signal]
     note: Start with a free private conversation
 
   - type: recognition
-    heading: What still connects you?
-    lead: A connection can be easy to forget and still be useful. Toza looks at what each arrangement allows, so you can decide what to keep and what to change.
+    id: shared-access
+    heading: The things you set up together
+    lead: Some connections still help you get through the day. Toza checks what each one allows so you can decide what you want to keep.
     items:
       - A family cloud account that still shares photos or documents.
       - A recovery number or email that still belongs to your spouse.
@@ -26,9 +26,10 @@ blocks:
       - A location-sharing setting you turned on years ago.
 
   - type: text
-    heading: Change things in the right order.
+    id: a-setup-for-the-life-you-are-moving-into
+    heading: Know what a change will affect
     body: |
-      An old tablet can still be signed in even after you change the password. Leaving a family plan can also affect a service you rely on.
+      You might want to stop sharing your location and still be able to open the family album. Before you change a password or leave a family plan, it helps to know what else depends on it.
 
       Dr. Tabansky checks your own devices, accounts and recovery settings with you. You stay present, enter your own credentials and choose which changes to approve. {shared:common.sequence}
 
@@ -60,8 +61,8 @@ blocks:
 
   - type: contact
     ref: contact
-    heading: Start a free private conversation
-    body: Send a short message to arrange a time to talk. There is no commitment to book an assessment.
+    heading: Start with what’s on your mind
+    body: Send a short message to arrange a free private conversation with Dr. Tabansky.
     note:
       label: Questions about separation and privacy
       href: /en/faq/#e
