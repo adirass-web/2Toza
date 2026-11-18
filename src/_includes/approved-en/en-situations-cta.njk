@@ -12,7 +12,8 @@
       <article class="en-situation-scene en-situation-scene--separation" aria-labelledby="situation-separation">
         <figure class="en-situation-image">{{ photo({src: '/approved-en-assets/photos/sit-1-900.jpg', srcset: '/approved-en-assets/photos/sit-1-900.jpg 900w', sizes: '(max-width: 700px) 94vw, 65vw', width: 900, height: 1500, alt: '', variant: 'scene', priority: 'lazy'}) }}</figure>
         <div class="en-situation-title-panel"><h3 id="situation-separation"><a href="/en/separation-divorce/">Separation</a></h3>
-          <p class="en-situation-description">{{ siteContent.en.pages["separation-divorce"].blocks[0].lead }}</p></div>
+          {% set separationHero = siteContent.en.pages["separation-divorce"].blocks[0] %}
+          <p class="en-situation-description">{{ separationHero.card_lead or separationHero.lead }}</p></div>
       </article>
       <article class="en-situation-scene en-situation-scene--business" aria-labelledby="situation-business">
         <figure class="en-situation-image">{{ photo({src: '/approved-en-assets/photos/sit-2-900.jpg', srcset: '/approved-en-assets/photos/sit-2-900.jpg 900w', sizes: '(max-width: 700px) 91vw, 72vw', width: 900, height: 1500, alt: '', variant: 'scene', priority: 'lazy'}) }}</figure>

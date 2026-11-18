@@ -25,3 +25,24 @@
 .situation-contact-note { margin-top: 2rem; }
 .situation-contact-note a { color: var(--color-on-photo); }
 @media (max-width: 40rem) { .situation-hero { min-height: 29rem; } .situation-hero-title-wrap { padding-bottom: 2.5rem; } }
+
+.situation-page--separation-divorce .situation-hero {
+  min-height: clamp(19rem, 30vw, 30rem);
+}
+
+.situation-page--separation-divorce .situation-hero-copy {
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+}
+
+.situation-hero-contact { margin-top: 1.25rem; }
+.situation-invitation { font-weight: 600; }
+.situation-contact-guidance { margin-top: .5rem; }
+.situation-contact-guidance a { text-decoration: underline; text-underline-offset: .2em; }
+
+@media (max-width: 40rem) {
+  .situation-page--separation-divorce .situation-hero { min-height: 14rem; }
+  .situation-page--separation-divorce .situation-hero-title-wrap { padding-block: 2rem 1.25rem; }
+  .situation-page--separation-divorce .situation-hero h1 { font-size: clamp(2rem, 9vw, 2.5rem); }
+  .situation-hero-contact .messaging-actions { padding-inline-end: 2.5rem; }
+  .situation-hero-contact .messaging-actions span { display: none; }
+}

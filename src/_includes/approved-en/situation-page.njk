@@ -1,6 +1,7 @@
 {% from "approved-en/photo.njk" import photo %}
 {% from "blocks/_macros.njk" import section, h2, lnk, price with context %}
 {% set hero = scenario.blocks[0] %}
+{% set earlyContact = scenario.page == "separation-divorce" %}
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>{% include "favicon.njk" %}
@@ -27,7 +28,15 @@
   <section class="situation-hero-copy" aria-label="{{ scenario.title }}">
     <div class="situation-reading-width">
       <p class="situation-hero-lead">{{ hero.lead }}</p>
-      {% for action in hero.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
+      {% if earlyContact %}
+        <div class="situation-hero-contact">
+          <p class="situation-invitation">{{ hero.note }}</p>
+          {% include "approved-en/messaging-actions.njk" %}
+          <p class="situation-contact-guidance"><a href="/en/faq/#a2">Before you get in touch</a></p>
+        </div>
+      {% else %}
+        {% for action in hero.actions %}{% if action.key == 'callback' %}<p class="situation-callback"><a href="{{ action.href }}"{% if action.external %} target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a></p>{% endif %}{% endfor %}
+      {% endif %}
       {% if hero.promise %}<p class="situation-promise">{{ hero.promise }}</p>{% endif %}
     </div>
   </section>
@@ -45,7 +54,7 @@
           <li class="situation-price-item">
             <div class="situation-price-heading">
               {% if item.tag %}<p class="situation-price-tag">{{ item.tag }}</p>{% endif %}
-              <h2{% if scenario.page == 'separation-divorce' and loop.first %} id="have-your-own-devices-and-access-examined-with-urgent-first-aid"{% endif %}>{{ item.name }}</h2>
+              <h2>{{ item.name }}</h2>
             </div>
             <p class="situation-price-value">{{ price(item, 'text-4xl sm:text-5xl') }}</p>
             <p class="situation-price-note">{{ item.note }}</p>
