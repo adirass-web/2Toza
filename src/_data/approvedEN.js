@@ -4,7 +4,7 @@ markdown.core.ruler.after('inline','approved-heading-ids',state=>{for(let i=0;i<
 function load(name){const file=path.resolve(__dirname,'../../content/approved-en/locked-'+name+'.md');const body=fs.readFileSync(file,'utf8').replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/,'');const tokens=markdown.parse(body,{}),index=tokens.findIndex(t=>t.type==='heading_open'&&t.tag==='h1');return{title:tokens[index+1].content,html:markdown.renderer.render(tokens,markdown.options,{}).replace(/<p>\s*<a href="https:\/\/wa\.me\/972533366276[^"]*">WhatsApp<\/a>\s*·\s*<a href="https:\/\/signal\.me\/#p\/\+972533366276">Signal<\/a>\s*<\/p>\n?/g,'')}}
 const copy={en:{
   "title": "Toza — Private digital protection",
-  "description": "Private digital protection for private clients.",
+  "description": "Personal digital security for private clients. Dr. Lior Tabansky works with you in person on your devices and accounts.",
   "skip": "Skip to content",
   "navLabel": "Main navigation",
   "footerNavLabel": "Footer navigation",

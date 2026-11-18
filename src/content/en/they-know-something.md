@@ -1,7 +1,7 @@
 ---
 page: they-know-something
 title: Someone knows something — Toza
-description: You don't have to prove how it happened before acting. Toza examines your devices and accounts with you and gives urgent first aid.
+description: You don't have to prove how it happened before acting. Toza examines your devices and accounts with you and agrees safe first steps.
 permalink: /en/they-know-something/index.html
 lang: en
 dir: ltr
