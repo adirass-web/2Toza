@@ -11,3 +11,9 @@ Status: planning, 18 November 2026. Implement after production host and deployme
 7. **Operations:** Check Core Web Vitals in field data after sufficient traffic; review broken links, accessibility, security headers, DNS and certificate renewals. Check page content and indexing after every deployment. Keep rollback details and review domain auto-renewal.
 
 No business addresses, customer data, ratings, structured claims or geographic scope have been invented. Third-party console setup and analytics changes require the owner's connected account and appropriate access.
+
+## Prelaunch evidence, 18 November
+
+The production build has 13 unique sitemap URLs; each corresponds to an existing page with one absolute canonical on `https://tozasecurity.com`. Production robots refers to that sitemap. Preview pages carry noindex, but preview robots currently disallows crawling: a crawler blocked by robots may not see noindex, so review preview crawl/access policy rather than treating these controls as equivalent. See Google's canonical and noindex documentation: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls and https://developers.google.com/search/docs/crawling-indexing/block-indexing.
+
+Local synthetic accessibility completed 60 runs with zero violations, and the existing local performance gate passed its budgets. These are lab checks, not public Core Web Vitals. Public field LCP, INP and CLS require real user data after deployment; assess the 75th percentile against current https://web.dev/articles/vitals guidance. The Web Performance and Playwright CLI local run was unthrottled on localhost, so it cannot establish real-world performance or optimization savings. External TLS, redirects and final-host metadata need verification after domain activation.
