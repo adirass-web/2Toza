@@ -1,46 +1,41 @@
 ---
 page: separation-divorce
-title: Separation and divorce — Toza
-description: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
+title: Digital privacy in separation and divorce | Toza
+description: In-person digital protection around your plans, accounts and devices. Start with a free private conversation.
 permalink: /en/separation-divorce/index.html
 lang: en
 dir: ltr
-
 blocks:
   - type: hero
-    heading: Trust can end before access does.
-    lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
+    heading: Some things should be yours to tell.
+    lead: Who you confide in. Where you go. What you’re planning. Someone with access to your accounts could piece it together before you notice. Toza builds and tests digital protection with you, in person.
+    card_lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
     byline: none
-    promise: true
-    actions: [whatsapp, signal, callback]
-
-  - type: recognition
-    heading: Choose which access you keep.
-    lead: "{shared:common.some_of_it} Toza shows you what each connection allows, so you can tell access you want to keep from access you want to end."
-    items:
-      - A family cloud that still shares photos and documents.
-      - A recovery number or email that belongs to your spouse.
-      - An old phone or tablet still signed in to your messages.
-      - Location sharing set up years ago.
-
+    actions: [whatsapp, signal]
+    note: "{shared:common.lp_invitation}"
   - type: text
-    heading: Change things in the right order.
-    body: A password change can leave another route open, and changing a family service can cut access you rely on. {shared:common.sequence}
-
-  - type: stages
-    ref: stages
-    variant: compact
-    line: Assess what still connects you. Harden a setup for the life you are moving into. {shared:common.verify_and_learn}
-
+    id: shared-access
+    heading: Protection built around your next steps
+    body: |
+      Toza agrees a written scope with you and protects the accounts, devices and sharing you rely on. One senior expert makes and tests the agreed changes with you in person. Toza can help close an old sign-in you are authorized to manage after explaining what could stop working or trigger a notification.
   - type: text
-    heading: Your attorney can be involved.
-    body: "{shared:common.attorney_summary}"
-
-  - type: price-summary
-    ref: price_summary
-
+    id: how
+    heading: How to begin
+    body: |
+      Start with a free private conversation, usually 10–20 minutes. The Private Exposure Assessment costs {price:assessment} for about half a day in person. You receive a written exposure summary and priorities. It includes urgent first aid you approve where safe and within scope.
+  - type: text
+    id: have-your-own-devices-and-access-examined-with-urgent-first-aid
+    heading: What protection costs
+    body: |
+      Protection is agreed separately. Personal Shield for one person costs {price:personalShield}. The assessment fee is credited in full when protection begins within {fact:credit.windowDays} days of assessment completion. Protection includes a private dated record, a follow-up visit and a {fact:questionLineDays}-day question line.
+    links:
+      - label: See fees and protection options
+        href: /en/pricing/
+      - label: About Dr. Lior Tabansky
+        href: /en/about/
   - type: contact
     ref: contact
+    heading: "{shared:common.lp_invitation}"
     note:
       label: Questions about separation and privacy
       href: /en/faq/#e

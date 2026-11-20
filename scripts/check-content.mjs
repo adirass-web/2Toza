@@ -250,6 +250,10 @@ function flattenStrings(obj, acc = []) {
   return acc;
 }
 const approvedChrome = createRequire(import.meta.url)("../src/_data/approvedEN.js").copy.en;
+// These shared components own the approved contact copy used across landing pages.
+const contactChrome = ["messaging-actions", "first-message"].flatMap(name =>
+  [...readFileSync(`src/_includes/approved-en/${name}.njk`, "utf8").matchAll(/>([^<>{}]+)</g)]
+    .map(match => match[1].trim()).filter(Boolean));
 const uiStrings = [...UI_NAMESPACES.flatMap((ns) => flattenStrings(i18n[ns])), approvedChrome.descriptor, approvedChrome.home, `${approvedChrome.home} — ${approvedChrome.descriptor}`, approvedChrome.navLabel, approvedChrome.footerNavLabel];
 
 function unitsOf(col) {
@@ -275,9 +279,9 @@ for (const file of builtPages) {
   const html = extract(readFileSync(file, "utf8"));
   const { full, runs } = unitsOf(entry.col);
   const pageLabels = flattenStrings(entry.page.data.labels || {});
-  const corpusUnits = [...full, ...runs, ...uiStrings, ...pageLabels].flatMap(sentences);
+  const corpusUnits = [...full, ...runs, ...uiStrings, ...contactChrome, ...pageLabels].flatMap(sentences);
   const corpusSet = new Set(corpusUnits);
-  const corpusText = [...full, ...runs, ...uiStrings, ...pageLabels].map(norm).join(" \u0001 ");
+  const corpusText = [...full, ...runs, ...uiStrings, ...contactChrome, ...pageLabels].map(norm).join(" \u0001 ");
   const missingHtml = [], missingContent = [], spacing = [];
 
   // meta

@@ -34,6 +34,12 @@ person:
 method: Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
 
 common:
+  lp_protection: >-
+    Personal Shield for one person costs {price:personalShield} and is agreed separately. Your assessment fee is credited in full if protection work starts within {fact:credit.windowDays} days of assessment completion.
+  lp_assessment: >-
+    The free conversation usually takes 10–20 minutes. The Private Exposure Assessment costs {price:assessment} for about half a day in person, with a written exposure summary. Approved urgent first aid is included where safe and in scope.
+  lp_invitation: Start with a free private conversation
+  lp_service: Toza builds and tests digital protection with you in person.
   some_of_it: Some of it you still need.
   start_checked: Start with what can be checked.
   sequence: You agree the sequence together before anything changes.

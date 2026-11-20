@@ -413,6 +413,10 @@
           "kind": "text",
           "max": 270
         },
+        "card_lead": {
+          "kind": "text",
+          "max": 270
+        },
         "byline": {
           "kind": "enum",
           "values": [

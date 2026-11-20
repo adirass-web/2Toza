@@ -1,6 +1,7 @@
 {% from "approved-en/photo.njk" import photo %}
 {% from "blocks/_macros.njk" import section, h2, lnk, price with context %}
 {% set hero = scenario.blocks[0] %}
+{% set isSeparation = scenario.page == "separation-divorce" %}
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>{% include "favicon.njk" %}
@@ -17,6 +18,9 @@
 <a class="skip-link" href="#main">{{ i18n.en.ui.skip }}</a>
 {% include "approved-en/header.njk" %}
 <main id="main" class="situation-page situation-page--{{ scenario.page }}"><span id="main-content"></span>
+  {% if isSeparation or scenario.page == 'separation-paid' or scenario.page == 'business-paid' %}
+    {% include "approved-en/separation-opening.njk" %}
+  {% else %}
   <section class="situation-hero" aria-labelledby="scenario-title">
     <div class="situation-hero-image-wrap" aria-hidden="true">
       {{ photo({src: '/approved-en-assets/photos/' + scenarioPhoto, srcset: '/approved-en-assets/photos/' + scenarioPhoto + ' 900w', sizes: '100vw', width: 900, height: 1500, alt: '', variant: 'situation-hero', priority: 'high', className: 'situation-hero-image'}) }}
@@ -31,10 +35,12 @@
       {% if hero.promise %}<p class="situation-promise">{{ hero.promise }}</p>{% endif %}
     </div>
   </section>
+  {% endif %}
   {% for block in scenario.blocks %}
     {% if block.type == 'recognition' %}
       {% include "blocks/recognition.njk" %}
     {% elif block.type == 'text' %}
+      {% if isSeparation and block.id == 'how' %}<span class="scroll-mt-24" id="a-setup-for-the-life-you-are-moving-into"></span>{% endif %}
       {% include "blocks/text.njk" %}
     {% elif block.type == 'stages' %}
       {% include "blocks/stages.njk" %}
@@ -45,7 +51,7 @@
           <li class="situation-price-item">
             <div class="situation-price-heading">
               {% if item.tag %}<p class="situation-price-tag">{{ item.tag }}</p>{% endif %}
-              <h2{% if scenario.page == 'separation-divorce' and loop.first %} id="have-your-own-devices-and-access-examined-with-urgent-first-aid"{% endif %}>{{ item.name }}</h2>
+              <h2>{{ item.name }}</h2>
             </div>
             <p class="situation-price-value">{{ price(item, 'text-4xl sm:text-5xl') }}</p>
             <p class="situation-price-note">{{ item.note }}</p>

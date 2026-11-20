@@ -26,7 +26,7 @@ for(const slug of ['', 'pricing/','separation-divorce/','business-dispute/','inh
  assert.ok(text.includes('Contact may be visible on your device or account.'));
  for(const [channel,label] of [['whatsapp','Message on WhatsApp'],['signal','Message on Signal']]){
   const links=DomUtils.findAll(n=>n.name==='a'&&norm(DomUtils.textContent(n))===label,main.children);
-  assert.equal(links.length,slug===''?2:1);
+  assert.equal(links.length,['','separation-divorce/'].includes(slug)?2:1);
   for(const link of links)assert.equal(link.attribs.href,contact[channel].url);
  }
  assert.ok(DomUtils.findOne(n=>n.name==='a'&&n.attribs.href==='/en/faq/#a2',main.children,true));

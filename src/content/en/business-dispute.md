@@ -9,7 +9,8 @@ dir: ltr
 blocks:
   - type: hero
     heading: When interests diverge, ordinary access becomes leverage.
-    lead: A personal email may still recover a business account. Toza helps you find where personal and business access meet, and separate them deliberately.
+    lead: Who you’re negotiating with. What you can afford. When you plan to leave. Access left over from a partnership could expose those details before you notice. {shared:common.lp_service}
+    card_lead: A personal email may still recover a business account. Toza helps you find where personal and business access meet, and separate them deliberately.
     byline: none
     promise: true
     actions: [whatsapp, signal, callback]

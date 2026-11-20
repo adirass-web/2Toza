@@ -10,7 +10,7 @@ for(const key of Object.keys(valid)) test(`requires ${key}`,()=>{const p={...val
 for(const [key,value] of [['width',0],['height',-1],['width',1.5],['alt',null],['variant','unknown'],['priority','urgent'],['src','https://example.com/a.jpg'],['src','/approved-en-assets/../secret.jpg'],['src','/approved-en-assets/photos/missing.jpg'],['srcset','https://example.com/a.jpg 900w'],['srcset','/approved-en-assets/photos/missing.jpg 900w'],['sizes',''],['srcset','/approved-en-assets/photos/sit-1-900.jpg 0w'],['srcset','/approved-en-assets/photos/sit-1-900.jpg 900w, /approved-en-assets/photos/sit-1-900.jpg 900w']]) test(`rejects ${key}: ${value}`,()=>assert.throws(()=>validatePhoto({...valid,[key]:value})));
 for(const dir of ['_site','_site-production']) test(`${dir}: shared contract on all existing photos`,()=>{
  const {parseDocument}=require('htmlparser2');
- for(const slug of ['', 'separation-divorce','business-dispute','inheritance-conflict','about']){
+ for(const slug of ['', 'separation-divorce','business-dispute','inheritance-conflict','about','lp/separation','lp/business-account-privacy']){
   const doc=parseDocument(readFileSync(`${dir}/en/${slug?slug+'/':''}index.html`,'utf8'));
   const photos=[];const walk=n=>{if(n.name==='img' && /(?:photos\/|portraits\/)/.test(n.attribs.src||''))photos.push(n.attribs);for(const c of n.children||[])walk(c);};walk(doc);
   assert.equal(photos.length,slug===''?4:1);

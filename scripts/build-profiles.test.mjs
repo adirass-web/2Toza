@@ -11,15 +11,25 @@ test('build profiles isolate indexing and canonical metadata', () => {
   assert.match(read('_site/en/index.html'), /name="robots"[^>]*noindex/);
   assert.match(read('_site/_headers'), /X-Robots-Tag:\s*noindex/i);
   result = run({ SITE_ENV: 'production', SITE_URL: 'https://tozasecurity.com' }); assert.equal(result.status, 0, result.stderr);
-  const files = htmlFiles('_site-production/en'); assert.equal(files.length, 13);
+  const files = htmlFiles('_site-production/en');
+  const paidRoutes = new Set(['/en/lp/separation/', '/en/lp/business-account-privacy/']);
+  const sitemap = read('_site-production/sitemap.xml');
   for (const file of files) {
     const html = read(file); const route = '/' + file.replace(/^_site-production\//, '').replace(/index\.html$/, '');
-    assert.doesNotMatch(html, /name="robots"[^>]*noindex/i, file);
+    if (paidRoutes.delete(route)) {
+      assert.match(html, /name="robots"[^>]*noindex/i, file);
+      assert.ok(!sitemap.includes(route), file);
+    } else {
+      assert.doesNotMatch(html, /name="robots"[^>]*noindex/i, file);
+      assert.ok(sitemap.includes(route), file);
+    }
     assert.ok(html.includes(`<link rel="canonical" href="https://tozasecurity.com${route}">`), file);
+
     assert.match(html, /property="og:title"/, file); assert.match(html, /property="og:description"/, file);
     assert.ok(html.includes(`<meta property="og:url" content="https://tozasecurity.com${route}">`), file);
     assert.ok(html.includes('<meta property="og:image" content="https://tozasecurity.com/approved-en-assets/photos/hero-wide-1536.webp">'), file);
   }
+  assert.equal(paidRoutes.size, 0, "both paid routes must be built");
   assert.doesNotMatch(read('_site-production/_headers'), /X-Robots-Tag:\s*noindex/i);
   assert.doesNotMatch(read('_site-production/robots.txt'), /Disallow:\s*\//);
   assert.match(read('_site-production/robots.txt'), /Sitemap: https:\/\/tozasecurity\.com\/sitemap\.xml/);

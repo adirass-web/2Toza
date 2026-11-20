@@ -2,11 +2,12 @@
 import { join } from 'node:path';
 import { readText, walk, fail, siteDir } from './util.mjs';
 const dir = siteDir(), production = process.env.SITE_ENV === 'production';
+const isPaid = file => file.startsWith(join(dir, 'en', 'lp') + '/');
 const pages = walk(dir);
 for (const file of pages) {
   const is404 = file === join(dir, '404.html');
   const blocked = /<meta\s+name="robots"[^>]*noindex/i.test(readText(file));
-  if (production && !is404 ? blocked : !blocked) fail(`${file}: incorrect robots meta for ${production ? 'production' : 'preview'}`);
+  if (production && !is404 && !isPaid(file) ? blocked : !blocked) fail(`${file}: incorrect robots meta for ${production ? 'production' : 'preview'}`);
 }
 const headers = readText(join(dir, '_headers'));
 const robots = readText(join(dir, 'robots.txt'));
@@ -24,8 +25,8 @@ if (production) {
   const sitemap = readText(join(dir, 'sitemap.xml'));
   for (const file of englishPages) {
     const route = '/' + file.slice(dir.length + 1).replace(/index\.html$/, '');
-    if (!sitemap.includes(`<loc>${origin}${route}</loc>`)) fail(`${file}: missing sitemap route`);
+    if (sitemap.includes(`<loc>${origin}${route}</loc>`) === isPaid(file)) fail(`${file}: incorrect sitemap inclusion`);
   }
-  if ((sitemap.match(/<loc>/g) || []).length !== englishPages.length) fail('sitemap: unexpected route count');
+  if ((sitemap.match(/<loc>/g) || []).length !== englishPages.filter(file => !isPaid(file)).length) fail('sitemap: unexpected route count');
 }
 if (!process.exitCode) console.log(`${production ? 'production indexing' : 'noindex'} OK: ${pages.length} pages in ${dir}`);

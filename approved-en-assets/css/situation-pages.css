@@ -25,3 +25,117 @@
 .situation-contact-note { margin-top: 2rem; }
 .situation-contact-note a { color: var(--color-on-photo); }
 @media (max-width: 40rem) { .situation-hero { min-height: 29rem; } .situation-hero-title-wrap { padding-bottom: 2.5rem; } }
+
+.separation-opening {
+  --opening-ink: #1c1c1a;
+  --opening-paper: #f5f0e8;
+  position: relative;
+  isolation: isolate;
+  color: var(--opening-paper);
+  background: var(--opening-ink);
+}
+
+.separation-opening-photo {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 22rem;
+}
+
+.separation-opening-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.separation-opening-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(28 28 26 / .16), rgb(28 28 26 / .76) 28%, var(--opening-ink) 92%);
+}
+
+.separation-opening-inner {
+  width: min(100% - 2.5rem, 80rem);
+  margin-inline: auto;
+  padding-block: clamp(3.5rem, 10vw, 4.5rem) 2rem;
+}
+
+.separation-opening h1 {
+  max-width: 16ch;
+  font: 400 clamp(2.5rem, 6.4vw, 4.65rem)/1 var(--font-serif, Georgia, serif);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+.separation-opening-lead {
+  margin-top: 1rem;
+  max-width: 42ch;
+  font: 400 clamp(1.125rem, 1.65vw, 1.35rem)/1.4 var(--font-serif, Georgia, serif);
+}
+
+.separation-opening-contact { margin-top: 1rem; }
+.separation-invitation { font-weight: 600; }
+.separation-opening .messaging-actions { gap: .5rem; margin-block: .5rem; }
+.separation-opening .messaging-actions span { display: none; }
+
+.separation-opening .messaging-actions a {
+  padding-inline: .625rem;
+  border: 1px solid currentColor;
+  text-decoration: none;
+  font-size: .875rem;
+}
+
+.separation-opening .messaging-actions a:hover {
+  color: var(--opening-ink);
+  background: var(--opening-paper);
+  border-color: var(--opening-paper);
+}
+
+.separation-opening .messaging-expectation { max-width: 36ch; font-size: .9rem; }
+
+.separation-contact-guidance {
+  display: inline-block;
+  margin-top: .5rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  font-size: .9rem;
+}
+
+.situation-page--separation-divorce #shared-access ul {
+  display: grid;
+  gap: 0 1.75rem;
+  border-bottom: 0;
+}
+
+
+.situation-page--separation-divorce > section:not(.separation-opening) {
+  padding-block: clamp(1.75rem, 3.1vw, 3rem);
+}
+
+.situation-page--separation-divorce > section > .grid { row-gap: 1rem; }
+.situation-page--separation-divorce #shared-access h2 + p { margin-top: .75rem; }
+.situation-page--separation-divorce #shared-access li { padding-block: .625rem; }
+.situation-page--separation-divorce .situation-contact-body { margin-top: .75rem; }
+.situation-page--separation-divorce .situation-contact-note { margin-top: 1rem; }
+
+.situation-page--separation-divorce #have-your-own-devices-and-access-examined-with-urgent-first-aid {
+  background: #e5dfd3;
+  color: #232321;
+}
+
+.situation-page--separation-divorce #have-your-own-devices-and-access-examined-with-urgent-first-aid :is(h2, a) {
+  color: inherit;
+}
+
+@media (max-width: 40rem) {
+  .separation-opening-copy { padding-inline-end: 2.75rem; }
+}
+
+@media (min-width: 56rem) {
+  .separation-opening-photo { inset: 0 0 0 auto; width: 57%; height: auto; }
+
+  .separation-opening-photo::after {
+    background: linear-gradient(90deg, var(--opening-ink), transparent 40%);
+  }
+
+  .separation-opening-inner { padding-block: clamp(2.75rem, 4.25vw, 4rem); }
+  .separation-opening-copy { width: 49%; }
+  .situation-page--separation-divorce #shared-access ul { grid-template-columns: 1fr 1fr; }
+}
