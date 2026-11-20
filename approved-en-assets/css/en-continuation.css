@@ -3,6 +3,8 @@
 .en-situations-intro-inner{max-width:var(--layout-reading,880px);margin-inline:auto}
 .en-situations-intro h2{margin:0 0 18px;font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:400;line-height:1.02;letter-spacing:-.02em}
 .en-situations-intro p{max-width:70ch;margin:0;font-size:clamp(1.1rem,1.4vw,1.35rem);line-height:1.5}
+.en-exposure-teaser{max-width:62ch;margin-block:24px 8px;padding-inline-start:18px;border-inline-start:1px solid var(--color-rule)}
+.en-exposure-teaser p+p{margin-block-start:8px}
 .en-situation-sequence{overflow:hidden}
 .en-situation-scene{position:relative;height:92vh;min-height:780px;max-height:1040px;margin:0 0 34px}
 .en-situation-image{position:absolute;top:0;width:65%;height:92%;margin:0;overflow:hidden;background:#d8d5cc}
