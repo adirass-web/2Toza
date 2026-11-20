@@ -18,7 +18,7 @@
 <a class="skip-link" href="#main">{{ i18n.en.ui.skip }}</a>
 {% include "approved-en/header.njk" %}
 <main id="main" class="situation-page situation-page--{{ scenario.page }}"><span id="main-content"></span>
-  {% if isSeparation %}
+  {% if isSeparation or scenario.page == 'separation-paid' or scenario.page == 'business-paid' %}
     {% include "approved-en/separation-opening.njk" %}
   {% else %}
   <section class="situation-hero" aria-labelledby="scenario-title">

@@ -9,7 +9,8 @@ dir: ltr
 blocks:
   - type: hero
     heading: Family access is still access when trust breaks.
-    lead: Help with an account, years ago, may still connect someone to your correspondence. Toza works through it with you, in person.
+    lead: Letters to your adviser. Private records of what the family owns. Old access to an account could reveal details you haven’t decided to share. {shared:common.lp_service}
+    card_lead: Help with an account, years ago, may still connect someone to your correspondence. Toza works through it with you, in person.
     byline: none
     promise: true
     actions: [whatsapp, signal, callback]

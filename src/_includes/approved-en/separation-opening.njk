@@ -2,7 +2,11 @@
 <section class="separation-opening" data-tone="dark" aria-labelledby="scenario-title">
   {# Photo by Mike Chai, Pexels 842339. Source is in media-review/photos. #}
   <div class="separation-opening-photo" aria-hidden="true">
+    {% if scenarioPhoto %}
+      {{ photo({src: '/approved-en-assets/photos/' + scenarioPhoto, srcset: '/approved-en-assets/photos/' + scenarioPhoto + ' 900w', sizes: '100vw', width: 900, height: 1500, alt: '', variant: 'situation-hero', priority: 'high'}) }}
+    {% else %}
     {{ photo({src: '/approved-en-assets/photos/separation-crowd-1280.webp', srcset: '/approved-en-assets/photos/separation-crowd-640.webp 640w, /approved-en-assets/photos/separation-crowd-1280.webp 1280w', sizes: '(min-width: 56rem) 57vw, 100vw', width: 1280, height: 854, alt: '', variant: 'situation-hero', priority: 'high'}) }}
+    {% endif %}
   </div>
   <div class="separation-opening-inner">
     <div class="separation-opening-copy">

@@ -1,56 +1,41 @@
 ---
 page: separation-divorce
 title: Digital privacy in separation and divorce | Toza
-description: Review shared accounts, signed-in devices and location settings with Dr. Lior Tabansky in person. Start with a free private conversation.
+description: In-person digital protection around your plans, accounts and devices. Start with a free private conversation.
 permalink: /en/separation-divorce/index.html
 lang: en
 dir: ltr
-
 blocks:
   - type: hero
     heading: Some things should be yours to tell.
-    lead: You’re deciding where to live, who to tell and when. A shared calendar or an old signed-in device may still reveal pieces of those plans. During a separation, someone knowing before you’re ready can change the choices you have.
+    lead: Who you confide in. Where you go. What you’re planning. Someone with access to your accounts could piece it together before you notice. Toza builds and tests digital protection with you, in person.
     card_lead: Accounts set up for a shared life can outlast it. Toza finds, with you and in person, what still connects you.
     byline: none
     actions: [whatsapp, signal]
-    note: Start with a free private conversation
-
-  - type: recognition
+    note: "{shared:common.lp_invitation}"
+  - type: text
     id: shared-access
-    heading: The things you set up together
-    lead: During a separation, information you once shared freely can become leverage. Access you set up years ago may still be in place.
-    items:
-      - A shared calendar or family album
-      - A recovery email or phone number
-      - A tablet still signed in to your messages
-      - A location-sharing setting
-
+    heading: Protection built around your next steps
+    body: |
+      Toza agrees a written scope with you and protects the accounts, devices and sharing you rely on. One senior expert makes and tests the agreed changes with you in person. Toza can help close an old sign-in you are authorized to manage after explaining what could stop working or trigger a notification.
   - type: text
     id: how
-    heading: See what’s still connected
+    heading: How to begin
     body: |
-      Start with a free, private 10–20 minute conversation with Dr. Lior Tabansky. If you book an assessment, he checks your devices, accounts and recovery settings with you, in person. You decide what to keep and approve any changes.
-
-      Toza can coordinate timing with your attorney if you authorize it.
-    links:
-      - label: About Dr. Lior Tabansky
-        href: /en/about/
-
+      Start with a free private conversation, usually 10–20 minutes. The Private Exposure Assessment costs {price:assessment} for about half a day in person. You receive a written exposure summary and priorities. It includes urgent first aid you approve where safe and within scope.
   - type: text
     id: have-your-own-devices-and-access-examined-with-urgent-first-aid
-    heading: "{shared:offers.assessment.name}"
+    heading: What protection costs
     body: |
-      **{price:assessment}** for about half a day in person. You keep a written summary of what was checked, what remains and what to do next.
-
-      Protection is agreed separately. Your assessment fee is credited in full if protection work begins within {fact:credit.windowDays} days of assessment completion.
+      Protection is agreed separately. Personal Shield for one person costs {price:personalShield}. The assessment fee is credited in full when protection begins within {fact:credit.windowDays} days of assessment completion. Protection includes a private dated record, a follow-up visit and a {fact:questionLineDays}-day question line.
     links:
       - label: See fees and protection options
         href: /en/pricing/
-
+      - label: About Dr. Lior Tabansky
+        href: /en/about/
   - type: contact
     ref: contact
-    heading: Start with what’s on your mind
-    body: Send a short message to arrange a free private conversation with Dr. Tabansky.
+    heading: "{shared:common.lp_invitation}"
     note:
       label: Questions about separation and privacy
       href: /en/faq/#e

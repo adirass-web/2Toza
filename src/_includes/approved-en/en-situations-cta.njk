@@ -18,12 +18,12 @@
       <article class="en-situation-scene en-situation-scene--business" aria-labelledby="situation-business">
         <figure class="en-situation-image">{{ photo({src: '/approved-en-assets/photos/sit-2-900.jpg', srcset: '/approved-en-assets/photos/sit-2-900.jpg 900w', sizes: '(max-width: 700px) 91vw, 72vw', width: 900, height: 1500, alt: '', variant: 'scene', priority: 'lazy'}) }}</figure>
         <div class="en-situation-title-panel"><h3 id="situation-business"><a href="/en/business-dispute/">Business dispute</a></h3>
-          <p class="en-situation-description">{{ siteContent.en.pages["business-dispute"].blocks[0].lead }}</p></div>
+          <p class="en-situation-description">{{ siteContent.en.pages["business-dispute"].blocks[0].card_lead or siteContent.en.pages["business-dispute"].blocks[0].lead }}</p></div>
       </article>
       <article class="en-situation-scene en-situation-scene--inheritance" aria-labelledby="situation-inheritance">
         <figure class="en-situation-image">{{ photo({src: '/approved-en-assets/photos/sit-3-900.jpg', srcset: '/approved-en-assets/photos/sit-3-900.jpg 900w', sizes: '(max-width: 700px) 94vw, 62vw', width: 900, height: 1500, alt: '', variant: 'scene', priority: 'lazy'}) }}</figure>
         <div class="en-situation-title-panel"><h3 id="situation-inheritance"><a href="/en/inheritance-conflict/">Inheritance conflict</a></h3>
-          <p class="en-situation-description">{{ siteContent.en.pages["inheritance-conflict"].blocks[0].lead }}</p></div>
+          <p class="en-situation-description">{{ siteContent.en.pages["inheritance-conflict"].blocks[0].card_lead or siteContent.en.pages["inheritance-conflict"].blocks[0].lead }}</p></div>
       </article>
     </div>
   </section>
