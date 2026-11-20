@@ -1,6 +1,6 @@
 # Toza Search pilot review
 
-Draft for owner and paid-search review. Run Search only in the confirmed in-person service area, with English intake confirmed. Start with exact and phrase match. Confirm demand and cost in Keyword Planner before choosing the budget.
+Draft for owner and paid-search review. Toza serves clients in person across Israel. Visits north of Netanya or south of Ashdod cost extra. Dr. Tabansky handles English intake through WhatsApp and Signal. Start with exact and phrase match. Confirm demand and cost in Keyword Planner before choosing the budget.
 
 | Group | Destination | Starter search terms |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ Use each group’s common headlines plus the headline and description for the co
 
 ## Decisions before enabling
 
-- Confirm geography, intake owner, response capacity, allowable work and examples.
+- Confirm weekly intake capacity and response window, allowable work and examples. Disclose the location surcharge before booking.
 - Confirm the production URL for each group and verify HTTPS response, contact links and crawler access. Review the rendered ad and destination together.
 - Set the two-week spend ceiling and cost per qualified inquiry ceiling after Keyword Planner review. Keep campaign drafts paused pending approval.
 - Count messaging opens separately from qualified inquiries, held calls and assessments booked. Use aggregate first-party reporting with an opaque campaign code. Keep message text, search queries and identifying details out of analytics. Review spend and booked assessments at the end of the pilot.
@@ -32,4 +32,4 @@ Use each group’s common headlines plus the headline and description for the co
 - Separation. Lead with “digital privacy during separation” and “secure accounts during separation.” The page promises in-person work on the client's own accounts and explains how Toza handles old sign-ins. Hold the divorce term until Keyword Planner and query review show protective intent.
 - Business. Lead with “separate personal and business accounts” and the handover term. The page demonstrates authorized recovery changes and verification. Hold the broader recovery term until query review distinguishes advisory work from emergency account recovery or routine IT support.
 - Verify each final URL returns HTTP 200 with the expected headline and contact links. Check AdsBot access and robots directives on the deployed host. A preview build is for review; the campaign should use verified production URLs.
-- Geography, English intake coverage, intake owner and weekly capacity, pilot spend ceiling and cost target remain unconfirmed. Forecasts and Google Ads review require account access and the confirmed geography.
+- Weekly intake capacity, response window, pilot spend ceiling and cost target remain open. Forecast Search demand in Israel in Keyword Planner before proposing a budget. Use location presence targeting. Compare nationwide targeting with a Netanya–Ashdod core-area pilot so the travel surcharge is a deliberate choice. Set the cap after reviewing forecast volume, expected cost per click and the value of a qualified inquiry.
