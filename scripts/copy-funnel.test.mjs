@@ -34,7 +34,8 @@ for(const slug of ['', 'pricing/','separation-divorce/','business-dispute/','inh
 test('expert and buying sequence appear before situation and tier comparison',()=>{
  const home=readFileSync(`${root}/en/index.html`,'utf8');
  assertBefore(home,'assess exposure and carry out agreed protection','id="situations"');
- assert.equal((home.match(/Dr\. Lior Tabansky works with you/g)||[]).length,1);
+ const homeMain=DomUtils.findOne(n=>n.name==='main',parseDocument(home).children,true);
+ assert.equal((DomUtils.textContent(homeMain).match(/Dr\. Lior Tabansky works with you/g)||[]).length,1);
  const pricing=readFileSync(`${root}/en/pricing/index.html`,'utf8');
  for(const phrase of ['You remain present, control your credentials','Free private conversation →','You keep the written exposure summary','testing, personal teaching and a private dated record'])assertBefore(pricing,phrase,'class="pricing-option');
  assert.equal(facts.prices.personalShield-facts.prices.assessment,facts.prices.balanceShield);
