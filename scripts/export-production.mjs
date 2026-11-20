@@ -52,7 +52,7 @@ export function exportProduction({ source = '_site-production', destination, sou
     selected.add(file);
     if (!/\.(html|css|svg|js)$/i.test(file)) return;
     const text = read(file);
-    if (/\.html$/i.test(file) && file !== '404.html' && /<meta\s+name=["']robots["'][^>]*noindex/i.test(text)) throw new Error(`Production page has noindex: ${file}`);
+    if (/\.html$/i.test(file) && file !== '404.html' && !file.startsWith('en/lp/') && /<meta\s+name=["']robots["'][^>]*noindex/i.test(text)) throw new Error(`Production page has noindex: ${file}`);
     if (/\.(html|svg)$/i.test(file)) {
       const parser = new Parser({ onopentag(tag, attrs) {
         for (const attr of ['src', 'href', 'poster', 'xlink:href']) if (attrs[attr]) reference(attrs[attr], file, attr === 'href' && ['a', 'area'].includes(tag));
