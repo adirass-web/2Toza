@@ -38,7 +38,7 @@ jobs:
       - name: Validate production artifact
         env:
           SITE_ENV: production
-          SITE_URL: https://toza-site.pages.dev
+          SITE_URL: https://tozasecurity.com
         run: npm run check && node scripts/check-content.mjs && npm run check:links && npm run test:launch-pages && npm run test:pricing && npm run test:pricing-inclusions && npm run test:copy-funnel && node --test scripts/check-shared-shell.test.mjs
       - name: Checkout pinned legacy baseline
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -58,7 +58,7 @@ jobs:
       - name: Validate production in browser
         env:
           SITE_ENV: production
-          SITE_URL: https://toza-site.pages.dev
+          SITE_URL: https://tozasecurity.com
         run: npm run check:a11y && npm run check:perf && npm run check:pricing-print && node scripts/check-faq-print.mjs && npm run check:motion && npm run check:pricing-contact && npm run check:copy-funnel-browser && node scripts/check-shared-shell-browser.mjs && node scripts/check-preline-grids.mjs
       - name: Package exact verified builds
         id: package
