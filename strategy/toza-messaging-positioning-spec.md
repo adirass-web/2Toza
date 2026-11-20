@@ -28,6 +28,12 @@ Test against a more direct opening, **“Digital protection built around your li
 | Older divorce, business dispute, commercial spying and inheritance drafts | Keep their specific stakes and their willingness to say why exposure matters. Replace certainty about what others are doing and identical countdowns with one event and one realistic consequence per page. |
 | November situation drafts and campaign plan | Keep the concise layouts, the distinction between website and paid entry, and the existing free conversation CTA. Supersede the campaign plan’s fixes-first proposition. Show the tailored engagement first and use individual fixes to demonstrate it. |
 
+## Situation landing-page voice
+
+Open with two or three short, concrete details that show what someone could learn from the records people leave across phones and apps. Put the urgency in what could become known before the client chooses to share it or even notices the exposure. Do not assume an intrusion, promise that exposure will always be invisible, or imply that all devices are unprotected. Follow with a plain sentence about what Toza builds and tests in person.
+
+Give each website page a distinct stake, a plausible exposure path and an example of what the client can protect. Separation concerns confidences, movements and private plans. Business concerns negotiations, counterparties and the timing of an exit. Inheritance concerns family finances, documents and advice that may disclose intentions. Reuse the offer facts, consent language and contact action. Paid search leads with the service and keeps an example that matches the query.
+
 ## The message sequence
 
 1. **What’s at stake.** Name the private thing or decision. A deal can be affected if the other side learns whom the client is consulting. A move can become known before someone has decided what to tell their family. A reader should see themselves here without being assigned a crisis.
@@ -47,7 +53,7 @@ Describe outcomes within the agreed, authorized scope. “Toza hardens the agree
 | Surface | Editorial job | Example direction |
 | --- | --- | --- |
 | Home | Convince a high-stakes client to consider protection before an incident. Identify the service on the first screen. | Use the master headline and service line. Show the flagship work and verification before the assessment fee. Link to Exposure for the full mechanism. |
-| Separation website LP | Speak to the period before the client has chosen what to do, including after discovering a partner’s affair. | “Some things should be yours to tell.” A shared calendar could reveal a viewing for a new home or a meeting with an adviser. Follow immediately with how Toza builds protection around the client’s next steps. |
+| Separation website LP | Speak to the period before the client has chosen what to do, including after discovering a partner’s affair. | “Some things should be yours to tell.” Lead with what access across accounts can reveal about the client’s confidences, movements and plans before they notice. Follow immediately with the in-person service. |
 | Business website LP | Make the consequences of overlap concrete while staying inside the client’s authority. | An old recovery relationship or shared folder can expose a negotiation or handover. Show how Toza separates authorized access, preserves continuity and tests what changed. Commercial exposure can use the same page with a distinct deal-confidentiality section. |
 | Inheritance website LP | Name the confidentiality stakes before documents or advice circulate. | Arrangements made years ago can still expose current correspondence. Show how Toza hardens the client’s control of their accounts and documents within scope. |
 | Paid Search and paid LP | Match the actual protective query and name the service plainly. | Lead with “In-person digital protection” or a situation-specific equivalent. The paid LP makes one exposure path and one part of the tailored work concrete, then shows the full service and payment sequence. Keep the affair story on the website. Leave personal hardship out of audience targeting and use conditional claims. [Google ad and LP guidance](https://support.google.com/google-ads/answer/6238826) · [Google relationship-hardship policy](https://support.google.com/adspolicy/answer/16700849) |
