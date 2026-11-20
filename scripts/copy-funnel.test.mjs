@@ -31,14 +31,39 @@ for(const slug of ['', 'pricing/','separation-divorce/','business-dispute/','inh
  }
  assert.ok(DomUtils.findOne(n=>n.name==='a'&&n.attribs.href==='/en/faq/#a2',main.children,true));
 });
-test('expert and buying sequence appear before situation and tier comparison',()=>{
+test('Toza and the buying sequence appear before situation and tier comparison',()=>{
  const home=readFileSync(`${root}/en/index.html`,'utf8');
- assertBefore(home,'assess exposure and carry out agreed protection','id="situations"');
- assert.equal((home.match(/Dr\. Lior Tabansky works with you/g)||[]).length,1);
+ assertBefore(home,'Toza assesses exposure and carries out agreed protection','id="situations"');
+ const homeMain=DomUtils.findOne(n=>n.name==='main',parseDocument(home).children,true);
+ assert.ok(norm(DomUtils.textContent(homeMain)).includes('One senior expert, in person, from assessment through protection.'));
  const pricing=readFileSync(`${root}/en/pricing/index.html`,'utf8');
  for(const phrase of ['You remain present, control your credentials','Free private conversation →','You keep the written exposure summary','testing, personal teaching and a private dated record'])assertBefore(pricing,phrase,'class="pricing-option');
  assert.equal(facts.prices.personalShield-facts.prices.assessment,facts.prices.balanceShield);
  assert.ok(pricing.includes(`work begins within ${facts.credit.windowDays} days of assessment completion`));
  assert.ok(pricing.includes('that leaves ₪28,000 to pay.'));
  assert.ok(pricing.includes('Approved urgent first aid may be included where safe and within the agreed scope.'));
+});
+
+test('Home leads to the readable exposure lesson and the lesson leads to Toza’s service',()=>{
+ const home=parseDocument(readFileSync(`${root}/en/index.html`,'utf8'));
+ const link=DomUtils.findOne(n=>n.name==='a'&&norm(DomUtils.textContent(n))==='See what your apps can reveal',home.children,true);
+ assert.ok(link,'the Home example links to the lesson');
+ assert.equal(link.attribs.href,'/en/exposure/#what-apps-reveal');
+
+ const html=readFileSync(`${root}/en/exposure/index.html`,'utf8');
+ const main=DomUtils.findOne(n=>n.name==='main',parseDocument(html).children,true);
+ const copy=norm(DomUtils.textContent(main));
+ assertBefore(copy,'Two calls to a moving company.','You might be planning a move.');
+ assertBefore(copy,'You might be planning a move.','Think of one thing you want to keep private.');
+ assertBefore(copy,'Think of one thing you want to keep private.','Protect your plans before they become someone else’s advantage.');
+ const fullSize=DomUtils.findOne(n=>n.name==='a'&&norm(DomUtils.textContent(n))==='View the full-size diagram',main.children,true);
+ assert.equal(fullSize?.attribs.href,'/assets/img/toza-digital-exposure-five-ws.png');
+ for(const [channel,label] of [['whatsapp','Message on WhatsApp'],['signal','Message on Signal']]){
+  const action=DomUtils.findOne(n=>n.name==='a'&&norm(DomUtils.textContent(n))===label,main.children,true);
+  assert.equal(action?.attribs.href,contact[channel].url);
+ }
+ for(const slug of ['', 'exposure/', 'how-it-works/', 'pricing/']){
+  const page=readFileSync(`${root}/en/${slug}index.html`,'utf8');
+  assert.doesNotMatch(page,/\bTabansky\b/i,`${slug||'home'} leads with Toza`);
+ }
 });

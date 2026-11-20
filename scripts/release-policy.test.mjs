@@ -1,23 +1,22 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { verifyReleasePolicy } from './release-policy.mjs';
+import { readFileSync } from 'node:fs';
+import yaml from 'js-yaml';
 
-const owner = 'owner-example';
-const sha = 'a'.repeat(40);
-const valid = () => ({ owner, expectedSha: sha, mainSha: sha,
-  environment: { protection_rules: [{type:'required_reviewers', reviewers:[{type:'User', reviewer:{login:owner}}]}] },
-  secrets: { secrets: ['TOZA_PRODUCTION_ACCOUNT_ID','TOZA_PRODUCTION_API_TOKEN','TOZA_PRODUCTION_AUDIT_TOKEN'].map(name=>({name})) },
-  approvals: [{ state:'approved', user:{login:owner}, environments:[{name:'production'}]}] });
-test('release policy accepts the explicitly configured owner and environment secrets', () => assert.doesNotThrow(() => verifyReleasePolicy(valid())));
-test('release policy rejects stale main and unexpected or additional reviewer', () => {
-  let p=valid(); p.mainSha='b'.repeat(40); assert.throws(() => verifyReleasePolicy(p));
-  p=valid(); p.environment.protection_rules[0].reviewers.push({type:'User',reviewer:{login:'other'}}); assert.throws(() => verifyReleasePolicy(p));
-  p=valid(); p.approvals[0].user.login='other'; assert.throws(() => verifyReleasePolicy(p));
-});
-test('release policy requires each production environment secret by name', () => {
-  const p=valid(); p.secrets.secrets=p.secrets.secrets.filter(s=>s.name!=='TOZA_PRODUCTION_API_TOKEN'); assert.throws(() => verifyReleasePolicy(p));
-});
-test('release policy rejects an absent owner and a later rejected approval', () => {
-  let p=valid(); p.owner=''; assert.throws(() => verifyReleasePolicy(p));
-  p=valid(); p.approvals.push({state:'rejected', user:{login:owner}, environments:[{name:'production'}]}); assert.throws(() => verifyReleasePolicy(p));
+test('workflow deploys only the verified main artifact with matching digest', () => {
+  const workflow = yaml.load(readFileSync('.github/workflows/deploy-production.yml','utf8'));
+  const validate = workflow.jobs.validate.steps.find(s => s.id === 'run').run;
+  const steps = workflow.jobs.deploy.steps;
+  const verification = steps.find(s => s.name === 'Verify production artifact provenance and digest').run;
+  const deploy = steps.find(s => s.name === 'Require existing production project and deploy');
+  assert.match(validate, /\.event == "push".*\.head_branch == "main".*\.head_sha == \$sha.*\.conclusion == "success"/);
+  assert.match(validate, /test "\$DISPATCH_SHA" = "\$EXPECTED_SHA"/);
+  assert.match(verification, /sha256sum production\.tar\.gz/);
+  assert.match(verification, /\.built_sha == \$sha.*\.source_branch == "main"/);
+  assert.match(deploy.run, /refs?\/heads\/main|git\/ref\/heads\/main/);
+  assert.match(deploy.run, /\.object\.sha/);
+  assert.match(deploy.run, /release-bundle\/production/);
+  assert.equal(workflow.jobs.deploy.environment, undefined);
+  assert.equal(deploy.env.CLOUDFLARE_API_TOKEN, '${{ secrets.CLOUDFLARE_API_TOKEN }}');
+  assert.equal(deploy.env.CLOUDFLARE_ACCOUNT_ID, '${{ secrets.CLOUDFLARE_ACCOUNT_ID }}');
 });

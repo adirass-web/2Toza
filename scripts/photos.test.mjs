@@ -13,7 +13,7 @@ for(const dir of ['_site','_site-production']) test(`${dir}: shared contract on 
  for(const slug of ['', 'separation-divorce','business-dispute','inheritance-conflict','about','lp/separation','lp/business-account-privacy']){
   const doc=parseDocument(readFileSync(`${dir}/en/${slug?slug+'/':''}index.html`,'utf8'));
   const photos=[];const walk=n=>{if(n.name==='img' && /(?:photos\/|portraits\/)/.test(n.attribs.src||''))photos.push(n.attribs);for(const c of n.children||[])walk(c);};walk(doc);
-  assert.equal(photos.length,slug===''?5:1);
+  assert.equal(photos.length,slug===''?4:1);
   for(const p of photos){assert.ok(p['data-photo-variant']);assert.ok('alt' in p);assert.ok(+p.width>0 && +p.height>0);assert.ok(p.srcset);assert.ok(p.sizes);assert.ok(['eager','lazy'].includes(p.loading));assert.ok(['high','auto'].includes(p.fetchpriority));assert.equal(p.loading,p['data-photo-variant']==='scene'?'lazy':'eager');assert.equal(p.fetchpriority,['hero','situation-hero'].includes(p['data-photo-variant'])?'high':'auto');}
  }
 });

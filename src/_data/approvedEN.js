@@ -4,7 +4,7 @@ markdown.core.ruler.after('inline','approved-heading-ids',state=>{for(let i=0;i<
 function load(name){const file=path.resolve(__dirname,'../../content/approved-en/locked-'+name+'.md');const body=fs.readFileSync(file,'utf8').replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/,'');const tokens=markdown.parse(body,{}),index=tokens.findIndex(t=>t.type==='heading_open'&&t.tag==='h1');return{title:tokens[index+1].content,html:markdown.renderer.render(tokens,markdown.options,{}).replace(/<p>\s*<a href="https:\/\/wa\.me\/972533366276[^"]*">WhatsApp<\/a>\s*·\s*<a href="https:\/\/signal\.me\/#p\/\+972533366276">Signal<\/a>\s*<\/p>\n?/g,'')}}
 const copy={en:{
   "title": "Toza — Private digital protection",
-  "description": "Private digital protection for private clients.",
+  "description": "Personal digital security for private clients. Toza works with you in person on your devices and accounts.",
   "skip": "Skip to content",
   "navLabel": "Main navigation",
   "footerNavLabel": "Footer navigation",
@@ -30,9 +30,9 @@ const copy={en:{
   "heroAlt": "A woman considers information on her phone while seated at a table.",
   "hero": "Are you sure your private information is still private?",
   "explanation": "Private conversations, financial information and unshared plans can become leverage over your money, reputation and decisions. Exposure includes what someone can reach, copies already held elsewhere and what separate details reveal together.",
-  "service": "In person · With you present · One senior expert, start to finish",
-  "expert": "Dr. Lior Tabansky works with you in person to assess exposure and carry out agreed protection for your devices and accounts.",
-  "reassurance": "Dr. Tabansky answers personally. The first conversation is free and usually takes 10\u201320 minutes. You discuss urgency, fit and whether an assessment is appropriate.",
+  "service": "One senior expert, in person, from assessment through protection.",
+  "expert": "Toza assesses exposure and carries out agreed protection for your devices and accounts.",
+  "reassurance": "The first conversation is free and usually takes 10\u201320 minutes. You speak with the expert who does the work about urgency, fit and whether an assessment is appropriate.",
   "invitation": "Request a private conversation",
   "situationsTitle": "Situations",
   "situations": [

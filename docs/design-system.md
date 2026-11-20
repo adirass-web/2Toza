@@ -26,7 +26,7 @@ The selected Tabler SVGs are static assets under `approved-en-assets/icons/table
 
 Run `npm run build` for the default preview profile. Run `npm run check` and `npm run check:links`. Run `npm run check:content` to check content parity.
 
-Run the production profile with `SITE_ENV=production SITE_URL=https://toza-site.pages.dev npm run build`. Use the same environment variables with `npm run check` and `npm run check:links`. Preview output is in `_site`; production output is in `_site-production`.
+Run the production profile with `SITE_ENV=production SITE_URL=https://tozasecurity.com npm run build`. Use the same environment variables with `npm run check` and `npm run check:links`. Preview output is in `_site`; production output is in `_site-production`.
 
 Run `npm run test:pricing` and `npm run test:pricing-inclusions` for Pricing changes. Run `node --test scripts/check-shared-shell.test.mjs` for shell changes. Run `node --test scripts/reference-colors.test.mjs` for FAQ and Conditions palette changes.
 

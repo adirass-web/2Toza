@@ -11,7 +11,7 @@
 <html lang="en" dir="ltr">
 <head>{% include "favicon.njk" %}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow"><meta name="description" content="Compare Toza protection prices, inclusions, assessment and credit terms."><title>Pricing — Toza</title>
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="Compare fixed prices for personal and household digital protection, the assessment, inclusions and assessment credit terms."><title>Pricing — Toza</title>
 <link rel="stylesheet" href="/approved-en-assets/css/main.css"><link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css"><link rel="stylesheet" href="/approved-en-assets/css/pricing.css"><link rel="stylesheet" href="/approved-en-assets/css/content-grid.css">
 <script src="/assets/js/site.js" defer></script>
 <script src="/assets/js/restrained-motion.js" defer></script>
@@ -22,7 +22,7 @@
 <main id="main" class="pricing-page"><span id="main-content"></span>
 <header class="pricing-intro"><h1>Pricing</h1><p>Choose protection for one person, two people or your household. Every price is fixed and agreed in writing before work begins. Prices include VAT.</p></header>
 <div class="pricing-orientation">
-<p>Dr. Lior Tabansky carries out the work personally, in person. You remain present, control your credentials and approve material changes.</p>
+<p>One senior expert from Toza carries out the work in person. You remain present, control your credentials and approve material changes.</p>
 <p>Free private conversation → <a href="#assessment">Private Exposure Assessment · {{ facts.prices.assessment | ils }}</a> → Separately agreed protection</p>
 <p>The assessment takes about half a day in person. You keep the written exposure summary whether or not you continue. Protection is a separate decision. <a href="#credit">Assessment credit details</a></p>
 <p>The work includes testing, personal teaching and a private dated record.</p>
@@ -60,7 +60,7 @@
 </section>
 <section id="assessment" class="pricing-assessment" aria-labelledby="assessment-title"><h2>Start with an assessment</h2><h3 id="assessment-title">Private Exposure Assessment · <data value="{{ facts.prices.assessment }}">{{ facts.prices.assessment | ils }}</data></h3><p>Half a day in person to establish your personal threat model, assess exposure and set priorities. Approved urgent first aid may be included where safe and within the agreed scope. You keep a written exposure summary whether or not you continue.</p><div id="credit"><h3>How the credit works</h3><p>The {{ facts.prices.assessment | ils }} assessment fee counts in full toward protection whose work begins within {{ facts.credit.windowDays }} days of assessment completion. The assessment and protection are separate decisions.</p></div></section>
 <section class="pricing-care" aria-labelledby="care-title"><h2 id="care-title">Larger households and ongoing care</h2><p>Larger households, several residences or household staff: a fixed price agreed after the assessment, from {{ facts.prices.largerFrom | ils }}.</p><p>After the {{ facts.questionLineDays }} days, past clients can choose Annual Care, from {{ facts.prices.annualCareFrom | ils }} a year.</p></section>
-<section id="private-conversation" class="pricing-conversation" aria-labelledby="conversation-title"><h2 id="conversation-title">Start a private conversation</h2><p>The first conversation is free and usually takes 10–20 minutes. Dr. Tabansky answers personally. You discuss urgency, fit and whether an assessment is appropriate. The conversation does not commit you to purchase.</p>{% include "approved-en/messaging-actions.njk" %}{% include "approved-en/first-message.njk" %}</section>
+<section id="private-conversation" class="pricing-conversation" aria-labelledby="conversation-title"><h2 id="conversation-title">Start a private conversation</h2><p>The first conversation is free and usually takes 10–20 minutes. You speak with the expert who does the work about urgency, fit and whether an assessment is appropriate. The conversation does not commit you to purchase.</p>{% include "approved-en/messaging-actions.njk" %}{% include "approved-en/first-message.njk" %}</section>
 </main>
 {% include "approved-en/footer.njk" %}
 {% include "approved-en/contact-icons.njk" %}

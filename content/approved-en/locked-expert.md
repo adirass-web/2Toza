@@ -20,8 +20,6 @@ Those settings were not chosen around their lives. They do not amount to a perso
 
 I created Toza to bring my cybersecurity experience directly to discerning individuals: understand their circumstances, identify the threats and carry out protection fitted to their lives.
 
-**Dr. Lior Tabansky**
-
 ## Practical international experience {#experience}
 
 My work has included national cybersecurity strategy and cyber-resilience projects with the World Bank across 11 countries, working with colleagues and local teams. It requires a deep understanding of threat landscapes and rapid technological change. At Toza, your situation and the information you share are handled confidentially. I solve problems by setting priorities and turning recommendations into work that fits the people and systems involved.

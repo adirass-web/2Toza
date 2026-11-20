@@ -5,7 +5,7 @@ import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { Parser } from 'htmlparser2';
-const origin = 'https://toza-site.pages.dev';
+const origin = 'https://tozasecurity.com';
 const controls = ['_headers', '_redirects', 'robots.txt', 'sitemap.xml'];
 export function exportProduction({ source = '_site-production', destination, sourceSha = null } = {}) {
   if (!destination) throw new Error('Pass a new destination directory');

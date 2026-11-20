@@ -42,7 +42,7 @@ test('rejects symlinks, including unreferenced files', t => {
 
 test('keeps Open Graph images, SVG references, imports and literal script assets', t => {
   const f = fixture(t);
-  f.put('index.html', '<meta property="og:image" content="https://toza-site.pages.dev/assets/social.webp"><svg><use href="/assets/icons.svg#check"/></svg><link href="/assets/main.css"><script src="/assets/app.js"></script>');
+  f.put('index.html', '<meta property="og:image" content="https://tozasecurity.com/assets/social.webp"><svg><use href="/assets/icons.svg#check"/></svg><link href="/assets/main.css"><script src="/assets/app.js"></script>');
   f.put('assets/main.css', '@import "extra.css";'); f.put('assets/extra.css', 'body{background:url(a.webp)}');
   f.put('assets/icons.svg', '<svg><image href="b.webp"/></svg>'); f.put('assets/social.webp', 'social');
   f.put('assets/app.js', 'const image = "/assets/script.webp";'); f.put('assets/script.webp', 'script');
