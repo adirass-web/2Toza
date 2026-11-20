@@ -18,7 +18,7 @@ Toza builds your protection around a personal threat model, hardens your devices
 
 In person · With you present · One senior expert, start to finish
 
-Dr. Lior Tabansky works with you personally.
+[Meet the expert behind Toza](/en/about/)
 
 Request a private conversation: [WhatsApp](https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.) · [Signal](https://signal.me/#p/+972533366276)
 
@@ -52,9 +52,9 @@ Toza builds durable protection into the arrangements you use each day.
 
 ## International expertise, applied to your private life.
 
-Dr. Lior Tabansky's work has included national cybersecurity strategy and collaborative cyber-resilience projects with the World Bank across 11 countries. Through Toza, he personally understands your circumstances and carries out the technical work with you.
+Toza’s expert brings experience in national cybersecurity strategy and international cyber-resilience projects to your private circumstances. The same expert carries out the technical work with you.
 
-[About Dr. Tabansky](/en/about/) · [Professional profile and public work](https://cyberdrtabansky.com/en/)
+[Meet the expert behind Toza](/en/about/)
 
 ## The conversation, assessment and protection.
 
@@ -70,7 +70,7 @@ The ₪4,000 assessment fee counts in full toward protection whose work begins w
 
 ## Start a private conversation.
 
-Dr. Tabansky answers personally. The free conversation usually takes 10–20 minutes. You discuss whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.
+The free conversation usually takes 10–20 minutes. You speak with the expert who does the work about whether anything is urgent and whether Toza fits your circumstances, then the paid assessment as a possible next step. The conversation does not commit you to purchase.
 
 [WhatsApp](https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.) · [Signal](https://signal.me/#p/+972533366276)
 

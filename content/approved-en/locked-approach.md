@@ -8,7 +8,7 @@ authority: owner-reviewed-and-corrected
 
 # Establish the risks. Build the protection around them.
 
-Toza works with you in person, from understanding your circumstances to making and testing the agreed changes. Dr. Lior Tabansky personally carries out the work.
+One senior expert from Toza works with you in person, from understanding your circumstances to making and testing the agreed changes.
 
 ## First, your personal threat model.
 
@@ -46,8 +46,8 @@ The assessment and protection each have a written scope and price. Scheduling fo
 
 ## Talk with the expert who does the work.
 
-The first conversation is free and usually takes 10–20 minutes. Dr. Tabansky discusses urgency and fit with you, then the assessment as a possible next step. You do not have to purchase a service to have that conversation.
+The first conversation is free and usually takes 10–20 minutes. You speak with the expert who does the work about urgency, fit and the assessment as a possible next step. You do not have to purchase a service to have that conversation.
 
 [WhatsApp](https://wa.me/972533366276?text=I'd%20like%20a%20private%20conversation.%20Please%20let%20me%20know%20the%20next%20step.) · [Signal](https://signal.me/#p/+972533366276)
 
-[About Dr. Tabansky](/en/about/)
+[Meet the expert behind Toza](/en/about/)

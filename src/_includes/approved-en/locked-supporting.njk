@@ -10,6 +10,7 @@
   <title>{{ lockedPage.title }} — Toza</title>
   <link rel="stylesheet" href="/approved-en-assets/css/main.css">
   <link rel="stylesheet" href="/approved-en-assets/css/locked-supporting.css">
+  {% if lockedPage == approvedEN.lockedPages.exposure %}<link rel="stylesheet" href="/approved-en-assets/css/exposure.css">{% endif %}
   <link rel="stylesheet" href="/approved-en-assets/css/contact-icons.css">
   {% if lockedPage == approvedEN.lockedPages.expert %}<link rel="stylesheet" href="/approved-en-assets/css/content-grid.css">{% endif %}
 </head>
@@ -35,7 +36,7 @@
     {% endcall %}
     <div class="locked-copy">{{ displayHtml | replace(introParts[0], '') | safe }}</div>
   </article>
-  {% else %}<article class="locked-copy">{{ displayHtml | safe }}</article>{% endif %}
+  {% else %}<article class="locked-copy{% if lockedPage == approvedEN.lockedPages.exposure %} exposure-copy{% endif %}">{{ displayHtml | safe }}</article>{% endif %}
 </main>
 {% include "approved-en/footer.njk" %}
 {% include "approved-en/contact-icons.njk" %}
