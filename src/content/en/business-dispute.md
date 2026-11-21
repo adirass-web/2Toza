@@ -20,14 +20,11 @@ blocks:
     items:
       - A personal email that can still recover a business account.
       - One phone that signs in to both private and work services.
-      - A folder shared during the partnership that is still open.
+      - A folder you once shared that the other person can still open.
       - A work service that still holds private documents or plans.
 
-  - type: text
-    heading: Understand what a change will affect before you approve it.
-    body: A password change can leave a recovery address or shared session in place, and removing an account can interrupt services you still use. {shared:common.sequence}
-
   - type: stages
+    id: put-the-technical-questions-in-experienced-hands
     ref: stages
     variant: compact
     line: Assess where personal and business access meet. Harden what is yours to change. {shared:common.verify_and_learn}

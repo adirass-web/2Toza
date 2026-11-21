@@ -58,13 +58,13 @@
   },
   "contact": {
     "heading": "Start with a private conversation.",
-    "reassurance": "Your message receives a personal reply. The first conversation is free and commits you to nothing."
+    "reassurance": "A person always replies. The first conversation is free and commits you to nothing."
   },
   "price": {
     "from": "from",
     "h1": "Fees",
     "lead": "One first step, then the protection that fits your household. Each price is fixed and agreed in writing before work begins.",
-    "method": "Toza carries out every engagement in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
+    "method": "Toza carries out every engagement in person, at your home or office, with you present and in control of your credentials. Hardening is Toza's own method, developed using guidance from intelligence and security agencies and security vendors.",
     "firstStep": "First step",
     "assessment": {
       "name": "Private Exposure Assessment",
@@ -123,7 +123,7 @@
       "name": "Verify",
       "line": "Changes tested and checked, and you are taught to use them. A private dated record of the work."
     },
-    "method": "Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.",
+    "method": "Hardening is Toza's own method, developed using guidance from intelligence and security agencies and security vendors.",
     "link": "How it works",
     "recordDate": [
       "15 Oct",
