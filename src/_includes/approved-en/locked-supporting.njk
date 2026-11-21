@@ -25,7 +25,7 @@
     {% set displayHtml = displayHtml | replace('<h2>Agree the work before it starts.</h2>', '<h2 id="decide-whether-toza-fits-before-you-buy">Agree the work before it starts.</h2>') %}
   {% elif lockedPage == approvedEN.lockedPages.expert %}
     {% set displayHtml = displayHtml | replace('<h2>How that judgment becomes practical work.</h2>', '<h2 id="methods">How that judgment becomes practical work.</h2>') %}
-    {% set displayHtml = displayHtml | replace('<h2>Start a private conversation.</h2>', '<h2 id="assessment">Start a private conversation.</h2>') %}
+    {% set displayHtml = displayHtml | replace('<h2>The first conversation</h2>', '<h2 id="assessment">The first conversation</h2>') %}
   {% endif %}
   {% if lockedPage == approvedEN.lockedPages.expert %}
   {% set introParts = displayHtml.split('<h2>') %}

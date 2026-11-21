@@ -17,7 +17,7 @@ blocks:
   - type: text
     heading: What Toza does for your client.
     body: |-
-      The first step is half a day in person. Toza reviews {fact:assessmentScope}, and gives urgent first aid on the spot.
+      The first step is an in-person meeting. Together we build your client’s threat model. I examine the device linked to their primary account (Apple or Android) and provide first aid for urgent issues.
 
       Your client keeps a written exposure summary whether or not they continue. Protection follows only if they choose it.
     links:
@@ -26,9 +26,9 @@ blocks:
         kind: more
 
   - type: recognition
-    heading: When a referral may help.
+    heading: When to refer a client to Toza
     items:
-      - Someone appears to know private information your client did not knowingly share.
+      - Others know something about your client that your client never knowingly disclosed.
       - Your client is unsure which devices, recovery routes or shared services still connect them to a former partner, colleague or relative.
       - Personal accounts or devices overlap with a business or family dispute.
       - Your client needs to understand the consequences of changes before authorizing them.
@@ -37,7 +37,7 @@ blocks:
         href: /en/separation-divorce/
       - label: Business or founder dispute
         href: /en/business-dispute/
-      - label: Inheritance conflict
+      - label: Inheritance
         href: /en/inheritance-conflict/
       - label: Someone knows something
         href: /en/they-know-something/

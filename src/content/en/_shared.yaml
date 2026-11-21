@@ -31,7 +31,7 @@ person:
   tagline: "{shared:promise}"
   tagline_short: In person · You control your credentials
 
-method: Hardening is Toza's own method, developed from public guidance of government security agencies and security vendors.
+method: Hardening is Toza's own method, developed using guidance from intelligence and security agencies and security vendors.
 
 common:
   some_of_it: Some of it you still need.
@@ -223,5 +223,5 @@ blocks:
   contact:
     type: contact
     heading: Start with a private conversation.
-    body: "Your message receives a personal reply. {shared:common.first_conversation}"
+    body: "A person always replies. {shared:common.first_conversation}"
     actions: [whatsapp, signal, callback]
